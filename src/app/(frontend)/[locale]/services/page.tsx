@@ -7,7 +7,7 @@ import { alternatesFor } from "@/lib/metadata";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TransferForm } from "@/components/site/transfer-form";
-import { TrustBoxes } from "@/components/site/trust-boxes";
+import { TrustBoxes } from "@/components/site/trust-stats";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { ClosingCta, FleetGrid } from "@/components/site/transfer-sections";

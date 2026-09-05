@@ -3,8 +3,21 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import { CalendarDays, Check, MapPin, Plus, Users } from "lucide-react";
+import {
+  CalendarDays,
+  Car,
+  Check,
+  Crown,
+  Headphones,
+  Lock,
+  MapPin,
+  Plane,
+  Plus,
+  TicketPercent,
+  Users,
+} from "lucide-react";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { WhatsAppIcon } from "./icons";
 import { buildWhatsAppUrl } from "./whatsapp-cta";
 import { siteConfig } from "@/config/site";
 
@@ -12,11 +25,11 @@ type Tab = "transfer" | "chauffeur";
 type ReturnKind = "none" | "same" | "different";
 
 const FIELD =
-  "w-full rounded-md border bg-background px-3.5 py-3 text-[14px] outline-none " +
-  "placeholder:text-muted-foreground/70 focus:border-[color:var(--brand-gold-deep)]";
+  "w-full rounded-[0.7rem] border bg-background px-4 py-3.5 text-[14.5px] outline-none " +
+  "placeholder:text-muted-foreground/65 transition-colors focus:border-[color:var(--brand-gold-deep)]";
 
 const LABEL =
-  "mb-2 block text-[11px] font-bold uppercase tracking-[0.1em] text-muted-foreground";
+  "mb-2.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-muted-foreground";
 
 /**
  * Havalimanı transferi rezervasyon formu.
@@ -26,6 +39,9 @@ const LABEL =
  * başlatır. Rakip (cabistanbul) bunu "ARA" düğmesiyle yapıyor; bizde düğme
  * doğrudan WhatsApp'a gidiyor, böylece müşteri arada boş bir sonuç sayfası
  * görmüyor (rakip analizi, madde 10).
+ *
+ * Alt şeritteki dört söz ayırıcı çizgilerle bölünüyor: form doldurup
+ * göndermeden hemen önceki son tereddüdü orada karşılıyoruz.
  */
 export function TransferForm() {
   const t = useTranslations("transferForm");
@@ -55,13 +71,28 @@ export function TransferForm() {
     pageUrl: `${siteConfig.url}${pathname}`,
   });
 
-  const tabClass = (active: boolean) =>
-    `rounded-full px-5 py-2.5 text-[12.5px] font-bold tracking-wide transition-colors ${
-      active ? "" : "border text-muted-foreground hover:bg-secondary"
-    }`;
+  const tabs = [
+    { key: "transfer" as const, icon: Plane, label: t("tabTransfer") },
+    { key: "chauffeur" as const, icon: Car, label: t("tabChauffeur") },
+  ];
+
+  const promises = [
+    { icon: Lock, label: t("trust1") },
+    { icon: Crown, label: t("trust2") },
+    { icon: Users, label: t("trust3") },
+    { icon: Headphones, label: t("trust4") },
+  ];
 
   return (
-    <div className="relative overflow-hidden surface-card p-5 shadow-xl sm:p-6">
+    <div
+      className="relative overflow-hidden border p-6 sm:p-8"
+      style={{
+        background: "var(--surface)",
+        borderColor: "var(--hairline)",
+        borderRadius: "1.6rem",
+        boxShadow: "var(--shadow-e4)",
+      }}
+    >
       {/* Kartın kenarında dolaşan ışık — sayfanın tek etkileşimli alanı,
           göz oraya gitsin diye. */}
       <BorderBeam
@@ -71,39 +102,44 @@ export function TransferForm() {
         colorFrom="var(--brand-gold)"
         colorTo="color-mix(in oklab, var(--brand-gold) 20%, transparent)"
       />
-      <div className="mb-5 flex flex-wrap gap-2.5">
-        <button
-          type="button"
-          onClick={() => setTab("transfer")}
-          className={tabClass(tab === "transfer")}
-          style={
-            tab === "transfer"
-              ? { background: "var(--brand-gold)", color: "var(--brand-night)" }
-              : undefined
-          }
-        >
-          {t("tabTransfer")}
-        </button>
-        <button
-          type="button"
-          onClick={() => setTab("chauffeur")}
-          className={tabClass(tab === "chauffeur")}
-          style={
-            tab === "chauffeur"
-              ? { background: "var(--brand-gold)", color: "var(--brand-night)" }
-              : undefined
-          }
-        >
-          {t("tabChauffeur")}
-        </button>
+
+      <div className="mb-7 flex flex-wrap gap-3">
+        {tabs.map(({ key, icon: Icon, label }) => {
+          const active = tab === key;
+          return (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setTab(key)}
+              aria-pressed={active}
+              className="inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-[12.5px] font-bold tracking-[0.04em] transition-colors"
+              style={
+                active
+                  ? {
+                      background: "var(--brand-gold)",
+                      color: "var(--brand-night)",
+                      boxShadow: "var(--shadow-e1)",
+                    }
+                  : {
+                      border: "1px solid color-mix(in oklab, var(--brand-night) 14%, transparent)",
+                      color: "var(--muted-foreground)",
+                    }
+              }
+            >
+              <Icon className="size-4" aria-hidden="true" />
+              {label}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[1.35fr_1fr_0.95fr_0.7fr]">
+      <div className="grid gap-5 lg:grid-cols-[1.45fr_1.05fr_1fr_0.8fr]">
         <div>
           <label className={LABEL} htmlFor="tf-from">
+            <MapPin className="size-3.5" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             {t("from")}
           </label>
-          <div className="flex gap-2">
+          <div className="flex gap-2.5">
             <input
               id="tf-from"
               value={from}
@@ -115,7 +151,7 @@ export function TransferForm() {
               <button
                 type="button"
                 onClick={() => setStop("")}
-                className="inline-flex shrink-0 items-center gap-1.5 rounded-md border px-3 text-[12.5px] font-semibold transition-colors hover:bg-secondary"
+                className="inline-flex shrink-0 items-center gap-2 rounded-[0.7rem] border px-4 text-[12.5px] font-semibold transition-colors hover:bg-secondary"
               >
                 <Plus className="size-3.5" aria-hidden="true" />
                 {t("addStop")}
@@ -141,6 +177,7 @@ export function TransferForm() {
 
         <div>
           <label className={LABEL} htmlFor="tf-to">
+            <MapPin className="size-3.5" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             {t("to")}
           </label>
           <input
@@ -154,7 +191,7 @@ export function TransferForm() {
 
         <div>
           <label className={LABEL} htmlFor="tf-date">
-            <CalendarDays className="me-1.5 inline size-3.5 align-[-2px]" aria-hidden="true" />
+            <CalendarDays className="size-3.5" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             {t("datetime")}
           </label>
           <input
@@ -168,7 +205,7 @@ export function TransferForm() {
 
         <div>
           <label className={LABEL} htmlFor="tf-people">
-            <Users className="me-1.5 inline size-3.5 align-[-2px]" aria-hidden="true" />
+            <Users className="size-3.5" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             {t("people")}
           </label>
           <select
@@ -179,7 +216,7 @@ export function TransferForm() {
           >
             {Array.from({ length: 16 }, (_, index) => String(index + 1)).map((value) => (
               <option key={value} value={value}>
-                {value}
+                {value} {t("peopleUnit")}
               </option>
             ))}
           </select>
@@ -191,16 +228,14 @@ export function TransferForm() {
         target="_blank"
         rel="noopener noreferrer"
         data-analytics="whatsapp-transfer-form"
-        className="mt-5 flex w-full items-center justify-center gap-2.5 rounded-md py-4 text-[15.5px] font-bold text-white transition-opacity hover:opacity-90"
-        style={{ background: "var(--brand-wa)" }}
+        className="mt-6 flex w-full items-center justify-center gap-3 rounded-[0.85rem] py-4.5 text-[16px] font-bold text-white transition-transform hover:-translate-y-0.5"
+        style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e2)" }}
       >
-        <svg viewBox="0 0 24 24" className="size-5 fill-current" aria-hidden="true">
-          <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.03 1.02-1.03 2.48s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.4" />
-        </svg>
+        <WhatsAppIcon className="size-[22px]" />
         {t("submit")}
       </a>
 
-      <div className="mt-4 flex flex-wrap items-center gap-2.5">
+      <div className="mt-5 flex flex-wrap items-center gap-3">
         {(["same", "different"] as const).map((kind) => {
           const active = returnKind === kind;
           return (
@@ -209,17 +244,14 @@ export function TransferForm() {
               type="button"
               aria-pressed={active}
               onClick={() => setReturnKind(active ? "none" : kind)}
-              className="inline-flex items-center gap-2.5 rounded-md border px-3.5 py-2.5 text-[13px] font-medium transition-colors hover:bg-secondary"
+              className="inline-flex items-center gap-2.5 rounded-[0.7rem] border px-4 py-3 text-[13.5px] font-medium transition-colors hover:bg-secondary"
               style={active ? { borderColor: "var(--brand-gold-deep)" } : undefined}
             >
               <span
-                className="flex size-4 items-center justify-center rounded-[3px] border"
+                className="flex size-[18px] items-center justify-center rounded-[4px] border"
                 style={
                   active
-                    ? {
-                        background: "var(--brand-gold)",
-                        borderColor: "var(--brand-gold)",
-                      }
+                    ? { background: "var(--brand-gold)", borderColor: "var(--brand-gold)" }
                     : undefined
                 }
               >
@@ -235,28 +267,36 @@ export function TransferForm() {
             </button>
           );
         })}
+
         <span
-          className="inline-flex items-center gap-2 rounded-md border px-3.5 py-2.5 text-[13px] font-bold"
+          className="inline-flex items-center gap-2 rounded-[0.7rem] border px-4 py-3 text-[13.5px] font-bold"
           style={{
-            background: "color-mix(in oklab, var(--brand-gold) 16%, transparent)",
-            borderColor: "color-mix(in oklab, var(--brand-gold) 45%, transparent)",
+            background: "color-mix(in oklab, var(--brand-gold) 18%, transparent)",
+            borderColor: "color-mix(in oklab, var(--brand-gold) 48%, transparent)",
             color: "var(--brand-gold-deep)",
           }}
         >
-          <Check className="size-3.5" aria-hidden="true" />
+          <TicketPercent className="size-4" aria-hidden="true" />
           {t("discount")}
         </span>
       </div>
 
-      <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t pt-4 text-[12.5px] text-muted-foreground">
-        {[t("trust1"), t("trust2"), t("trust3")].map((line) => (
-          <span key={line} className="inline-flex items-center gap-1.5">
-            <Check
-              className="size-3.5"
+      <div
+        className="mt-6 grid gap-y-3 border-t pt-5 sm:grid-cols-2 lg:grid-cols-4"
+        style={{ borderColor: "var(--hairline)" }}
+      >
+        {promises.map(({ icon: Icon, label }) => (
+          <span
+            key={label}
+            className="flex items-center justify-center gap-2.5 px-2 text-[12.5px] text-muted-foreground lg:not-first:border-s"
+            style={{ borderColor: "var(--hairline)" }}
+          >
+            <Icon
+              className="size-4 shrink-0"
               style={{ color: "var(--brand-gold-deep)" }}
               aria-hidden="true"
             />
-            {line}
+            {label}
           </span>
         ))}
       </div>

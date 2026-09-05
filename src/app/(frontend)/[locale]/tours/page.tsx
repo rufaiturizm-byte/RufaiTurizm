@@ -66,7 +66,7 @@ export default async function ToursPage({
 
       <PackagesSection locale={locale} />
 
-      <WhyUs subtitle={t("intro")} />
+      <WhyUs />
       <FaqPreview />
       <ClosingCta />
 

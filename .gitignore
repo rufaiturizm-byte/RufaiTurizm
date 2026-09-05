@@ -47,3 +47,6 @@ design/*.html
 # Tasarim calisma gorselleri (site surumleri public/images altinda)
 design/photos/
 design/*-web.jpg
+
+# Playwright hata ayiklama ciktilari
+.playwright-mcp/

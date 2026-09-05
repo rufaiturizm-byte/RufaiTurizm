@@ -1,70 +1,77 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { SectionHeading } from "./section-heading";
+import { Banknote, Headphones, MessagesSquare, Users } from "lucide-react";
 
 /**
- * "Neden biz" — editoryal düzen.
+ * "Neden biz" — koyu zeminli üç kolon.
  *
  * Önceden dört eş kartlık bir ızgaraydı; sayfadaki diğer yedi ızgaradan
- * ayırt edilemiyordu. Şimdi koyu zeminde tam boy bir fotoğrafın yanında
- * numaralı liste: sayfanın ortasında ritmi kıran tek büyük an.
+ * ayırt edilemiyordu. Referanstaki düzen üç parçalı: solda tam boy fotoğraf,
+ * ortada başlık ve tek paragraf, sağda 2×2 numaralı gerekçe kutusu. Sayfanın
+ * ortasında ritmi kıran tek büyük an burası.
  */
-export async function WhyUs({ subtitle }: { subtitle?: string }) {
+export async function WhyUs() {
   const t = await getTranslations("whyUs");
   const tEyebrow = await getTranslations("eyebrow");
 
-  const reasons = ["arabicSupport", "fixedPrice", "family", "support"] as const;
+  const reasons = [
+    { key: "arabicSupport", icon: MessagesSquare },
+    { key: "fixedPrice", icon: Banknote },
+    { key: "family", icon: Users },
+    { key: "support", icon: Headphones },
+  ] as const;
 
   return (
     <section style={{ background: "var(--brand-night)" }}>
-      <div className="mx-auto max-w-7xl px-5 py-28 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
-          <div className="relative aspect-[4/5] overflow-hidden">
+      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_0.85fr_1.25fr] lg:items-center lg:gap-12">
+          <div
+            className="relative aspect-[16/10] overflow-hidden"
+            style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
+          >
             <Image
               src="/images/chauffeur.jpg"
               alt={t("arabicSupport.title")}
               fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
+              sizes="(max-width: 1024px) 100vw, 28vw"
               className="object-cover object-[center_30%]"
             />
           </div>
 
           <div>
-            <SectionHeading
-              eyebrow={tEyebrow("why")}
-              title={t("title")}
-              subtitle={subtitle}
-              tone="dark"
-            />
+            <div
+              className="eyebrow-rule mb-4 flex items-center text-[11px] font-extrabold uppercase tracking-[0.22em]"
+              style={{ color: "var(--brand-gold)" }}
+            >
+              {tEyebrow("why")}
+            </div>
+            <h2 className="font-display text-[32px] font-semibold leading-[1.08] tracking-[-0.015em] text-white sm:text-[40px]">
+              {t("title")}
+            </h2>
+            <p className="mt-5 text-[14.5px] leading-[1.8] text-white/62">{t("subtitle")}</p>
+          </div>
 
-            <ol className="flex flex-col">
-              {reasons.map((key, index) => (
-                <li
-                  key={key}
-                  className="flex gap-6 py-6"
-                  style={{
-                    borderTop:
-                      index > 0
-                        ? "1px solid color-mix(in oklab, white 14%, transparent)"
-                        : undefined,
-                  }}
-                >
-                  <span
-                    className="shrink-0 text-[26px] font-extrabold leading-none tabular-nums"
-                    style={{ color: "color-mix(in oklab, var(--brand-gold) 55%, transparent)" }}
+          <ol className="grid gap-x-10 gap-y-9 sm:grid-cols-2">
+            {reasons.map(({ key, icon: Icon }, index) => (
+              <li key={key} className="flex gap-4">
+                <span className="icon-tile size-11 shrink-0" aria-hidden="true">
+                  <Icon className="size-[19px]" />
+                </span>
+                <div className="min-w-0">
+                  <div
+                    className="font-display text-[19px] font-semibold leading-none tabular-nums"
+                    style={{ color: "var(--brand-gold)" }}
                   >
                     {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h3 className="text-[17px] font-bold text-white">{t(`${key}.title`)}</h3>
-                    <p className="mt-2 text-[14px] leading-[1.75] text-white/60">
-                      {t(`${key}.description`)}
-                    </p>
                   </div>
-                </li>
-              ))}
-            </ol>
-          </div>
+                  <h3 className="mt-2 text-[15.5px] font-bold text-white">{t(`${key}.title`)}</h3>
+                  <p className="mt-1.5 text-[13px] leading-[1.7] text-white/58">
+                    {t(`${key}.description`)}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>

@@ -14,6 +14,12 @@ export interface Tour {
    * bilinçli tercih: bayat bir çarpan yanlış fiyat göstermesin.
    */
   priceUsdFrom: number;
+  /**
+   * Üstü çizili liste fiyatı. Yalnız GERÇEK bir indirim varken doldurulur;
+   * boşken kartta hiç görünmez ve yerine USD karşılığı basılır. Sürekli
+   * duran sahte bir "eski fiyat" güveni kıran ilk şeydir.
+   */
+  priceListFrom?: number;
   durationHours: number;
   image: string;
   /** Arama motoru ve harita için konum. */

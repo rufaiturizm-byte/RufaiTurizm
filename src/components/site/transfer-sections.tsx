@@ -1,15 +1,9 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import {
-  Check,
-  CheckCircle2,
-  Luggage,
-  MapPin,
-  MessageCircle,
-  Users,
-} from "lucide-react";
+import { Check, Luggage, MapPin, MessageCircle, Plane, Users } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { WhatsAppLink } from "./whatsapp-cta";
+import { WhatsAppIcon } from "./icons";
 
 /**
  * Transfer sayfasının bölümleri.
@@ -248,7 +242,14 @@ export async function ServiceCities() {
   );
 }
 
-/** Sayfa sonu kapanış şeridi — tek ve net bir çıkış. */
+/**
+ * Sayfa sonu kapanış şeridi — tek ve net bir çıkış.
+ *
+ * Zemin düz lacivert değil, ince altın noktalardan oluşan bir takımyıldız
+ * dokusu (bkz. `.pattern-constellation`): sayfanın en önemli çağrısı boş
+ * bir dikdörtgenin ortasında kalınca değil, kendi yüzeyi olan bir alanda
+ * duruyor. Fotoğraf yüklemeden aynı derinliği veriyor.
+ */
 export async function ClosingCta() {
   const t = await getTranslations("home2");
   const tCta = await getTranslations("cta");
@@ -256,21 +257,38 @@ export async function ClosingCta() {
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <div
-        className="flex flex-col items-center gap-5 rounded-xl px-8 py-12 text-center"
-        style={{ background: "var(--brand-night)" }}
+        className="pattern-constellation relative flex flex-col items-center gap-5 px-8 py-16 text-center"
+        style={{
+          backgroundColor: "var(--brand-night)",
+          borderRadius: "var(--radius-card)",
+          boxShadow: "var(--shadow-e3)",
+        }}
       >
-        <CheckCircle2
-          className="size-8"
-          style={{ color: "var(--brand-gold)" }}
-          aria-hidden="true"
-        />
-        <h2 className="font-display text-[26px] font-semibold leading-[1.15] text-white sm:text-[34px]">{t("ctaTitle")}</h2>
-        <p className="max-w-lg text-[15px] leading-[1.8] text-white/70">{t("ctaText")}</p>
-        <WhatsAppLink
-          className="cta-gold mt-2 inline-flex items-center gap-2.5 px-8 py-4 text-[15px] font-bold"
-          style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
+        <span
+          className="inline-flex size-14 items-center justify-center rounded-full border"
+          style={{
+            borderColor: "color-mix(in oklab, var(--brand-gold) 55%, transparent)",
+            background: "color-mix(in oklab, var(--brand-gold) 12%, transparent)",
+            color: "var(--brand-gold)",
+          }}
         >
-          <MessageCircle className="size-5" aria-hidden="true" />
+          <Plane className="size-6 -rotate-45" aria-hidden="true" />
+        </span>
+
+        <h2 className="font-display text-[28px] font-semibold leading-[1.12] text-white sm:text-[38px]">
+          {t("ctaTitle")}
+        </h2>
+        <p className="max-w-lg text-[15px] leading-[1.8] text-white/68">{t("ctaText")}</p>
+
+        <WhatsAppLink
+          className="mt-3 inline-flex items-center gap-3 rounded-[0.8rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5"
+          style={{
+            background: "var(--brand-gold)",
+            color: "var(--brand-night)",
+            boxShadow: "var(--shadow-gold)",
+          }}
+        >
+          <WhatsAppIcon className="size-5" />
           {tCta("whatsapp")}
         </WhatsAppLink>
       </div>

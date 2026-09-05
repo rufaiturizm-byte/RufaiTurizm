@@ -1,124 +1,82 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { BadgeCheck, Check, ExternalLink } from "lucide-react";
+import { ExternalLink, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 /**
- * "Resmî Belgeler ve Ruhsatlar" bandı (rakip analizi, madde 8 — en güçlü
- * güven unsuru). Altın zemin üzerinde koyu kartlar.
+ * Belge bandı (rakip analizi, madde 8 — en güçlü güven unsuru).
  *
- * Veriye bağlı: `siteConfig.credentials` içindeki numara boşsa o belge
- * kartı hiç basılmaz, hiçbiri yoksa bölümün tamamı görünmez. Sahip
- * olmadığımız bir belgeyi "doğrulanmış" diye göstermek, bu bölümün çözmeye
- * çalıştığı güven sorununun ta kendisini yaratır.
+ * Önceki hali altın zemin üzerinde dört koyu kartlık bir ızgaraydı: elimizde
+ * tek belge varken dört kutuluk bir düzen kurmak, üçünün boş kalmasıyla
+ * sonuçlanıyordu. Referanstaki düzen tek satır: solda çerçeveli belge
+ * görseli, ortada belge bilgisi ve doğrulama bağlantısı, sağda ayırıcının
+ * ardından sigorta sözü.
  *
- * TÜRSAB kartı ayrıca resmî kayda bağlantı verir: rozeti gösterip
- * doğrulatmamak, Ortadoğu pazarında rozetin kendisi kadar şüphe uyandırıyor.
+ * Veriye bağlı: `siteConfig.credentials.tursab` boşsa bölüm hiç basılmaz.
+ * Sahip olmadığımız bir belgeyi "doğrulanmış" diye göstermek, bu bölümün
+ * çözmeye çalıştığı güven sorununun ta kendisini yaratır.
  */
 export async function CredentialsBand() {
   const t = await getTranslations("credentials");
   const { credentials } = siteConfig;
 
-  const items = [
-    {
-      no: credentials.tursab,
-      title: t("tursab"),
-      desc: t("tursabDesc"),
-      logo: "/brand/tursab.png",
-      verifyUrl: siteConfig.tursabVerifyUrl,
-    },
-    { no: credentials.uetds, title: t("uetds"), desc: t("uetdsDesc"), logo: null, verifyUrl: "" },
-    { no: credentials.ibb, title: t("ibb"), desc: t("ibbDesc"), logo: null, verifyUrl: "" },
-    {
-      no: credentials.insurance,
-      title: t("insurance"),
-      desc: t("insuranceDesc"),
-      logo: null,
-      verifyUrl: "",
-    },
-  ].filter((item) => item.no.length > 0);
-
-  if (items.length === 0) return null;
+  if (!credentials.tursab) return null;
 
   return (
-    <section style={{ background: "var(--brand-gold)" }}>
-      <div className="mx-auto max-w-7xl px-5 py-9 sm:px-8">
-        <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-          <h2
-            className="text-[12px] font-extrabold tracking-[0.18em]"
-            style={{ color: "color-mix(in oklab, var(--brand-night) 78%, var(--brand-gold))" }}
-          >
-            {t("label")}
-          </h2>
-          <p
-            className="text-[13.5px]"
-            style={{ color: "color-mix(in oklab, var(--brand-night) 72%, var(--brand-gold))" }}
-          >
-            {t("tagline")}
+    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+      <div
+        className="grid items-center gap-8 border px-6 py-7 sm:px-8 lg:grid-cols-[auto_1fr_auto] lg:gap-10"
+        style={{
+          background: "var(--surface)",
+          borderColor: "var(--hairline)",
+          borderRadius: "var(--radius-card)",
+          boxShadow: "var(--shadow-e1)",
+        }}
+      >
+        {/* Amblem kırmızı-gri: krem zeminde okunmuyor, o yüzden kendi
+            altın çerçeveli beyaz kutusunda duruyor. */}
+        <div
+          className="flex w-fit items-center justify-center rounded-[0.7rem] border-4 bg-white px-6 py-5"
+          style={{ borderColor: "color-mix(in oklab, var(--brand-gold) 62%, transparent)" }}
+        >
+          <Image
+            src="/brand/tursab.png"
+            alt={t("logoAlt")}
+            width={176}
+            height={44}
+            className="h-[38px] w-auto"
+          />
+        </div>
+
+        <div>
+          <p className="max-w-md text-[15.5px] font-semibold leading-snug">{t("tursabDesc")}</p>
+          <p className="mt-2.5 text-[14px] font-bold">
+            {t("docNo")}: {credentials.tursab}
           </p>
+          <a
+            href={siteConfig.tursabVerifyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-2 text-[13.5px] font-semibold underline-offset-4 hover:underline"
+            style={{ color: "var(--brand-gold-deep)" }}
+          >
+            {t("verifyCta")}
+            <ExternalLink className="size-3.5" aria-hidden="true" />
+          </a>
         </div>
 
         <div
-          className={`grid gap-3.5 sm:grid-cols-2 ${items.length > 2 ? "lg:grid-cols-4" : ""}`}
+          className="flex items-center gap-4 border-t pt-6 lg:border-t-0 lg:border-s lg:ps-10 lg:pt-0"
+          style={{ borderColor: "var(--hairline)" }}
         >
-          {items.map((item) => (
-            <div
-              key={item.title}
-              className="relative flex flex-col gap-3 rounded-lg p-5"
-              style={{ background: "var(--brand-night)" }}
-            >
-              <BadgeCheck
-                className="absolute end-4 top-4 size-4"
-                style={{ color: "var(--brand-gold)" }}
-                aria-hidden="true"
-              />
-
-              {item.logo ? (
-                /* Amblem kırmızı-gri: altın bantta da lacivert kartta da
-                   okunmuyor, o yüzden kendi beyaz kutusunda duruyor. */
-                <span className="inline-flex w-fit rounded-md bg-white px-3.5 py-2.5">
-                  <Image
-                    src={item.logo}
-                    alt={t("logoAlt")}
-                    width={132}
-                    height={33}
-                    className="h-[26px] w-auto"
-                  />
-                </span>
-              ) : (
-                <div className="pe-6 text-[15px] font-bold text-white">{item.title}</div>
-              )}
-
-              <div className="flex-1 text-[12.5px] leading-relaxed text-white/60">
-                {item.desc}
-              </div>
-
-              <div className="text-[12.5px] font-semibold text-white/85">
-                {t("docNo")}: {item.no}
-              </div>
-
-              {item.verifyUrl ? (
-                <a
-                  href={item.verifyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[11.5px] font-bold tracking-[0.04em] underline-offset-4 hover:underline"
-                  style={{ color: "var(--brand-gold)" }}
-                >
-                  {t("verifyCta")}
-                  <ExternalLink className="size-3" aria-hidden="true" />
-                </a>
-              ) : (
-                <div
-                  className="inline-flex items-center gap-1.5 text-[11.5px] font-bold tracking-[0.06em]"
-                  style={{ color: "var(--brand-gold)" }}
-                >
-                  <Check className="size-3.5" aria-hidden="true" />
-                  {t("verified")}
-                </div>
-              )}
-            </div>
-          ))}
+          <ShieldCheck
+            className="size-8 shrink-0"
+            style={{ color: "var(--brand-gold-deep)" }}
+            aria-hidden="true"
+          />
+          <p className="max-w-[15rem] text-[14px] leading-[1.7] text-muted-foreground">
+            {t("assurance")}
+          </p>
         </div>
       </div>
     </section>

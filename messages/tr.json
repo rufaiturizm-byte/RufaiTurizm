@@ -18,7 +18,9 @@
       "title": "Rufai Turizm ile Türkiye'yi Keşfedin",
       "subtitle": "Vito VIP araç, havalimanı transferi, rehberli turlar, uçak bileti ve otel rezervasyonu. Arapça, Türkçe ve İngilizce hizmet.",
       "cta": "WhatsApp'tan Hemen Yazın",
-      "ctaSecondary": "Hizmetlerimizi İnceleyin"
+      "ctaSecondary": "Hizmetlerimizi İnceleyin",
+      "titleLead": "Rufai Turizm ile",
+      "titleAccent": "Türkiye'yi Keşfedin"
     },
     "stats": {
       "guests": "Mutlu Misafir",
@@ -81,7 +83,8 @@
         "Rezervasyon öncesi net toplam fiyat",
         "Seyahat boyunca tek muhatap"
       ]
-    }
+    },
+    "priceFrom": "'dan başlayan fiyatlarla"
   },
   "tours": {
     "title": "Tur Destinasyonlarımız",
@@ -175,7 +178,8 @@
     "support": {
       "title": "7/24 Destek",
       "description": "Seyahat öncesi, sırası ve sonrasında yanınızdayız."
-    }
+    },
+    "subtitle": "Havalimanı transferleri, şehir içi ulaşım ve turlarınızda yolculuklarınızı daha konforlu ve güvenli hale getiriyoruz."
   },
   "cta": {
     "whatsapp": "WhatsApp'tan Yazın",
@@ -292,7 +296,9 @@
     "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
     "quickLinks": "Hızlı bağlantılar",
     "contactUs": "İletişim bilgileri",
-    "allRights": "Tüm hakları saklıdır"
+    "allRights": "Tüm hakları saklıdır",
+    "instagram": "Instagram",
+    "followUs": "Bizi takip edin"
   },
   "search": {
     "tabTour": "TUR ARA",
@@ -308,7 +314,11 @@
     "guestsLabel": "Mutlu Misafir",
     "ratingLabel": "Google Puanımız",
     "sinceLabel": "Deneyim Yılı",
-    "licenseLabel": "TÜRSAB Güvencesi"
+    "licenseLabel": "TÜRSAB Güvencesi",
+    "guestsDesc": "Bizi tercih eden misafirlerimiz",
+    "ratingDesc": "Yüzlerce değerlendirme",
+    "sinceDesc": "Sektördeki köklü tecrübemiz",
+    "licenseDesc": "Yetkili acente — Belge No {no}"
   },
   "home2": {
     "popularTours": "Çok Tercih Edilen Turlar",
@@ -317,7 +327,17 @@
     "vipText": "Havalimanı transferleri, şehir içi ulaşım ve şehirlerarası yolculuklar; lüks araçlar ve profesyonel şoförlerle.",
     "vipCta": "VIP Transferi Keşfet",
     "ctaTitle": "Programınızı bugün planlayalım",
-    "ctaText": "Tarihinizi ve kişi sayısını yazın; aynı gün içinde sabit fiyat ve program taslağıyla dönelim."
+    "ctaText": "Tarihinizi ve kişi sayısını yazın; aynı gün içinde sabit fiyat ve program taslağıyla dönelim.",
+    "quoteTitle": "Size özel teklif mi istiyorsunuz?",
+    "quoteText": "Ekibimiz sizin için en uygun ulaşım çözümünü sunsun.",
+    "quoteCta": "Teklif Al",
+    "vipEyebrow": "Konforlu ve Güvenli",
+    "vipF1Title": "Lüks Araçlar",
+    "vipF1Desc": "Konforlu ve yeni model araçlar",
+    "vipF2Title": "Profesyonel Şoförler",
+    "vipF2Desc": "Deneyimli ve güler yüzlü ekip",
+    "vipF3Title": "Kapıdan Kapıya Hizmet",
+    "vipF3Desc": "Zamanında ve güvenli transfer"
   },
   "transferForm": {
     "tabTransfer": "HAVALİMANI ÖZEL TRANSFER",
@@ -343,7 +363,9 @@
     "waStop": "Ara durak",
     "waDate": "Tarih/Saat",
     "waPeople": "Kişi",
-    "waReturn": "Dönüş"
+    "waReturn": "Dönüş",
+    "trust4": "7/24 destek",
+    "peopleUnit": "Kişi"
   },
   "trustBoxes": {
     "airports": "İstanbul'un tüm havalimanları",
@@ -369,7 +391,8 @@
     "insuranceDesc": "Zorunlu koltuk ferdi kaza sigortası",
     "verifyCta": "TÜRSAB kayıtlarından doğrulayın",
     "docNo": "Belge No",
-    "logoAlt": "TÜRSAB — Türkiye Seyahat Acentaları Birliği"
+    "logoAlt": "TÜRSAB — Türkiye Seyahat Acentaları Birliği",
+    "assurance": "Her transfer yasal çerçevede, sigortalı ve kayıtlı."
   },
   "reviews": {
     "title": "Dünyanın dört bir yanından",

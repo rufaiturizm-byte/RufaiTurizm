@@ -28,11 +28,7 @@ export function PageHero({
         className="-z-10 object-cover object-center"
       />
       <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "linear-gradient(to inline-end, color-mix(in oklab, var(--brand-night) 95%, transparent) 0%, color-mix(in oklab, var(--brand-night) 68%, transparent) 62%, color-mix(in oklab, var(--brand-night) 35%, transparent) 100%)",
-        }}
+        className="absolute inset-0 -z-10 scrim-x"
       />
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-20">
         <div className="text-[12.5px] text-white/55">{breadcrumb}</div>

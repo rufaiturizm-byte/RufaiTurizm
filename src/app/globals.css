@@ -103,6 +103,10 @@
   --brand-night-3: oklch(0.30 0.017 252);     /* koyu zemin üzeri kenarlık */
   --brand-gold: oklch(0.845 0.047 70);        /* sıcak kum — koyu zeminde ve dolgularda */
   --brand-gold-deep: oklch(0.54 0.062 68);   /* açık zeminde okunan koyu ton */
+  /* Koyu zeminde küçük büyük-harf etiketler için. Kum tonu bu boyutta
+     beyazdan ayırt edilemiyor; doygunluğu bir tık artınca "altın etiket"
+     olarak okunuyor ama başlık altınının sakinliği bozulmuyor. */
+  --brand-gold-label: oklch(0.795 0.082 76);
   --brand-cream: oklch(0.978 0.010 73);       /* sıcak kağıt beyazı */
   --brand-wa: oklch(0.52 0.132 152);          /* WhatsApp — AA kontrast geçer */
 
@@ -148,12 +152,41 @@
     oklch(1 0 0) 0%,
     color-mix(in oklab, var(--brand-cream) 70%, oklch(1 0 0)) 100%
   );
-  --shadow-card:
-    0 1px 2px color-mix(in oklab, var(--brand-night) 8%, transparent),
-    0 18px 44px color-mix(in oklab, var(--brand-night) 13%, transparent);
-  --shadow-card-hover:
-    0 2px 8px color-mix(in oklab, var(--brand-night) 10%, transparent),
-    0 32px 72px color-mix(in oklab, var(--brand-night) 22%, transparent);
+  /*
+   * Yükseklik ölçeği (elevation).
+   *
+   * Tek katmanlı bir box-shadow ucuz görünür: gerçek gölge tek bir bulanıklık
+   * değil, birbirine binen üç şeydir — nesneyi yüzeye çakan 1px'lik temas
+   * çizgisi, kısa mesafeli orta katman ve çok geniş yumuşak halka. Renk de
+   * siyah değil: zeminin koyu tonu (brand-night) karıştırılıyor, böylece
+   * gölge sayfanın rengine ait oluyor, üstüne yapıştırılmış gibi durmuyor.
+   *
+   * Hangi seviye nerede:
+   *   e1 → rozet, küçük etiket, form alanı
+   *   e2 → kart (tur, hizmet), varsayılan yüzey
+   *   e3 → kartın üzerine gelince
+   *   e4 → hero üzerine binen transfer formu, sayfanın en öndeki yüzeyi
+   */
+  --shadow-e1:
+    0 1px 1px color-mix(in oklab, var(--brand-night) 5%, transparent),
+    0 2px 4px color-mix(in oklab, var(--brand-night) 4%, transparent);
+  --shadow-e2:
+    0 1px 1px color-mix(in oklab, var(--brand-night) 6%, transparent),
+    0 4px 10px color-mix(in oklab, var(--brand-night) 5%, transparent),
+    0 18px 40px color-mix(in oklab, var(--brand-night) 9%, transparent);
+  --shadow-e3:
+    0 1px 1px color-mix(in oklab, var(--brand-night) 7%, transparent),
+    0 6px 14px color-mix(in oklab, var(--brand-night) 7%, transparent),
+    0 18px 36px color-mix(in oklab, var(--brand-night) 10%, transparent),
+    0 40px 80px color-mix(in oklab, var(--brand-night) 14%, transparent);
+  --shadow-e4:
+    0 1px 1px color-mix(in oklab, var(--brand-night) 6%, transparent),
+    0 8px 18px color-mix(in oklab, var(--brand-night) 6%, transparent),
+    0 26px 50px color-mix(in oklab, var(--brand-night) 10%, transparent),
+    0 60px 120px color-mix(in oklab, var(--brand-night) 16%, transparent);
+
+  --shadow-card: var(--shadow-e2);
+  --shadow-card-hover: var(--shadow-e3);
   --shadow-gold: 0 12px 32px color-mix(in oklab, var(--brand-gold) 42%, transparent);
   --hairline: color-mix(in oklab, var(--brand-night) 7%, transparent);
   --sidebar: oklch(0.985 0.008 85);
@@ -224,6 +257,21 @@ body {
 }
 
 /*
+ * Arapça harflerin gövdesi Latin'e göre yüksek ve altına inen kuyrukları var:
+ * başlıklardaki 1.08'lik satır aralığında iki satır birbirinin içine giriyor.
+ * Yön kuralı olduğu için sınıflardan (leading-*) daha güçlü, ayrıca her
+ * başlıkta ayrı bir rtl: varyantı yazmaya gerek bırakmıyor.
+ */
+[dir="rtl"] h1,
+[dir="rtl"] h2 {
+  line-height: 1.4;
+}
+
+[dir="rtl"] h3 {
+  line-height: 1.5;
+}
+
+/*
  * Kart yüzeyi. `rounded-lg border bg-card` üçlüsünün yerini alır:
  * gradyanlı zemin, saç teli kenarlık, iki katmanlı yumuşak gölge ve
  * üzerine gelince hafif yükselme.
@@ -280,4 +328,114 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 16px 40px color-mix(in oklab, var(--brand-gold) 55%, transparent);
   }
+}
+
+/*
+ * Referans tasarımın tekrar eden üç küçük parçası. Sekiz bölümde birden
+ * kullanıldıkları için sınıf oldular; her bölümde aynı style nesnesini
+ * elle yazmak ilk sapmada tutarlılığı bozuyordu.
+ */
+
+/* Bölüm etiketinin ardından uzanan ince altın çizgi. */
+.eyebrow-rule::after {
+  content: "";
+  display: inline-block;
+  width: 3.25rem;
+  height: 1px;
+  margin-inline-start: 0.35rem;
+  vertical-align: middle;
+  background: color-mix(in oklab, var(--brand-gold-deep) 55%, transparent);
+}
+
+/* Koyu zeminde altın ikonu taşıyan kare kutu. */
+.icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7rem;
+  background: color-mix(in oklab, var(--brand-gold) 12%, transparent);
+  border: 1px solid color-mix(in oklab, var(--brand-gold) 26%, transparent);
+  color: var(--brand-gold);
+}
+
+/*
+ * Kapanış şeridindeki takımyıldız dokusu. Düz lacivert bir dikdörtgen
+ * sayfanın en önemli çağrısı için fazla boş kalıyordu; doku, fotoğraf
+ * yüklemeden aynı derinliği veriyor.
+ */
+.pattern-constellation {
+  background-image:
+    radial-gradient(circle at 12% 22%, color-mix(in oklab, var(--brand-gold) 26%, transparent) 0 1.4px, transparent 1.5px),
+    radial-gradient(circle at 34% 68%, color-mix(in oklab, var(--brand-gold) 22%, transparent) 0 1.2px, transparent 1.3px),
+    radial-gradient(circle at 63% 18%, color-mix(in oklab, var(--brand-gold) 24%, transparent) 0 1.3px, transparent 1.4px),
+    radial-gradient(circle at 84% 74%, color-mix(in oklab, var(--brand-gold) 20%, transparent) 0 1.2px, transparent 1.3px),
+    linear-gradient(115deg, color-mix(in oklab, var(--brand-gold) 13%, transparent) 0 1px, transparent 1px 46%),
+    linear-gradient(-60deg, color-mix(in oklab, var(--brand-gold) 11%, transparent) 0 1px, transparent 1px 38%);
+  background-size: 190px 190px, 240px 240px, 210px 210px, 260px 260px, 320px 320px, 280px 280px;
+}
+
+/*
+ * Fotoğraf üzerine yazı yazılan bölümlerin karartması.
+ *
+ * Dört yerde `linear-gradient(to inline-end, …)` yazılıydı: mantıksal yön
+ * anahtar sözcükleri gradyanlarda geçerli DEĞİL, tarayıcı böyle bir
+ * gradyanı tümüyle atıyor — yani o dört bölümde karartma hiç uygulanmıyordu
+ * ve başlıklar fotoğrafın parlak kısmında okunmuyordu. Fiziksel yönle
+ * yazılıp RTL'de ayrıca çevriliyor.
+ */
+.scrim-x {
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--brand-night) 94%, transparent) 0%,
+    color-mix(in oklab, var(--brand-night) 80%, transparent) 34%,
+    color-mix(in oklab, var(--brand-night) 46%, transparent) 68%,
+    color-mix(in oklab, var(--brand-night) 24%, transparent) 100%
+  );
+}
+
+[dir="rtl"] .scrim-x {
+  background: linear-gradient(
+    to left,
+    color-mix(in oklab, var(--brand-night) 94%, transparent) 0%,
+    color-mix(in oklab, var(--brand-night) 80%, transparent) 34%,
+    color-mix(in oklab, var(--brand-night) 46%, transparent) 68%,
+    color-mix(in oklab, var(--brand-night) 24%, transparent) 100%
+  );
+}
+
+/* Alt kenardan yukarı doğru ikinci karartma — üstüne binen kartın gölgesi
+   parlak bir fotoğrafta kayboluyordu. */
+.scrim-bottom {
+  background: linear-gradient(
+    to top,
+    color-mix(in oklab, var(--brand-night) 78%, transparent) 0%,
+    transparent 100%
+  );
+}
+
+/* Kayan şeridin uçlarında sözcükler sertçe kesiliyordu; iki kenarda
+   silinerek bitiyor. */
+.marquee-fade {
+  mask-image: linear-gradient(to right, transparent 0, black 3.5rem, black calc(100% - 3.5rem), transparent 100%);
+}
+
+/* Aracın farları ve gövdesi sağ tarafta seçilsin diye daha hafif karartma. */
+.scrim-x-soft {
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--brand-night) 93%, transparent) 0%,
+    color-mix(in oklab, var(--brand-night) 76%, transparent) 38%,
+    color-mix(in oklab, var(--brand-night) 30%, transparent) 72%,
+    transparent 100%
+  );
+}
+
+[dir="rtl"] .scrim-x-soft {
+  background: linear-gradient(
+    to left,
+    color-mix(in oklab, var(--brand-night) 93%, transparent) 0%,
+    color-mix(in oklab, var(--brand-night) 76%, transparent) 38%,
+    color-mix(in oklab, var(--brand-night) 30%, transparent) 72%,
+    transparent 100%
+  );
 }

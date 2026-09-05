@@ -8,7 +8,7 @@ import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
-import { TrustBoxes } from "@/components/site/trust-boxes";
+import { TrustBoxes } from "@/components/site/trust-stats";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { ProcessSteps } from "@/components/site/process-steps";
 import {
@@ -103,11 +103,7 @@ export default async function ServiceDetailPage({
           className="-z-10 object-cover object-center"
         />
         <div
-          className="absolute inset-0 -z-10"
-          style={{
-            background:
-              "linear-gradient(to inline-end, color-mix(in oklab, var(--brand-night) 95%, transparent) 0%, color-mix(in oklab, var(--brand-night) 66%, transparent) 62%, color-mix(in oklab, var(--brand-night) 32%, transparent) 100%)",
-          }}
+          className="absolute inset-0 -z-10 scrim-x"
         />
         <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-24">
           <div className="text-[12.5px] text-white/55">

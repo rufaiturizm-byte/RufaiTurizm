@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { ArrowLeft, Clock, MessageCircle } from "lucide-react";
+import { ArrowRight, Clock, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "./whatsapp-cta";
 import type { Tour } from "@/data/tours";
@@ -8,10 +8,15 @@ import type { Tour } from "@/data/tours";
 /**
  * Tur kartı.
  *
- * Rakip analizinden üç ekleme (madde 2, 4, 7): şehir rozeti, euro fiyatın
- * yanında USD karşılığı ve kartın kendi WhatsApp düğmesi. Kart sarmalayıcısı
- * bilerek <article>: WhatsApp düğmesi iç içe bağlantı olmasın diye başlık ve
- * düğme ayrı ayrı bağlantı.
+ * Fiyat bloğu referanstaki düzende: küçük "Başlangıç fiyatı" satırı, altında
+ * altın renkli büyük rakam ve yanında ikincil rakam. İkincil rakam bizde
+ * USD karşılığı — Körfez müşterisi dolarla düşünüyor (rakip analizi, madde 4).
+ * Turun `priceListFrom` alanı doldurulursa aynı yerde üstü çizili liste
+ * fiyatı görünür; boşken hiç basılmaz, çünkü sürekli duran sahte bir
+ * "indirimden önceki fiyat" güveni kırar.
+ *
+ * Kart sarmalayıcısı bilerek <article>: WhatsApp düğmesi iç içe bağlantı
+ * olmasın diye başlık ve düğme ayrı ayrı bağlantı.
  */
 export async function TourCard({ tour }: { tour: Tour }) {
   const t = await getTranslations("tours");
@@ -33,54 +38,66 @@ export async function TourCard({ tour }: { tour: Tour }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <span
-          className="absolute start-3 top-3 rounded px-2.5 py-1 text-[11.5px] font-bold"
-          style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
+          className="absolute start-3 top-3 rounded-[0.4rem] px-2.5 py-1 text-[11.5px] font-bold"
+          style={{
+            background: "var(--brand-gold)",
+            color: "var(--brand-night)",
+            boxShadow: "var(--shadow-e1)",
+          }}
         >
           {t(`${tour.key}.city`)}
         </span>
-        <span className="absolute bottom-3 start-3 inline-flex items-center gap-1.5 rounded bg-white/92 px-2.5 py-1 text-[11.5px] font-semibold text-black">
+        <span
+          className="absolute bottom-3 start-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-[11.5px] font-semibold text-black"
+          style={{ boxShadow: "var(--shadow-e1)" }}
+        >
           <Clock className="size-3" aria-hidden="true" />
           {tour.durationHours} {tPage("hours")}
         </span>
       </Link>
 
-      <div className="flex flex-1 flex-col p-4">
-        <h3 className="text-[15.5px] font-bold">
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="font-display text-[18px] font-semibold leading-snug">
           <Link href={href} className="transition-colors hover:text-[color:var(--brand-gold-deep)]">
             {name}
           </Link>
         </h3>
-        <p className="mt-1.5 line-clamp-2 flex-1 text-[13.5px] leading-relaxed text-muted-foreground">
+        <p className="mt-2 line-clamp-2 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
           {t(`${tour.key}.description`)}
         </p>
 
-        <div className="mt-3.5 border-t pt-3">
+        <div className="mt-4 border-t pt-3.5" style={{ borderColor: "var(--hairline)" }}>
           <div className="text-[11.5px] text-muted-foreground">{t("from")}</div>
-          <div className="mt-0.5 flex items-baseline gap-2">
+          <div className="mt-1 flex items-baseline gap-2.5">
             <span
-              className="text-[21px] font-extrabold"
+              className="text-[24px] font-extrabold leading-none"
               style={{ color: "var(--brand-gold-deep)" }}
             >
               €{tour.priceFrom}
             </span>
-            <span className="text-[13px] text-muted-foreground">
-              ≈ ${tour.priceUsdFrom}
-            </span>
+            {tour.priceListFrom ? (
+              <span className="text-[14px] text-muted-foreground line-through">
+                €{tour.priceListFrom}
+              </span>
+            ) : (
+              <span className="text-[14px] text-muted-foreground">≈ ${tour.priceUsdFrom}</span>
+            )}
           </div>
         </div>
 
-        <div className="mt-3.5 flex flex-col gap-2">
+        <div className="mt-4 flex flex-col gap-2.5">
           <Link
             href={href}
-            className="inline-flex items-center justify-center gap-2 rounded-full border py-2.5 text-[13px] font-semibold transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center gap-2 rounded-[0.6rem] border py-3 text-[13px] font-semibold transition-colors hover:bg-secondary"
+            style={{ borderColor: "color-mix(in oklab, var(--brand-night) 15%, transparent)" }}
           >
             {tCommon("details")}
-            <ArrowLeft className="size-3.5 rtl:rotate-180" aria-hidden="true" />
+            <ArrowRight className="size-3.5 rtl:rotate-180" aria-hidden="true" />
           </Link>
           <WhatsAppLink
             subject={name}
-            className="inline-flex items-center justify-center gap-2 rounded-full py-2.5 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5"
-            style={{ background: "var(--brand-wa)" }}
+            className="inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5"
+            style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e1)" }}
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             {tCta("bookNow")}

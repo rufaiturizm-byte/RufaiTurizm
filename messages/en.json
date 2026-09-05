@@ -18,7 +18,9 @@
       "title": "Discover Türkiye with Rufai Tourism",
       "subtitle": "Vito VIP vehicles, airport transfers, guided tours, flight tickets and hotel bookings. Service in Arabic, Turkish and English.",
       "cta": "Message Us on WhatsApp",
-      "ctaSecondary": "Explore Our Services"
+      "ctaSecondary": "Explore Our Services",
+      "titleLead": "Discover Türkiye",
+      "titleAccent": "with Rufai Tourism"
     },
     "stats": {
       "guests": "Happy Guests",
@@ -81,7 +83,8 @@
         "Clear total price before you book",
         "One point of contact for the whole trip"
       ]
-    }
+    },
+    "priceFrom": "starting prices"
   },
   "tours": {
     "title": "Tour Destinations",
@@ -175,7 +178,8 @@
     "support": {
       "title": "24/7 Support",
       "description": "With you before, during and after your trip."
-    }
+    },
+    "subtitle": "We make airport transfers, in-city travel and your tours more comfortable and secure."
   },
   "cta": {
     "whatsapp": "Message on WhatsApp",
@@ -292,7 +296,9 @@
     "about": "Rufai Tourism — a travel agency in Türkiye offering transfers, tours, flight tickets and hotel bookings.",
     "quickLinks": "Quick links",
     "contactUs": "Contact details",
-    "allRights": "All rights reserved"
+    "allRights": "All rights reserved",
+    "instagram": "Instagram",
+    "followUs": "Follow us"
   },
   "search": {
     "tabTour": "FIND A TOUR",
@@ -308,7 +314,11 @@
     "guestsLabel": "Happy Guests",
     "ratingLabel": "Google Rating",
     "sinceLabel": "Serving Since",
-    "licenseLabel": "TÜRSAB Licensed"
+    "licenseLabel": "TÜRSAB Licensed",
+    "guestsDesc": "Guests who chose us",
+    "ratingDesc": "Hundreds of reviews",
+    "sinceDesc": "Deep-rooted experience",
+    "licenseDesc": "Licensed agency — Licence No {no}"
   },
   "home2": {
     "popularTours": "Most Booked Tours",
@@ -317,7 +327,17 @@
     "vipText": "Airport pickups, in-city travel and intercity journeys with premium vehicles and professional chauffeurs.",
     "vipCta": "Explore VIP Transfer",
     "ctaTitle": "Let us plan your trip today",
-    "ctaText": "Send us your dates and party size, and we will come back the same day with a fixed price and a draft programme."
+    "ctaText": "Send us your dates and party size, and we will come back the same day with a fixed price and a draft programme.",
+    "quoteTitle": "Would you like a tailored quote?",
+    "quoteText": "Let our team put together the transport plan that fits you best.",
+    "quoteCta": "Get a Quote",
+    "vipEyebrow": "Comfortable and Secure",
+    "vipF1Title": "Premium Vehicles",
+    "vipF1Desc": "Comfortable, late-model cars",
+    "vipF2Title": "Professional Chauffeurs",
+    "vipF2Desc": "Experienced and courteous team",
+    "vipF3Title": "Door-to-Door Service",
+    "vipF3Desc": "On time and safe transfers"
   },
   "transferForm": {
     "tabTransfer": "PRIVATE AIRPORT TRANSFER",
@@ -343,7 +363,9 @@
     "waStop": "Stop",
     "waDate": "Date/Time",
     "waPeople": "Passengers",
-    "waReturn": "Return"
+    "waReturn": "Return",
+    "trust4": "24/7 support",
+    "peopleUnit": "passengers"
   },
   "trustBoxes": {
     "airports": "All Istanbul airports",
@@ -369,7 +391,8 @@
     "insuranceDesc": "Compulsory personal accident seat insurance",
     "verifyCta": "Verify in the TÜRSAB register",
     "docNo": "Licence No",
-    "logoAlt": "TÜRSAB — Association of Turkish Travel Agencies"
+    "logoAlt": "TÜRSAB — Association of Turkish Travel Agencies",
+    "assurance": "Every transfer is licensed, insured and registered."
   },
   "reviews": {
     "title": "Travellers from around the world",

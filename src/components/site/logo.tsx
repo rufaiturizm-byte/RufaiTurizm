@@ -1,10 +1,34 @@
-export function Logo({ className = "", tone = "light" }: { className?: string; tone?: "light" | "dark" }) {
+/**
+ * Marka amblemi.
+ *
+ * Referans tasarımda amblem iki yerde farklı duruyor: üst çubukta sade
+ * (RUFAI / TOURISM), altbilgide iki yanına ince altın çizgi çekilmiş ve
+ * biraz daha büyük (RUFAI / TURİZM). Aynı SVG'yi iki kez çizmemek için
+ * fark burada iki küçük prop.
+ */
+export function Logo({
+  className = "",
+  tone = "light",
+  sub = "TOURISM",
+  size = 34,
+  flourish = false,
+}: {
+  className?: string;
+  tone?: "light" | "dark";
+  /** Amblemin altındaki küçük yazı. */
+  sub?: string;
+  /** Dairenin kenar uzunluğu (px). */
+  size?: number;
+  /** Alt yazının iki yanına ince altın çizgi çeker — altbilgi düzeni. */
+  flourish?: boolean;
+}) {
   const ink = tone === "light" ? "#fff" : "oklch(0.22 0.035 258)";
-  const sub = tone === "light" ? "rgba(255,255,255,0.55)" : "oklch(0.52 0.02 258)";
+  const subColor = tone === "light" ? "rgba(255,255,255,0.55)" : "oklch(0.52 0.02 258)";
+  const rule = "color-mix(in oklab, var(--brand-gold) 60%, transparent)";
 
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
-      <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true" className="shrink-0">
+      <svg width={size} height={size} viewBox="0 0 120 120" aria-hidden="true" className="shrink-0">
         <circle cx="60" cy="60" r="57" fill="none" stroke="var(--brand-gold)" strokeWidth="3" />
         <g fill="var(--brand-gold)">
           <path d="M38 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L38 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z" />
@@ -20,12 +44,20 @@ export function Logo({ className = "", tone = "light" }: { className?: string; t
         />
         <path d="M28 88c7.5-5.4 14.9-5.4 22.4 0s14.9 5.4 22.4 0 14.9-5.4 19.2-1.6v6.2c-4.3-3.8-11.7-3.8-19.2 1.6s-14.9 5.4-22.4 0-14.9-5.4-22.4 0z" fill="var(--brand-gold)" />
       </svg>
+
       <div className="leading-none">
-        <div className="text-[17px] font-bold tracking-wide" style={{ color: ink }}>
+        <div
+          className="font-bold tracking-wide"
+          style={{ color: ink, fontSize: size >= 44 ? "22px" : "17px" }}
+        >
           RUFAI
         </div>
-        <div className="mt-1 text-[9px] tracking-[0.34em]" style={{ color: sub }}>
-          TOURISM
+        <div className="mt-1 flex items-center gap-2">
+          {flourish ? <span className="h-px w-4" style={{ background: rule }} /> : null}
+          <span className="text-[9px] tracking-[0.34em]" style={{ color: subColor }}>
+            {sub}
+          </span>
+          {flourish ? <span className="h-px w-4" style={{ background: rule }} /> : null}
         </div>
       </div>
     </div>

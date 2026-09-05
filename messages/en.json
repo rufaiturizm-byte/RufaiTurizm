@@ -285,7 +285,8 @@
     "q11": "Can I cancel a booking?",
     "a11": "Yes. Cancellations made more than 24 hours before the programme starts are free of charge. If your plans change, a WhatsApp message is enough.",
     "q12": "Do you serve cities outside Istanbul?",
-    "a12": "Yes. We are based in Istanbul but arrange transfers and tours to Bursa, Sapanca, Trabzon, Bodrum and other cities on request. On intercity journeys the same vehicle and driver stay with you."
+    "a12": "Yes. We are based in Istanbul but arrange transfers and tours to Bursa, Sapanca, Trabzon, Bodrum and other cities on request. On intercity journeys the same vehicle and driver stay with you.",
+    "allQuestions": "All questions"
   },
   "footer": {
     "about": "Rufai Tourism — a travel agency in Türkiye offering transfers, tours, flight tickets and hotel bookings.",
@@ -314,7 +315,9 @@
     "allToursCta": "All Tours",
     "vipTitle": "Comfortable and Secure VIP Transfer",
     "vipText": "Airport pickups, in-city travel and intercity journeys with premium vehicles and professional chauffeurs.",
-    "vipCta": "Explore VIP Transfer"
+    "vipCta": "Explore VIP Transfer",
+    "ctaTitle": "Let us plan your trip today",
+    "ctaText": "Send us your dates and party size, and we will come back the same day with a fixed price and a draft programme."
   },
   "transferForm": {
     "tabTransfer": "PRIVATE AIRPORT TRANSFER",
@@ -363,7 +366,10 @@
     "ibb": "İBB Transport Licence",
     "ibbDesc": "Passenger transport permit from Istanbul Metropolitan Municipality",
     "insurance": "Passenger Insurance",
-    "insuranceDesc": "Compulsory personal accident seat insurance"
+    "insuranceDesc": "Compulsory personal accident seat insurance",
+    "verifyCta": "Verify in the TÜRSAB register",
+    "docNo": "Licence No",
+    "logoAlt": "TÜRSAB — Association of Turkish Travel Agencies"
   },
   "reviews": {
     "title": "Travellers from around the world",
@@ -415,11 +421,68 @@
     "galleryTitle": "Inside the vehicle",
     "interiorAlt": "Mercedes Vito rear seats with leather upholstery",
     "cockpitAlt": "Mercedes Vito driver area",
-    "stockNote": "Photos represent the vehicle type."
+    "stockNote": "Photos represent the vehicle type.",
+    "sedanBadge": "Economy",
+    "vitoBadge": "Most requested",
+    "sprinterBadge": "For groups",
+    "vitoLuggage": "5 – 6",
+    "sprinterLuggage": "12 – 16",
+    "sedanLuggage": "2 – 3"
   },
   "notFound": {
     "title": "Page not found",
     "desc": "The page you are looking for may have moved or never existed. Continue from the links below, or message us directly.",
     "home": "Back to home"
+  },
+  "transferPage": {
+    "typesTitle": "Our Transfer Services",
+    "typesSubtitle": "Airport to hotel, city to city — all handled by one team",
+    "type1Title": "Airport Meet and Greet",
+    "type1Desc": "Name-board welcome at the arrivals gate, luggage help and a direct ride to your hotel.",
+    "type2Title": "Departure Transfer",
+    "type2Desc": "Timed around your return flight; we collect you from the hotel and drop you at the terminal.",
+    "type3Title": "Intercity Transfer",
+    "type3Desc": "To Bursa, Sapanca, Yalova and beyond, with the same vehicle and driver.",
+    "type4Title": "Car at Your Disposal",
+    "type4Desc": "By the hour or the full day: the vehicle and driver are reserved for you.",
+    "fleetTitle": "Our Fleet",
+    "fleetSubtitle": "We match the vehicle to your group size and luggage",
+    "luggage": "bags",
+    "passengers": "passengers",
+    "whyTitle": "Why book your transfer with us",
+    "why1Title": "Met inside the terminal",
+    "why1Desc": "Your driver waits at the arrivals gate, not outside.",
+    "why2Title": "Flight tracking",
+    "why2Desc": "Delays shift the pick-up time automatically, with no waiting fee.",
+    "why3Title": "Fixed price",
+    "why3Desc": "The agreed amount does not change and includes parking and tolls.",
+    "why4Title": "Free child seat",
+    "why4Desc": "Baby and child seats are fitted on request at no extra cost.",
+    "why5Title": "Arabic-speaking driver",
+    "why5Desc": "You can talk in your own language for the whole journey.",
+    "why6Title": "Never shared",
+    "why6Desc": "The vehicle is yours alone; no other passengers are added.",
+    "stepsTitle": "Book in three steps",
+    "stepsSubtitle": "No long forms — it all happens in the chat",
+    "s1Title": "Message us on WhatsApp",
+    "s1Desc": "Send your flight time, passenger count and destination address.",
+    "s2Title": "Confirm the price",
+    "s2Desc": "We send the fixed price and the vehicle type in writing.",
+    "s3Title": "Your driver is waiting",
+    "s3Desc": "You get the driver's name and plate number before the trip.",
+    "citiesTitle": "Where we operate",
+    "citiesSubtitle": "If your destination is not listed, just message us",
+    "cities": [
+      "Istanbul",
+      "Istanbul Airport (IST)",
+      "Sabiha Gokcen (SAW)",
+      "Bursa",
+      "Sapanca",
+      "Yalova",
+      "Bolu",
+      "Abant",
+      "Trabzon",
+      "Bodrum"
+    ]
   }
 }

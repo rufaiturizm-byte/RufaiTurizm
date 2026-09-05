@@ -11,6 +11,9 @@ import { TourCard } from "@/components/site/tour-card";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { PackagesSection } from "@/components/site/packages-section";
 import { Reviews } from "@/components/site/reviews";
+import { ServicesOverview } from "@/components/site/services-overview";
+import { WhyUs } from "@/components/site/why-us";
+import { ClosingCta } from "@/components/site/transfer-sections";
 import { tours } from "@/data/tours";
 import { siteConfig } from "@/config/site";
 
@@ -122,6 +125,8 @@ export default async function HomePage({
           </div>
         </section>
 
+        <ServicesOverview />
+
         {/* Çok tercih edilen turlar */}
         <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
           <SectionHeading
@@ -146,6 +151,8 @@ export default async function HomePage({
         </section>
 
         <PackagesSection locale={locale} />
+
+        <WhyUs subtitle={tHome2("vipText")} />
 
         {/* VIP transfer bandı */}
         <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
@@ -179,6 +186,7 @@ export default async function HomePage({
             </div>
           </div>
         </section>
+        <ClosingCta />
         <CredentialsBand />
         <Reviews />
       </main>

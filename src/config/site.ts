@@ -34,11 +34,18 @@ export const siteConfig = {
    * Numara girildiği anda ana sayfadaki belge bandında yerini alır.
    */
   credentials: {
-    tursab: "",
+    /** TÜRSAB belge numarası — tursab.org.tr/acenta-arama üzerinden doğrulanabilir. */
+    tursab: "12539",
     uetds: "",
     ibb: "",
     insurance: "",
   },
+
+  /** Ticaret unvanı — TÜRSAB kaydında göründüğü biçim. */
+  legalName: "RUFAİ İSTANBUL TURİZM",
+
+  /** Belgenin herkese açık doğrulama adresi. */
+  tursabVerifyUrl: "https://www.tursab.org.tr/acenta-arama",
 
   /** Google işletme profili — yorum bölümündeki bağlantı için. */
   googleReviewsUrl: "",

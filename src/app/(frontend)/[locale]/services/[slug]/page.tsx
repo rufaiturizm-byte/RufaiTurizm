@@ -11,6 +11,14 @@ import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-boxes";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { ProcessSteps } from "@/components/site/process-steps";
+import {
+  ClosingCta,
+  FleetGrid,
+  ServiceCities,
+  TransferSteps,
+  TransferTypes,
+  TransferWhy,
+} from "@/components/site/transfer-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { services, serviceBySlug } from "@/data/services";
 
@@ -63,6 +71,7 @@ export default async function ServiceDetailPage({
   const name = t(`${service.key}.title`);
   const description = t(`${service.key}.description`);
   const features = t.raw(`${service.key}.features`) as string[];
+  const isTransfer = TRANSFER_SLUGS.has(service.slug);
 
   return (
     <main className="flex flex-1 flex-col">
@@ -113,7 +122,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {TRANSFER_SLUGS.has(service.slug) ? (
+      {isTransfer ? (
         <>
           <section className="relative z-10 mx-auto -mt-10 w-full max-w-7xl px-5 sm:px-8">
             <TransferForm />
@@ -236,8 +245,19 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      <ProcessSteps />
+      {isTransfer ? (
+        <>
+          <TransferTypes />
+          <FleetGrid />
+          <TransferWhy />
+          <TransferSteps />
+          <ServiceCities />
+        </>
+      ) : (
+        <ProcessSteps />
+      )}
 
+      <ClosingCta />
       <CredentialsBand />
     </main>
   );

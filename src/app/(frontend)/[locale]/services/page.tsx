@@ -10,7 +10,7 @@ import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-boxes";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { ProcessSteps } from "@/components/site/process-steps";
-import { FleetOptions } from "@/components/site/fleet-options";
+import { ClosingCta, FleetGrid } from "@/components/site/transfer-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { services } from "@/data/services";
 
@@ -158,7 +158,8 @@ export default async function ServicesPage({
       </section>
 
       <ProcessSteps />
-      <FleetOptions />
+      <FleetGrid />
+      <ClosingCta />
 
       <CredentialsBand />
     </main>

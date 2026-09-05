@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
@@ -9,6 +10,7 @@ export async function Footer() {
   const tNav = await getTranslations("nav");
   const tTours = await getTranslations("tours");
   const tContact = await getTranslations("contact");
+  const tCredentials = await getTranslations("credentials");
 
   return (
     <footer style={{ background: "var(--brand-night)" }} className="text-white/62">
@@ -59,8 +61,26 @@ export async function Footer() {
           className="mt-12 flex flex-col gap-3 border-t pt-6 text-[12.5px] text-white/45 sm:flex-row sm:items-center sm:justify-between"
           style={{ borderColor: "var(--brand-night-3)" }}
         >
-          <span>© 2026 Rufai Tourism — {t("allRights")}</span>
-          <span>TÜRSAB{siteConfig.credentials.tursab ? ` ${siteConfig.credentials.tursab}` : ""}</span>
+          <span>© 2026 {siteConfig.legalName} — {t("allRights")}</span>
+          {siteConfig.credentials.tursab ? (
+            <a
+              href={siteConfig.tursabVerifyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-md bg-white px-3 py-2 transition-opacity hover:opacity-90"
+            >
+              <Image
+                src="/brand/tursab.png"
+                alt={tCredentials("logoAlt")}
+                width={104}
+                height={26}
+                className="h-[20px] w-auto"
+              />
+              <span className="text-[11.5px] font-bold text-[color:var(--brand-night)]">
+                {tCredentials("docNo")}: {siteConfig.credentials.tursab}
+              </span>
+            </a>
+          ) : null}
         </div>
       </div>
     </footer>

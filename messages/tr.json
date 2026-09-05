@@ -285,7 +285,8 @@
     "q11": "Rezervasyonu iptal edebilir miyim?",
     "a11": "Evet. Program başlangıcından 24 saat öncesine kadar yapılan iptallerde herhangi bir ücret talep etmiyoruz. Planınız değişirse WhatsApp'tan yazmanız yeterli.",
     "q12": "İstanbul dışındaki şehirlere de hizmet veriyor musunuz?",
-    "a12": "Evet. İstanbul merkezli çalışıyoruz ancak Bursa, Sapanca, Trabzon, Bodrum ve talep üzerine diğer şehirlere transfer ve tur düzenliyoruz. Şehirlerarası yolculuklarda aynı araç ve şoför sizinle kalır."
+    "a12": "Evet. İstanbul merkezli çalışıyoruz ancak Bursa, Sapanca, Trabzon, Bodrum ve talep üzerine diğer şehirlere transfer ve tur düzenliyoruz. Şehirlerarası yolculuklarda aynı araç ve şoför sizinle kalır.",
+    "allQuestions": "Tüm sorular"
   },
   "footer": {
     "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
@@ -314,7 +315,9 @@
     "allToursCta": "Tüm Turlar",
     "vipTitle": "Konforlu ve Güvenli VIP Transfer Hizmeti",
     "vipText": "Havalimanı transferleri, şehir içi ulaşım ve şehirlerarası yolculuklar; lüks araçlar ve profesyonel şoförlerle.",
-    "vipCta": "VIP Transferi Keşfet"
+    "vipCta": "VIP Transferi Keşfet",
+    "ctaTitle": "Programınızı bugün planlayalım",
+    "ctaText": "Tarihinizi ve kişi sayısını yazın; aynı gün içinde sabit fiyat ve program taslağıyla dönelim."
   },
   "transferForm": {
     "tabTransfer": "HAVALİMANI ÖZEL TRANSFER",
@@ -363,7 +366,10 @@
     "ibb": "İBB Ulaşım Lisansı",
     "ibbDesc": "İstanbul Büyükşehir Belediyesi yolcu taşıma izni",
     "insurance": "Yolcu Sigortası",
-    "insuranceDesc": "Zorunlu koltuk ferdi kaza sigortası"
+    "insuranceDesc": "Zorunlu koltuk ferdi kaza sigortası",
+    "verifyCta": "TÜRSAB kayıtlarından doğrulayın",
+    "docNo": "Belge No",
+    "logoAlt": "TÜRSAB — Türkiye Seyahat Acentaları Birliği"
   },
   "reviews": {
     "title": "Dünyanın dört bir yanından",
@@ -415,11 +421,68 @@
     "galleryTitle": "Araçtan kareler",
     "interiorAlt": "Mercedes Vito arka koltuklar — deri döşeme",
     "cockpitAlt": "Mercedes Vito sürücü bölümü",
-    "stockNote": "Görseller araç tipini temsil eder."
+    "stockNote": "Görseller araç tipini temsil eder.",
+    "sedanBadge": "Ekonomik",
+    "vitoBadge": "En çok tercih edilen",
+    "sprinterBadge": "Gruplar için",
+    "vitoLuggage": "5 – 6",
+    "sprinterLuggage": "12 – 16",
+    "sedanLuggage": "2 – 3"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",
     "desc": "Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir. Aşağıdan devam edebilir veya doğrudan bize yazabilirsiniz.",
     "home": "Ana sayfaya dön"
+  },
+  "transferPage": {
+    "typesTitle": "Transfer Hizmetlerimiz",
+    "typesSubtitle": "Havalimanından otele, şehirden şehre — hepsi tek ekiple",
+    "type1Title": "Havalimanı Karşılama",
+    "type1Desc": "Geliş kapısında isimli tabelayla karşılama, bagaj yardımı ve doğrudan otele transfer.",
+    "type2Title": "Havalimanına Bırakış",
+    "type2Desc": "Dönüş uçuşunuza göre saat planlanır; otelinizden alıp terminale bırakırız.",
+    "type3Title": "Şehirlerarası Transfer",
+    "type3Desc": "Bursa, Sapanca, Yalova ve diğer şehirlere aynı araç ve şoförle yolculuk.",
+    "type4Title": "Emrinizde Araç",
+    "type4Desc": "Saatlik veya tam gün: araç ve şoför gün boyu size ayrılır.",
+    "fleetTitle": "Filomuz",
+    "fleetSubtitle": "Aracı kişi sayısına ve valiz hacmine göre seçiyoruz",
+    "luggage": "valiz",
+    "passengers": "yolcu",
+    "whyTitle": "Neden transferi bizimle yapmalısınız",
+    "why1Title": "Terminal içinde karşılama",
+    "why1Desc": "Şoför dışarıda değil, geliş kapısında sizi bekler.",
+    "why2Title": "Uçuş takibi",
+    "why2Desc": "Rötar olursa saat kendiliğinden kayar, bekleme ücreti çıkmaz.",
+    "why3Title": "Sabit fiyat",
+    "why3Desc": "Rezervasyonda söylenen tutar değişmez; otopark ve köprü dahildir.",
+    "why4Title": "Ücretsiz çocuk koltuğu",
+    "why4Desc": "Bebek ve çocuk koltuğu ek ücret olmadan, talebe göre hazırlanır.",
+    "why5Title": "Arapça konuşan şoför",
+    "why5Desc": "Yol boyunca kendi dilinizde iletişim kurarsınız.",
+    "why6Title": "Paylaşımsız yolculuk",
+    "why6Desc": "Araç yalnız size ayrılır; başka yolcu bindirilmez.",
+    "stepsTitle": "Üç adımda rezervasyon",
+    "stepsSubtitle": "Form doldurmak yok; sohbet üzerinden hallediyoruz",
+    "s1Title": "WhatsApp'tan yazın",
+    "s1Desc": "Uçuş saati, kişi sayısı ve varış adresini gönderin.",
+    "s2Title": "Fiyatı onaylayın",
+    "s2Desc": "Sabit fiyatı ve araç tipini yazılı olarak gönderiyoruz.",
+    "s3Title": "Şoförünüz kapıda",
+    "s3Desc": "Şoförün adı ve plaka seyahatten önce elinize ulaşır.",
+    "citiesTitle": "Hizmet verdiğimiz noktalar",
+    "citiesSubtitle": "Listede olmayan bir yer için yazmanız yeterli",
+    "cities": [
+      "İstanbul",
+      "İstanbul Havalimanı (IST)",
+      "Sabiha Gökçen (SAW)",
+      "Bursa",
+      "Sapanca",
+      "Yalova",
+      "Bolu",
+      "Abant",
+      "Trabzon",
+      "Bodrum"
+    ]
   }
 }

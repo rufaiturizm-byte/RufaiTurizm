@@ -19,14 +19,12 @@ export async function TrustBoxes() {
   return (
     <section style={{ background: "var(--brand-night)" }}>
       <div className="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map(({ icon: Icon, title, desc }, index) => (
+        {items.map(({ icon: Icon, title, desc }) => (
           <div
             key={title}
-            className="flex items-center gap-3.5 px-6 py-6 sm:px-7"
-            style={{
-              borderInlineEnd:
-                index < 3 ? "1px solid var(--brand-night-3)" : undefined,
-            }}
+            /* Kenarlık dizilim yönünü izler: mobilde alt, ızgarada yan taraf. */
+            className="flex items-center gap-3.5 border-b px-6 py-6 last:border-0 sm:px-7 sm:not-nth-[2n]:border-e sm:nth-[n+3]:border-b-0 lg:border-b-0 lg:not-last:border-e"
+            style={{ borderColor: "var(--brand-night-3)" }}
           >
             <Icon
               className="size-6 shrink-0"

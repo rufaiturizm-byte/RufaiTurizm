@@ -52,23 +52,28 @@
     "from": "Başlangıç fiyatı",
     "istanbul": {
       "name": "İstanbul Turu",
-      "description": "Sultanahmet, Ayasofya, Kapalıçarşı ve Boğaz turu."
+      "description": "Sultanahmet, Ayasofya, Kapalıçarşı ve Boğaz turu.",
+      "city": "İstanbul"
     },
     "bursa": {
       "name": "Bursa Turu",
-      "description": "Uludağ teleferik, Ulu Cami ve Cumalıkızık köyü."
+      "description": "Uludağ teleferik, Ulu Cami ve Cumalıkızık köyü.",
+      "city": "Bursa"
     },
     "sapanca": {
       "name": "Sapanca Turu",
-      "description": "Sapanca Gölü, Maşukiye şelaleleri ve doğa yürüyüşü."
+      "description": "Sapanca Gölü, Maşukiye şelaleleri ve doğa yürüyüşü.",
+      "city": "Sapanca"
     },
     "trabzon": {
       "name": "Trabzon Turu",
-      "description": "Uzungöl, Sümela Manastırı ve Karadeniz yaylaları."
+      "description": "Uzungöl, Sümela Manastırı ve Karadeniz yaylaları.",
+      "city": "Trabzon"
     },
     "bodrum": {
       "name": "Bodrum Turu",
-      "description": "Bodrum Kalesi, turkuaz koylar ve tekne turu."
+      "description": "Bodrum Kalesi, turkuaz koylar ve tekne turu.",
+      "city": "Bodrum"
     }
   },
   "whyUs": {
@@ -99,7 +104,13 @@
   "common": {
     "language": "Dil",
     "readMore": "Devamını Oku",
-    "allRights": "Tüm hakları saklıdır"
+    "allRights": "Tüm hakları saklıdır",
+    "priceOnRequest": "Fiyat talep üzerine",
+    "contactForPrice": "En iyi fiyat için bize ulaşın",
+    "details": "Ayrıntıları gör",
+    "included": "Fiyata dahil",
+    "backToTours": "Tüm turlar",
+    "backToServices": "Tüm hizmetler"
   },
   "servicesPage": {
     "title": "Hizmetlerimiz",
@@ -149,7 +160,8 @@
   "footer": {
     "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
     "quickLinks": "Hızlı bağlantılar",
-    "contactUs": "İletişim bilgileri"
+    "contactUs": "İletişim bilgileri",
+    "allRights": "Tüm hakları saklıdır"
   },
   "search": {
     "tabTour": "TUR ARA",
@@ -173,5 +185,70 @@
     "vipTitle": "Konforlu ve Güvenli VIP Transfer Hizmeti",
     "vipText": "Havalimanı transferleri, şehir içi ulaşım ve şehirlerarası yolculuklar; lüks araçlar ve profesyonel şoförlerle.",
     "vipCta": "VIP Transferi Keşfet"
+  },
+  "transferForm": {
+    "tabTransfer": "HAVALİMANI ÖZEL TRANSFER",
+    "tabChauffeur": "ŞOFÖRLÜ ARAÇ KİRALAMA",
+    "from": "Alış noktası",
+    "to": "Varış noktası",
+    "placeholder": "havalimanı, otel, bölge",
+    "addStop": "Durak ekle",
+    "stop": "Ara durak",
+    "datetime": "Tarih / Saat",
+    "people": "Kişi sayısı",
+    "submit": "WhatsApp'tan teklif al",
+    "returnSame": "Dönüş: aynı konum",
+    "returnDifferent": "Dönüş: farklı konum",
+    "discount": "Gidiş–dönüş transferde %20 indirim",
+    "trust1": "Sabit fiyat — sürpriz ücret yok",
+    "trust2": "VIP araçla konforlu ulaşım",
+    "trust3": "Paylaşımsız özel yolculuk",
+    "waIntro": "Merhaba Rufai Turizm, transfer teklifi istiyorum:",
+    "waService": "Hizmet",
+    "waFrom": "Alış",
+    "waTo": "Varış",
+    "waStop": "Ara durak",
+    "waDate": "Tarih/Saat",
+    "waPeople": "Kişi",
+    "waReturn": "Dönüş"
+  },
+  "trustBoxes": {
+    "airports": "İstanbul'un tüm havalimanları",
+    "airportsDesc": "IST ve SAW kapsamında",
+    "fixed": "Sabit fiyat garantisi",
+    "fixedDesc": "Sürpriz ücret ve zam yok",
+    "driver": "Arapça konuşan şoför",
+    "driverDesc": "Profesyonel kadro",
+    "support": "7/24 destek",
+    "supportDesc": "Her zaman ulaşılabilir ekibimiz"
+  },
+  "credentials": {
+    "label": "RESMİ BELGELER VE RUHSATLAR",
+    "tagline": "Her transfer yasal çerçevede, sigortalı ve kayıtlı",
+    "verified": "DOĞRULANMIŞ",
+    "tursab": "TÜRSAB",
+    "tursabDesc": "T.C. Kültür ve Turizm Bakanlığı belgeli seyahat acentesi",
+    "uetds": "U-ETDS",
+    "uetdsDesc": "Ulaştırma Elektronik Takip ve Denetim Sistemi kaydı",
+    "ibb": "İBB Ulaşım Lisansı",
+    "ibbDesc": "İstanbul Büyükşehir Belediyesi yolcu taşıma izni",
+    "insurance": "Yolcu Sigortası",
+    "insuranceDesc": "Zorunlu koltuk ferdi kaza sigortası"
+  },
+  "reviews": {
+    "title": "Dünyanın dört bir yanından",
+    "titleAccent": "güvenen yolcular",
+    "basedOn": "yayınlanmış müşteri yorumuna göre",
+    "punctuality": "Dakiklik",
+    "professionalism": "Profesyonellik",
+    "comfort": "Araç konforu",
+    "value": "Fiyat / performans",
+    "googleCta": "Google yorumları"
+  },
+  "included": {
+    "guide": "Arapça konuşan rehber veya şoför",
+    "pickup": "Otelinizden alış ve bırakış",
+    "vehicle": "Klimalı özel araç",
+    "fixedPrice": "Sabit fiyat — sürpriz ücret yok"
   }
 }

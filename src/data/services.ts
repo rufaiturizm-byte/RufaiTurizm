@@ -15,8 +15,12 @@ export interface Service {
 }
 
 export const services: Service[] = [
-  { key: "vitoVip", slug: "vito-vip", icon: "car", priceFrom: 60, currency: "EUR", image: "/images/services/vito-vip.jpg" },
-  { key: "transfer", slug: "transfer", icon: "plane-landing", priceFrom: 35, currency: "EUR", image: "/images/services/transfer.jpg" },
-  { key: "tours", slug: "tours", icon: "map", priceFrom: 45, currency: "EUR", image: "/images/services/tours.jpg" },
-  { key: "flightHotel", slug: "flight-hotel", icon: "ticket", image: "/images/services/flight-hotel.jpg" },
+  { key: "vitoVip", slug: "vito-vip", icon: "car", priceFrom: 60, currency: "EUR", image: "/images/vito-black.jpg" },
+  { key: "transfer", slug: "transfer", icon: "plane-landing", priceFrom: 35, currency: "EUR", image: "/images/chauffeur.jpg" },
+  { key: "tours", slug: "tours", icon: "map", priceFrom: 45, currency: "EUR", image: "/images/tours/istanbul.jpg" },
+  { key: "flightHotel", slug: "flight-hotel", icon: "ticket", image: "/images/kizkulesi.jpg" },
 ];
+
+export function serviceBySlug(slug: string) {
+  return services.find((service) => service.slug === slug);
+}

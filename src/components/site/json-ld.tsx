@@ -1,4 +1,10 @@
-import type { TravelAgency, WebSite, WithContext } from "schema-dts";
+import type {
+  FAQPage,
+  TouristTrip,
+  TravelAgency,
+  WebSite,
+  WithContext,
+} from "schema-dts";
 import { siteConfig } from "@/config/site";
 
 /**
@@ -52,6 +58,68 @@ export function WebSiteSchema({ name }: { name: string }) {
     name,
     url: siteConfig.url,
     inLanguage: ["ar", "tr", "en"],
+  };
+
+  return <JsonLd data={data} />;
+}
+
+/**
+ * SSS sayfası için FAQPage. Google'ın zengin sonuçlarında soru-cevap
+ * açılımı çıkarır — rakiplerin en güçlüsü bunu kullanıyor.
+ */
+export function FaqSchema({
+  items,
+}: {
+  items: { question: string; answer: string }[];
+}) {
+  const data: WithContext<FAQPage> = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+
+  return <JsonLd data={data} />;
+}
+
+/** Tur ve hizmet detay sayfaları için ürün benzeri kart. */
+export function TouristTripSchema({
+  name,
+  description,
+  image,
+  price,
+  currency,
+}: {
+  name: string;
+  description: string;
+  image: string;
+  price?: number;
+  currency?: string;
+}) {
+  const data: WithContext<TouristTrip> = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    name,
+    description,
+    image: `${siteConfig.url}${image}`,
+    provider: {
+      "@type": "TravelAgency",
+      name: "Rufai Turizm",
+      url: siteConfig.url,
+    },
+    ...(price
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: String(price),
+            priceCurrency: currency ?? "EUR",
+            availability: "https://schema.org/InStock",
+          },
+        }
+      : {}),
   };
 
   return <JsonLd data={data} />;

@@ -30,27 +30,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // TODO: Hizmet ve tur detay sayfaları oluşturulunca aşağıdaki iki blok
-  // return dizisine eklenecek. Var olmayan sayfayı sitemap'e koymak
-  // Google'a 404 sunar ve tarama bütçesini boşa harcar.
-  const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
-    url: `${base}/${s.slug}`,
+  // Bölüm sayfaları. Yollar dile göre değiştiği için (routing.ts → pathnames)
+  // her dilin kendi adresi alternates içinde ayrı ayrı verilir.
+  const sections: { ar: string; tr: string; en: string; priority: number }[] = [
+    { ar: "/جولاتنا", tr: "/turlar", en: "/tours", priority: 0.9 },
+    { ar: "/خدماتنا", tr: "/hizmetler", en: "/services", priority: 0.9 },
+    { ar: "/من-نحن", tr: "/hakkimizda", en: "/about", priority: 0.6 },
+    { ar: "/تواصل-معنا", tr: "/iletisim", en: "/contact", priority: 0.7 },
+    { ar: "/الاسئلة-الشائعة", tr: "/sikca-sorulan-sorular", en: "/faq", priority: 0.6 },
+  ];
+
+  const sectionPages: MetadataRoute.Sitemap = sections.map((section) => ({
+    url: `${base}${section.ar}`,
     lastModified: now,
     changeFrequency: "monthly",
-    priority: 0.8,
-    alternates: alternates(`/${s.slug}`),
+    priority: section.priority,
+    alternates: {
+      languages: {
+        ar: `${base}${section.ar}`,
+        tr: `${base}/tr${section.tr}`,
+        en: `${base}/en${section.en}`,
+        "x-default": `${base}${section.ar}`,
+      },
+    },
   }));
 
-  const tourPages: MetadataRoute.Sitemap = tours.map((tour) => ({
-    url: `${base}/${tour.slug}`,
+  const detailPages: MetadataRoute.Sitemap = [
+    ...services.map((service) => ({
+      ar: `/خدماتنا/${service.slug}`,
+      tr: `/hizmetler/${service.slug}`,
+      en: `/services/${service.slug}`,
+    })),
+    ...tours.map((tour) => ({
+      ar: `/جولاتنا/${tour.slug}`,
+      tr: `/turlar/${tour.slug}`,
+      en: `/tours/${tour.slug}`,
+    })),
+  ].map((paths) => ({
+    url: `${base}${paths.ar}`,
     lastModified: now,
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.8,
-    alternates: alternates(`/${tour.slug}`),
+    alternates: {
+      languages: {
+        ar: `${base}${paths.ar}`,
+        tr: `${base}/tr${paths.tr}`,
+        en: `${base}/en${paths.en}`,
+        "x-default": `${base}${paths.ar}`,
+      },
+    },
   }));
 
-  void servicePages;
-  void tourPages;
-
-  return home;
+  return [...home, ...sectionPages, ...detailPages];
 }

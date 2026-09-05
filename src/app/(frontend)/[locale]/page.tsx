@@ -4,6 +4,12 @@ import { Users, Star, Building2, ShieldCheck, ArrowLeft, MessageCircle } from "l
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { TravelAgencySchema, WebSiteSchema } from "@/components/site/json-ld";
+import { TransferForm } from "@/components/site/transfer-form";
+import { TrustBoxes } from "@/components/site/trust-boxes";
+import { SectionHeading } from "@/components/site/section-heading";
+import { TourCard } from "@/components/site/tour-card";
+import { CredentialsBand } from "@/components/site/credentials-band";
+import { Reviews } from "@/components/site/reviews";
 import { tours } from "@/data/tours";
 import { siteConfig } from "@/config/site";
 
@@ -17,10 +23,10 @@ export default async function HomePage({
 
   const t = await getTranslations("home");
   const tBrand = await getTranslations("brand");
-  const tTours = await getTranslations("tours");
   const tStats = await getTranslations("stats");
   const tHome2 = await getTranslations("home2");
   const tCta = await getTranslations("cta");
+  const tToursPage = await getTranslations("toursPage");
 
   const stats = [
     { icon: Users, value: "+12.000", label: tStats("guestsLabel") },
@@ -91,6 +97,15 @@ export default async function HomePage({
           </div>
         </section>
 
+        {/* Transfer talep formu — hero'nun üstüne biner, seçimler WhatsApp mesajına dönüşür */}
+        <section className="mx-auto -mt-10 w-full max-w-7xl px-5 sm:px-8">
+          <TransferForm />
+        </section>
+
+        <section className="mt-12">
+          <TrustBoxes />
+        </section>
+
         {/* İstatistik şeridi */}
         <section className="border-b bg-background">
           <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-5 py-10 sm:px-8 lg:grid-cols-4">
@@ -108,53 +123,23 @@ export default async function HomePage({
 
         {/* Çok tercih edilen turlar */}
         <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
-          <div className="mb-8 flex items-end justify-between gap-6">
-            <h2 className="text-[28px] font-bold sm:text-[32px]">{tHome2("popularTours")}</h2>
-            <Link
-              href="/tours"
-              className="inline-flex shrink-0 items-center gap-2 rounded-md border px-4 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
-            >
-              {tHome2("allToursCta")}
-              <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
-            </Link>
-          </div>
+          <SectionHeading
+            title={tHome2("popularTours")}
+            subtitle={tToursPage("subtitle")}
+            action={
+              <Link
+                href="/tours"
+                className="inline-flex shrink-0 items-center gap-2 rounded-md border px-4 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+              >
+                {tHome2("allToursCta")}
+                <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
+              </Link>
+            }
+          />
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {featured.map((tour) => (
-              <Link
-                key={tour.key}
-                href={{ pathname: "/tours/[slug]", params: { slug: tour.slug } }}
-                className="group overflow-hidden rounded-lg border bg-card transition-shadow hover:shadow-lg"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={`/images/tours/${tour.key}.jpg`}
-                    alt={tTours(`${tour.key}.name`)}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-x-3 bottom-3 flex items-center justify-between gap-2">
-                    <span className="rounded bg-white/92 px-2.5 py-1 text-[11.5px] font-semibold">
-                      {tour.durationHours} {locale === "ar" ? "ساعة" : locale === "tr" ? "Saat" : "h"}
-                    </span>
-                    <span
-                      className="rounded px-2.5 py-1 text-[11.5px] font-bold"
-                      style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
-                    >
-                      €{tour.priceFrom}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-[15.5px] font-bold uppercase tracking-wide">
-                    {tTours(`${tour.key}.name`)}
-                  </h3>
-                  <p className="mt-1.5 line-clamp-2 text-[13.5px] leading-relaxed text-muted-foreground">
-                    {tTours(`${tour.key}.description`)}
-                  </p>
-                </div>
-              </Link>
+              <TourCard key={tour.key} tour={tour} />
             ))}
           </div>
         </section>
@@ -191,6 +176,8 @@ export default async function HomePage({
             </div>
           </div>
         </section>
+        <CredentialsBand />
+        <Reviews />
       </main>
     </>
   );

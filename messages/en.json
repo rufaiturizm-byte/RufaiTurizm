@@ -52,23 +52,28 @@
     "from": "Starting from",
     "istanbul": {
       "name": "Istanbul Tour",
-      "description": "Blue Mosque, Hagia Sophia, Grand Bazaar and a Bosphorus cruise."
+      "description": "Blue Mosque, Hagia Sophia, Grand Bazaar and a Bosphorus cruise.",
+      "city": "Istanbul"
     },
     "bursa": {
       "name": "Bursa Tour",
-      "description": "Uludağ cable car, Grand Mosque and Cumalıkızık village."
+      "description": "Uludağ cable car, Grand Mosque and Cumalıkızık village.",
+      "city": "Bursa"
     },
     "sapanca": {
       "name": "Sapanca Tour",
-      "description": "Lake Sapanca, Maşukiye waterfalls and nature walks."
+      "description": "Lake Sapanca, Maşukiye waterfalls and nature walks.",
+      "city": "Sapanca"
     },
     "trabzon": {
       "name": "Trabzon Tour",
-      "description": "Uzungöl, Sumela Monastery and the Black Sea highlands."
+      "description": "Uzungöl, Sumela Monastery and the Black Sea highlands.",
+      "city": "Trabzon"
     },
     "bodrum": {
       "name": "Bodrum Tour",
-      "description": "Bodrum Castle, turquoise bays and boat trips."
+      "description": "Bodrum Castle, turquoise bays and boat trips.",
+      "city": "Bodrum"
     }
   },
   "whyUs": {
@@ -99,7 +104,13 @@
   "common": {
     "language": "Language",
     "readMore": "Read More",
-    "allRights": "All rights reserved"
+    "allRights": "All rights reserved",
+    "priceOnRequest": "Price on request",
+    "contactForPrice": "Contact us for the best price",
+    "details": "View details",
+    "included": "Included in the price",
+    "backToTours": "All tours",
+    "backToServices": "All services"
   },
   "servicesPage": {
     "title": "Our Services",
@@ -149,7 +160,8 @@
   "footer": {
     "about": "Rufai Tourism — a travel agency in Türkiye offering transfers, tours, flight tickets and hotel bookings.",
     "quickLinks": "Quick links",
-    "contactUs": "Contact details"
+    "contactUs": "Contact details",
+    "allRights": "All rights reserved"
   },
   "search": {
     "tabTour": "FIND A TOUR",
@@ -173,5 +185,70 @@
     "vipTitle": "Comfortable and Secure VIP Transfer",
     "vipText": "Airport pickups, in-city travel and intercity journeys with premium vehicles and professional chauffeurs.",
     "vipCta": "Explore VIP Transfer"
+  },
+  "transferForm": {
+    "tabTransfer": "PRIVATE AIRPORT TRANSFER",
+    "tabChauffeur": "CAR WITH DRIVER",
+    "from": "Pick-up point",
+    "to": "Destination",
+    "placeholder": "airport, hotel, district",
+    "addStop": "Add a stop",
+    "stop": "Stop on the way",
+    "datetime": "Date / Time",
+    "people": "Passengers",
+    "submit": "Get a quote on WhatsApp",
+    "returnSame": "Return: same location",
+    "returnDifferent": "Return: different location",
+    "discount": "20% off on round-trip transfers",
+    "trust1": "Fixed price — no surprise fees",
+    "trust2": "Comfortable VIP vehicles",
+    "trust3": "Private ride, never shared",
+    "waIntro": "Hello Rufai Tourism, I would like a transfer quote:",
+    "waService": "Service",
+    "waFrom": "From",
+    "waTo": "To",
+    "waStop": "Stop",
+    "waDate": "Date/Time",
+    "waPeople": "Passengers",
+    "waReturn": "Return"
+  },
+  "trustBoxes": {
+    "airports": "All Istanbul airports",
+    "airportsDesc": "IST and SAW covered",
+    "fixed": "Fixed-price guarantee",
+    "fixedDesc": "No surprise charges",
+    "driver": "Arabic-speaking driver",
+    "driverDesc": "Professional team",
+    "support": "24/7 support",
+    "supportDesc": "Our team is always reachable"
+  },
+  "credentials": {
+    "label": "OFFICIAL DOCUMENTS AND LICENCES",
+    "tagline": "Every transfer is licensed, insured and registered",
+    "verified": "VERIFIED",
+    "tursab": "TÜRSAB",
+    "tursabDesc": "Travel agency licensed by the Turkish Ministry of Culture and Tourism",
+    "uetds": "U-ETDS",
+    "uetdsDesc": "Registered in the national road transport tracking system",
+    "ibb": "İBB Transport Licence",
+    "ibbDesc": "Passenger transport permit from Istanbul Metropolitan Municipality",
+    "insurance": "Passenger Insurance",
+    "insuranceDesc": "Compulsory personal accident seat insurance"
+  },
+  "reviews": {
+    "title": "Travellers from around the world",
+    "titleAccent": "who trust us",
+    "basedOn": "based on published customer reviews",
+    "punctuality": "Punctuality",
+    "professionalism": "Professionalism",
+    "comfort": "Vehicle comfort",
+    "value": "Value for money",
+    "googleCta": "Google reviews"
+  },
+  "included": {
+    "guide": "Arabic-speaking guide or driver",
+    "pickup": "Hotel pick-up and drop-off",
+    "vehicle": "Private air-conditioned vehicle",
+    "fixedPrice": "Fixed price — no surprise fees"
   }
 }

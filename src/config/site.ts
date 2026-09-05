@@ -26,9 +26,20 @@ export const siteConfig = {
     tiktok: "",
   },
 
-  /** Yasal belgeler — güven unsuru olarak gösterilir. */
+  /**
+   * Yasal belgeler — güven unsuru olarak gösterilir.
+   *
+   * Boş bırakılan belge sitede HİÇ görünmez: sahip olmadığımız bir belgeyi
+   * "doğrulanmış" diye göstermek Ortadoğu pazarında en ağır güven kaybı.
+   * Numara girildiği anda ana sayfadaki belge bandında yerini alır.
+   */
   credentials: {
     tursab: "",
     uetds: "",
+    ibb: "",
+    insurance: "",
   },
+
+  /** Google işletme profili — yorum bölümündeki bağlantı için. */
+  googleReviewsUrl: "",
 } as const;

@@ -210,8 +210,8 @@
     "step3Desc": "Onayınızla araç, şoför ve rehber ayrılır.",
     "step4Title": "Seyahat edin",
     "step4Desc": "Şoförünüz otelinizde; seyahat boyunca aynı numaradan bize ulaşırsınız.",
-    "fleetTitle": "Araç seçenekleri",
-    "fleetSubtitle": "Araç, kişi sayısı ve bagaj hacmine göre seçilir"
+    "fleetTitle": "Aracımız",
+    "fleetSubtitle": "Tüm transfer ve turlarımız Mercedes Vito ile yapılır"
   },
   "toursPage": {
     "title": "Tur Programlarımız",
@@ -220,7 +220,7 @@
     "hours": "saat",
     "allTours": "Tüm turlar",
     "highlights": "Öne çıkanlar",
-    "intro": "Turlarımızın tamamı özel araçla yapılır: gruba katılmaz, kendi programınızla hareket edersiniz. Şoförümüz otelinizden alır, gün sonunda otelinize bırakır. Rehber ve şoförlerimiz Arapça konuşur; çocuklu ve kalabalık aileler için araç büyüklüğü talebe göre ayarlanır.",
+    "intro": "Turlarımızın tamamı özel araçla yapılır: gruba katılmaz, kendi programınızla hareket edersiniz. Şoförümüz otelinizden alır, gün sonunda otelinize bırakır. Rehber ve şoförlerimiz Arapça konuşur; Mercedes Vito aracımız bagajlarınızla birlikte altı kişiye kadar rahat eder.",
     "programTitle": "Gün içinde neler var",
     "includedTitle": "Fiyata dahil",
     "notIncludedTitle": "Fiyata dahil değil",
@@ -267,7 +267,7 @@
     "q2": "Arapça konuşan rehber var mı?",
     "a2": "Evet, tüm turlarımız Arapça konuşan rehber veya şoför eşliğinde yapılır.",
     "q3": "Vito araçta kaç kişi seyahat edebilir?",
-    "a3": "Mercedes Vito, bagajlarıyla birlikte 6 yolcuya kadar rahat seyahat imkânı sunar. Daha kalabalık gruplar için Sprinter sağlıyoruz.",
+    "a3": "Mercedes Vito, bagajlarıyla birlikte 6 yolcuya kadar rahat seyahat imkânı sunar. Daha kalabalık aileler için birden fazla araç ayarlıyoruz.",
     "q4": "Havalimanında karşılıyor musunuz?",
     "a4": "Evet, uçuşunuzu takip ediyor, isminizin yazılı olduğu tabelayla geliş kapısında karşılıyor ve bagajlarınıza yardımcı oluyoruz.",
     "q5": "Rezervasyon ve ödeme nasıl yapılıyor?",
@@ -406,28 +406,15 @@
     "vito": {
       "name": "Mercedes Vito",
       "capacity": "1 – 6 kişi",
-      "desc": "Aileler için en çok tercih edilen araç; bagaj hacmi geniş."
-    },
-    "sprinter": {
-      "name": "Mercedes Sprinter",
-      "capacity": "7 – 14 kişi",
-      "desc": "Kalabalık aileler ve uzun yolculuklar için."
-    },
-    "sedan": {
-      "name": "Lüks Sedan",
-      "capacity": "1 – 3 kişi",
-      "desc": "İş seyahatleri ve özel karşılamalar için."
+      "desc": "Ailelerin en çok tercih ettiği araç: bagajlarıyla birlikte altı kişi rahat eder, camlar kararmış ve arka bölmede ayrı klima var."
     },
     "galleryTitle": "Araçtan kareler",
     "interiorAlt": "Mercedes Vito arka koltuklar — deri döşeme",
     "cockpitAlt": "Mercedes Vito sürücü bölümü",
     "stockNote": "Görseller araç tipini temsil eder.",
-    "sedanBadge": "Ekonomik",
     "vitoBadge": "En çok tercih edilen",
-    "sprinterBadge": "Gruplar için",
     "vitoLuggage": "5 – 6",
-    "sprinterLuggage": "12 – 16",
-    "sedanLuggage": "2 – 3"
+    "exteriorAlt": "Mercedes Vito — dış görünüm"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",
@@ -445,8 +432,8 @@
     "type3Desc": "Bursa, Sapanca, Yalova ve diğer şehirlere aynı araç ve şoförle yolculuk.",
     "type4Title": "Emrinizde Araç",
     "type4Desc": "Saatlik veya tam gün: araç ve şoför gün boyu size ayrılır.",
-    "fleetTitle": "Filomuz",
-    "fleetSubtitle": "Aracı kişi sayısına ve valiz hacmine göre seçiyoruz",
+    "fleetTitle": "Aracımız",
+    "fleetSubtitle": "Tüm transfer ve turlarımız Mercedes Vito ile yapılır",
     "luggage": "valiz",
     "passengers": "yolcu",
     "whyTitle": "Neden transferi bizimle yapmalısınız",

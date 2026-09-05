@@ -143,8 +143,9 @@ export default async function ServiceDetailPage({
             {service.slug === "vito-vip" ? (
               <div className="mt-8">
                 <h2 className="text-[19px] font-bold">{tFleet("galleryTitle")}</h2>
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                <div className="mt-4 grid gap-4 sm:grid-cols-3">
                   {[
+                    { src: "/images/fleet/vito-exterior.jpg", alt: tFleet("exteriorAlt") },
                     { src: "/images/fleet/vito-interior.jpg", alt: tFleet("interiorAlt") },
                     { src: "/images/fleet/vito-cockpit.jpg", alt: tFleet("cockpitAlt") },
                   ].map((photo) => (
@@ -156,7 +157,7 @@ export default async function ServiceDetailPage({
                         src={photo.src}
                         alt={photo.alt}
                         fill
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        sizes="(max-width: 640px) 100vw, 33vw"
                         className="object-cover"
                       />
                     </div>

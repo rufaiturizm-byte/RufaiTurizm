@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import {
-  Bus,
-  Car,
   CheckCircle2,
   Clock,
   Luggage,
@@ -62,120 +60,80 @@ export async function TransferTypes() {
 }
 
 /**
- * Filo. Vito kartı doğrulanmış iki fotoğrafı taşıyor; sedan ve Sprinter için
- * elimizde güvenilir kare olmadığından ikon paneli var. Kendi araç
- * fotoğraflarınız gelince public/images/fleet/ içine sedan.jpg ve
- * sprinter.jpg olarak koymak yeterli (bkz. aşağıdaki photo alanı).
+ * Aracımız. Firma yalnız Mercedes Vito ile çalışıyor, o yüzden bölüm tek
+ * araca ayrıldı: dış görünüm, arka koltuklar ve sürücü bölümü. Kendi araç
+ * fotoğraflarınız gelince public/images/fleet/ içindekileri aynı adlarla
+ * değiştirmek yeterli, kod değişmez.
  */
 export async function FleetGrid() {
   const t = await getTranslations("fleet");
   const tPage = await getTranslations("transferPage");
   const tCta = await getTranslations("cta");
 
-  const vehicles = [
-    {
-      key: "vito",
-      icon: Car,
-      badge: t("vitoBadge"),
-      luggage: t("vitoLuggage"),
-      photo: "/images/fleet/vito-interior.jpg",
-      alt: t("interiorAlt"),
-      featured: true,
-    },
-    {
-      key: "sprinter",
-      icon: Bus,
-      badge: t("sprinterBadge"),
-      luggage: t("sprinterLuggage"),
-      photo: null,
-      alt: "",
-      featured: false,
-    },
-    {
-      key: "sedan",
-      icon: Car,
-      badge: t("sedanBadge"),
-      luggage: t("sedanLuggage"),
-      photo: null,
-      alt: "",
-      featured: false,
-    },
-  ] as const;
+  const photos = [
+    { src: "/images/fleet/vito-exterior.jpg", alt: t("exteriorAlt") },
+    { src: "/images/fleet/vito-interior.jpg", alt: t("interiorAlt") },
+    { src: "/images/fleet/vito-cockpit.jpg", alt: t("cockpitAlt") },
+  ];
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
       <SectionHeading title={tPage("fleetTitle")} subtitle={tPage("fleetSubtitle")} />
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {vehicles.map((vehicle) => {
-          const Icon = vehicle.icon;
-          const name = t(`${vehicle.key}.name`);
-
-          return (
-            <article
-              key={vehicle.key}
-              className="flex flex-col overflow-hidden rounded-lg border bg-card"
+      <article className="overflow-hidden rounded-xl border bg-card">
+        <div className="grid gap-px sm:grid-cols-3" style={{ background: "var(--border)" }}>
+          {photos.map((photo, index) => (
+            <div
+              key={photo.src}
+              className={`relative aspect-[4/3] ${index > 0 ? "hidden sm:block" : ""}`}
             >
-              <div className="relative aspect-[16/10]">
-                {vehicle.photo ? (
-                  <Image
-                    src={vehicle.photo}
-                    alt={vehicle.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                ) : (
-                  <div
-                    className="flex h-full w-full items-center justify-center"
-                    style={{ background: "var(--brand-night)" }}
-                  >
-                    <Icon
-                      className="size-14"
-                      style={{ color: "var(--brand-gold)" }}
-                      aria-hidden="true"
-                    />
-                  </div>
-                )}
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, 33vw"
+                className="object-cover"
+              />
+              {index === 0 ? (
                 <span
                   className="absolute start-3 top-3 rounded px-2.5 py-1 text-[11.5px] font-bold"
                   style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
                 >
-                  {vehicle.badge}
+                  {t("vitoBadge")}
                 </span>
-              </div>
+              ) : null}
+            </div>
+          ))}
+        </div>
 
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="text-[16.5px] font-bold">{name}</h3>
+        <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-7">
+          <div>
+            <h3 className="text-[20px] font-bold">{t("vito.name")}</h3>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-[13.5px] text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5">
+                <Users className="size-3.5" aria-hidden="true" />
+                {t("vito.capacity")}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Luggage className="size-3.5" aria-hidden="true" />
+                {t("vitoLuggage")} {tPage("luggage")}
+              </span>
+            </div>
+            <p className="mt-3 max-w-lg text-[14px] leading-relaxed text-muted-foreground">
+              {t("vito.desc")}
+            </p>
+          </div>
 
-                <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-[13px] text-muted-foreground">
-                  <span className="inline-flex items-center gap-1.5">
-                    <Users className="size-3.5" aria-hidden="true" />
-                    {t(`${vehicle.key}.capacity`)}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Luggage className="size-3.5" aria-hidden="true" />
-                    {vehicle.luggage} {tPage("luggage")}
-                  </span>
-                </div>
-
-                <p className="mt-3 flex-1 text-[13.5px] leading-relaxed text-muted-foreground">
-                  {t(`${vehicle.key}.desc`)}
-                </p>
-
-                <WhatsAppLink
-                  subject={name}
-                  className="mt-5 inline-flex items-center justify-center gap-2 rounded-md py-3 text-[13.5px] font-bold text-white transition-opacity hover:opacity-90"
-                  style={{ background: "var(--brand-wa)" }}
-                >
-                  <MessageCircle className="size-4" aria-hidden="true" />
-                  {tCta("whatsapp")}
-                </WhatsAppLink>
-              </div>
-            </article>
-          );
-        })}
-      </div>
+          <WhatsAppLink
+            subject={t("vito.name")}
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md px-7 py-3.5 text-[14px] font-bold text-white transition-opacity hover:opacity-90"
+            style={{ background: "var(--brand-wa)" }}
+          >
+            <MessageCircle className="size-4" aria-hidden="true" />
+            {tCta("whatsapp")}
+          </WhatsAppLink>
+        </div>
+      </article>
 
       <p className="mt-4 text-[12.5px] text-muted-foreground">{t("stockNote")}</p>
     </section>

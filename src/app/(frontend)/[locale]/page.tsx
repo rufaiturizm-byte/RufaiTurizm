@@ -13,6 +13,7 @@ import { PackagesSection } from "@/components/site/packages-section";
 import { Reviews } from "@/components/site/reviews";
 import { ServicesOverview } from "@/components/site/services-overview";
 import { WhyUs } from "@/components/site/why-us";
+import { FaqPreview } from "@/components/site/faq-preview";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { tours } from "@/data/tours";
 import { siteConfig } from "@/config/site";
@@ -186,6 +187,7 @@ export default async function HomePage({
             </div>
           </div>
         </section>
+        <FaqPreview />
         <ClosingCta />
         <CredentialsBand />
         <Reviews />

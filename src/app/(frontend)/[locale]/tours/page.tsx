@@ -5,6 +5,9 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { WhyUs } from "@/components/site/why-us";
+import { FaqPreview } from "@/components/site/faq-preview";
+import { ClosingCta } from "@/components/site/transfer-sections";
 import { PackagesSection } from "@/components/site/packages-section";
 import { tours } from "@/data/tours";
 
@@ -61,6 +64,10 @@ export default async function ToursPage({
       </section>
 
       <PackagesSection locale={locale} />
+
+      <WhyUs subtitle={t("intro")} />
+      <FaqPreview />
+      <ClosingCta />
 
       <CredentialsBand />
     </main>

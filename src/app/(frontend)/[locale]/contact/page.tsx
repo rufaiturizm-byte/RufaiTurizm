@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Check, Clock, Languages, Mail, MapPin, MessageCircle, Phone, Timer } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
+import { SectionHeading } from "@/components/site/section-heading";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { siteConfig, hasRealPhone } from "@/config/site";
@@ -109,6 +110,43 @@ export default async function ContactPage({
               <div className="mt-1 text-[14px] text-muted-foreground">{t("hoursValue")}</div>
             </div>
           </div>
+
+          <div className="flex items-start gap-4 rounded-lg border bg-card p-6">
+            <Timer className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
+            <div>
+              <div className="text-[14.5px] font-bold">{t("responseTitle")}</div>
+              <div className="mt-1 text-[14px] leading-relaxed text-muted-foreground">
+                {t("responseValue")}
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4 rounded-lg border bg-card p-6">
+            <Languages className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
+            <div>
+              <div className="text-[14.5px] font-bold">{t("languagesTitle")}</div>
+              <div className="mt-1 text-[14px] text-muted-foreground">{t("languagesValue")}</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-14">
+          <SectionHeading title={t("topicsTitle")} subtitle={t("subtitle")} />
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {(["topic1", "topic2", "topic3", "topic4"] as const).map((key) => (
+              <li
+                key={key}
+                className="flex items-start gap-3 rounded-lg border bg-card p-5 text-[14.5px]"
+              >
+                <Check
+                  className="mt-0.5 size-4 shrink-0"
+                  style={{ color: "var(--brand-gold-deep)" }}
+                  aria-hidden="true"
+                />
+                {t(key)}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

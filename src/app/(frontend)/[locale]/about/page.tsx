@@ -47,16 +47,19 @@ export default async function AboutPage({
         subtitle={t("subtitle")}
       />
 
-      <section className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8">
-        <div className="flex flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
+      <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+        <div className="flex max-w-3xl flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
           <p>{t("p1")}</p>
           <p>{t("p2")}</p>
           <p>{t("p3")}</p>
+          <p>{t("p4")}</p>
+          <p>{t("p5")}</p>
+          <p>{t("p6")}</p>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
-        <SectionHeading title={tWhy("title")} subtitle={t("subtitle")} />
+        <SectionHeading title={tWhy("title")} subtitle={t("howTitle")} />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map(({ icon: Icon, key }) => (
             <div key={key} className="rounded-lg border bg-card p-6">

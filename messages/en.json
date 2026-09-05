@@ -31,19 +31,55 @@
     "subtitle": "Everything you need for a comfortable trip in Türkiye",
     "vitoVip": {
       "title": "Vito VIP Vehicle Service",
-      "description": "Late-model Mercedes Vito with a private chauffeur. Comfortable travel for up to 6 passengers with luggage."
+      "description": "Late-model Mercedes Vito with a private chauffeur. Comfortable travel for up to 6 passengers with luggage.",
+      "long": "The Mercedes Vito is the vehicle our Middle Eastern guests choose most. It seats up to six people with their luggage in comfort, with generous legroom, tinted windows and separate air conditioning in the rear. You keep the same vehicle and the same driver for city sightseeing, airport pick-ups and intercity journeys.",
+      "features": [
+        "Up to 6 passengers with luggage",
+        "Tinted windows for family privacy",
+        "Separate rear air conditioning",
+        "Complimentary water and wi-fi on board",
+        "Child seat on request",
+        "The same driver throughout your stay"
+      ]
     },
     "transfer": {
       "title": "Transfer & Meet and Greet",
-      "description": "Airport pickup and hotel transfer at a fixed price, including flight tracking and luggage assistance."
+      "description": "Airport pickup and hotel transfer at a fixed price, including flight tracking and luggage assistance.",
+      "long": "For airport pick-ups we track your flight: if the plane is delayed the driver waits and there is no extra charge. Your driver meets you at the arrivals gate with a name board, handles your luggage and takes you straight to your hotel. Both Istanbul airports (IST and SAW) are covered.",
+      "features": [
+        "Flight tracking — waiting on delays is free",
+        "Name-board meet and greet at arrivals",
+        "Both IST and SAW airports",
+        "Fixed price, confirmed at booking",
+        "Discount on round-trip bookings",
+        "Extra stops can be added"
+      ]
     },
     "tours": {
       "title": "Guided Tours",
-      "description": "Daily tours and private tour programs with an Arabic-speaking guide."
+      "description": "Daily tours and private tour programs with an Arabic-speaking guide.",
+      "long": "Our tours are private; you never join a group of strangers. The programme flexes around your sleeping and eating times, with stops at prayer times. Your guide speaks Arabic and explains each place in your own language. We have ready-made programmes for Istanbul, Bursa, Sapanca, Trabzon and Bodrum, and we can build a route around what you want to see.",
+      "features": [
+        "Private tour — never merged with a group",
+        "Arabic-speaking guide",
+        "Prayer and meal breaks built in",
+        "Hotel pick-up and drop-off",
+        "Relaxed pace for families with children",
+        "Custom routes on request"
+      ]
     },
     "flightHotel": {
       "title": "Flight & Hotel Booking",
-      "description": "Affordable flight tickets and family-friendly hotel options."
+      "description": "Affordable flight tickets and family-friendly hotel options.",
+      "long": "We book flights and hotels on your behalf. When choosing a hotel we tell you in advance how family-friendly it is, how close it is to the centre and the metro, and whether breakfast is included. You can arrange the ticket, the hotel, the transfer and the tour in a single WhatsApp conversation.",
+      "features": [
+        "Flight search and booking",
+        "Family-friendly hotel options",
+        "Distance to the centre and metro explained",
+        "Ticket, hotel and transfer in one conversation",
+        "Clear total price before you book",
+        "One point of contact for the whole trip"
+      ]
     }
   },
   "tours": {
@@ -53,27 +89,72 @@
     "istanbul": {
       "name": "Istanbul Tour",
       "description": "Blue Mosque, Hagia Sophia, Grand Bazaar and a Bosphorus cruise.",
-      "city": "Istanbul"
+      "city": "Istanbul",
+      "long": "The Istanbul tour lets you see a city spread across two continents in a single day. It starts in Sultanahmet Square, where the Blue Mosque, Hagia Sophia and Topkapi Palace are all within walking distance. The afternoon leaves time for the Grand Bazaar and the Spice Bazaar, and the day closes with a Bosphorus boat trip.",
+      "highlights": [
+        "Blue Mosque and Hagia Sophia",
+        "Topkapi Palace and the Harem",
+        "Grand Bazaar and Spice Bazaar",
+        "Bosphorus boat trip",
+        "Galata Tower and Karakoy",
+        "Lunch break"
+      ]
     },
     "bursa": {
       "name": "Bursa Tour",
       "description": "Uludağ cable car, Grand Mosque and Cumalıkızık village.",
-      "city": "Bursa"
+      "city": "Bursa",
+      "long": "Bursa was the first Ottoman capital and is the greenest city within a day trip of Istanbul. After the ferry crossing you ride the cable car up Mount Uludag, then visit the Grand Mosque, the Green Tomb and the silk market at Koza Han. The day ends in Cumalikizik, a UNESCO-listed Ottoman village.",
+      "highlights": [
+        "Cable car up Mount Uludag",
+        "Grand Mosque and Green Tomb",
+        "Koza Han silk market",
+        "Cumalikizik village (UNESCO)",
+        "The ancient Inkaya plane tree",
+        "Iskender kebab and candied chestnuts"
+      ]
     },
     "sapanca": {
       "name": "Sapanca Tour",
       "description": "Lake Sapanca, Maşukiye waterfalls and nature walks.",
-      "city": "Sapanca"
+      "city": "Sapanca",
+      "long": "Sapanca and Masukiye are the closest green escape to Istanbul. The day centres on lakeside walks, waterfalls in the forest and trout restaurants built over the streams. A stop at Kartepe gives you the view down over Lake Sapanca. A calm, unhurried programme that suits families with children.",
+      "highlights": [
+        "Walk along Lake Sapanca",
+        "Masukiye waterfalls",
+        "Kartepe viewpoint",
+        "Trout restaurants over the streams",
+        "Forest walk",
+        "Local produce market"
+      ]
     },
     "trabzon": {
       "name": "Trabzon Tour",
       "description": "Uzungöl, Sumela Monastery and the Black Sea highlands.",
-      "city": "Trabzon"
+      "city": "Trabzon",
+      "long": "A full-day programme combining the green highlands of the Black Sea with the history of Trabzon. The two main stops are Sumela Monastery, carved into a cliff face, and the lakeside village of Uzungol. Along the way there are stops at the Zigana pass, tea gardens and Hamsikoy for its rice pudding.",
+      "highlights": [
+        "Sumela Monastery",
+        "Uzungol and the lakeside walk",
+        "Zigana pass and highlands",
+        "Hamsikoy rice pudding stop",
+        "Hagia Sophia of Trabzon",
+        "Tea garden break"
+      ]
     },
     "bodrum": {
       "name": "Bodrum Tour",
       "description": "Bodrum Castle, turquoise bays and boat trips.",
-      "city": "Bodrum"
+      "city": "Bodrum",
+      "long": "The Bodrum tour combines ancient history with Aegean bays in one day. You start at Bodrum Castle and the Museum of Underwater Archaeology, then take in the town and harbour from the Ancient Theatre. The day continues with a boat trip around the bays and swimming stops, ending with free time at Yalikavak Marina.",
+      "highlights": [
+        "Bodrum Castle and underwater archaeology museum",
+        "The Ancient Theatre",
+        "Boat trip with swimming stops",
+        "Gumbet and Bitez bays",
+        "Yalikavak Marina",
+        "Free time in Bodrum bazaar"
+      ]
     }
   },
   "whyUs": {
@@ -115,8 +196,21 @@
   "servicesPage": {
     "title": "Our Services",
     "subtitle": "End-to-end travel solutions in Türkiye: transfers, tours and bookings.",
-    "featuresTitle": "What's included",
-    "allServices": "All services"
+    "featuresTitle": "What is included",
+    "allServices": "All services",
+    "intro": "From the moment you land until the moment you fly home you deal with one team. Meet and greet, city transport, tours and bookings all run from the same place, and you always know who you are talking to.",
+    "processTitle": "How we work",
+    "processSubtitle": "Four steps from booking to the end of your trip",
+    "step1Title": "Message us on WhatsApp",
+    "step1Desc": "Just send the dates, the number of people and the programme you have in mind.",
+    "step2Title": "We confirm the price",
+    "step2Desc": "You get a fixed price and a draft programme the same day.",
+    "step3Title": "Confirm the booking",
+    "step3Desc": "Your confirmation reserves the vehicle, driver and guide in your name.",
+    "step4Title": "Travel",
+    "step4Desc": "Your driver is at your hotel, and you reach us on the same number throughout.",
+    "fleetTitle": "Vehicle options",
+    "fleetSubtitle": "The vehicle is chosen for your group size and luggage"
   },
   "toursPage": {
     "title": "Tour Programs",
@@ -124,14 +218,26 @@
     "duration": "Duration",
     "hours": "hours",
     "allTours": "All tours",
-    "highlights": "Highlights"
+    "highlights": "Highlights",
+    "intro": "All our tours are private: you never join a group, you travel on your own schedule. Your driver collects you from your hotel and returns you there at the end of the day. Our guides and drivers speak Arabic, and the vehicle size is matched to the size of your family.",
+    "programTitle": "What the day includes",
+    "includedTitle": "Included in the price",
+    "notIncludedTitle": "Not included",
+    "noteTitle": "Good to know",
+    "note": "The order of the programme can change with weather and traffic, but the number of stops stays the same. Museum entry and lunch are not included because they vary per person — we are happy to work them out with you when you book.",
+    "priceNote": "Prices are per vehicle, not per person. The final price is confirmed on WhatsApp based on passenger count and date."
   },
   "about": {
     "title": "About Us",
     "subtitle": "Rufai Tourism — Turkish expertise, Arabic hospitality",
     "p1": "We are a travel agency based in Türkiye, serving guests from the Middle East. Private transfers, guided tours, flight tickets and hotel bookings all come from one place.",
     "p2": "Our team speaks Arabic, Turkish and English, and stays with you from the moment you land until your departure. Our prices are fixed and agreed in advance — no surprise charges.",
-    "p3": "We pay particular attention to family comfort: spacious vehicles, full privacy, and flexible schedules that respect prayer and rest times."
+    "p3": "We pay particular attention to family comfort: spacious vehicles, full privacy, and flexible schedules that respect prayer and rest times.",
+    "p4": "The way we work is simple: every guest has a single point of contact. The team that meets you at the airport is the team that drives you around the city, so you never have to explain yourself twice.",
+    "p5": "We are direct about price. You get the total in writing before you book, and no charges appear later for parking, bridges or fuel. Surprise fees are the fastest way to lose trust in this business.",
+    "p6": "We build our programmes around the habits of Gulf families: a late breakfast, stops at prayer times, a pace that works for children and a private vehicle that protects your privacy. You never join a group tour; the day is yours.",
+    "valuesTitle": "How we work",
+    "howTitle": "What we promise our guests"
   },
   "contact": {
     "title": "Contact",
@@ -141,7 +247,16 @@
     "phoneTitle": "Phone",
     "emailTitle": "Email",
     "hoursTitle": "Working hours",
-    "hoursValue": "24 hours a day, 7 days a week"
+    "hoursValue": "24 hours a day, 7 days a week",
+    "topicsTitle": "What we can help with",
+    "topic1": "Airport meet-and-greet and transfer bookings",
+    "topic2": "Day tours and multi-day programme planning",
+    "topic3": "Flight tickets and hotel reservations",
+    "topic4": "Quotes and availability enquiries",
+    "responseTitle": "Response time",
+    "responseValue": "We usually reply to WhatsApp messages within an hour.",
+    "languagesTitle": "Languages we speak",
+    "languagesValue": "Arabic, Turkish and English"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -155,7 +270,21 @@
     "q4": "Do you meet us at the airport?",
     "a4": "Yes. We track your flight, meet you at the arrivals gate with a name sign, and help with your luggage.",
     "q5": "How do booking and payment work?",
-    "a5": "Booking takes minutes over WhatsApp. We agree on the program and price; you can pay on arrival or in advance, as you prefer."
+    "a5": "Booking takes minutes over WhatsApp. We agree on the program and price; you can pay on arrival or in advance, as you prefer.",
+    "q6": "Are the tours private or do we join a group?",
+    "a6": "Every tour we run is private. You are never merged with a group you do not know; the vehicle, the driver and the programme are yours alone. That is why prices are quoted per vehicle rather than per person.",
+    "q7": "What happens to the pick-up if my flight is delayed?",
+    "a7": "We track your flight. If it is delayed the driver comes at the new time and we do not charge for waiting. If you are held up at baggage claim, the driver waits for you there too.",
+    "q8": "Do the programmes allow for prayer times and meals?",
+    "a8": "Yes. We take prayer times into account when building the programme and stop at mosques along the route, and we point you to restaurants with halal options for lunch.",
+    "q9": "Do you provide child seats?",
+    "a9": "Yes — just tell us your child's age when you book. Baby and child seats are free of charge, but we do need to know in advance.",
+    "q10": "What currency are prices in, and how do I pay?",
+    "a10": "We quote in euro with the dollar equivalent alongside. Payment is in cash or by transfer during your trip; we do not ask for a deposit to hold a booking.",
+    "q11": "Can I cancel a booking?",
+    "a11": "Yes. Cancellations made more than 24 hours before the programme starts are free of charge. If your plans change, a WhatsApp message is enough.",
+    "q12": "Do you serve cities outside Istanbul?",
+    "a12": "Yes. We are based in Istanbul but arrange transfers and tours to Bursa, Sapanca, Trabzon, Bodrum and other cities on request. On intercity journeys the same vehicle and driver stay with you."
   },
   "footer": {
     "about": "Rufai Tourism — a travel agency in Türkiye offering transfers, tours, flight tickets and hotel bookings.",
@@ -248,8 +377,10 @@
   "included": {
     "guide": "Arabic-speaking guide or driver",
     "pickup": "Hotel pick-up and drop-off",
-    "vehicle": "Private air-conditioned vehicle",
-    "fixedPrice": "Fixed price — no surprise fees"
+    "vehicle": "Private air-conditioned vehicle and fuel",
+    "fixedPrice": "Fixed price — no surprise fees",
+    "water": "Complimentary water on board",
+    "parking": "Parking and bridge tolls"
   },
   "packages": {
     "title": "Our Packages and Offers",
@@ -257,5 +388,28 @@
     "days": "days",
     "allPackages": "All packages",
     "discount": "off"
+  },
+  "notIncluded": {
+    "tickets": "Museum and historic site entry fees",
+    "lunch": "Lunch and personal spending",
+    "boat": "Optional boat trip ticket",
+    "tips": "Tips (never obligatory)"
+  },
+  "fleet": {
+    "vito": {
+      "name": "Mercedes Vito",
+      "capacity": "1 – 6 passengers",
+      "desc": "The most popular choice for families, with generous luggage space."
+    },
+    "sprinter": {
+      "name": "Mercedes Sprinter",
+      "capacity": "7 – 14 passengers",
+      "desc": "For larger families and long journeys."
+    },
+    "sedan": {
+      "name": "Luxury Sedan",
+      "capacity": "1 – 3 passengers",
+      "desc": "For business travel and private meet-and-greets."
+    }
   }
 }

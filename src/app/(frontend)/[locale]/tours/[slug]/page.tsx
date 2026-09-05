@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, Check, Clock, MapPin, MessageCircle } from "lucide-react";
+import { ArrowLeft, Check, Clock, Info, MapPin, MessageCircle, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
@@ -50,10 +50,12 @@ export default async function TourDetailPage({
   const tCta = await getTranslations("cta");
   const tCommon = await getTranslations("common");
   const tIncluded = await getTranslations("included");
+  const tNotIncluded = await getTranslations("notIncluded");
 
   const name = t(`${tour.key}.name`);
   const description = t(`${tour.key}.description`);
   const others = tours.filter((item) => item.key !== tour.key).slice(0, 4);
+  const highlights = t.raw(`${tour.key}.highlights`) as string[];
 
   return (
     <main className="flex flex-1 flex-col">
@@ -108,20 +110,75 @@ export default async function TourDetailPage({
         <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
           <div>
             <p className="text-[16px] leading-[1.9] text-foreground/85">{description}</p>
+            <p className="mt-5 text-[15.5px] leading-[1.9] text-foreground/80">
+              {t(`${tour.key}.long`)}
+            </p>
 
-            <h2 className="mt-10 text-[19px] font-bold">{tCommon("included")}</h2>
-            <ul className="mt-4 flex flex-col gap-3">
-              {(["guide", "pickup", "vehicle", "fixedPrice"] as const).map((key) => (
-                <li key={key} className="flex items-start gap-3 text-[14.5px]">
-                  <Check
+            <h2 className="mt-10 text-[19px] font-bold">{tPage("programTitle")}</h2>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+              {highlights.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 rounded-lg border bg-card p-4 text-[14.5px]"
+                >
+                  <MapPin
                     className="mt-0.5 size-4 shrink-0"
                     style={{ color: "var(--brand-gold-deep)" }}
                     aria-hidden="true"
                   />
-                  {tIncluded(key)}
+                  {item}
                 </li>
               ))}
             </ul>
+
+            <div className="mt-10 grid gap-8 sm:grid-cols-2">
+              <div>
+                <h2 className="text-[19px] font-bold">{tPage("includedTitle")}</h2>
+                <ul className="mt-4 flex flex-col gap-3">
+                  {(["guide", "pickup", "vehicle", "water", "parking", "fixedPrice"] as const).map(
+                    (key) => (
+                      <li key={key} className="flex items-start gap-3 text-[14.5px]">
+                        <Check
+                          className="mt-0.5 size-4 shrink-0"
+                          style={{ color: "var(--brand-gold-deep)" }}
+                          aria-hidden="true"
+                        />
+                        {tIncluded(key)}
+                      </li>
+                    ),
+                  )}
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-[19px] font-bold">{tPage("notIncludedTitle")}</h2>
+                <ul className="mt-4 flex flex-col gap-3">
+                  {(["tickets", "lunch", "boat", "tips"] as const).map((key) => (
+                    <li
+                      key={key}
+                      className="flex items-start gap-3 text-[14.5px] text-muted-foreground"
+                    >
+                      <X className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                      {tNotIncluded(key)}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-10 rounded-xl border p-6">
+              <h2 className="flex items-center gap-2.5 text-[16px] font-bold">
+                <Info
+                  className="size-4.5"
+                  style={{ color: "var(--brand-gold-deep)" }}
+                  aria-hidden="true"
+                />
+                {tPage("noteTitle")}
+              </h2>
+              <p className="mt-3 text-[14.5px] leading-[1.85] text-muted-foreground">
+                {tPage("note")}
+              </p>
+            </div>
           </div>
 
           <aside className="h-fit rounded-xl border bg-card p-6 lg:sticky lg:top-24">
@@ -137,6 +194,9 @@ export default async function TourDetailPage({
                 ≈ ${tour.priceUsdFrom}
               </span>
             </div>
+            <p className="mt-3 text-[12.5px] leading-relaxed text-muted-foreground">
+              {tPage("priceNote")}
+            </p>
 
             <WhatsAppLink
               subject={name}

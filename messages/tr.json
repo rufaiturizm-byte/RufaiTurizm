@@ -31,19 +31,55 @@
     "subtitle": "Konforlu bir Türkiye seyahati için ihtiyacınız olan her şey",
     "vitoVip": {
       "title": "Vito VIP Araç Hizmeti",
-      "description": "Şoförlü, son model Mercedes Vito. Bagajınızla birlikte 6 kişiye kadar konforlu ulaşım."
+      "description": "Şoförlü, son model Mercedes Vito. Bagajınızla birlikte 6 kişiye kadar konforlu ulaşım.",
+      "long": "Mercedes Vito, Ortadoğu'dan gelen misafirlerimizin en çok tercih ettiği araç. Bagajlarıyla birlikte altı kişiye kadar rahat eder; koltuk aralıkları geniş, camlar kararmış, klima arka bölmede ayrı çalışır. Şehir içi gezilerde, havalimanı karşılamalarında ve şehirlerarası yolculuklarda aynı araç ve aynı şoförle devam edersiniz.",
+      "features": [
+        "Bagajla birlikte 6 kişiye kadar",
+        "Kararmış camlar, aile mahremiyeti",
+        "Arka bölmede ayrı klima",
+        "Araçta ücretsiz su ve internet",
+        "Çocuk koltuğu talebe göre",
+        "Aynı şoför, tüm seyahat boyunca"
+      ]
     },
     "transfer": {
       "title": "Transfer ve Karşılama",
-      "description": "Havalimanı karşılama ve otel transferi. Sabit fiyat, uçuş takibi ve bagaj yardımı dahil."
+      "description": "Havalimanı karşılama ve otel transferi. Sabit fiyat, uçuş takibi ve bagaj yardımı dahil.",
+      "long": "Havalimanı karşılamada uçuşunuzu takip ederiz: uçak rötar yaparsa şoför bekler, ek ücret çıkmaz. Şoförümüz geliş kapısında isminizin yazılı olduğu tabelayla karşılar, bagajlarınızı taşır ve doğrudan otelinize götürür. İstanbul'un iki havalimanı da (IST ve SAW) kapsam içindedir.",
+      "features": [
+        "Uçuş takibi — rötarda bekleme ücretsiz",
+        "İsimli tabelayla geliş kapısında karşılama",
+        "IST ve SAW havalimanlarının ikisi de",
+        "Sabit fiyat, rezervasyonda netleşir",
+        "Gidiş-dönüş rezervasyonunda indirim",
+        "Ara durak ekleme imkânı"
+      ]
     },
     "tours": {
       "title": "Tur Hizmeti",
-      "description": "Arapça rehber eşliğinde günlük turlar ve özel tur programları."
+      "description": "Arapça rehber eşliğinde günlük turlar ve özel tur programları.",
+      "long": "Turlarımız özel yapılır; yabancı bir gruba katılmazsınız. Program sizin uyku ve yemek düzeninize göre esner, namaz vakitlerinde mola verilir. Rehberimiz Arapça konuşur ve gezdiğiniz yerin tarihini kendi dilinizde anlatır. İstanbul, Bursa, Sapanca, Trabzon ve Bodrum için hazır programlarımız var; isterseniz kendi güzergâhınızı birlikte kurarız.",
+      "features": [
+        "Özel tur — grupla birleştirme yok",
+        "Arapça konuşan rehber",
+        "Namaz ve yemek molaları programda",
+        "Otelden alış, otele bırakış",
+        "Çocuklu aileler için esnek tempo",
+        "İstek üzerine özel güzergâh"
+      ]
     },
     "flightHotel": {
       "title": "Uçak Bileti ve Otel Rezervasyonu",
-      "description": "Uygun fiyatlı uçak bileti ve aileye uygun otel seçenekleriyle rezervasyon."
+      "description": "Uygun fiyatlı uçak bileti ve aileye uygun otel seçenekleriyle rezervasyon.",
+      "long": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Otel seçerken aileye uygunluk, harama yakınlık değil ama merkeze ve metroya yakınlık, kahvaltı dahil olup olmadığı gibi ayrıntıları önceden söyleriz. Tek bir WhatsApp konuşmasında bilet, otel, transfer ve turu birlikte planlayabilirsiniz.",
+      "features": [
+        "Uçak bileti araştırma ve rezervasyon",
+        "Aileye uygun otel seçenekleri",
+        "Merkeze ve metroya yakınlık bilgisi",
+        "Bilet, otel, transfer tek konuşmada",
+        "Rezervasyon öncesi net toplam fiyat",
+        "Seyahat boyunca tek muhatap"
+      ]
     }
   },
   "tours": {
@@ -53,27 +89,72 @@
     "istanbul": {
       "name": "İstanbul Turu",
       "description": "Sultanahmet, Ayasofya, Kapalıçarşı ve Boğaz turu.",
-      "city": "İstanbul"
+      "city": "İstanbul",
+      "long": "İstanbul turu, şehrin iki kıtaya yayılan tarihini tek günde görmenizi sağlar. Sabah Sultanahmet Meydanı'nda başlar; Sultanahmet Camii, Ayasofya ve Topkapı Sarayı yürüme mesafesindedir. Öğleden sonra Kapalıçarşı ve Mısır Çarşısı'nda alışverişe zaman ayrılır, gün Boğaz'da tekne turuyla kapanır.",
+      "highlights": [
+        "Sultanahmet Camii ve Ayasofya",
+        "Topkapı Sarayı ve Harem bölümü",
+        "Kapalıçarşı ve Mısır Çarşısı",
+        "Boğaz'da tekne turu",
+        "Galata Kulesi ve Karaköy",
+        "Öğle yemeği için mola"
+      ]
     },
     "bursa": {
       "name": "Bursa Turu",
       "description": "Uludağ teleferik, Ulu Cami ve Cumalıkızık köyü.",
-      "city": "Bursa"
+      "city": "Bursa",
+      "long": "Bursa, Osmanlı'nın ilk başkenti ve İstanbul'dan günübirlik gidilebilecek en yeşil şehir. Feribotla geçiş sonrası Uludağ'a teleferikle çıkılır; dönüşte Ulu Cami, Yeşil Türbe ve Koza Han gezilir. Gün, UNESCO listesindeki Cumalıkızık köyünde kahvaltı ya da çay molasıyla tamamlanır.",
+      "highlights": [
+        "Uludağ'a teleferik yolculuğu",
+        "Ulu Cami ve Yeşil Türbe",
+        "Koza Han ve ipek çarşısı",
+        "Cumalıkızık köyü (UNESCO)",
+        "İnkaya Çınarı",
+        "Bursa kestane şekeri ve İskender molası"
+      ]
     },
     "sapanca": {
       "name": "Sapanca Turu",
       "description": "Sapanca Gölü, Maşukiye şelaleleri ve doğa yürüyüşü.",
-      "city": "Sapanca"
+      "city": "Sapanca",
+      "long": "Sapanca ve Maşukiye, İstanbul'a en yakın yeşil kaçış. Göl kenarında yürüyüş, ormanın içindeki şelaleler ve dere üstü alabalık restoranları günün merkezinde. Kartepe'ye çıkıldığında Sapanca Gölü'nü yukarıdan gören manzara noktasında fotoğraf molası verilir. Çocuklu aileler için yorucu olmayan, sakin bir program.",
+      "highlights": [
+        "Sapanca Gölü kıyısında yürüyüş",
+        "Maşukiye şelaleleri",
+        "Kartepe manzara noktası",
+        "Dere üstü alabalık restoranları",
+        "Ormanda doğa yürüyüşü",
+        "Yerel ürün pazarı"
+      ]
     },
     "trabzon": {
       "name": "Trabzon Turu",
       "description": "Uzungöl, Sümela Manastırı ve Karadeniz yaylaları.",
-      "city": "Trabzon"
+      "city": "Trabzon",
+      "long": "Karadeniz'in yeşil yaylalarını ve Trabzon'un tarihini birleştiren tam gün program. Kayalığa oyulmuş Sümela Manastırı ve göl kenarındaki Uzungöl bu turun iki ana durağı. Yol boyunca Zigana geçidi, çay bahçeleri ve Hamsiköy'ün sütlacı için molalar verilir.",
+      "highlights": [
+        "Sümela Manastırı",
+        "Uzungöl ve göl çevresi yürüyüşü",
+        "Zigana geçidi ve yaylalar",
+        "Hamsiköy sütlaç molası",
+        "Trabzon Ayasofyası",
+        "Çay bahçelerinde mola"
+      ]
     },
     "bodrum": {
       "name": "Bodrum Turu",
       "description": "Bodrum Kalesi, turkuaz koylar ve tekne turu.",
-      "city": "Bodrum"
+      "city": "Bodrum",
+      "long": "Bodrum turu, antik tarih ile Ege koylarını aynı günde birleştirir. Bodrum Kalesi ve Sualtı Arkeoloji Müzesi ile başlanır, Antik Tiyatro'dan şehir ve liman manzarası izlenir. Gün, tekneyle koy turu ve yüzme molalarıyla sürer; akşam Yalıkavak Marina'da serbest zaman bırakılır.",
+      "highlights": [
+        "Bodrum Kalesi ve Sualtı Arkeoloji Müzesi",
+        "Antik Tiyatro",
+        "Tekneyle koy turu ve yüzme molası",
+        "Gümbet ve Bitez koyları",
+        "Yalıkavak Marina",
+        "Bodrum çarşısında serbest zaman"
+      ]
     }
   },
   "whyUs": {
@@ -116,7 +197,20 @@
     "title": "Hizmetlerimiz",
     "subtitle": "Türkiye'de uçtan uca seyahat çözümleri: transfer, tur ve rezervasyon.",
     "featuresTitle": "Neler dahil",
-    "allServices": "Tüm hizmetler"
+    "allServices": "Tüm hizmetler",
+    "intro": "Havalimanına indiğiniz andan uçağa bindiğiniz ana kadar tek bir ekiple çalışırsınız. Karşılama, şehir içi ulaşım, turlar ve rezervasyonlar aynı yerden yürür; her adımda kiminle konuştuğunuzu bilirsiniz.",
+    "processTitle": "Nasıl çalışıyoruz",
+    "processSubtitle": "Rezervasyondan seyahatin sonuna kadar dört adım",
+    "step1Title": "WhatsApp'tan yazın",
+    "step1Desc": "Tarih, kişi sayısı ve aklınızdaki programı yazmanız yeterli.",
+    "step2Title": "Fiyatı netleştirelim",
+    "step2Desc": "Aynı gün içinde sabit fiyat ve program taslağı gönderiyoruz.",
+    "step3Title": "Rezervasyonu onaylayın",
+    "step3Desc": "Onayınızla araç, şoför ve rehber ayrılır.",
+    "step4Title": "Seyahat edin",
+    "step4Desc": "Şoförünüz otelinizde; seyahat boyunca aynı numaradan bize ulaşırsınız.",
+    "fleetTitle": "Araç seçenekleri",
+    "fleetSubtitle": "Araç, kişi sayısı ve bagaj hacmine göre seçilir"
   },
   "toursPage": {
     "title": "Tur Programlarımız",
@@ -124,14 +218,26 @@
     "duration": "Süre",
     "hours": "saat",
     "allTours": "Tüm turlar",
-    "highlights": "Öne çıkanlar"
+    "highlights": "Öne çıkanlar",
+    "intro": "Turlarımızın tamamı özel araçla yapılır: gruba katılmaz, kendi programınızla hareket edersiniz. Şoförümüz otelinizden alır, gün sonunda otelinize bırakır. Rehber ve şoförlerimiz Arapça konuşur; çocuklu ve kalabalık aileler için araç büyüklüğü talebe göre ayarlanır.",
+    "programTitle": "Gün içinde neler var",
+    "includedTitle": "Fiyata dahil",
+    "notIncludedTitle": "Fiyata dahil değil",
+    "noteTitle": "Bilmeniz gerekenler",
+    "note": "Program sırası hava durumu ve trafiğe göre değişebilir; durak sayısı korunur. Müze giriş ücretleri ve öğle yemeği kişiye göre değiştiği için fiyata dahil edilmez — dilerseniz rezervasyon sırasında birlikte hesaplarız.",
+    "priceNote": "Fiyatlar kişi başı değil, araç başınadır. Kesin fiyat kişi sayısına ve tarihe göre WhatsApp'tan netleşir."
   },
   "about": {
     "title": "Hakkımızda",
     "subtitle": "Rufai Turizm — Türkiye deneyimi, Arapça hizmet",
     "p1": "Türkiye'de faaliyet gösteren, Ortadoğu'dan gelen misafirlere hizmet veren bir seyahat acentesiyiz. Özel transfer, rehberli tur, uçak bileti ve otel rezervasyonunu tek çatı altında sunuyoruz.",
     "p2": "Ekibimiz Arapça, Türkçe ve İngilizce konuşuyor; havalimanına indiğiniz andan dönüşünüze kadar yanınızda oluyor. Fiyatlarımız baştan belli ve sabittir, sürpriz ücret çıkarmayız.",
-    "p3": "Ailelerin konforuna özel önem veriyoruz: geniş araçlar, tam mahremiyet ve namaz ile dinlenme saatlerine uygun esnek program akışı."
+    "p3": "Ailelerin konforuna özel önem veriyoruz: geniş araçlar, tam mahremiyet ve namaz ile dinlenme saatlerine uygun esnek program akışı.",
+    "p4": "Çalışma biçimimiz basit: her misafirin tek bir muhatabı olur. Havalimanında sizi karşılayan ekip, şehir içinde sizi gezdiren ekiple aynıdır. Böylece her seferinde baştan anlatmak zorunda kalmazsınız.",
+    "p5": "Fiyat konusunda net davranırız. Rezervasyondan önce toplam tutarı yazılı olarak söyleriz; yol boyunca otopark, köprü ya da yakıt adı altında ek ücret çıkmaz. Sürpriz ücret, bu işte güvenin en hızlı kaybedildiği yerdir.",
+    "p6": "Programlarımızı Körfez'den gelen ailelerin alışkanlıklarına göre kurarız: geç kahvaltı, namaz vakitlerinde mola, çocuklara uygun tempo ve mahremiyeti koruyan özel araç. Grup turlarına katılmazsınız; gün sizindir.",
+    "valuesTitle": "Nasıl çalışırız",
+    "howTitle": "Misafirlerimize sözümüz"
   },
   "contact": {
     "title": "İletişim",
@@ -141,7 +247,16 @@
     "phoneTitle": "Telefon",
     "emailTitle": "E-posta",
     "hoursTitle": "Çalışma saatleri",
-    "hoursValue": "Haftanın 7 günü, 24 saat"
+    "hoursValue": "Haftanın 7 günü, 24 saat",
+    "topicsTitle": "Hangi konularda yazabilirsiniz",
+    "topic1": "Havalimanı karşılama ve transfer rezervasyonu",
+    "topic2": "Günlük tur ve çok günlü program planlaması",
+    "topic3": "Uçak bileti ve otel rezervasyonu",
+    "topic4": "Fiyat teklifi ve müsaitlik sorgusu",
+    "responseTitle": "Yanıt süresi",
+    "responseValue": "WhatsApp mesajlarına genellikle bir saat içinde dönüyoruz.",
+    "languagesTitle": "Konuştuğumuz diller",
+    "languagesValue": "Arapça, Türkçe ve İngilizce"
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular",
@@ -155,7 +270,21 @@
     "q4": "Havalimanında karşılıyor musunuz?",
     "a4": "Evet, uçuşunuzu takip ediyor, isminizin yazılı olduğu tabelayla geliş kapısında karşılıyor ve bagajlarınıza yardımcı oluyoruz.",
     "q5": "Rezervasyon ve ödeme nasıl yapılıyor?",
-    "a5": "Rezervasyon WhatsApp üzerinden dakikalar içinde tamamlanır. Program ve fiyatta anlaşırız; ödemeyi tercihinize göre varışta veya önceden yapabilirsiniz."
+    "a5": "Rezervasyon WhatsApp üzerinden dakikalar içinde tamamlanır. Program ve fiyatta anlaşırız; ödemeyi tercihinize göre varışta veya önceden yapabilirsiniz.",
+    "q6": "Turlar özel mi, yoksa gruba mı katılıyoruz?",
+    "a6": "Bütün turlarımız özeldir. Tanımadığınız bir grupla birleştirilmezsiniz; araç, şoför ve program yalnızca size aittir. Bu yüzden fiyatlar kişi başı değil araç başına verilir.",
+    "q7": "Uçağım rötar yaparsa karşılama ne olur?",
+    "a7": "Uçuşunuzu takip ediyoruz. Rötar durumunda şoför yeni saate göre gelir ve bekleme için ek ücret almayız. Bagajınız kaybolur da gecikirseniz de şoför sizi bekler.",
+    "q8": "Namaz vakitleri ve yemek molaları programda var mı?",
+    "a8": "Evet. Programı kurarken namaz vakitlerini hesaba katıyoruz, güzergâh üzerindeki camilerde mola veriyoruz. Öğle yemeği için helal seçenekler sunan restoranlara yönlendiriyoruz.",
+    "q9": "Çocuk koltuğu sağlıyor musunuz?",
+    "a9": "Evet, çocuğunuzun yaşını rezervasyon sırasında söylemeniz yeterli. Bebek ve çocuk koltuğu ek ücretsizdir; talebi önceden almamız gerekir.",
+    "q10": "Fiyatlar hangi para biriminde ve ödeme nasıl yapılıyor?",
+    "a10": "Fiyatları euro ve dolar karşılığıyla veriyoruz. Ödeme seyahat sırasında nakit ya da havale ile yapılabilir; rezervasyon için peşin ödeme istemiyoruz.",
+    "q11": "Rezervasyonu iptal edebilir miyim?",
+    "a11": "Evet. Program başlangıcından 24 saat öncesine kadar yapılan iptallerde herhangi bir ücret talep etmiyoruz. Planınız değişirse WhatsApp'tan yazmanız yeterli.",
+    "q12": "İstanbul dışındaki şehirlere de hizmet veriyor musunuz?",
+    "a12": "Evet. İstanbul merkezli çalışıyoruz ancak Bursa, Sapanca, Trabzon, Bodrum ve talep üzerine diğer şehirlere transfer ve tur düzenliyoruz. Şehirlerarası yolculuklarda aynı araç ve şoför sizinle kalır."
   },
   "footer": {
     "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
@@ -248,8 +377,10 @@
   "included": {
     "guide": "Arapça konuşan rehber veya şoför",
     "pickup": "Otelinizden alış ve bırakış",
-    "vehicle": "Klimalı özel araç",
-    "fixedPrice": "Sabit fiyat — sürpriz ücret yok"
+    "vehicle": "Klimalı özel araç ve yakıt",
+    "fixedPrice": "Sabit fiyat — sürpriz ücret yok",
+    "water": "Araçta su ikramı",
+    "parking": "Otopark ve köprü geçiş ücretleri"
   },
   "packages": {
     "title": "Paketlerimiz ve Teklifler",
@@ -257,5 +388,28 @@
     "days": "gün",
     "allPackages": "Tüm paketler",
     "discount": "indirim"
+  },
+  "notIncluded": {
+    "tickets": "Müze ve ören yeri giriş ücretleri",
+    "lunch": "Öğle yemeği ve kişisel harcamalar",
+    "boat": "İsteğe bağlı tekne turu bileti",
+    "tips": "Bahşiş (zorunlu değildir)"
+  },
+  "fleet": {
+    "vito": {
+      "name": "Mercedes Vito",
+      "capacity": "1 – 6 kişi",
+      "desc": "Aileler için en çok tercih edilen araç; bagaj hacmi geniş."
+    },
+    "sprinter": {
+      "name": "Mercedes Sprinter",
+      "capacity": "7 – 14 kişi",
+      "desc": "Kalabalık aileler ve uzun yolculuklar için."
+    },
+    "sedan": {
+      "name": "Lüks Sedan",
+      "capacity": "1 – 3 kişi",
+      "desc": "İş seyahatleri ve özel karşılamalar için."
+    }
   }
 }

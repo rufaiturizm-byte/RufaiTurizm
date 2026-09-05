@@ -8,6 +8,7 @@ import { TouristTripSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-boxes";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { ProcessSteps } from "@/components/site/process-steps";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { services, serviceBySlug } from "@/data/services";
 
@@ -57,6 +58,7 @@ export default async function ServiceDetailPage({
 
   const name = t(`${service.key}.title`);
   const description = t(`${service.key}.description`);
+  const features = t.raw(`${service.key}.features`) as string[];
 
   return (
     <main className="flex flex-1 flex-col">
@@ -111,7 +113,28 @@ export default async function ServiceDetailPage({
       <section className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
           <div>
-            <h2 className="text-[19px] font-bold">{tPage("featuresTitle")}</h2>
+            <p className="text-[15.5px] leading-[1.9] text-foreground/85">
+              {t(`${service.key}.long`)}
+            </p>
+
+            <h2 className="mt-10 text-[19px] font-bold">{tPage("featuresTitle")}</h2>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+              {features.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-start gap-3 rounded-lg border bg-card p-4 text-[14.5px]"
+                >
+                  <Check
+                    className="mt-0.5 size-4 shrink-0"
+                    style={{ color: "var(--brand-gold-deep)" }}
+                    aria-hidden="true"
+                  />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <h2 className="mt-10 text-[19px] font-bold">{tWhy("title")}</h2>
             <ul className="mt-4 flex flex-col gap-3">
               {(["arabicSupport", "fixedPrice", "family", "support"] as const).map((key) => (
                 <li key={key} className="flex items-start gap-3">
@@ -170,6 +193,8 @@ export default async function ServiceDetailPage({
           </aside>
         </div>
       </section>
+
+      <ProcessSteps />
 
       <CredentialsBand />
     </main>

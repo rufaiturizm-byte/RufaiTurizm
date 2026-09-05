@@ -8,6 +8,8 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-boxes";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { ProcessSteps } from "@/components/site/process-steps";
+import { FleetOptions } from "@/components/site/fleet-options";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { services } from "@/data/services";
 
@@ -56,7 +58,13 @@ export default async function ServicesPage({
         <TrustBoxes />
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 pt-14 sm:px-8">
+        <p className="max-w-3xl text-[15.5px] leading-[1.9] text-foreground/85">
+          {t("intro")}
+        </p>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8">
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 
         <div className="grid gap-5 sm:grid-cols-2">
@@ -143,6 +151,9 @@ export default async function ServicesPage({
           })}
         </div>
       </section>
+
+      <ProcessSteps />
+      <FleetOptions />
 
       <CredentialsBand />
     </main>

@@ -608,5 +608,18 @@
     "faq": "Sıkça sorulan sorular",
     "about": "Hakkımızda ve belgelerimiz",
     "contact": "Bize ulaşın"
+  },
+  "routePage": {
+    "eyebrow": "Güzergâh",
+    "title": "Popüler transfer güzergâhları",
+    "subtitle": "En çok sorulan beş güzergâh: mesafe, süre ve varışta bilmeniz gerekenler.",
+    "distance": "Mesafe",
+    "duration": "Tahmini süre",
+    "airport": "Kalkış",
+    "allRoutes": "Tüm güzergâhlar",
+    "otherRoutes": "Diğer güzergâhlar",
+    "ctaTitle": "Bu güzergâh için sabit fiyat alın",
+    "ctaText": "Uçuş saatinizi ve kişi sayısını yazın; fiyatı ve şoför bilgisini aynı gün gönderelim.",
+    "note": "Mesafe ve süreler yaklaşıktır; trafiğe göre değişir. Fiyat araç başınadır, kişi başı değil."
   }
 }

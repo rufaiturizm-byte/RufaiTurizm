@@ -65,6 +65,17 @@ export const pathnames = {
     en: "/transfer",
   },
   /*
+   * Güzergâh sayfaları. Müşteri "havalimanı transferi" diye değil
+   * "مطار اسطنبول الى تقسيم" diye arıyor; transfer sayfası bu aramaların
+   * hepsini tek başına karşılayamaz. Beş güzergâh var, 43 değil: şablondan
+   * üretilmiş 43 sayfa ince içerik olurdu (bkz. data/transfer-routes.ts).
+   */
+  "/transfer/[route]": {
+    ar: "/النقل-من-المطار/[route]",
+    tr: "/transfer/[route]",
+    en: "/transfer/[route]",
+  },
+  /*
    * Seyahat rehberleri. Hizmet sayfaları "biz ne yapıyoruz" diye yazılır;
    * misafir ise seyahatten haftalar önce SORU arar ("مطار اسطنبول كيف اروح
    * للفندق"). Rakiplerin blog/rehber bölümüyle tuttuğu yüzey burası.

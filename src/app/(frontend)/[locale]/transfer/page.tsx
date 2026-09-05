@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { VehicleList } from "@/components/site/vehicle-list";
+import { RouteCards } from "@/components/site/route-cards";
 import { FleetUses } from "@/components/site/fleet-uses";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
@@ -97,6 +98,8 @@ export default async function TransferPage({
           rule={false}
         />
       </section>
+
+      <RouteCards locale={locale} />
 
       <VehicleList />
 

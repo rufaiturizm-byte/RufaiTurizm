@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { tours } from "@/data/tours";
 import { services } from "@/data/services";
 import { guides } from "@/data/guides";
+import { transferRoutes } from "@/data/transfer-routes";
 import { siteConfig } from "@/config/site";
 
 const base = siteConfig.url;
@@ -74,6 +75,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ar: `/أدلة-السفر/${guide.slug}`,
       tr: `/seyahat-rehberi/${guide.slug}`,
       en: `/travel-guides/${guide.slug}`,
+    })),
+    ...transferRoutes.map((route) => ({
+      ar: `/النقل-من-المطار/${route.slug}`,
+      tr: `/transfer/${route.slug}`,
+      en: `/transfer/${route.slug}`,
     })),
   ].map((paths) => ({
     url: `${base}${paths.ar}`,

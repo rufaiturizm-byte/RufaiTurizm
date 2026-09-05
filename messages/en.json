@@ -608,5 +608,18 @@
     "faq": "Frequently asked questions",
     "about": "About us and our licence",
     "contact": "Get in touch"
+  },
+  "routePage": {
+    "eyebrow": "Route",
+    "title": "Popular transfer routes",
+    "subtitle": "The five most-asked routes: distance, time and what to know on arrival.",
+    "distance": "Distance",
+    "duration": "Estimated time",
+    "airport": "From",
+    "allRoutes": "All routes",
+    "otherRoutes": "Other routes",
+    "ctaTitle": "Get a fixed price for this route",
+    "ctaText": "Send your flight time and party size; we will come back the same day with the price and driver details.",
+    "note": "Distances and times are approximate and vary with traffic. Prices are per vehicle, not per person."
   }
 }

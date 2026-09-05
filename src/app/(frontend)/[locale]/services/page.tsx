@@ -48,7 +48,7 @@ export default async function ServicesPage({
       />
 
       {/* Transfer talep formu — seçimler WhatsApp mesajına dönüşür */}
-      <section className="mx-auto -mt-10 w-full max-w-7xl px-5 sm:px-8">
+      <section className="relative z-10 mx-auto -mt-10 w-full max-w-7xl px-5 sm:px-8">
         <TransferForm />
       </section>
 

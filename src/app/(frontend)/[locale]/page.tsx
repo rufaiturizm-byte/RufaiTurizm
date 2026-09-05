@@ -67,7 +67,7 @@ export default async function HomePage({
               style={{ borderColor: "color-mix(in oklab, var(--brand-gold) 60%, transparent)" }}
             >
               <ShieldCheck className="size-4" style={{ color: "var(--brand-gold)" }} aria-hidden="true" />
-              TÜRSAB · {siteConfig.credentials.tursab || "[lisans no]"}
+              TÜRSAB{siteConfig.credentials.tursab ? ` · ${siteConfig.credentials.tursab}` : ""}
             </div>
 
             <h1 className="mt-7 max-w-2xl text-[40px] font-bold leading-[1.22] text-white sm:text-[56px]">
@@ -98,7 +98,7 @@ export default async function HomePage({
         </section>
 
         {/* Transfer talep formu — hero'nun üstüne biner, seçimler WhatsApp mesajına dönüşür */}
-        <section className="mx-auto -mt-10 w-full max-w-7xl px-5 sm:px-8">
+        <section className="relative z-10 mx-auto -mt-10 w-full max-w-7xl px-5 sm:px-8">
           <TransferForm />
         </section>
 

@@ -43,3 +43,13 @@ export const siteConfig = {
   /** Google işletme profili — yorum bölümündeki bağlantı için. */
   googleReviewsUrl: "",
 } as const;
+
+/**
+ * Gerçek iletişim bilgisi girilmiş mi?
+ *
+ * Yer tutucu numara canlıda görünürse müşteri boş bir numarayı arar ve
+ * güvenini kaybeder — hiç göstermemek daha dürüst. Numara girildiği anda
+ * telefon satırları kendiliğinden geri gelir.
+ */
+export const hasRealPhone = !siteConfig.whatsappNumber.startsWith("90500000");
+

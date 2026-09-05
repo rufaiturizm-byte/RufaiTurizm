@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
-import { siteConfig } from "@/config/site";
+import { siteConfig, hasRealPhone } from "@/config/site";
 import { tours } from "@/data/tours";
 
 export async function Footer() {
@@ -46,7 +46,7 @@ export async function Footer() {
           <div>
             <h3 className="mb-4 text-[14px] font-bold text-white">{t("contactUs")}</h3>
             <ul className="space-y-2.5 text-[13.5px]">
-              <li>{siteConfig.phoneDisplay}</li>
+              {hasRealPhone ? <li dir="ltr">{siteConfig.phoneDisplay}</li> : null}
               <li>{siteConfig.email}</li>
               <li>{siteConfig.address.city}</li>
               <li className="pt-1 text-white/45">{tContact("hoursValue")}</li>
@@ -59,7 +59,7 @@ export async function Footer() {
           style={{ borderColor: "var(--brand-night-3)" }}
         >
           <span>© 2026 Rufai Tourism — {t("allRights")}</span>
-          <span>TÜRSAB {siteConfig.credentials.tursab || "[lisans no]"}</span>
+          <span>TÜRSAB{siteConfig.credentials.tursab ? ` ${siteConfig.credentials.tursab}` : ""}</span>
         </div>
       </div>
     </footer>

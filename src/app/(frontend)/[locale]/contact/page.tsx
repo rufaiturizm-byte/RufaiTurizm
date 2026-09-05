@@ -4,7 +4,7 @@ import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { CredentialsBand } from "@/components/site/credentials-band";
-import { siteConfig } from "@/config/site";
+import { siteConfig, hasRealPhone } from "@/config/site";
 
 export async function generateMetadata({
   params,
@@ -66,18 +66,20 @@ export default async function ContactPage({
         </div>
 
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
-          <a
-            href={`tel:${siteConfig.phoneHref}`}
-            className="flex items-start gap-4 rounded-lg border bg-card p-6 transition-shadow hover:shadow-md"
-          >
-            <Phone className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
-            <div>
-              <div className="text-[14.5px] font-bold">{t("phoneTitle")}</div>
-              <div className="mt-1 text-[14px] text-muted-foreground" dir="ltr">
-                {siteConfig.phoneDisplay}
+          {hasRealPhone ? (
+            <a
+              href={`tel:${siteConfig.phoneHref}`}
+              className="flex items-start gap-4 rounded-lg border bg-card p-6 transition-shadow hover:shadow-md"
+            >
+              <Phone className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
+              <div>
+                <div className="text-[14.5px] font-bold">{t("phoneTitle")}</div>
+                <div className="mt-1 text-[14px] text-muted-foreground" dir="ltr">
+                  {siteConfig.phoneDisplay}
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          ) : null}
 
           <a
             href={`mailto:${siteConfig.email}`}

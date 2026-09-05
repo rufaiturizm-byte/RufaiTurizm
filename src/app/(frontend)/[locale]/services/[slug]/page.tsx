@@ -99,7 +99,7 @@ export default async function ServiceDetailPage({
 
       {TRANSFER_SLUGS.has(service.slug) ? (
         <>
-          <section className="mx-auto -mt-10 w-full max-w-7xl px-5 sm:px-8">
+          <section className="relative z-10 mx-auto -mt-10 w-full max-w-7xl px-5 sm:px-8">
             <TransferForm />
           </section>
           <section className="mt-12">

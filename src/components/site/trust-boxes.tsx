@@ -18,12 +18,12 @@ export async function TrustBoxes() {
 
   return (
     <section style={{ background: "var(--brand-night)" }}>
-      <div className="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 lg:grid-cols-4">
         {items.map(({ icon: Icon, title, desc }) => (
           <div
             key={title}
             /* Kenarlık dizilim yönünü izler: mobilde alt, ızgarada yan taraf. */
-            className="flex items-center gap-3.5 border-b px-6 py-6 last:border-0 sm:px-7 sm:not-nth-[2n]:border-e sm:nth-[n+3]:border-b-0 lg:border-b-0 lg:not-last:border-e"
+            className="flex items-center gap-3 border-b px-4 py-5 not-nth-[2n]:border-e sm:gap-3.5 sm:px-7 sm:py-6 nth-[n+3]:border-b-0 lg:border-b-0 lg:not-last:border-e"
             style={{ borderColor: "var(--brand-night-3)" }}
           >
             <Icon
@@ -32,8 +32,8 @@ export async function TrustBoxes() {
               aria-hidden="true"
             />
             <div>
-              <div className="text-[14.5px] font-bold text-white">{title}</div>
-              <div className="mt-1 text-[12.5px] text-white/55">{desc}</div>
+              <div className="text-[13px] font-bold leading-snug text-white sm:text-[14.5px]">{title}</div>
+              <div className="mt-1 text-[11.5px] leading-snug text-white/55 sm:text-[12.5px]">{desc}</div>
             </div>
           </div>
         ))}

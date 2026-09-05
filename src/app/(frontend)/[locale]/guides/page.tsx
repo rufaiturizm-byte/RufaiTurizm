@@ -11,6 +11,7 @@ import { TrustBoxes } from "@/components/site/trust-stats";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { guides } from "@/data/guides";
 import type { Locale } from "@/i18n/routing";
 
@@ -140,6 +141,7 @@ export default async function GuidesPage({
 
       <RouteCoverage locale={locale} />
       <ClosingCta locale={locale} />
+      <RelatedLinks exclude={["guides"]} />
       <CredentialsBand />
     </main>
   );

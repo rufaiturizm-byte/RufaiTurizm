@@ -11,6 +11,7 @@ import { RouteCoverage } from "@/components/site/route-coverage";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { WhyUs } from "@/components/site/why-us";
 import { FaqPreview } from "@/components/site/faq-preview";
 import { ClosingCta } from "@/components/site/transfer-sections";
@@ -110,6 +111,7 @@ export default async function ToursPage({
       <FaqPreview />
       <ClosingCta locale={locale} />
 
+      <RelatedLinks exclude={["tours"]} />
       <CredentialsBand />
     </main>
   );

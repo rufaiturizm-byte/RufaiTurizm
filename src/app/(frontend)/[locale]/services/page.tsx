@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { ServiceRows } from "@/components/site/service-rows";
 import { FleetUses } from "@/components/site/fleet-uses";
@@ -112,6 +113,7 @@ export default async function ServicesPage({
 
       <FaqPreview />
       <ClosingCta locale={locale} />
+      <RelatedLinks exclude={["services"]} />
       <CredentialsBand />
     </main>
   );

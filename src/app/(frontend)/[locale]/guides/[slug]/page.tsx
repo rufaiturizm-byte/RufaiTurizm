@@ -10,6 +10,7 @@ import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { guides, guideBySlug } from "@/data/guides";
 import type { Locale } from "@/i18n/routing";
 
@@ -245,6 +246,7 @@ export default async function GuideDetailPage({
       </section>
 
       <RouteCoverage locale={locale} />
+      <RelatedLinks exclude={["guides"]} />
       <CredentialsBand />
     </main>
   );

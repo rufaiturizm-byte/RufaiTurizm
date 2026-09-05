@@ -10,6 +10,7 @@ import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
@@ -298,6 +299,7 @@ export default async function TourDetailPage({
 
       <FaqPreview />
       <ClosingCta locale={locale} />
+      <RelatedLinks exclude={["tours"]} />
       <CredentialsBand />
     </main>
   );

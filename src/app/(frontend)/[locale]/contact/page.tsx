@@ -24,6 +24,7 @@ import { TrustBoxes } from "@/components/site/trust-stats";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { FaqPreview } from "@/components/site/faq-preview";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { siteConfig, hasRealPhone } from "@/config/site";
 
 export async function generateMetadata({
@@ -236,6 +237,7 @@ export default async function ContactPage({
 
       <RouteCoverage locale={locale} />
       <FaqPreview />
+      <RelatedLinks exclude={["contact"]} />
       <CredentialsBand />
     </main>
   );

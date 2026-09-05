@@ -596,5 +596,17 @@
     "about": "A TÜRSAB-licensed travel agency, licence no 12539. Service in Arabic, Turkish and English, fixed prices and one contact for the whole trip.",
     "contact": "Message us on WhatsApp and we will reply the same day. Reachable 24/7 for transfers, tours, flight tickets and hotel bookings, in Arabic, Turkish and English.",
     "faq": "Are prices fixed? Is there an Arabic-speaking guide? Do you meet us at the airport? What if the flight is delayed? Clear answers to the 12 questions guests ask most."
+  },
+  "related": {
+    "title": "Keep exploring",
+    "subtitle": "If your answer is not here, these pages will help.",
+    "transfer": "Airport transfers and chauffeur service",
+    "tours": "Day tours and programmes",
+    "services": "All our services",
+    "hotels": "Where to stay in Istanbul",
+    "guides": "Travel guides",
+    "faq": "Frequently asked questions",
+    "about": "About us and our licence",
+    "contact": "Get in touch"
   }
 }

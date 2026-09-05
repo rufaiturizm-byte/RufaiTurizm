@@ -21,7 +21,17 @@ export function FaqAccordion({
   startAt?: number;
 }) {
   return (
-    <AccordionPrimitive.Root className="flex flex-col gap-3">
+    /*
+     * hiddenUntilFound: base-ui akordeon panelleri varsayılan olarak yalnız
+     * AÇILDIKLARINDA DOM'a giriyor. Yani sunucudan gelen HTML'de on iki soru
+     * vardı ama TEK BİR CEVAP YOKTU: sayfanın kendisi 182 kelimeydi, arama
+     * motoru ve JavaScript'siz kullanıcı cevapları hiç görmüyordu.
+     *
+     * `hidden="until-found"` içeriği DOM'da tutar, kapalıyken gizler ve
+     * tarayıcının sayfa içi aramasında bulunduğunda bölümü kendiliğinden
+     * açar — hem erişilebilirlik hem SEO için doğru olan bu.
+     */
+    <AccordionPrimitive.Root hiddenUntilFound className="flex flex-col gap-3">
       {items.map((item, index) => (
         <AccordionPrimitive.Item
           key={item.question}

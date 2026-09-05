@@ -10,6 +10,7 @@ import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { ProcessSteps } from "@/components/site/process-steps";
 import {
   ClosingCta,
@@ -267,6 +268,7 @@ export default async function ServiceDetailPage({
       <RouteCoverage locale={locale} />
       <FaqPreview />
       <ClosingCta locale={locale} />
+      <RelatedLinks exclude={["services"]} />
       <CredentialsBand />
     </main>
   );

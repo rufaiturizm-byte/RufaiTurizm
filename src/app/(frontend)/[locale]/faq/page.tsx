@@ -10,6 +10,7 @@ import { FaqAccordion } from "@/components/site/faq-accordion";
 import { FaqSchema, BreadcrumbSchema } from "@/components/site/json-ld";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
@@ -137,6 +138,7 @@ export default async function FaqPage({
       </section>
 
       <ClosingCta locale={locale} />
+      <RelatedLinks exclude={["faq"]} />
       <CredentialsBand />
     </main>
   );

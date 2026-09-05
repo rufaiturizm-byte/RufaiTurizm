@@ -596,5 +596,17 @@
     "about": "TÜRSAB belgeli seyahat acentesi. Arapça, Türkçe ve İngilizce hizmet; sabit fiyat, aileye uygun programlar ve tüm seyahat boyunca tek muhatap. Belge No 12539.",
     "contact": "WhatsApp'tan yazın, aynı gün dönelim. Transfer, tur, uçak bileti ve otel rezervasyonu için 7/24 ulaşabilirsiniz. Arapça, Türkçe ve İngilizce hizmet veriyoruz.",
     "faq": "Fiyatlar sabit mi, Arapça rehber var mı, havalimanında karşılıyor musunuz, uçak rötar yaparsa ne olur? Misafirlerimizin en çok sorduğu 12 sorunun net cevapları."
+  },
+  "related": {
+    "title": "Keşfetmeye devam edin",
+    "subtitle": "Aradığınız cevap burada değilse, bu sayfalar yardımcı olur.",
+    "transfer": "Havalimanı transferi ve şoförlü araç",
+    "tours": "Günlük turlar ve programlar",
+    "services": "Tüm hizmetlerimiz",
+    "hotels": "İstanbul'da nerede kalınır",
+    "guides": "Seyahat rehberleri",
+    "faq": "Sıkça sorulan sorular",
+    "about": "Hakkımızda ve belgelerimiz",
+    "contact": "Bize ulaşın"
   }
 }

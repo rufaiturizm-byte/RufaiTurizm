@@ -11,6 +11,7 @@ import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { hotelAreas } from "@/data/hotels";
 import type { Locale } from "@/i18n/routing";
@@ -259,6 +260,7 @@ export default async function HotelsPage({
 
       <RouteCoverage locale={locale} />
       <ClosingCta locale={locale} />
+      <RelatedLinks exclude={["hotels"]} />
       <CredentialsBand />
     </main>
   );

@@ -7,6 +7,7 @@ import { BreadcrumbSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { TrustStats } from "@/components/site/trust-stats";
 import { WhyUs } from "@/components/site/why-us";
 import { ProcessSteps } from "@/components/site/process-steps";
@@ -133,6 +134,7 @@ export default async function AboutPage({
         </div>
       </section>
 
+      <RelatedLinks exclude={["about"]} />
       <CredentialsBand />
 
       <WhyUs />

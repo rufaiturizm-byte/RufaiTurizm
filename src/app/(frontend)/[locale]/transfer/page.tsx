@@ -11,6 +11,7 @@ import { VehicleList } from "@/components/site/vehicle-list";
 import { FleetUses } from "@/components/site/fleet-uses";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { RelatedLinks } from "@/components/site/related-links";
 import { FaqPreview } from "@/components/site/faq-preview";
 import {
   ClosingCta,
@@ -111,6 +112,7 @@ export default async function TransferPage({
 
       <FaqPreview />
       <ClosingCta locale={locale} />
+      <RelatedLinks exclude={["transfer"]} />
       <CredentialsBand />
     </main>
   );

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, Check, MessageCircle } from "lucide-react";
+import { ArrowLeft, Banknote, Headphones, MessagesSquare, Users } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
@@ -13,13 +13,15 @@ import { CredentialsBand } from "@/components/site/credentials-band";
 import { ProcessSteps } from "@/components/site/process-steps";
 import {
   ClosingCta,
-  FleetGrid,
-  ServiceCities,
   TransferSteps,
   TransferTypes,
   TransferWhy,
 } from "@/components/site/transfer-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
+import { WhatsAppIcon } from "@/components/site/icons";
+import { VehicleList } from "@/components/site/vehicle-list";
+import { RouteCoverage } from "@/components/site/route-coverage";
+import { FaqPreview } from "@/components/site/faq-preview";
 import { services, serviceBySlug } from "@/data/services";
 
 /** Transfer formu yalnızca ulaşım hizmetlerinde anlamlı. */
@@ -66,7 +68,6 @@ export default async function ServiceDetailPage({
   const tCommon = await getTranslations("common");
   const tTours = await getTranslations("tours");
   const tWhy = await getTranslations("whyUs");
-  const tFleet = await getTranslations("fleet");
 
   const name = t(`${service.key}.title`);
   const description = t(`${service.key}.description`);
@@ -102,9 +103,7 @@ export default async function ServiceDetailPage({
           sizes="100vw"
           className="-z-10 object-cover object-center"
         />
-        <div
-          className="absolute inset-0 -z-10 scrim-x"
-        />
+        <div className="absolute inset-0 -z-10 scrim-x" />
         <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-24">
           <div className="text-[12.5px] text-white/55">
             {tNav("home")} · {tNav("services")} · {name}
@@ -129,85 +128,93 @@ export default async function ServiceDetailPage({
         </>
       ) : null}
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
+      {/*
+        Gövde. Önceki hali paragraf + onay işaretli düz listelerdi:
+        "neler dahil" ve "neden biz" aynı ağırlıkta akıyor, sayfada hiçbir
+        şey öne çıkmıyordu. Şimdi özellikler numaralı kartlarda, gerekçeler
+        simgeli kartlarda ve rezervasyon kutusu altın çerçeveli.
+
+        Vito sayfasında basit üçlü galeri yerine araç listesi bileşeni
+        kullanılıyor — kapasite, bagaj ve donanım orada zaten yazılı.
+      */}
+      <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-20 sm:px-8">
+        <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
           <div>
-            <p className="text-[15.5px] leading-[1.9] text-foreground/85">
+            <p className="text-[17px] leading-[1.85] font-medium text-foreground/90">
+              {description}
+            </p>
+            <p className="mt-5 text-[15.5px] leading-[1.95] text-foreground/80">
               {t(`${service.key}.long`)}
             </p>
 
-            {service.slug === "vito-vip" ? (
-              <div className="mt-8">
-                <h2 className="text-[19px] font-bold">{tFleet("galleryTitle")}</h2>
-                <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                  {[
-                    { src: "/images/fleet/vito-exterior.jpg", alt: tFleet("exteriorAlt") },
-                    { src: "/images/fleet/vito-interior.jpg", alt: tFleet("interiorAlt") },
-                    { src: "/images/fleet/vito-cockpit.jpg", alt: tFleet("cockpitAlt") },
-                  ].map((photo) => (
-                    <div
-                      key={photo.src}
-                      className="relative aspect-[4/3] overflow-hidden rounded-lg border"
-                    >
-                      <Image
-                        src={photo.src}
-                        alt={photo.alt}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 33vw"
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
+            <h2 className="mt-12 font-display text-[24px] font-semibold sm:text-[28px]">
+              {tPage("featuresTitle")}
+            </h2>
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+              {features.map((feature, index) => (
+                <li key={feature} className="accent-card flex items-start gap-4 p-5">
+                  <span className="step-badge size-9 shrink-0 text-[13px] font-extrabold">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[14.5px] leading-snug font-medium">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h2 className="mt-12 font-display text-[24px] font-semibold sm:text-[28px]">
+              {tWhy("title")}
+            </h2>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {(
+                [
+                  { key: "arabicSupport", icon: MessagesSquare },
+                  { key: "fixedPrice", icon: Banknote },
+                  { key: "family", icon: Users },
+                  { key: "support", icon: Headphones },
+                ] as const
+              ).map(({ key, icon: Icon }, index) => (
+                <div key={key} className="accent-card p-5">
+                  <span
+                    className={`inline-flex size-11 items-center justify-center rounded-[0.75rem] ${
+                      index % 2 === 1 ? "tile-sky" : ""
+                    }`}
+                    style={
+                      index % 2 === 1
+                        ? undefined
+                        : {
+                            background: "color-mix(in oklab, var(--brand-gold) 20%, transparent)",
+                            border:
+                              "1px solid color-mix(in oklab, var(--brand-gold) 42%, transparent)",
+                            color: "var(--brand-gold-deep)",
+                          }
+                    }
+                  >
+                    <Icon className="size-[18px]" aria-hidden="true" />
+                  </span>
+                  <h3 className="mt-4 text-[15.5px] font-bold">{tWhy(`${key}.title`)}</h3>
+                  <p className="mt-2 text-[13.5px] leading-[1.75] text-muted-foreground">
+                    {tWhy(`${key}.description`)}
+                  </p>
                 </div>
-                <p className="mt-3 text-[12.5px] text-muted-foreground">
-                  {tFleet("stockNote")}
-                </p>
-              </div>
-            ) : null}
-
-            <h2 className="mt-10 text-[19px] font-bold">{tPage("featuresTitle")}</h2>
-            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-              {features.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-start gap-3 surface-card p-4 text-[14.5px]"
-                >
-                  <Check
-                    className="mt-0.5 size-4 shrink-0"
-                    style={{ color: "var(--brand-gold-deep)" }}
-                    aria-hidden="true"
-                  />
-                  {feature}
-                </li>
               ))}
-            </ul>
-
-            <h2 className="mt-10 text-[19px] font-bold">{tWhy("title")}</h2>
-            <ul className="mt-4 flex flex-col gap-3">
-              {(["arabicSupport", "fixedPrice", "family", "support"] as const).map((key) => (
-                <li key={key} className="flex items-start gap-3">
-                  <Check
-                    className="mt-1 size-4 shrink-0"
-                    style={{ color: "var(--brand-gold-deep)" }}
-                    aria-hidden="true"
-                  />
-                  <div>
-                    <div className="text-[14.5px] font-semibold">{tWhy(`${key}.title`)}</div>
-                    <div className="mt-1 text-[13.5px] leading-relaxed text-muted-foreground">
-                      {tWhy(`${key}.description`)}
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            </div>
           </div>
 
-          <aside className="h-fit surface-card p-6 lg:sticky lg:top-24">
+          <aside
+            className="h-fit rounded-[var(--radius-card)] border p-6 lg:sticky lg:top-24"
+            style={{
+              background: "var(--surface)",
+              borderColor: "color-mix(in oklab, var(--brand-gold) 40%, transparent)",
+              boxShadow: "var(--shadow-e3)",
+            }}
+          >
             {service.priceFrom ? (
               <>
-                <div className="text-[12px] text-muted-foreground">{tTours("from")}</div>
+                <div className="text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+                  {tTours("from")}
+                </div>
                 <div
-                  className="mt-1 text-[32px] font-extrabold"
+                  className="mt-1.5 text-[38px] font-extrabold leading-none"
                   style={{ color: "var(--brand-gold-deep)" }}
                 >
                   €{service.priceFrom}
@@ -215,8 +222,8 @@ export default async function ServiceDetailPage({
               </>
             ) : (
               <>
-                <div className="text-[19px] font-bold">{tCommon("priceOnRequest")}</div>
-                <div className="mt-1.5 text-[13.5px] text-muted-foreground">
+                <div className="text-[20px] font-bold">{tCommon("priceOnRequest")}</div>
+                <div className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
                   {tCommon("contactForPrice")}
                 </div>
               </>
@@ -224,16 +231,17 @@ export default async function ServiceDetailPage({
 
             <WhatsAppLink
               subject={name}
-              className="mt-6 flex items-center justify-center gap-2.5 rounded-full py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5"
-              style={{ background: "var(--brand-wa)" }}
+              className="mt-6 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5"
+              style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e2)" }}
             >
-              <MessageCircle className="size-5" aria-hidden="true" />
+              <WhatsAppIcon className="size-5" />
               {tCta("bookNow")}
             </WhatsAppLink>
 
             <Link
               href="/services"
-              className="mt-3 flex items-center justify-center gap-2 rounded-full border py-3 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+              className="mt-3 flex items-center justify-center gap-2 rounded-[0.8rem] border py-3 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+              style={{ borderColor: "color-mix(in oklab, var(--brand-night) 15%, transparent)" }}
             >
               {tCommon("backToServices")}
               <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
@@ -242,18 +250,22 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
+      {/* Araç bölümü ulaşım hizmetlerinde: eski FleetGrid'in yerini araç
+          listesi aldı — kapasite, bagaj ve donanım orada zaten yazılı ve
+          ikisi birlikte aynı aracı iki kez gösteriyordu. */}
       {isTransfer ? (
         <>
+          <VehicleList />
           <TransferTypes />
-          <FleetGrid />
           <TransferWhy />
           <TransferSteps />
-          <ServiceCities />
         </>
       ) : (
         <ProcessSteps />
       )}
 
+      <RouteCoverage locale={locale} />
+      <FaqPreview />
       <ClosingCta locale={locale} />
       <CredentialsBand />
     </main>

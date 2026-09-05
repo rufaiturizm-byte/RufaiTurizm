@@ -4,7 +4,6 @@ import {
   Baby,
   BadgeCheck,
   CalendarClock,
-  Check,
   Languages,
   Luggage,
   MapPin,

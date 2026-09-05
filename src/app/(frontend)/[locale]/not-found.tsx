@@ -1,15 +1,19 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { ArrowLeft, MessageCircle } from "lucide-react";
+import { ArrowRight, Compass } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
+import { WhatsAppIcon } from "@/components/site/icons";
 
 /**
  * 404 sayfası.
  *
  * Varsayılan Next.js 404'ü İngilizce ve tasarımsızdı; Arapça bir ziyaretçi
- * için çıkmaz sokak. Burada hem dilinde bir açıklama hem de ana bölümlere
- * ve WhatsApp'a çıkış var — yanlış bağlantıya tıklayan müşteriyi kaybetmemek
- * bu işte doğrudan gelir kalemi.
+ * için çıkmaz sokak. Sonraki hali dilinde ama çıplak bir metin bloğuydu.
+ *
+ * Bu işte yanlış bağlantıya tıklayan müşteriyi kaybetmemek doğrudan gelir
+ * kalemi: sayfa artık sitenin geri kalanıyla aynı dili konuşuyor ve
+ * ziyaretçiye üç çıkış sunuyor — ana sayfa, WhatsApp ve bölümlerin tamamı.
  */
 export default async function NotFound() {
   const t = await getTranslations("notFound");
@@ -17,55 +21,88 @@ export default async function NotFound() {
   const tCta = await getTranslations("cta");
 
   const links = [
+    { href: "/transfer" as const, label: tNav("transfer") },
     { href: "/tours" as const, label: tNav("tours") },
     { href: "/services" as const, label: tNav("services") },
+    { href: "/hotels" as const, label: tNav("hotels") },
+    { href: "/guides" as const, label: tNav("guides") },
+    { href: "/about" as const, label: tNav("about") },
     { href: "/faq" as const, label: tNav("faq") },
     { href: "/contact" as const, label: tNav("contact") },
   ];
 
   return (
-    <main className="flex flex-1 flex-col items-center justify-center px-5 py-24 text-center sm:px-8">
-      <div
-        className="text-[72px] font-extrabold leading-none sm:text-[96px]"
-        style={{ color: "var(--brand-gold)" }}
-      >
-        404
-      </div>
+    <main className="flex flex-1 flex-col">
+      <section className="relative isolate flex min-h-[62vh] items-center">
+        <Image
+          src="/images/hero-ortakoy.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 scrim-x" />
 
-      <h1 className="mt-6 text-[26px] font-bold sm:text-[32px]">{t("title")}</h1>
-      <p className="mt-4 max-w-lg text-[15.5px] leading-[1.85] text-muted-foreground">
-        {t("desc")}
-      </p>
+        <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
+          <span className="icon-tile mb-7 size-14" aria-hidden="true">
+            <Compass className="size-6" />
+          </span>
 
-      <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 rounded-md px-7 py-3.5 text-[14.5px] font-bold"
-          style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
-        >
-          {t("home")}
-          <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
-        </Link>
-        <WhatsAppLink
-          className="inline-flex items-center gap-2 rounded-md px-7 py-3.5 text-[14.5px] font-bold text-white"
-          style={{ background: "var(--brand-wa)" }}
-        >
-          <MessageCircle className="size-4" aria-hidden="true" />
-          {tCta("whatsapp")}
-        </WhatsAppLink>
-      </div>
-
-      <nav className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[14px]">
-        {links.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          <div
+            className="font-display text-[78px] font-semibold leading-none tabular-nums sm:text-[108px]"
+            style={{ color: "var(--brand-gold)" }}
           >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
+            404
+          </div>
+
+          <h1 className="mt-5 font-display text-[28px] font-semibold leading-snug text-white sm:text-[38px]">
+            {t("title")}
+          </h1>
+          <p className="mt-4 max-w-lg text-[15.5px] leading-[1.85] text-white/75">{t("desc")}</p>
+
+          <div className="mt-9 flex flex-wrap items-center gap-3.5">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5"
+              style={{
+                background: "var(--brand-gold)",
+                color: "var(--brand-night)",
+                boxShadow: "var(--shadow-gold)",
+              }}
+            >
+              {t("home")}
+              <ArrowRight className="size-4 rtl:rotate-180" aria-hidden="true" />
+            </Link>
+
+            <WhatsAppLink
+              className="inline-flex items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5"
+              style={{ background: "var(--brand-wa)" }}
+            >
+              <WhatsAppIcon className="size-[18px]" />
+              {tCta("whatsapp")}
+            </WhatsAppLink>
+          </div>
+        </div>
+      </section>
+
+      {/* Bölümlerin tamamı: aranan sayfa yoksa bile gidilecek yer bellidir */}
+      <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className="accent-card block p-5">
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-[15px] font-bold">{link.label}</span>
+                <ArrowRight
+                  className="size-4 shrink-0 rtl:rotate-180"
+                  style={{ color: "var(--brand-gold-deep)" }}
+                  aria-hidden="true"
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

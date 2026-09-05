@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, BedDouble, Info, MapPin } from "lucide-react";
+import { ArrowRight, Info, MapPin } from "lucide-react";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
-import { SectionHeading } from "@/components/site/section-heading";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
@@ -99,100 +98,135 @@ export default async function HotelsPage({
         </div>
       </section>
 
-      {/* Semt semt */}
+      {/*
+        Semt semt.
+
+        İlk hali ince yatay satırlardan bir dizindi: her otelin yanında
+        yeşil bir düğme vardı ve on dört düğme sayfayı gürültüye
+        çeviriyordu. Şimdi bölge TAM GENİŞLİKTE fotoğraflı bir bant —
+        kitapta bölüm başlığı gibi — ve oteller ferah kartlar. Rezervasyon
+        çağrısı her kartta değil, bölge başına bir tane: karar otel
+        seçildikten sonra veriliyor.
+
+        Otel fotoğrafımız olmadığı için kartın görseli tipografi: adın ilk
+        harfi serif bir monogram olarak duruyor.
+      */}
       <div className="flex flex-col">
         {hotelAreas.map((area, index) => {
           const name = area.name[lang] ?? area.name.tr;
-          const flipped = index % 2 === 1;
 
           return (
-            <section key={area.key} className="mx-auto w-full max-w-7xl px-5 pt-16 sm:px-8">
-              <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
-                <div className={flipped ? "lg:order-2" : ""}>
+            <section key={area.key} className="pt-16">
+              {/* Bölüm bandı */}
+              <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+                <div
+                  className="relative isolate overflow-hidden"
+                  style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e2)" }}
+                >
+                  <Image
+                    src={area.image}
+                    alt={name}
+                    fill
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                    className="absolute inset-0 z-0 object-cover object-center"
+                  />
                   <div
-                    className="relative aspect-[4/3] overflow-hidden lg:sticky lg:top-24"
+                    className="absolute inset-0 z-10"
                     style={{
-                      borderRadius: "var(--radius-card)",
-                      boxShadow: "var(--shadow-e2)",
+                      background:
+                        "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 93%, transparent) 0%, color-mix(in oklab, var(--brand-night) 62%, transparent) 48%, color-mix(in oklab, var(--brand-night) 16%, transparent) 100%)",
                     }}
-                  >
-                    <Image
-                      src={area.image}
-                      alt={name}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 40vw"
-                      className="object-cover"
-                    />
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        background:
-                          "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 80%, transparent) 0%, transparent 58%)",
-                      }}
-                    />
-                    <div className="absolute inset-x-5 bottom-4">
-                      <div
-                        className="text-[10.5px] font-extrabold uppercase tracking-[0.18em]"
-                        style={{ color: "var(--brand-gold-label)" }}
-                      >
-                        {t("areaEyebrow")}
-                      </div>
-                      <div className="mt-1 font-display text-[21px] font-semibold text-white">
-                        {name}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className={flipped ? "lg:order-1" : ""}>
-                  <SectionHeading
-                    eyebrow={`${area.hotels.length} ${t("hotelCount")}`}
-                    title={name}
-                    subtitle={area.note[lang] ?? area.note.tr}
-                    rule={false}
                   />
 
-                  <ul className="flex flex-col gap-3.5">
-                    {area.hotels.map((hotel) => (
-                      <li key={hotel.name}>
-                        <div className="accent-card flex flex-wrap items-center gap-x-5 gap-y-3 p-5">
-                          <span
-                            className="inline-flex size-11 shrink-0 items-center justify-center rounded-full"
-                            style={{ background: "var(--brand-night)", color: "var(--brand-gold)" }}
-                          >
-                            <BedDouble className="size-[18px]" aria-hidden="true" />
-                          </span>
+                  <div className="relative z-20 flex flex-col justify-end gap-3 px-7 pt-20 pb-8 sm:px-10 sm:pt-24">
+                    <div className="flex items-center gap-3">
+                      <span
+                        className="font-display text-[30px] font-semibold leading-none tabular-nums"
+                        style={{ color: "var(--brand-gold)" }}
+                      >
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span
+                        className="h-6 w-px"
+                        style={{ background: "color-mix(in oklab, white 28%, transparent)" }}
+                      />
+                      <span
+                        className="text-[11px] font-extrabold uppercase tracking-[0.2em]"
+                        style={{ color: "var(--brand-gold-label)" }}
+                      >
+                        {area.hotels.length} {t("hotelCount")}
+                      </span>
+                    </div>
 
-                          <div className="min-w-[12rem] flex-1">
-                            <div className="text-[15.5px] font-bold leading-snug">{hotel.name}</div>
-                            <div className="mt-1 flex items-start gap-1.5 text-[13px] leading-snug text-muted-foreground">
-                              <MapPin className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" />
-                              {hotel.desc[lang] ?? hotel.desc.tr}
-                            </div>
-                          </div>
-
-                          <WhatsAppLink
-                            subject={`${hotel.name} — ${name}`}
-                            className="inline-flex shrink-0 items-center gap-2 rounded-[0.6rem] px-4 py-2.5 text-[12.5px] font-bold text-white transition-transform hover:-translate-y-0.5"
-                            style={{ background: "var(--brand-wa)" }}
-                          >
-                            <WhatsAppIcon className="size-3.5" />
-                            {t("askCta")}
-                          </WhatsAppLink>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
+                    <h2 className="max-w-2xl font-display text-[28px] font-semibold leading-[1.12] text-white sm:text-[38px]">
+                      {name}
+                    </h2>
+                    <p className="max-w-2xl text-[14.5px] leading-[1.8] text-white/75">
+                      {area.note[lang] ?? area.note.tr}
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              {/* Oteller */}
+              <div className="mx-auto w-full max-w-7xl px-5 pt-6 sm:px-8">
+                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {area.hotels.map((hotel) => (
+                    <article key={hotel.name} className="accent-card flex flex-col p-6">
+                      <span
+                        className="inline-flex size-14 items-center justify-center rounded-full font-display text-[24px] font-semibold"
+                        style={{
+                          background: "color-mix(in oklab, var(--brand-gold) 18%, transparent)",
+                          border: "1px solid color-mix(in oklab, var(--brand-gold) 40%, transparent)",
+                          color: "var(--brand-gold-deep)",
+                        }}
+                        aria-hidden="true"
+                      >
+                        {hotel.name.slice(0, 1)}
+                      </span>
+
+                      <h3 className="mt-5 font-display text-[19px] font-semibold leading-snug">
+                        {hotel.name}
+                      </h3>
+
+                      <p className="mt-3 flex flex-1 items-start gap-2 text-[13.5px] leading-[1.7] text-muted-foreground">
+                        <MapPin
+                          className="mt-0.5 size-3.5 shrink-0"
+                          style={{ color: "var(--brand-gold-deep)" }}
+                          aria-hidden="true"
+                        />
+                        {hotel.desc[lang] ?? hotel.desc.tr}
+                      </p>
+
+                      <WhatsAppLink
+                        subject={`${hotel.name} — ${name}`}
+                        className="mt-5 inline-flex items-center gap-2 border-t pt-4 text-[13px] font-bold"
+                        style={{
+                          borderColor: "var(--hairline)",
+                          color: "var(--brand-gold-deep)",
+                        }}
+                      >
+                        {t("askCta")}
+                        <ArrowRight className="size-3.5 rtl:rotate-180" aria-hidden="true" />
+                      </WhatsAppLink>
+                    </article>
+                  ))}
+                </div>
+
+                {/* Bölge başına tek çağrı */}
+                <WhatsAppLink
+                  subject={name}
+                  className="mt-5 flex items-center justify-center gap-2.5 rounded-[0.7rem] py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5"
+                  style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e1)" }}
+                >
+                  <WhatsAppIcon className="size-[18px]" />
+                  {name} — {tCta("bookNow")}
+                </WhatsAppLink>
               </div>
             </section>
           );
         })}
       </div>
-
-      <p className="mx-auto mt-8 w-full max-w-7xl px-5 text-[12.5px] text-muted-foreground sm:px-8">
-        {t("photoNote")}
-      </p>
 
       {/* Yardım bloğu */}
       <section className="mx-auto w-full max-w-7xl px-5 pt-14 pb-20 sm:px-8">

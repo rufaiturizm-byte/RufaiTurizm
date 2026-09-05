@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, Check, Clock, Info, MapPin, MessageCircle, X } from "lucide-react";
+import { ArrowLeft, Check, Clock, Info, MapPin, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
@@ -11,6 +11,12 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
+import { WhatsAppIcon } from "@/components/site/icons";
+import { TrustBoxes } from "@/components/site/trust-stats";
+import { RouteCoverage } from "@/components/site/route-coverage";
+import { ProcessSteps } from "@/components/site/process-steps";
+import { FaqPreview } from "@/components/site/faq-preview";
+import { ClosingCta } from "@/components/site/transfer-sections";
 import { tours, tourBySlug } from "@/data/tours";
 
 export function generateStaticParams() {
@@ -90,13 +96,7 @@ export default async function TourDetailPage({
           sizes="100vw"
           className="-z-10 object-cover object-center"
         />
-        <div
-          className="absolute inset-0 -z-10"
-          style={{
-            background:
-              "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 94%, transparent) 0%, color-mix(in oklab, var(--brand-night) 62%, transparent) 55%, color-mix(in oklab, var(--brand-night) 30%, transparent) 100%)",
-          }}
-        />
+        <div className="absolute inset-0 -z-10 scrim-x" />
         <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-24">
           <div className="text-[12.5px] text-white/55">
             {tNav("home")} · {tNav("tours")} · {name}
@@ -120,41 +120,50 @@ export default async function TourDetailPage({
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
+      <div className="pt-12">
+        <TrustBoxes />
+      </div>
+
+      {/*
+        Gövde. Önceki hali paragraf + onay işaretli düz listelerdi ve
+        sayfanın tamamı tek renkti; turun programı, fiyata dahil olanlar ve
+        notlar aynı ağırlıkta akıyordu. Şimdi program numaralı kartlarda,
+        dahil/değil iki ayrı kartta ve rezervasyon kutusu altın çerçeveli.
+      */}
+      <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-20 sm:px-8">
+        <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
           <div>
-            <p className="text-[16px] leading-[1.9] text-foreground/85">{description}</p>
-            <p className="mt-5 text-[15.5px] leading-[1.9] text-foreground/80">
+            <p className="text-[17px] leading-[1.85] font-medium text-foreground/90">
+              {description}
+            </p>
+            <p className="mt-5 text-[15.5px] leading-[1.95] text-foreground/80">
               {t(`${tour.key}.long`)}
             </p>
 
-            <h2 className="mt-10 text-[19px] font-bold">{tPage("programTitle")}</h2>
-            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-              {highlights.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 surface-card p-4 text-[14.5px]"
-                >
-                  <MapPin
-                    className="mt-0.5 size-4 shrink-0"
-                    style={{ color: "var(--brand-gold-deep)" }}
-                    aria-hidden="true"
-                  />
-                  {item}
+            <h2 className="mt-12 font-display text-[24px] font-semibold sm:text-[28px]">
+              {tPage("programTitle")}
+            </h2>
+            <ol className="mt-6 grid gap-4 sm:grid-cols-2">
+              {highlights.map((item, index) => (
+                <li key={item} className="accent-card flex items-start gap-4 p-5">
+                  <span className="step-badge size-9 shrink-0 text-[13px] font-extrabold">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[14.5px] leading-snug font-medium">{item}</span>
                 </li>
               ))}
-            </ul>
+            </ol>
 
-            <div className="mt-10 grid gap-8 sm:grid-cols-2">
-              <div>
-                <h2 className="text-[19px] font-bold">{tPage("includedTitle")}</h2>
-                <ul className="mt-4 flex flex-col gap-3">
+            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+              <div className="accent-card p-6">
+                <h2 className="text-[16px] font-bold">{tPage("includedTitle")}</h2>
+                <ul className="mt-5 flex flex-col gap-3">
                   {(["guide", "pickup", "vehicle", "water", "parking", "fixedPrice"] as const).map(
                     (key) => (
-                      <li key={key} className="flex items-start gap-3 text-[14.5px]">
+                      <li key={key} className="flex items-start gap-3 text-[14px] leading-snug">
                         <Check
                           className="mt-0.5 size-4 shrink-0"
-                          style={{ color: "var(--brand-gold-deep)" }}
+                          style={{ color: "var(--brand-wa)" }}
                           aria-hidden="true"
                         />
                         {tIncluded(key)}
@@ -164,15 +173,15 @@ export default async function TourDetailPage({
                 </ul>
               </div>
 
-              <div>
-                <h2 className="text-[19px] font-bold">{tPage("notIncludedTitle")}</h2>
-                <ul className="mt-4 flex flex-col gap-3">
+              <div className="accent-card p-6">
+                <h2 className="text-[16px] font-bold">{tPage("notIncludedTitle")}</h2>
+                <ul className="mt-5 flex flex-col gap-3">
                   {(["tickets", "lunch", "boat", "tips"] as const).map((key) => (
                     <li
                       key={key}
-                      className="flex items-start gap-3 text-[14.5px] text-muted-foreground"
+                      className="flex items-start gap-3 text-[14px] leading-snug text-muted-foreground"
                     >
-                      <X className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                      <X className="mt-0.5 size-4 shrink-0 opacity-60" aria-hidden="true" />
                       {tNotIncluded(key)}
                     </li>
                   ))}
@@ -180,50 +189,86 @@ export default async function TourDetailPage({
               </div>
             </div>
 
-            <div className="mt-10 surface-card p-6">
-              <h2 className="flex items-center gap-2.5 text-[16px] font-bold">
-                <Info
-                  className="size-4.5"
-                  style={{ color: "var(--brand-gold-deep)" }}
-                  aria-hidden="true"
-                />
-                {tPage("noteTitle")}
-              </h2>
-              <p className="mt-3 text-[14.5px] leading-[1.85] text-muted-foreground">
-                {tPage("note")}
-              </p>
+            <div
+              className="mt-6 flex items-start gap-4 rounded-[var(--radius-card)] border px-6 py-5"
+              style={{
+                background: "color-mix(in oklab, var(--brand-sky) 12%, transparent)",
+                borderColor: "color-mix(in oklab, var(--brand-sky) 34%, transparent)",
+              }}
+            >
+              <Info
+                className="mt-0.5 size-5 shrink-0"
+                style={{ color: "var(--brand-night)" }}
+                aria-hidden="true"
+              />
+              <div>
+                <h2 className="text-[15px] font-bold">{tPage("noteTitle")}</h2>
+                <p className="mt-2 text-[13.5px] leading-[1.8]">{tPage("note")}</p>
+              </div>
             </div>
           </div>
 
-          <aside className="h-fit surface-card p-6 lg:sticky lg:top-24">
-            <div className="text-[12px] text-muted-foreground">{t("from")}</div>
-            <div className="mt-1 flex items-baseline gap-2.5">
+          {/* Rezervasyon kutusu */}
+          <aside
+            className="h-fit rounded-[var(--radius-card)] border p-6 lg:sticky lg:top-24"
+            style={{
+              background: "var(--surface)",
+              borderColor: "color-mix(in oklab, var(--brand-gold) 40%, transparent)",
+              boxShadow: "var(--shadow-e3)",
+            }}
+          >
+            <div className="text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+              {t("from")}
+            </div>
+            <div className="mt-1.5 flex items-baseline gap-2.5">
               <span
-                className="text-[32px] font-extrabold"
+                className="text-[38px] font-extrabold leading-none"
                 style={{ color: "var(--brand-gold-deep)" }}
               >
                 €{tour.priceFrom}
               </span>
-              <span className="text-[15px] text-muted-foreground">
-                ≈ ${tour.priceUsdFrom}
-              </span>
+              <span className="text-[15px] text-muted-foreground">≈ ${tour.priceUsdFrom}</span>
             </div>
-            <p className="mt-3 text-[12.5px] leading-relaxed text-muted-foreground">
+
+            <dl
+              className="mt-5 flex flex-col gap-3 border-t border-b py-5 text-[13.5px]"
+              style={{ borderColor: "var(--hairline)" }}
+            >
+              <div className="flex items-center justify-between gap-4">
+                <dt className="inline-flex items-center gap-2 text-muted-foreground">
+                  <MapPin className="size-3.5" aria-hidden="true" />
+                  {tPage("colCity")}
+                </dt>
+                <dd className="font-bold">{t(`${tour.key}.city`)}</dd>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <dt className="inline-flex items-center gap-2 text-muted-foreground">
+                  <Clock className="size-3.5" aria-hidden="true" />
+                  {tPage("colDuration")}
+                </dt>
+                <dd className="font-bold tabular-nums">
+                  {tour.durationHours} {tPage("hours")}
+                </dd>
+              </div>
+            </dl>
+
+            <p className="mt-4 text-[12.5px] leading-[1.75] text-muted-foreground">
               {tPage("priceNote")}
             </p>
 
             <WhatsAppLink
               subject={name}
-              className="mt-6 flex items-center justify-center gap-2.5 rounded-full py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5"
-              style={{ background: "var(--brand-wa)" }}
+              className="mt-5 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5"
+              style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e2)" }}
             >
-              <MessageCircle className="size-5" aria-hidden="true" />
+              <WhatsAppIcon className="size-5" />
               {tCta("bookNow")}
             </WhatsAppLink>
 
             <Link
               href="/tours"
-              className="mt-3 flex items-center justify-center gap-2 rounded-full border py-3 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+              className="mt-3 flex items-center justify-center gap-2 rounded-[0.8rem] border py-3 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+              style={{ borderColor: "color-mix(in oklab, var(--brand-night) 15%, transparent)" }}
             >
               {tCommon("backToTours")}
               <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
@@ -232,8 +277,18 @@ export default async function TourDetailPage({
         </div>
       </section>
 
+      <RouteCoverage locale={locale} />
+
+      <div className="pb-4">
+        <ProcessSteps />
+      </div>
+
       <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
-        <SectionHeading eyebrow={tEyebrow("tours")} title={tPage("title")} subtitle={tPage("subtitle")} />
+        <SectionHeading
+          eyebrow={tEyebrow("tours")}
+          title={tPage("listTitle")}
+          rule={false}
+        />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {others.map((item) => (
             <TourCard key={item.key} tour={item} />
@@ -241,6 +296,8 @@ export default async function TourDetailPage({
         </div>
       </section>
 
+      <FaqPreview />
+      <ClosingCta locale={locale} />
       <CredentialsBand />
     </main>
   );

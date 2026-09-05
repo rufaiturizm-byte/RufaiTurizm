@@ -13,12 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rufaiturizm.com"),
   title: {
     default: "Rufai Turizm",
     template: "%s | Rufai Turizm",
   },
   description:
     "Rufai Turizm — tur, transfer ve seyahat organizasyonu hizmetleri.",
+  alternates: {
+    canonical: "/",
+  },
+  verification: {
+    google: "LkEz3TOB4Fl4zl0wZpe_qL5G0HvViMDKC_rsMdzGdP4",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

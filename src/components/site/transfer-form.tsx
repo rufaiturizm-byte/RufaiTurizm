@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { CalendarDays, Check, MapPin, Plus, Users } from "lucide-react";
+import { BorderBeam } from "@/components/ui/border-beam";
 import { buildWhatsAppUrl } from "./whatsapp-cta";
 import { siteConfig } from "@/config/site";
 
@@ -60,7 +61,16 @@ export function TransferForm() {
     }`;
 
   return (
-    <div className="rounded-xl border bg-card p-5 shadow-xl sm:p-6">
+    <div className="relative overflow-hidden rounded-xl border bg-card p-5 shadow-xl sm:p-6">
+      {/* Kartın kenarında dolaşan ışık — sayfanın tek etkileşimli alanı,
+          göz oraya gitsin diye. */}
+      <BorderBeam
+        size={190}
+        duration={9}
+        borderWidth={1.5}
+        colorFrom="var(--brand-gold)"
+        colorTo="color-mix(in oklab, var(--brand-gold) 20%, transparent)"
+      />
       <div className="mb-5 flex flex-wrap gap-2.5">
         <button
           type="button"

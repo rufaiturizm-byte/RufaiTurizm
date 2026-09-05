@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ShieldCheck, ArrowLeft, MessageCircle } from "lucide-react";
+import { NumberTicker } from "@/components/ui/number-ticker";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { TravelAgencySchema, WebSiteSchema } from "@/components/site/json-ld";
@@ -15,6 +18,8 @@ import { ServicesOverview } from "@/components/site/services-overview";
 import { WhyUs } from "@/components/site/why-us";
 import { FaqPreview } from "@/components/site/faq-preview";
 import { ClosingCta } from "@/components/site/transfer-sections";
+import { DestinationsMarquee } from "@/components/site/destinations-marquee";
+import { Reveal } from "@/components/site/reveal";
 import { tours } from "@/data/tours";
 import { siteConfig } from "@/config/site";
 
@@ -34,11 +39,12 @@ export default async function HomePage({
   const tToursPage = await getTranslations("toursPage");
   const tEyebrow = await getTranslations("eyebrow");
 
+  /* Sayısal olanlar ekranda sayarak yükseliyor; TÜRSAB metin olarak kalıyor. */
   const stats = [
-    { value: "+12.000", label: tStats("guestsLabel") },
-    { value: "4.9 / 5", label: tStats("ratingLabel") },
-    { value: "2015", label: tStats("sinceLabel") },
-    { value: "TÜRSAB", label: tStats("licenseLabel") },
+    { number: 12000, prefix: "+", decimals: 0, suffix: "", label: tStats("guestsLabel") },
+    { number: 4.9, prefix: "", decimals: 1, suffix: " / 5", label: tStats("ratingLabel") },
+    { number: 2015, prefix: "", decimals: 0, suffix: "", label: tStats("sinceLabel") },
+    { text: "TÜRSAB", label: tStats("licenseLabel") },
   ];
 
   const featured = tours.slice(0, 4);
@@ -69,14 +75,19 @@ export default async function HomePage({
 
           <div className="mx-auto max-w-7xl px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28">
             <div
-              className="inline-flex items-center gap-2.5 border px-3.5 py-1.5 text-[12px] font-semibold tracking-wide text-white"
-              style={{ borderColor: "color-mix(in oklab, var(--brand-gold) 60%, transparent)" }}
+              className="inline-flex items-center gap-2.5 rounded-full border px-4 py-2 backdrop-blur-sm"
+              style={{
+                borderColor: "color-mix(in oklab, var(--brand-gold) 55%, transparent)",
+                background: "color-mix(in oklab, var(--brand-night) 45%, transparent)",
+              }}
             >
               <ShieldCheck className="size-4" style={{ color: "var(--brand-gold)" }} aria-hidden="true" />
-              TÜRSAB{siteConfig.credentials.tursab ? ` · ${siteConfig.credentials.tursab}` : ""}
+              <AnimatedShinyText className="text-[12px] font-semibold tracking-[0.08em] text-white/80">
+                TÜRSAB{siteConfig.credentials.tursab ? ` · ${siteConfig.credentials.tursab}` : ""}
+              </AnimatedShinyText>
             </div>
 
-            <h1 className="mt-7 max-w-2xl text-[40px] font-bold leading-[1.22] text-white sm:text-[56px]">
+            <h1 className="mt-7 max-w-2xl font-display text-[42px] font-semibold leading-[1.14] tracking-[-0.01em] text-white sm:text-[64px]">
               {t("hero.title")}
             </h1>
 
@@ -85,12 +96,22 @@ export default async function HomePage({
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <WhatsAppLink
-                className="inline-flex items-center gap-2.5 rounded-md px-7 py-4 text-[15px] font-bold transition-opacity hover:opacity-90"
-                style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
-              >
-                <MessageCircle className="size-[19px]" aria-hidden="true" />
-                {tCta("whatsapp")}
+              <WhatsAppLink>
+                <ShimmerButton
+                  background="var(--brand-gold)"
+                  shimmerColor="#ffffff"
+                  shimmerDuration="3.5s"
+                  borderRadius="8px"
+                  className="px-7 py-4 text-[15px] font-bold"
+                >
+                  <span
+                    className="inline-flex items-center gap-2.5"
+                    style={{ color: "var(--brand-night)" }}
+                  >
+                    <MessageCircle className="size-[19px]" aria-hidden="true" />
+                    {tCta("whatsapp")}
+                  </span>
+                </ShimmerButton>
               </WhatsAppLink>
               <Link
                 href="/tours"
@@ -115,19 +136,27 @@ export default async function HomePage({
         {/* İstatistik şeridi — rakam öne çıkar, ikon yok */}
         <section className="border-b" style={{ background: "var(--brand-cream)" }}>
           <div className="mx-auto grid max-w-7xl grid-cols-2 px-5 sm:px-8 lg:grid-cols-4">
-            {stats.map(({ value, label }) => (
+            {stats.map((stat) => (
               <div
-                key={label}
+                key={stat.label}
                 /* Ayırıcı çizgi sütun sayısını izler: iki sütunda her satırın
                    ikinci öğesinde, dört sütunda ilk öğe dışında hepsinde. */
                 className="px-1 py-9 not-nth-[2n+1]:border-s nth-[n+3]:border-t sm:px-6 sm:py-12 lg:border-t-0 lg:not-first:border-s"
                 style={{ borderColor: "color-mix(in oklab, var(--brand-night) 10%, transparent)" }}
               >
-                <div className="text-[34px] font-extrabold leading-none tracking-[-0.02em] sm:text-[44px]">
-                  {value}
+                <div className="text-[34px] font-extrabold leading-none tracking-[-0.02em] tabular-nums sm:text-[44px]">
+                  {"text" in stat ? (
+                    stat.text
+                  ) : (
+                    <>
+                      {stat.prefix}
+                      <NumberTicker value={stat.number} decimalPlaces={stat.decimals} />
+                      {stat.suffix}
+                    </>
+                  )}
                 </div>
                 <div className="mt-3 text-[11.5px] font-bold uppercase tracking-[0.16em] text-muted-foreground">
-                  {label}
+                  {stat.label}
                 </div>
               </div>
             ))}
@@ -155,14 +184,18 @@ export default async function HomePage({
           />
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {featured.map((tour) => (
-                <TourCard key={tour.key} tour={tour} />
+              {featured.map((tour, index) => (
+                <Reveal key={tour.key} delay={index * 0.08}>
+                  <TourCard tour={tour} />
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
         <PackagesSection locale={locale} />
+
+        <DestinationsMarquee />
 
         <WhyUs subtitle={tHome2("vipText")} />
 

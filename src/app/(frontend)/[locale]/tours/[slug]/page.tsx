@@ -101,7 +101,7 @@ export default async function TourDetailPage({
           <div className="text-[12.5px] text-white/55">
             {tNav("home")} · {tNav("tours")} · {name}
           </div>
-          <h1 className="mt-3 text-[34px] font-bold leading-tight text-white sm:text-[44px]">
+          <h1 className="mt-3 font-display text-[36px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[50px]">
             {name}
           </h1>
           <div className="mt-5 flex flex-wrap items-center gap-3">

@@ -113,7 +113,7 @@ export default async function ServiceDetailPage({
           <div className="text-[12.5px] text-white/55">
             {tNav("home")} · {tNav("services")} · {name}
           </div>
-          <h1 className="mt-3 max-w-2xl text-[32px] font-bold leading-tight text-white sm:text-[42px]">
+          <h1 className="mt-3 max-w-2xl font-display text-[34px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[48px]">
             {name}
           </h1>
           <p className="mt-4 max-w-xl text-[16px] leading-[1.8] text-white/78">

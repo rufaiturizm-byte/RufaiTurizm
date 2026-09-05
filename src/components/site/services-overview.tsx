@@ -4,6 +4,7 @@ import { ArrowLeft, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "./section-heading";
 import { WhatsAppLink } from "./whatsapp-cta";
+import { Reveal } from "./reveal";
 import { services } from "@/data/services";
 
 /**
@@ -38,7 +39,7 @@ export async function ServicesOverview() {
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {services.map((service) => {
+        {services.map((service, index) => {
           const name = t(`${service.key}.title`);
           const href = {
             pathname: "/services/[slug]" as const,
@@ -46,10 +47,8 @@ export async function ServicesOverview() {
           };
 
           return (
-            <article
-              key={service.key}
-              className="group flex flex-col overflow-hidden rounded-lg border bg-card transition-shadow hover:shadow-lg"
-            >
+            <Reveal key={service.key} delay={index * 0.08} className="flex">
+              <article className="group flex w-full flex-col overflow-hidden rounded-lg border bg-card transition-shadow hover:shadow-lg">
               <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                 <Image
                   src={service.image}
@@ -87,7 +86,8 @@ export async function ServicesOverview() {
                   </WhatsAppLink>
                 </div>
               </div>
-            </article>
+              </article>
+            </Reveal>
           );
         })}
       </div>

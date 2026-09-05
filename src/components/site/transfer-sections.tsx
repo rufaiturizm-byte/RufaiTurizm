@@ -264,7 +264,7 @@ export async function ClosingCta() {
           style={{ color: "var(--brand-gold)" }}
           aria-hidden="true"
         />
-        <h2 className="text-[24px] font-bold text-white sm:text-[28px]">{t("ctaTitle")}</h2>
+        <h2 className="font-display text-[26px] font-semibold leading-[1.15] text-white sm:text-[34px]">{t("ctaTitle")}</h2>
         <p className="max-w-lg text-[15px] leading-[1.8] text-white/70">{t("ctaText")}</p>
         <WhatsAppLink
           className="mt-2 inline-flex items-center gap-2.5 rounded-md px-8 py-4 text-[15px] font-bold"

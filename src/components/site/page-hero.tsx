@@ -36,7 +36,7 @@ export function PageHero({
       />
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
         <div className="text-[12.5px] text-white/55">{breadcrumb}</div>
-        <h1 className="mt-3 text-[32px] font-bold leading-tight text-white sm:text-[40px]">
+        <h1 className="mt-3 font-display text-[34px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[46px]">
           {title}
         </h1>
         {subtitle ? (

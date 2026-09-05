@@ -215,7 +215,8 @@
     "step4Title": "Travel",
     "step4Desc": "Your driver is at your hotel, and you reach us on the same number throughout.",
     "fleetTitle": "Our vehicle",
-    "fleetSubtitle": "Every transfer and tour is operated with a Mercedes Vito"
+    "fleetSubtitle": "Every transfer and tour is operated with a Mercedes Vito",
+    "offerTitle": "What we offer"
   },
   "toursPage": {
     "title": "Tour Programs",
@@ -441,7 +442,22 @@
     "vitoBadge": "Most requested",
     "vitoLuggage": "5 – 6",
     "exteriorAlt": "Mercedes Vito exterior",
-    "homeTitle": "The vehicle you travel in"
+    "homeTitle": "The vehicle you travel in",
+    "useTitle": "Our vehicle and how it is used",
+    "useSubtitle": "One vehicle, four kinds of journey. All with a Mercedes Vito and a chauffeur.",
+    "sameVehicleNote": "All four run with the same vehicle: a Mercedes Vito. What changes is the journey, not the car.",
+    "u1Title": "Airport Transfer",
+    "u1Desc": "Meet and greet at arrivals, luggage help and a direct transfer to your hotel. Your flight is tracked.",
+    "u1Meta": "IST · SAW · fixed price",
+    "u2Title": "City Tour",
+    "u2Desc": "A full-day city tour with an Arabic-speaking guide; the programme follows your pace.",
+    "u2Meta": "Hotel pick-up · full day",
+    "u3Title": "Intercity Journey",
+    "u3Desc": "Bursa, Sapanca, Yalova and beyond. The same vehicle and chauffeur stay with you all day.",
+    "u3Meta": "One vehicle · one chauffeur",
+    "u4Title": "Vehicle at Your Disposal",
+    "u4Desc": "By the hour or for a full day. The car and chauffeur are yours alone; you set the route.",
+    "u4Meta": "Hourly · full day"
   },
   "notFound": {
     "title": "Page not found",
@@ -510,5 +526,11 @@
     "cities": "Coverage",
     "packages": "Packages",
     "reviews": "Reviews"
+  },
+  "routes": {
+    "title": "Where we operate",
+    "subtitle": "From airport transfers to the Black Sea plateaus; for anywhere not listed, just write to us.",
+    "eyebrow": "Routes",
+    "priceNote": "Prices are per vehicle, not per person. The final amount is confirmed on WhatsApp by date and party size."
   }
 }

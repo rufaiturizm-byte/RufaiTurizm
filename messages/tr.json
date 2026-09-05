@@ -215,7 +215,8 @@
     "step4Title": "Seyahat edin",
     "step4Desc": "Şoförünüz otelinizde; seyahat boyunca aynı numaradan bize ulaşırsınız.",
     "fleetTitle": "Aracımız",
-    "fleetSubtitle": "Tüm transfer ve turlarımız Mercedes Vito ile yapılır"
+    "fleetSubtitle": "Tüm transfer ve turlarımız Mercedes Vito ile yapılır",
+    "offerTitle": "Neler sunuyoruz"
   },
   "toursPage": {
     "title": "Tur Programlarımız",
@@ -441,7 +442,22 @@
     "vitoBadge": "En çok tercih edilen",
     "vitoLuggage": "5 – 6",
     "exteriorAlt": "Mercedes Vito — dış görünüm",
-    "homeTitle": "Yolculuk ettiğiniz araç"
+    "homeTitle": "Yolculuk ettiğiniz araç",
+    "useTitle": "Aracımız ve kullanım biçimleri",
+    "useSubtitle": "Tek araç, dört farklı yolculuk. Hepsi Mercedes Vito ile, şoförlü.",
+    "sameVehicleNote": "Dördü de aynı araçla yapılır: Mercedes Vito. Farklı olan yolculuğun biçimi, aracın kendisi değil.",
+    "u1Title": "Havalimanı Transferi",
+    "u1Desc": "Geliş kapısında karşılama, bagaj yardımı ve doğrudan otele transfer. Uçuşunuz takip edilir.",
+    "u1Meta": "IST · SAW · sabit fiyat",
+    "u2Title": "Şehir İçi Tur",
+    "u2Desc": "Arapça konuşan rehber eşliğinde gün boyu şehir turu; program sizin temponuza göre.",
+    "u2Meta": "Otelden alış · tam gün",
+    "u3Title": "Şehirlerarası Yolculuk",
+    "u3Desc": "Bursa, Sapanca, Yalova ve ötesi. Aynı araç ve aynı şoför gün boyu sizinle kalır.",
+    "u3Meta": "Tek araç · tek şoför",
+    "u4Title": "Emrinizde Araç",
+    "u4Desc": "Saatlik ya da tam gün. Araç ve şoför yalnızca size ayrılır, güzergâhı siz belirlersiniz.",
+    "u4Meta": "Saatlik · tam gün"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",
@@ -510,5 +526,11 @@
     "cities": "Kapsam",
     "packages": "Paketler",
     "reviews": "Yorumlar"
+  },
+  "routes": {
+    "title": "Hizmet verdiğimiz noktalar",
+    "subtitle": "Havalimanı transferlerinden Karadeniz yaylalarına; listede olmayan bir yer için yazmanız yeterli.",
+    "eyebrow": "Güzergâhlar",
+    "priceNote": "Fiyatlar araç başınadır, kişi başı değil. Kesin tutar tarihe ve kişi sayısına göre WhatsApp'tan netleşir."
   }
 }

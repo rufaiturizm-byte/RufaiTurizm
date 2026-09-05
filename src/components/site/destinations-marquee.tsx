@@ -40,7 +40,9 @@ export async function DestinationsMarquee() {
         >
           {tEyebrow("cities")}
         </div>
-        <span className="ms-auto text-[13.5px] text-white/55">{tPage("citiesSubtitle")}</span>
+        <span className="ms-auto hidden text-[13.5px] text-white/55 sm:block">
+          {tPage("citiesSubtitle")}
+        </span>
       </div>
 
       <div className="marquee-fade">

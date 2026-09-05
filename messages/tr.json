@@ -9,7 +9,8 @@
     "tours": "Turlar",
     "transfer": "Transfer",
     "about": "Hakkımızda",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "faq": "SSS"
   },
   "home": {
     "hero": {
@@ -410,6 +411,10 @@
       "name": "Lüks Sedan",
       "capacity": "1 – 3 kişi",
       "desc": "İş seyahatleri ve özel karşılamalar için."
-    }
+    },
+    "galleryTitle": "Araçtan kareler",
+    "interiorAlt": "Mercedes Vito arka koltuklar — deri döşeme",
+    "cockpitAlt": "Mercedes Vito sürücü bölümü",
+    "stockNote": "Görseller araç tipini temsil eder."
   }
 }

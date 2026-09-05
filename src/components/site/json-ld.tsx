@@ -38,7 +38,7 @@ export function TravelAgencySchema({
     telephone: siteConfig.phoneHref,
     email: siteConfig.email,
     priceRange: "€€",
-    image: `${siteConfig.url}/images/og.jpg`,
+    image: `${siteConfig.url}/images/hero-ortakoy.jpg`,
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.address.city,

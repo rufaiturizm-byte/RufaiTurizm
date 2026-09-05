@@ -9,7 +9,8 @@
     "tours": "Tours",
     "transfer": "Transfer",
     "about": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "faq": "FAQ"
   },
   "home": {
     "hero": {
@@ -410,6 +411,10 @@
       "name": "Luxury Sedan",
       "capacity": "1 – 3 passengers",
       "desc": "For business travel and private meet-and-greets."
-    }
+    },
+    "galleryTitle": "Inside the vehicle",
+    "interiorAlt": "Mercedes Vito rear seats with leather upholstery",
+    "cockpitAlt": "Mercedes Vito driver area",
+    "stockNote": "Photos represent the vehicle type."
   }
 }

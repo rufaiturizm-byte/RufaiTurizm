@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { alternatesFor } from "@/lib/metadata";
 import { PageHero } from "@/components/site/page-hero";
 import { FaqSchema } from "@/components/site/json-ld";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
@@ -23,7 +24,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "faq" });
 
-  return { title: t("title"), description: t("subtitle") };
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+    alternates: alternatesFor("/faq", locale),
+  };
 }
 
 export default async function FaqPage({

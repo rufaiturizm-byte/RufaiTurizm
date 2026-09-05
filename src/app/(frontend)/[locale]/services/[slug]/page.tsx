@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { alternatesFor } from "@/lib/metadata";
 import { TouristTripSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-boxes";
@@ -34,6 +35,7 @@ export async function generateMetadata({
     title: t(`${service.key}.title`),
     description: t(`${service.key}.description`),
     openGraph: { images: [service.image] },
+    alternates: alternatesFor({ pathname: "/services/[slug]", params: { slug } }, locale),
   };
 }
 
@@ -55,6 +57,7 @@ export default async function ServiceDetailPage({
   const tCommon = await getTranslations("common");
   const tTours = await getTranslations("tours");
   const tWhy = await getTranslations("whyUs");
+  const tFleet = await getTranslations("fleet");
 
   const name = t(`${service.key}.title`);
   const description = t(`${service.key}.description`);
@@ -116,6 +119,34 @@ export default async function ServiceDetailPage({
             <p className="text-[15.5px] leading-[1.9] text-foreground/85">
               {t(`${service.key}.long`)}
             </p>
+
+            {service.slug === "vito-vip" ? (
+              <div className="mt-8">
+                <h2 className="text-[19px] font-bold">{tFleet("galleryTitle")}</h2>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  {[
+                    { src: "/images/fleet/vito-interior.jpg", alt: tFleet("interiorAlt") },
+                    { src: "/images/fleet/vito-cockpit.jpg", alt: tFleet("cockpitAlt") },
+                  ].map((photo) => (
+                    <div
+                      key={photo.src}
+                      className="relative aspect-[4/3] overflow-hidden rounded-lg border"
+                    >
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-3 text-[12.5px] text-muted-foreground">
+                  {tFleet("stockNote")}
+                </p>
+              </div>
+            ) : null}
 
             <h2 className="mt-10 text-[19px] font-bold">{tPage("featuresTitle")}</h2>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2">

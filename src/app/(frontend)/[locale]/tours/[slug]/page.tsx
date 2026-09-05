@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowLeft, Check, Clock, Info, MapPin, MessageCircle, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { alternatesFor } from "@/lib/metadata";
 import { TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
@@ -30,6 +31,7 @@ export async function generateMetadata({
     title: t(`${tour.key}.name`),
     description: t(`${tour.key}.description`),
     openGraph: { images: [tour.image] },
+    alternates: alternatesFor({ pathname: "/tours/[slug]", params: { slug } }, locale),
   };
 }
 

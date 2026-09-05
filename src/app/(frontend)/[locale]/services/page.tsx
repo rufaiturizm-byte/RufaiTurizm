@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { alternatesFor } from "@/lib/metadata";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TransferForm } from "@/components/site/transfer-form";
@@ -21,7 +22,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "servicesPage" });
 
-  return { title: t("title"), description: t("subtitle") };
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+    alternates: alternatesFor("/services", locale),
+  };
 }
 
 export default async function ServicesPage({

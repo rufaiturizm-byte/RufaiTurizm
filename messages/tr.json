@@ -1,0 +1,92 @@
+{
+  "brand": {
+    "name": "Rufai Turizm",
+    "tagline": "Türkiye'de güvenilir seyahat ortağınız"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetlerimiz",
+    "tours": "Turlar",
+    "transfer": "Transfer",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Lisanslı seyahat acentesi",
+      "title": "Rufai Turizm ile Türkiye'yi Keşfedin",
+      "subtitle": "Vito VIP araç, havalimanı transferi, rehberli turlar, uçak bileti ve otel rezervasyonu. Arapça, Türkçe ve İngilizce hizmet.",
+      "cta": "WhatsApp'tan Hemen Yazın",
+      "ctaSecondary": "Hizmetlerimizi İnceleyin"
+    },
+    "stats": {
+      "guests": "Mutlu Misafir",
+      "years": "Yıllık Deneyim",
+      "tours": "Tur Programı",
+      "rating": "Müşteri Puanı"
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Konforlu bir Türkiye seyahati için ihtiyacınız olan her şey",
+    "vitoVip": {
+      "title": "Vito VIP Araç Hizmeti",
+      "description": "Şoförlü, son model Mercedes Vito. Bagajınızla birlikte 6 kişiye kadar konforlu ulaşım."
+    },
+    "transfer": {
+      "title": "Transfer ve Karşılama",
+      "description": "Havalimanı karşılama ve otel transferi. Sabit fiyat, uçuş takibi ve bagaj yardımı dahil."
+    },
+    "tours": {
+      "title": "Tur Hizmeti",
+      "description": "Arapça rehber eşliğinde günlük turlar ve özel tur programları."
+    },
+    "flightHotel": {
+      "title": "Uçak Bileti ve Otel Rezervasyonu",
+      "description": "Uygun fiyatlı uçak bileti ve aileye uygun otel seçenekleriyle rezervasyon."
+    }
+  },
+  "tours": {
+    "title": "Tur Destinasyonlarımız",
+    "subtitle": "Türkiye'nin en sevilen şehirlerinde rehberli turlar",
+    "from": "Başlangıç fiyatı",
+    "istanbul": {
+      "name": "İstanbul Turu",
+      "description": "Sultanahmet, Ayasofya, Kapalıçarşı ve Boğaz turu."
+    },
+    "bursa": {
+      "name": "Bursa Turu",
+      "description": "Uludağ teleferik, Ulu Cami ve Cumalıkızık köyü."
+    },
+    "sapanca": {
+      "name": "Sapanca Turu",
+      "description": "Sapanca Gölü, Maşukiye şelaleleri ve doğa yürüyüşü."
+    },
+    "trabzon": {
+      "name": "Trabzon Turu",
+      "description": "Uzungöl, Sümela Manastırı ve Karadeniz yaylaları."
+    },
+    "bodrum": {
+      "name": "Bodrum Turu",
+      "description": "Bodrum Kalesi, turkuaz koylar ve tekne turu."
+    }
+  },
+  "whyUs": {
+    "title": "Neden Rufai Turizm?",
+    "arabicSupport": { "title": "Arapça Konuşan Ekip", "description": "Kendi dilinizde, her zaman ulaşılabilir." },
+    "fixedPrice": { "title": "Sabit ve Şeffaf Fiyat", "description": "Gizli ücret yok, sürpriz yok." },
+    "family": { "title": "Aileye Uygun Programlar", "description": "Mahremiyet ve konfor önceliğimiz." },
+    "support": { "title": "7/24 Destek", "description": "Seyahat öncesi, sırası ve sonrasında yanınızdayız." }
+  },
+  "cta": {
+    "whatsapp": "WhatsApp'tan Yazın",
+    "whatsappMessage": "Merhaba Rufai Turizm, bilgi almak istiyorum:",
+    "call": "Bizi Arayın",
+    "bookNow": "Hemen Rezervasyon"
+  },
+  "common": {
+    "language": "Dil",
+    "readMore": "Devamını Oku",
+    "allRights": "Tüm hakları saklıdır"
+  }
+}

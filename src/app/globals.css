@@ -166,3 +166,11 @@
     @apply font-sans;
   }
 }
+/* Yazı tipi: Latin dillerde Geist, Arapçada IBM Plex Sans Arabic. */
+body {
+  font-family: var(--font-latin), ui-sans-serif, system-ui, sans-serif;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-arabic), ui-sans-serif, system-ui, sans-serif;
+}

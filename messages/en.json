@@ -1,0 +1,92 @@
+{
+  "brand": {
+    "name": "Rufai Tourism",
+    "tagline": "Your trusted travel partner in Türkiye"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "tours": "Tours",
+    "transfer": "Transfer",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Licensed travel agency",
+      "title": "Discover Türkiye with Rufai Tourism",
+      "subtitle": "Vito VIP vehicles, airport transfers, guided tours, flight tickets and hotel bookings. Service in Arabic, Turkish and English.",
+      "cta": "Message Us on WhatsApp",
+      "ctaSecondary": "Explore Our Services"
+    },
+    "stats": {
+      "guests": "Happy Guests",
+      "years": "Years of Experience",
+      "tours": "Tour Programs",
+      "rating": "Customer Rating"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Everything you need for a comfortable trip in Türkiye",
+    "vitoVip": {
+      "title": "Vito VIP Vehicle Service",
+      "description": "Late-model Mercedes Vito with a private chauffeur. Comfortable travel for up to 6 passengers with luggage."
+    },
+    "transfer": {
+      "title": "Transfer & Meet and Greet",
+      "description": "Airport pickup and hotel transfer at a fixed price, including flight tracking and luggage assistance."
+    },
+    "tours": {
+      "title": "Guided Tours",
+      "description": "Daily tours and private tour programs with an Arabic-speaking guide."
+    },
+    "flightHotel": {
+      "title": "Flight & Hotel Booking",
+      "description": "Affordable flight tickets and family-friendly hotel options."
+    }
+  },
+  "tours": {
+    "title": "Tour Destinations",
+    "subtitle": "Guided tours in Türkiye's most loved cities",
+    "from": "Starting from",
+    "istanbul": {
+      "name": "Istanbul Tour",
+      "description": "Blue Mosque, Hagia Sophia, Grand Bazaar and a Bosphorus cruise."
+    },
+    "bursa": {
+      "name": "Bursa Tour",
+      "description": "Uludağ cable car, Grand Mosque and Cumalıkızık village."
+    },
+    "sapanca": {
+      "name": "Sapanca Tour",
+      "description": "Lake Sapanca, Maşukiye waterfalls and nature walks."
+    },
+    "trabzon": {
+      "name": "Trabzon Tour",
+      "description": "Uzungöl, Sumela Monastery and the Black Sea highlands."
+    },
+    "bodrum": {
+      "name": "Bodrum Tour",
+      "description": "Bodrum Castle, turquoise bays and boat trips."
+    }
+  },
+  "whyUs": {
+    "title": "Why Rufai Tourism?",
+    "arabicSupport": { "title": "Arabic-Speaking Team", "description": "Reach us in your own language, anytime." },
+    "fixedPrice": { "title": "Fixed, Transparent Pricing", "description": "No hidden fees, no surprises." },
+    "family": { "title": "Family-Friendly Programs", "description": "Privacy and comfort come first." },
+    "support": { "title": "24/7 Support", "description": "With you before, during and after your trip." }
+  },
+  "cta": {
+    "whatsapp": "Message on WhatsApp",
+    "whatsappMessage": "Hello Rufai Tourism, I would like information about:",
+    "call": "Call Us",
+    "bookNow": "Book Now"
+  },
+  "common": {
+    "language": "Language",
+    "readMore": "Read More",
+    "allRights": "All rights reserved"
+  }
+}

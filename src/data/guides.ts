@@ -470,6 +470,298 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "istanbulda-bir-hafta-aile-programi",
+    image: "/images/places/galata.jpg",
+    minutes: 6,
+    title: {
+      tr: "İstanbul'da bir hafta: aileler için gün gün program",
+      ar: "أسبوع في إسطنبول: برنامج يومي للعائلات",
+      en: "A week in Istanbul: a day-by-day family plan",
+    },
+    excerpt: {
+      tr: "Yedi günü yormadan bölmenin yolu: hangi gün nerede, ne kadar yürüyüş, nerede mola.",
+      ar: "كيف تقسّم سبعة أيام دون إرهاق: أين تذهب كل يوم، كم تمشي، وأين تستريح.",
+      en: "How to split seven days without exhaustion: where each day, how much walking, where to rest.",
+    },
+    facts: [
+      {
+        label: { tr: "Süre", ar: "المدة", en: "Length" },
+        value: { tr: "7 gün", ar: "7 أيام", en: "7 days" },
+      },
+      {
+        label: { tr: "Tempo", ar: "الإيقاع", en: "Pace" },
+        value: { tr: "Günde tek ana bölge", ar: "منطقة رئيسية واحدة يومياً", en: "One main district a day" },
+      },
+      {
+        label: { tr: "Şehir dışı", ar: "خارج المدينة", en: "Out of town" },
+        value: { tr: "İki günübirlik", ar: "رحلتان ليوم واحد", en: "Two day trips" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "İlk iki gün: tarihî yarımada",
+          ar: "اليومان الأولان: شبه الجزيرة التاريخية",
+          en: "The first two days: the historic peninsula",
+        },
+        body: {
+          tr: "Sultanahmet Camii, Ayasofya ve Topkapı Sarayı birbirine yürüme mesafesindedir ama üçünü bir güne sıkıştırmak çocuklu bir aile için yorucudur. İlk gün camiler ve Yerebatan Sarnıcı, ikinci gün Topkapı ve Kapalıçarşı iyi bir bölünmedir. Sabah erken başlamak kuyrukları belirgin şekilde kısaltır.",
+          ar: "جامع السلطان أحمد وآيا صوفيا وقصر توبكابي على مسافة سير من بعضها، لكن حشرها في يوم واحد مُتعب لعائلة مع أطفال. اليوم الأول للمساجد وصهريج البازيليك، والثاني لتوبكابي والبازار المسقوف — تقسيم جيد. والبدء صباحاً باكراً يقصّر الطوابير بوضوح.",
+          en: "The Blue Mosque, Hagia Sophia and Topkapi Palace are within walking distance of one another, but squeezing all three into one day is tiring with children. Mosques and the Basilica Cistern on day one, Topkapi and the Grand Bazaar on day two is a good split. Starting early noticeably shortens the queues.",
+        },
+        image: "/images/places/sultanahmet.jpg",
+        imageAlt: {
+          tr: "Sultanahmet Camii",
+          ar: "جامع السلطان أحمد",
+          en: "The Blue Mosque",
+        },
+      },
+      {
+        heading: {
+          tr: "Üçüncü gün: Boğaz ve Beyoğlu",
+          ar: "اليوم الثالث: البوسفور وبيوغلو",
+          en: "Day three: the Bosphorus and Beyoglu",
+        },
+        body: {
+          tr: "Boğaz turu şehri denizden görmenin en kolay yoludur ve çocuklar için günün en sevilen kısmı olur. Karaya çıktıktan sonra Galata Kulesi ve Karaköy tarafı yürüyerek gezilebilir. Bu gün çok yürüyüş içerdiği için ertesi güne sakin bir program koymak iyi olur.",
+          ar: "جولة البوسفور أسهل طريقة لرؤية المدينة من البحر، وغالباً ما تكون أحبّ جزء لدى الأطفال. وبعد النزول يمكن التجوّل سيراً في برج غالاتا وجهة كاراكوي. هذا اليوم يتضمّن مشياً كثيراً، لذا من الأفضل وضع برنامج هادئ لليوم التالي.",
+          en: "A Bosphorus cruise is the easiest way to see the city from the water and is usually the children's favourite part of the day. After landing, Galata Tower and the Karakoy side are walkable. This day involves a lot of walking, so plan something calmer for the next one.",
+        },
+      },
+      {
+        heading: {
+          tr: "Dört ve beşinci gün: şehir dışı",
+          ar: "اليومان الرابع والخامس: خارج المدينة",
+          en: "Days four and five: out of town",
+        },
+        body: {
+          tr: "Sapanca ve Bursa, İstanbul'dan günübirlik gidilebilecek iki farklı yön. Sapanca göl ve orman, Bursa tarih ve teleferik demektir. İkisi arasında seçim yaparken çocukların yaşını düşünün: Sapanca daha az yürüyüş, Bursa daha çok gezi noktası içerir.",
+          ar: "سبانجا وبورصة وجهتان مختلفتان يمكن زيارتهما من إسطنبول في يوم واحد. سبانجا تعني البحيرة والغابة، وبورصة تعني التاريخ والتلفريك. وعند الاختيار بينهما انظر إلى أعمار الأطفال: سبانجا مشي أقل، وبورصة محطات زيارة أكثر.",
+          en: "Sapanca and Bursa are two different directions for a day trip from Istanbul. Sapanca means lake and forest; Bursa means history and a cable car. Choosing between them, consider the children's ages: Sapanca involves less walking, Bursa more stops.",
+        },
+        image: "/images/tours/bursa.jpg",
+        imageAlt: {
+          tr: "Bursa'da Osmanlı dönemi yapıları",
+          ar: "مبانٍ من العهد العثماني في بورصة",
+          en: "Ottoman-era buildings in Bursa",
+        },
+      },
+      {
+        heading: {
+          tr: "Son iki gün: alışveriş ve serbest zaman",
+          ar: "اليومان الأخيران: التسوّق ووقت حر",
+          en: "The last two days: shopping and free time",
+        },
+        body: {
+          tr: "Programın sonuna serbest gün bırakmak, kaçırılan bir yeri telafi etmek ya da sadece dinlenmek için alan açar. Nişantaşı ve Bağdat Caddesi alışveriş için iki farklı yakada iki iyi seçenek. Dönüş uçuşundan önceki günü hafif tutmak, bavul toplama ve havalimanı yolculuğu için gereken payı bırakır.",
+          ar: "ترك يوم حرّ في نهاية البرنامج يفتح مجالاً لتعويض مكان فاتك أو للراحة فقط. نيشانتاشي وشارع بغداد خياران جيدان للتسوّق في جانبين مختلفين. وإبقاء اليوم السابق لرحلة العودة خفيفاً يترك هامشاً لحزم الحقائب والطريق إلى المطار.",
+          en: "Leaving a free day at the end creates room to make up for something you missed, or simply to rest. Nisantasi and Bagdat Street are two good shopping options on two different sides. Keeping the day before your return flight light leaves margin for packing and the trip to the airport.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "arapca-konusan-sofor-ve-rehber",
+    image: "/images/chauffeur.jpg",
+    minutes: 3,
+    title: {
+      tr: "Türkiye'de Arapça konuşan şoför ve rehber neden fark yaratır?",
+      ar: "لماذا يُحدث السائق والمرشد الناطق بالعربية فرقاً في تركيا؟",
+      en: "Why an Arabic-speaking driver and guide changes the trip",
+    },
+    excerpt: {
+      tr: "Dil, seyahatin konforunu fiyattan sonra en çok belirleyen etken. Nerede işe yarar, nerede yaramaz.",
+      ar: "اللغة هي العامل الأهم بعد السعر في راحة الرحلة. أين تنفع وأين لا تكفي.",
+      en: "After price, language shapes the trip more than anything. Where it helps, and where it does not.",
+    },
+    facts: [
+      {
+        label: { tr: "Konuşulan diller", ar: "اللغات", en: "Languages" },
+        value: { tr: "Arapça, Türkçe, İngilizce", ar: "العربية والتركية والإنجليزية", en: "Arabic, Turkish, English" },
+      },
+      {
+        label: { tr: "En çok işe yaradığı yer", ar: "الأكثر فائدة", en: "Most useful" },
+        value: { tr: "Karşılama ve alışveriş", ar: "الاستقبال والتسوّق", en: "Meet-and-greet and shopping" },
+      },
+      {
+        label: { tr: "Rehberlik", ar: "الإرشاد", en: "Guiding" },
+        value: { tr: "Tur programlarında", ar: "في البرامج السياحية", en: "On tour programmes" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "İlk saat en kritik saat",
+          ar: "الساعة الأولى هي الأهم",
+          en: "The first hour matters most",
+        },
+        body: {
+          tr: "Havalimanına indiğiniz ilk saatte yorgunsunuz, bavullar elinizde ve şehri tanımıyorsunuz. Şoförün dilinizi konuşması bu saatte bir konfor değil, doğrudan işleyen bir çözümdür: otelin adını tarif etmek, bir eczaneye uğramak ya da çocuk için mola istemek tercüme gerektirmeden hallolur.",
+          ar: "في الساعة الأولى بعد الهبوط تكون متعباً، والحقائب بيدك، والمدينة غير مألوفة. حديث السائق بلغتك في هذه الساعة ليس رفاهية بل حلّ عملي مباشر: وصف اسم الفندق، أو المرور بصيدلية، أو طلب استراحة للطفل — كلها تُقضى دون ترجمة.",
+          en: "In the first hour after landing you are tired, holding luggage and unfamiliar with the city. A driver who speaks your language is not a luxury at that hour but a working solution: naming your hotel, stopping at a pharmacy or asking for a break for a child all happen without translation.",
+        },
+      },
+      {
+        heading: {
+          tr: "Rehberlik ile şoförlük aynı şey değil",
+          ar: "الإرشاد ليس هو القيادة",
+          en: "Guiding and driving are not the same",
+        },
+        body: {
+          tr: "Arapça konuşan bir şoför yol boyunca iletişimi çözer; gezdiğiniz yerin tarihini anlatmak ise rehberin işidir. Turlarda bu ikisi ayrılır: rehber programın içeriğinden, şoför ulaşımdan sorumludur. Transferlerde rehbere gerek yoktur, tur programlarında ise fark burada ortaya çıkar.",
+          ar: "السائق الناطق بالعربية يحلّ التواصل طوال الطريق؛ أما سرد تاريخ المكان فهو عمل المرشد. في الجولات ينفصل الدوران: المرشد مسؤول عن محتوى البرنامج والسائق عن التنقّل. في خدمات النقل لا حاجة لمرشد، أما في البرامج السياحية فهنا يظهر الفرق.",
+          en: "An Arabic-speaking driver solves communication on the road; explaining the history of a place is the guide's job. On tours the two roles separate: the guide handles the content, the driver the transport. Transfers need no guide; on tour programmes this is where the difference shows.",
+        },
+      },
+      {
+        heading: {
+          tr: "Namaz, yemek ve tempo",
+          ar: "الصلاة والطعام والإيقاع",
+          en: "Prayer, food and pace",
+        },
+        body: {
+          tr: "Dil, programın içeriğini de değiştirir. Namaz vakitlerinde güzergâh üzerindeki camilerde mola vermek, helal seçenek sunan restoranlara yönlendirmek ve çocukların temposuna göre programı esnetmek, bunları söylemeye gerek kalmadan anlayan bir ekiple çok daha kolaydır.",
+          ar: "اللغة تغيّر محتوى البرنامج أيضاً. التوقّف عند مساجد على الطريق في أوقات الصلاة، والتوجيه إلى مطاعم توفّر خيارات حلال، وتعديل البرنامج حسب إيقاع الأطفال — كل ذلك أسهل بكثير مع فريق يفهمها دون أن تُقال.",
+          en: "Language also changes what goes into the programme. Stopping at mosques along the route at prayer times, pointing you to restaurants with halal options and flexing the plan around the children's pace are all far easier with a team that understands without being told.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "bursa-uludag-gunubirlik",
+    image: "/images/tours/bursa.jpg",
+    minutes: 4,
+    title: {
+      tr: "Bursa ve Uludağ: İstanbul'dan günübirlik rehber",
+      ar: "بورصة وأولوداغ: دليل رحلة يوم واحد من إسطنبول",
+      en: "Bursa and Uludag: a day-trip guide from Istanbul",
+    },
+    excerpt: {
+      tr: "Osmanlı'nın ilk başkenti, teleferik ve UNESCO köyü — bir güne ne sığar, ne sığmaz.",
+      ar: "أول عاصمة عثمانية، والتلفريك، وقرية اليونسكو — ما الذي يتّسع له اليوم وما لا يتّسع.",
+      en: "The first Ottoman capital, a cable car and a UNESCO village — what fits into a day and what does not.",
+    },
+    facts: [
+      {
+        label: { tr: "Mesafe", ar: "المسافة", en: "Distance" },
+        value: { tr: "Feribotla ~2,5 saat", ar: "نحو ساعتين ونصف بالعبّارة", en: "About 2.5 hrs by ferry" },
+      },
+      {
+        label: { tr: "Ana duraklar", ar: "المحطات الرئيسية", en: "Main stops" },
+        value: { tr: "Uludağ, Ulu Cami, Cumalıkızık", ar: "أولوداغ، الجامع الكبير، جوما لي كيزيك", en: "Uludag, Ulu Mosque, Cumalikizik" },
+      },
+      {
+        label: { tr: "Kar mevsimi", ar: "موسم الثلج", en: "Snow season" },
+        value: { tr: "Aralık – mart", ar: "ديسمبر – مارس", en: "December – March" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Yol: feribot mu karayolu mu",
+          ar: "الطريق: عبّارة أم برّاً",
+          en: "The route: ferry or road",
+        },
+        body: {
+          tr: "Bursa'ya İstanbul'dan iki şekilde gidilir: Marmara'yı feribotla geçerek ya da Osmangazi Köprüsü üzerinden karayoluyla. Feribot yolculuğun bir kısmını denizde geçirir ve çocuklar için daha keyiflidir; karayolu ise saat konusunda daha esnektir. Her iki durumda da sabah erken çıkmak günün içine bir durak daha sığdırır.",
+          ar: "يُوصل إلى بورصة من إسطنبول بطريقتين: عبور بحر مرمرة بالعبّارة، أو برّاً عبر جسر عثمان غازي. العبّارة تجعل جزءاً من الرحلة في البحر وهي أمتع للأطفال؛ أما الطريق البرّي فأكثر مرونة في التوقيت. وفي الحالتين، الانطلاق صباحاً باكراً يضيف محطة إضافية إلى اليوم.",
+          en: "There are two ways to Bursa from Istanbul: crossing the Marmara by ferry, or driving over the Osmangazi Bridge. The ferry puts part of the journey on the water and is more fun for children; the road is more flexible on timing. Either way, an early start fits one more stop into the day.",
+        },
+      },
+      {
+        heading: {
+          tr: "Uludağ ve teleferik",
+          ar: "أولوداغ والتلفريك",
+          en: "Uludag and the cable car",
+        },
+        body: {
+          tr: "Uludağ'a teleferikle çıkmak turun en çok beğenilen kısmıdır ve yolculuk yaklaşık yarım saat sürer. Zirvede hava şehirden belirgin şekilde soğuktur; yaz aylarında bile ince bir mont işe yarar. Kış aylarında kar manzarası için gidilir ama teleferik hava koşullarına göre kapanabilir, bu yüzden programı esnek tutmak gerekir.",
+          ar: "الصعود إلى أولوداغ بالتلفريك هو أكثر أجزاء الجولة إعجاباً، والرحلة تستغرق نحو نصف ساعة. الجو في القمة أبرد بوضوح من المدينة؛ وحتى في الصيف يفيد معطف خفيف. وفي الشتاء يُقصد لمناظر الثلج، لكن التلفريك قد يُغلق حسب الأحوال الجوية، لذا يجب إبقاء البرنامج مرناً.",
+          en: "Riding the cable car up Uludag is the most popular part of the trip and takes about half an hour. It is noticeably colder at the top than in the city; even in summer a light jacket helps. In winter people come for the snow, but the cable car can close in bad weather, so keep the plan flexible.",
+        },
+      },
+      {
+        heading: {
+          tr: "Şehirde: Ulu Cami, Koza Han ve Cumalıkızık",
+          ar: "في المدينة: الجامع الكبير وخان الحرير وجوما لي كيزيك",
+          en: "In town: the Ulu Mosque, Koza Han and Cumalikizik",
+        },
+        body: {
+          tr: "Ulu Cami ve yanındaki Koza Han, Bursa'nın ipek ticareti geçmişini bir arada gösterir. Yeşil Türbe kısa bir sürüşle ulaşılabilir. Gün, UNESCO listesindeki Cumalıkızık köyünde kahvaltı ya da çay molasıyla kapanır; taş sokakları dar ve eğimlidir, rahat ayakkabı gerekir.",
+          ar: "الجامع الكبير وخان الحرير المجاور له يظهران معاً ماضي بورصة في تجارة الحرير. والتربة الخضراء تُبلغ بقيادة قصيرة. ويُختتم اليوم باستراحة فطور أو شاي في قرية جوما لي كيزيك المدرجة في اليونسكو؛ وأزقتها الحجرية ضيقة ومائلة، فيلزم حذاء مريح.",
+          en: "The Ulu Mosque and the adjoining Koza Han show Bursa's silk-trading past together. The Green Tomb is a short drive away. The day closes with breakfast or tea in Cumalikizik, a UNESCO-listed village; its stone lanes are narrow and sloping, so comfortable shoes matter.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "turkiyede-alisveris-rehberi",
+    image: "/images/tours/istanbul.jpg",
+    minutes: 4,
+    title: {
+      tr: "İstanbul'da alışveriş: çarşılar, caddeler ve merkezler",
+      ar: "التسوّق في إسطنبول: البازارات والشوارع والمولات",
+      en: "Shopping in Istanbul: bazaars, streets and malls",
+    },
+    excerpt: {
+      tr: "Kapalıçarşı mı, Nişantaşı mı, AVM mi — ne nerede alınır ve pazarlık nerede geçerli.",
+      ar: "البازار المسقوف أم نيشانتاشي أم المولات — ماذا يُشترى من أين، وأين تنفع المساومة.",
+      en: "Grand Bazaar, Nisantasi or a mall — what to buy where, and where haggling still applies.",
+    },
+    facts: [
+      {
+        label: { tr: "Tarihî çarşılar", ar: "البازارات التاريخية", en: "Historic bazaars" },
+        value: { tr: "Kapalıçarşı, Mısır Çarşısı", ar: "البازار المسقوف، بازار التوابل", en: "Grand Bazaar, Spice Bazaar" },
+      },
+      {
+        label: { tr: "Marka caddeleri", ar: "شوارع الماركات", en: "Brand streets" },
+        value: { tr: "Nişantaşı, Bağdat Caddesi", ar: "نيشانتاشي، شارع بغداد", en: "Nisantasi, Bagdat Street" },
+      },
+      {
+        label: { tr: "Pazarlık", ar: "المساومة", en: "Haggling" },
+        value: { tr: "Çarşılarda geçerli", ar: "تنفع في البازارات", en: "Applies in the bazaars" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Kapalıçarşı ve Mısır Çarşısı",
+          ar: "البازار المسقوف وبازار التوابل",
+          en: "The Grand Bazaar and the Spice Bazaar",
+        },
+        body: {
+          tr: "Kapalıçarşı halı, takı, seramik ve deri için; Mısır Çarşısı baharat, lokum ve kuruyemiş için gidilen yerdir. İkisi de tarihî yarımadada ve birbirine yürüme mesafesinde. Çarşılarda etiket fiyatı çoğu zaman başlangıç noktasıdır; kibarca pazarlık beklenen bir davranıştır.",
+          ar: "البازار المسقوف للسجاد والمجوهرات والسيراميك والجلد؛ وبازار التوابل للبهارات والملبن والمكسّرات. كلاهما في شبه الجزيرة التاريخية وعلى مسافة سير من بعضهما. وفي البازارات يكون السعر المعلن نقطة بداية غالباً؛ والمساومة بلطف سلوك متوقّع.",
+          en: "The Grand Bazaar is for carpets, jewellery, ceramics and leather; the Spice Bazaar for spices, Turkish delight and nuts. Both are on the historic peninsula, within walking distance of each other. In the bazaars the marked price is usually a starting point; polite haggling is expected.",
+        },
+      },
+      {
+        heading: {
+          tr: "Caddeler ve alışveriş merkezleri",
+          ar: "الشوارع والمولات",
+          en: "Streets and malls",
+        },
+        body: {
+          tr: "Nişantaşı Avrupa yakasında, Bağdat Caddesi Anadolu yakasında marka alışverişinin merkezidir. Alışveriş merkezlerinde fiyat sabittir, pazarlık yoktur ve kapalı alan olduğu için hava koşullarından etkilenmezsiniz. Çocuklu ailelerin yaz sıcağında ya da yağmurlu bir günde tercih ettiği yer genelde burasıdır.",
+          ar: "نيشانتاشي في الجانب الأوروبي وشارع بغداد في الجانب الآسيوي هما مركزا التسوّق للماركات. وفي المولات السعر ثابت ولا مساومة، وكونها مغلقة يعني ألّا تتأثر بالطقس. وغالباً ما تفضّلها العائلات مع الأطفال في حرّ الصيف أو في يوم ممطر.",
+          en: "Nisantasi on the European side and Bagdat Street on the Asian side are the centres of brand shopping. In malls prices are fixed, there is no haggling, and being indoors keeps you clear of the weather. Families with children usually pick these in summer heat or on a rainy day.",
+        },
+      },
+      {
+        heading: {
+          tr: "Taşıma ve bagaj",
+          ar: "الحمل والحقائب",
+          en: "Carrying it home",
+        },
+        body: {
+          tr: "Alışveriş günü sonunda elde taşınacak paket sayısı çoğu zaman tahmin edilenden fazla olur. Aracın gün boyu emrinizde olması bu noktada işe yarar: paketleri araca bırakıp gezmeye devam edebilirsiniz. Halı gibi büyük alımlarda satıcılar kargo düzenler; ülkeye giriş kurallarını önceden öğrenmek gerekir.",
+          ar: "في نهاية يوم التسوّق يكون عدد الأكياس أكثر مما يُتوقّع عادةً. وهنا تفيد السيارة الموضوعة تحت تصرّفك طوال اليوم: تترك الأكياس فيها وتواصل التجوّل. وفي المشتريات الكبيرة كالسجاد ينظّم البائعون الشحن؛ ومن اللازم معرفة قواعد الإدخال إلى بلدك مسبقاً.",
+          en: "By the end of a shopping day there are usually more bags than expected. This is where having the car at your disposal helps: leave the bags in it and carry on. For large purchases such as carpets, sellers arrange shipping; check your own country's import rules in advance.",
+        },
+      },
+    ],
+  },
 ];
 
 export function guideBySlug(slug: string) {

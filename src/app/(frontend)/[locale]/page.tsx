@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Users, Star, Building2, ShieldCheck, ArrowLeft } from "lucide-react";
+import { Users, Star, Building2, ShieldCheck, ArrowLeft, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { SearchBar } from "@/components/site/search-bar";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { TravelAgencySchema, WebSiteSchema } from "@/components/site/json-ld";
 import { tours } from "@/data/tours";
@@ -73,8 +72,21 @@ export default async function HomePage({
               {t("hero.subtitle")}
             </p>
 
-            <div className="mt-10">
-              <SearchBar />
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <WhatsAppLink
+                className="inline-flex items-center gap-2.5 rounded-md px-7 py-4 text-[15px] font-bold transition-opacity hover:opacity-90"
+                style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
+              >
+                <MessageCircle className="size-[19px]" aria-hidden="true" />
+                {tCta("whatsapp")}
+              </WhatsAppLink>
+              <Link
+                href="/tours"
+                className="inline-flex items-center gap-2 rounded-md border border-white/35 px-7 py-4 text-[15px] font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
+              >
+                {tHome2("allToursCta")}
+                <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </section>

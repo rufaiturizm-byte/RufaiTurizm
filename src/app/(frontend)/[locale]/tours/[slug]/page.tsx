@@ -50,6 +50,7 @@ export default async function TourDetailPage({
   const t = await getTranslations("tours");
   const tPage = await getTranslations("toursPage");
   const tNav = await getTranslations("nav");
+  const tEyebrow = await getTranslations("eyebrow");
   const tCta = await getTranslations("cta");
   const tCommon = await getTranslations("common");
   const tIncluded = await getTranslations("included");
@@ -232,7 +233,7 @@ export default async function TourDetailPage({
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
-        <SectionHeading title={tPage("title")} subtitle={tPage("subtitle")} />
+        <SectionHeading eyebrow={tEyebrow("tours")} title={tPage("title")} subtitle={tPage("subtitle")} />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {others.map((item) => (
             <TourCard key={item.key} tour={item} />

@@ -20,12 +20,13 @@ export async function PackagesSection({ locale }: { locale: string }) {
   const tCommon = await getTranslations("common");
   const tTours = await getTranslations("tours");
   const tCta = await getTranslations("cta");
+  const tEyebrow = await getTranslations("eyebrow");
 
   const lang = locale as Locale;
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
-      <SectionHeading title={t("title")} subtitle={t("subtitle")} />
+      <SectionHeading eyebrow={tEyebrow("packages")} title={t("title")} subtitle={t("subtitle")} />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {packages.map((item) => {

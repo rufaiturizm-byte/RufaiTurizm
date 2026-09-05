@@ -1,16 +1,21 @@
 import type { ReactNode } from "react";
 
 /**
- * Bölüm başlığı kalıbı: solda altın dikey çubuk, başlık, altında tek satır
- * açıklama, sağ uçta isteğe bağlı bağlantı. Rakiplerin her iki sitesinde de
- * aynı kalıp kullanılıyor (rakip analizi, madde 14).
+ * Bölüm başlığı.
+ *
+ * Önceki hali her bölümde aynı kalıbı tekrarlıyordu: soldaki altın çubuk +
+ * başlık + alt başlık. Sekiz bölüm art arda gelince sayfa şablon gibi
+ * okunuyordu. Şimdiki düzen editoryal: üstte küçük harf aralıklı etiket,
+ * altında büyük ve sıkı başlık, sağda ince bir çizgiyle ayrılan eylem.
  */
 export function SectionHeading({
+  eyebrow,
   title,
   subtitle,
   action,
   tone = "light",
 }: {
+  eyebrow?: string;
   title: string;
   subtitle?: string;
   action?: ReactNode;
@@ -19,29 +24,48 @@ export function SectionHeading({
   const dark = tone === "dark";
 
   return (
-    <div className="mb-7 flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
-      <div className="flex gap-3.5">
-        <span
-          className="w-1 shrink-0 rounded-sm"
-          style={{ background: "var(--brand-gold)" }}
-          aria-hidden="true"
-        />
-        <div>
+    <div className="mb-9">
+      <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
+        <div className="max-w-2xl">
+          {eyebrow ? (
+            <div
+              className="mb-3.5 text-[11px] font-extrabold uppercase tracking-[0.22em]"
+              style={{ color: "var(--brand-gold-deep)" }}
+            >
+              {eyebrow}
+            </div>
+          ) : null}
+
           <h2
-            className={`text-[26px] font-bold sm:text-[30px] ${dark ? "text-white" : ""}`}
+            className={`text-[30px] font-bold leading-[1.15] tracking-[-0.015em] sm:text-[38px] ${
+              dark ? "text-white" : ""
+            }`}
           >
             {title}
           </h2>
+
           {subtitle ? (
             <p
-              className={`mt-2 text-[14.5px] ${dark ? "text-white/65" : "text-muted-foreground"}`}
+              className={`mt-3.5 text-[15px] leading-[1.75] ${
+                dark ? "text-white/60" : "text-muted-foreground"
+              }`}
             >
               {subtitle}
             </p>
           ) : null}
         </div>
+
+        {action}
       </div>
-      {action}
+
+      <div
+        className="mt-7 h-px w-full"
+        style={{
+          background: dark
+            ? "color-mix(in oklab, white 16%, transparent)"
+            : "color-mix(in oklab, var(--brand-night) 12%, transparent)",
+        }}
+      />
     </div>
   );
 }

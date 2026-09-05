@@ -471,5 +471,17 @@
       "Trabzon",
       "Bodrum"
     ]
+  },
+  "eyebrow": {
+    "services": "Services",
+    "tours": "Tours",
+    "why": "Why us",
+    "faq": "Questions",
+    "fleet": "Vehicle",
+    "process": "Process",
+    "transfer": "Transfer",
+    "cities": "Coverage",
+    "packages": "Packages",
+    "reviews": "Reviews"
   }
 }

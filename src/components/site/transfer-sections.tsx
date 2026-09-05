@@ -1,19 +1,12 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import {
+  Check,
   CheckCircle2,
-  Clock,
   Luggage,
   MapPin,
   MessageCircle,
-  PlaneLanding,
-  PlaneTakeoff,
-  Route,
-  ShieldCheck,
   Users,
-  Baby,
-  Languages,
-  UserRoundX,
 } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { WhatsAppLink } from "./whatsapp-cta";
@@ -21,35 +14,41 @@ import { WhatsAppLink } from "./whatsapp-cta";
 /**
  * Transfer sayfasının bölümleri.
  *
- * Düzen rakip (seentravels/tr/transfer) sayfasından alındı: hizmet tipleri →
- * araç kartları (görsel, kapasite, valiz, rozet ve her kartın altında
- * WhatsApp düğmesi) → neden biz → üç adım → kapsanan noktalar.
+ * Akış rakip (seentravels/tr/transfer) sayfasından alındı: hizmet tipleri →
+ * araç → neden biz → üç adım → kapsanan noktalar. Görsel dil bize ait:
+ * bölümler çerçeveli kart ızgarası değil, ince çizgi ve büyük rakamla
+ * kuruluyor — sekiz bölüm üst üste aynı kutuya girince sayfa şablon gibi
+ * okunuyordu.
  */
 
 export async function TransferTypes() {
   const t = await getTranslations("transferPage");
+  const tEyebrow = await getTranslations("eyebrow");
 
-  const types = [
-    { icon: PlaneLanding, n: "1" },
-    { icon: PlaneTakeoff, n: "2" },
-    { icon: Route, n: "3" },
-    { icon: Clock, n: "4" },
-  ] as const;
+  const types = ["1", "2", "3", "4"] as const;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
-      <SectionHeading title={t("typesTitle")} subtitle={t("typesSubtitle")} />
+    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+      <SectionHeading
+        eyebrow={tEyebrow("transfer")}
+        title={t("typesTitle")}
+        subtitle={t("typesSubtitle")}
+      />
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {types.map(({ icon: Icon, n }) => (
-          <div key={n} className="rounded-lg border bg-card p-6">
-            <Icon
-              className="size-7"
-              style={{ color: "var(--brand-gold-deep)" }}
-              aria-hidden="true"
-            />
-            <h3 className="mt-4 text-[15.5px] font-bold">{t(`type${n}Title`)}</h3>
-            <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
+      <div className="grid gap-x-12 sm:grid-cols-2">
+        {types.map((n, index) => (
+          <div
+            key={n}
+            className="py-7"
+            style={{
+              borderTop:
+                index > 1
+                  ? "1px solid color-mix(in oklab, var(--brand-night) 12%, transparent)"
+                  : undefined,
+            }}
+          >
+            <h3 className="text-[18px] font-bold tracking-[-0.01em]">{t(`type${n}Title`)}</h3>
+            <p className="mt-2.5 max-w-md text-[14px] leading-[1.8] text-muted-foreground">
               {t(`type${n}Desc`)}
             </p>
           </div>
@@ -59,16 +58,11 @@ export async function TransferTypes() {
   );
 }
 
-/**
- * Aracımız. Firma yalnız Mercedes Vito ile çalışıyor, o yüzden bölüm tek
- * araca ayrıldı: dış görünüm, arka koltuklar ve sürücü bölümü. Kendi araç
- * fotoğraflarınız gelince public/images/fleet/ içindekileri aynı adlarla
- * değiştirmek yeterli, kod değişmez.
- */
 export async function FleetGrid() {
   const t = await getTranslations("fleet");
   const tPage = await getTranslations("transferPage");
   const tCta = await getTranslations("cta");
+  const tEyebrow = await getTranslations("eyebrow");
 
   const photos = [
     { src: "/images/fleet/vito-exterior.jpg", alt: t("exteriorAlt") },
@@ -78,7 +72,11 @@ export async function FleetGrid() {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
-      <SectionHeading title={tPage("fleetTitle")} subtitle={tPage("fleetSubtitle")} />
+      <SectionHeading
+        eyebrow={tEyebrow("fleet")}
+        title={tPage("fleetTitle")}
+        subtitle={tPage("fleetSubtitle")}
+      />
 
       <article className="overflow-hidden rounded-xl border bg-card">
         <div className="grid gap-px sm:grid-cols-3" style={{ background: "var(--border)" }}>
@@ -142,31 +140,34 @@ export async function FleetGrid() {
 
 export async function TransferWhy() {
   const t = await getTranslations("transferPage");
+  const tEyebrow = await getTranslations("eyebrow");
 
-  const reasons = [
-    { icon: PlaneLanding, n: "1" },
-    { icon: Clock, n: "2" },
-    { icon: ShieldCheck, n: "3" },
-    { icon: Baby, n: "4" },
-    { icon: Languages, n: "5" },
-    { icon: UserRoundX, n: "6" },
-  ] as const;
+  const reasons = ["1", "2", "3", "4", "5", "6"] as const;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
-      <SectionHeading title={t("whyTitle")} />
+    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+      <SectionHeading eyebrow={tEyebrow("why")} title={t("whyTitle")} />
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {reasons.map(({ icon: Icon, n }) => (
-          <div key={n} className="flex items-start gap-4 rounded-lg border bg-card p-5">
-            <Icon
-              className="mt-0.5 size-6 shrink-0"
+      <div className="grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+        {reasons.map((n, index) => (
+          <div
+            key={n}
+            className="flex gap-4 py-6"
+            style={{
+              borderTop:
+                index > 0
+                  ? "1px solid color-mix(in oklab, var(--brand-night) 12%, transparent)"
+                  : undefined,
+            }}
+          >
+            <Check
+              className="mt-1 size-4 shrink-0"
               style={{ color: "var(--brand-gold-deep)" }}
               aria-hidden="true"
             />
             <div>
-              <h3 className="text-[14.5px] font-bold">{t(`why${n}Title`)}</h3>
-              <p className="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">
+              <h3 className="text-[15px] font-bold">{t(`why${n}Title`)}</h3>
+              <p className="mt-1.5 text-[13.5px] leading-[1.75] text-muted-foreground">
                 {t(`why${n}Desc`)}
               </p>
             </div>
@@ -179,22 +180,33 @@ export async function TransferWhy() {
 
 export async function TransferSteps() {
   const t = await getTranslations("transferPage");
+  const tEyebrow = await getTranslations("eyebrow");
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
-      <SectionHeading title={t("stepsTitle")} subtitle={t("stepsSubtitle")} />
+    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+      <SectionHeading
+        eyebrow={tEyebrow("process")}
+        title={t("stepsTitle")}
+        subtitle={t("stepsSubtitle")}
+      />
 
-      <ol className="grid gap-5 sm:grid-cols-3">
-        {(["1", "2", "3"] as const).map((step) => (
-          <li key={step} className="rounded-lg border bg-card p-6">
+      <ol className="grid gap-x-10 gap-y-10 sm:grid-cols-3">
+        {(["1", "2", "3"] as const).map((step, index) => (
+          <li
+            key={step}
+            className="pt-6"
+            style={{
+              borderTop: "2px solid color-mix(in oklab, var(--brand-gold) 45%, transparent)",
+            }}
+          >
             <span
-              className="flex size-9 items-center justify-center rounded-full text-[15px] font-extrabold"
-              style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
+              className="text-[34px] font-extrabold leading-none tabular-nums"
+              style={{ color: "color-mix(in oklab, var(--brand-night) 16%, transparent)" }}
             >
-              {step}
+              {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-4 text-[15.5px] font-bold">{t(`s${step}Title`)}</h3>
-            <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
+            <h3 className="mt-4 text-[16px] font-bold">{t(`s${step}Title`)}</h3>
+            <p className="mt-2.5 text-[14px] leading-[1.75] text-muted-foreground">
               {t(`s${step}Desc`)}
             </p>
           </li>
@@ -206,11 +218,16 @@ export async function TransferSteps() {
 
 export async function ServiceCities() {
   const t = await getTranslations("transferPage");
+  const tEyebrow = await getTranslations("eyebrow");
   const cities = t.raw("cities") as string[];
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
-      <SectionHeading title={t("citiesTitle")} subtitle={t("citiesSubtitle")} />
+      <SectionHeading
+        eyebrow={tEyebrow("cities")}
+        title={t("citiesTitle")}
+        subtitle={t("citiesSubtitle")}
+      />
 
       <div className="flex flex-wrap gap-2.5">
         {cities.map((city) => (

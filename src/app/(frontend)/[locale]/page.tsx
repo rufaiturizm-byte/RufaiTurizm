@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Users, Star, Building2, ShieldCheck, ArrowLeft, MessageCircle } from "lucide-react";
+import { ShieldCheck, ArrowLeft, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { TravelAgencySchema, WebSiteSchema } from "@/components/site/json-ld";
@@ -32,12 +32,13 @@ export default async function HomePage({
   const tHome2 = await getTranslations("home2");
   const tCta = await getTranslations("cta");
   const tToursPage = await getTranslations("toursPage");
+  const tEyebrow = await getTranslations("eyebrow");
 
   const stats = [
-    { icon: Users, value: "+12.000", label: tStats("guestsLabel") },
-    { icon: Star, value: "4.9 / 5", label: tStats("ratingLabel") },
-    { icon: Building2, value: "2015", label: tStats("sinceLabel") },
-    { icon: ShieldCheck, value: "TÜRSAB", label: tStats("licenseLabel") },
+    { value: "+12.000", label: tStats("guestsLabel") },
+    { value: "4.9 / 5", label: tStats("ratingLabel") },
+    { value: "2015", label: tStats("sinceLabel") },
+    { value: "TÜRSAB", label: tStats("licenseLabel") },
   ];
 
   const featured = tours.slice(0, 4);
@@ -111,15 +112,22 @@ export default async function HomePage({
           <TrustBoxes />
         </section>
 
-        {/* İstatistik şeridi */}
-        <section className="border-b bg-background">
-          <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-5 py-10 sm:px-8 lg:grid-cols-4">
-            {stats.map(({ icon: Icon, value, label }) => (
-              <div key={label} className="flex items-center gap-3.5">
-                <Icon className="size-7 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
-                <div>
-                  <div className="text-[22px] font-bold leading-tight">{value}</div>
-                  <div className="text-[13px] text-muted-foreground">{label}</div>
+        {/* İstatistik şeridi — rakam öne çıkar, ikon yok */}
+        <section className="border-b" style={{ background: "var(--brand-cream)" }}>
+          <div className="mx-auto grid max-w-7xl grid-cols-2 px-5 sm:px-8 lg:grid-cols-4">
+            {stats.map(({ value, label }) => (
+              <div
+                key={label}
+                /* Ayırıcı çizgi sütun sayısını izler: iki sütunda her satırın
+                   ikinci öğesinde, dört sütunda ilk öğe dışında hepsinde. */
+                className="px-1 py-9 not-nth-[2n+1]:border-s nth-[n+3]:border-t sm:px-6 sm:py-12 lg:border-t-0 lg:not-first:border-s"
+                style={{ borderColor: "color-mix(in oklab, var(--brand-night) 10%, transparent)" }}
+              >
+                <div className="text-[34px] font-extrabold leading-none tracking-[-0.02em] sm:text-[44px]">
+                  {value}
+                </div>
+                <div className="mt-3 text-[11.5px] font-bold uppercase tracking-[0.16em] text-muted-foreground">
+                  {label}
                 </div>
               </div>
             ))}
@@ -128,9 +136,11 @@ export default async function HomePage({
 
         <ServicesOverview />
 
-        {/* Çok tercih edilen turlar */}
-        <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+        {/* Çok tercih edilen turlar — krem zemin, iki beyaz bölüm arasında ayrım */}
+        <section style={{ background: "var(--brand-cream)" }}>
+          <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
           <SectionHeading
+            eyebrow={tEyebrow("tours")}
             title={tHome2("popularTours")}
             subtitle={tToursPage("subtitle")}
             action={
@@ -144,10 +154,11 @@ export default async function HomePage({
             }
           />
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {featured.map((tour) => (
-              <TourCard key={tour.key} tour={tour} />
-            ))}
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {featured.map((tour) => (
+                <TourCard key={tour.key} tour={tour} />
+              ))}
+            </div>
           </div>
         </section>
 

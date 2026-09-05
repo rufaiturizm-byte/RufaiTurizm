@@ -40,6 +40,7 @@ export default async function ServicesPage({
   const t = await getTranslations("servicesPage");
   const tServices = await getTranslations("services");
   const tNav = await getTranslations("nav");
+  const tEyebrow = await getTranslations("eyebrow");
   const tCta = await getTranslations("cta");
   const tCommon = await getTranslations("common");
   const tTours = await getTranslations("tours");
@@ -70,7 +71,7 @@ export default async function ServicesPage({
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8">
-        <SectionHeading title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading eyebrow={tEyebrow("services")} title={t("title")} subtitle={t("subtitle")} />
 
         <div className="grid gap-5 sm:grid-cols-2">
           {services.map((service) => {

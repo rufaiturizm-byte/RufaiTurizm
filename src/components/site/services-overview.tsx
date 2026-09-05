@@ -18,10 +18,12 @@ export async function ServicesOverview() {
   const tCta = await getTranslations("cta");
   const tCommon = await getTranslations("common");
   const tPage = await getTranslations("servicesPage");
+  const tEyebrow = await getTranslations("eyebrow");
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
       <SectionHeading
+        eyebrow={tEyebrow("services")}
         title={t("title")}
         subtitle={t("subtitle")}
         action={

@@ -36,6 +36,7 @@ export default async function ToursPage({
 
   const t = await getTranslations("toursPage");
   const tNav = await getTranslations("nav");
+  const tEyebrow = await getTranslations("eyebrow");
   const tTours = await getTranslations("tours");
 
   return (
@@ -55,7 +56,7 @@ export default async function ToursPage({
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8">
-        <SectionHeading title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading eyebrow={tEyebrow("tours")} title={t("title")} subtitle={t("subtitle")} />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {tours.map((tour) => (
             <TourCard key={tour.key} tour={tour} />

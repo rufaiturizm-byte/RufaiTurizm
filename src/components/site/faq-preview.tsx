@@ -19,6 +19,7 @@ import {
  */
 export async function FaqPreview() {
   const t = await getTranslations("faq");
+  const tEyebrow = await getTranslations("eyebrow");
 
   const items = (["1", "2", "3", "4", "5"] as const).map((n) => ({
     question: t(`q${n}`),
@@ -28,6 +29,7 @@ export async function FaqPreview() {
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
       <SectionHeading
+        eyebrow={tEyebrow("faq")}
         title={t("title")}
         subtitle={t("subtitle")}
         action={

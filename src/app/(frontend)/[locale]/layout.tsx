@@ -2,23 +2,20 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Geist, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Tajawal } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
+import { Header } from "@/components/site/header";
+import { Footer } from "@/components/site/footer";
+import { WhatsAppFloatingButton } from "@/components/site/whatsapp-cta";
 import { routing, isRtl, type Locale } from "@/i18n/routing";
 import "../../globals.css";
 
-const geist = Geist({
-  variable: "--font-latin",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const plexArabic = IBM_Plex_Sans_Arabic({
-  variable: "--font-arabic",
-  subsets: ["arabic"],
-  weight: ["400", "500", "600", "700"],
+const tajawal = Tajawal({
+  variable: "--font-brand",
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "700", "800"],
   display: "swap",
 });
 
@@ -80,10 +77,15 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={rtl ? "rtl" : "ltr"}
-      className={`${geist.variable} ${plexArabic.variable} h-full antialiased`}
+      className={`${tajawal.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+          <WhatsAppFloatingButton />
+        </NextIntlClientProvider>
         <Toaster />
         <Analytics />
         <SpeedInsights />

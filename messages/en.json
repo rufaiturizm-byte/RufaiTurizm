@@ -150,5 +150,28 @@
     "about": "Rufai Tourism — a travel agency in Türkiye offering transfers, tours, flight tickets and hotel bookings.",
     "quickLinks": "Quick links",
     "contactUs": "Contact details"
+  },
+  "search": {
+    "tabTour": "FIND A TOUR",
+    "tabTransfer": "VIP TRANSFER",
+    "destination": "Where would you like to go?",
+    "date": "Select a date",
+    "people": "Guests",
+    "allTours": "All Tours",
+    "submit": "Show Tours",
+    "waIntro": "Hello Rufai Tourism, I would like information about:"
+  },
+  "stats": {
+    "guestsLabel": "Happy Guests",
+    "ratingLabel": "Google Rating",
+    "sinceLabel": "Serving Since",
+    "licenseLabel": "TÜRSAB Licensed"
+  },
+  "home2": {
+    "popularTours": "Most Booked Tours",
+    "allToursCta": "All Tours",
+    "vipTitle": "Comfortable and Secure VIP Transfer",
+    "vipText": "Airport pickups, in-city travel and intercity journeys with premium vehicles and professional chauffeurs.",
+    "vipCta": "Explore VIP Transfer"
   }
 }

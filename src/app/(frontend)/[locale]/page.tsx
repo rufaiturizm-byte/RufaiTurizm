@@ -1,23 +1,12 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Car, PlaneLanding, Map, Ticket, type LucideIcon } from "lucide-react";
-import { BlurFade } from "@/components/ui/blur-fade";
-import { NumberTicker } from "@/components/ui/number-ticker";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import {
-  WhatsAppLink,
-  WhatsAppFloatingButton,
-} from "@/components/site/whatsapp-cta";
+import { Users, Star, Building2, ShieldCheck, ArrowLeft } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { SearchBar } from "@/components/site/search-bar";
+import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { TravelAgencySchema, WebSiteSchema } from "@/components/site/json-ld";
-import { services } from "@/data/services";
 import { tours } from "@/data/tours";
-
-const icons: Record<string, LucideIcon> = {
-  car: Car,
-  "plane-landing": PlaneLanding,
-  map: Map,
-  ticket: Ticket,
-};
+import { siteConfig } from "@/config/site";
 
 export default async function HomePage({
   params,
@@ -29,195 +18,168 @@ export default async function HomePage({
 
   const t = await getTranslations("home");
   const tBrand = await getTranslations("brand");
-  const tServices = await getTranslations("services");
   const tTours = await getTranslations("tours");
-  const tWhy = await getTranslations("whyUs");
+  const tStats = await getTranslations("stats");
+  const tHome2 = await getTranslations("home2");
   const tCta = await getTranslations("cta");
 
   const stats = [
-    { key: "guests", value: 12000, suffix: "+" },
-    { key: "years", value: 10, suffix: "+" },
-    { key: "tours", value: 40, suffix: "+" },
-    { key: "rating", value: 4.9, suffix: "" },
-  ] as const;
+    { icon: Users, value: "+12.000", label: tStats("guestsLabel") },
+    { icon: Star, value: "4.9 / 5", label: tStats("ratingLabel") },
+    { icon: Building2, value: "2015", label: tStats("sinceLabel") },
+    { icon: ShieldCheck, value: "TÜRSAB", label: tStats("licenseLabel") },
+  ];
+
+  const featured = tours.slice(0, 4);
 
   return (
     <>
-      <TravelAgencySchema
-        locale={locale}
-        name={tBrand("name")}
-        description={t("hero.subtitle")}
-      />
+      <TravelAgencySchema locale={locale} name={tBrand("name")} description={t("hero.subtitle")} />
       <WebSiteSchema name={tBrand("name")} />
 
       <main className="flex flex-1 flex-col">
         {/* Hero */}
-        <section className="mx-auto w-full max-w-6xl px-6 pt-20 pb-16 text-center sm:pt-28">
-          <BlurFade delay={0.05}>
-            <Badge variant="secondary" className="mb-5">
-              {t("hero.eyebrow")}
-            </Badge>
-          </BlurFade>
+        <section className="relative isolate">
+          <Image
+            src="/images/hero-ortakoy.jpg"
+            alt={locale === "ar" ? "مسجد أورتاكوي ومضيق البوسفور" : "Ortaköy Camii ve Boğaz"}
+            fill
+            priority
+            sizes="100vw"
+            className="-z-10 object-cover object-center"
+          />
+          <div
+            className="absolute inset-0 -z-10"
+            style={{
+              background:
+                "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 92%, transparent) 0%, color-mix(in oklab, var(--brand-night) 55%, transparent) 42%, color-mix(in oklab, var(--brand-night) 18%, transparent) 100%)",
+            }}
+          />
 
-          <BlurFade delay={0.12}>
-            <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-6xl">
+          <div className="mx-auto max-w-7xl px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28">
+            <div
+              className="inline-flex items-center gap-2.5 border px-3.5 py-1.5 text-[12px] font-semibold tracking-wide text-white"
+              style={{ borderColor: "color-mix(in oklab, var(--brand-gold) 60%, transparent)" }}
+            >
+              <ShieldCheck className="size-4" style={{ color: "var(--brand-gold)" }} aria-hidden="true" />
+              TÜRSAB · {siteConfig.credentials.tursab || "[lisans no]"}
+            </div>
+
+            <h1 className="mt-7 max-w-2xl text-[40px] font-bold leading-[1.22] text-white sm:text-[56px]">
               {t("hero.title")}
             </h1>
-          </BlurFade>
 
-          <BlurFade delay={0.2}>
-            <p className="mx-auto mt-5 max-w-2xl text-pretty text-base text-muted-foreground sm:text-lg">
+            <p className="mt-5 max-w-lg text-[17px] leading-[1.8] text-white/80">
               {t("hero.subtitle")}
             </p>
-          </BlurFade>
 
-          <BlurFade delay={0.28}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <WhatsAppLink className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-105">
-                {t("hero.cta")}
-              </WhatsAppLink>
-              <a
-                href="#services"
-                className="inline-flex items-center rounded-full border px-7 py-3 text-sm font-medium transition-colors hover:bg-accent"
-              >
-                {t("hero.ctaSecondary")}
-              </a>
+            <div className="mt-10">
+              <SearchBar />
             </div>
-          </BlurFade>
+          </div>
         </section>
 
-        {/* İstatistikler — sosyal kanıt */}
-        <section className="border-y bg-muted/40">
-          <div className="mx-auto grid w-full max-w-5xl grid-cols-2 gap-6 px-6 py-12 sm:grid-cols-4">
-            {stats.map((s, i) => (
-              <BlurFade key={s.key} delay={0.05 * i} className="text-center">
-                <div className="text-3xl font-bold tabular-nums sm:text-4xl">
-                  <NumberTicker
-                    value={s.value}
-                    decimalPlaces={s.key === "rating" ? 1 : 0}
-                  />
-                  {s.suffix}
+        {/* İstatistik şeridi */}
+        <section className="border-b bg-background">
+          <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-5 py-10 sm:px-8 lg:grid-cols-4">
+            {stats.map(({ icon: Icon, value, label }) => (
+              <div key={label} className="flex items-center gap-3.5">
+                <Icon className="size-7 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
+                <div>
+                  <div className="text-[22px] font-bold leading-tight">{value}</div>
+                  <div className="text-[13px] text-muted-foreground">{label}</div>
                 </div>
-                <div className="mt-1 text-xs text-muted-foreground sm:text-sm">
-                  {t(`stats.${s.key}`)}
-                </div>
-              </BlurFade>
+              </div>
             ))}
           </div>
         </section>
 
-        {/* Hizmetler */}
-        <section id="services" className="mx-auto w-full max-w-6xl px-6 py-20">
-          <BlurFade>
-            <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
-              {tServices("title")}
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground">
-              {tServices("subtitle")}
-            </p>
-          </BlurFade>
+        {/* Çok tercih edilen turlar */}
+        <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+          <div className="mb-8 flex items-end justify-between gap-6">
+            <h2 className="text-[28px] font-bold sm:text-[32px]">{tHome2("popularTours")}</h2>
+            <Link
+              href="/tours"
+              className="inline-flex shrink-0 items-center gap-2 rounded-md border px-4 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+            >
+              {tHome2("allToursCta")}
+              <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
+            </Link>
+          </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service, i) => {
-              const Icon = icons[service.icon];
-              return (
-                <BlurFade key={service.key} delay={0.06 * i}>
-                  <Card className="h-full transition-shadow hover:shadow-md">
-                    <CardContent className="flex h-full flex-col gap-3 p-6">
-                      <Icon className="size-8 text-primary" aria-hidden="true" />
-                      <h3 className="text-lg font-semibold">
-                        {tServices(`${service.key}.title`)}
-                      </h3>
-                      <p className="flex-1 text-sm text-muted-foreground">
-                        {tServices(`${service.key}.description`)}
-                      </p>
-                      {service.priceFrom ? (
-                        <p className="text-sm font-medium">
-                          {tTours("from")} {service.priceFrom} €
-                        </p>
-                      ) : null}
-                      <WhatsAppLink
-                        subject={tServices(`${service.key}.title`)}
-                        className="text-sm font-medium text-[#128C7E] hover:underline"
-                      >
-                        {tCta("whatsapp")} ←
-                      </WhatsAppLink>
-                    </CardContent>
-                  </Card>
-                </BlurFade>
-              );
-            })}
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {featured.map((tour) => (
+              <Link
+                key={tour.key}
+                href={{ pathname: "/tours/[slug]", params: { slug: tour.slug } }}
+                className="group overflow-hidden rounded-lg border bg-card transition-shadow hover:shadow-lg"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={`/images/tours/${tour.key}.jpg`}
+                    alt={tTours(`${tour.key}.name`)}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-x-3 bottom-3 flex items-center justify-between gap-2">
+                    <span className="rounded bg-white/92 px-2.5 py-1 text-[11.5px] font-semibold">
+                      {tour.durationHours} {locale === "ar" ? "ساعة" : locale === "tr" ? "Saat" : "h"}
+                    </span>
+                    <span
+                      className="rounded px-2.5 py-1 text-[11.5px] font-bold"
+                      style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
+                    >
+                      €{tour.priceFrom}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-[15.5px] font-bold uppercase tracking-wide">
+                    {tTours(`${tour.key}.name`)}
+                  </h3>
+                  <p className="mt-1.5 line-clamp-2 text-[13.5px] leading-relaxed text-muted-foreground">
+                    {tTours(`${tour.key}.description`)}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 
-        {/* Turlar */}
-        <section id="tours" className="border-t bg-muted/30">
-          <div className="mx-auto w-full max-w-6xl px-6 py-20">
-            <BlurFade>
-              <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
-                {tTours("title")}
+        {/* VIP transfer bandı */}
+        <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+          <div className="relative isolate overflow-hidden rounded-xl">
+            <Image
+              src="/images/vito-black.jpg"
+              alt={locale === "ar" ? "سيارة فيتو VIP" : "VIP Vito aracı"}
+              fill
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="-z-10 object-cover object-center"
+            />
+            <div
+              className="absolute inset-0 -z-10"
+              style={{
+                background:
+                  "linear-gradient(to inline-end, color-mix(in oklab, var(--brand-night) 94%, transparent) 0%, color-mix(in oklab, var(--brand-night) 72%, transparent) 55%, transparent 100%)",
+              }}
+            />
+            <div className="max-w-xl px-8 py-16 sm:px-12 sm:py-20">
+              <h2 className="text-[27px] font-bold leading-snug text-white sm:text-[32px]">
+                {tHome2("vipTitle")}
               </h2>
-              <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground">
-                {tTours("subtitle")}
-              </p>
-            </BlurFade>
-
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {tours.map((tour, i) => (
-                <BlurFade key={tour.key} delay={0.06 * i}>
-                  <Card className="h-full overflow-hidden transition-shadow hover:shadow-md">
-                    <CardContent className="flex h-full flex-col gap-3 p-6">
-                      <div className="flex items-start justify-between gap-3">
-                        <h3 className="text-lg font-semibold">
-                          {tTours(`${tour.key}.name`)}
-                        </h3>
-                        <Badge variant="outline" className="shrink-0">
-                          {tour.durationHours} saat
-                        </Badge>
-                      </div>
-                      <p className="flex-1 text-sm text-muted-foreground">
-                        {tTours(`${tour.key}.description`)}
-                      </p>
-                      <p className="text-sm font-medium">
-                        {tTours("from")} {tour.priceFrom} €
-                      </p>
-                      <WhatsAppLink
-                        subject={tTours(`${tour.key}.name`)}
-                        className="mt-1 inline-flex w-fit items-center rounded-full bg-[#25D366] px-4 py-2 text-xs font-semibold text-white"
-                      >
-                        {tCta("bookNow")}
-                      </WhatsAppLink>
-                    </CardContent>
-                  </Card>
-                </BlurFade>
-              ))}
+              <p className="mt-4 text-[15.5px] leading-[1.8] text-white/78">{tHome2("vipText")}</p>
+              <WhatsAppLink
+                subject={tHome2("vipTitle")}
+                className="mt-8 inline-flex items-center gap-2 rounded-md px-6 py-3.5 text-[14.5px] font-bold"
+                style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
+              >
+                {tCta("whatsapp")}
+              </WhatsAppLink>
             </div>
           </div>
         </section>
-
-        {/* Neden biz — güven unsurları */}
-        <section className="mx-auto w-full max-w-5xl px-6 py-20">
-          <BlurFade>
-            <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
-              {tWhy("title")}
-            </h2>
-          </BlurFade>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2">
-            {(["arabicSupport", "fixedPrice", "family", "support"] as const).map(
-              (key, i) => (
-                <BlurFade key={key} delay={0.06 * i}>
-                  <h3 className="font-semibold">{tWhy(`${key}.title`)}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {tWhy(`${key}.description`)}
-                  </p>
-                </BlurFade>
-              ),
-            )}
-          </div>
-        </section>
       </main>
-
-      <WhatsAppFloatingButton />
     </>
   );
 }

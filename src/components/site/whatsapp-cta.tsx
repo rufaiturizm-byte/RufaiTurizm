@@ -39,10 +39,12 @@ export function useWhatsAppUrl(subject?: string) {
 export function WhatsAppLink({
   subject,
   className,
+  style,
   children,
 }: {
   subject?: string;
   className?: string;
+  style?: React.CSSProperties;
   children: React.ReactNode;
 }) {
   const href = useWhatsAppUrl(subject);
@@ -54,6 +56,7 @@ export function WhatsAppLink({
       rel="noopener noreferrer"
       data-analytics="whatsapp-cta"
       className={className}
+      style={style}
     >
       {children}
     </a>

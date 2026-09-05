@@ -87,38 +87,47 @@
     background-position: calc(100% + var(--shiny-width)) 0;}}}
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* Rufai Turizm marka paleti — gece lacivert + altın + krem */
+  --brand-night: oklch(0.205 0.042 258);      /* koyu bölümler, header, footer */
+  --brand-night-2: oklch(0.265 0.045 258);    /* koyu zemin üzeri panel */
+  --brand-night-3: oklch(0.33 0.045 258);     /* koyu zemin üzeri kenarlık */
+  --brand-gold: oklch(0.76 0.098 82);         /* altın aksan */
+  --brand-gold-deep: oklch(0.62 0.1 72);      /* altın, açık zeminde okunur */
+  --brand-cream: oklch(0.975 0.009 85);       /* açık bölüm zemini */
+  --brand-wa: oklch(0.52 0.132 152);          /* WhatsApp — AA kontrast geçer */
+
+  --background: var(--brand-cream);
+  --foreground: oklch(0.22 0.035 258);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.22 0.035 258);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.22 0.035 258);
+  --primary: var(--brand-night);
+  --primary-foreground: oklch(0.98 0.008 85);
+  --secondary: oklch(0.955 0.012 85);
+  --secondary-foreground: var(--brand-night);
+  --muted: oklch(0.955 0.012 85);
+  --muted-foreground: oklch(0.5 0.02 258);
+  --accent: var(--brand-gold);
+  --accent-foreground: var(--brand-night);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: oklch(0.915 0.012 85);
+  --input: oklch(0.915 0.012 85);
+  --ring: var(--brand-gold);
+  --chart-1: var(--brand-gold);
+  --chart-2: oklch(0.55 0.08 258);
+  --chart-3: oklch(0.45 0.06 258);
+  --chart-4: oklch(0.35 0.05 258);
+  --chart-5: var(--brand-night);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.985 0.008 85);
+  --sidebar-foreground: oklch(0.22 0.035 258);
+  --sidebar-primary: var(--brand-night);
+  --sidebar-primary-foreground: oklch(0.98 0.008 85);
+  --sidebar-accent: oklch(0.955 0.012 85);
+  --sidebar-accent-foreground: var(--brand-night);
+  --sidebar-border: oklch(0.915 0.012 85);
+  --sidebar-ring: var(--brand-gold);
 }
 
 .dark {
@@ -168,9 +177,12 @@
 }
 /* Yazı tipi: Latin dillerde Geist, Arapçada IBM Plex Sans Arabic. */
 body {
-  font-family: var(--font-latin), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
 }
 
-[dir="rtl"] body {
-  font-family: var(--font-arabic), ui-sans-serif, system-ui, sans-serif;
+/* Arapça bitişik bir yazıdır: negatif harf aralığı harf bağlarını bozar. */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3 {
+  letter-spacing: normal;
 }

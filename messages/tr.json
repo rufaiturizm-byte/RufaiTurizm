@@ -150,5 +150,28 @@
     "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
     "quickLinks": "Hızlı bağlantılar",
     "contactUs": "İletişim bilgileri"
+  },
+  "search": {
+    "tabTour": "TUR ARA",
+    "tabTransfer": "VIP TRANSFER",
+    "destination": "Nereye gitmek istiyorsunuz?",
+    "date": "Tarih seçiniz",
+    "people": "Kişi sayısı",
+    "allTours": "Tüm Turlar",
+    "submit": "Turları Göster",
+    "waIntro": "Merhaba Rufai Turizm, bilgi almak istiyorum:"
+  },
+  "stats": {
+    "guestsLabel": "Mutlu Misafir",
+    "ratingLabel": "Google Puanımız",
+    "sinceLabel": "Deneyim Yılı",
+    "licenseLabel": "TÜRSAB Güvencesi"
+  },
+  "home2": {
+    "popularTours": "Çok Tercih Edilen Turlar",
+    "allToursCta": "Tüm Turlar",
+    "vipTitle": "Konforlu ve Güvenli VIP Transfer Hizmeti",
+    "vipText": "Havalimanı transferleri, şehir içi ulaşım ve şehirlerarası yolculuklar; lüks araçlar ve profesyonel şoförlerle.",
+    "vipCta": "VIP Transferi Keşfet"
   }
 }

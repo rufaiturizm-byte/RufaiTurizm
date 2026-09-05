@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Rufai Turizm">
+  <defs>
+    <linearGradient id="rufaiInk" x1="18" y1="26" x2="96" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3f4fa8"/>
+      <stop offset="0.55" stop-color="#5b3f9e"/>
+      <stop offset="1" stop-color="#7c4bb0"/>
+    </linearGradient>
+    <linearGradient id="rufaiWave" x1="24" y1="86" x2="96" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4a4fa5"/>
+      <stop offset="1" stop-color="#8b52b5"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="57" fill="#ffffff"/>
+  <circle cx="60" cy="60" r="57" fill="none" stroke="#e8823a" stroke-width="2.6"/>
+  <circle cx="60" cy="60" r="51.5" fill="none" stroke="#e8823a" stroke-width="0.8" opacity="0.45"/>
+
+  <!-- Bes yildiz, yay uzerinde -->
+  <g fill="#e0a32e">
+    <path d="M38 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L38 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+    <path d="M49 26.2l1.5 3.1 3.4.5-2.45 2.4.58 3.4L49 34l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+    <path d="M60 24.6l1.5 3.1 3.4.5-2.45 2.4.58 3.4L60 32.4l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+    <path d="M71 26.2l1.5 3.1 3.4.5-2.45 2.4.58 3.4L71 34l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+    <path d="M82 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L82 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+  </g>
+
+  <!-- R monogrami -->
+  <path d="M40 84V45h17.5c6.9 0 12.2 4.9 12.2 11.4 0 5.6-3.7 10-9.2 11.1L74 84h-9.6L54.4 68.6h-6.1V84z"
+        fill="url(#rufaiInk)"/>
+  <path d="M48.3 52.2v9.6h8.4c3.1 0 5.2-2 5.2-4.8s-2.1-4.8-5.2-4.8z" fill="#ffffff"/>
+
+  <!-- Alt dalga -->
+  <path d="M28 88c7.5-5.4 14.9-5.4 22.4 0s14.9 5.4 22.4 0 14.9-5.4 19.2-1.6v6.2c-4.3-3.8-11.7-3.8-19.2 1.6s-14.9 5.4-22.4 0-14.9-5.4-22.4 0z"
+        fill="url(#rufaiWave)"/>
+</svg>

@@ -73,10 +73,22 @@
   },
   "whyUs": {
     "title": "Neden Rufai Turizm?",
-    "arabicSupport": { "title": "Arapça Konuşan Ekip", "description": "Kendi dilinizde, her zaman ulaşılabilir." },
-    "fixedPrice": { "title": "Sabit ve Şeffaf Fiyat", "description": "Gizli ücret yok, sürpriz yok." },
-    "family": { "title": "Aileye Uygun Programlar", "description": "Mahremiyet ve konfor önceliğimiz." },
-    "support": { "title": "7/24 Destek", "description": "Seyahat öncesi, sırası ve sonrasında yanınızdayız." }
+    "arabicSupport": {
+      "title": "Arapça Konuşan Ekip",
+      "description": "Kendi dilinizde, her zaman ulaşılabilir."
+    },
+    "fixedPrice": {
+      "title": "Sabit ve Şeffaf Fiyat",
+      "description": "Gizli ücret yok, sürpriz yok."
+    },
+    "family": {
+      "title": "Aileye Uygun Programlar",
+      "description": "Mahremiyet ve konfor önceliğimiz."
+    },
+    "support": {
+      "title": "7/24 Destek",
+      "description": "Seyahat öncesi, sırası ve sonrasında yanınızdayız."
+    }
   },
   "cta": {
     "whatsapp": "WhatsApp'tan Yazın",
@@ -88,5 +100,55 @@
     "language": "Dil",
     "readMore": "Devamını Oku",
     "allRights": "Tüm hakları saklıdır"
+  },
+  "servicesPage": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Türkiye'de uçtan uca seyahat çözümleri: transfer, tur ve rezervasyon.",
+    "featuresTitle": "Neler dahil",
+    "allServices": "Tüm hizmetler"
+  },
+  "toursPage": {
+    "title": "Tur Programlarımız",
+    "subtitle": "Arapça rehber eşliğinde, Türkiye'nin en sevilen şehirlerinde günlük turlar.",
+    "duration": "Süre",
+    "hours": "saat",
+    "allTours": "Tüm turlar",
+    "highlights": "Öne çıkanlar"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "subtitle": "Rufai Turizm — Türkiye deneyimi, Arapça hizmet",
+    "p1": "Türkiye'de faaliyet gösteren, Ortadoğu'dan gelen misafirlere hizmet veren bir seyahat acentesiyiz. Özel transfer, rehberli tur, uçak bileti ve otel rezervasyonunu tek çatı altında sunuyoruz.",
+    "p2": "Ekibimiz Arapça, Türkçe ve İngilizce konuşuyor; havalimanına indiğiniz andan dönüşünüze kadar yanınızda oluyor. Fiyatlarımız baştan belli ve sabittir, sürpriz ücret çıkarmayız.",
+    "p3": "Ailelerin konforuna özel önem veriyoruz: geniş araçlar, tam mahremiyet ve namaz ile dinlenme saatlerine uygun esnek program akışı."
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Sorularınızı 7/24 yanıtlıyoruz",
+    "whatsappTitle": "WhatsApp",
+    "whatsappDesc": "En hızlı yol — dokunun, sohbet hemen başlasın.",
+    "phoneTitle": "Telefon",
+    "emailTitle": "E-posta",
+    "hoursTitle": "Çalışma saatleri",
+    "hoursValue": "Haftanın 7 günü, 24 saat"
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Misafirlerimizin en çok merak ettikleri",
+    "q1": "Fiyatlar sabit mi, değişiyor mu?",
+    "a1": "İlan edilen fiyatlar sabittir ve rezervasyondan önce netleşir. Varışta ek ücret veya sürpriz çıkmaz.",
+    "q2": "Arapça konuşan rehber var mı?",
+    "a2": "Evet, tüm turlarımız Arapça konuşan rehber veya şoför eşliğinde yapılır.",
+    "q3": "Vito araçta kaç kişi seyahat edebilir?",
+    "a3": "Mercedes Vito, bagajlarıyla birlikte 6 yolcuya kadar rahat seyahat imkânı sunar. Daha kalabalık gruplar için Sprinter sağlıyoruz.",
+    "q4": "Havalimanında karşılıyor musunuz?",
+    "a4": "Evet, uçuşunuzu takip ediyor, isminizin yazılı olduğu tabelayla geliş kapısında karşılıyor ve bagajlarınıza yardımcı oluyoruz.",
+    "q5": "Rezervasyon ve ödeme nasıl yapılıyor?",
+    "a5": "Rezervasyon WhatsApp üzerinden dakikalar içinde tamamlanır. Program ve fiyatta anlaşırız; ödemeyi tercihinize göre varışta veya önceden yapabilirsiniz."
+  },
+  "footer": {
+    "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
+    "quickLinks": "Hızlı bağlantılar",
+    "contactUs": "İletişim bilgileri"
   }
 }

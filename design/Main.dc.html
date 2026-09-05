@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+  <style>
+    body { margin: 0; font-family: Tajawal, 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+    a { color: #9a6320; text-decoration: none; }
+    a:hover { color: #7a4d16; }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div dir="rtl" style="width: 1280px; background: oklch(0.985 0.008 85); color: oklch(0.27 0.055 285);">
+
+  <!-- Ust bar -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 56px; background: oklch(0.27 0.055 285); color: oklch(0.93 0.01 85); font-size: 13px;">
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <span>خدمة عربية على مدار الساعة</span>
+      <span style="opacity: 0.4;">|</span>
+      <span>وكالة سياحية مرخصة — TÜRSAB</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <span style="opacity: 0.75;">العربية</span>
+      <span style="opacity: 0.35;">Türkçe</span>
+      <span style="opacity: 0.35;">English</span>
+    </div>
+  </div>
+
+  <!-- Navigasyon -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 56px; border-bottom: 1px solid oklch(0.91 0.012 85);">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <svg width="38" height="38" viewBox="0 0 120 120" aria-label="روفاي">
+        <defs>
+          <linearGradient id="ink1" x1="18" y1="26" x2="96" y2="98" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#3f4fa8"/><stop offset="0.55" stop-color="#5b3f9e"/><stop offset="1" stop-color="#7c4bb0"/>
+          </linearGradient>
+        </defs>
+        <circle cx="60" cy="60" r="57" fill="#fff"/>
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#e8823a" stroke-width="2.6"/>
+        <g fill="#e0a32e">
+          <path d="M38 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L38 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+          <path d="M49 26.2l1.5 3.1 3.4.5-2.45 2.4.58 3.4L49 34l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+          <path d="M60 24.6l1.5 3.1 3.4.5-2.45 2.4.58 3.4L60 32.4l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+          <path d="M71 26.2l1.5 3.1 3.4.5-2.45 2.4.58 3.4L71 34l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+          <path d="M82 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L82 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/>
+        </g>
+        <path d="M40 84V45h17.5c6.9 0 12.2 4.9 12.2 11.4 0 5.6-3.7 10-9.2 11.1L74 84h-9.6L54.4 68.6h-6.1V84z" fill="url(#ink1)"/>
+        <path d="M48.3 52.2v9.6h8.4c3.1 0 5.2-2 5.2-4.8s-2.1-4.8-5.2-4.8z" fill="#fff"/>
+        <path d="M28 88c7.5-5.4 14.9-5.4 22.4 0s14.9 5.4 22.4 0 14.9-5.4 19.2-1.6v6.2c-4.3-3.8-11.7-3.8-19.2 1.6s-14.9 5.4-22.4 0-14.9-5.4-22.4 0z" fill="#5b47ab"/>
+      </svg>
+      <div>
+        <div style="font-size: 18px; font-weight: 800; letter-spacing: -0.01em;">روفاي للسياحة</div>
+        <div style="font-size: 11px; color: oklch(0.55 0.02 250);">RUFAI TOURISM</div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 30px; font-size: 15px; font-weight: 500;">
+      <span style="color: oklch(0.27 0.055 285); font-weight: 700;">الرئيسية</span>
+      <span style="color: oklch(0.45 0.02 250);">خدماتنا</span>
+      <span style="color: oklch(0.45 0.02 250);">جولاتنا</span>
+      <span style="color: oklch(0.45 0.02 250);">من نحن</span>
+      <span style="color: oklch(0.45 0.02 250);">تواصل معنا</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 700;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.03 1.02-1.03 2.48s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.4"/></svg>
+      احجز الآن
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div style="position: relative; padding: 76px 56px 84px; overflow: hidden;">
+    <!-- Islami geometrik doku -->
+    <svg style="position: absolute; top: -70px; left: -90px; opacity: 0.07;" width="520" height="520" viewBox="0 0 100 100">
+      <defs><pattern id="geo" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M10 0 20 10 10 20 0 10Z" fill="none" stroke="oklch(0.5 0.13 70)" stroke-width="0.7"/>
+        <circle cx="10" cy="10" r="4.2" fill="none" stroke="oklch(0.5 0.13 70)" stroke-width="0.7"/>
+      </pattern></defs>
+      <rect width="100" height="100" fill="url(#geo)"/>
+    </svg>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: center; position: relative;">
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: oklch(0.94 0.03 75); color: oklch(0.44 0.1 60); padding: 7px 15px; border-radius: 999px; font-size: 13px; font-weight: 700;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: oklch(0.62 0.15 55);"></span>
+          أكثر من ١٢٬٠٠٠ ضيف منذ ٢٠١٥
+        </div>
+
+        <h1 style="margin: 22px 0 0; font-size: 60px; line-height: 1.13; font-weight: 800; letter-spacing: -0.025em; text-wrap: balance;">
+          رحلتك في تركيا<br>
+          <span style="color: oklch(0.55 0.13 62);">براحة تليق بعائلتك</span>
+        </h1>
+
+        <p style="margin: 22px 0 0; font-size: 18px; line-height: 1.75; color: oklch(0.44 0.02 250); max-width: 490px;">
+          سيارات فيتو VIP بسائق، استقبال من المطار، وجولات يومية بمرشد يتحدث العربية — بأسعار ثابتة متفق عليها قبل وصولك.
+        </p>
+
+        <div style="display: flex; gap: 12px; margin-top: 32px;">
+          <div style="display: flex; align-items: center; gap: 9px; background: #25D366; color: #fff; padding: 15px 28px; border-radius: 999px; font-size: 16px; font-weight: 700; box-shadow: 0 8px 20px -6px rgba(37,211,102,0.5);">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.03 1.02-1.03 2.48s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.4"/></svg>
+            تواصل عبر واتساب
+          </div>
+          <div style="display: flex; align-items: center; padding: 15px 28px; border: 1.5px solid oklch(0.85 0.02 250); border-radius: 999px; font-size: 16px; font-weight: 600;">
+            شاهد جولاتنا
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 26px; margin-top: 34px; padding-top: 26px; border-top: 1px solid oklch(0.91 0.012 85);">
+          <div><div style="font-size: 25px; font-weight: 800;">١٠+</div><div style="font-size: 13px; color: oklch(0.52 0.02 250);">سنوات خبرة</div></div>
+          <div style="width: 1px; background: oklch(0.91 0.012 85);"></div>
+          <div><div style="font-size: 25px; font-weight: 800;">٤.٩</div><div style="font-size: 13px; color: oklch(0.52 0.02 250);">تقييم الضيوف</div></div>
+          <div style="width: 1px; background: oklch(0.91 0.012 85);"></div>
+          <div><div style="font-size: 25px; font-weight: 800;">٥</div><div style="font-size: 13px; color: oklch(0.52 0.02 250);">مدن سياحية</div></div>
+        </div>
+      </div>
+
+      <!-- Gorsel alani: Bogaz silueti -->
+      <div style="position: relative; height: 470px; border-radius: 22px; overflow: hidden; background: linear-gradient(165deg, oklch(0.55 0.09 235) 0%, oklch(0.34 0.07 250) 62%, oklch(0.26 0.05 255) 100%); box-shadow: 0 26px 50px -22px rgba(30,45,70,0.45);">
+        <svg viewBox="0 0 400 300" style="position: absolute; bottom: 0; width: 100%;">
+          <circle cx="318" cy="66" r="34" fill="oklch(0.86 0.09 85)" opacity="0.9"/>
+          <g fill="oklch(0.19 0.03 255)">
+            <path d="M0 232h400v68H0z"/>
+            <ellipse cx="118" cy="205" rx="46" ry="30"/>
+            <rect x="112" y="150" width="3.4" height="58" rx="1.7"/><circle cx="113.7" cy="146" r="4"/>
+            <rect x="150" y="158" width="3.4" height="50" rx="1.7"/><circle cx="151.7" cy="154" r="4"/>
+            <rect x="80" y="158" width="3.4" height="50" rx="1.7"/><circle cx="81.7" cy="154" r="4"/>
+            <ellipse cx="252" cy="212" rx="34" ry="22"/>
+            <rect x="246" y="170" width="2.8" height="44" rx="1.4"/><circle cx="247.4" cy="167" r="3.3"/>
+            <rect x="276" y="176" width="2.8" height="38" rx="1.4"/><circle cx="277.4" cy="173" r="3.3"/>
+          </g>
+          <path d="M0 244q52-13 104 0t104 0 104 0 88-8v64H0z" fill="oklch(0.42 0.08 232)" opacity="0.55"/>
+          <path d="M0 258q60-11 120 0t120 0 160-6v48H0z" fill="oklch(0.32 0.07 240)" opacity="0.8"/>
+        </svg>
+
+        <div style="position: absolute; bottom: 20px; right: 20px; left: 20px; background: rgba(255,255,255,0.94); border-radius: 15px; padding: 15px 18px; display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <div style="font-size: 12px; color: oklch(0.5 0.02 250);">استقبال من مطار إسطنبول</div>
+            <div style="font-size: 17px; font-weight: 800; margin-top: 3px;">سعر ثابت من ٣٥ €</div>
+          </div>
+          <div style="background: oklch(0.27 0.055 285); color: #fff; padding: 9px 17px; border-radius: 999px; font-size: 13px; font-weight: 700;">اطلب الآن</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hizmetler -->
+  <div style="padding: 74px 56px; background: #fff; border-top: 1px solid oklch(0.93 0.01 85);">
+    <div style="text-align: center; margin-bottom: 44px;">
+      <div style="font-size: 13px; font-weight: 700; color: oklch(0.58 0.12 62); letter-spacing: 0.08em;">خدماتنا</div>
+      <h2 style="margin: 9px 0 0; font-size: 38px; font-weight: 800; letter-spacing: -0.02em;">كل ما تحتاجه في رحلة واحدة</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;">
+      <div style="border: 1px solid oklch(0.92 0.012 85); border-radius: 17px; padding: 26px; background: oklch(0.99 0.005 85);">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="oklch(0.56 0.13 62)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm14 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M3 17V9.5L5.5 5h11L21 9.5V17M3 10h18"/></svg>
+        <h3 style="margin: 15px 0 7px; font-size: 18px; font-weight: 700;">سيارات فيتو VIP</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.7; color: oklch(0.48 0.02 250);">مرسيدس فيتو حديثة بسائق خاص، تتسع حتى ٦ ركاب مع الأمتعة.</p>
+        <div style="margin-top: 16px; font-size: 14px; font-weight: 700; color: oklch(0.5 0.13 62);">تبدأ من ٦٠ €</div>
+      </div>
+
+      <div style="border: 1px solid oklch(0.92 0.012 85); border-radius: 17px; padding: 26px; background: oklch(0.99 0.005 85);">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="oklch(0.56 0.13 62)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 19h17M2 12.5l3 .8 3.2-3.6-5.4-3.4 1.8-.6 7 2.2 3.6-4a1.9 1.9 0 0 1 2.7 2.7l-4 3.6 2.2 7-.6 1.8-3.4-5.4L8.5 17l.8 3"/></svg>
+        <h3 style="margin: 15px 0 7px; font-size: 18px; font-weight: 700;">النقل والاستقبال</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.7; color: oklch(0.48 0.02 250);">استقبال عند بوابة الوصول مع لافتة باسمك ومتابعة موعد رحلتك.</p>
+        <div style="margin-top: 16px; font-size: 14px; font-weight: 700; color: oklch(0.5 0.13 62);">تبدأ من ٣٥ €</div>
+      </div>
+
+      <div style="border: 1px solid oklch(0.92 0.012 85); border-radius: 17px; padding: 26px; background: oklch(0.99 0.005 85);">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="oklch(0.56 0.13 62)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m9 20-6-3V4l6 3m0 13 6-3m-6 3V7m6 10 6 3V7l-6-3m0 13V4m0 0L9 7"/></svg>
+        <h3 style="margin: 15px 0 7px; font-size: 18px; font-weight: 700;">الجولات السياحية</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.7; color: oklch(0.48 0.02 250);">برامج يومية بمرشد يتحدث العربية في أجمل مدن تركيا.</p>
+        <div style="margin-top: 16px; font-size: 14px; font-weight: 700; color: oklch(0.5 0.13 62);">تبدأ من ٤٥ €</div>
+      </div>
+
+      <div style="border: 1px solid oklch(0.92 0.012 85); border-radius: 17px; padding: 26px; background: oklch(0.99 0.005 85);">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="oklch(0.56 0.13 62)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5H3a1 1 0 0 0-1 1v3a2.5 2.5 0 0 1 0 5v3a1 1 0 0 0 1 1h10m0-13h8a1 1 0 0 1 1 1v3a2.5 2.5 0 0 0 0 5v3a1 1 0 0 1-1 1h-8m0-13v13"/></svg>
+        <h3 style="margin: 15px 0 7px; font-size: 18px; font-weight: 700;">الطيران والفنادق</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.7; color: oklch(0.48 0.02 250);">تذاكر وحجوزات فندقية مناسبة للعائلات بأفضل الأسعار.</p>
+        <div style="margin-top: 16px; font-size: 14px; font-weight: 700; color: oklch(0.5 0.13 62);">عرض خاص</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Turlar -->
+  <div style="padding: 74px 56px;">
+    <div style="display: flex; align-items: end; justify-content: space-between; margin-bottom: 34px;">
+      <div>
+        <div style="font-size: 13px; font-weight: 700; color: oklch(0.58 0.12 62); letter-spacing: 0.08em;">وجهاتنا</div>
+        <h2 style="margin: 9px 0 0; font-size: 38px; font-weight: 800; letter-spacing: -0.02em;">جولات في خمس مدن</h2>
+      </div>
+      <div style="font-size: 15px; font-weight: 600; color: oklch(0.5 0.13 62);">كل الجولات ←</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+      <div style="border-radius: 18px; overflow: hidden; border: 1px solid oklch(0.92 0.012 85); background: #fff;">
+        <div style="height: 168px; background: linear-gradient(158deg, oklch(0.66 0.1 40), oklch(0.4 0.08 28)); position: relative;">
+          <svg viewBox="0 0 300 160" style="position: absolute; bottom: 0; width: 100%;"><g fill="oklch(0.24 0.04 30)" opacity="0.85"><path d="M0 128h300v32H0z"/><ellipse cx="150" cy="110" rx="52" ry="30"/><rect x="112" y="62" width="3" height="52"/><circle cx="113.5" cy="59" r="3.6"/><rect x="185" y="62" width="3" height="52"/><circle cx="186.5" cy="59" r="3.6"/></g></svg>
+          <div style="position: absolute; top: 13px; right: 13px; background: rgba(255,255,255,0.93); padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: 700;">٨ ساعات</div>
+        </div>
+        <div style="padding: 20px;">
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700;">جولة إسطنبول</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 1.7; color: oklch(0.48 0.02 250);">المسجد الأزرق، آيا صوفيا، البازار الكبير، ورحلة بحرية في البوسفور.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 17px;">
+            <div style="font-size: 17px; font-weight: 800;">٤٥ € <span style="font-size: 12px; font-weight: 500; color: oklch(0.55 0.02 250);">للفرد</span></div>
+            <div style="background: #25D366; color: #fff; padding: 8px 17px; border-radius: 999px; font-size: 13px; font-weight: 700;">احجز</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius: 18px; overflow: hidden; border: 1px solid oklch(0.92 0.012 85); background: #fff;">
+        <div style="height: 168px; background: linear-gradient(158deg, oklch(0.68 0.11 148), oklch(0.36 0.07 160)); position: relative;">
+          <svg viewBox="0 0 300 160" style="position: absolute; bottom: 0; width: 100%;"><g fill="oklch(0.24 0.04 165)" opacity="0.85"><path d="M0 132h300v28H0z"/><path d="M40 132 96 62l56 70zM136 132l58-58 60 58z"/></g><path d="M0 138q50-9 100 0t100 0 100-5v27H0z" fill="oklch(0.5 0.08 175)" opacity="0.5"/></svg>
+          <div style="position: absolute; top: 13px; right: 13px; background: rgba(255,255,255,0.93); padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: 700;">١٢ ساعة</div>
+        </div>
+        <div style="padding: 20px;">
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700;">جولة طرابزون</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 1.7; color: oklch(0.48 0.02 250);">بحيرة أوزنجول، دير سوميلا، وهضاب الشمال التركي الخلابة.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 17px;">
+            <div style="font-size: 17px; font-weight: 800;">٧٥ € <span style="font-size: 12px; font-weight: 500; color: oklch(0.55 0.02 250);">للفرد</span></div>
+            <div style="background: #25D366; color: #fff; padding: 8px 17px; border-radius: 999px; font-size: 13px; font-weight: 700;">احجز</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius: 18px; overflow: hidden; border: 1px solid oklch(0.92 0.012 85); background: #fff;">
+        <div style="height: 168px; background: linear-gradient(158deg, oklch(0.7 0.11 210), oklch(0.38 0.08 225)); position: relative;">
+          <svg viewBox="0 0 300 160" style="position: absolute; bottom: 0; width: 100%;"><g fill="oklch(0.24 0.04 220)" opacity="0.8"><path d="M0 126h300v34H0z"/><rect x="96" y="72" width="108" height="54" rx="4"/><rect x="120" y="52" width="16" height="22"/><rect x="164" y="52" width="16" height="22"/></g><path d="M0 136q60-10 120 0t180-4v28H0z" fill="oklch(0.56 0.1 215)" opacity="0.6"/></svg>
+          <div style="position: absolute; top: 13px; right: 13px; background: rgba(255,255,255,0.93); padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: 700;">١٠ ساعات</div>
+        </div>
+        <div style="padding: 20px;">
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 700;">جولة بودروم</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 1.7; color: oklch(0.48 0.02 250);">قلعة بودروم، الشواطئ الفيروزية، ورحلات القوارب في بحر إيجه.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 17px;">
+            <div style="font-size: 17px; font-weight: 800;">٦٥ € <span style="font-size: 12px; font-weight: 500; color: oklch(0.55 0.02 250);">للفرد</span></div>
+            <div style="background: #25D366; color: #fff; padding: 8px 17px; border-radius: 999px; font-size: 13px; font-weight: 700;">احجز</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Neden biz -->
+  <div style="padding: 70px 56px; background: oklch(0.27 0.055 285); color: oklch(0.95 0.008 85);">
+    <h2 style="margin: 0 0 40px; font-size: 34px; font-weight: 800; text-align: center; letter-spacing: -0.02em;">لماذا يختارنا ضيوفنا؟</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 34px;">
+      <div>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="oklch(0.76 0.12 72)" stroke-width="1.7" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>
+        <h3 style="margin: 13px 0 6px; font-size: 17px; font-weight: 700;">فريق يتحدث العربية</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.7; opacity: 0.72;">تواصل بلغتك من أول رسالة حتى نهاية رحلتك.</p>
+      </div>
+      <div>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="oklch(0.76 0.12 72)" stroke-width="1.7" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3 style="margin: 13px 0 6px; font-size: 17px; font-weight: 700;">أسعار ثابتة</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.7; opacity: 0.72;">السعر يُتفق عليه قبل الحجز — بلا رسوم مفاجئة.</p>
+      </div>
+      <div>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="oklch(0.76 0.12 72)" stroke-width="1.7" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8m14 18v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3 style="margin: 13px 0 6px; font-size: 17px; font-weight: 700;">مناسب للعائلات</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.7; opacity: 0.72;">خصوصية تامة ومرونة تراعي أوقات الصلاة والراحة.</p>
+      </div>
+      <div>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="oklch(0.76 0.12 72)" stroke-width="1.7" stroke-linecap="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M12 6v6l4 2"/></svg>
+        <h3 style="margin: 13px 0 6px; font-size: 17px; font-weight: 700;">دعم ٢٤/٧</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.7; opacity: 0.72;">معك قبل الرحلة وأثناءها وبعدها، في أي وقت.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp CTA -->
+  <div style="padding: 66px 56px; text-align: center; background: oklch(0.97 0.014 85);">
+    <h2 style="margin: 0; font-size: 36px; font-weight: 800; letter-spacing: -0.02em;">جاهز لتخطيط رحلتك؟</h2>
+    <p style="margin: 13px auto 0; font-size: 17px; line-height: 1.7; color: oklch(0.45 0.02 250); max-width: 520px;">أرسل لنا رسالة على واتساب وأخبرنا بعدد الأفراد وتاريخ الوصول — نرد عليك خلال دقائق ببرنامج وسعر واضح.</p>
+    <div style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff; padding: 16px 34px; border-radius: 999px; font-size: 17px; font-weight: 700; margin-top: 26px; box-shadow: 0 10px 26px -8px rgba(37,211,102,0.55);">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.03 1.02-1.03 2.48s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.4"/></svg>
+      ابدأ المحادثة الآن
+    </div>
+    <div style="margin-top: 13px; font-size: 13px; color: oklch(0.55 0.02 250);">[رقم واتساب]</div>
+  </div>
+
+  <!-- Footer -->
+  <div style="padding: 46px 56px 30px; background: oklch(0.21 0.05 285); color: oklch(0.85 0.01 85);">
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; gap: 40px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 11px; margin-bottom: 14px;">
+          <svg width="34" height="34" viewBox="0 0 120 120"><defs><linearGradient id="ink2" x1="18" y1="26" x2="96" y2="98" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5566c4"/><stop offset="1" stop-color="#9a63cd"/></linearGradient></defs><circle cx="60" cy="60" r="57" fill="#fff"/><circle cx="60" cy="60" r="57" fill="none" stroke="#e8823a" stroke-width="2.6"/><g fill="#e0a32e"><path d="M38 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L38 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/><path d="M49 26.2l1.5 3.1 3.4.5-2.45 2.4.58 3.4L49 34l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/><path d="M60 24.6l1.5 3.1 3.4.5-2.45 2.4.58 3.4L60 32.4l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/><path d="M71 26.2l1.5 3.1 3.4.5-2.45 2.4.58 3.4L71 34l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/><path d="M82 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L82 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z"/></g><path d="M40 84V45h17.5c6.9 0 12.2 4.9 12.2 11.4 0 5.6-3.7 10-9.2 11.1L74 84h-9.6L54.4 68.6h-6.1V84z" fill="url(#ink2)"/><path d="M48.3 52.2v9.6h8.4c3.1 0 5.2-2 5.2-4.8s-2.1-4.8-5.2-4.8z" fill="#fff"/><path d="M28 88c7.5-5.4 14.9-5.4 22.4 0s14.9 5.4 22.4 0 14.9-5.4 19.2-1.6v6.2c-4.3-3.8-11.7-3.8-19.2 1.6s-14.9 5.4-22.4 0-14.9-5.4-22.4 0z" fill="#7a5fc0"/></svg>
+          <div style="font-size: 17px; font-weight: 800;">روفاي للسياحة</div>
+        </div>
+        <p style="margin: 0; font-size: 13.5px; line-height: 1.75; opacity: 0.62; max-width: 290px;">وكالة سياحية في تركيا تقدم خدمات النقل والجولات وحجوزات الطيران والفنادق للضيوف العرب.</p>
+      </div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; margin-bottom: 13px;">روابط سريعة</div>
+        <div style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; opacity: 0.62;">
+          <span>الرئيسية</span><span>خدماتنا</span><span>جولاتنا</span><span>من نحن</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; margin-bottom: 13px;">جولاتنا</div>
+        <div style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; opacity: 0.62;">
+          <span>إسطنبول</span><span>بورصة</span><span>سبانجا</span><span>طرابزون</span><span>بودروم</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; margin-bottom: 13px;">تواصل معنا</div>
+        <div style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; opacity: 0.62;">
+          <span>[رقم الهاتف]</span>
+          <span>[البريد الإلكتروني]</span>
+          <span>إسطنبول، تركيا</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 32px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.09); display: flex; justify-content: space-between; font-size: 12.5px; opacity: 0.5;">
+      <span>© ٢٠٢٦ روفاي للسياحة — جميع الحقوق محفوظة</span>
+      <span>TÜRSAB [رقم الترخيص]</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

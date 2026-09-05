@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Tasarim tuvali cikti dosyasi (2.5MB, yeniden uretilebilir)
+design/*.html
+!design/*.dc.html

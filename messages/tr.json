@@ -11,7 +11,8 @@
     "about": "Hakkımızda",
     "contact": "İletişim",
     "faq": "SSS",
-    "guides": "Seyahat Rehberi"
+    "guides": "Seyahat Rehberi",
+    "hotels": "Oteller"
   },
   "home": {
     "hero": {
@@ -572,5 +573,17 @@
     "relatedTitle": "Diğer rehberler",
     "ctaTitle": "Bu rehberdeki programı sizin için kuralım",
     "ctaText": "Tarihinizi ve kişi sayısını yazın; güzergâhı ve sabit fiyatı aynı gün gönderelim."
+  },
+  "hotelsPage": {
+    "title": "İstanbul'da Oteller",
+    "subtitle": "Misafirlerimizin en çok tercih ettiği oteller, semt semt. Rezervasyonu sizin adınıza biz yapıyoruz.",
+    "eyebrow": "Konaklama",
+    "disclaimer": "Bu liste anlaşmalı otellerimiz değil, misafirlerimizin en çok tercih ettiği oteller. Fiyat, müsaitlik ve oda tipi rezervasyon sırasında otelden teyit edilir; sitede fiyat yazmıyoruz çünkü tarih ve doluluk fiyatı değiştirir.",
+    "areaEyebrow": "Bölge",
+    "askCta": "Bu otel için fiyat sor",
+    "hotelCount": "otel",
+    "helpTitle": "Hangi otel size uygun, birlikte bakalım",
+    "helpText": "Tarihinizi, kişi sayınızı ve bütçenizi yazın; bölgeyi ve oteli birlikte seçelim, rezervasyonu biz yapalım.",
+    "photoNote": "Görseller bölgeyi temsil eder, otelin kendisini değil."
   }
 }

@@ -79,6 +79,12 @@ export const pathnames = {
     tr: "/seyahat-rehberi/[slug]",
     en: "/travel-guides/[slug]",
   },
+  /* Konaklama: "otel rezervasyonu" hizmetimizin arama karşılığı burada. */
+  "/hotels": {
+    ar: "/فنادق-إسطنبول",
+    tr: "/oteller",
+    en: "/hotels",
+  },
 } as const;
 
 export const routing = defineRouting({

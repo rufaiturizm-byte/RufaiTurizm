@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { ar: "/خدماتنا", tr: "/hizmetler", en: "/services", priority: 0.9 },
     { ar: "/النقل-من-المطار", tr: "/transfer", en: "/transfer", priority: 0.9 },
     { ar: "/أدلة-السفر", tr: "/seyahat-rehberi", en: "/travel-guides", priority: 0.8 },
+    { ar: "/فنادق-إسطنبول", tr: "/oteller", en: "/hotels", priority: 0.8 },
     { ar: "/من-نحن", tr: "/hakkimizda", en: "/about", priority: 0.6 },
     { ar: "/تواصل-معنا", tr: "/iletisim", en: "/contact", priority: 0.7 },
     { ar: "/الاسئلة-الشائعة", tr: "/sikca-sorulan-sorular", en: "/faq", priority: 0.6 },

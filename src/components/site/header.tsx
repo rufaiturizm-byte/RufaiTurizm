@@ -23,6 +23,7 @@ export async function Header() {
     { href: "/transfer" as const, label: t("transfer") },
     { href: "/tours" as const, label: t("tours") },
     { href: "/services" as const, label: t("services") },
+    { href: "/hotels" as const, label: t("hotels") },
     { href: "/guides" as const, label: t("guides") },
     { href: "/about" as const, label: t("about") },
     { href: "/faq" as const, label: t("faq") },
@@ -42,12 +43,14 @@ export async function Header() {
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        {/* Dokuz bağlantı lg genişliğinde sıkışıyor; tam menü xl'den
+            itibaren, arada mobil menü devrede. */}
+        <nav className="hidden items-center gap-6 xl:flex 2xl:gap-8">
           {items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[15px] font-medium text-white/72 transition-colors hover:text-white"
+              className="text-[14px] font-medium whitespace-nowrap text-white/72 transition-colors hover:text-white 2xl:text-[15px]"
             >
               {item.label}
             </Link>

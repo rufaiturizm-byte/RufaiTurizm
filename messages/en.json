@@ -11,7 +11,8 @@
     "about": "About Us",
     "contact": "Contact",
     "faq": "FAQ",
-    "guides": "Travel Guides"
+    "guides": "Travel Guides",
+    "hotels": "Hotels"
   },
   "home": {
     "hero": {
@@ -572,5 +573,17 @@
     "relatedTitle": "Other guides",
     "ctaTitle": "Let us build the programme in this guide for you",
     "ctaText": "Send your dates and party size; we will come back the same day with the route and a fixed price."
+  },
+  "hotelsPage": {
+    "title": "Hotels in Istanbul",
+    "subtitle": "The hotels our guests choose most, district by district. We handle the booking on your behalf.",
+    "eyebrow": "Where to stay",
+    "disclaimer": "This is not a list of partner hotels but the ones our guests choose most. Price, availability and room type are confirmed with the hotel at booking; we publish no prices here because dates and occupancy change them.",
+    "areaEyebrow": "District",
+    "askCta": "Ask about this hotel",
+    "hotelCount": "hotels",
+    "helpTitle": "Let us find the right hotel together",
+    "helpText": "Send your dates, party size and budget; we will pick the district and the hotel with you and handle the booking.",
+    "photoNote": "Photographs show the district, not the hotel itself."
   }
 }

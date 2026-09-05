@@ -23,7 +23,7 @@ export function MobileNav({ items }: { items: Item[] }) {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         aria-label={tNav("home")}
-        className="inline-flex size-10 items-center justify-center rounded-[0.7rem] border text-white lg:hidden"
+        className="inline-flex size-10 items-center justify-center rounded-[0.7rem] border text-white xl:hidden"
         style={{ borderColor: "color-mix(in oklab, white 18%, transparent)" }}
       >
         <Menu className="size-5" aria-hidden="true" />

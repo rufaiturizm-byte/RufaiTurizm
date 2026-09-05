@@ -290,7 +290,9 @@
     "a11": "Evet. Program başlangıcından 24 saat öncesine kadar yapılan iptallerde herhangi bir ücret talep etmiyoruz. Planınız değişirse WhatsApp'tan yazmanız yeterli.",
     "q12": "İstanbul dışındaki şehirlere de hizmet veriyor musunuz?",
     "a12": "Evet. İstanbul merkezli çalışıyoruz ancak Bursa, Sapanca, Trabzon, Bodrum ve talep üzerine diğer şehirlere transfer ve tur düzenliyoruz. Şehirlerarası yolculuklarda aynı araç ve şoför sizinle kalır.",
-    "allQuestions": "Tüm sorular"
+    "allQuestions": "Tüm sorular",
+    "stillTitle": "Cevabını bulamadınız mı?",
+    "stillText": "Yazın, aynı gün içinde dönelim. Arapça, Türkçe ve İngilizce."
   },
   "footer": {
     "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
@@ -337,7 +339,8 @@
     "vipF2Title": "Profesyonel Şoförler",
     "vipF2Desc": "Deneyimli ve güler yüzlü ekip",
     "vipF3Title": "Kapıdan Kapıya Hizmet",
-    "vipF3Desc": "Zamanında ve güvenli transfer"
+    "vipF3Desc": "Zamanında ve güvenli transfer",
+    "scrollHint": "Aşağı kaydırın"
   },
   "transferForm": {
     "tabTransfer": "HAVALİMANI ÖZEL TRANSFER",
@@ -437,7 +440,8 @@
     "stockNote": "Görseller araç tipini temsil eder.",
     "vitoBadge": "En çok tercih edilen",
     "vitoLuggage": "5 – 6",
-    "exteriorAlt": "Mercedes Vito — dış görünüm"
+    "exteriorAlt": "Mercedes Vito — dış görünüm",
+    "homeTitle": "Yolculuk ettiğiniz araç"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",

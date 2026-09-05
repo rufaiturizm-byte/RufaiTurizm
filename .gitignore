@@ -50,3 +50,6 @@ design/*-web.jpg
 
 # Playwright hata ayiklama ciktilari
 .playwright-mcp/
+
+# Tasarim referans gorselleri (kaynak malzeme, siteye girmiyor)
+/Referans anasyafa/

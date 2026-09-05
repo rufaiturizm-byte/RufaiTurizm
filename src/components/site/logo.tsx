@@ -1,54 +1,57 @@
+import Image from "next/image";
+
 /**
  * Marka amblemi.
  *
- * Referans tasarımda amblem iki yerde farklı duruyor: üst çubukta sade
- * (RUFAI / TOURISM), altbilgide iki yanına ince altın çizgi çekilmiş ve
- * biraz daha büyük (RUFAI / TURİZM). Aynı SVG'yi iki kez çizmemek için
- * fark burada iki küçük prop.
+ * Bir süre elle çizilmiş SVG'ydi: elimizdeki tek dosya 150×150 piksellik bir
+ * JPEG olduğu için amblem yeniden çizilmişti. Asıl dosya (1254×1254 PNG)
+ * gelince o çizim gereksizleşti — yaklaşık bir kopya yerine logonun kendisi
+ * duruyor artık.
+ *
+ * `public/brand/logo.png` ham dosya değil: turuncu halkanın hemen dışı
+ * şeffaflaştırıldı, kare beyaz zemin atıldı ve daire kırpıldı. Halkanın İÇİ
+ * bilerek beyaz bırakıldı, çünkü logo zaten beyaz zeminli yuvarlak bir rozet
+ * olarak tasarlanmış: koyu üst çubukta beyaz rozet olarak oturuyor, açık
+ * zeminde de kenarı belli oluyor. Şeffaf yapılsaydı koyu mavi çizgiler koyu
+ * mavi header'da kaybolurdu.
  */
 export function Logo({
   className = "",
   tone = "light",
   sub = "TOURISM",
-  size = 34,
+  size = 40,
   flourish = false,
 }: {
   className?: string;
   tone?: "light" | "dark";
   /** Amblemin altındaki küçük yazı. */
   sub?: string;
-  /** Dairenin kenar uzunluğu (px). */
+  /** Rozetin kenar uzunluğu (px). */
   size?: number;
   /** Alt yazının iki yanına ince altın çizgi çeker — altbilgi düzeni. */
   flourish?: boolean;
 }) {
-  const ink = tone === "light" ? "#fff" : "oklch(0.22 0.035 258)";
-  const subColor = tone === "light" ? "rgba(255,255,255,0.55)" : "oklch(0.52 0.02 258)";
-  const rule = "color-mix(in oklab, var(--brand-gold) 60%, transparent)";
+  const ink = tone === "light" ? "#fff" : "var(--foreground)";
+  const subColor = tone === "light" ? "rgba(255,255,255,0.58)" : "var(--muted-foreground)";
+  const rule = "color-mix(in oklab, var(--brand-gold) 62%, transparent)";
 
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
-      <svg width={size} height={size} viewBox="0 0 120 120" aria-hidden="true" className="shrink-0">
-        <circle cx="60" cy="60" r="57" fill="none" stroke="var(--brand-gold)" strokeWidth="3" />
-        <g fill="var(--brand-gold)">
-          <path d="M38 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L38 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z" />
-          <path d="M49 26.2l1.5 3.1 3.4.5-2.45 2.4.58 3.4L49 34l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z" />
-          <path d="M60 24.6l1.5 3.1 3.4.5-2.45 2.4.58 3.4L60 32.4l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z" />
-          <path d="M71 26.2l1.5 3.1 3.4.5-2.45 2.4.58 3.4L71 34l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z" />
-          <path d="M82 30.4l1.5 3.1 3.4.5-2.45 2.4.58 3.4L82 38.2l-3.03 1.6.58-3.4-2.45-2.4 3.4-.5z" />
-        </g>
-        <path d="M40 84V45h17.5c6.9 0 12.2 4.9 12.2 11.4 0 5.6-3.7 10-9.2 11.1L74 84h-9.6L54.4 68.6h-6.1V84z" fill={ink} />
-        <path
-          d="M48.3 52.2v9.6h8.4c3.1 0 5.2-2 5.2-4.8s-2.1-4.8-5.2-4.8z"
-          fill={tone === "light" ? "var(--brand-night)" : "#fff"}
-        />
-        <path d="M28 88c7.5-5.4 14.9-5.4 22.4 0s14.9 5.4 22.4 0 14.9-5.4 19.2-1.6v6.2c-4.3-3.8-11.7-3.8-19.2 1.6s-14.9 5.4-22.4 0-14.9-5.4-22.4 0z" fill="var(--brand-gold)" />
-      </svg>
+      <Image
+        src="/brand/logo.png"
+        alt="Rufai Turizm"
+        width={size}
+        height={size}
+        /* Küçük ve her sayfada; üst çubukta geç yüklenmesi göze batıyor. */
+        priority
+        className="shrink-0"
+        style={{ width: size, height: size }}
+      />
 
       <div className="leading-none">
         <div
           className="font-bold tracking-wide"
-          style={{ color: ink, fontSize: size >= 44 ? "22px" : "17px" }}
+          style={{ color: ink, fontSize: size >= 48 ? "22px" : "17px" }}
         >
           RUFAI
         </div>

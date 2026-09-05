@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ChevronDown, ShieldCheck } from "lucide-react";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
@@ -64,7 +64,7 @@ export default async function HomePage({
             fill
             priority
             sizes="100vw"
-            className="-z-10 object-cover object-center"
+            className="ken-burns -z-10 object-cover object-center"
           />
           <div
             className="absolute inset-0 -z-10 scrim-x"
@@ -120,6 +120,14 @@ export default async function HomePage({
                 <ArrowRight className="size-4 rtl:rotate-180" aria-hidden="true" />
               </Link>
             </div>
+            {/* Kaydırma ipucu — formun üstüne binen kartın hemen üstünde */}
+            <div
+              className="scroll-hint mt-14 hidden w-fit items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70 lg:flex"
+              aria-hidden="true"
+            >
+              <ChevronDown className="size-4" />
+              {tHome2("scrollHint")}
+            </div>
           </div>
         </section>
 
@@ -171,7 +179,7 @@ export default async function HomePage({
         </div>
 
         <FaqPreview />
-        <ClosingCta />
+        <ClosingCta locale={locale} />
         <CredentialsBand />
         <Reviews />
       </main>

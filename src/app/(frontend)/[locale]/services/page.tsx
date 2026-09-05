@@ -160,7 +160,7 @@ export default async function ServicesPage({
 
       <ProcessSteps />
       <FleetGrid />
-      <ClosingCta />
+      <ClosingCta locale={locale} />
 
       <CredentialsBand />
     </main>

@@ -54,7 +54,7 @@ export async function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.15fr]">
           <div>
-            <Logo sub="TURİZM" size={44} flourish />
+            <Logo sub="TURİZM" size={52} flourish />
             <p className="mt-6 max-w-[290px] text-[13.5px] leading-[1.85]">{t("about")}</p>
 
             <div className="mt-7 flex items-center gap-3">

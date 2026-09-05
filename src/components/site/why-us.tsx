@@ -13,6 +13,7 @@ import { Banknote, Headphones, MessagesSquare, Users } from "lucide-react";
 export async function WhyUs() {
   const t = await getTranslations("whyUs");
   const tEyebrow = await getTranslations("eyebrow");
+  const tFleet = await getTranslations("fleet");
 
   const reasons = [
     { key: "arabicSupport", icon: MessagesSquare },
@@ -24,18 +25,43 @@ export async function WhyUs() {
   return (
     <section style={{ background: "var(--brand-night)" }}>
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_0.85fr_1.25fr] lg:items-center lg:gap-12">
-          <div
-            className="relative aspect-[16/10] overflow-hidden"
-            style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
-          >
-            <Image
-              src="/images/chauffeur.jpg"
-              alt={t("arabicSupport.title")}
-              fill
-              sizes="(max-width: 1024px) 100vw, 28vw"
-              className="object-cover object-[center_30%]"
-            />
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_0.85fr_1.2fr] lg:items-center lg:gap-12">
+          {/*
+            İki fotoğraf üst üste. Tek fotoğraf bu bölümü bir "stok görsel +
+            metin" bloğu gibi gösteriyordu; ikincisi (aracın içi) hem
+            editoryal bir derinlik veriyor hem de "konfor" iddiasını
+            gösteriyor — anlatmak yerine.
+          */}
+          <div className="relative pb-14 pe-12 lg:pb-16 lg:pe-14">
+            <div
+              className="relative aspect-[4/5] overflow-hidden"
+              style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
+            >
+              <Image
+                src="/images/chauffeur.jpg"
+                alt={t("arabicSupport.title")}
+                fill
+                sizes="(max-width: 1024px) 100vw, 26vw"
+                className="object-cover object-[center_30%]"
+              />
+            </div>
+
+            <div
+              className="absolute end-0 bottom-0 aspect-[4/3] w-[58%] overflow-hidden border-4"
+              style={{
+                borderColor: "var(--brand-night)",
+                borderRadius: "var(--radius-card)",
+                boxShadow: "var(--shadow-e3)",
+              }}
+            >
+              <Image
+                src="/images/fleet/vito-interior.jpg"
+                alt={tFleet("interiorAlt")}
+                fill
+                sizes="(max-width: 1024px) 60vw, 16vw"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div>

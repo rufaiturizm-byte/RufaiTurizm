@@ -90,38 +90,45 @@
 
 :root {
   /*
-   * Rufai Turizm marka paleti — gece lacivert + sıcak kum + kağıt beyazı.
+   * Rufai Turizm marka paleti — logodan ölçüldü.
    *
-   * Referans tasarımın renkleri ölçülüp karşılaştırıldı ve iki fark çıktı:
-   * bizim koyu zeminimiz hem daha açık hem iki kat daha maviydi, altınımız
-   * da iki kat daha doygundu. Pahalı görünen tasarımların ortak yanı bunun
-   * tersi: derin ve neredeyse nötr koyular, kısık doygunlukta aksan.
-   * Aksan artık doygun bir altın değil, açık sıcak kum.
+   * Palet iki kez yanlış kuruldu. Önce referans mockup'lardan alınmıştı:
+   * neredeyse siyah, soğuk bir lacivert. Sonra logodan ölçüldü ama elimizdeki
+   * dosya 150×150 piksellik bir JPEG'di ve sıkıştırma mürekkebi MOR
+   * gösteriyordu. 1254 pikselik asıl dosya gelince gerçek renk çıktı:
+   * marka mavisi mor değil, DERİN KRALİYET MAVİSİ (#221A7A).
+   *
+   * Logodaki dört renk: koyu mavi mürekkep, şeritlerdeki parlak gök mavisi
+   * (#78BAF6), dış halkanın turuncusu (#F45F00 — sitede kullanılmıyor,
+   * altınla yan yana gelince ikisi de kirleniyor) ve yıldızların sarısı
+   * (#FFD92B). Sarı ile turuncu yıldız yayında birbirine geçiyor.
+   *
+   * Koyu bölümler bu mavide: sayfa hem açıldı hem markanın rengine oturdu.
+   * Doygunluk bilerek logodakinden düşük — 1254 pikselde parlak duran bir
+   * mavi, ekranın yarısını kaplayınca boğuyor.
    */
-  --brand-night: oklch(0.178 0.021 252);      /* koyu bölümler, header, footer */
-  --brand-night-2: oklch(0.232 0.019 252);    /* koyu zemin üzeri panel */
-  --brand-night-3: oklch(0.30 0.017 252);     /* koyu zemin üzeri kenarlık */
-  --brand-gold: oklch(0.845 0.047 70);        /* sıcak kum — koyu zeminde ve dolgularda */
-  --brand-gold-deep: oklch(0.54 0.062 68);   /* açık zeminde okunan koyu ton */
-  /* Koyu zeminde küçük büyük-harf etiketler için. Kum tonu bu boyutta
-     beyazdan ayırt edilemiyor; doygunluğu bir tık artınca "altın etiket"
-     olarak okunuyor ama başlık altınının sakinliği bozulmuyor. */
-  --brand-gold-label: oklch(0.795 0.082 76);
-  --brand-cream: oklch(0.978 0.010 73);       /* sıcak kağıt beyazı */
+  --brand-night: oklch(0.292 0.092 272);      /* koyu bölümler, header, footer */
+  --brand-night-2: oklch(0.358 0.085 272);    /* koyu zemin üzeri panel */
+  --brand-night-3: oklch(0.442 0.072 272);    /* koyu zemin üzeri kenarlık */
+  --brand-gold: oklch(0.868 0.152 89);        /* yıldızların sarısı */
+  --brand-gold-deep: oklch(0.552 0.112 70);   /* açık zeminde AA geçen koyu ton */
+  --brand-gold-label: oklch(0.822 0.145 87);  /* koyu zeminde küçük etiketler */
+  --brand-sky: oklch(0.775 0.105 245);        /* şeritlerin gök mavisi */
+  --brand-cream: oklch(0.980 0.008 76);       /* sıcak kağıt beyazı */
   --brand-wa: oklch(0.52 0.132 152);          /* WhatsApp — AA kontrast geçer */
 
   --background: var(--brand-cream);
-  --foreground: oklch(0.22 0.035 258);
+  --foreground: oklch(0.248 0.048 272);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.035 258);
+  --card-foreground: oklch(0.248 0.048 272);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.035 258);
+  --popover-foreground: oklch(0.248 0.048 272);
   --primary: var(--brand-night);
   --primary-foreground: oklch(0.98 0.008 85);
   --secondary: oklch(0.955 0.012 85);
   --secondary-foreground: var(--brand-night);
   --muted: oklch(0.955 0.012 85);
-  --muted-foreground: oklch(0.5 0.02 258);
+  --muted-foreground: oklch(0.508 0.032 272);
   --accent: var(--brand-gold);
   --accent-foreground: var(--brand-night);
   --destructive: oklch(0.577 0.245 27.325);
@@ -190,7 +197,7 @@
   --shadow-gold: 0 12px 32px color-mix(in oklab, var(--brand-gold) 42%, transparent);
   --hairline: color-mix(in oklab, var(--brand-night) 7%, transparent);
   --sidebar: oklch(0.985 0.008 85);
-  --sidebar-foreground: oklch(0.22 0.035 258);
+  --sidebar-foreground: oklch(0.248 0.048 272);
   --sidebar-primary: var(--brand-night);
   --sidebar-primary-foreground: oklch(0.98 0.008 85);
   --sidebar-accent: oklch(0.955 0.012 85);
@@ -438,4 +445,38 @@ body {
     color-mix(in oklab, var(--brand-night) 30%, transparent) 72%,
     transparent 100%
   );
+}
+
+/*
+ * Hero fotoğrafında çok yavaş yakınlaşma (Ken Burns).
+ *
+ * Sayfanın ilk ekranı tamamen durağandı: büyük bir fotoğraf, üstünde yazı.
+ * 40 saniyede %6'lık bir yakınlaşma göz fark etmeden sahneyi canlı tutuyor —
+ * fark edilen bir animasyon olsa dikkat başlıktan çalınırdı.
+ */
+@keyframes ken-burns {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+
+.ken-burns {
+  animation: ken-burns 40s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Aşağı kaydırma ipucu — ilk ekranın altında, sayfanın devamı olduğunu söyler. */
+@keyframes scroll-hint {
+  0%, 100% { transform: translateY(0); opacity: 0.55; }
+  50% { transform: translateY(5px); opacity: 1; }
+}
+
+.scroll-hint {
+  animation: scroll-hint 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns,
+  .scroll-hint {
+    animation: none;
+  }
 }

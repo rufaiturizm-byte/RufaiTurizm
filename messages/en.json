@@ -290,7 +290,9 @@
     "a11": "Yes. Cancellations made more than 24 hours before the programme starts are free of charge. If your plans change, a WhatsApp message is enough.",
     "q12": "Do you serve cities outside Istanbul?",
     "a12": "Yes. We are based in Istanbul but arrange transfers and tours to Bursa, Sapanca, Trabzon, Bodrum and other cities on request. On intercity journeys the same vehicle and driver stay with you.",
-    "allQuestions": "All questions"
+    "allQuestions": "All questions",
+    "stillTitle": "Didn't find your answer?",
+    "stillText": "Write to us and we will come back the same day. Arabic, Turkish and English."
   },
   "footer": {
     "about": "Rufai Tourism — a travel agency in Türkiye offering transfers, tours, flight tickets and hotel bookings.",
@@ -337,7 +339,8 @@
     "vipF2Title": "Professional Chauffeurs",
     "vipF2Desc": "Experienced and courteous team",
     "vipF3Title": "Door-to-Door Service",
-    "vipF3Desc": "On time and safe transfers"
+    "vipF3Desc": "On time and safe transfers",
+    "scrollHint": "Scroll down"
   },
   "transferForm": {
     "tabTransfer": "PRIVATE AIRPORT TRANSFER",
@@ -437,7 +440,8 @@
     "stockNote": "Photos represent the vehicle type.",
     "vitoBadge": "Most requested",
     "vitoLuggage": "5 – 6",
-    "exteriorAlt": "Mercedes Vito exterior"
+    "exteriorAlt": "Mercedes Vito exterior",
+    "homeTitle": "The vehicle you travel in"
   },
   "notFound": {
     "title": "Page not found",

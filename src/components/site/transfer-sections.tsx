@@ -245,43 +245,61 @@ export async function ServiceCities() {
 /**
  * Sayfa sonu kapanış şeridi — tek ve net bir çıkış.
  *
- * Zemin düz lacivert değil, ince altın noktalardan oluşan bir takımyıldız
- * dokusu (bkz. `.pattern-constellation`): sayfanın en önemli çağrısı boş
- * bir dikdörtgenin ortasında kalınca değil, kendi yüzeyi olan bir alanda
- * duruyor. Fotoğraf yüklemeden aynı derinliği veriyor.
+ * Zemin önce düz laciverte ince altın noktalardan oluşan bir doku
+ * eklenerek kurulmuştu. Doku boş bir dikdörtgenden iyiydi ama sayfanın
+ * alt üçte biri (SSS, kapanış, belge bandı) tümüyle görselsiz kalıyordu:
+ * ziyaretçi en önemli çağrıya, gideceği yeri bir kez daha görmeden
+ * varıyordu. Artık altta Kız Kulesi var, üstünde okunurluğu koruyan
+ * karartma ve aynı doku.
  */
-export async function ClosingCta() {
+export async function ClosingCta({ locale }: { locale?: string }) {
   const t = await getTranslations("home2");
   const tCta = await getTranslations("cta");
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <div
-        className="pattern-constellation relative flex flex-col items-center gap-5 px-8 py-16 text-center"
+        className="relative isolate flex flex-col items-center gap-5 overflow-hidden px-8 py-20 text-center"
         style={{
           backgroundColor: "var(--brand-night)",
           borderRadius: "var(--radius-card)",
           boxShadow: "var(--shadow-e3)",
         }}
       >
+        <Image
+          src="/images/kizkulesi.jpg"
+          alt={locale === "ar" ? "برج الفتاة عند الغروب" : "Gün batımında Kız Kulesi"}
+          fill
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          className="absolute inset-0 z-0 object-cover object-center"
+        />
+        <div
+          className="absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 90%, transparent) 0%, color-mix(in oklab, var(--brand-night) 72%, transparent) 48%, color-mix(in oklab, var(--brand-night) 58%, transparent) 100%)",
+          }}
+        />
+        <div className="pattern-constellation absolute inset-0 z-10 opacity-50" />
+
         <span
-          className="inline-flex size-14 items-center justify-center rounded-full border"
+          className="relative z-20 inline-flex size-14 items-center justify-center rounded-full border"
           style={{
             borderColor: "color-mix(in oklab, var(--brand-gold) 55%, transparent)",
-            background: "color-mix(in oklab, var(--brand-gold) 12%, transparent)",
+            background: "color-mix(in oklab, var(--brand-gold) 14%, transparent)",
             color: "var(--brand-gold)",
           }}
         >
           <Plane className="size-6 -rotate-45" aria-hidden="true" />
         </span>
 
-        <h2 className="font-display text-[28px] font-semibold leading-[1.12] text-white sm:text-[38px]">
+        <h2 className="relative z-20 font-display text-[28px] font-semibold leading-[1.12] text-white sm:text-[38px]">
           {t("ctaTitle")}
         </h2>
-        <p className="max-w-lg text-[15px] leading-[1.8] text-white/68">{t("ctaText")}</p>
+        <p className="relative z-20 max-w-lg text-[15px] leading-[1.8] text-white/75">{t("ctaText")}</p>
 
         <WhatsAppLink
-          className="mt-3 inline-flex items-center gap-3 rounded-[0.8rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5"
+          className="relative z-20 mt-3 inline-flex items-center gap-3 rounded-[0.8rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5"
           style={{
             background: "var(--brand-gold)",
             color: "var(--brand-night)",

@@ -254,7 +254,7 @@ export default async function ServiceDetailPage({
         <ProcessSteps />
       )}
 
-      <ClosingCta />
+      <ClosingCta locale={locale} />
       <CredentialsBand />
     </main>
   );

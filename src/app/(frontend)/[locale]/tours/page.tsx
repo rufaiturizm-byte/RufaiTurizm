@@ -68,7 +68,7 @@ export default async function ToursPage({
 
       <WhyUs />
       <FaqPreview />
-      <ClosingCta />
+      <ClosingCta locale={locale} />
 
       <CredentialsBand />
     </main>

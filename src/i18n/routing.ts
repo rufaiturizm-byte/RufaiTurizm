@@ -64,6 +64,21 @@ export const pathnames = {
     tr: "/transfer",
     en: "/transfer",
   },
+  /*
+   * Seyahat rehberleri. Hizmet sayfaları "biz ne yapıyoruz" diye yazılır;
+   * misafir ise seyahatten haftalar önce SORU arar ("مطار اسطنبول كيف اروح
+   * للفندق"). Rakiplerin blog/rehber bölümüyle tuttuğu yüzey burası.
+   */
+  "/guides": {
+    ar: "/أدلة-السفر",
+    tr: "/seyahat-rehberi",
+    en: "/travel-guides",
+  },
+  "/guides/[slug]": {
+    ar: "/أدلة-السفر/[slug]",
+    tr: "/seyahat-rehberi/[slug]",
+    en: "/travel-guides/[slug]",
+  },
 } as const;
 
 export const routing = defineRouting({

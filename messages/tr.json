@@ -10,7 +10,8 @@
     "transfer": "Transfer",
     "about": "Hakkımızda",
     "contact": "İletişim",
-    "faq": "SSS"
+    "faq": "SSS",
+    "guides": "Seyahat Rehberi"
   },
   "home": {
     "hero": {
@@ -560,5 +561,16 @@
     "subtitle": "Havalimanı transferlerinden Karadeniz yaylalarına; listede olmayan bir yer için yazmanız yeterli.",
     "eyebrow": "Güzergâhlar",
     "priceNote": "Fiyatlar araç başınadır, kişi başı değil. Kesin tutar tarihe ve kişi sayısına göre WhatsApp'tan netleşir."
+  },
+  "guidesPage": {
+    "title": "Seyahat Rehberleri",
+    "subtitle": "Türkiye'ye gelmeden önce en çok sorulan soruların cevapları: ulaşım, semtler, mevsimler ve günübirlik rotalar.",
+    "eyebrow": "Rehberler",
+    "readCta": "Rehberi oku",
+    "minutes": "dk okuma",
+    "allGuides": "Tüm rehberler",
+    "relatedTitle": "Diğer rehberler",
+    "ctaTitle": "Bu rehberdeki programı sizin için kuralım",
+    "ctaText": "Tarihinizi ve kişi sayısını yazın; güzergâhı ve sabit fiyatı aynı gün gönderelim."
   }
 }

@@ -23,6 +23,7 @@ export async function Header() {
     { href: "/transfer" as const, label: t("transfer") },
     { href: "/tours" as const, label: t("tours") },
     { href: "/services" as const, label: t("services") },
+    { href: "/guides" as const, label: t("guides") },
     { href: "/about" as const, label: t("about") },
     { href: "/faq" as const, label: t("faq") },
     { href: "/contact" as const, label: t("contact") },

@@ -10,7 +10,8 @@
     "transfer": "Transfer",
     "about": "About Us",
     "contact": "Contact",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "guides": "Travel Guides"
   },
   "home": {
     "hero": {
@@ -560,5 +561,16 @@
     "subtitle": "From airport transfers to the Black Sea plateaus; for anywhere not listed, just write to us.",
     "eyebrow": "Routes",
     "priceNote": "Prices are per vehicle, not per person. The final amount is confirmed on WhatsApp by date and party size."
+  },
+  "guidesPage": {
+    "title": "Travel Guides",
+    "subtitle": "Answers to what people ask most before coming to Türkiye: getting around, districts, seasons and day trips.",
+    "eyebrow": "Guides",
+    "readCta": "Read the guide",
+    "minutes": "min read",
+    "allGuides": "All guides",
+    "relatedTitle": "Other guides",
+    "ctaTitle": "Let us build the programme in this guide for you",
+    "ctaText": "Send your dates and party size; we will come back the same day with the route and a fixed price."
   }
 }

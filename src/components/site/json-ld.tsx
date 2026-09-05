@@ -149,3 +149,73 @@ export function BreadcrumbSchema({
 
   return <JsonLd data={data} />;
 }
+
+/**
+ * Rehber yazıları için Article şeması.
+ *
+ * Rehberler sitenin arama motorundaki asıl tutunma yüzeyi; yazıyı
+ * işaretlemek Google'a bunun bir hizmet sayfası değil bilgi içeriği
+ * olduğunu söyler ve "kim yazdı" sorusuna kurumsal bir cevap verir.
+ *
+ * `datePublished` bilerek yok: uydurma bir tarih, içeriğin tazeliği
+ * konusunda yanlış sinyal verir. Yazılar CMS'e taşındığında gerçek
+ * tarihle birlikte eklenecek.
+ */
+export function ArticleSchema({
+  headline,
+  description,
+  image,
+  url,
+  locale,
+}: {
+  headline: string;
+  description: string;
+  image: string;
+  url: string;
+  locale: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    image: `${siteConfig.url}${image}`,
+    inLanguage: locale,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${siteConfig.url}${url}` },
+    author: { "@type": "Organization", name: siteConfig.legalName },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.legalName,
+      logo: { "@type": "ImageObject", url: `${siteConfig.url}/brand/logo.png` },
+    },
+  };
+
+  return <JsonLd data={data} />;
+}
+
+/**
+ * Liste sayfaları için ItemList.
+ *
+ * Turlar ve rehberler sayfası bir dizi kart basıyor ama arama motoru
+ * için bunlar birbirinden bağımsız bağlantılardı. ItemList, sayfanın bir
+ * KOLEKSİYON olduğunu ve öğelerin sırasını söylüyor.
+ */
+export function ItemListSchema({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: `${siteConfig.url}${item.url}`,
+    })),
+  };
+
+  return <JsonLd data={data} />;
+}

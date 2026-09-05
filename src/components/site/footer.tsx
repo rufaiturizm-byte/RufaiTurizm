@@ -31,6 +31,7 @@ export async function Footer() {
     { href: "/transfer" as const, label: tNav("transfer") },
     { href: "/tours" as const, label: tNav("tours") },
     { href: "/services" as const, label: tNav("services") },
+    { href: "/guides" as const, label: tNav("guides") },
     { href: "/about" as const, label: tNav("about") },
     { href: "/faq" as const, label: tNav("faq") },
     { href: "/contact" as const, label: tNav("contact") },

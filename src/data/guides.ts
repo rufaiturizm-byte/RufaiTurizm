@@ -36,7 +36,7 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     slug: "istanbul-havalimanindan-sehre-ulasim",
-    image: "/images/vito-black.jpg",
+    image: "/images/places/havalimani.jpg",
     minutes: 4,
     title: {
       tr: "İstanbul Havalimanı'ndan şehre nasıl gidilir?",
@@ -130,7 +130,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "istanbulda-nerede-kalinir",
-    image: "/images/tours/istanbul.jpg",
+    image: "/images/places/sultanahmet.jpg",
     minutes: 5,
     title: {
       tr: "İstanbul'da nerede kalınır? Semt semt rehber",
@@ -236,7 +236,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "trabzon-uzungol-karadeniz",
-    image: "/images/tours/trabzon.jpg",
+    image: "/images/places/uzungol.jpg",
     minutes: 5,
     title: {
       tr: "Trabzon, Uzungöl ve Karadeniz yaylaları",
@@ -289,7 +289,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "turkiyeye-ne-zaman-gitmeli",
-    image: "/images/hero-ortakoy.jpg",
+    image: "/images/places/bogaz-kopru.jpg",
     minutes: 4,
     title: {
       tr: "Türkiye'ye ne zaman gitmeli? Mevsim rehberi",

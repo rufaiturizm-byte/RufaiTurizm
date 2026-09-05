@@ -33,7 +33,7 @@ export interface HotelArea {
 export const hotelAreas: HotelArea[] = [
   {
     key: "sultanahmet",
-    image: "/images/tours/istanbul.jpg",
+    image: "/images/places/sultanahmet.jpg",
     imageAltKey: "istanbul",
     name: { tr: "Sultanahmet ve Tarihî Yarımada", ar: "السلطان أحمد وشبه الجزيرة التاريخية", en: "Sultanahmet and the Historic Peninsula" },
     note: {
@@ -70,7 +70,9 @@ export const hotelAreas: HotelArea[] = [
   },
   {
     key: "taksim",
-    image: "/images/kizkulesi.jpg",
+    /* Önce Kız Kulesi vardı — o Üsküdar'da, yani tam ters yakada.
+       Galata Kulesi ve köprü Beyoğlu'nun kendisi. */
+    image: "/images/places/galata.jpg",
     imageAltKey: "taksim",
     name: { tr: "Taksim, Beyoğlu ve Şişli", ar: "تقسيم وبيوغلو وشيشلي", en: "Taksim, Beyoglu and Sisli" },
     note: {
@@ -115,7 +117,7 @@ export const hotelAreas: HotelArea[] = [
   },
   {
     key: "bosphorus",
-    image: "/images/hero-ortakoy.jpg",
+    image: "/images/places/bogaz-kopru.jpg",
     imageAltKey: "bosphorus",
     name: { tr: "Boğaz Kıyısı — Beşiktaş ve Ortaköy", ar: "ضفاف البوسفور — بشكتاش وأورتاكوي", en: "The Bosphorus Shore: Besiktas and Ortakoy" },
     note: {
@@ -160,7 +162,9 @@ export const hotelAreas: HotelArea[] = [
   },
   {
     key: "asian",
-    image: "/images/tours/sapanca.jpg",
+    /* Önce Sapanca vardı — Sakarya'da, İstanbul'un Anadolu yakası değil.
+       Kadıköy iskelesi bölgenin kendisi. */
+    image: "/images/places/kadikoy.jpg",
     imageAltKey: "asian",
     name: { tr: "Anadolu Yakası — Kadıköy ve Ataşehir", ar: "الجانب الآسيوي — كاديكوي وآتاشهير", en: "The Asian Side: Kadikoy and Atasehir" },
     note: {

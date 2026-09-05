@@ -18,6 +18,8 @@
 
 export interface RouteGroup {
   key: string;
+  /** Grup kartının üstündeki fotoğraf. */
+  image: string;
   /** Grubun başlığı — kalkış noktası ya da bölge. */
   title: { tr: string; ar: string; en: string };
   /** Kısa açıklama; grubun altında tek satır. */
@@ -29,6 +31,7 @@ export interface RouteGroup {
 export const routeGroups: RouteGroup[] = [
   {
     key: "ist",
+    image: "/images/places/havalimani.jpg",
     title: {
       tr: "İstanbul Havalimanı (IST) transferleri",
       ar: "خدمة النقل من مطار إسطنبول (IST)",
@@ -56,6 +59,7 @@ export const routeGroups: RouteGroup[] = [
   },
   {
     key: "saw",
+    image: "/images/places/galata.jpg",
     title: {
       tr: "Sabiha Gökçen Havalimanı (SAW) transferleri",
       ar: "خدمة النقل من مطار صبيحة كوكجن (SAW)",
@@ -81,6 +85,7 @@ export const routeGroups: RouteGroup[] = [
   },
   {
     key: "intercity",
+    image: "/images/tours/sapanca.jpg",
     title: {
       tr: "Şehirlerarası transfer ve günübirlik turlar",
       ar: "النقل بين المدن والجولات اليومية",
@@ -108,6 +113,7 @@ export const routeGroups: RouteGroup[] = [
   },
   {
     key: "other",
+    image: "/images/places/uzungol.jpg",
     title: {
       tr: "Diğer şehirlerde transfer ve tur",
       ar: "النقل والجولات في مدن أخرى",

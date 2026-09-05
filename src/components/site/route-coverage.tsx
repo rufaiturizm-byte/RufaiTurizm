@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, MapPin } from "lucide-react";
 import { SectionHeading } from "./section-heading";
@@ -38,41 +39,63 @@ export async function RouteCoverage({ locale }: { locale: string }) {
           return (
             <article
               key={group.key}
-              className="flex flex-col p-6 surface-card sm:p-7"
+              className="flex flex-col overflow-hidden surface-card"
             >
-              <div className="flex items-start gap-3.5">
-                <span
-                  className="inline-flex size-10 shrink-0 items-center justify-center rounded-full"
-                  style={{ background: "var(--brand-night)", color: "var(--brand-gold)" }}
-                >
-                  <MapPin className="size-[18px]" aria-hidden="true" />
-                </span>
-                <div>
-                  <h3 className="font-display text-[18px] font-semibold leading-snug">{title}</h3>
-                  <p className="mt-1.5 text-[13px] leading-[1.7] text-muted-foreground">
-                    {group.note[lang] ?? group.note.tr}
-                  </p>
+              {/* Grup fotoğrafı: kartlar yalnız çiplerden oluşurken bölüm
+                  bir etiket bulutu gibi duruyordu; fotoğraf her grubun
+                  neresi olduğunu okumadan anlatıyor. */}
+              <div className="relative aspect-[16/6] overflow-hidden">
+                <Image
+                  src={group.image}
+                  alt={title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 90%, transparent) 0%, color-mix(in oklab, var(--brand-night) 42%, transparent) 62%, transparent 100%)",
+                  }}
+                />
+                <div className="absolute inset-x-5 bottom-4 flex items-center gap-3">
+                  <span
+                    className="inline-flex size-9 shrink-0 items-center justify-center rounded-full"
+                    style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
+                  >
+                    <MapPin className="size-4" aria-hidden="true" />
+                  </span>
+                  <h3 className="font-display text-[17px] font-semibold leading-snug text-white">
+                    {title}
+                  </h3>
                 </div>
               </div>
 
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {group.stops.map((stop) => {
-                  const name = stop[lang] ?? stop.tr;
-                  return (
-                    <li key={name}>
-                      <WhatsAppLink
-                        subject={`${title} — ${name}`}
-                        className="inline-flex items-center rounded-full border px-3.5 py-2 text-[13px] font-medium transition-colors hover:bg-secondary"
-                        style={{
-                          borderColor: "color-mix(in oklab, var(--brand-night) 13%, transparent)",
-                        }}
-                      >
-                        {name}
-                      </WhatsAppLink>
-                    </li>
-                  );
-                })}
-              </ul>
+              <div className="flex flex-1 flex-col p-6 sm:p-7">
+                <p className="text-[13px] leading-[1.7] text-muted-foreground">
+                  {group.note[lang] ?? group.note.tr}
+                </p>
+
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {group.stops.map((stop) => {
+                    const name = stop[lang] ?? stop.tr;
+                    return (
+                      <li key={name}>
+                        <WhatsAppLink
+                          subject={`${title} — ${name}`}
+                          className="inline-flex items-center rounded-full border px-3.5 py-2 text-[13px] font-medium transition-colors hover:bg-secondary"
+                          style={{
+                            borderColor: "color-mix(in oklab, var(--brand-night) 13%, transparent)",
+                          }}
+                        >
+                          {name}
+                        </WhatsAppLink>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </article>
           );
         })}

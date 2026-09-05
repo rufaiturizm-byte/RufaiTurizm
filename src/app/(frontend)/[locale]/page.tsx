@@ -16,6 +16,7 @@ import { Reviews } from "@/components/site/reviews";
 import { ServicesOverview } from "@/components/site/services-overview";
 import { WhyUs } from "@/components/site/why-us";
 import { VipBand } from "@/components/site/vip-band";
+import { VehicleList } from "@/components/site/vehicle-list";
 import { FaqPreview } from "@/components/site/faq-preview";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { DestinationsMarquee } from "@/components/site/destinations-marquee";
@@ -177,6 +178,12 @@ export default async function HomePage({
         <div className="pt-24">
           <VipBand locale={locale} />
         </div>
+
+        {/* Araç. VIP bandı aracı ÖVÜYOR ama göstermiyordu: ana sayfada
+            kapasite, bagaj ve donanım hiçbir yerde yazmıyor, ziyaretçi
+            "hangi araçla geleceksiniz" sorusunun cevabını almadan
+            rezervasyona gidiyordu. */}
+        <VehicleList />
 
         <FaqPreview />
         <ClosingCta locale={locale} />

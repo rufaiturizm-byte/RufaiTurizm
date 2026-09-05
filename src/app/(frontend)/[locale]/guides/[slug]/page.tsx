@@ -115,14 +115,54 @@ export default async function GuideDetailPage({
 
       {/* Gövde */}
       <article className="mx-auto w-full max-w-3xl px-5 py-20 sm:px-8">
+        {/* Hızlı bilgiler: rehberi baştan sona okumaya vakti olmayan kişi
+            mesafeyi, süreyi ve mevsimi burada tek bakışta alıyor. */}
+        <dl className="mb-14 grid gap-4 sm:grid-cols-3">
+          {guide.facts.map((fact, index) => (
+            <div key={index} className="accent-card p-5">
+              <dt className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                {fact.label[lang] ?? fact.label.tr}
+              </dt>
+              <dd className="mt-2 text-[14.5px] font-bold leading-snug">
+                {fact.value[lang] ?? fact.value.tr}
+              </dd>
+            </div>
+          ))}
+        </dl>
+
         {guide.sections.map((section, index) => (
-          <section key={index} className={index > 0 ? "mt-12" : ""}>
+          <section key={index} className={index > 0 ? "mt-14" : ""}>
             <h2 className="font-display text-[24px] font-semibold leading-snug sm:text-[28px]">
               {section.heading[lang] ?? section.heading.tr}
             </h2>
             <p className="mt-4 text-[16px] leading-[1.95] text-foreground/85">
               {section.body[lang] ?? section.body.tr}
             </p>
+
+            {section.image ? (
+              <figure className="mt-7">
+                <div
+                  className="relative aspect-[16/9] overflow-hidden"
+                  style={{
+                    borderRadius: "var(--radius-card)",
+                    boxShadow: "var(--shadow-e2)",
+                  }}
+                >
+                  <Image
+                    src={section.image}
+                    alt={section.imageAlt?.[lang] ?? section.imageAlt?.tr ?? ""}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="object-cover"
+                  />
+                </div>
+                {section.imageAlt ? (
+                  <figcaption className="mt-3 text-[12.5px] text-muted-foreground">
+                    {section.imageAlt[lang] ?? section.imageAlt.tr}
+                  </figcaption>
+                ) : null}
+              </figure>
+            ) : null}
           </section>
         ))}
 

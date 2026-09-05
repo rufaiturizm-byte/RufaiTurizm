@@ -21,6 +21,21 @@ type Text = { tr: string; ar: string; en: string };
 export interface GuideSection {
   heading: Text;
   body: Text;
+  /** Bölümün altına giren görsel — her bölümde olmak zorunda değil. */
+  image?: string;
+  imageAlt?: Text;
+}
+
+/**
+ * Yazının başındaki hızlı bilgi kutusu.
+ *
+ * Rehberi okumaya vakti olmayan kişi (çoğu ziyaretçi) mesafeyi, süreyi ve
+ * mevsimi burada tek bakışta alıyor. Yalnız doğrulanabilir bilgiler:
+ * fiyat ve taahhüt buraya girmiyor.
+ */
+export interface GuideFact {
+  label: Text;
+  value: Text;
 }
 
 export interface Guide {
@@ -30,6 +45,7 @@ export interface Guide {
   minutes: number;
   title: Text;
   excerpt: Text;
+  facts: GuideFact[];
   sections: GuideSection[];
 }
 
@@ -48,6 +64,20 @@ export const guides: Guide[] = [
       ar: "المسافة والوقت والخيارات المتاحة، وأيّها يناسب فعلاً عائلة مع حقائب.",
       en: "Distance, travel time, the options — and which one actually works with luggage and family.",
     },
+    facts: [
+      {
+        label: { tr: "Mesafe", ar: "المسافة", en: "Distance" },
+        value: { tr: "Merkeze 45–50 km", ar: "45–50 كم إلى المركز", en: "45–50 km to the centre" },
+      },
+      {
+        label: { tr: "Yolculuk süresi", ar: "مدة الرحلة", en: "Travel time" },
+        value: { tr: "Trafiğe göre 45 dk – 2 saat", ar: "45 دقيقة – ساعتان حسب الازدحام", en: "45 min – 2 hrs with traffic" },
+      },
+      {
+        label: { tr: "Havalimanı", ar: "المطار", en: "Airport" },
+        value: { tr: "İstanbul Havalimanı (IST)", ar: "مطار إسطنبول (IST)", en: "Istanbul Airport (IST)" },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -71,6 +101,12 @@ export const guides: Guide[] = [
           tr: "Metro (M11) havalimanını şehir hattına bağlar ve ucuzdur, ancak merkeze varmak için aktarma gerekir. Havaş otobüsleri belirli duraklara iner, otelinizin kapısına değil. Ticari taksi mevcut olsa da bagaj sayısı ve kişi sayısı arttığında iki araç gerekebilir. Dört kişilik bir aile, dört valiz ve bir bebek arabasıyla geldiğinde pratikte tek gerçekçi seçenek özel araçtır.",
           ar: "يربط المترو (M11) المطار بشبكة المدينة وهو خيار رخيص، لكنه يتطلب تبديل خطوط للوصول إلى المركز. حافلات هافاش تتوقف عند محطات محددة، لا عند باب الفندق. سيارات الأجرة متاحة، لكن مع زيادة عدد الأفراد والحقائب قد تحتاج إلى سيارتين. عائلة من أربعة أفراد بأربع حقائب وعربة أطفال لن تجد عملياً سوى خيار السيارة الخاصة.",
           en: "The metro (M11) links the airport to the city network and is cheap, but reaching the centre needs a change. Havaş buses stop at fixed points, not at your hotel door. Taxis exist, but as passengers and suitcases add up you may need two cars. For a family of four with four suitcases and a pushchair, a private vehicle is in practice the only workable option.",
+        },
+        image: "/images/vito-black.jpg",
+        imageAlt: {
+          tr: "Havalimanı transferinde kullanılan Mercedes Vito",
+          ar: "سيارة مرسيدس فيتو المستخدمة في النقل من المطار",
+          en: "The Mercedes Vito used for airport transfers",
         },
       },
       {
@@ -101,6 +137,20 @@ export const guides: Guide[] = [
       ar: "لماذا يحتاج الانتقال من المطار الآسيوي إلى الجانب الأوروبي خطة مختلفة.",
       en: "Why crossing from the Asian-side airport to the European side needs its own plan.",
     },
+    facts: [
+      {
+        label: { tr: "Yaka", ar: "الجانب", en: "Side" },
+        value: { tr: "Anadolu yakası, Pendik", ar: "الجانب الآسيوي، بنديك", en: "Asian side, Pendik" },
+      },
+      {
+        label: { tr: "Avrupa yakasına", ar: "إلى الجانب الأوروبي", en: "To the European side" },
+        value: { tr: "Boğaz geçişi gerekir", ar: "يلزم عبور البوسفور", en: "Requires a Bosphorus crossing" },
+      },
+      {
+        label: { tr: "Havalimanı", ar: "المطار", en: "Airport" },
+        value: { tr: "Sabiha Gökçen (SAW)", ar: "صبيحة كوكجن (SAW)", en: "Sabiha Gokcen (SAW)" },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -142,6 +192,20 @@ export const guides: Guide[] = [
       ar: "السلطان أحمد أم تقسيم، إطلالة البوسفور أم القرب من المركز — القرار بحسب العائلة.",
       en: "Sultanahmet or Taksim, a Bosphorus view or a central base — deciding by what your family needs.",
     },
+    facts: [
+      {
+        label: { tr: "Tarih için", ar: "للتاريخ", en: "For history" },
+        value: { tr: "Sultanahmet", ar: "السلطان أحمد", en: "Sultanahmet" },
+      },
+      {
+        label: { tr: "Merkez ve metro için", ar: "للمركز والمترو", en: "For centre and metro" },
+        value: { tr: "Taksim, Şişli", ar: "تقسيم، شيشلي", en: "Taksim, Sisli" },
+      },
+      {
+        label: { tr: "Manzara için", ar: "للإطلالة", en: "For the view" },
+        value: { tr: "Ortaköy, Beşiktaş, Üsküdar", ar: "أورتاكوي، بشكتاش، أسكودار", en: "Ortakoy, Besiktas, Uskudar" },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -178,6 +242,12 @@ export const guides: Guide[] = [
           ar: "إطلالة البوسفور هي العامل الأكثر تأثيراً في السعر داخل إسطنبول. أورتاكوي وبشكتاش على الجانب الأوروبي، وأسكودار على الضفة المقابلة وتمنحك إطلالة على برج الفتاة. تذكّر أن الفرق بين غرفة بإطلالة وأخرى بدونها ليس في النافذة فقط: هذه المناطق قريبة من المركز لكنها ليست على مسافة سير من المعالم التاريخية.",
           en: "A Bosphorus view is the single biggest price lever in Istanbul. Ortakoy and Besiktas sit on the European shore; Uskudar faces them and looks across at the Maiden's Tower. Note that the difference between a view room and an ordinary one is not only the window: these districts are central but not walking distance from the historic sights.",
         },
+        image: "/images/places/bogaz-kopru.jpg",
+        imageAlt: {
+          tr: "Boğaz Köprüsü ve kıyı semtleri",
+          ar: "جسر البوسفور والأحياء الساحلية",
+          en: "The Bosphorus Bridge and the shore districts",
+        },
       },
     ],
   },
@@ -195,6 +265,20 @@ export const guides: Guide[] = [
       ar: "أقرب متنفّس أخضر إلى إسطنبول: بحيرة وشلالات ويوم هادئ يناسب العائلات مع الأطفال.",
       en: "The closest green escape to Istanbul: a lake, waterfalls and a calm day for families.",
     },
+    facts: [
+      {
+        label: { tr: "Mesafe", ar: "المسافة", en: "Distance" },
+        value: { tr: "İstanbul'a 130 km", ar: "130 كم من إسطنبول", en: "130 km from Istanbul" },
+      },
+      {
+        label: { tr: "Program", ar: "البرنامج", en: "Programme" },
+        value: { tr: "Günübirlik", ar: "زيارة يوم واحد", en: "A single day" },
+      },
+      {
+        label: { tr: "En iyi mevsim", ar: "أفضل موسم", en: "Best season" },
+        value: { tr: "İlkbahar ve sonbahar", ar: "الربيع والخريف", en: "Spring and autumn" },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -218,6 +302,12 @@ export const guides: Guide[] = [
           tr: "Sapanca Gölü kıyısında yürüyüş yolları ve çay bahçeleri vardır. Maşukiye, ormanın içindeki şelaleleri ve dere üstüne kurulmuş alabalık restoranlarıyla bilinir. Kartepe'ye çıkıldığında gölü yukarıdan gören manzara noktasına ulaşılır; hava açıksa günün en iyi fotoğrafı oradan çıkar.",
           ar: "على ضفاف بحيرة سبانجا مسارات للمشي وحدائق شاي. أما معشوقية فمعروفة بشلالاتها داخل الغابة ومطاعم السلمون المرقّط المقامة فوق مجرى النهر. وبالصعود إلى كارتبه تصل إلى نقطة إطلالة تطلّ على البحيرة من الأعلى؛ وإذا كان الجو صافياً فمن هناك تُلتقط أجمل صورة في اليوم.",
           en: "There are walking paths and tea gardens along the shore of Lake Sapanca. Masukiye is known for its forest waterfalls and trout restaurants built over the stream. Driving up to Kartepe brings you to a viewpoint above the lake; on a clear day it produces the best photograph of the trip.",
+        },
+        image: "/images/tours/sapanca.jpg",
+        imageAlt: {
+          tr: "Sapanca Gölü kıyısı",
+          ar: "ضفة بحيرة سبانجا",
+          en: "The shore of Lake Sapanca",
         },
       },
       {
@@ -248,6 +338,20 @@ export const guides: Guide[] = [
       ar: "منطقة الخضرة والضباب: كم يوماً تحتاج لرؤية ماذا، وما الذي يجلبه كل موسم.",
       en: "The land of green and mist: what you can see in how many days, and what each season brings.",
     },
+    facts: [
+      {
+        label: { tr: "Ulaşım", ar: "الوصول", en: "Getting there" },
+        value: { tr: "Uçakla", ar: "جواً", en: "By air" },
+      },
+      {
+        label: { tr: "Ana duraklar", ar: "المحطات الرئيسية", en: "Main stops" },
+        value: { tr: "Uzungöl, Sümela, Ayder", ar: "أوزنجول، سوميلا، آيدر", en: "Uzungol, Sumela, Ayder" },
+      },
+      {
+        label: { tr: "Yayla sezonu", ar: "موسم الهضاب", en: "Plateau season" },
+        value: { tr: "Haziran sonu – eylül", ar: "أواخر يونيو – سبتمبر", en: "Late June – September" },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -271,6 +375,12 @@ export const guides: Guide[] = [
           tr: "Uzungöl, dağlarla çevrili bir göl ve etrafındaki ahşap yapılarıyla bölgenin en bilinen noktasıdır; göl çevresinde yürüyüş bir saatten kısa sürer. Sümela Manastırı kayalığa oyulmuştur ve manastıra çıkış yokuşludur — bu tırmanış her yaş için uygun değildir, ziyaret öncesinde göz önünde bulundurun.",
           ar: "أوزنجول بحيرة تحيط بها الجبال والمباني الخشبية، وهي أشهر نقاط المنطقة؛ والتجوّل حولها يستغرق أقل من ساعة. أما دير سوميلا فمنحوت في الصخر والصعود إليه فيه انحدار — وهذا التسلّق لا يناسب كل الأعمار، فخذه في الحسبان قبل الزيارة.",
           en: "Uzungol, a lake ringed by mountains and wooden houses, is the region's best-known spot; walking round it takes under an hour. The Sumela Monastery is carved into a cliff and the approach is a climb — not suitable for every age, so plan for that before you go.",
+        },
+        image: "/images/places/uzungol.jpg",
+        imageAlt: {
+          tr: "Uzungöl ve çevresindeki dağlar",
+          ar: "أوزنجول والجبال المحيطة به",
+          en: "Uzungol and the surrounding mountains",
         },
       },
       {
@@ -301,6 +411,20 @@ export const guides: Guide[] = [
       ar: "ماذا يجلب كل شهر: تقويم تتغيّر فيه الحرارة والزحام والأسعار معاً.",
       en: "What each month brings: the calendar where heat, crowds and prices move together.",
     },
+    facts: [
+      {
+        label: { tr: "En dengeli", ar: "الأكثر توازناً", en: "Best balance" },
+        value: { tr: "Nisan – mayıs", ar: "أبريل – مايو", en: "April – May" },
+      },
+      {
+        label: { tr: "En yoğun", ar: "الأكثر ازدحاماً", en: "Busiest" },
+        value: { tr: "Haziran – ağustos", ar: "يونيو – أغسطس", en: "June – August" },
+      },
+      {
+        label: { tr: "Serinlik için", ar: "للبرودة", en: "For cooler air" },
+        value: { tr: "Sapanca, Bolu, yaylalar", ar: "سبانجا، بولو، الهضاب", en: "Sapanca, Bolu, the plateaus" },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -324,6 +448,12 @@ export const guides: Guide[] = [
           tr: "Körfez'den gelen misafirlerin en yoğun tercih ettiği dönemdir. İstanbul sıcak ve nemlidir; tarihî yarımadada öğle saatlerinde gezmek yorucu olur, programı sabah erken ve ikindi sonrasına yaymak daha rahattır. Sapanca, Bolu ve Karadeniz yaylaları bu aylarda serinlik aradığınız yerlerdir.",
           ar: "هذه أكثر الفترات التي يختارها ضيوف الخليج. إسطنبول حارّة ورطبة؛ والتجوّل في شبه الجزيرة التاريخية ظهراً مُتعب، والأفضل توزيع البرنامج على الصباح الباكر وما بعد العصر. أما سبانجا وبولو وهضاب البحر الأسود فهي وجهات البرودة في هذه الأشهر.",
           en: "This is the peak season for Gulf visitors. Istanbul is hot and humid; sightseeing on the historic peninsula at midday is tiring, so spread the programme across early morning and late afternoon. Sapanca, Bolu and the Black Sea plateaus are where you go for cooler air in these months.",
+        },
+        image: "/images/places/sultanahmet.jpg",
+        imageAlt: {
+          tr: "Sultanahmet Camii",
+          ar: "جامع السلطان أحمد",
+          en: "The Blue Mosque",
         },
       },
       {

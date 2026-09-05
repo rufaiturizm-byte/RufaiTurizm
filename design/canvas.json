@@ -1,17 +1,94 @@
 {
   "artboards": [
-    { "file": "Main.dc.html",       "x": 0,    "y": 0,    "w": 1280, "h": 2150, "title": "الرئيسية — Ana Sayfa" },
-    { "file": "MainMobile.dc.html", "x": 1400, "y": 0,    "w": 390,  "h": 1520, "title": "📱 موبايل — Mobil" },
-    { "file": "Tours.dc.html",      "x": 1910, "y": 0,    "w": 1280, "h": 1420, "title": "جولاتنا — Turlar" },
-    { "file": "TourDetail.dc.html", "x": 3310, "y": 0,    "w": 1280, "h": 1780, "title": "تفاصيل الجولة — Tur Detay" },
-    { "file": "Services.dc.html",   "x": 0,    "y": 2300, "w": 1280, "h": 1720, "title": "خدمات VIP — Transfer" },
-    { "file": "About.dc.html",      "x": 1400, "y": 2300, "w": 1280, "h": 1520, "title": "من نحن — Hakkımızda" },
-    { "file": "Faq.dc.html",        "x": 2800, "y": 2300, "w": 1280, "h": 1460, "title": "الأسئلة الشائعة — SSS" },
-    { "file": "Contact.dc.html",    "x": 4200, "y": 2300, "w": 1280, "h": 1480, "title": "تواصل معنا — İletişim" }
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 4320,
+      "title": "الرئيسية — Ana Sayfa"
+    },
+    {
+      "file": "MainMobile.dc.html",
+      "x": 1400,
+      "y": 0,
+      "w": 390,
+      "h": 1520,
+      "title": "📱 موبايل — Mobil"
+    },
+    {
+      "file": "Tours.dc.html",
+      "x": 1910,
+      "y": 0,
+      "w": 1280,
+      "h": 1420,
+      "title": "جولاتنا — Turlar"
+    },
+    {
+      "file": "TourDetail.dc.html",
+      "x": 3310,
+      "y": 0,
+      "w": 1280,
+      "h": 1780,
+      "title": "تفاصيل الجولة — Tur Detay"
+    },
+    {
+      "file": "Services.dc.html",
+      "x": 1400,
+      "y": 1960,
+      "w": 1280,
+      "h": 2260,
+      "title": "خدمات VIP — Transfer"
+    },
+    {
+      "file": "About.dc.html",
+      "x": 2800,
+      "y": 1960,
+      "w": 1280,
+      "h": 1520,
+      "title": "من نحن — Hakkımızda"
+    },
+    {
+      "file": "Faq.dc.html",
+      "x": 4200,
+      "y": 1960,
+      "w": 1280,
+      "h": 1460,
+      "title": "الأسئلة الشائعة — SSS"
+    },
+    {
+      "file": "Contact.dc.html",
+      "x": 2800,
+      "y": 3620,
+      "w": 1280,
+      "h": 1480,
+      "title": "تواصل معنا — İletişim"
+    }
   ],
   "annotations": [
-    { "id": "note-theme", "x": 0, "y": -210, "w": 620, "text": "Rufai Turizm — referans tasarıma göre yeniden kuruldu\n\nPalet: gece lacivert #1B2537 + altın #C9A961 + krem #FAF7F0\nYazı tipi: Tajawal · Yön: RTL (Arapça), TR/EN'de LTR\nDönüşüm: WhatsApp (#0E7C4A — WCAG AA geçer)\n\nAna sayfa ve header/footer canlıda: rufaiturizm.com" },
-    { "id": "note-todo", "x": 4200, "y": -210, "w": 560, "text": "SENDEN BEKLENENLER\n\n[köşeli parantez] içindekiler:\n· WhatsApp numarası (şu an yer tutucu!)\n· telefon, e-posta, tam adres\n· TÜRSAB ve U-ETDS numaraları\n· Google yorum sayısı\n· kendi araç fotoğraflarınız\n\nFiyatlar örnek — gerçek tarifenizle değişecek." }
+    {
+      "id": "note-theme",
+      "x": 0,
+      "y": -210,
+      "w": 620,
+      "text": "Rufai Turizm — referans tasarıma göre yeniden kuruldu\n\nPalet: gece lacivert #1B2537 + altın #C9A961 + krem #FAF7F0\nYazı tipi: Tajawal · Yön: RTL (Arapça), TR/EN'de LTR\nDönüşüm: WhatsApp (#0E7C4A — WCAG AA geçer)\n\nAna sayfa ve header/footer canlıda: rufaiturizm.com"
+    },
+    {
+      "id": "note-yeni",
+      "x": 700,
+      "y": -210,
+      "w": 620,
+      "text": "RAKİPLERDEN ALINAN YENİ BÖLÜMLER (refs/NOTLAR.md)\n\nAna sayfa:\n· Hero altında sekmeli transfer formu + 4 güven kutusu\n· Kartlarda şehir rozeti, USD karşılığı, WhatsApp butonu\n· Çok günlük paketler (indirim rozeti, \"fiyat talep üzerine\")\n· Altın zeminli \"Resmî Belgeler ve Ruhsatlar\" bandı\n· Puan kırılımlı müşteri yorumları\n\nTransfer sayfası: 5 adımlı rezervasyon rehberi + iki örnek senaryo"
+    },
+    {
+      "id": "note-todo",
+      "x": 4200,
+      "y": -210,
+      "w": 560,
+      "text": "SENDEN BEKLENENLER\n\n[köşeli parantez] içindekiler:\n· WhatsApp numarası (şu an yer tutucu!)\n· telefon, e-posta, tam adres\n· TÜRSAB ve U-ETDS numaraları\n· gerçek Google yorumları (isim + ülke + tarih)\n· kendi araç fotoğraflarınız\n\nFiyatlar ve paket süreleri örnek — gerçek tarifenizle değişecek.\nİndirim rozeti sadece gerçek indirimde kullanılmalı."
+    }
   ],
-  "launch": { "view": "canvas" }
+  "launch": {
+    "view": "canvas"
+  }
 }

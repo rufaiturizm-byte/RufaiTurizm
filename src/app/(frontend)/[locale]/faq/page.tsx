@@ -60,7 +60,7 @@ export default async function FaqPage({
         subtitle={t("subtitle")}
       />
 
-      <section className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8">
+      <section className="mx-auto w-full max-w-3xl px-5 py-24 sm:px-8">
         <Accordion multiple={false} className="w-full">
           {items.map((item, index) => (
             <AccordionItem key={item.question} value={`item-${index}`}>
@@ -74,10 +74,10 @@ export default async function FaqPage({
           ))}
         </Accordion>
 
-        <div className="mt-12 rounded-xl border p-8 text-center">
+        <div className="mt-12 surface-card p-8 text-center">
           <p className="text-[15.5px] font-semibold">{t("subtitle")}</p>
           <WhatsAppLink
-            className="mt-5 inline-flex items-center gap-2 rounded-md px-7 py-3.5 text-[14.5px] font-bold"
+            className="cta-gold mt-5 inline-flex items-center gap-2 px-7 py-3.5 text-[14.5px] font-bold"
             style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
           >
             {tCta("whatsapp")}

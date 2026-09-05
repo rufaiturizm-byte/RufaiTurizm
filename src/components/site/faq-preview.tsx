@@ -27,7 +27,7 @@ export async function FaqPreview() {
   }));
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("faq")}
         title={t("title")}
@@ -35,7 +35,7 @@ export async function FaqPreview() {
         action={
           <Link
             href="/faq"
-            className="inline-flex shrink-0 items-center gap-2 rounded-md border px-4 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border px-5 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
           >
             {t("allQuestions")}
             <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />

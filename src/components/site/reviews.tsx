@@ -35,7 +35,7 @@ export async function Reviews() {
 
   return (
     <section style={{ background: "var(--brand-night)" }}>
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
         <h2 className="mb-9 text-center text-[26px] font-bold text-white sm:text-[30px]">
           {t("title")} <span style={{ color: "var(--brand-gold)" }}>{t("titleAccent")}</span>
         </h2>

@@ -46,7 +46,7 @@ export async function Header() {
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
           <WhatsAppLink
-            className="hidden rounded-md px-5 py-2.5 text-[14px] font-semibold transition-opacity hover:opacity-90 sm:inline-flex"
+            className="cta-gold hidden px-5 py-2.5 text-[14px] font-semibold sm:inline-flex"
             style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
           >
             {tCta("bookNow")}

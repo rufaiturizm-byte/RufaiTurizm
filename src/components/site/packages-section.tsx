@@ -25,7 +25,7 @@ export async function PackagesSection({ locale }: { locale: string }) {
   const lang = locale as Locale;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading eyebrow={tEyebrow("packages")} title={t("title")} subtitle={t("subtitle")} />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -35,7 +35,7 @@ export async function PackagesSection({ locale }: { locale: string }) {
           return (
             <article
               key={item.slug}
-              className="flex flex-col overflow-hidden rounded-lg border bg-card"
+              className="flex flex-col overflow-hidden surface-card"
             >
               <div className="relative aspect-[4/3]">
                 <Image

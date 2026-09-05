@@ -97,7 +97,7 @@ export default async function TourDetailPage({
               "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 94%, transparent) 0%, color-mix(in oklab, var(--brand-night) 62%, transparent) 55%, color-mix(in oklab, var(--brand-night) 30%, transparent) 100%)",
           }}
         />
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-24">
           <div className="text-[12.5px] text-white/55">
             {tNav("home")} · {tNav("tours")} · {name}
           </div>
@@ -120,7 +120,7 @@ export default async function TourDetailPage({
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
           <div>
             <p className="text-[16px] leading-[1.9] text-foreground/85">{description}</p>
@@ -133,7 +133,7 @@ export default async function TourDetailPage({
               {highlights.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 rounded-lg border bg-card p-4 text-[14.5px]"
+                  className="flex items-start gap-3 surface-card p-4 text-[14.5px]"
                 >
                   <MapPin
                     className="mt-0.5 size-4 shrink-0"
@@ -180,7 +180,7 @@ export default async function TourDetailPage({
               </div>
             </div>
 
-            <div className="mt-10 rounded-xl border p-6">
+            <div className="mt-10 surface-card p-6">
               <h2 className="flex items-center gap-2.5 text-[16px] font-bold">
                 <Info
                   className="size-4.5"
@@ -195,7 +195,7 @@ export default async function TourDetailPage({
             </div>
           </div>
 
-          <aside className="h-fit rounded-xl border bg-card p-6 lg:sticky lg:top-24">
+          <aside className="h-fit surface-card p-6 lg:sticky lg:top-24">
             <div className="text-[12px] text-muted-foreground">{t("from")}</div>
             <div className="mt-1 flex items-baseline gap-2.5">
               <span
@@ -214,7 +214,7 @@ export default async function TourDetailPage({
 
             <WhatsAppLink
               subject={name}
-              className="mt-6 flex items-center justify-center gap-2.5 rounded-md py-4 text-[15px] font-bold text-white transition-opacity hover:opacity-90"
+              className="mt-6 flex items-center justify-center gap-2.5 rounded-full py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5"
               style={{ background: "var(--brand-wa)" }}
             >
               <MessageCircle className="size-5" aria-hidden="true" />
@@ -223,7 +223,7 @@ export default async function TourDetailPage({
 
             <Link
               href="/tours"
-              className="mt-3 flex items-center justify-center gap-2 rounded-md border py-3 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+              className="mt-3 flex items-center justify-center gap-2 rounded-full border py-3 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
             >
               {tCommon("backToTours")}
               <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
@@ -232,7 +232,7 @@ export default async function TourDetailPage({
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
         <SectionHeading eyebrow={tEyebrow("tours")} title={tPage("title")} subtitle={tPage("subtitle")} />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {others.map((item) => (

@@ -89,13 +89,21 @@
     background-position: calc(100% + var(--shiny-width)) 0;}}}
 
 :root {
-  /* Rufai Turizm marka paleti — gece lacivert + altın + krem */
-  --brand-night: oklch(0.205 0.042 258);      /* koyu bölümler, header, footer */
-  --brand-night-2: oklch(0.265 0.045 258);    /* koyu zemin üzeri panel */
-  --brand-night-3: oklch(0.33 0.045 258);     /* koyu zemin üzeri kenarlık */
-  --brand-gold: oklch(0.76 0.098 82);         /* altın aksan */
-  --brand-gold-deep: oklch(0.62 0.1 72);      /* altın, açık zeminde okunur */
-  --brand-cream: oklch(0.975 0.009 85);       /* açık bölüm zemini */
+  /*
+   * Rufai Turizm marka paleti — gece lacivert + sıcak kum + kağıt beyazı.
+   *
+   * Referans tasarımın renkleri ölçülüp karşılaştırıldı ve iki fark çıktı:
+   * bizim koyu zeminimiz hem daha açık hem iki kat daha maviydi, altınımız
+   * da iki kat daha doygundu. Pahalı görünen tasarımların ortak yanı bunun
+   * tersi: derin ve neredeyse nötr koyular, kısık doygunlukta aksan.
+   * Aksan artık doygun bir altın değil, açık sıcak kum.
+   */
+  --brand-night: oklch(0.178 0.021 252);      /* koyu bölümler, header, footer */
+  --brand-night-2: oklch(0.232 0.019 252);    /* koyu zemin üzeri panel */
+  --brand-night-3: oklch(0.30 0.017 252);     /* koyu zemin üzeri kenarlık */
+  --brand-gold: oklch(0.845 0.047 70);        /* sıcak kum — koyu zeminde ve dolgularda */
+  --brand-gold-deep: oklch(0.54 0.062 68);   /* açık zeminde okunan koyu ton */
+  --brand-cream: oklch(0.978 0.010 73);       /* sıcak kağıt beyazı */
   --brand-wa: oklch(0.52 0.132 152);          /* WhatsApp — AA kontrast geçer */
 
   --background: var(--brand-cream);
@@ -122,6 +130,32 @@
   --chart-4: oklch(0.35 0.05 258);
   --chart-5: var(--brand-night);
   --radius: 0.5rem;
+
+  /*
+   * Yüzey dili.
+   *
+   * Kartlar 1px sert kenarlıkla çiziliyordu; bu, sayfaya ucuz bir "form
+   * elemanı" havası veriyordu. Rakip sitelerin premium hissi kütüphaneden
+   * değil üç şeyden geliyor: geniş yumuşak ve MARKA RENGİNE ÇALAN gölge,
+   * cömert köşe yarıçapı, ve düz dolgu yerine hafif gradyanlı yüzey.
+   * Aşağısı bunun bizim palete uyarlanmış hali.
+   */
+  --radius-card: 1.15rem;
+  --radius-pill: 999px;
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --surface: linear-gradient(
+    150deg,
+    oklch(1 0 0) 0%,
+    color-mix(in oklab, var(--brand-cream) 70%, oklch(1 0 0)) 100%
+  );
+  --shadow-card:
+    0 1px 2px color-mix(in oklab, var(--brand-night) 8%, transparent),
+    0 18px 44px color-mix(in oklab, var(--brand-night) 13%, transparent);
+  --shadow-card-hover:
+    0 2px 8px color-mix(in oklab, var(--brand-night) 10%, transparent),
+    0 32px 72px color-mix(in oklab, var(--brand-night) 22%, transparent);
+  --shadow-gold: 0 12px 32px color-mix(in oklab, var(--brand-gold) 42%, transparent);
+  --hairline: color-mix(in oklab, var(--brand-night) 7%, transparent);
   --sidebar: oklch(0.985 0.008 85);
   --sidebar-foreground: oklch(0.22 0.035 258);
   --sidebar-primary: var(--brand-night);
@@ -187,4 +221,63 @@ body {
 [dir="rtl"] h2,
 [dir="rtl"] h3 {
   letter-spacing: normal;
+}
+
+/*
+ * Kart yüzeyi. `rounded-lg border bg-card` üçlüsünün yerini alır:
+ * gradyanlı zemin, saç teli kenarlık, iki katmanlı yumuşak gölge ve
+ * üzerine gelince hafif yükselme.
+ */
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition:
+    box-shadow 320ms var(--ease-soft),
+    transform 320ms var(--ease-soft);
+}
+
+@media (hover: hover) {
+  .surface-card-lift:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surface-card,
+  .surface-card-lift:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Koyu zeminde aynı dil: gradyan yerine hafif aydınlatılmış panel. */
+.surface-card-dark {
+  background: linear-gradient(
+    150deg,
+    var(--brand-night-2) 0%,
+    color-mix(in oklab, var(--brand-night) 80%, var(--brand-night-2)) 100%
+  );
+  border: 1px solid color-mix(in oklab, white 9%, transparent);
+  border-radius: var(--radius-card);
+  box-shadow: 0 18px 44px color-mix(in oklab, black 32%, transparent);
+}
+
+/* Altın düğmeler: dolgunun altında markaya çalan bir hâle. */
+.cta-gold {
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-gold);
+  letter-spacing: 0.01em;
+  transition:
+    box-shadow 320ms var(--ease-soft),
+    transform 320ms var(--ease-soft);
+}
+
+@media (hover: hover) {
+  .cta-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px color-mix(in oklab, var(--brand-gold) 55%, transparent);
+  }
 }

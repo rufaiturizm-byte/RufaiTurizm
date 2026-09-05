@@ -17,23 +17,23 @@ export async function TrustBoxes() {
   ];
 
   return (
-    <section style={{ background: "var(--brand-night)" }}>
+    <section className="border-y" style={{ background: "var(--brand-cream)", borderColor: "var(--hairline)" }}>
       <div className="mx-auto grid max-w-7xl grid-cols-2 lg:grid-cols-4">
         {items.map(({ icon: Icon, title, desc }) => (
           <div
             key={title}
             /* Kenarlık dizilim yönünü izler: mobilde alt, ızgarada yan taraf. */
-            className="flex items-center gap-3 border-b px-4 py-5 not-nth-[2n]:border-e sm:gap-3.5 sm:px-7 sm:py-6 nth-[n+3]:border-b-0 lg:border-b-0 lg:not-last:border-e"
-            style={{ borderColor: "var(--brand-night-3)" }}
+            className="flex items-center gap-3 border-b px-4 py-6 not-nth-[2n]:border-e sm:gap-3.5 sm:px-7 sm:py-7 nth-[n+3]:border-b-0 lg:border-b-0 lg:not-last:border-e"
+            style={{ borderColor: "var(--hairline)" }}
           >
             <Icon
               className="size-6 shrink-0"
-              style={{ color: "var(--brand-gold)" }}
+              style={{ color: "var(--brand-gold-deep)" }}
               aria-hidden="true"
             />
             <div>
-              <div className="text-[13px] font-bold leading-snug text-white sm:text-[14.5px]">{title}</div>
-              <div className="mt-1 text-[11.5px] leading-snug text-white/55 sm:text-[12.5px]">{desc}</div>
+              <div className="text-[13px] font-bold leading-snug sm:text-[14.5px]">{title}</div>
+              <div className="mt-1 text-[11.5px] leading-snug text-muted-foreground sm:text-[12.5px]">{desc}</div>
             </div>
           </div>
         ))}

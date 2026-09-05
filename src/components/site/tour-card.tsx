@@ -23,7 +23,7 @@ export async function TourCard({ tour }: { tour: Tour }) {
   const href = { pathname: "/tours/[slug]" as const, params: { slug: tour.slug } };
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-lg border bg-card transition-shadow hover:shadow-lg">
+    <article className="group flex flex-col overflow-hidden surface-card surface-card-lift">
       <Link href={href} className="relative block aspect-[4/3] overflow-hidden">
         <Image
           src={tour.image}
@@ -72,14 +72,14 @@ export async function TourCard({ tour }: { tour: Tour }) {
         <div className="mt-3.5 flex flex-col gap-2">
           <Link
             href={href}
-            className="inline-flex items-center justify-center gap-2 rounded-md border py-2.5 text-[13px] font-semibold transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center gap-2 rounded-full border py-2.5 text-[13px] font-semibold transition-colors hover:bg-secondary"
           >
             {tCommon("details")}
             <ArrowLeft className="size-3.5 rtl:rotate-180" aria-hidden="true" />
           </Link>
           <WhatsAppLink
             subject={name}
-            className="inline-flex items-center justify-center gap-2 rounded-md py-2.5 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
+            className="inline-flex items-center justify-center gap-2 rounded-full py-2.5 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5"
             style={{ background: "var(--brand-wa)" }}
           >
             <MessageCircle className="size-4" aria-hidden="true" />

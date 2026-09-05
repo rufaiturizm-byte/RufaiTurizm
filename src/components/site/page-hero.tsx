@@ -34,7 +34,7 @@ export function PageHero({
             "linear-gradient(to inline-end, color-mix(in oklab, var(--brand-night) 95%, transparent) 0%, color-mix(in oklab, var(--brand-night) 68%, transparent) 62%, color-mix(in oklab, var(--brand-night) 35%, transparent) 100%)",
         }}
       />
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-20">
         <div className="text-[12.5px] text-white/55">{breadcrumb}</div>
         <h1 className="mt-3 font-display text-[34px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[46px]">
           {title}

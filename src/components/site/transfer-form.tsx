@@ -61,7 +61,7 @@ export function TransferForm() {
     }`;
 
   return (
-    <div className="relative overflow-hidden rounded-xl border bg-card p-5 shadow-xl sm:p-6">
+    <div className="relative overflow-hidden surface-card p-5 shadow-xl sm:p-6">
       {/* Kartın kenarında dolaşan ışık — sayfanın tek etkileşimli alanı,
           göz oraya gitsin diye. */}
       <BorderBeam

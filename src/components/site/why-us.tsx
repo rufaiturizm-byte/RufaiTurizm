@@ -17,7 +17,7 @@ export async function WhyUs({ subtitle }: { subtitle?: string }) {
 
   return (
     <section style={{ background: "var(--brand-night)" }}>
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 py-28 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image

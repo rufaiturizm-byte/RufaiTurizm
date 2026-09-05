@@ -15,18 +15,18 @@ export async function DestinationsMarquee() {
   return (
     <section
       className="overflow-hidden border-y py-7"
-      style={{ background: "var(--brand-night)", borderColor: "var(--brand-night-3)" }}
+      style={{ background: "var(--brand-cream)", borderColor: "var(--hairline)" }}
       aria-hidden="true"
     >
       <Marquee pauseOnHover className="[--duration:38s] [--gap:2.75rem]">
         {cities.map((city) => (
           <span key={city} className="flex items-center gap-11">
-            <span className="font-display text-[26px] font-medium text-white/45 sm:text-[32px]">
+            <span className="font-display text-[26px] font-medium text-foreground/30 sm:text-[32px]">
               {city}
             </span>
             <span
               className="size-1.5 shrink-0 rounded-full"
-              style={{ background: "var(--brand-gold)" }}
+              style={{ background: "var(--brand-gold-deep)" }}
             />
           </span>
         ))}

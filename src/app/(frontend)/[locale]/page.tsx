@@ -73,7 +73,7 @@ export default async function HomePage({
             }}
           />
 
-          <div className="mx-auto max-w-7xl px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28">
+          <div className="mx-auto max-w-7xl px-5 pt-16 pb-24 sm:px-8 sm:pt-24 sm:pb-28">
             <div
               className="inline-flex items-center gap-2.5 rounded-full border px-4 py-2 backdrop-blur-sm"
               style={{
@@ -115,7 +115,7 @@ export default async function HomePage({
               </WhatsAppLink>
               <Link
                 href="/tours"
-                className="inline-flex items-center gap-2 rounded-md border border-white/35 px-7 py-4 text-[15px] font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-white/35 px-7 py-4 text-[15px] font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
               >
                 {tHome2("allToursCta")}
                 <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
@@ -167,7 +167,7 @@ export default async function HomePage({
 
         {/* Çok tercih edilen turlar — krem zemin, iki beyaz bölüm arasında ayrım */}
         <section style={{ background: "var(--brand-cream)" }}>
-          <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
+          <div className="mx-auto w-full max-w-7xl px-5 py-28 sm:px-8">
           <SectionHeading
             eyebrow={tEyebrow("tours")}
             title={tHome2("popularTours")}
@@ -175,7 +175,7 @@ export default async function HomePage({
             action={
               <Link
                 href="/tours"
-                className="inline-flex shrink-0 items-center gap-2 rounded-md border px-4 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+                className="inline-flex shrink-0 items-center gap-2 rounded-full border px-5 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
               >
                 {tHome2("allToursCta")}
                 <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
@@ -200,7 +200,7 @@ export default async function HomePage({
         <WhyUs subtitle={tHome2("vipText")} />
 
         {/* VIP transfer bandı */}
-        <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+        <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
           <div className="relative isolate overflow-hidden rounded-xl">
             <Image
               src="/images/vito-black.jpg"
@@ -223,7 +223,7 @@ export default async function HomePage({
               <p className="mt-4 text-[15.5px] leading-[1.8] text-white/78">{tHome2("vipText")}</p>
               <WhatsAppLink
                 subject={tHome2("vipTitle")}
-                className="mt-8 inline-flex items-center gap-2 rounded-md px-6 py-3.5 text-[14.5px] font-bold"
+                className="cta-gold mt-8 inline-flex items-center gap-2 px-7 py-3.5 text-[14.5px] font-bold"
                 style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
               >
                 {tCta("whatsapp")}

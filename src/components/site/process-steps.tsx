@@ -13,7 +13,7 @@ export async function ProcessSteps() {
   const tEyebrow = await getTranslations("eyebrow");
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("process")}
         title={t("processTitle")}

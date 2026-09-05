@@ -64,13 +64,13 @@ export default async function ServicesPage({
         <TrustBoxes />
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 pt-14 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
         <p className="max-w-3xl text-[15.5px] leading-[1.9] text-foreground/85">
           {t("intro")}
         </p>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
         <SectionHeading eyebrow={tEyebrow("services")} title={t("title")} subtitle={t("subtitle")} />
 
         <div className="grid gap-5 sm:grid-cols-2">
@@ -84,7 +84,7 @@ export default async function ServicesPage({
             return (
               <article
                 key={service.key}
-                className="group flex flex-col overflow-hidden rounded-lg border bg-card transition-shadow hover:shadow-lg sm:flex-row"
+                className="group flex flex-col overflow-hidden surface-card surface-card-lift sm:flex-row"
               >
                 <Link
                   href={href}
@@ -137,14 +137,14 @@ export default async function ServicesPage({
                   <div className="mt-4 flex flex-wrap gap-2">
                     <Link
                       href={href}
-                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-md border py-2.5 text-[13px] font-semibold transition-colors hover:bg-secondary"
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border py-2.5 text-[13px] font-semibold transition-colors hover:bg-secondary"
                     >
                       {tCommon("details")}
                       <ArrowLeft className="size-3.5 rtl:rotate-180" aria-hidden="true" />
                     </Link>
                     <WhatsAppLink
                       subject={name}
-                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-md py-2.5 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-full py-2.5 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5"
                       style={{ background: "var(--brand-wa)" }}
                     >
                       <MessageCircle className="size-4" aria-hidden="true" />

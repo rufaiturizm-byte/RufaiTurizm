@@ -22,7 +22,7 @@ export async function ServicesOverview() {
   const tEyebrow = await getTranslations("eyebrow");
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 py-24 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("services")}
         title={t("title")}
@@ -30,7 +30,7 @@ export async function ServicesOverview() {
         action={
           <Link
             href="/services"
-            className="inline-flex shrink-0 items-center gap-2 rounded-md border px-4 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border px-5 py-2.5 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
           >
             {tPage("allServices")}
             <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
@@ -48,7 +48,7 @@ export async function ServicesOverview() {
 
           return (
             <Reveal key={service.key} delay={index * 0.08} className="flex">
-              <article className="group flex w-full flex-col overflow-hidden rounded-lg border bg-card transition-shadow hover:shadow-lg">
+              <article className="group flex w-full flex-col overflow-hidden surface-card surface-card-lift">
               <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                 <Image
                   src={service.image}
@@ -78,7 +78,7 @@ export async function ServicesOverview() {
                   </span>
                   <WhatsAppLink
                     subject={name}
-                    className="inline-flex items-center gap-1.5 rounded-md px-3.5 py-2 text-[12.5px] font-bold text-white transition-opacity hover:opacity-90"
+                    className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[12.5px] font-bold text-white transition-transform hover:-translate-y-0.5"
                     style={{ background: "var(--brand-wa)" }}
                   >
                     <MessageCircle className="size-3.5" aria-hidden="true" />

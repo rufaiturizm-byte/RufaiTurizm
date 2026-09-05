@@ -28,7 +28,7 @@ export async function TransferTypes() {
   const types = ["1", "2", "3", "4"] as const;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("transfer")}
         title={t("typesTitle")}
@@ -71,14 +71,14 @@ export async function FleetGrid() {
   ];
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("fleet")}
         title={tPage("fleetTitle")}
         subtitle={tPage("fleetSubtitle")}
       />
 
-      <article className="overflow-hidden rounded-xl border bg-card">
+      <article className="overflow-hidden surface-card">
         <div className="grid gap-px sm:grid-cols-3" style={{ background: "var(--border)" }}>
           {photos.map((photo, index) => (
             <div
@@ -124,7 +124,7 @@ export async function FleetGrid() {
 
           <WhatsAppLink
             subject={t("vito.name")}
-            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md px-7 py-3.5 text-[14px] font-bold text-white transition-opacity hover:opacity-90"
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5"
             style={{ background: "var(--brand-wa)" }}
           >
             <MessageCircle className="size-4" aria-hidden="true" />
@@ -145,7 +145,7 @@ export async function TransferWhy() {
   const reasons = ["1", "2", "3", "4", "5", "6"] as const;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading eyebrow={tEyebrow("why")} title={t("whyTitle")} />
 
       <div className="grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -183,7 +183,7 @@ export async function TransferSteps() {
   const tEyebrow = await getTranslations("eyebrow");
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("process")}
         title={t("stepsTitle")}
@@ -222,7 +222,7 @@ export async function ServiceCities() {
   const cities = t.raw("cities") as string[];
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("cities")}
         title={t("citiesTitle")}
@@ -254,7 +254,7 @@ export async function ClosingCta() {
   const tCta = await getTranslations("cta");
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <div
         className="flex flex-col items-center gap-5 rounded-xl px-8 py-12 text-center"
         style={{ background: "var(--brand-night)" }}
@@ -267,7 +267,7 @@ export async function ClosingCta() {
         <h2 className="font-display text-[26px] font-semibold leading-[1.15] text-white sm:text-[34px]">{t("ctaTitle")}</h2>
         <p className="max-w-lg text-[15px] leading-[1.8] text-white/70">{t("ctaText")}</p>
         <WhatsAppLink
-          className="mt-2 inline-flex items-center gap-2.5 rounded-md px-8 py-4 text-[15px] font-bold"
+          className="cta-gold mt-2 inline-flex items-center gap-2.5 px-8 py-4 text-[15px] font-bold"
           style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
         >
           <MessageCircle className="size-5" aria-hidden="true" />

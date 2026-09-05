@@ -52,7 +52,7 @@ export default async function AboutPage({
         subtitle={t("subtitle")}
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 py-24 sm:px-8">
         <div className="flex max-w-3xl flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
           <p>{t("p1")}</p>
           <p>{t("p2")}</p>
@@ -63,11 +63,11 @@ export default async function AboutPage({
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
         <SectionHeading title={tWhy("title")} subtitle={t("howTitle")} />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map(({ icon: Icon, key }) => (
-            <div key={key} className="rounded-lg border bg-card p-6">
+            <div key={key} className="surface-card p-6">
               <Icon
                 className="size-7"
                 style={{ color: "var(--brand-gold-deep)" }}
@@ -86,7 +86,7 @@ export default async function AboutPage({
 
       <section className="mx-auto w-full max-w-7xl px-5 py-16 text-center sm:px-8">
         <WhatsAppLink
-          className="inline-flex items-center gap-2 rounded-md px-8 py-4 text-[15px] font-bold"
+          className="cta-gold inline-flex items-center gap-2 px-8 py-4 text-[15px] font-bold"
           style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
         >
           {tCta("whatsapp")}

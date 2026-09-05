@@ -49,13 +49,13 @@ export default async function ToursPage({
         subtitle={t("subtitle")}
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 pt-14 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
         <p className="max-w-3xl text-[15.5px] leading-[1.9] text-foreground/85">
           {t("intro")}
         </p>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8">
+      <section className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
         <SectionHeading eyebrow={tEyebrow("tours")} title={t("title")} subtitle={t("subtitle")} />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {tours.map((tour) => (

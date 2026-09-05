@@ -49,7 +49,7 @@ export default async function ContactPage({
         subtitle={t("subtitle")}
       />
 
-      <section className="mx-auto w-full max-w-5xl px-5 py-16 sm:px-8">
+      <section className="mx-auto w-full max-w-5xl px-5 py-24 sm:px-8">
         <div
           className="rounded-xl p-8 text-center sm:p-10"
           style={{ background: "var(--brand-night)" }}
@@ -64,7 +64,7 @@ export default async function ContactPage({
             {t("whatsappDesc")}
           </p>
           <WhatsAppLink
-            className="mt-7 inline-flex items-center gap-2 rounded-md px-8 py-4 text-[15px] font-bold"
+            className="cta-gold mt-7 inline-flex items-center gap-2 px-8 py-4 text-[15px] font-bold"
             style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
           >
             {tCta("whatsapp")}
@@ -75,7 +75,7 @@ export default async function ContactPage({
           {hasRealPhone ? (
             <a
               href={`tel:${siteConfig.phoneHref}`}
-              className="flex items-start gap-4 rounded-lg border bg-card p-6 transition-shadow hover:shadow-md"
+              className="flex items-start gap-4 surface-card p-6 transition-shadow hover:shadow-md"
             >
               <Phone className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
               <div>
@@ -89,7 +89,7 @@ export default async function ContactPage({
 
           <a
             href={`mailto:${siteConfig.email}`}
-            className="flex items-start gap-4 rounded-lg border bg-card p-6 transition-shadow hover:shadow-md"
+            className="flex items-start gap-4 surface-card p-6 transition-shadow hover:shadow-md"
           >
             <Mail className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             <div>
@@ -100,7 +100,7 @@ export default async function ContactPage({
             </div>
           </a>
 
-          <div className="flex items-start gap-4 rounded-lg border bg-card p-6">
+          <div className="flex items-start gap-4 surface-card p-6">
             <MapPin className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             <div>
               <div className="text-[14.5px] font-bold">{tNav("contact")}</div>
@@ -108,7 +108,7 @@ export default async function ContactPage({
             </div>
           </div>
 
-          <div className="flex items-start gap-4 rounded-lg border bg-card p-6">
+          <div className="flex items-start gap-4 surface-card p-6">
             <Clock className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             <div>
               <div className="text-[14.5px] font-bold">{t("hoursTitle")}</div>
@@ -116,7 +116,7 @@ export default async function ContactPage({
             </div>
           </div>
 
-          <div className="flex items-start gap-4 rounded-lg border bg-card p-6">
+          <div className="flex items-start gap-4 surface-card p-6">
             <Timer className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             <div>
               <div className="text-[14.5px] font-bold">{t("responseTitle")}</div>
@@ -126,7 +126,7 @@ export default async function ContactPage({
             </div>
           </div>
 
-          <div className="flex items-start gap-4 rounded-lg border bg-card p-6">
+          <div className="flex items-start gap-4 surface-card p-6">
             <Languages className="mt-0.5 size-5 shrink-0" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             <div>
               <div className="text-[14.5px] font-bold">{t("languagesTitle")}</div>
@@ -141,7 +141,7 @@ export default async function ContactPage({
             {(["topic1", "topic2", "topic3", "topic4"] as const).map((key) => (
               <li
                 key={key}
-                className="flex items-start gap-3 rounded-lg border bg-card p-5 text-[14.5px]"
+                className="flex items-start gap-3 surface-card p-5 text-[14.5px]"
               >
                 <Check
                   className="mt-0.5 size-4 shrink-0"

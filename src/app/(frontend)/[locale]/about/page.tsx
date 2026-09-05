@@ -65,7 +65,10 @@ export default async function AboutPage({
       <PageHero
         image="/images/hero-ortakoy.jpg"
         imageAlt={locale === "ar" ? "مسجد أورتاكوي ومضيق البوسفور" : "Ortaköy Camii ve Boğaz"}
-        breadcrumb={`${tNav("home")} · ${tNav("about")}`}
+        crumbs={[
+          { label: tNav("home"), href: "/" },
+          { label: tNav("about") },
+        ]}
         title={t("title")}
         subtitle={t("subtitle")}
       />

@@ -72,7 +72,10 @@ export default async function ServicesPage({
       <PageHero
         image="/images/vito-black.jpg"
         imageAlt={locale === "ar" ? "سيارة فيتو VIP" : "VIP Vito aracı"}
-        breadcrumb={`${tNav("home")} · ${tNav("services")}`}
+        crumbs={[
+          { label: tNav("home"), href: "/" },
+          { label: tNav("services") },
+        ]}
         title={t("title")}
         subtitle={t("subtitle")}
       />

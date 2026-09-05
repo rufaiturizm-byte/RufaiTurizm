@@ -73,7 +73,10 @@ export default async function HotelsPage({
       <PageHero
         image="/images/hero-ortakoy.jpg"
         imageAlt={locale === "ar" ? "مسجد أورتاكوي ومضيق البوسفور" : "Ortaköy Camii ve Boğaz"}
-        breadcrumb={`${tNav("home")} · ${tNav("hotels")}`}
+        crumbs={[
+          { label: tNav("home"), href: "/" },
+          { label: tNav("hotels") },
+        ]}
         title={t("title")}
         subtitle={t("subtitle")}
       />

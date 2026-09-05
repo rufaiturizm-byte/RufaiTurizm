@@ -6,6 +6,7 @@ import { ArrowLeft, Banknote, Headphones, MessagesSquare, Users } from "lucide-r
 import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
@@ -106,9 +107,13 @@ export default async function ServiceDetailPage({
         />
         <div className="absolute inset-0 -z-10 scrim-x" />
         <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-24">
-          <div className="text-[12.5px] text-white/55">
-            {tNav("home")} · {tNav("services")} · {name}
-          </div>
+          <Breadcrumbs
+            items={[
+              { label: tNav("home"), href: "/" },
+              { label: tNav("services"), href: "/services" },
+              { label: name },
+            ]}
+          />
           <h1 className="mt-3 max-w-2xl font-display text-[34px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[48px]">
             {name}
           </h1>

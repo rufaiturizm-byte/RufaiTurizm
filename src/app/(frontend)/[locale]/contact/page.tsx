@@ -105,7 +105,10 @@ export default async function ContactPage({
       <PageHero
         image="/images/chauffeur.jpg"
         imageAlt={locale === "ar" ? "سائق محترف" : "Profesyonel şoför"}
-        breadcrumb={`${tNav("home")} · ${tNav("contact")}`}
+        crumbs={[
+          { label: tNav("home"), href: "/" },
+          { label: tNav("contact") },
+        ]}
         title={t("title")}
         subtitle={t("subtitle")}
       />

@@ -198,7 +198,8 @@
     "details": "View details",
     "included": "Included in the price",
     "backToTours": "All tours",
-    "backToServices": "All services"
+    "backToServices": "All services",
+    "backToTop": "Back to top"
   },
   "servicesPage": {
     "title": "Our Services",

@@ -198,7 +198,8 @@
     "details": "Ayrıntıları gör",
     "included": "Fiyata dahil",
     "backToTours": "Tüm turlar",
-    "backToServices": "Tüm hizmetler"
+    "backToServices": "Tüm hizmetler",
+    "backToTop": "Başa dön"
   },
   "servicesPage": {
     "title": "Hizmetlerimiz",

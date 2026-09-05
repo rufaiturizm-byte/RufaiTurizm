@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
+import { NavLink } from "./nav-link";
 import { LanguageSwitcher } from "./language-switcher";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { MobileNav } from "./mobile-nav";
@@ -47,13 +48,9 @@ export async function Header() {
             itibaren, arada mobil menü devrede. */}
         <nav className="hidden items-center gap-6 xl:flex 2xl:gap-8">
           {items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-[14px] font-medium whitespace-nowrap text-white/72 transition-colors hover:text-white 2xl:text-[15px]"
-            >
+            <NavLink key={item.href} href={item.href}>
               {item.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 

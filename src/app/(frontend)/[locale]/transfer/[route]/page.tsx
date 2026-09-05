@@ -5,6 +5,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, Clock, PlaneLanding, Route as RouteIcon } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { ReadingProgress } from "@/components/site/scroll-helpers";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
@@ -84,6 +86,7 @@ export default async function TransferRoutePage({
 
   return (
     <main className="flex flex-1 flex-col">
+      <ReadingProgress />
       <BreadcrumbSchema
         items={[
           { name: tNav("home"), url: getPathname({ locale, href: "/" }) },
@@ -110,9 +113,13 @@ export default async function TransferRoutePage({
         <div className="absolute inset-0 -z-10 scrim-x" />
 
         <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
-          <div className="text-[12.5px] text-white/60">
-            {tNav("home")} · {tNav("transfer")}
-          </div>
+          <Breadcrumbs
+            items={[
+              { label: tNav("home"), href: "/" },
+              { label: tNav("transfer"), href: "/transfer" },
+              { label: title },
+            ]}
+          />
           <h1 className="mt-3 max-w-3xl font-display text-[32px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[46px]">
             {title}
           </h1>

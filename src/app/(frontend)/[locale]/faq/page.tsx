@@ -76,7 +76,10 @@ export default async function FaqPage({
       <PageHero
         image="/images/kizkulesi.jpg"
         imageAlt={locale === "ar" ? "برج الفتاة في إسطنبول" : "Kız Kulesi, İstanbul"}
-        breadcrumb={`${tNav("home")} · ${t("title")}`}
+        crumbs={[
+          { label: tNav("home"), href: "/" },
+          { label: t("title") },
+        ]}
         title={t("title")}
         subtitle={t("subtitle")}
       />

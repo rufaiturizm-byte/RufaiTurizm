@@ -70,7 +70,10 @@ export default async function ToursPage({
       <PageHero
         image="/images/tours/istanbul.jpg"
         imageAlt={tTours("istanbul.name")}
-        breadcrumb={`${tNav("home")} · ${tNav("tours")}`}
+        crumbs={[
+          { label: tNav("home"), href: "/" },
+          { label: tNav("tours") },
+        ]}
         title={t("title")}
         subtitle={t("subtitle")}
       />

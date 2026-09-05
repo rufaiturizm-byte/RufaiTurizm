@@ -198,7 +198,8 @@
     "details": "عرض التفاصيل",
     "included": "شامل السعر",
     "backToTours": "كل الجولات",
-    "backToServices": "كل الخدمات"
+    "backToServices": "كل الخدمات",
+    "backToTop": "العودة إلى الأعلى"
   },
   "servicesPage": {
     "title": "خدماتنا",

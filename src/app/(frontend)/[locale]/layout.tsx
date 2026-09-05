@@ -9,6 +9,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloatingButton } from "@/components/site/whatsapp-cta";
+import { BackToTop } from "@/components/site/scroll-helpers";
 import { SmoothScroll } from "@/components/site/smooth-scroll";
 import { routing, isRtl, type Locale } from "@/i18n/routing";
 import "../../globals.css";
@@ -111,6 +112,7 @@ export default async function LocaleLayout({
           {children}
           <Footer />
           <WhatsAppFloatingButton />
+          <BackToTop />
         </NextIntlClientProvider>
         <Toaster />
         <Analytics />

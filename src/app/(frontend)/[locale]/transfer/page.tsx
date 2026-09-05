@@ -75,7 +75,10 @@ export default async function TransferPage({
       <PageHero
         image="/images/vito-black.jpg"
         imageAlt={locale === "ar" ? "سيارة فيتو VIP" : "VIP Vito aracı"}
-        breadcrumb={`${tNav("home")} · ${tNav("transfer")}`}
+        crumbs={[
+          { label: tNav("home"), href: "/" },
+          { label: tNav("transfer") },
+        ]}
         title={t("title")}
         subtitle={t("subtitle")}
       />

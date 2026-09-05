@@ -6,6 +6,7 @@ import { ArrowLeft, Check, Clock, Info, MapPin, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
@@ -99,9 +100,13 @@ export default async function TourDetailPage({
         />
         <div className="absolute inset-0 -z-10 scrim-x" />
         <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-24">
-          <div className="text-[12.5px] text-white/55">
-            {tNav("home")} · {tNav("tours")} · {name}
-          </div>
+          <Breadcrumbs
+            items={[
+              { label: tNav("home"), href: "/" },
+              { label: tNav("tours"), href: "/tours" },
+              { label: name },
+            ]}
+          />
           <h1 className="mt-3 font-display text-[36px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[50px]">
             {name}
           </h1>

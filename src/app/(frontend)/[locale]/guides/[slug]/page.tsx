@@ -5,6 +5,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, Clock } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
+import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { ReadingProgress } from "@/components/site/scroll-helpers";
 import { ArticleSchema, BreadcrumbSchema } from "@/components/site/json-ld";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
@@ -72,6 +74,7 @@ export default async function GuideDetailPage({
 
   return (
     <main className="flex flex-1 flex-col">
+      <ReadingProgress />
       <BreadcrumbSchema
         items={[
           { name: tNav("home"), url: getPathname({ locale, href: "/" }) },
@@ -100,9 +103,13 @@ export default async function GuideDetailPage({
         <div className="absolute inset-0 -z-10 scrim-x" />
 
         <div className="mx-auto max-w-3xl px-5 py-24 sm:px-8">
-          <div className="text-[12.5px] text-white/60">
-            {tNav("home")} · {tNav("guides")}
-          </div>
+          <Breadcrumbs
+            items={[
+              { label: tNav("home"), href: "/" },
+              { label: tNav("guides"), href: "/guides" },
+              { label: title },
+            ]}
+          />
           <h1 className="mt-3 font-display text-[32px] font-semibold leading-[1.14] tracking-[-0.01em] text-white sm:text-[44px]">
             {title}
           </h1>

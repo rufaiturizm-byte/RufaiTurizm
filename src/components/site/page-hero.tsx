@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Breadcrumbs, type Crumb } from "./breadcrumbs";
 
 /**
  * İç sayfaların üst bandı: koyu zemin, üstte kırıntı yolu, altında başlık.
@@ -7,13 +8,14 @@ import Image from "next/image";
 export function PageHero({
   image,
   imageAlt,
-  breadcrumb,
+  crumbs,
   title,
   subtitle,
 }: {
   image: string;
   imageAlt: string;
-  breadcrumb: string;
+  /** Tıklanabilir kırıntı yolu; son öğe bulunduğumuz sayfa. */
+  crumbs: Crumb[];
   title: string;
   subtitle?: string;
 }) {
@@ -31,7 +33,7 @@ export function PageHero({
         className="absolute inset-0 -z-10 scrim-x"
       />
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-20">
-        <div className="text-[12.5px] text-white/55">{breadcrumb}</div>
+        <Breadcrumbs items={crumbs} />
         <h1 className="mt-3 font-display text-[34px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[46px]">
           {title}
         </h1>

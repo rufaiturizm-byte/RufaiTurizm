@@ -31,7 +31,8 @@ export function MobileNav({ items }: { items: Item[] }) {
 
       <SheetContent
         side="right"
-        className="border-0 p-0"
+        data-lenis-prevent
+        className="border-0 overflow-y-auto p-0"
         style={{ background: "var(--brand-night)" }}
       >
         <SheetHeader className="border-b px-6 py-5" style={{ borderColor: "var(--brand-night-3)" }}>

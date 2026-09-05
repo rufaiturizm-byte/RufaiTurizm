@@ -71,6 +71,18 @@ export function TransferForm() {
     pageUrl: `${siteConfig.url}${pathname}`,
   });
 
+  /*
+   * Alış ve varış noktası olmadan WhatsApp'a gitmek iki tarafı da
+   * yoruyordu: müşteri "merhaba" yazıp bekliyor, ekip nereden nereye
+   * gidileceğini sormak için ikinci bir mesaj yazıyordu. İki alan
+   * doluysa konuşma zaten hazır bilgiyle başlıyor.
+   *
+   * Diğer alanlar (tarih, kişi) zorunlu değil: bilmeyen biri de yazabilmeli.
+   */
+  const ready = from.trim().length > 0 && to.trim().length > 0;
+  const [touched, setTouched] = useState(false);
+  const showError = touched && !ready;
+
   const tabs = [
     { key: "transfer" as const, icon: Plane, label: t("tabTransfer") },
     { key: "chauffeur" as const, icon: Car, label: t("tabChauffeur") },
@@ -145,7 +157,11 @@ export function TransferForm() {
               value={from}
               onChange={(event) => setFrom(event.target.value)}
               placeholder={t("placeholder")}
+              aria-invalid={showError && !from.trim() ? true : undefined}
               className={FIELD}
+              style={
+                showError && !from.trim() ? { borderColor: "var(--destructive)" } : undefined
+              }
             />
             {stop === null ? (
               <button
@@ -185,7 +201,9 @@ export function TransferForm() {
             value={to}
             onChange={(event) => setTo(event.target.value)}
             placeholder={t("placeholder")}
+            aria-invalid={showError && !to.trim() ? true : undefined}
             className={FIELD}
+            style={showError && !to.trim() ? { borderColor: "var(--destructive)" } : undefined}
           />
         </div>
 
@@ -224,16 +242,36 @@ export function TransferForm() {
       </div>
 
       <a
-        href={href}
-        target="_blank"
+        href={ready ? href : undefined}
+        target={ready ? "_blank" : undefined}
         rel="noopener noreferrer"
+        aria-disabled={!ready}
+        onClick={(event) => {
+          if (ready) return;
+          event.preventDefault();
+          setTouched(true);
+          document.getElementById("tf-from")?.focus();
+        }}
         data-analytics="whatsapp-transfer-form"
-        className="mt-6 flex w-full items-center justify-center gap-3 rounded-[0.85rem] py-4.5 text-[16px] font-bold text-white transition-transform hover:-translate-y-0.5"
-        style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e2)" }}
+        className="mt-6 flex w-full items-center justify-center gap-3 rounded-[0.85rem] py-4.5 text-[16px] font-bold text-white transition-all"
+        style={{
+          background: "var(--brand-wa)",
+          boxShadow: "var(--shadow-e2)",
+          opacity: ready ? 1 : 0.55,
+          cursor: ready ? "pointer" : "not-allowed",
+        }}
       >
         <WhatsAppIcon className="size-[22px]" />
         {t("submit")}
       </a>
+
+      <p
+        className="mt-3 text-[13px]"
+        role={showError ? "alert" : undefined}
+        style={{ color: showError ? "var(--destructive)" : "var(--muted-foreground)" }}
+      >
+        {showError ? t("required") : t("fillHint")}
+      </p>
 
       <div className="mt-5 flex flex-wrap items-center gap-3">
         {(["same", "different"] as const).map((kind) => {

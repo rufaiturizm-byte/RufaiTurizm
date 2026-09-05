@@ -64,7 +64,7 @@ export default async function FaqPage({
   }));
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <FaqSchema items={items} />
       <BreadcrumbSchema
         items={[

@@ -70,7 +70,7 @@ export default async function TourDetailPage({
   const highlights = t.raw(`${tour.key}.highlights`) as string[];
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <BreadcrumbSchema
         items={[
           { name: tNav("home"), url: getPathname({ locale, href: "/" }) },

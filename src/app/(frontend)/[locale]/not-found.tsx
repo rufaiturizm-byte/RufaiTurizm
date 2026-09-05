@@ -32,7 +32,7 @@ export default async function NotFound() {
   ];
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <section className="relative isolate flex min-h-[62vh] items-center">
         <Image
           src="/images/hero-ortakoy.jpg"

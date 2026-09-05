@@ -76,8 +76,10 @@ export function WhatsAppFloatingButton({ subject }: { subject?: string }) {
       rel="noopener noreferrer"
       aria-label={t("whatsapp")}
       data-analytics="whatsapp-floating"
+      /* Mobilde gizli: orada sayfanın altındaki eylem çubuğu var, iki
+         WhatsApp çağrısı üst üste binmemeli. */
       className={cn(
-        "fixed bottom-5 z-50 flex items-center gap-2 rounded-full",
+        "fixed bottom-5 z-50 hidden items-center gap-2 rounded-full lg:flex",
         "end-5 bg-[#25D366] px-4 py-3 text-white shadow-lg",
         "transition-transform hover:scale-105 active:scale-95",
       )}

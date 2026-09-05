@@ -199,7 +199,9 @@
     "included": "شامل السعر",
     "backToTours": "كل الجولات",
     "backToServices": "كل الخدمات",
-    "backToTop": "العودة إلى الأعلى"
+    "backToTop": "العودة إلى الأعلى",
+    "skipToContent": "تخطَّ إلى المحتوى",
+    "contents": "المحتويات"
   },
   "servicesPage": {
     "title": "خدماتنا",
@@ -386,7 +388,9 @@
     "waPeople": "الركاب",
     "waReturn": "العودة",
     "trust4": "دعم على مدار الساعة",
-    "peopleUnit": "راكب"
+    "peopleUnit": "راكب",
+    "required": "اكتب نقطة الانطلاق والوجهة",
+    "fillHint": "اكتب من أين وإلى أين، والباقي نتحدّث عنه على واتساب."
   },
   "trustBoxes": {
     "airports": "كل مطارات إسطنبول",

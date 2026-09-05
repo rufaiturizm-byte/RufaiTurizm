@@ -94,7 +94,7 @@ export default async function ContactPage({
   ];
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <BreadcrumbSchema
         items={[
           { name: tNav("home"), url: getPathname({ locale, href: "/" }) },

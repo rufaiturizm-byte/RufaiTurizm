@@ -10,6 +10,7 @@ import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloatingButton } from "@/components/site/whatsapp-cta";
 import { BackToTop } from "@/components/site/scroll-helpers";
+import { MobileActionBar } from "@/components/site/mobile-action-bar";
 import { SmoothScroll } from "@/components/site/smooth-scroll";
 import { routing, isRtl, type Locale } from "@/i18n/routing";
 import "../../globals.css";
@@ -96,6 +97,7 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
+  const tCommon = await getTranslations({ locale, namespace: "common" });
   const rtl = isRtl(locale as Locale);
   const display = rtl ? displayArabic : displayLatin;
 
@@ -105,13 +107,18 @@ export default async function LocaleLayout({
       dir={rtl ? "rtl" : "ltr"}
       className={`${tajawal.variable} ${display.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-sans pb-[72px] lg:pb-0">
         <NextIntlClientProvider>
+          {/* Klavyeyle gelen kullanıcı dokuz menü bağlantısını geçmesin. */}
+          <a href="#main" className="skip-link">
+            {tCommon("skipToContent")}
+          </a>
           <SmoothScroll />
           <Header />
           {children}
           <Footer />
           <WhatsAppFloatingButton />
+          <MobileActionBar />
           <BackToTop />
         </NextIntlClientProvider>
         <Toaster />

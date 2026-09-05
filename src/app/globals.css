@@ -582,3 +582,52 @@ body {
     transform: none;
   }
 }
+
+/*
+ * Klavye odağı.
+ *
+ * Düğmelerin ve bağlantıların çoğunda görünür bir odak durumu yoktu:
+ * klavyeyle gezen kullanıcı (ve ekran büyütücü kullanan misafir) nerede
+ * olduğunu göremiyordu. `:focus-visible` yalnız klavye/yardımcı teknoloji
+ * odağında devreye girer, fareyle tıklamada görünmez — o yüzden tasarımı
+ * bozmadan erişilebilirlik kazandırır.
+ *
+ * Halka iki katmanlı: içte koyu zeminde de açık zeminde de görünen beyaz
+ * bir ayrım, dışta marka altını. Tek renk halka koyu bölümlerde
+ * kayboluyordu.
+ */
+:where(a, button, [role="button"], summary, input, select, textarea):focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 2px;
+  border-radius: 0.35rem;
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--brand-night) 55%, transparent);
+}
+
+/* Koyu bölümlerde halkanın dış gölgesi ters çevriliyor. */
+[style*="--brand-night"] :where(a, button):focus-visible,
+footer :where(a, button):focus-visible,
+header :where(a, button):focus-visible {
+  box-shadow: 0 0 0 4px color-mix(in oklab, white 40%, transparent);
+}
+
+/*
+ * İçeriğe atla bağlantısı. Klavyeyle gelen kullanıcı her sayfada dokuz
+ * menü bağlantısını geçmek zorunda kalıyordu.
+ */
+.skip-link {
+  position: fixed;
+  inset-inline-start: 1rem;
+  top: -4rem;
+  z-index: 100;
+  border-radius: 0.6rem;
+  background: var(--brand-gold);
+  color: var(--brand-night);
+  padding: 0.75rem 1.25rem;
+  font-size: 14px;
+  font-weight: 700;
+  transition: top 180ms var(--ease-soft);
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
+}

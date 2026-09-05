@@ -67,9 +67,14 @@ export function BackToTop() {
   return (
     <button
       type="button"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      onClick={() => {
+        /* Lenis çalışıyorsa onunla: iki yumuşak kaydırma aynı anda
+           çalışınca sayfa yerinde titriyordu. */
+        if (window.__lenis) window.__lenis.scrollTo(0);
+        else window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
       aria-label={t("backToTop")}
-      className="fixed bottom-[5.5rem] z-40 inline-flex size-11 items-center justify-center rounded-full border transition-all"
+      className="fixed bottom-[6.5rem] z-40 inline-flex size-11 items-center justify-center rounded-full border transition-all lg:bottom-[5.5rem]"
       style={{
         insetInlineEnd: "1.25rem",
         background: "color-mix(in oklab, var(--brand-night) 88%, transparent)",

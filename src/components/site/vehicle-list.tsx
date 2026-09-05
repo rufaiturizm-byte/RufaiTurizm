@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Check, Luggage, Users } from "lucide-react";
 import { SectionHeading } from "./section-heading";
+import { PhotoGallery } from "./photo-gallery";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { WhatsAppIcon } from "./icons";
 import { vehicles } from "@/data/vehicles";
@@ -37,31 +37,14 @@ export async function VehicleList() {
       <div className="flex flex-col gap-6">
         {vehicles.map((vehicle) => (
           <article key={vehicle.key} className="overflow-hidden surface-card">
-            {/* Fotoğraf şeridi — dört kare, aralarında saç teli çizgi */}
-            <div className="grid gap-px sm:grid-cols-4" style={{ background: "var(--hairline)" }}>
-              {vehicle.photos.map((photo, index) => (
-                <div
-                  key={`${photo.src}-${index}`}
-                  className={`relative aspect-[4/3] ${index > 1 ? "hidden sm:block" : ""}`}
-                >
-                  <Image
-                    src={photo.src}
-                    alt={t(photo.altKey)}
-                    fill
-                    sizes="(max-width: 640px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                  {index === 0 ? (
-                    <span
-                      className="absolute start-3 top-3 rounded-[0.4rem] px-2.5 py-1 text-[11.5px] font-bold"
-                      style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
-                    >
-                      {t("vitoBadge")}
-                    </span>
-                  ) : null}
-                </div>
-              ))}
-            </div>
+            {/* Fotoğraf şeridi — dört kare, tıklanınca tam boy açılıyor */}
+            <PhotoGallery
+              photos={vehicle.photos.map((photo) => ({
+                src: photo.src,
+                alt: t(photo.altKey),
+              }))}
+              badge={t("vitoBadge")}
+            />
 
             <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.4fr_1fr]">
               <div>

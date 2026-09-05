@@ -64,7 +64,7 @@ export default async function TransferPage({
   const tEyebrow = await getTranslations("eyebrow");
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <BreadcrumbSchema
         items={[
           { name: tNav("home"), url: getPathname({ locale, href: "/" }) },

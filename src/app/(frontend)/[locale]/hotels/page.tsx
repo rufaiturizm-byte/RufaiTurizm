@@ -62,7 +62,7 @@ export default async function HotelsPage({
   const lang = locale as Locale;
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <BreadcrumbSchema
         items={[
           { name: tNav("home"), url: getPathname({ locale, href: "/" }) },

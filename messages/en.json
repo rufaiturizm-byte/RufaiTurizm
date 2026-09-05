@@ -199,7 +199,9 @@
     "included": "Included in the price",
     "backToTours": "All tours",
     "backToServices": "All services",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "skipToContent": "Skip to content",
+    "contents": "Contents"
   },
   "servicesPage": {
     "title": "Our Services",
@@ -386,7 +388,9 @@
     "waPeople": "Passengers",
     "waReturn": "Return",
     "trust4": "24/7 support",
-    "peopleUnit": "passengers"
+    "peopleUnit": "passengers",
+    "required": "Enter pick-up and destination",
+    "fillHint": "Tell us where from and where to; we will sort the rest on WhatsApp."
   },
   "trustBoxes": {
     "airports": "All Istanbul airports",

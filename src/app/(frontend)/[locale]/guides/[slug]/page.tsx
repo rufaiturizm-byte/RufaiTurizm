@@ -10,6 +10,8 @@ import { ReadingProgress } from "@/components/site/scroll-helpers";
 import { ArticleSchema, BreadcrumbSchema } from "@/components/site/json-ld";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
+import { TableOfContents } from "@/components/site/table-of-contents";
+import { headingId } from "@/lib/heading-id";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
@@ -60,6 +62,7 @@ export default async function GuideDetailPage({
 
   const t = await getTranslations("guidesPage");
   const tNav = await getTranslations("nav");
+  const tCommon = await getTranslations("common");
   const tCta = await getTranslations("cta");
   const lang = locale as Locale;
 
@@ -70,10 +73,15 @@ export default async function GuideDetailPage({
     href: { pathname: "/guides/[slug]", params: { slug } },
   });
 
+  const toc = guide.sections.map((section, index) => ({
+    id: headingId(section.heading[lang] ?? section.heading.tr, index),
+    label: section.heading[lang] ?? section.heading.tr,
+  }));
+
   const others = guides.filter((item) => item.slug !== guide.slug).slice(0, 3);
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <ReadingProgress />
       <BreadcrumbSchema
         items={[
@@ -122,7 +130,8 @@ export default async function GuideDetailPage({
       </section>
 
       {/* Gövde */}
-      <article className="mx-auto w-full max-w-3xl px-5 py-20 sm:px-8">
+      <div className="mx-auto grid w-full max-w-5xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_210px]">
+        <article>
         {/* Hızlı bilgiler: rehberi baştan sona okumaya vakti olmayan kişi
             mesafeyi, süreyi ve mevsimi burada tek bakışta alıyor. */}
         <dl className="mb-14 grid gap-4 sm:grid-cols-3">
@@ -140,7 +149,10 @@ export default async function GuideDetailPage({
 
         {guide.sections.map((section, index) => (
           <section key={index} className={index > 0 ? "mt-14" : ""}>
-            <h2 className="font-display text-[24px] font-semibold leading-snug sm:text-[28px]">
+            <h2
+              id={headingId(section.heading[lang] ?? section.heading.tr, index)}
+              className="scroll-mt-28 font-display text-[24px] font-semibold leading-snug sm:text-[28px]"
+            >
               {section.heading[lang] ?? section.heading.tr}
             </h2>
             <p className="mt-4 text-[16px] leading-[1.95] text-foreground/85">
@@ -196,7 +208,10 @@ export default async function GuideDetailPage({
             {tCta("whatsapp")}
           </WhatsAppLink>
         </div>
-      </article>
+        </article>
+
+        <TableOfContents items={toc} label={tCommon("contents")} />
+      </div>
 
       {/* Diğer rehberler */}
       <section

@@ -199,7 +199,9 @@
     "included": "Fiyata dahil",
     "backToTours": "Tüm turlar",
     "backToServices": "Tüm hizmetler",
-    "backToTop": "Başa dön"
+    "backToTop": "Başa dön",
+    "skipToContent": "İçeriğe atla",
+    "contents": "İçindekiler"
   },
   "servicesPage": {
     "title": "Hizmetlerimiz",
@@ -386,7 +388,9 @@
     "waPeople": "Kişi",
     "waReturn": "Dönüş",
     "trust4": "7/24 destek",
-    "peopleUnit": "Kişi"
+    "peopleUnit": "Kişi",
+    "required": "Alış ve varış noktasını yazın",
+    "fillHint": "Nereden nereye gideceğinizi yazın, gerisini WhatsApp'ta konuşalım."
   },
   "trustBoxes": {
     "airports": "İstanbul'un tüm havalimanları",

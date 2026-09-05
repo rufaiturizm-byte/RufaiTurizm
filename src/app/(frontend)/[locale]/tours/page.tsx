@@ -48,7 +48,7 @@ export default async function ToursPage({
   const tTours = await getTranslations("tours");
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       {/* Bu sayfada hiç yapısal veri yoktu: kırıntı yolu da, listenin bir
           koleksiyon olduğu bilgisi de eksikti. */}
       <BreadcrumbSchema

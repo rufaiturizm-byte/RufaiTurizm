@@ -54,7 +54,7 @@ export default async function AboutPage({
   const tNav = await getTranslations("nav");
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <BreadcrumbSchema
         items={[
           { name: tNav("home"), url: getPathname({ locale, href: "/" }) },

@@ -18,6 +18,8 @@ import { FaqPreview } from "@/components/site/faq-preview";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
+import { TableOfContents } from "@/components/site/table-of-contents";
+import { headingId } from "@/lib/heading-id";
 import { transferRoutes, transferRouteBySlug } from "@/data/transfer-routes";
 import type { Locale } from "@/i18n/routing";
 
@@ -70,12 +72,18 @@ export default async function TransferRoutePage({
 
   const t = await getTranslations("routePage");
   const tNav = await getTranslations("nav");
+  const tCommon = await getTranslations("common");
   const tCta = await getTranslations("cta");
   const lang = locale as Locale;
 
   const from = route.from[lang] ?? route.from.tr;
   const to = route.to[lang] ?? route.to.tr;
   const title = `${from} → ${to}`;
+  const toc = route.sections.map((section, index) => ({
+    id: headingId(section.heading[lang] ?? section.heading.tr, index),
+    label: section.heading[lang] ?? section.heading.tr,
+  }));
+
   const others = transferRoutes.filter((item) => item.slug !== route.slug);
 
   const facts = [
@@ -85,7 +93,7 @@ export default async function TransferRoutePage({
   ];
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main id="main" className="flex flex-1 flex-col">
       <ReadingProgress />
       <BreadcrumbSchema
         items={[
@@ -137,7 +145,8 @@ export default async function TransferRoutePage({
         <TrustBoxes />
       </div>
 
-      <section className="mx-auto w-full max-w-3xl px-5 pt-20 pb-20 sm:px-8">
+      <div className="mx-auto grid w-full max-w-5xl gap-12 px-5 pt-20 pb-20 sm:px-8 lg:grid-cols-[1fr_210px]">
+        <div>
         <dl className="mb-14 grid gap-4 sm:grid-cols-3">
           {facts.map(({ icon: Icon, label, value }) => (
             <div key={label} className="accent-card p-5">
@@ -152,7 +161,10 @@ export default async function TransferRoutePage({
 
         {route.sections.map((section, index) => (
           <section key={index} className={index > 0 ? "mt-14" : ""}>
-            <h2 className="font-display text-[24px] font-semibold leading-snug sm:text-[28px]">
+            <h2
+              id={headingId(section.heading[lang] ?? section.heading.tr, index)}
+              className="scroll-mt-28 font-display text-[24px] font-semibold leading-snug sm:text-[28px]"
+            >
               {section.heading[lang] ?? section.heading.tr}
             </h2>
             <p className="mt-4 text-[16px] leading-[1.95] text-foreground/85">
@@ -179,7 +191,10 @@ export default async function TransferRoutePage({
             {tCta("whatsapp")}
           </WhatsAppLink>
         </div>
-      </section>
+        </div>
+
+        <TableOfContents items={toc} label={tCommon("contents")} />
+      </div>
 
       <VehicleList />
 

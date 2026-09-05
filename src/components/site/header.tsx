@@ -20,6 +20,7 @@ export async function Header() {
 
   const items = [
     { href: "/" as const, label: t("home") },
+    { href: "/transfer" as const, label: t("transfer") },
     { href: "/tours" as const, label: t("tours") },
     { href: "/services" as const, label: t("services") },
     { href: "/about" as const, label: t("about") },

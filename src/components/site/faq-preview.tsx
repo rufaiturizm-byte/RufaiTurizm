@@ -1,9 +1,9 @@
-import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { ArrowRight, MessageCircleQuestionMark, Minus, Plus, Sparkle } from "lucide-react";
+import { ArrowRight, MessageCircleQuestionMark, Sparkle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading, SectionAction } from "./section-heading";
+import { FaqAccordion } from "./faq-accordion";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { WhatsAppIcon } from "./icons";
 
@@ -47,56 +47,7 @@ export async function FaqPreview() {
       />
 
       <div className="grid gap-8 lg:grid-cols-[1.55fr_1fr] lg:items-start">
-        <AccordionPrimitive.Root className="flex flex-col gap-3">
-        {items.map((item, index) => (
-          <AccordionPrimitive.Item
-            key={item.question}
-            value={`home-faq-${index}`}
-            className="overflow-hidden border"
-            style={{
-              background: "var(--surface)",
-              borderColor: "var(--hairline)",
-              borderRadius: "0.9rem",
-              boxShadow: "var(--shadow-e1)",
-            }}
-          >
-            <AccordionPrimitive.Header>
-              <AccordionPrimitive.Trigger className="group/faq flex w-full items-center gap-5 px-5 py-6 text-start outline-none focus-visible:ring-3 focus-visible:ring-ring/50 sm:px-6">
-                <span
-                  className="w-9 shrink-0 font-display text-[22px] font-semibold leading-none tabular-nums"
-                  style={{ color: "color-mix(in oklab, var(--brand-gold-deep) 70%, transparent)" }}
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <span
-                  className="h-6 w-px shrink-0"
-                  style={{ background: "color-mix(in oklab, var(--brand-night) 14%, transparent)" }}
-                />
-
-                <span className="flex-1 text-[15.5px] font-bold leading-snug">{item.question}</span>
-
-                <Plus
-                  className="size-5 shrink-0 group-aria-expanded/faq:hidden"
-                  style={{ color: "var(--brand-gold-deep)" }}
-                  aria-hidden="true"
-                />
-                <Minus
-                  className="hidden size-5 shrink-0 group-aria-expanded/faq:block"
-                  style={{ color: "var(--brand-gold-deep)" }}
-                  aria-hidden="true"
-                />
-              </AccordionPrimitive.Trigger>
-            </AccordionPrimitive.Header>
-
-            <AccordionPrimitive.Panel className="overflow-hidden data-closed:animate-accordion-up data-open:animate-accordion-down">
-              <div className="h-(--accordion-panel-height) ps-[4.75rem] pe-6 pb-5 text-[14px] leading-[1.85] text-muted-foreground data-ending-style:h-0 data-starting-style:h-0">
-                {item.answer}
-              </div>
-            </AccordionPrimitive.Panel>
-          </AccordionPrimitive.Item>
-        ))}
-        </AccordionPrimitive.Root>
+        <FaqAccordion items={items} />
 
         {/*
           Sayfanın alt üçte biri tümüyle yazıydı: SSS, kapanış ve belge bandı

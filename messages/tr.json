@@ -231,7 +231,17 @@
     "notIncludedTitle": "Fiyata dahil değil",
     "noteTitle": "Bilmeniz gerekenler",
     "note": "Program sırası hava durumu ve trafiğe göre değişebilir; durak sayısı korunur. Müze giriş ücretleri ve öğle yemeği kişiye göre değiştiği için fiyata dahil edilmez — dilerseniz rezervasyon sırasında birlikte hesaplarız.",
-    "priceNote": "Fiyatlar kişi başı değil, araç başınadır. Kesin fiyat kişi sayısına ve tarihe göre WhatsApp'tan netleşir."
+    "priceNote": "Fiyatlar kişi başı değil, araç başınadır. Kesin fiyat kişi sayısına ve tarihe göre WhatsApp'tan netleşir.",
+    "listTitle": "Tur programlarımız",
+    "compareTitle": "Hangi tur size uygun?",
+    "compareSubtitle": "Beş programın süresi, çıkış şehri ve başlangıç fiyatı yan yana.",
+    "colTour": "Tur",
+    "colCity": "Şehir",
+    "colDuration": "Süre",
+    "colPrice": "Başlangıç fiyatı",
+    "colHighlight": "Öne çıkan durak",
+    "whatsIncludedTitle": "Fiyata dahil olan ve olmayanlar",
+    "whatsIncludedSubtitle": "Rezervasyondan önce neyin dahil olduğunu bilmeniz için."
   },
   "about": {
     "title": "Hakkımızda",
@@ -243,7 +253,11 @@
     "p5": "Fiyat konusunda net davranırız. Rezervasyondan önce toplam tutarı yazılı olarak söyleriz; yol boyunca otopark, köprü ya da yakıt adı altında ek ücret çıkmaz. Sürpriz ücret, bu işte güvenin en hızlı kaybedildiği yerdir.",
     "p6": "Programlarımızı Körfez'den gelen ailelerin alışkanlıklarına göre kurarız: geç kahvaltı, namaz vakitlerinde mola, çocuklara uygun tempo ve mahremiyeti koruyan özel araç. Grup turlarına katılmazsınız; gün sizindir.",
     "valuesTitle": "Nasıl çalışırız",
-    "howTitle": "Misafirlerimize sözümüz"
+    "howTitle": "Misafirlerimize sözümüz",
+    "storyTitle": "Kimiz",
+    "storyEyebrow": "Hikâyemiz",
+    "promiseTitle": "Misafirlerimize sözümüz",
+    "promiseEyebrow": "Söz"
   },
   "contact": {
     "title": "İletişim",
@@ -457,7 +471,18 @@
     "u3Meta": "Tek araç · tek şoför",
     "u4Title": "Emrinizde Araç",
     "u4Desc": "Saatlik ya da tam gün. Araç ve şoför yalnızca size ayrılır, güzergâhı siz belirlersiniz.",
-    "u4Meta": "Saatlik · tam gün"
+    "u4Meta": "Saatlik · tam gün",
+    "listTitle": "Transferde kullandığımız araç",
+    "listSubtitle": "Tüm transfer ve turlarımız bu araçla yapılır. Havalimanında gelen araç, sitede gördüğünüz araçtır.",
+    "seats": "yolcu",
+    "luggageUnit": "büyük valiz",
+    "f1": "Bagajla birlikte 6 kişiye kadar",
+    "f2": "Kararmış camlar, aile mahremiyeti",
+    "f3": "Arka bölmede ayrı klima",
+    "f4": "Araçta ücretsiz su ve internet",
+    "f5": "Çocuk koltuğu ek ücretsiz",
+    "f6": "Aynı şoför, tüm seyahat boyunca",
+    "specTitle": "Teknik ve konfor"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",
@@ -513,7 +538,10 @@
       "Abant",
       "Trabzon",
       "Bodrum"
-    ]
+    ],
+    "title": "Havalimanı Transferi",
+    "subtitle": "İstanbul Havalimanı ve Sabiha Gökçen'den şehrin her noktasına sabit fiyatlı özel transfer.",
+    "intro": "Havalimanı transferi en çok tercih edilen hizmetimiz. Uçuşunuzu takip ediyor, geliş kapısında isminizin yazılı olduğu tabelayla karşılıyor ve bagajlarınızla birlikte doğrudan otelinize götürüyoruz. Fiyat rezervasyonda netleşir ve varışta değişmez."
   },
   "eyebrow": {
     "services": "Hizmetler",

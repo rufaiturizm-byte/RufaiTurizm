@@ -231,7 +231,17 @@
     "notIncludedTitle": "Not included",
     "noteTitle": "Good to know",
     "note": "The order of the programme can change with weather and traffic, but the number of stops stays the same. Museum entry and lunch are not included because they vary per person — we are happy to work them out with you when you book.",
-    "priceNote": "Prices are per vehicle, not per person. The final price is confirmed on WhatsApp based on passenger count and date."
+    "priceNote": "Prices are per vehicle, not per person. The final price is confirmed on WhatsApp based on passenger count and date.",
+    "listTitle": "Our tour programmes",
+    "compareTitle": "Which tour suits you?",
+    "compareSubtitle": "Duration, departure city and starting price for all five programmes side by side.",
+    "colTour": "Tour",
+    "colCity": "City",
+    "colDuration": "Duration",
+    "colPrice": "From",
+    "colHighlight": "Highlight",
+    "whatsIncludedTitle": "What the price includes and excludes",
+    "whatsIncludedSubtitle": "So you know what is covered before you book."
   },
   "about": {
     "title": "About Us",
@@ -243,7 +253,11 @@
     "p5": "We are direct about price. You get the total in writing before you book, and no charges appear later for parking, bridges or fuel. Surprise fees are the fastest way to lose trust in this business.",
     "p6": "We build our programmes around the habits of Gulf families: a late breakfast, stops at prayer times, a pace that works for children and a private vehicle that protects your privacy. You never join a group tour; the day is yours.",
     "valuesTitle": "How we work",
-    "howTitle": "What we promise our guests"
+    "howTitle": "What we promise our guests",
+    "storyTitle": "Who we are",
+    "storyEyebrow": "Our story",
+    "promiseTitle": "Our promise to guests",
+    "promiseEyebrow": "Promise"
   },
   "contact": {
     "title": "Contact",
@@ -457,7 +471,18 @@
     "u3Meta": "One vehicle · one chauffeur",
     "u4Title": "Vehicle at Your Disposal",
     "u4Desc": "By the hour or for a full day. The car and chauffeur are yours alone; you set the route.",
-    "u4Meta": "Hourly · full day"
+    "u4Meta": "Hourly · full day",
+    "listTitle": "The vehicle we use for transfers",
+    "listSubtitle": "Every transfer and tour runs with this vehicle. The car that meets you at the airport is the one you see here.",
+    "seats": "passengers",
+    "luggageUnit": "large suitcases",
+    "f1": "Up to 6 people with luggage",
+    "f2": "Tinted windows, family privacy",
+    "f3": "Separate air conditioning in the rear",
+    "f4": "Free water and internet on board",
+    "f5": "Child seat at no extra charge",
+    "f6": "The same chauffeur throughout your trip",
+    "specTitle": "Specs and comfort"
   },
   "notFound": {
     "title": "Page not found",
@@ -513,7 +538,10 @@
       "Abant",
       "Trabzon",
       "Bodrum"
-    ]
+    ],
+    "title": "Airport Transfer",
+    "subtitle": "Fixed-price private transfers from Istanbul Airport and Sabiha Gokcen to anywhere in the city.",
+    "intro": "Airport transfer is our most requested service. We track your flight, meet you at arrivals with a name sign and take you and your luggage straight to your hotel. The price is set at booking and does not change on arrival."
   },
   "eyebrow": {
     "services": "Services",

@@ -52,6 +52,18 @@ export const pathnames = {
     tr: "/sikca-sorulan-sorular",
     en: "/faq",
   },
+  /*
+   * Transfer kendi sayfasını hak ediyor: en çok aranan hizmet bu ve
+   * "havalimanı transfer" araması hizmetler sayfasının içindeki bir
+   * bölüme değil, doğrudan bir sayfaya inmeli. Çeviriler (transferPage.*)
+   * ve bölümleri (transfer-sections.tsx) zaten yazılıydı, eksik olan
+   * yalnızca rotaydı.
+   */
+  "/transfer": {
+    ar: "/النقل-من-المطار",
+    tr: "/transfer",
+    en: "/transfer",
+  },
 } as const;
 
 export const routing = defineRouting({

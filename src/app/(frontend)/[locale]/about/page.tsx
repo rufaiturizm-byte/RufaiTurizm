@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Languages, BadgeCheck, Users, Clock } from "lucide-react";
+import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
+import { BreadcrumbSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { CredentialsBand } from "@/components/site/credentials-band";
-import { WhatsAppLink } from "@/components/site/whatsapp-cta";
+import { TrustStats } from "@/components/site/trust-stats";
+import { WhyUs } from "@/components/site/why-us";
+import { ProcessSteps } from "@/components/site/process-steps";
+import { RouteCoverage } from "@/components/site/route-coverage";
+import { ClosingCta } from "@/components/site/transfer-sections";
 
 export async function generateMetadata({
   params,
@@ -22,6 +28,18 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * Hakkımızda.
+ *
+ * Önceki hali altı paragrafı tek sütunda alt alta diziyordu: sayfanın
+ * tamamı, üst banttan sonra, kesintisiz bir metin duvarıydı. "Hakkımızda"
+ * sayfası güven sayfasıdır ve güven metinle değil, kanıtla kurulur —
+ * rakamlar, belge, araç, hizmet verilen yerler.
+ *
+ * Şimdi metin ikiye bölünmüş (kimiz / misafirlerimize sözümüz), her biri
+ * kendi fotoğrafıyla; aralarında istatistik şeridi, belge bandı ve kapsam
+ * listesi var. Aynı metin, okunabilir hale gelmiş bir sayfada.
+ */
 export default async function AboutPage({
   params,
 }: {
@@ -32,18 +50,16 @@ export default async function AboutPage({
 
   const t = await getTranslations("about");
   const tNav = await getTranslations("nav");
-  const tWhy = await getTranslations("whyUs");
-  const tCta = await getTranslations("cta");
-
-  const reasons = [
-    { icon: Languages, key: "arabicSupport" },
-    { icon: BadgeCheck, key: "fixedPrice" },
-    { icon: Users, key: "family" },
-    { icon: Clock, key: "support" },
-  ] as const;
 
   return (
     <main className="flex flex-1 flex-col">
+      <BreadcrumbSchema
+        items={[
+          { name: tNav("home"), url: getPathname({ locale, href: "/" }) },
+          { name: tNav("about"), url: getPathname({ locale, href: "/about" }) },
+        ]}
+      />
+
       <PageHero
         image="/images/hero-ortakoy.jpg"
         imageAlt={locale === "ar" ? "مسجد أورتاكوي ومضيق البوسفور" : "Ortaköy Camii ve Boğaz"}
@@ -52,46 +68,81 @@ export default async function AboutPage({
         subtitle={t("subtitle")}
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-24 sm:px-8">
-        <div className="flex max-w-3xl flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
-          <p>{t("p1")}</p>
-          <p>{t("p2")}</p>
-          <p>{t("p3")}</p>
-          <p>{t("p4")}</p>
-          <p>{t("p5")}</p>
-          <p>{t("p6")}</p>
+      <TrustStats />
+
+      {/* Kimiz — metin solda, fotoğraf sağda */}
+      <section className="mx-auto w-full max-w-7xl px-5 pt-24 pb-20 sm:px-8">
+        <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16">
+          <div>
+            <SectionHeading
+              eyebrow={t("storyEyebrow")}
+              title={t("storyTitle")}
+              rule={false}
+            />
+            <div className="flex flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
+              <p>{t("p1")}</p>
+              <p>{t("p2")}</p>
+              <p>{t("p3")}</p>
+            </div>
+          </div>
+
+          <div
+            className="relative aspect-[4/5] overflow-hidden"
+            style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
+          >
+            <Image
+              src="/images/chauffeur.jpg"
+              alt={t("title")}
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover object-[center_30%]"
+            />
+          </div>
         </div>
       </section>
 
+      {/* Sözümüz — fotoğraf solda, metin sağda */}
       <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
-        <SectionHeading title={tWhy("title")} subtitle={t("howTitle")} />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {reasons.map(({ icon: Icon, key }) => (
-            <div key={key} className="surface-card p-6">
-              <Icon
-                className="size-7"
-                style={{ color: "var(--brand-gold-deep)" }}
-                aria-hidden="true"
-              />
-              <h3 className="mt-4 text-[15.5px] font-bold">{tWhy(`${key}.title`)}</h3>
-              <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
-                {tWhy(`${key}.description`)}
-              </p>
+        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
+          <div
+            className="relative aspect-[4/3] overflow-hidden lg:order-1"
+            style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
+          >
+            <Image
+              src="/images/fleet/vito-interior.jpg"
+              alt={t("promiseTitle")}
+              fill
+              sizes="(max-width: 1024px) 100vw, 38vw"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="lg:order-2">
+            <SectionHeading
+              eyebrow={t("promiseEyebrow")}
+              title={t("promiseTitle")}
+              rule={false}
+            />
+            <div className="flex flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
+              <p>{t("p4")}</p>
+              <p>{t("p5")}</p>
+              <p>{t("p6")}</p>
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
       <CredentialsBand />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 text-center sm:px-8">
-        <WhatsAppLink
-          className="cta-gold inline-flex items-center gap-2 px-8 py-4 text-[15px] font-bold"
-          style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
-        >
-          {tCta("whatsapp")}
-        </WhatsAppLink>
-      </section>
+      <WhyUs />
+
+      <div className="pt-24">
+        <ProcessSteps />
+      </div>
+
+      <RouteCoverage locale={locale} />
+
+      <ClosingCta locale={locale} />
     </main>
   );
 }

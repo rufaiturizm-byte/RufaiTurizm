@@ -4,6 +4,10 @@ import { alternatesFor } from "@/lib/metadata";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
+import { TourCompare } from "@/components/site/tour-compare";
+import { RouteCoverage } from "@/components/site/route-coverage";
+import { TrustBoxes } from "@/components/site/trust-stats";
+import { ProcessSteps } from "@/components/site/process-steps";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { WhyUs } from "@/components/site/why-us";
 import { FaqPreview } from "@/components/site/faq-preview";
@@ -49,24 +53,39 @@ export default async function ToursPage({
         subtitle={t("subtitle")}
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
-        <p className="max-w-3xl text-[15.5px] leading-[1.9] text-foreground/85">
-          {t("intro")}
-        </p>
-      </section>
+      <div className="pt-12">
+        <TrustBoxes />
+      </div>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
-        <SectionHeading eyebrow={tEyebrow("tours")} title={t("title")} subtitle={t("subtitle")} />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Başlık sayfada bir kez geçiyor: üst bantta. Burada bölümün kendi
+          adı ve giriş metni var — önceden ikisi de aynı başlık ve aynı alt
+          başlıkla tekrarlanıyordu. */}
+      <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-16 sm:px-8">
+        <SectionHeading
+          eyebrow={tEyebrow("tours")}
+          title={t("listTitle")}
+          subtitle={t("intro")}
+          rule={false}
+        />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {tours.map((tour) => (
             <TourCard key={tour.key} tour={tour} />
           ))}
         </div>
       </section>
 
+      <TourCompare />
+
+      <RouteCoverage locale={locale} />
+
       <PackagesSection locale={locale} />
 
       <WhyUs />
+
+      <div className="pt-24">
+        <ProcessSteps />
+      </div>
+
       <FaqPreview />
       <ClosingCta locale={locale} />
 

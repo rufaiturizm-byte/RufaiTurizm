@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sections: { ar: string; tr: string; en: string; priority: number }[] = [
     { ar: "/جولاتنا", tr: "/turlar", en: "/tours", priority: 0.9 },
     { ar: "/خدماتنا", tr: "/hizmetler", en: "/services", priority: 0.9 },
+    { ar: "/النقل-من-المطار", tr: "/transfer", en: "/transfer", priority: 0.9 },
     { ar: "/من-نحن", tr: "/hakkimizda", en: "/about", priority: 0.6 },
     { ar: "/تواصل-معنا", tr: "/iletisim", en: "/contact", priority: 0.7 },
     { ar: "/الاسئلة-الشائعة", tr: "/sikca-sorulan-sorular", en: "/faq", priority: 0.6 },

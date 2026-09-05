@@ -28,6 +28,7 @@ export async function Footer() {
 
   const quickLinks = [
     { href: "/" as const, label: tNav("home") },
+    { href: "/transfer" as const, label: tNav("transfer") },
     { href: "/tours" as const, label: tNav("tours") },
     { href: "/services" as const, label: tNav("services") },
     { href: "/about" as const, label: tNav("about") },

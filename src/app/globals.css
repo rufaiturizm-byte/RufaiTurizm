@@ -480,3 +480,105 @@ body {
     animation: none;
   }
 }
+
+/*
+ * Premium yüzey parçaları.
+ *
+ * Sayfalarda düz metin bloğu olarak duran bölümler vardı: "Transfer
+ * hizmetlerimiz", "Neden bizimle", "Üç adımda rezervasyon", "Nasıl
+ * çalışıyoruz". Hepsi ince çizgi + başlık + paragraftan ibaretti ve
+ * sayfanın geri kalanının yanında basılı bir belge gibi duruyordu.
+ * Aşağısı o bölümleri kartlaştıran ortak dil.
+ */
+
+/* Üst kenarında marka renginde ince bir şerit taşıyan kart. Şerit üzerine
+   gelince genişliyor: hareket kartın kendisinde değil, vurgusunda. */
+.accent-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-e1);
+  transition:
+    box-shadow 320ms var(--ease-soft),
+    transform 320ms var(--ease-soft);
+}
+
+.accent-card::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  height: 3px;
+  width: 34%;
+  background: linear-gradient(
+    to right,
+    var(--brand-gold) 0%,
+    color-mix(in oklab, var(--brand-gold) 45%, var(--brand-sky)) 100%
+  );
+  transition: width 420ms var(--ease-soft);
+}
+
+@media (hover: hover) {
+  .accent-card:hover {
+    box-shadow: var(--shadow-e3);
+    transform: translateY(-3px);
+  }
+  .accent-card:hover::before {
+    width: 100%;
+  }
+}
+
+/* Numaralı adım rozetleri — altın gradyan, koyu rakam. */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+  color: var(--brand-night);
+  background: linear-gradient(
+    140deg,
+    color-mix(in oklab, var(--brand-gold) 82%, white) 0%,
+    var(--brand-gold) 55%,
+    color-mix(in oklab, var(--brand-gold) 78%, var(--brand-gold-deep)) 100%
+  );
+  box-shadow:
+    0 1px 1px color-mix(in oklab, var(--brand-night) 10%, transparent),
+    0 8px 20px color-mix(in oklab, var(--brand-gold) 45%, transparent);
+}
+
+/* Adımlar arasındaki kesik bağlantı çizgisi. */
+.step-link::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  inset-inline-start: calc(50% + 2.25rem);
+  inset-inline-end: calc(-50% + 2.25rem);
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--brand-gold) 55%, transparent) 0 8px,
+    transparent 8px 16px
+  );
+  background-size: 16px 2px;
+}
+
+/* Koyu zeminde gök mavisi ikinci aksan: altın her yerde olunca
+   ayırt ediciliğini kaybediyordu. */
+.tile-sky {
+  background: color-mix(in oklab, var(--brand-sky) 16%, transparent);
+  border: 1px solid color-mix(in oklab, var(--brand-sky) 34%, transparent);
+  color: var(--brand-sky);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accent-card,
+  .accent-card:hover,
+  .accent-card::before,
+  .accent-card:hover::before {
+    transition: none;
+    transform: none;
+  }
+}

@@ -1,6 +1,22 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { Check, Luggage, MapPin, MessageCircle, Plane, Users } from "lucide-react";
+import {
+  Baby,
+  BadgeCheck,
+  CalendarClock,
+  Check,
+  Languages,
+  Luggage,
+  MapPin,
+  MessageCircle,
+  Plane,
+  PlaneLanding,
+  PlaneTakeoff,
+  Radar,
+  Route,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { WhatsAppIcon } from "./icons";
@@ -18,34 +34,81 @@ import { WhatsAppIcon } from "./icons";
 export async function TransferTypes() {
   const t = await getTranslations("transferPage");
   const tEyebrow = await getTranslations("eyebrow");
+  const tCta = await getTranslations("cta");
 
-  const types = ["1", "2", "3", "4"] as const;
+  /*
+   * Dört transfer tipi önce başlık + paragraf olarak alt alta duruyordu:
+   * bölüm sayfada basılı bir belge gibi okunuyordu ve dördü birbirinden
+   * ayırt edilmiyordu. Her tipin kendi fotoğrafı ve simgesi var artık —
+   * "havalimanına bırakış" ile "emrinizde araç" arasındaki fark bir
+   * bakışta anlaşılıyor.
+   */
+  const types = [
+    { n: "1", icon: PlaneLanding, image: "/images/chauffeur.jpg" },
+    { n: "2", icon: PlaneTakeoff, image: "/images/vito-black.jpg" },
+    { n: "3", icon: Route, image: "/images/tours/sapanca.jpg" },
+    { n: "4", icon: CalendarClock, image: "/images/fleet/vito-cockpit.jpg" },
+  ] as const;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("transfer")}
         title={t("typesTitle")}
         subtitle={t("typesSubtitle")}
+        rule={false}
       />
 
-      <div className="grid gap-x-12 sm:grid-cols-2">
-        {types.map((n, index) => (
-          <div
-            key={n}
-            className="py-7"
-            style={{
-              borderTop:
-                index > 1
-                  ? "1px solid color-mix(in oklab, var(--brand-night) 12%, transparent)"
-                  : undefined,
-            }}
-          >
-            <h3 className="text-[18px] font-bold tracking-[-0.01em]">{t(`type${n}Title`)}</h3>
-            <p className="mt-2.5 max-w-md text-[14px] leading-[1.8] text-muted-foreground">
-              {t(`type${n}Desc`)}
-            </p>
-          </div>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {types.map(({ n, icon: Icon, image }, index) => (
+          <article key={n} className="accent-card group flex flex-col overflow-hidden">
+            <div className="relative aspect-[16/10] overflow-hidden">
+              <Image
+                src={image}
+                alt={t(`type${n}Title`)}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 72%, transparent) 0%, transparent 62%)",
+                }}
+              />
+              <span
+                className={`absolute bottom-3 start-3 inline-flex size-10 items-center justify-center rounded-full ${
+                  index % 2 === 1 ? "tile-sky" : ""
+                }`}
+                style={
+                  index % 2 === 1
+                    ? undefined
+                    : { background: "var(--brand-gold)", color: "var(--brand-night)" }
+                }
+              >
+                <Icon className="size-[18px]" aria-hidden="true" />
+              </span>
+            </div>
+
+            <div className="flex flex-1 flex-col p-5">
+              <h3 className="font-display text-[17.5px] font-semibold leading-snug">
+                {t(`type${n}Title`)}
+              </h3>
+              <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
+                {t(`type${n}Desc`)}
+              </p>
+
+              <WhatsAppLink
+                subject={t(`type${n}Title`)}
+                className="mt-4 inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-2.5 text-[12.5px] font-bold text-white transition-transform hover:-translate-y-0.5"
+                style={{ background: "var(--brand-wa)" }}
+              >
+                <MessageCircle className="size-3.5" aria-hidden="true" />
+                {tCta("bookNow")}
+              </WhatsAppLink>
+            </div>
+          </article>
         ))}
       </div>
     </section>
@@ -136,36 +199,47 @@ export async function TransferWhy() {
   const t = await getTranslations("transferPage");
   const tEyebrow = await getTranslations("eyebrow");
 
-  const reasons = ["1", "2", "3", "4", "5", "6"] as const;
+  /* Altı gerekçe düz bir onay listesiydi; her birinin kendi simgesi ve
+     kartı var artık. Simge kutuları altın ve gök mavisi arasında
+     dönüşümlü: tek renk altı kez tekrarlanınca vurgu olmaktan çıkıyor. */
+  const reasons = [
+    { n: "1", icon: PlaneLanding },
+    { n: "2", icon: Radar },
+    { n: "3", icon: BadgeCheck },
+    { n: "4", icon: Baby },
+    { n: "5", icon: Languages },
+    { n: "6", icon: ShieldCheck },
+  ] as const;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
-      <SectionHeading eyebrow={tEyebrow("why")} title={t("whyTitle")} />
+    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+      <SectionHeading eyebrow={tEyebrow("why")} title={t("whyTitle")} rule={false} />
 
-      <div className="grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
-        {reasons.map((n, index) => (
-          <div
-            key={n}
-            className="flex gap-4 py-6"
-            style={{
-              borderTop:
-                index > 0
-                  ? "1px solid color-mix(in oklab, var(--brand-night) 12%, transparent)"
-                  : undefined,
-            }}
-          >
-            <Check
-              className="mt-1 size-4 shrink-0"
-              style={{ color: "var(--brand-gold-deep)" }}
-              aria-hidden="true"
-            />
-            <div>
-              <h3 className="text-[15px] font-bold">{t(`why${n}Title`)}</h3>
-              <p className="mt-1.5 text-[13.5px] leading-[1.75] text-muted-foreground">
-                {t(`why${n}Desc`)}
-              </p>
-            </div>
-          </div>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {reasons.map(({ n, icon: Icon }, index) => (
+          <article key={n} className="accent-card p-6">
+            <span
+              className={`inline-flex size-12 items-center justify-center rounded-[0.8rem] ${
+                index % 2 === 1 ? "tile-sky" : ""
+              }`}
+              style={
+                index % 2 === 1
+                  ? undefined
+                  : {
+                      background: "color-mix(in oklab, var(--brand-gold) 20%, transparent)",
+                      border: "1px solid color-mix(in oklab, var(--brand-gold) 42%, transparent)",
+                      color: "var(--brand-gold-deep)",
+                    }
+              }
+            >
+              <Icon className="size-5" aria-hidden="true" />
+            </span>
+
+            <h3 className="mt-4 text-[16px] font-bold">{t(`why${n}Title`)}</h3>
+            <p className="mt-2 text-[13.5px] leading-[1.75] text-muted-foreground">
+              {t(`why${n}Desc`)}
+            </p>
+          </article>
         ))}
       </div>
     </section>
@@ -177,30 +251,27 @@ export async function TransferSteps() {
   const tEyebrow = await getTranslations("eyebrow");
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
       <SectionHeading
         eyebrow={tEyebrow("process")}
         title={t("stepsTitle")}
         subtitle={t("stepsSubtitle")}
+        rule={false}
       />
 
-      <ol className="grid gap-x-10 gap-y-10 sm:grid-cols-3">
+      {/* Rakamlar arasındaki kesik çizgi adımların SIRALI olduğunu söylüyor;
+          üç ayrı kutu olarak dizildiklerinde bu bilgi kayboluyordu. */}
+      <ol className="grid gap-y-10 sm:grid-cols-3 sm:gap-x-8">
         {(["1", "2", "3"] as const).map((step, index) => (
           <li
             key={step}
-            className="pt-6"
-            style={{
-              borderTop: "2px solid color-mix(in oklab, var(--brand-gold) 45%, transparent)",
-            }}
+            className={`relative text-center ${index < 2 ? "sm:step-link" : ""}`}
           >
-            <span
-              className="text-[34px] font-extrabold leading-none tabular-nums"
-              style={{ color: "color-mix(in oklab, var(--brand-night) 16%, transparent)" }}
-            >
+            <span className="step-badge size-12 text-[18px] font-extrabold">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-4 text-[16px] font-bold">{t(`s${step}Title`)}</h3>
-            <p className="mt-2.5 text-[14px] leading-[1.75] text-muted-foreground">
+            <h3 className="mt-5 text-[16.5px] font-bold">{t(`s${step}Title`)}</h3>
+            <p className="mx-auto mt-2.5 max-w-[19rem] text-[14px] leading-[1.75] text-muted-foreground">
               {t(`s${step}Desc`)}
             </p>
           </li>

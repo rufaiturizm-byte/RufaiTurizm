@@ -18,25 +18,23 @@ export async function ProcessSteps() {
         eyebrow={tEyebrow("process")}
         title={t("processTitle")}
         subtitle={t("processSubtitle")}
+        rule={false}
       />
 
-      <ol className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Adımlar önce ince çizgi + soluk rakamla diziliydi ve sayfada düz
+          bir metin bloğu gibi duruyordu. Rozet + kesik bağlantı çizgisi
+          hem sırayı hem süreç olduğunu anlatıyor. */}
+      <ol className="grid gap-y-10 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4">
         {(["1", "2", "3", "4"] as const).map((step, index) => (
           <li
             key={step}
-            className="pt-6 lg:ps-8 lg:pt-0"
-            style={{
-              borderTop: "2px solid color-mix(in oklab, var(--brand-gold) 45%, transparent)",
-            }}
+            className={`relative text-center ${index < 3 ? "lg:step-link" : ""}`}
           >
-            <span
-              className="text-[34px] font-extrabold leading-none tabular-nums"
-              style={{ color: "color-mix(in oklab, var(--brand-night) 16%, transparent)" }}
-            >
+            <span className="step-badge size-12 text-[18px] font-extrabold">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-4 text-[16px] font-bold">{t(`step${step}Title`)}</h3>
-            <p className="mt-2.5 text-[14px] leading-[1.75] text-muted-foreground">
+            <h3 className="mt-5 text-[16.5px] font-bold">{t(`step${step}Title`)}</h3>
+            <p className="mx-auto mt-2.5 max-w-[17rem] text-[14px] leading-[1.75] text-muted-foreground">
               {t(`step${step}Desc`)}
             </p>
           </li>

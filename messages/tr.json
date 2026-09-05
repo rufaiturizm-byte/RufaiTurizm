@@ -250,5 +250,12 @@
     "pickup": "Otelinizden alış ve bırakış",
     "vehicle": "Klimalı özel araç",
     "fixedPrice": "Sabit fiyat — sürpriz ücret yok"
+  },
+  "packages": {
+    "title": "Paketlerimiz ve Teklifler",
+    "subtitle": "Konaklama, transfer ve turları birlikte kapsayan çok günlü programlar",
+    "days": "gün",
+    "allPackages": "Tüm paketler",
+    "discount": "indirim"
   }
 }

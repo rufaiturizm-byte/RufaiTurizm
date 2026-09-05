@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { CalendarDays, Check, MapPin, Plus, Users } from "lucide-react";
@@ -37,23 +37,6 @@ export function TransferForm() {
   const [datetime, setDatetime] = useState("");
   const [people, setPeople] = useState("2");
   const [returnKind, setReturnKind] = useState<ReturnKind>("none");
-
-  /*
-   * Tarih alanı boşken tarayıcı ham biçim maskesini gösteriyor ("mm/dd/yyyy"),
-   * Türkçe/Arapça bir sayfada yabancı duruyor. Yarın öğlen ile dolduruyoruz —
-   * müşterinin çoğu zaten ertesi güne bakıyor. Sunucuda değil ilk render'dan
-   * sonra yazılıyor, yoksa sunucu ve tarayıcı çıktısı ayrışır.
-   */
-  useEffect(() => {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    tomorrow.setHours(12, 0, 0, 0);
-    const pad = (value: number) => String(value).padStart(2, "0");
-    setDatetime(
-      `${tomorrow.getFullYear()}-${pad(tomorrow.getMonth() + 1)}-${pad(tomorrow.getDate())}` +
-        `T${pad(tomorrow.getHours())}:${pad(tomorrow.getMinutes())}`,
-    );
-  }, []);
 
   const lines = [
     `${t("waService")}: ${tab === "transfer" ? t("tabTransfer") : t("tabChauffeur")}`,

@@ -4,6 +4,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { PackagesSection } from "@/components/site/packages-section";
 import { tours } from "@/data/tours";
 
 export async function generateMetadata({
@@ -47,6 +48,8 @@ export default async function ToursPage({
           ))}
         </div>
       </section>
+
+      <PackagesSection locale={locale} />
 
       <CredentialsBand />
     </main>

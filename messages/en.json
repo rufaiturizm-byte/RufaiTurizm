@@ -250,5 +250,12 @@
     "pickup": "Hotel pick-up and drop-off",
     "vehicle": "Private air-conditioned vehicle",
     "fixedPrice": "Fixed price — no surprise fees"
+  },
+  "packages": {
+    "title": "Our Packages and Offers",
+    "subtitle": "Multi-day programmes covering accommodation, transfers and tours",
+    "days": "days",
+    "allPackages": "All packages",
+    "discount": "off"
   }
 }

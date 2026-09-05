@@ -9,6 +9,7 @@ import { TrustBoxes } from "@/components/site/trust-boxes";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { PackagesSection } from "@/components/site/packages-section";
 import { Reviews } from "@/components/site/reviews";
 import { tours } from "@/data/tours";
 import { siteConfig } from "@/config/site";
@@ -143,6 +144,8 @@ export default async function HomePage({
             ))}
           </div>
         </section>
+
+        <PackagesSection locale={locale} />
 
         {/* VIP transfer bandı */}
         <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">

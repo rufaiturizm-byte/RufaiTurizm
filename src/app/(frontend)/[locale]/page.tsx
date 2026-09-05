@@ -43,7 +43,7 @@ export default async function HomePage({
 
   return (
     <>
-      <TravelAgencySchema locale={locale} name={tBrand("name")} description={t("hero.subtitle")} />
+      <TravelAgencySchema name={tBrand("name")} description={t("hero.subtitle")} />
       <WebSiteSchema name={tBrand("name")} />
 
       <main className="flex flex-1 flex-col">

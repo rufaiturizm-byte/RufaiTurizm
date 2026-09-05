@@ -54,7 +54,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "brand" });
-  const tHero = await getTranslations({ locale, namespace: "home.hero" });
+  const tMeta = await getTranslations({ locale, namespace: "meta" });
 
   return {
     metadataBase: new URL("https://rufaiturizm.com"),
@@ -62,7 +62,7 @@ export async function generateMetadata({
       default: `${t("name")} — ${t("tagline")}`,
       template: `%s | ${t("name")}`,
     },
-    description: tHero("subtitle"),
+    description: tMeta("home"),
     alternates: {
       canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
       languages: {

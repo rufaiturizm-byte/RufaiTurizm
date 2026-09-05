@@ -1,0 +1,38 @@
+# Rufai Turizm
+
+> TÜRSAB belgeli (No 12539) seyahat acentesi. İstanbul merkezli; havalimanı
+> transferi, şoförlü Mercedes Vito, Arapça rehberli günlük turlar, uçak bileti
+> ve otel rezervasyonu. Hizmet dilleri: Arapça, Türkçe, İngilizce.
+> وكالة سفر مرخّصة من TÜRSAB في إسطنبول: النقل من المطار، سيارة مع سائق،
+> جولات بمرشد يتحدث العربية، وحجز الطيران والفنادق.
+
+Ana pazar Körfez ülkeleridir ve varsayılan dil Arapçadır: kök adres (/)
+Arapça sürümü sunar, /tr Türkçe, /en İngilizce.
+
+Fiyatlar araç başınadır, kişi başı değildir. Kesin fiyat tarihe ve kişi
+sayısına göre WhatsApp üzerinden netleşir; sitede güzergâh fiyat listesi
+yayınlanmaz.
+
+## Hizmetler
+- [Havalimanı transferi](https://rufaiturizm.com/tr/transfer): İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW); isimli tabelayla karşılama, uçuş takibi, sabit fiyat.
+- [Hizmetlerimiz](https://rufaiturizm.com/tr/hizmetler): Vito VIP araç, transfer ve karşılama, tur hizmeti, uçak bileti ve otel rezervasyonu.
+- [Turlar](https://rufaiturizm.com/tr/turlar): İstanbul, Bursa, Sapanca, Trabzon, Bodrum. Özel tur; grupla birleştirme yok.
+- [Oteller](https://rufaiturizm.com/tr/oteller): İstanbul'da semt semt otel rehberi. Anlaşmalı otel listesi DEĞİLDİR; rezervasyon misafir adına yapılır.
+
+## Araç
+Tek araç kullanılır: şoförlü Mercedes Vito, bagajla birlikte 6 kişiye kadar.
+Site üzerinde gösterilen araç görselleri stok fotoğraftır ve künyeleri
+public/images/fleet/KUNYE.md içinde belirtilmiştir.
+
+## Seyahat rehberleri
+- [Tüm rehberler](https://rufaiturizm.com/tr/seyahat-rehberi): havalimanından şehre ulaşım, İstanbul'da nerede kalınır, Sapanca ve Maşukiye, Trabzon ve Uzungöl, mevsim rehberi, bir haftalık aile programı, alışveriş rehberi, Bursa ve Uludağ.
+
+## Kurumsal
+- [Hakkımızda](https://rufaiturizm.com/tr/hakkimizda)
+- [Sıkça sorulan sorular](https://rufaiturizm.com/tr/sikca-sorulan-sorular)
+- [İletişim](https://rufaiturizm.com/tr/iletisim): WhatsApp, 7/24.
+
+## Doğrulama
+TÜRSAB belge numarası 12539, tursab.org.tr/acenta-arama üzerinden
+doğrulanabilir. Sitede yayınlanan tek belge budur; sahip olunmayan belge
+veya sertifika gösterilmez.

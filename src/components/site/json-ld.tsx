@@ -6,7 +6,7 @@ import type {
   WebSite,
   WithContext,
 } from "schema-dts";
-import { siteConfig } from "@/config/site";
+import { siteConfig, hasRealPhone } from "@/config/site";
 
 /**
  * Yapısal veri. Rakip analizinden: en güçlü SEO'ya sahip rakip
@@ -22,11 +22,9 @@ function JsonLd({ data }: { data: object }) {
 }
 
 export function TravelAgencySchema({
-  locale,
   name,
   description,
 }: {
-  locale: string;
   name: string;
   description: string;
 }) {
@@ -36,7 +34,13 @@ export function TravelAgencySchema({
     name,
     url: siteConfig.url,
     description,
-    telephone: siteConfig.phoneHref,
+    /*
+     * Telefon yalnız GERÇEK numara girildiğinde yayınlanıyor.
+     * Arayüz yer tutucu numarayı zaten gizliyordu (hasRealPhone) ama
+     * yapısal veri onu Google'a gönderiyordu: arama sonucunda çalışmayan
+     * bir numara görünmesi, hiç görünmemesinden çok daha kötü.
+     */
+    ...(hasRealPhone ? { telephone: siteConfig.phoneHref } : {}),
     email: siteConfig.email,
     priceRange: "€€",
     image: `${siteConfig.url}/images/hero-ortakoy.jpg`,

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
+import { BreadcrumbSchema, ItemListSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
@@ -21,11 +23,12 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const tMeta = await getTranslations({ locale, namespace: "meta" });
   const t = await getTranslations({ locale, namespace: "toursPage" });
 
   return {
     title: t("title"),
-    description: t("subtitle"),
+    description: tMeta("tours"),
     alternates: alternatesFor("/tours", locale),
   };
 }
@@ -45,6 +48,24 @@ export default async function ToursPage({
 
   return (
     <main className="flex flex-1 flex-col">
+      {/* Bu sayfada hiç yapısal veri yoktu: kırıntı yolu da, listenin bir
+          koleksiyon olduğu bilgisi de eksikti. */}
+      <BreadcrumbSchema
+        items={[
+          { name: tNav("home"), url: getPathname({ locale, href: "/" }) },
+          { name: tNav("tours"), url: getPathname({ locale, href: "/tours" }) },
+        ]}
+      />
+      <ItemListSchema
+        items={tours.map((tour) => ({
+          name: tTours(`${tour.key}.name`),
+          url: getPathname({
+            locale,
+            href: { pathname: "/tours/[slug]", params: { slug: tour.slug } },
+          }),
+        }))}
+      />
+
       <PageHero
         image="/images/tours/istanbul.jpg"
         imageAlt={tTours("istanbul.name")}

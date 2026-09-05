@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowLeft, Check, Clock, Info, MapPin, MessageCircle, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
-import { TouristTripSchema } from "@/components/site/json-ld";
+import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { CredentialsBand } from "@/components/site/credentials-band";
@@ -61,6 +62,16 @@ export default async function TourDetailPage({
 
   return (
     <main className="flex flex-1 flex-col">
+      <BreadcrumbSchema
+        items={[
+          { name: tNav("home"), url: getPathname({ locale, href: "/" }) },
+          { name: tNav("tours"), url: getPathname({ locale, href: "/tours" }) },
+          {
+            name: name,
+            url: getPathname({ locale, href: { pathname: "/tours/[slug]", params: { slug } } }),
+          },
+        ]}
+      />
       <TouristTripSchema
         name={name}
         description={description}

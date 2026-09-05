@@ -416,5 +416,10 @@
     "interiorAlt": "Mercedes Vito rear seats with leather upholstery",
     "cockpitAlt": "Mercedes Vito driver area",
     "stockNote": "Photos represent the vehicle type."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "desc": "The page you are looking for may have moved or never existed. Continue from the links below, or message us directly.",
+    "home": "Back to home"
   }
 }

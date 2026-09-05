@@ -1,4 +1,5 @@
 import type {
+  BreadcrumbList,
   FAQPage,
   TouristTrip,
   TravelAgency,
@@ -120,6 +121,30 @@ export function TouristTripSchema({
           },
         }
       : {}),
+  };
+
+  return <JsonLd data={data} />;
+}
+
+/**
+ * Kırıntı yolu. Google arama sonucunda adresin yerine
+ * "Ana Sayfa › Turlar › İstanbul Turu" satırını gösterir; tıklama oranını
+ * yükselten ucuz bir kazanç.
+ */
+export function BreadcrumbSchema({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) {
+  const data: WithContext<BreadcrumbList> = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${siteConfig.url}${item.url}`,
+    })),
   };
 
   return <JsonLd data={data} />;

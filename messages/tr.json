@@ -416,5 +416,10 @@
     "interiorAlt": "Mercedes Vito arka koltuklar — deri döşeme",
     "cockpitAlt": "Mercedes Vito sürücü bölümü",
     "stockNote": "Görseller araç tipini temsil eder."
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "desc": "Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir. Aşağıdan devam edebilir veya doğrudan bize yazabilirsiniz.",
+    "home": "Ana sayfaya dön"
   }
 }

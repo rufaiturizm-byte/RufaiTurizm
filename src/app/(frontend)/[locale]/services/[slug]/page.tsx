@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
-import { TouristTripSchema } from "@/components/site/json-ld";
+import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-boxes";
 import { CredentialsBand } from "@/components/site/credentials-band";
@@ -65,6 +66,16 @@ export default async function ServiceDetailPage({
 
   return (
     <main className="flex flex-1 flex-col">
+      <BreadcrumbSchema
+        items={[
+          { name: tNav("home"), url: getPathname({ locale, href: "/" }) },
+          { name: tNav("services"), url: getPathname({ locale, href: "/services" }) },
+          {
+            name: name,
+            url: getPathname({ locale, href: { pathname: "/services/[slug]", params: { slug } } }),
+          },
+        ]}
+      />
       <TouristTripSchema
         name={name}
         description={description}

@@ -43,3 +43,7 @@ next-env.d.ts
 # Tasarim tuvali cikti dosyasi (2.5MB, yeniden uretilebilir)
 design/*.html
 !design/*.dc.html
+
+# Tasarim calisma gorselleri (site surumleri public/images altinda)
+design/photos/
+design/*-web.jpg

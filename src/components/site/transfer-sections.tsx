@@ -341,6 +341,7 @@ export async function ClosingCta({ locale }: { locale?: string }) {
           alt={locale === "ar" ? "برج الفتاة عند الغروب" : "Gün batımında Kız Kulesi"}
           fill
           sizes="(max-width: 1280px) 100vw, 1280px"
+          quality={60}
           className="absolute inset-0 z-0 object-cover object-center"
         />
         <div

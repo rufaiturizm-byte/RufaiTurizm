@@ -27,6 +27,7 @@ export function PageHero({
         fill
         priority
         sizes="100vw"
+          quality={60}
         className="-z-10 object-cover object-center"
       />
       <div

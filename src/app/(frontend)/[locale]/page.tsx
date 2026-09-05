@@ -66,6 +66,7 @@ export default async function HomePage({
             fill
             priority
             sizes="100vw"
+          quality={60}
             className="ken-burns -z-10 object-cover object-center"
           />
           <div

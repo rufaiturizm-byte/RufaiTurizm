@@ -103,6 +103,7 @@ export default async function ServiceDetailPage({
           fill
           priority
           sizes="100vw"
+          quality={60}
           className="-z-10 object-cover object-center"
         />
         <div className="absolute inset-0 -z-10 scrim-x" />

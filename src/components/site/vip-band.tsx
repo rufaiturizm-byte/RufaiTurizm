@@ -34,6 +34,7 @@ export async function VipBand({ locale }: { locale: string }) {
           alt={locale === "ar" ? "سيارة فيتو VIP" : "VIP Vito aracı"}
           fill
           sizes="(max-width: 1280px) 100vw, 1280px"
+          quality={60}
           className="-z-10 object-cover object-center"
         />
         <div

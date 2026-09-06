@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "./section-heading";
 import { transferRoutes } from "@/data/transfer-routes";
 import type { Locale } from "@/i18n/routing";
+import { routeTitle } from "@/lib/route-title";
 
 /**
  * Popüler güzergâh kartları.
@@ -28,7 +29,7 @@ export async function RouteCards({ locale }: { locale: string }) {
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {transferRoutes.map((route) => {
-          const title = `${route.from[lang] ?? route.from.tr} → ${route.to[lang] ?? route.to.tr}`;
+          const title = routeTitle(route.from[lang] ?? route.from.tr, route.to[lang] ?? route.to.tr, locale);
           const href = {
             pathname: "/transfer/[route]" as const,
             params: { route: route.slug },

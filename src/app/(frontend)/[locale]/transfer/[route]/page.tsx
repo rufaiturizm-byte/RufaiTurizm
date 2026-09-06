@@ -22,6 +22,7 @@ import { TableOfContents } from "@/components/site/table-of-contents";
 import { headingId } from "@/lib/heading-id";
 import { transferRoutes, transferRouteBySlug } from "@/data/transfer-routes";
 import type { Locale } from "@/i18n/routing";
+import { routeTitle } from "@/lib/route-title";
 
 export function generateStaticParams() {
   return transferRoutes.map((route) => ({ route: route.slug }));
@@ -41,7 +42,7 @@ export async function generateMetadata({
   const to = route.to[lang] ?? route.to.tr;
 
   return {
-    title: `${from} → ${to}`,
+    title: routeTitle(from, to, locale),
     description: `${route.excerpt[lang] ?? route.excerpt.tr} ${route.distance[lang] ?? route.distance.tr}, ${route.duration[lang] ?? route.duration.tr}.`,
     openGraph: { images: [route.image] },
     alternates: alternatesFor({ pathname: "/transfer/[route]", params: { route: slug } }, locale),
@@ -78,7 +79,7 @@ export default async function TransferRoutePage({
 
   const from = route.from[lang] ?? route.from.tr;
   const to = route.to[lang] ?? route.to.tr;
-  const title = `${from} → ${to}`;
+  const title = routeTitle(from, to, locale);
   const toc = route.sections.map((section, index) => ({
     id: headingId(section.heading[lang] ?? section.heading.tr, index),
     label: section.heading[lang] ?? section.heading.tr,
@@ -207,7 +208,7 @@ export default async function TransferRoutePage({
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {others.map((item) => {
-            const itemTitle = `${item.from[lang] ?? item.from.tr} → ${item.to[lang] ?? item.to.tr}`;
+            const itemTitle = routeTitle(item.from[lang] ?? item.from.tr, item.to[lang] ?? item.to.tr, locale);
             const href = {
               pathname: "/transfer/[route]" as const,
               params: { route: item.slug },

@@ -762,6 +762,274 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "istanbulda-helal-yemek-rehberi",
+    image: "/images/places/kadikoy.jpg",
+    minutes: 4,
+    title: {
+      tr: "İstanbul'da helal yemek: nerede ne yenir",
+      ar: "الطعام الحلال في إسطنبول: أين تأكل وماذا",
+      en: "Halal food in Istanbul: where and what to eat",
+    },
+    excerpt: {
+      tr: "Türk mutfağında neyin helal olduğu, hangi semtte ne bulunur ve dikkat edilecek tek şey.",
+      ar: "ما هو الحلال في المطبخ التركي، وماذا تجد في كل منطقة، والنقطة الوحيدة التي تحتاج انتباهاً.",
+      en: "What is halal in Turkish cuisine, what each district offers, and the one thing to watch for.",
+    },
+    facts: [
+      {
+        label: { tr: "Genel durum", ar: "الوضع العام", en: "In general" },
+        value: { tr: "Et ürünleri yaygın olarak helal", ar: "منتجات اللحوم حلال على نطاق واسع", en: "Meat is widely halal" },
+      },
+      {
+        label: { tr: "Dikkat", ar: "انتبه", en: "Watch for" },
+        value: { tr: "Alkol servisi yapan yerler", ar: "الأماكن التي تقدّم الكحول", en: "Places serving alcohol" },
+      },
+      {
+        label: { tr: "Kahvaltı", ar: "الفطور", en: "Breakfast" },
+        value: { tr: "Türk kahvaltısı etsiz ve bol", ar: "الفطور التركي بلا لحم ووفير", en: "Turkish breakfast is meat-free and generous" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Türk mutfağında et meselesi",
+          ar: "مسألة اللحم في المطبخ التركي",
+          en: "The meat question in Turkish cuisine",
+        },
+        body: {
+          tr: "Türkiye'de kasaplık ve et işleme yaygın olarak İslami usule göre yapılır; kebapçılar, dönerciler ve ev yemekleri sunan lokantalar bu açıdan sorun çıkarmaz. Domuz ürünü Türk mutfağının parçası değildir ve normal restoranlarda bulunmaz. Emin olmak isteyen misafirlerimiz için tek pratik soru şudur: mekân alkol servisi yapıyor mu.",
+          ar: "الذبح وتصنيع اللحوم في تركيا يجريان على نطاق واسع وفق الطريقة الإسلامية؛ ومطاعم الكباب والدونر والمطاعم البيتية لا تثير إشكالاً في هذا الجانب. ولحم الخنزير ليس جزءاً من المطبخ التركي ولا يُوجد في المطاعم العادية. والسؤال العملي الوحيد لمن يريد الاطمئنان: هل يقدّم المكان الكحول.",
+          en: "Butchery and meat processing in Türkiye are widely done according to Islamic practice; kebab houses, döner shops and home-style restaurants raise no issue here. Pork is not part of Turkish cuisine and is not found in ordinary restaurants. For guests who want certainty, the one practical question is whether the venue serves alcohol.",
+        },
+      },
+      {
+        heading: {
+          tr: "Semt semt ne bulunur",
+          ar: "ماذا تجد في كل منطقة",
+          en: "What each district offers",
+        },
+        body: {
+          tr: "Sultanahmet ve Fatih çevresinde aile lokantaları ve alkolsüz mekânlar çoğunluktadır; Arapça menü bulmak da en kolay buradadır. Taksim ve Beyoğlu'nda çeşit çok ama alkol servisi yapan yerler de fazladır. Nişantaşı ve alışveriş merkezlerinde uluslararası zincirlerin yanında Türk mutfağı sunan aile restoranları bulunur.",
+          ar: "حول السلطان أحمد والفاتح تكثر المطاعم العائلية والأماكن الخالية من الكحول؛ وهنا أسهل ما تجد قائمة طعام بالعربية. أما في تقسيم وبيوغلو فالتنوّع كبير لكن الأماكن التي تقدّم الكحول أكثر أيضاً. وفي نيشانتاشي والمولات تجد إلى جانب السلاسل العالمية مطاعم عائلية تقدّم المطبخ التركي.",
+          en: "Around Sultanahmet and Fatih, family restaurants and alcohol-free venues dominate, and Arabic menus are easiest to find here. Taksim and Beyoglu offer more variety but also more places serving alcohol. In Nisantasi and the malls you will find family restaurants serving Turkish food alongside international chains.",
+        },
+      },
+      {
+        heading: {
+          tr: "Kahvaltı ve tatlı",
+          ar: "الفطور والحلويات",
+          en: "Breakfast and sweets",
+        },
+        body: {
+          tr: "Türk kahvaltısı peynir, zeytin, yumurta, bal ve ekmekten oluşur; etsiz olduğu için hiçbir soru işareti bırakmaz ve çocuklu aileler için günün en rahat öğünüdür. Baklava, künefe ve dondurma da aynı şekilde sorunsuzdur. Şoförümüz güzergâh üzerinde durabileceğiniz yerleri bilir; bir yerden emin olmak isterseniz sormanız yeterli.",
+          ar: "الفطور التركي جبن وزيتون وبيض وعسل وخبز؛ وكونه بلا لحم لا يترك أي علامة استفهام، وهو أريح وجبة في اليوم للعائلات مع الأطفال. والبقلاوة والكنافة والمثلجات كذلك بلا إشكال. وسائقنا يعرف الأماكن التي يمكن التوقّف عندها على الطريق؛ وإذا أردت الاطمئنان لمكان يكفي أن تسأل.",
+          en: "Turkish breakfast is cheese, olives, eggs, honey and bread; being meat-free it raises no questions and is the easiest meal of the day with children. Baklava, künefe and ice cream are equally straightforward. Our driver knows where you can stop along the route; if you want to be sure about a place, just ask.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "bogaz-turu-rehberi",
+    image: "/images/places/bogaz-kopru.jpg",
+    minutes: 4,
+    title: {
+      tr: "Boğaz turu rehberi: hangi tekne, ne kadar sürer",
+      ar: "دليل جولة البوسفور: أي قارب وكم تستغرق",
+      en: "A Bosphorus cruise guide: which boat, how long",
+    },
+    excerpt: {
+      tr: "Kısa tur mu tam gün mü, nereden binilir, ne görülür — ve hangi saatte gitmeli.",
+      ar: "جولة قصيرة أم يوم كامل، من أين تركب، وماذا ترى — وفي أي ساعة تذهب.",
+      en: "Short cruise or full day, where to board, what you see — and the best hour to go.",
+    },
+    facts: [
+      {
+        label: { tr: "Kısa tur", ar: "جولة قصيرة", en: "Short cruise" },
+        value: { tr: "1,5 – 2 saat", ar: "ساعة ونصف – ساعتان", en: "1.5 – 2 hrs" },
+      },
+      {
+        label: { tr: "Kalkış", ar: "الانطلاق", en: "Departure" },
+        value: { tr: "Eminönü, Kabataş, Beşiktaş", ar: "أمينونو، كاباطاش، بشكتاش", en: "Eminonu, Kabatas, Besiktas" },
+      },
+      {
+        label: { tr: "En iyi saat", ar: "أفضل وقت", en: "Best time" },
+        value: { tr: "İkindi ve gün batımı", ar: "العصر وغروب الشمس", en: "Late afternoon and sunset" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Kısa tur mu, tam gün mü",
+          ar: "جولة قصيرة أم يوم كامل",
+          en: "Short cruise or full day",
+        },
+        body: {
+          tr: "Kısa Boğaz turları genellikle bir buçuk-iki saat sürer ve iki köprü arasını gösterir; şehir turu programının içine rahatça sığar. Tam gün turlar Karadeniz'in ağzına kadar gider, Anadolu Kavağı'nda mola verir ve günün tamamını alır. Çocuklu ailelerin çoğu için kısa tur yeterlidir; uzun tur dönüşte yorgunluk yaratabilir.",
+          ar: "جولات البوسفور القصيرة تستغرق عادةً ساعة ونصف إلى ساعتين وتُظهر ما بين الجسرين؛ وتندرج بسهولة داخل برنامج جولة المدينة. أما جولات اليوم الكامل فتصل إلى مدخل البحر الأسود وتتوقّف في أنادولو كاواغي وتستغرق اليوم كله. ولمعظم العائلات مع الأطفال تكفي الجولة القصيرة؛ فالطويلة قد تُتعب في العودة.",
+          en: "Short Bosphorus cruises usually run an hour and a half to two hours and cover the stretch between the two bridges; they fit comfortably inside a city-tour day. Full-day cruises go up to the mouth of the Black Sea, stop at Anadolu Kavagi and take the whole day. For most families with children the short cruise is enough; the long one can leave everyone tired on the way back.",
+        },
+      },
+      {
+        heading: {
+          tr: "Ne görülür",
+          ar: "ماذا ترى",
+          en: "What you see",
+        },
+        body: {
+          tr: "Tekne Dolmabahçe Sarayı, Ortaköy Camii, Rumeli Hisarı, Kız Kulesi ve iki yakadaki ahşap yalıları geçer. Şehri denizden görmek, karada saatlerce yürüyerek elde edemeyeceğiniz bir perspektif verir ve fotoğraf için günün en verimli kısmıdır. Üst güverte manzara için iyidir ama rüzgârlıdır; ince bir üst almak işe yarar.",
+          ar: "يمرّ القارب بقصر دولمة بهجة وجامع أورتاكوي وقلعة روملي حصار وبرج الفتاة والقصور الخشبية على الضفتين. ورؤية المدينة من البحر تمنحك زاوية لا تحصل عليها بساعات من المشي، وهي أنتج وقت للتصوير في اليوم. والطابق العلوي أفضل للإطلالة لكنه معرّض للرياح؛ ومن المفيد أخذ سترة خفيفة.",
+          en: "The boat passes Dolmabahce Palace, Ortakoy Mosque, Rumeli Fortress, the Maiden's Tower and the wooden waterside mansions on both shores. Seeing the city from the water gives a perspective hours of walking cannot, and it is the most productive part of the day for photographs. The upper deck is best for the view but windy; a light jacket helps.",
+        },
+      },
+      {
+        heading: {
+          tr: "Saat seçimi",
+          ar: "اختيار الساعة",
+          en: "Choosing the hour",
+        },
+        body: {
+          tr: "Öğle saatlerinde güneş tepededir ve fotoğraflar sert çıkar. İkindi ve gün batımı saatleri hem ışık hem sıcaklık açısından en iyisidir; yaz aylarında serinlik de o saatte başlar. Programı kurarken tekne saatini önceden belirlemek, gün içindeki diğer durakların sırasını da netleştirir.",
+          ar: "في الظهيرة تكون الشمس في كبد السماء وتخرج الصور قاسية. أما العصر والغروب فالأفضل من حيث الضوء والحرارة معاً؛ وفي الصيف تبدأ البرودة في تلك الساعة. وتحديد موعد القارب مسبقاً عند وضع البرنامج يوضّح أيضاً ترتيب بقية محطات اليوم.",
+          en: "At midday the sun is overhead and photographs come out harsh. Late afternoon and sunset are best for both light and temperature; in summer that is also when it starts to cool. Fixing the boat time in advance also settles the order of the day's other stops.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "cocuklu-ailelerle-istanbul",
+    image: "/images/chauffeur.jpg",
+    minutes: 4,
+    title: {
+      tr: "Çocuklu ailelerle İstanbul: pratik notlar",
+      ar: "إسطنبول مع الأطفال: ملاحظات عملية",
+      en: "Istanbul with children: practical notes",
+    },
+    excerpt: {
+      tr: "Bebek arabası, yürüme mesafeleri, mola noktaları ve programı kısaltmanın doğru yolu.",
+      ar: "عربة الأطفال ومسافات المشي ونقاط الاستراحة والطريقة الصحيحة لاختصار البرنامج.",
+      en: "Pushchairs, walking distances, rest stops and the right way to shorten the plan.",
+    },
+    facts: [
+      {
+        label: { tr: "Bebek arabası", ar: "عربة الأطفال", en: "Pushchair" },
+        value: { tr: "Tarihî yarımadada zor", ar: "صعبة في شبه الجزيرة التاريخية", en: "Hard on the historic peninsula" },
+      },
+      {
+        label: { tr: "Günlük durak", ar: "محطات اليوم", en: "Stops per day" },
+        value: { tr: "Üçten fazlası yorucu", ar: "أكثر من ثلاث مُتعب", en: "More than three tires everyone" },
+      },
+      {
+        label: { tr: "Çocuk koltuğu", ar: "مقعد الأطفال", en: "Child seat" },
+        value: { tr: "Talebe göre, ek ücretsiz", ar: "عند الطلب وبدون رسوم", en: "On request, no extra charge" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Yürüme mesafeleri gerçekte ne kadar",
+          ar: "كم هي مسافات المشي فعلاً",
+          en: "How far the walking really is",
+        },
+        body: {
+          tr: "Tarihî yarımadadaki noktalar haritada yakın görünür ama arada taş döşeli, eğimli sokaklar vardır ve bebek arabası her yerde rahat gitmez. Topkapı Sarayı'nın kendisi geniş bir alandır; içeride bir-iki saat yürünür. Bir güne iki büyük müze koymak, çocuklu bir aile için genellikle fazladır.",
+          ar: "تبدو معالم شبه الجزيرة التاريخية متقاربة على الخريطة، لكن بينها أزقة حجرية مائلة ولا تسير عربة الأطفال بسهولة في كل مكان. وقصر توبكابي نفسه مساحة واسعة؛ يُمشى داخله ساعة أو ساعتان. ووضع متحفين كبيرين في يوم واحد كثير عادةً على عائلة مع أطفال.",
+          en: "The sights on the historic peninsula look close on a map, but between them are cobbled, sloping lanes where a pushchair will not roll easily. Topkapi Palace itself is a large site; you walk inside it for an hour or two. Putting two major museums in one day is usually too much for a family with children.",
+        },
+      },
+      {
+        heading: {
+          tr: "Aracın gün boyu yanınızda olması",
+          ar: "بقاء السيارة معكم طوال اليوم",
+          en: "Having the car with you all day",
+        },
+        body: {
+          tr: "Çocuklu bir programda en çok işe yarayan şey, aracın gün boyu emrinizde olmasıdır: ceket, su ve alışveriş paketleri araçta kalır, çocuk yorulduğunda ara verilir ve program kısaltılabilir. Araç her durakta sizi beklerse gün içinde ulaşım aramak diye bir mesele kalmaz.",
+          ar: "أنفع شيء في برنامج مع أطفال هو بقاء السيارة تحت تصرّفكم طوال اليوم: تبقى الجاكيتات والماء وأكياس التسوّق فيها، وعند تعب الطفل تؤخذ استراحة ويُختصر البرنامج. وإذا انتظرتكم السيارة عند كل محطة فلن تبقى مسألة اسمها البحث عن مواصلات أثناء اليوم.",
+          en: "On a programme with children, the most useful thing is having the car at your disposal all day: jackets, water and shopping bags stay in it, you pause when a child tires and the plan can be shortened. If the car waits at every stop, finding transport during the day stops being a problem at all.",
+        },
+      },
+      {
+        heading: {
+          tr: "Hangi duraklar çocuklara iyi gelir",
+          ar: "أي المحطات تناسب الأطفال",
+          en: "Which stops work for children",
+        },
+        body: {
+          tr: "Boğaz tekne turu, teleferikle Uludağ'a çıkmak ve Sapanca'da göl kenarında yürümek çocukların en çok sevdiği bölümlerdir; hepsi az yürüyüş çok manzara içerir. Uzun müze gezileri ve kalabalık çarşılar ise en çabuk yorulunan yerlerdir. İyi bir gün bu ikisini dengeler: sabah bir tarihî nokta, öğleden sonra açık hava.",
+          ar: "جولة القارب في البوسفور، والصعود بالتلفريك إلى أولوداغ، والمشي على ضفة بحيرة سبانجا هي أحبّ الأجزاء إلى الأطفال؛ وكلها مشي قليل ومناظر كثيرة. أما جولات المتاحف الطويلة والبازارات المزدحمة فأسرع ما يُتعب. واليوم الجيد يوازن بينهما: معلم تاريخي صباحاً وهواء طلق بعد الظهر.",
+          en: "A Bosphorus boat trip, the cable car up Uludag and walking by the lake at Sapanca are the parts children like most; all involve little walking and plenty of view. Long museum visits and crowded bazaars tire everyone fastest. A good day balances the two: one historic site in the morning, open air in the afternoon.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "istanbulda-uc-gun-programi",
+    image: "/images/places/sultanahmet.jpg",
+    minutes: 4,
+    title: {
+      tr: "İstanbul'da üç gün: kısa ziyaret programı",
+      ar: "ثلاثة أيام في إسطنبول: برنامج زيارة قصيرة",
+      en: "Three days in Istanbul: a short-visit plan",
+    },
+    excerpt: {
+      tr: "Az vakti olan için sıkıştırılmış ama yormayan bir sıra — neyi bırakmak gerektiği dahil.",
+      ar: "ترتيب مكثّف لكنه غير مُرهق لمن وقته قصير — بما في ذلك ما يجب تركه.",
+      en: "A condensed but not exhausting order for a short stay — including what to leave out.",
+    },
+    facts: [
+      {
+        label: { tr: "Süre", ar: "المدة", en: "Length" },
+        value: { tr: "3 gün", ar: "3 أيام", en: "3 days" },
+      },
+      {
+        label: { tr: "Konaklama", ar: "الإقامة", en: "Where to stay" },
+        value: { tr: "Sultanahmet ya da Taksim", ar: "السلطان أحمد أو تقسيم", en: "Sultanahmet or Taksim" },
+      },
+      {
+        label: { tr: "Şehir dışı", ar: "خارج المدينة", en: "Out of town" },
+        value: { tr: "Bu programda yok", ar: "غير مدرج في هذا البرنامج", en: "Not in this plan" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Birinci gün: tarihî yarımada",
+          ar: "اليوم الأول: شبه الجزيرة التاريخية",
+          en: "Day one: the historic peninsula",
+        },
+        body: {
+          tr: "Sabah erken Sultanahmet Camii ve Ayasofya ile başlayın; ikisi de yürüme mesafesinde ve erken saat kuyruğu belirgin şekilde kısaltır. Öğleden sonra Topkapı Sarayı ya da Yerebatan Sarnıcı — üçünü birden aynı güne koymak yorar. Gün Kapalıçarşı'da kapanabilir.",
+          ar: "ابدأ صباحاً باكراً بجامع السلطان أحمد وآيا صوفيا؛ كلاهما على مسافة سير والساعة المبكرة تقصّر الطابور بوضوح. وبعد الظهر قصر توبكابي أو صهريج البازيليك — ووضع الثلاثة في يوم واحد مُتعب. ويمكن أن يُختتم اليوم في البازار المسقوف.",
+          en: "Start early with the Blue Mosque and Hagia Sophia; both are within walking distance and an early hour noticeably shortens the queue. In the afternoon, Topkapi Palace or the Basilica Cistern — putting all three in one day is tiring. The day can end at the Grand Bazaar.",
+        },
+      },
+      {
+        heading: {
+          tr: "İkinci gün: Boğaz ve Beyoğlu",
+          ar: "اليوم الثاني: البوسفور وبيوغلو",
+          en: "Day two: the Bosphorus and Beyoglu",
+        },
+        body: {
+          tr: "Öğleden önce Dolmabahçe Sarayı, ikindi vakti Boğaz turu. Tekneden indikten sonra Galata Kulesi ve Karaköy tarafı yürüyerek gezilebilir. Bu gün şehri hem karadan hem denizden gösterdiği için üç günlük programın en verimli günüdür.",
+          ar: "قبل الظهر قصر دولمة بهجة، وعند العصر جولة البوسفور. وبعد النزول من القارب يمكن التجوّل سيراً في برج غالاتا وجهة كاراكوي. وهذا اليوم أنتج أيام البرنامج الثلاثة لأنه يُظهر المدينة من البرّ والبحر معاً.",
+          en: "Dolmabahce Palace before noon, the Bosphorus cruise in the late afternoon. After landing, Galata Tower and the Karakoy side are walkable. This is the most productive day of the three because it shows the city from both land and water.",
+        },
+      },
+      {
+        heading: {
+          tr: "Üçüncü gün ve neyi bırakmalı",
+          ar: "اليوم الثالث وما الذي تتركه",
+          en: "Day three, and what to leave out",
+        },
+        body: {
+          tr: "Üçüncü günü alışverişe ve serbest zamana ayırın: Nişantaşı ya da bir alışveriş merkezi, öğleden sonra da dinlenme. Üç günlük bir ziyarette şehir dışına çıkmayı (Bursa, Sapanca) bilerek programa koymuyoruz — yol iki tarafı da yorar ve İstanbul'un kendisinden çalar. Şehir dışı, beş gün ve üstü programlara aittir.",
+          ar: "خصّص اليوم الثالث للتسوّق والوقت الحر: نيشانتاشي أو أحد المولات، وبعد الظهر راحة. وفي زيارة من ثلاثة أيام لا ندرج الخروج خارج المدينة (بورصة، سبانجا) عن قصد — فالطريق يُتعب في الاتجاهين ويسرق من إسطنبول نفسها. الخروج خارج المدينة يناسب برامج خمسة أيام فأكثر.",
+          en: "Give the third day to shopping and free time: Nisantasi or a mall, with an afternoon to rest. On a three-day visit we deliberately leave out trips beyond the city (Bursa, Sapanca) — the road tires you both ways and takes from Istanbul itself. Out-of-town days belong to programmes of five days or more.",
+        },
+      },
+    ],
+  },
 ];
 
 export function guideBySlug(slug: string) {

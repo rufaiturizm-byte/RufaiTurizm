@@ -47,7 +47,7 @@ export async function TourCompare() {
             oynatmasın, ikisi birbirini kilitliyordu. */}
         <div
           data-lenis-prevent
-          className="overflow-x-auto surface-card"
+          className="scroll-x-hint overflow-x-auto surface-card"
           style={{ borderRadius: "var(--radius-card)" }}
         >
           <table className="w-full min-w-[720px] border-collapse">
@@ -111,6 +111,7 @@ export async function TourCompare() {
           </table>
         </div>
 
+        <p className="mt-3 text-[12.5px] text-muted-foreground lg:hidden">{t("swipeHint")}</p>
         <p className="mt-4 text-[13px] text-muted-foreground">{t("priceNote")}</p>
       </section>
 

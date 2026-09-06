@@ -246,7 +246,8 @@
     "colPrice": "From",
     "colHighlight": "Highlight",
     "whatsIncludedTitle": "What the price includes and excludes",
-    "whatsIncludedSubtitle": "So you know what is covered before you book."
+    "whatsIncludedSubtitle": "So you know what is covered before you book.",
+    "swipeHint": "Swipe the table sideways to see all columns"
   },
   "about": {
     "title": "About Us",

@@ -27,7 +27,7 @@ export async function RouteCards({ locale }: { locale: string }) {
         rule={false}
       />
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {transferRoutes.map((route) => {
           const title = routeTitle(route.from[lang] ?? route.from.tr, route.to[lang] ?? route.to.tr, locale);
           const href = {

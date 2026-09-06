@@ -246,7 +246,8 @@
     "colPrice": "Başlangıç fiyatı",
     "colHighlight": "Öne çıkan durak",
     "whatsIncludedTitle": "Fiyata dahil olan ve olmayanlar",
-    "whatsIncludedSubtitle": "Rezervasyondan önce neyin dahil olduğunu bilmeniz için."
+    "whatsIncludedSubtitle": "Rezervasyondan önce neyin dahil olduğunu bilmeniz için.",
+    "swipeHint": "Tabloyu yana kaydırarak tüm sütunları görebilirsiniz"
   },
   "about": {
     "title": "Hakkımızda",

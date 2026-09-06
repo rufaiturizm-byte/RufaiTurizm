@@ -246,7 +246,8 @@
     "colPrice": "سعر البداية",
     "colHighlight": "أبرز محطة",
     "whatsIncludedTitle": "ما يشمله السعر وما لا يشمله",
-    "whatsIncludedSubtitle": "لتعرف ما هو مشمول قبل الحجز."
+    "whatsIncludedSubtitle": "لتعرف ما هو مشمول قبل الحجز.",
+    "swipeHint": "مرّر الجدول جانبياً لرؤية كل الأعمدة"
   },
   "about": {
     "title": "من نحن",

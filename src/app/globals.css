@@ -631,3 +631,20 @@ header :where(a, button):focus-visible {
 .skip-link:focus-visible {
   top: 1rem;
 }
+
+/*
+ * Yana kayan tablo. Tur karşılaştırma tablosu dar ekranda kendi içinde
+ * kayıyor ama kaydırılabildiği belli olmuyordu: kullanıcı son iki sütunun
+ * varlığını bilmiyordu. Sağ kenardaki silinme "devamı var" diyor.
+ *
+ * Maske yalnız içerik gerçekten taşıyorsa anlamlı; taşma olmayan geniş
+ * ekranda görünmesin diye kırılma noktasına bağlı.
+ */
+@media (max-width: 1023px) {
+  .scroll-x-hint {
+    mask-image: linear-gradient(to right, black calc(100% - 2.5rem), transparent 100%);
+  }
+  [dir="rtl"] .scroll-x-hint {
+    mask-image: linear-gradient(to left, black calc(100% - 2.5rem), transparent 100%);
+  }
+}

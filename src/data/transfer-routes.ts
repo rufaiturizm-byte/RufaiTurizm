@@ -298,6 +298,110 @@ export const transferRoutes: TransferRoute[] = [
       },
     ],
   },
+  {
+    slug: "istanbul-havalimani-besiktas-ortakoy-transfer",
+    airport: "IST",
+    image: "/images/hero-ortakoy.jpg",
+    from: { tr: "İstanbul Havalimanı (IST)", ar: "مطار إسطنبول (IST)", en: "Istanbul Airport (IST)" },
+    to: { tr: "Beşiktaş ve Ortaköy", ar: "بشكتاش وأورتاكوي", en: "Besiktas and Ortakoy" },
+    distance: { tr: "yaklaşık 42 km", ar: "نحو 42 كم", en: "about 42 km" },
+    duration: { tr: "45 dk – 1,5 saat", ar: "45 دقيقة – ساعة ونصف", en: "45 min – 1.5 hrs" },
+    excerpt: {
+      tr: "Boğaz kıyısındaki oteller için: sahil yolu, dar yan sokaklar ve manzaralı odaya varmak.",
+      ar: "لفنادق ضفة البوسفور: طريق الساحل والأزقة الجانبية الضيقة والوصول إلى الغرفة ذات الإطلالة.",
+      en: "For the Bosphorus-shore hotels: the coast road, narrow side streets and reaching that view room.",
+    },
+    sections: [
+      {
+        heading: {
+          tr: "Sahil yolundan iniş",
+          ar: "النزول من طريق الساحل",
+          en: "Coming in along the shore",
+        },
+        body: {
+          tr: "Beşiktaş ve Ortaköy, havalimanına yaklaşık 42 kilometre mesafede ve Avrupa yakasında; Boğaz geçişi gerekmez. Yolun son bölümü sahil yolundan geçer ve Boğaz manzarası daha araçtayken başlar. Bu bölüm dar ve tek şeritli olduğu için akşamüstü belirgin şekilde yavaşlar.",
+          ar: "تبعد بشكتاش وأورتاكوي نحو 42 كيلومتراً عن المطار وهما في الجانب الأوروبي؛ فلا حاجة لعبور البوسفور. والجزء الأخير من الطريق يمرّ على الساحل، فتبدأ إطلالة البوسفور وأنت ما زلت في السيارة. وهذا المقطع ضيق وبحارة واحدة، لذا يبطؤ بوضوح قبيل المساء.",
+          en: "Besiktas and Ortakoy are about 42 km from the airport and on the European side, so no Bosphorus crossing is needed. The last stretch runs along the shore road and the Bosphorus view starts while you are still in the car. That section is narrow and single-lane, so it slows noticeably in the late afternoon.",
+        },
+      },
+      {
+        heading: {
+          tr: "Yalı otellerine varmak",
+          ar: "الوصول إلى فنادق الضفة",
+          en: "Reaching the waterside hotels",
+        },
+        body: {
+          tr: "Boğaz kıyısındaki otellerin bir kısmı sahil yolundan dar yan sokaklarla inilen konumlardadır ve kapının önünde bekleme alanı sınırlıdır. Otelin tam adresi rezervasyonda alındığında şoför giriş noktasını önceden bilir; bagajla sahil yolunda yürümek gerekmez. Ortaköy meydanı çevresi hafta sonları araç trafiğine yoğun şekilde kapanabilir.",
+          ar: "بعض فنادق ضفة البوسفور تُبلغ عبر أزقة جانبية ضيقة تنزل من طريق الساحل، ومساحة الانتظار أمام الباب محدودة. وعند أخذ العنوان الكامل للفندق أثناء الحجز يعرف السائق نقطة الدخول مسبقاً، فلا يلزم المشي بالحقائب على طريق الساحل. وقد يُغلق محيط ميدان أورتاكوي أمام السيارات بكثافة في عطلة نهاية الأسبوع.",
+          en: "Some of the shore hotels are reached down narrow side streets off the coast road, with limited waiting space at the door. When the full address is taken at booking, the driver knows the entry point in advance and you do not walk along the shore road with luggage. The area around Ortakoy square can close heavily to traffic at weekends.",
+        },
+      },
+      {
+        heading: {
+          tr: "Manzara neye mal olur",
+          ar: "ما ثمن الإطلالة",
+          en: "What the view costs you",
+        },
+        body: {
+          tr: "Boğaz manzarası İstanbul'da fiyatı en çok değiştiren unsurdur ve bu bölgede kalmanın asıl sebebi odur. Karşılığında tarihî yarımada yürüme mesafesinde değildir: Sultanahmet'e her gün gidilecekse ulaşım günün içine eklenmelidir. Aracın gün boyu emrinizde olması bu bölgede en çok işe yarayan çözümdür.",
+          ar: "إطلالة البوسفور هي العامل الأكثر تأثيراً في السعر بإسطنبول، وهي السبب الأساسي للإقامة في هذه المنطقة. وفي المقابل شبه الجزيرة التاريخية ليست على مسافة سير: فإن كنت ستذهب يومياً إلى السلطان أحمد فيجب إضافة التنقّل إلى برنامج اليوم. ووجود السيارة تحت تصرّفك طوال اليوم هو أنفع حل في هذه المنطقة.",
+          en: "A Bosphorus view is the biggest price lever in Istanbul and the main reason to stay here. In return, the historic peninsula is not walking distance: if you will go to Sultanahmet daily, add the travel into the day. Having the car at your disposal all day is the most useful answer in this area.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "istanbul-havalimani-bursa-transfer",
+    airport: "IST",
+    image: "/images/tours/bursa.jpg",
+    from: { tr: "İstanbul Havalimanı (IST)", ar: "مطار إسطنبول (IST)", en: "Istanbul Airport (IST)" },
+    to: { tr: "Bursa", ar: "بورصة", en: "Bursa" },
+    distance: { tr: "yaklaşık 240 km", ar: "نحو 240 كم", en: "about 240 km" },
+    duration: { tr: "3 – 3,5 saat", ar: "3 – 3.5 ساعات", en: "3 – 3.5 hrs" },
+    excerpt: {
+      tr: "Şehirlerarası transferin en çok sorulanı: feribot mu karayolu mu, ve gecikme payı.",
+      ar: "أكثر ما يُسأل في النقل بين المدن: عبّارة أم برّاً، وهامش التأخير.",
+      en: "The most-asked intercity transfer: ferry or road, and how much margin to leave.",
+    },
+    sections: [
+      {
+        heading: {
+          tr: "İki güzergâh, iki farklı hesap",
+          ar: "مساران، حسابان مختلفان",
+          en: "Two routes, two different calculations",
+        },
+        body: {
+          tr: "Bursa'ya İstanbul Havalimanı'ndan iki şekilde gidilir. Karayolu Osmangazi Köprüsü üzerinden gider ve saatten bağımsız çalışır; feribot Marmara'yı denizden geçer ve yolun bir bölümünü kısaltır ama sefer saatine bağlıdır. Uçuşu gecikmiş bir yolcu için karayolu daha güvenlidir: kaçırılacak bir sefer yoktur.",
+          ar: "يُوصل إلى بورصة من مطار إسطنبول بطريقتين. الطريق البرّي يمرّ عبر جسر عثمان غازي ويعمل بمعزل عن الساعة؛ أما العبّارة فتعبر بحر مرمرة وتختصر جزءاً من الطريق لكنها مرتبطة بمواعيد الرحلات. ولمسافر تأخّرت رحلته يكون الطريق البرّي أأمن: لا توجد رحلة تفوته.",
+          en: "There are two ways to Bursa from Istanbul Airport. The road route crosses the Osmangazi Bridge and works regardless of the hour; the ferry crosses the Marmara and shortens part of the trip but depends on sailing times. For a passenger whose flight is late, the road is safer: there is no sailing to miss.",
+        },
+      },
+      {
+        heading: {
+          tr: "Üç saatlik yolculuk ne demek",
+          ar: "ماذا تعني رحلة من ثلاث ساعات",
+          en: "What a three-hour drive means",
+        },
+        body: {
+          tr: "Bu, sitedeki en uzun transferdir ve şehir içi bir yolculuk gibi planlanamaz. Çocuklu ailelerde yol üzerinde en az bir mola gerekir; araçta su bulunur ve namaz vakti güzergâh üzerindeki tesislerde geçirilebilir. Uçuş sonrası doğrudan Bursa'ya geçmek yerine İstanbul'da bir gece kalmak, çoğu aile için daha rahat olur.",
+          ar: "هذا أطول نقل على الموقع ولا يمكن تخطيطه كرحلة داخل المدينة. ومع الأطفال يلزم توقّف واحد على الأقل في الطريق؛ والماء متوفّر في السيارة ويمكن أداء الصلاة في الاستراحات على المسار. وبدل الانتقال مباشرةً إلى بورصة بعد الرحلة الجوية، تكون المبيت ليلة في إسطنبول أريح لمعظم العائلات.",
+          en: "This is the longest transfer on the site and cannot be planned like a city trip. With children at least one stop along the way is needed; water is in the car and prayer time can be taken at the service areas on the route. Rather than going straight to Bursa after a flight, spending one night in Istanbul is more comfortable for most families.",
+        },
+      },
+      {
+        heading: {
+          tr: "Aynı araç, aynı şoför",
+          ar: "السيارة نفسها والسائق نفسه",
+          en: "The same car, the same driver",
+        },
+        body: {
+          tr: "Şehirlerarası yolculuklarda araç ve şoför gün boyu sizinle kalır; Bursa'da Uludağ, Ulu Cami ve Cumalıkızık arasında ayrıca ulaşım aramanız gerekmez. Dönüş aynı gün planlanacaksa uçuş saatinden geriye doğru hesap yaparken yolun üç saatine ek olarak trafik payı bırakmak gerekir.",
+          ar: "في الرحلات بين المدن تبقى السيارة والسائق معكم طوال اليوم؛ فلا تحتاجون إلى البحث عن مواصلات بين أولوداغ والجامع الكبير وجوما لي كيزيك في بورصة. وإذا كانت العودة في اليوم نفسه فعند الحساب رجوعاً من موعد الإقلاع يجب ترك هامش للازدحام إضافةً إلى ساعات الطريق الثلاث.",
+          en: "On intercity trips the vehicle and driver stay with you all day; in Bursa you will not need separate transport between Uludag, the Ulu Mosque and Cumalikizik. If the return is planned for the same day, counting back from the flight time, leave a traffic margin on top of the three hours on the road.",
+        },
+      },
+    ],
+  },
 ];
 
 export function transferRouteBySlug(slug: string) {

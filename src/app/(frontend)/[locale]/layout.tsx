@@ -31,18 +31,39 @@ const tajawal = Tajawal({
  * İkisi de serif olduğu için marka hissi diller arasında bozulmuyor.
  * Aynı CSS değişkenini paylaşıyorlar, dile göre yalnız biri uygulanıyor.
  */
+/*
+ * İki ölçüm sonucu buradaki ayarları değiştirdi.
+ *
+ * 1. AĞIRLIK. Kod tabanındaki 65 `font-display` kullanımının tamamı
+ *    `font-semibold`. Playfair'den üç (500/600/700), Amiri'den iki
+ *    (400/700) ağırlık indiriliyordu; ikisi de gereğinden fazla.
+ *    Amiri'de 600 yok, o yüzden semibold zaten 700'e düşüyor.
+ *
+ * 2. ÖNYÜKLEME. next/font iki aileyi de statik olarak görüp ikisini de
+ *    preload ediyordu: Arapça sayfa hiç kullanmadığı Latin serifini,
+ *    Türkçe sayfa hiç kullanmadığı Arapça serifini indiriyordu. Her iki
+ *    dilde de on bir font dosyası önyükleniyordu.
+ *
+ *    `preload: false` ile @font-face kuralı duruyor ama dosya yalnız
+ *    eşleşen bir öğe render edildiğinde iniyor — kullanılmayan aile hiç
+ *    inmiyor. LCP'ye zarar vermiyor çünkü ölçtüm: LCP öğesi hero
+ *    görseli (516 ms), başlık değil. Gövde fontu Tajawal önyüklemesini
+ *    KORUYOR, ilk boyanan metin o.
+ */
 const displayLatin = Playfair_Display({
   variable: "--font-display-family",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600"],
   display: "swap",
+  preload: false,
 });
 
 const displayArabic = Amiri({
   variable: "--font-display-family",
   subsets: ["arabic"],
-  weight: ["400", "700"],
+  weight: ["700"],
   display: "swap",
+  preload: false,
 });
 
 export function generateStaticParams() {

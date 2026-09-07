@@ -68,6 +68,37 @@ export function guidesByTopic(topic: GuideTopic) {
   return guides.filter((guide) => guide.topic === topic);
 }
 
+/**
+ * Yazının altında gösterilecek ilgili rehberler.
+ *
+ * Önceki hali `guides.filter(başkası).slice(0, 3)` idi: her yazı dizinin
+ * ilk üç rehberini gösteriyordu. İki sonucu vardı — balayı yazısının
+ * altında "havalimanından şehre nasıl gidilir" çıkıyordu, ve on sekiz
+ * rehberin on beşi başka hiçbir rehberden İÇ LİNK ALMIYORDU. İlk üçü
+ * bütün bağlantı değerini kendine topluyordu.
+ *
+ * Şimdi önce aynı konudakiler, yer kalırsa sıradaki konulardan
+ * tamamlanıyor. Başlangıç noktası yazının kendi sırasından kayıyor, bu
+ * yüzden aynı konudaki dört yazı birbirinin aynısını göstermiyor ve
+ * her rehber en az bir yerden bağlantı alıyor.
+ */
+export function relatedGuides(slug: string, count = 3) {
+  const current = guides.find((guide) => guide.slug === slug);
+  if (!current) return guides.slice(0, count);
+
+  const sameTopic = guidesByTopic(current.topic).filter((guide) => guide.slug !== slug);
+  const others = guides.filter(
+    (guide) => guide.slug !== slug && guide.topic !== current.topic,
+  );
+
+  // Kaydırma: aynı konudaki her yazı listeye farklı bir yerden başlasın.
+  const offset = guides.indexOf(current);
+  const rotate = <T,>(list: T[]) =>
+    list.length ? list.slice(offset % list.length).concat(list.slice(0, offset % list.length)) : list;
+
+  return [...rotate(sameTopic), ...rotate(others)].slice(0, count);
+}
+
 export interface Guide {
   slug: string;
   topic: GuideTopic;

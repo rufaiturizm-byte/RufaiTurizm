@@ -16,7 +16,7 @@ import { headingId } from "@/lib/heading-id";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
-import { guides, guideBySlug } from "@/data/guides";
+import { guideBySlug, guides, relatedGuides } from "@/data/guides";
 import type { Locale } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -92,7 +92,7 @@ export default async function GuideDetailPage({
     { id: "rehber-sss", label: t("faqTitle") },
   ];
 
-  const others = guides.filter((item) => item.slug !== guide.slug).slice(0, 3);
+  const others = relatedGuides(guide.slug);
 
   return (
     <main id="main" className="flex flex-1 flex-col">

@@ -19,6 +19,7 @@ import { VipBand } from "@/components/site/vip-band";
 import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCards } from "@/components/site/route-cards";
 import { FaqPreview } from "@/components/site/faq-preview";
+import { GuidesTeaser } from "@/components/site/guides-teaser";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { DestinationsMarquee } from "@/components/site/destinations-marquee";
 import { Reveal } from "@/components/site/reveal";
@@ -188,6 +189,8 @@ export default async function HomePage({
         <RouteCards locale={locale} />
 
         <VehicleList />
+
+        <GuidesTeaser locale={locale} />
 
         <FaqPreview />
         <ClosingCta locale={locale} />

@@ -31,9 +31,9 @@ export const vehicles: Vehicle[] = [
     luggage: 6,
     priceFrom: 35,
     photos: [
-      { src: "/images/vito-black.jpg", altKey: "exteriorAlt" },
+      { src: "/images/fleet/vito-exterior.jpg", altKey: "exteriorAlt" },
       { src: "/images/fleet/vito-interior.jpg", altKey: "interiorAlt" },
-      { src: "/images/fleet/vito-cockpit.jpg", altKey: "cockpitAlt" },
+      { src: "/images/fleet/vito-fleet.jpg", altKey: "fleetAlt" },
       { src: "/images/fleet/vito-exterior.jpg", altKey: "exteriorAlt" },
     ],
     featureKeys: ["f1", "f2", "f3", "f4", "f5", "f6"],

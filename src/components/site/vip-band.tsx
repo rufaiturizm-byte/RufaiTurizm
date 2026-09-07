@@ -30,7 +30,7 @@ export async function VipBand({ locale }: { locale: string }) {
         style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
       >
         <Image
-          src="/images/vito-black.jpg"
+          src="/images/fleet/vito-exterior.jpg"
           alt={locale === "ar" ? "سيارة فيتو VIP" : "VIP Vito aracı"}
           fill
           sizes="(max-width: 1280px) 100vw, 1280px"

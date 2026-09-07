@@ -600,12 +600,11 @@
       "desc": "The vehicle families ask for most: six passengers with luggage in comfort, tinted windows and separate rear air conditioning."
     },
     "galleryTitle": "Inside the vehicle",
-    "interiorAlt": "Mercedes Vito rear seats with leather upholstery",
-    "cockpitAlt": "Mercedes Vito driver area",
-    "stockNote": "Photos represent the vehicle type.",
+    "interiorAlt": "Mercedes Vito with the side door open — tan quilted leather VIP seat",
+    "stockNote": "These photographs are of our own fleet, not stock images.",
     "vitoBadge": "Most requested",
     "vitoLuggage": "5 – 6",
-    "exteriorAlt": "Mercedes Vito exterior",
+    "exteriorAlt": "Our black Mercedes Vito vehicles lined up in front of the Rufai Turizm office",
     "homeTitle": "The vehicle you travel in",
     "useTitle": "Our vehicle and how it is used",
     "useSubtitle": "One vehicle, four kinds of journey. All with a Mercedes Vito and a chauffeur.",
@@ -632,7 +631,9 @@
     "f4": "Free water and internet on board",
     "f5": "Child seat at no extra charge",
     "f6": "The same chauffeur throughout your trip",
-    "specTitle": "Specs and comfort"
+    "specTitle": "Specs and comfort",
+    "fleetAlt": "The Rufai Turizm fleet: five black Mercedes Vitos in front of the office sign",
+    "officeAlt": "The Rufai Turizm office — the exterior of our branch in Istanbul"
   },
   "notFound": {
     "title": "Page not found",

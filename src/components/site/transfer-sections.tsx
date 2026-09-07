@@ -44,9 +44,9 @@ export async function TransferTypes() {
    */
   const types = [
     { n: "1", icon: PlaneLanding, image: "/images/chauffeur.jpg" },
-    { n: "2", icon: PlaneTakeoff, image: "/images/vito-black.jpg" },
+    { n: "2", icon: PlaneTakeoff, image: "/images/fleet/vito-exterior.jpg" },
     { n: "3", icon: Route, image: "/images/tours/sapanca.jpg" },
-    { n: "4", icon: CalendarClock, image: "/images/fleet/vito-cockpit.jpg" },
+    { n: "4", icon: CalendarClock, image: "/images/fleet/vito-fleet.jpg" },
   ] as const;
 
   return (
@@ -123,7 +123,7 @@ export async function FleetGrid() {
   const photos = [
     { src: "/images/fleet/vito-exterior.jpg", alt: t("exteriorAlt") },
     { src: "/images/fleet/vito-interior.jpg", alt: t("interiorAlt") },
-    { src: "/images/fleet/vito-cockpit.jpg", alt: t("cockpitAlt") },
+    { src: "/images/fleet/vito-fleet.jpg", alt: t("fleetAlt") },
   ];
 
   return (

@@ -210,7 +210,7 @@ export const guides: Guide[] = [
           ar: "يربط المترو (M11) المطار بشبكة المدينة وهو خيار رخيص، لكنه يتطلب تبديل خطوط للوصول إلى المركز. حافلات هافاش تتوقف عند محطات محددة، لا عند باب الفندق. سيارات الأجرة متاحة، لكن مع زيادة عدد الأفراد والحقائب قد تحتاج إلى سيارتين. عائلة من أربعة أفراد بأربع حقائب وعربة أطفال لن تجد عملياً سوى خيار السيارة الخاصة.",
           en: "The metro (M11) links the airport to the city network and is cheap, but reaching the centre needs a change. Havaş buses stop at fixed points, not at your hotel door. Taxis exist, but as passengers and suitcases add up you may need two cars. For a family of four with four suitcases and a pushchair, a private vehicle is in practice the only workable option.",
         },
-        image: "/images/vito-black.jpg",
+        image: "/images/fleet/vito-exterior.jpg",
         imageAlt: {
           tr: "Havalimanı transferinde kullanılan Mercedes Vito",
           ar: "سيارة مرسيدس فيتو المستخدمة في النقل من المطار",

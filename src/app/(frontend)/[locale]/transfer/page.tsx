@@ -74,7 +74,7 @@ export default async function TransferPage({
       />
 
       <PageHero
-        image="/images/vito-black.jpg"
+        image="/images/fleet/vito-exterior.jpg"
         imageAlt={locale === "ar" ? "سيارة فيتو VIP" : "VIP Vito aracı"}
         crumbs={[
           { label: tNav("home"), href: "/" },

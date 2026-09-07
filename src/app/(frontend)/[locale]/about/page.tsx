@@ -52,6 +52,7 @@ export default async function AboutPage({
 
   const t = await getTranslations("about");
   const tNav = await getTranslations("nav");
+  const tFleet = await getTranslations("fleet");
 
   return (
     <main id="main" className="flex flex-1 flex-col">
@@ -95,12 +96,19 @@ export default async function AboutPage({
             className="relative aspect-[4/5] overflow-hidden"
             style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
           >
+            {/*
+              Stok şoför fotoğrafı yerine kendi ofisimiz. "Hakkımızda"
+              sayfasının işi şirketin gerçek olduğunu göstermek; tabelası,
+              vitrini ve oturma alanıyla bir ofis fotoğrafı bunu stok bir
+              portreden çok daha iyi yapıyor. Dikey kadraj 4/5 alana tam
+              oturuyor, kırpma gerekmiyor.
+            */}
             <Image
-              src="/images/chauffeur.jpg"
-              alt={t("title")}
+              src="/images/office.jpg"
+              alt={tFleet("officeAlt")}
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover object-[center_30%]"
+              className="object-cover object-center"
             />
           </div>
         </div>
@@ -115,7 +123,7 @@ export default async function AboutPage({
           >
             <Image
               src="/images/fleet/vito-interior.jpg"
-              alt={t("promiseTitle")}
+              alt={tFleet("interiorAlt")}
               fill
               sizes="(max-width: 1024px) 100vw, 38vw"
               className="object-cover"

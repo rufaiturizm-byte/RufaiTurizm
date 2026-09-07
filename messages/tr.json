@@ -600,12 +600,11 @@
       "desc": "Ailelerin en çok tercih ettiği araç: bagajlarıyla birlikte altı kişi rahat eder, camlar kararmış ve arka bölmede ayrı klima var."
     },
     "galleryTitle": "Araçtan kareler",
-    "interiorAlt": "Mercedes Vito arka koltuklar — deri döşeme",
-    "cockpitAlt": "Mercedes Vito sürücü bölümü",
-    "stockNote": "Görseller araç tipini temsil eder.",
+    "interiorAlt": "Yan kapısı açık Mercedes Vito — taba rengi kapitone deri VIP koltuk",
+    "stockNote": "Bu fotoğraflar kendi filomuza ait; stok görsel değildir.",
     "vitoBadge": "En çok tercih edilen",
     "vitoLuggage": "5 – 6",
-    "exteriorAlt": "Mercedes Vito — dış görünüm",
+    "exteriorAlt": "Rufai Turizm ofisinin önünde sıralanmış siyah Mercedes Vito araçlarımız",
     "homeTitle": "Yolculuk ettiğiniz araç",
     "useTitle": "Aracımız ve kullanım biçimleri",
     "useSubtitle": "Tek araç, dört farklı yolculuk. Hepsi Mercedes Vito ile, şoförlü.",
@@ -632,7 +631,9 @@
     "f4": "Araçta ücretsiz su ve internet",
     "f5": "Çocuk koltuğu ek ücretsiz",
     "f6": "Aynı şoför, tüm seyahat boyunca",
-    "specTitle": "Teknik ve konfor"
+    "specTitle": "Teknik ve konfor",
+    "fleetAlt": "Rufai Turizm filosu: beş siyah Mercedes Vito, ofis tabelasının önünde",
+    "officeAlt": "Rufai Turizm ofisi — İstanbul'daki şubemizin dış görünümü"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",

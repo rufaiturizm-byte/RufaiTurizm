@@ -29,7 +29,7 @@ export async function FleetUses() {
       title: t("u1Title"),
       desc: t("u1Desc"),
       meta: t("u1Meta"),
-      image: "/images/vito-black.jpg",
+      image: "/images/fleet/vito-exterior.jpg",
       alt: t("exteriorAlt"),
     },
     {
@@ -53,8 +53,8 @@ export async function FleetUses() {
       title: t("u4Title"),
       desc: t("u4Desc"),
       meta: t("u4Meta"),
-      image: "/images/fleet/vito-cockpit.jpg",
-      alt: t("cockpitAlt"),
+      image: "/images/fleet/vito-fleet.jpg",
+      alt: t("fleetAlt"),
     },
   ];
 

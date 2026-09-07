@@ -1,17 +1,41 @@
-# Araç görselleri — kaynak ve künye
+# Araç ve ofis görselleri — kaynak ve künye
 
-Bunlar Unsplash'ten alınmış **stok fotoğraflardır**, kendi araçlarımız değil.
-Kendi araç fotoğraflarınız geldiğinde aynı dosya adlarıyla değiştirin;
-kod değişikliği gerekmez.
+Bu klasördeki fotoğrafların tamamı **Rufai Turizm'in kendi çekimleridir**.
+Stok görsel yok. Önceki hallerinde Unsplash'ten alınmış stok araç
+fotoğrafları vardı; 7 Eylül 2026'da gerçek filo ve ofis fotoğraflarıyla
+değiştirildi.
 
-| Dosya | Fotoğrafçı | Kaynak |
-|---|---|---|
-| vito-exterior.jpg | William G | https://unsplash.com/photos/PNW4oeltJGo |
-| vito-cockpit.jpg | William G | https://unsplash.com/photos/Oqq4isWzHsU |
-| vito-interior.jpg | Sunset Limousines | https://unsplash.com/photos/Z-WVm--r6xU |
+| Dosya | İçerik |
+|---|---|
+| vito-exterior.jpg | Ofis önünde sıralanmış beş siyah Mercedes Vito; tabela ve TÜRSAB rozeti görünür |
+| vito-interior.jpg | Yan kapısı açık Vito — taba rengi kapitone deri VIP koltuk, arka camda Rufai çıkartması |
+| vito-fleet.jpg | Filo açılı görünüm, bahar çiçekleri ve ofis tabelası |
+| ../office.jpg | Ofis vitrini ve oturma alanı (dikey kadraj, hakkımızda sayfasında) |
 
-Unsplash lisansı ticari kullanıma izin verir, atıf zorunlu değildir;
-künye yine de burada tutuluyor ki hangi görselin bize ait olmadığı belli olsun.
+## Neden stok fotoğraf kaldırıldı
 
-Not: vito-exterior.jpg gece çekilmiş çok karanlık bir kareydi; açık zeminli kartta
-siyah bir dikdörtgen gibi durmasın diye parlaklığı %55 artırıldı.
+Stok iç mekân fotoğrafı **siyah deri** bir Vito gösteriyordu; gerçek
+araçların koltukları **taba rengi kapitone**. İkisi aynı sayfada yan yana
+durunca fark ediliyor ve "sitedeki araç, havalimanında gelen araçtır"
+sözünü doğrudan çürütüyordu. Körfez pazarında bu tür bir tutarsızlık
+en pahalı güven kaybı.
+
+Bu değişiklikle iki metin de artık DOĞRU:
+- `fleet.listSubtitle` — "Havalimanında gelen araç, sitede gördüğünüz araçtır."
+- `fleet.stockNote` — eskiden "görseller araç tipini temsil eder" diyordu,
+  şimdi "bu fotoğraflar kendi filomuza ait" diyor.
+
+## Kalan stok görseller (bu klasörün dışında)
+
+`public/images/chauffeur.jpg` hâlâ stok bir şoför fotoğrafı. Gerçek bir
+şoför/ekip fotoğrafı geldiğinde aynı dosya adıyla değiştirilebilir;
+kod değişikliği gerekmez. Yer fotoğrafları için `public/images/places/KUNYE.md`.
+
+## Fotoğraflardaki ayrıntılar
+
+Plakalar şirketin kendi ticari araçlarına ait, bilerek bırakıldı — gerçek
+olduklarının kanıtı. Görsellerde EXIF ve konum verisi yok, kontrol edildi.
+
+Ofis vitrinindeki havayolu logoları işletmenin kendi tabela tasarımıdır;
+sitede hiçbir yerde "havayolu ortaklığı" olarak sunulmuyor ve öyle
+sunulmamalı.

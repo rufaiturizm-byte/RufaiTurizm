@@ -38,6 +38,20 @@ export interface GuideFact {
   value: Text;
 }
 
+/**
+ * Yazının sonundaki soru-cevap.
+ *
+ * Rehberler sitenin en ince sayfalarıydı: üç bölüm, ~700 karakter Arapça
+ * gövde. Oysa Körfez'den gelen misafirin aradığı şey tam olarak bu biçimde
+ * yazılıyor — "كم تبعد مطار اسطنبول عن المركز". Buradaki üç soru yazının
+ * kendi konusundan çıkar ve /sss listesindeki genel sorularla çakışmaz;
+ * sayfaya FAQPage şeması da bu yüzden konabiliyor.
+ */
+export interface GuideFaq {
+  question: Text;
+  answer: Text;
+}
+
 export interface Guide {
   slug: string;
   image: string;
@@ -47,6 +61,7 @@ export interface Guide {
   excerpt: Text;
   facts: GuideFact[];
   sections: GuideSection[];
+  faq: GuideFaq[];
 }
 
 export const guides: Guide[] = [
@@ -76,6 +91,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Havalimanı", ar: "المطار", en: "Airport" },
         value: { tr: "İstanbul Havalimanı (IST)", ar: "مطار إسطنبول (IST)", en: "Istanbul Airport (IST)" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "İstanbul Havalimanı şehir merkezine kaç kilometre?", ar: "كم تبعد مطار إسطنبول عن مركز المدينة؟", en: "How far is Istanbul Airport from the city centre?" },
+        answer: {
+          tr: "Merkeze 45–50 kilometre. Yolculuk trafiğe göre 45 dakika ile 2 saat arasında değişir; sabah ve akşam saatlerinde üst sınıra yaklaşır. Havalimanı şehrin kuzeybatısında, Karadeniz kıyısına yakın konumda — haritada göründüğünden daha uzak bir yolculuk.",
+          ar: "يبعد المطار نحو 45 إلى 50 كيلومتراً عن المركز. وتستغرق الرحلة بين 45 دقيقة وساعتين بحسب حركة المرور، وتقترب من الحد الأعلى في ساعات الصباح والمساء. يقع المطار شمال غرب المدينة قرب ساحل البحر الأسود، والرحلة أطول مما تبدو على الخريطة.",
+          en: "It is 45–50 km from the centre. The journey takes between 45 minutes and 2 hours depending on traffic, reaching the upper end during morning and evening peaks. The airport sits northwest of the city near the Black Sea coast — a longer trip than the map suggests.",
+        },
+      },
+      {
+        question: { tr: "Havalimanından metro ile şehre gidilebilir mi?", ar: "هل يمكن الوصول إلى المدينة من المطار بالمترو؟", en: "Can you reach the city from the airport by metro?" },
+        answer: {
+          tr: "Evet, metro hattı havalimanını şehre bağlar, ancak kalmak istediğiniz semte varmak için genelde bir ya da iki aktarma gerekir. Tek başına hafif bagajla seyahat eden biri için işe yarar; iki büyük valiz ve çocukla aktarmalı yolculuk yorucu olur.",
+          ar: "نعم، هناك خط مترو يربط المطار بالمدينة، لكن الوصول إلى الحي الذي تنوي الإقامة فيه يتطلب عادة تبديلاً أو تبديلين. الخيار مناسب لمن يسافر وحده بأمتعة خفيفة؛ أما مع حقيبتين كبيرتين وأطفال فالتنقل بين الخطوط متعب.",
+          en: "Yes, a metro line connects the airport to the city, but reaching the district you are staying in usually means one or two changes. It works if you travel alone with light luggage; with two large suitcases and children, changing lines is exhausting.",
+        },
+      },
+      {
+        question: { tr: "Gece geç saatte inen uçakta havalimanından nasıl çıkılır?", ar: "كيف أغادر المطار إذا هبطت رحلتي في وقت متأخر من الليل؟", en: "How do you leave the airport on a late-night arrival?" },
+        answer: {
+          tr: "Gece saatlerinde toplu taşıma sefer aralıkları açılır ve son metro saatini kaçırma riski doğar. Bu yüzden gece inen uçuşlarda önceden ayarlanmış özel transfer en az sürprizli seçenek: şoför uçuş saatinize göre gelir, ne kuyruk ne pazarlık olur.",
+          ar: "في ساعات الليل تتباعد مواعيد النقل العام ويزداد احتمال أن تفوتك آخر رحلة مترو. لذلك يبقى النقل الخاص المحجوز مسبقاً الخيار الأقل مفاجآت في الرحلات الليلية: يأتي السائق حسب موعد هبوطك، فلا طابور ولا مساومة.",
+          en: "Late at night public transport runs less frequently and you risk missing the last metro. For night arrivals a pre-arranged private transfer is the option with the fewest surprises: the driver comes to match your landing time, with no queue and no haggling.",
+        },
       },
     ],
     sections: [
@@ -151,6 +192,32 @@ export const guides: Guide[] = [
         value: { tr: "Sabiha Gökçen (SAW)", ar: "صبيحة كوكجن (SAW)", en: "Sabiha Gokcen (SAW)" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "Sabiha Gökçen'den Avrupa yakasına yolculuk ne kadar sürer?", ar: "كم تستغرق الرحلة من صبيحة كوكجن إلى الجانب الأوروبي؟", en: "How long does it take from Sabiha Gökçen to the European side?" },
+        answer: {
+          tr: "Trafiğe göre 60–90 dakika. Havalimanı Anadolu yakasında, Pendik'te bulunur; Taksim ya da Sultanahmet'e gitmek için Boğaz'ı köprüden geçmek gerekir. Akşam saatlerinde köprü trafiği bu süreyi belirgin biçimde uzatabilir.",
+          ar: "بين 60 و90 دقيقة بحسب حركة المرور. يقع المطار في الجانب الآسيوي بمنطقة بنديك، والوصول إلى تقسيم أو السلطان أحمد يستلزم عبور البوسفور من فوق الجسر. وفي ساعات المساء قد يطيل ازدحام الجسر هذه المدة بوضوح.",
+          en: "60–90 minutes depending on traffic. The airport is on the Asian side at Pendik, and reaching Taksim or Sultanahmet means crossing the Bosphorus by bridge. Evening bridge traffic can stretch that noticeably.",
+        },
+      },
+      {
+        question: { tr: "Sabiha Gökçen mi İstanbul Havalimanı mı daha uygun?", ar: "أيهما أنسب: صبيحة كوكجن أم مطار إسطنبول؟", en: "Which is better, Sabiha Gökçen or Istanbul Airport?" },
+        answer: {
+          tr: "Nerede kalacağınıza bağlı. Kadıköy, Üsküdar ya da Anadolu yakasında konaklayacaksanız Sabiha Gökçen belirgin biçimde daha yakın. Sultanahmet, Taksim ve Şişli için İstanbul Havalimanı daha mantıklı — bilet fiyatı arasındaki fark, kazandığınız yol süresinden küçük kalabilir.",
+          ar: "يعتمد ذلك على مكان إقامتك. إذا كنت ستقيم في كاديكوي أو أسكودار أو الجانب الآسيوي عموماً فصبيحة كوكجن أقرب بوضوح. أما للسلطان أحمد وتقسيم وشيشلي فمطار إسطنبول أنسب — وقد يكون فارق سعر التذكرة أقل من قيمة الوقت الذي توفره.",
+          en: "It depends where you are staying. For Kadıköy, Üsküdar or anywhere on the Asian side, Sabiha Gökçen is clearly closer. For Sultanahmet, Taksim and Şişli, Istanbul Airport makes more sense — the fare difference can be smaller than the travel time you save.",
+        },
+      },
+      {
+        question: { tr: "Sabiha Gökçen'de karşılama nerede oluyor?", ar: "أين يتم الاستقبال في مطار صبيحة كوكجن؟", en: "Where does the meet-and-greet happen at Sabiha Gökçen?" },
+        answer: {
+          tr: "Geliş salonu İstanbul Havalimanı'na göre çok daha küçüktür ve tek çıkış noktası vardır; şoförle buluşmak burada karışmaz. Bagajınızı aldıktan sonra çıktığınız kapının hemen önünde isminizin yazılı olduğu tabelayla beklenir.",
+          ar: "صالة الوصول أصغر بكثير من نظيرتها في مطار إسطنبول، ولها نقطة خروج واحدة، فلا يحدث التباس في لقاء السائق. ينتظرك أمام الباب الذي تخرج منه مباشرة بعد استلام أمتعتك حاملاً لافتة تحمل اسمك.",
+          en: "The arrivals hall is far smaller than at Istanbul Airport and has a single exit, so meeting your driver is straightforward. You are met right outside the door you come through after baggage claim, with a board bearing your name.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -204,6 +271,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Manzara için", ar: "للإطلالة", en: "For the view" },
         value: { tr: "Ortaköy, Beşiktaş, Üsküdar", ar: "أورتاكوي، بشكتاش، أسكودار", en: "Ortakoy, Besiktas, Uskudar" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "İstanbul'a ilk kez gelen biri hangi semtte kalmalı?", ar: "في أي حي يُفضّل أن يقيم زائر إسطنبول لأول مرة؟", en: "Which district should a first-time visitor stay in?" },
+        answer: {
+          tr: "İlk ziyarette çoğu misafir için Sultanahmet ya da Taksim doğru seçim. Sultanahmet'te ana tarihî yapılar yürüme mesafesinde; Taksim daha merkezi, metroya yakın ve akşamları hareketli. Üçüncü kez gelen biri Boğaz kıyısını tercih edebilir, ama ilk seferde ulaşım kolaylığı manzaradan önde gelir.",
+          ar: "في الزيارة الأولى يناسب معظم الضيوف السلطان أحمد أو تقسيم. ففي السلطان أحمد تقع المعالم التاريخية الكبرى على مسافة مشي، وتقسيم أكثر مركزية وقرباً من المترو وأكثر حيوية في المساء. أما زائر المرة الثالثة فقد يفضّل ساحل البوسفور، لكن سهولة التنقل تتقدم على المنظر في الزيارة الأولى.",
+          en: "For a first visit, Sultanahmet or Taksim suits most guests. In Sultanahmet the major historic sites are within walking distance; Taksim is more central, close to the metro and lively in the evening. A third-time visitor might prefer the Bosphorus shore, but on a first trip ease of movement beats the view.",
+        },
+      },
+      {
+        question: { tr: "Sultanahmet mi Taksim mi daha iyi?", ar: "أيهما أفضل: السلطان أحمد أم تقسيم؟", en: "Sultanahmet or Taksim — which is better?" },
+        answer: {
+          tr: "İkisi farklı şeyler sunar. Sultanahmet gündüz tarihin içindedir ama akşamüstü sakinleşir ve seçenekler azalır. Taksim gece geç saate kadar canlıdır, restoran ve mağaza çeşidi fazladır, ama tarihî yarımadaya her gün ulaşım gerekir. Sessizlik isteyen aileler Sultanahmet'te, hareket isteyenler Taksim'de daha memnun kalıyor.",
+          ar: "كل منهما يقدّم شيئاً مختلفاً. السلطان أحمد يضعك داخل التاريخ نهاراً لكنه يهدأ بعد العصر وتقلّ الخيارات فيه. أما تقسيم فينبض بالحياة حتى وقت متأخر وتتنوع فيه المطاعم والمتاجر، لكنك ستحتاج إلى التنقل يومياً نحو شبه الجزيرة التاريخية. العائلات التي تبحث عن الهدوء ترتاح في السلطان أحمد، ومن يبحث عن الحركة يرتاح في تقسيم.",
+          en: "They offer different things. Sultanahmet puts you inside the history by day but quietens down in the evening, with fewer options. Taksim stays lively until late with more restaurants and shops, but you will travel to the historic peninsula every day. Families wanting quiet prefer Sultanahmet; those wanting activity prefer Taksim.",
+        },
+      },
+      {
+        question: { tr: "Boğaz manzaralı otel gerçekten fark yaratır mı?", ar: "هل يستحق الفندق المطل على البوسفور فارق السعر؟", en: "Is a Bosphorus-view hotel really worth it?" },
+        answer: {
+          tr: "Ortaköy, Beşiktaş ve Üsküdar kıyısında manzara gerçekten etkileyicidir ve akşamları sahil boyunca yürüyüş yapılabilir. Karşılığında tarihî yarımadaya her gidiş geliş yol demektir. Kısa ziyaretlerde merkezde kalıp Boğaz'ı tekneden görmek, uzun ziyaretlerde kıyıda kalmak daha iyi sonuç veriyor.",
+          ar: "على سواحل أورتاكوي وبشيكتاش وأسكودار يكون المنظر مذهلاً بالفعل، ويمكنك التنزه على الكورنيش مساءً. لكن ثمن ذلك أن كل ذهاب وإياب إلى شبه الجزيرة التاريخية يعني طريقاً إضافياً. في الزيارات القصيرة يكون البقاء في المركز ورؤية البوسفور من القارب أفضل، وفي الزيارات الطويلة يكون السكن على الساحل أنسب.",
+          en: "Along the Ortaköy, Beşiktaş and Üsküdar shore the view is genuinely striking, and you can walk the waterfront in the evening. The trade-off is that every trip to the historic peninsula becomes a journey. On short visits, stay central and see the Bosphorus from a boat; on longer ones, the shore pays off.",
+        },
       },
     ],
     sections: [
@@ -279,6 +372,32 @@ export const guides: Guide[] = [
         value: { tr: "İlkbahar ve sonbahar", ar: "الربيع والخريف", en: "Spring and autumn" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "Sapanca İstanbul'dan kaç kilometre, günübirlik gidilir mi?", ar: "كم تبعد سبانجا عن إسطنبول وهل تصلح لرحلة يوم واحد؟", en: "How far is Sapanca from Istanbul, and can you do it in a day?" },
+        answer: {
+          tr: "İstanbul'a yaklaşık 130 kilometre; günübirlik program için uygun bir mesafe. Sabah çıkıp akşam dönmek rahatça mümkün, yol tek yön iki saat civarında sürer. Göl kenarında birkaç saat, Maşukiye tarafında öğle yemeği ve şelale yürüyüşü tipik bir gün planıdır.",
+          ar: "تبعد نحو 130 كيلومتراً عن إسطنبول، وهي مسافة مناسبة لبرنامج يوم واحد. يمكنك الخروج صباحاً والعودة مساءً بأريحية، والطريق يستغرق نحو ساعتين في الاتجاه الواحد. وتتألف خطة اليوم عادةً من ساعات على ضفة البحيرة، وغداء في جهة ماشوكية، ونزهة عند الشلال.",
+          en: "About 130 km from Istanbul — a comfortable distance for a day trip. Leaving in the morning and returning in the evening works easily, with roughly two hours each way. A typical day is a few hours by the lake, lunch on the Maşukiye side and a walk to the waterfalls.",
+        },
+      },
+      {
+        question: { tr: "Sapanca'ya hangi mevsimde gitmeli?", ar: "ما أفضل موسم لزيارة سبانجا؟", en: "What is the best season for Sapanca?" },
+        answer: {
+          tr: "İlkbahar ve sonbahar en dengeli dönem: yeşil yerinde, hava serin ve kalabalık makul. Yaz aylarında İstanbul'un nemli sıcağından kaçmak için tercih edilir. Kışın göl ve orman sisli bir görüntü alır, ama şelale yürüyüşü için yollar ıslak ve kaygan olabilir.",
+          ar: "الربيع والخريف هما الأكثر اعتدالاً: الخضرة في أبهى حالاتها والجو منعش والزحام معقول. وفي الصيف يقصدها الناس هرباً من رطوبة إسطنبول وحرّها. أما في الشتاء فتكتسي البحيرة والغابة بالضباب، لكن مسارات الشلال قد تكون مبللة وزلقة.",
+          en: "Spring and autumn are the most balanced: the greenery is at its best, the air is cool and the crowds are manageable. In summer people come to escape Istanbul's humid heat. In winter the lake and forest turn misty, but the paths to the waterfalls can be wet and slippery.",
+        },
+      },
+      {
+        question: { tr: "Maşukiye ile Sapanca aynı yer mi?", ar: "هل ماشوكية وسبانجا المكان نفسه؟", en: "Are Maşukiye and Sapanca the same place?" },
+        answer: {
+          tr: "Hayır, ikisi ayrı yerler ama aynı gün içinde birlikte gezilir. Sapanca göl kıyısındaki ilçedir; Maşukiye ise Kartepe eteğinde, göle yakın bir köydür ve şelaleleri, alabalık lokantalarıyla bilinir. Çoğu program ikisini tek günde birleştirir.",
+          ar: "لا، هما موضعان مختلفان لكن يُزاران معاً في اليوم نفسه. سبانجا بلدة على ضفة البحيرة، أما ماشوكية فقرية عند سفح كارتبه قريبة من البحيرة، تشتهر بشلالاتها ومطاعم سمك السلمون المرقط. ومعظم البرامج تجمع بينهما في يوم واحد.",
+          en: "No, they are two different places, but they are visited together on the same day. Sapanca is the lakeside town; Maşukiye is a village at the foot of Kartepe near the lake, known for its waterfalls and trout restaurants. Most programmes combine both in one day.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -350,6 +469,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Yayla sezonu", ar: "موسم الهضاب", en: "Plateau season" },
         value: { tr: "Haziran sonu – eylül", ar: "أواخر يونيو – سبتمبر", en: "Late June – September" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Trabzon'a karayoluyla gidilir mi?", ar: "هل يمكن الذهاب إلى طرابزون براً؟", en: "Can you drive to Trabzon?" },
+        answer: {
+          tr: "Teknik olarak mümkün ama pratikte anlamlı değil: İstanbul–Trabzon arası bin kilometreyi aşar ve tek yön araçla bir günü alır. Karadeniz programı için uçak tek makul seçenek; şehre iniş yapıp yayla turlarını oradan araçla yapmak zaman kazandırır.",
+          ar: "ممكن نظرياً لكنه غير عملي: المسافة بين إسطنبول وطرابزون تتجاوز ألف كيلومتر وتستغرق يوماً كاملاً بالسيارة في الاتجاه الواحد. الطائرة هي الخيار المعقول الوحيد لبرنامج البحر الأسود؛ فالهبوط في المدينة ثم التنقل منها بالسيارة إلى المرتفعات يوفّر وقتاً كبيراً.",
+          en: "Technically possible but not practical: Istanbul to Trabzon is over a thousand kilometres and takes a full day each way by road. Flying is the only sensible option for a Black Sea programme — land in the city, then travel to the highlands by vehicle from there.",
+        },
+      },
+      {
+        question: { tr: "Uzungöl Trabzon merkezine ne kadar uzak?", ar: "كم تبعد أوزنجول عن مركز طرابزون؟", en: "How far is Uzungöl from central Trabzon?" },
+        answer: {
+          tr: "Yaklaşık yüz kilometre ve yolun büyük bölümü dağ yoludur; tek yön iki saat civarında sürer. Bu yüzden Uzungöl genelde tam günlük bir program olarak planlanır, sabah çıkılıp akşamüstü dönülür. Yolda çay bahçeleri ve vadi manzaraları için mola verilir.",
+          ar: "نحو مئة كيلومتر، ومعظم الطريق جبلي، ويستغرق نحو ساعتين في الاتجاه الواحد. لذلك تُخطَّط زيارة أوزنجول عادةً كبرنامج ليوم كامل، بالخروج صباحاً والعودة عند العصر. وتتخلل الطريق استراحات في حدائق الشاي وأمام مناظر الوديان.",
+          en: "Around a hundred kilometres, most of it mountain road, taking roughly two hours each way. Uzungöl is therefore usually planned as a full-day programme, leaving in the morning and returning late afternoon, with stops for tea gardens and valley views along the way.",
+        },
+      },
+      {
+        question: { tr: "Karadeniz için kaç gün ayırmalı?", ar: "كم يوماً ينبغي تخصيصه للبحر الأسود؟", en: "How many days should you allow for the Black Sea?" },
+        answer: {
+          tr: "Üç ila dört gün dengeli bir süre. Bir gün Uzungöl, bir gün Sümela ve çevresi, bir gün Ayder ya da şehir ve sahil için ayrılır. İki güne sıkıştırılan program yolda geçen saatler yüzünden yorucu olur; yayla yolları kısa ama yavaştır.",
+          ar: "من ثلاثة إلى أربعة أيام مدة متوازنة: يوم لأوزنجول، ويوم لسوميلا وما حولها، ويوم لآيدر أو للمدينة والساحل. أما ضغط البرنامج في يومين فيصبح مرهقاً بسبب الساعات التي تُقضى على الطريق؛ فطرق المرتفعات قصيرة لكنها بطيئة.",
+          en: "Three to four days is balanced: one day for Uzungöl, one for Sümela and its surroundings, one for Ayder or the city and coast. Squeezing it into two days becomes tiring because of the hours spent on the road — the highland roads are short but slow.",
+        },
       },
     ],
     sections: [
@@ -425,6 +570,32 @@ export const guides: Guide[] = [
         value: { tr: "Sapanca, Bolu, yaylalar", ar: "سبانجا، بولو، الهضاب", en: "Sapanca, Bolu, the plateaus" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "Türkiye'ye gitmek için en iyi aylar hangileri?", ar: "ما أفضل الأشهر لزيارة تركيا؟", en: "Which are the best months to visit Türkiye?" },
+        answer: {
+          tr: "Nisan–mayıs ile eylül–ekim en dengeli dönemler: hava ılık, yağış az, kalabalık yaz kadar yoğun değil. Bu aylarda hem şehir gezisi hem şehir dışı günübirlikler rahat yapılır. Ramazan ve bayram dönemlerinde şehir hareketlenir, otel doluluğu artar.",
+          ar: "شهرا نيسان وأيار وشهرا أيلول وتشرين الأول هي الأكثر اعتدالاً: الجو دافئ والأمطار قليلة والزحام أخف من الصيف. وفي هذه الأشهر تسهل جولات المدينة والرحلات اليومية خارجها معاً. أما في رمضان والأعياد فتزداد حركة المدينة وترتفع نسبة إشغال الفنادق.",
+          en: "April–May and September–October are the most balanced: mild weather, little rain and lighter crowds than summer. Both city sightseeing and day trips outside the city are comfortable in these months. During Ramadan and the Eid holidays the city gets busier and hotels fill up.",
+        },
+      },
+      {
+        question: { tr: "Yaz aylarında İstanbul çok mu sıcak?", ar: "هل إسطنبول شديدة الحرارة في الصيف؟", en: "Is Istanbul very hot in summer?" },
+        answer: {
+          tr: "Temmuz ve ağustosta sıcaklık genelde otuz derece civarındadır ama asıl mesele nem: termometrenin gösterdiğinden daha ağır hissettirir. Öğle saatleri açık alanda zorlayıcı olabilir, bu yüzden program sabah erkene ve ikindi sonrasına yayılır. Sapanca ve yaylalar serinlemek için kullanılır.",
+          ar: "في تموز وآب تدور الحرارة حول الثلاثين درجة، لكن المشكلة الحقيقية هي الرطوبة التي تجعل الجو أثقل مما يشير إليه الميزان. وقد تكون ساعات الظهيرة مرهقة في الأماكن المكشوفة، لذلك يُوزَّع البرنامج على الصباح الباكر وما بعد العصر. وتُستخدم سبانجا والمرتفعات للتبريد.",
+          en: "In July and August temperatures sit around thirty degrees, but the real issue is humidity, which makes it feel heavier than the thermometer suggests. Midday can be demanding outdoors, so programmes shift to early morning and late afternoon. Sapanca and the highlands are used to cool off.",
+        },
+      },
+      {
+        question: { tr: "Kışın Türkiye'ye gitmek mantıklı mı?", ar: "هل من المنطقي زيارة تركيا في الشتاء؟", en: "Does it make sense to visit Türkiye in winter?" },
+        answer: {
+          tr: "Kar görmek isteyen Körfez misafirleri için kış en çok tercih edilen dönem. Uludağ ve Kartepe'de kar aralıktan marta kadar bulunur, İstanbul'da müzeler boş ve sıralar kısadır. Karşılığında günler kısa ve yağmurludur; program iç mekân ağırlıklı kurulur.",
+          ar: "الشتاء هو الموسم المفضّل لضيوف الخليج الراغبين في رؤية الثلج. فالثلج موجود في أولوداغ وكارتبه من كانون الأول حتى آذار، وفي إسطنبول تكون المتاحف خالية والطوابير قصيرة. في المقابل تكون الأيام قصيرة وممطرة، ويُبنى البرنامج على الأماكن المغلقة أكثر.",
+          en: "Winter is the favourite season for Gulf guests who want to see snow. There is snow at Uludağ and Kartepe from December through March, and in Istanbul the museums are empty and queues short. In return the days are short and rainy, so programmes lean towards indoor stops.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -496,6 +667,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Şehir dışı", ar: "خارج المدينة", en: "Out of town" },
         value: { tr: "İki günübirlik", ar: "رحلتان ليوم واحد", en: "Two day trips" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "İstanbul için bir hafta yeterli mi?", ar: "هل يكفي أسبوع لزيارة إسطنبول؟", en: "Is one week enough for Istanbul?" },
+        answer: {
+          tr: "Bir hafta şehri acele etmeden görmeye yeter ve iki günübirlik gezi için de yer bırakır. Beş gün şehre, iki gün Sapanca ya da Bursa gibi yakın duraklara ayrıldığında program sıkışmaz. Daha kısa sürelerde şehir dışını çıkarmak gerekir.",
+          ar: "يكفي الأسبوع لرؤية المدينة دون عجلة، ويترك مجالاً لرحلتين خارجها. فحين تُخصَّص خمسة أيام للمدينة ويومان لوجهات قريبة مثل سبانجا أو بورصة لا يصبح البرنامج مضغوطاً. أما المدد الأقصر فتستلزم حذف الخارج تماماً.",
+          en: "A week is enough to see the city without rushing, and it leaves room for two day trips. With five days in the city and two for nearby stops like Sapanca or Bursa, the programme never feels squeezed. Shorter stays mean dropping the out-of-town days.",
+        },
+      },
+      {
+        question: { tr: "Çocuklu bir aile günde kaç durak gezebilir?", ar: "كم محطة تستطيع عائلة مع أطفال زيارتها في اليوم؟", en: "How many stops can a family with children manage in a day?" },
+        answer: {
+          tr: "Üç durak pratik sınırdır; dördüncüsü genelde yorgunluk yüzünden keyifsiz geçer. Aynı bölgede kalan üç durak, şehrin iki ucuna dağılmış ikiden daha rahat gezilir. Program kurarken gün başına tek ana bölge seçmek en çok işe yarayan kuraldır.",
+          ar: "ثلاث محطات هي الحد العملي؛ أما الرابعة فتمرّ عادةً بلا متعة بسبب الإرهاق. وثلاث محطات في المنطقة نفسها أيسر من اثنتين متباعدتين على طرفي المدينة. وأنفع قاعدة عند وضع البرنامج هي اختيار منطقة رئيسية واحدة لكل يوم.",
+          en: "Three stops is the practical limit; a fourth is usually spoiled by tiredness. Three stops in the same area are easier than two spread across opposite ends of the city. The most useful rule when planning is one main area per day.",
+        },
+      },
+      {
+        question: { tr: "Haftalık programda şehir dışına hangi günler çıkılmalı?", ar: "في أي أيام الأسبوع يُفضّل الخروج خارج المدينة؟", en: "Which days should the out-of-town trips fall on?" },
+        answer: {
+          tr: "Ortadaki günler en uygunu. İlk iki gün uçuş yorgunluğu geçer ve şehre alışılır, son günler alışveriş ve toparlanmaya ayrılır; arada kalan dört ve beşinci günler günübirlik geziler için en dinç zamandır. Hafta sonu Sapanca ve Bursa yolları daha kalabalık olur.",
+          ar: "الأيام الوسطى هي الأنسب. ففي اليومين الأولين يزول تعب الطيران وتعتاد المدينة، وتُخصَّص الأيام الأخيرة للتسوق والاستعداد للعودة؛ ويبقى اليومان الرابع والخامس أكثر الأوقات نشاطاً للرحلات اليومية. كما تزدحم طرق سبانجا وبورصة في عطلة نهاية الأسبوع.",
+          en: "The middle days work best. The first two days absorb the flight fatigue and settle you into the city, the last days go to shopping and packing, leaving days four and five as the freshest for day trips. Roads to Sapanca and Bursa are busier at weekends.",
+        },
       },
     ],
     sections: [
@@ -589,6 +786,32 @@ export const guides: Guide[] = [
         value: { tr: "Tur programlarında", ar: "في البرامج السياحية", en: "On tour programmes" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "Şoförün Arapça bilmesi neden önemli?", ar: "لماذا يهمّ أن يتحدث السائق العربية؟", en: "Why does it matter that the driver speaks Arabic?" },
+        answer: {
+          tr: "En çok işe yaradığı an ilk saat: uçaktan indiğiniz, yorgun ve şehri hiç bilmediğiniz saat. Otel adresi, bagaj, çocuk koltuğu gibi ayrıntılar el işaretiyle değil konuşarak halledilir. Aynı şey alışverişte ve lokantada da geçerli; tercüman aramak zorunda kalmazsınız.",
+          ar: "أكثر ما يظهر أثره في الساعة الأولى: ساعة نزولك من الطائرة، وأنت متعب ولا تعرف المدينة. فتفاصيل مثل عنوان الفندق والأمتعة ومقعد الطفل تُحلّ بالكلام لا بالإشارة. والأمر نفسه في التسوق والمطاعم؛ فلن تضطر إلى البحث عن مترجم.",
+          en: "It matters most in the first hour: the hour you step off the plane, tired and new to the city. Details like the hotel address, luggage and a child seat get settled by talking, not by gesturing. The same holds when shopping and eating out — you never have to look for an interpreter.",
+        },
+      },
+      {
+        question: { tr: "Rehber ile şoför arasındaki fark nedir?", ar: "ما الفرق بين المرشد والسائق؟", en: "What is the difference between a guide and a driver?" },
+        answer: {
+          tr: "Şoför sizi güvenle ve zamanında taşır, yol ve park sorununu çözer. Rehber ise gezdiğiniz yerin tarihini anlatır ve ziyaret sırasında yanınızda yürür. Şehir turlarında ikisi birden bulunur; sadece ulaşım gereken transferlerde şoför yeterlidir.",
+          ar: "السائق ينقلك بأمان وفي الوقت المحدد ويتولى أمر الطريق والمواقف. أما المرشد فيشرح تاريخ المكان الذي تزوره ويسير معك أثناء الزيارة. وفي جولات المدينة يوجد الاثنان معاً؛ أما في عمليات النقل التي تحتاج تنقلاً فقط فيكفي السائق.",
+          en: "A driver gets you there safely and on time and deals with the roads and parking. A guide explains the history of what you are seeing and walks with you during the visit. City tours have both; a transfer that is only about getting somewhere needs only the driver.",
+        },
+      },
+      {
+        question: { tr: "Namaz vakitleri programa nasıl yerleştiriliyor?", ar: "كيف تُراعى أوقات الصلاة في البرنامج؟", en: "How are prayer times fitted into the programme?" },
+        answer: {
+          tr: "Program kurulurken vakitler baştan hesaba katılır ve güzergâh üzerindeki camiler mola noktası olarak seçilir. İstanbul'da hemen her turistik durağın yakınında cami bulunur, bu yüzden ayrı bir sapma gerekmez. Öğle yemeği molası da çoğu zaman öğle vaktine denk getirilir.",
+          ar: "تُراعى الأوقات منذ وضع البرنامج، وتُختار المساجد الواقعة على الطريق كنقاط استراحة. وفي إسطنبول يوجد مسجد قرب كل محطة سياحية تقريباً، فلا حاجة إلى انحراف خاص عن المسار. كما تُوافَق استراحة الغداء غالباً مع وقت الظهر.",
+          en: "Prayer times are factored in from the start, and mosques along the route are chosen as stopping points. In Istanbul there is a mosque near almost every tourist stop, so no detour is needed. The lunch break is usually timed to coincide with the midday prayer.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -654,6 +877,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Kar mevsimi", ar: "موسم الثلج", en: "Snow season" },
         value: { tr: "Aralık – mart", ar: "ديسمبر – مارس", en: "December – March" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Bursa'ya feribotla mı karayoluyla mı gitmeli?", ar: "هل الأفضل الذهاب إلى بورصة بالعبّارة أم براً؟", en: "Should you reach Bursa by ferry or by road?" },
+        answer: {
+          tr: "Feribot hem daha kısa hem de yolculuğun kendisi bir manzara: araç gemiye biner, Marmara geçilir ve karşıda yola devam edilir; toplam yaklaşık iki buçuk saat. Karayolu köprü üzerinden gider ve trafiğe daha açıktır. Günübirlik programlarda çoğunlukla feribot tercih edilir.",
+          ar: "العبّارة أقصر، والرحلة نفسها مشهد بحد ذاته: تصعد السيارة إلى السفينة، فيُعبَر بحر مرمرة، ثم يُستأنف الطريق على الضفة المقابلة، بمجموع ساعتين ونصف تقريباً. أما الطريق البري فيمرّ من فوق الجسر وهو أكثر عرضة للازدحام. ولذلك تُفضَّل العبّارة عادةً في برامج اليوم الواحد.",
+          en: "The ferry is both quicker and a sight in itself: the vehicle boards the ship, crosses the Marmara and continues on the far side — about two and a half hours in total. The road route goes over the bridge and is more exposed to traffic. Day trips usually take the ferry.",
+        },
+      },
+      {
+        question: { tr: "Uludağ'da kar ne zaman bulunur?", ar: "متى يوجد الثلج في أولوداغ؟", en: "When is there snow on Uludağ?" },
+        answer: {
+          tr: "Kar mevsimi genelde aralıktan mart sonuna kadar sürer, ocak ve şubatta en kalın haline ulaşır. Zirveye teleferikle çıkılır ve yolculuk kendi başına manzaralıdır. Yaz aylarında zirve yeşil ve serindir; kar görmek isteyen misafirler için kış ayları planlanır.",
+          ar: "يمتد موسم الثلج عادةً من كانون الأول حتى نهاية آذار، ويبلغ ذروته في كانون الثاني وشباط. ويُصعد إلى القمة بالتلفريك، والرحلة بحد ذاتها تطلّ على مناظر جميلة. أما في الصيف فتكون القمة خضراء ومنعشة؛ ولمن يريد رؤية الثلج تُخطَّط أشهر الشتاء.",
+          en: "The snow season generally runs from December to the end of March, at its deepest in January and February. You reach the summit by cable car, and the ride itself is scenic. In summer the summit is green and cool; guests who want snow are booked for the winter months.",
+        },
+      },
+      {
+        question: { tr: "Bursa tek günde gezilir mi?", ar: "هل يمكن زيارة بورصة في يوم واحد؟", en: "Can Bursa be seen in a single day?" },
+        answer: {
+          tr: "Evet, ama seçim yapmak gerekir. Uludağ ve teleferik tek başına yarım günü alır; şehir merkezinde Ulu Cami, Koza Han ve Cumalıkızık köyü de kendi zamanını ister. Günübirlik programlarda genelde Uludağ ile şehir merkezinden biri öne çıkarılır, ikisi de yüzeysel gezilmez.",
+          ar: "نعم، لكن عليك الاختيار. فأولوداغ والتلفريك يستغرقان نصف يوم وحدهما؛ ومركز المدينة بجامعه الكبير وخان الحرير وقرية جومالي كيزيك يطلب وقته الخاص. ولذلك تُقدَّم في برامج اليوم الواحد إحدى الوجهتين على الأخرى بدل المرور السريع عليهما معاً.",
+          en: "Yes, but you have to choose. Uludağ and the cable car take half a day on their own; the city centre with the Grand Mosque, Koza Han and Cumalıkızık village needs its own time. Day programmes usually favour one over the other rather than skimming both.",
+        },
       },
     ],
     sections: [
@@ -723,6 +972,32 @@ export const guides: Guide[] = [
         value: { tr: "Çarşılarda geçerli", ar: "تنفع في البازارات", en: "Applies in the bazaars" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "Kapalıçarşı'da pazarlık yapılır mı?", ar: "هل تجري المساومة في البازار الكبير؟", en: "Do you haggle in the Grand Bazaar?" },
+        answer: {
+          tr: "Evet, tarihî çarşılarda pazarlık alışılmış bir uygulama ve satıcı da bunu bekler. Alışveriş merkezlerinde ve marka mağazalarında ise fiyatlar sabittir, pazarlık geçmez. Çarşıda birkaç dükkânda aynı ürünün fiyatını sormak, gerçek aralığı görmenin en pratik yolu.",
+          ar: "نعم، المساومة أمر معتاد في الأسواق التاريخية والبائع يتوقعها. أما في المولات والمتاجر الماركة فالأسعار ثابتة ولا مجال للمساومة. وأبسط طريقة لمعرفة النطاق السعري الحقيقي هي سؤال عدة محال في السوق عن سعر المنتج نفسه.",
+          en: "Yes, haggling is standard practice in the historic bazaars and the seller expects it. In shopping malls and brand stores prices are fixed and haggling does not apply. Asking a few different shops the price of the same item is the most practical way to see the real range.",
+        },
+      },
+      {
+        question: { tr: "Alışveriş için hangi bölgeye gidilmeli?", ar: "إلى أي منطقة يُذهب للتسوق؟", en: "Which area should you go to for shopping?" },
+        answer: {
+          tr: "Aradığınıza bağlı. Halı, baharat, seramik ve hediyelik için Kapalıçarşı ve Mısır Çarşısı; markalar için Nişantaşı ve Bağdat Caddesi; tek çatı altında geniş seçim için büyük alışveriş merkezleri. Üçünü aynı güne sıkıştırmak yerine ayrı yarım günlere bölmek daha rahat.",
+          ar: "يعتمد على ما تبحث عنه. فللسجاد والبهارات والخزف والهدايا: البازار الكبير والسوق المصري؛ وللماركات: نيشانتاشي وشارع بغداد؛ وللاختيار الواسع تحت سقف واحد: المولات الكبرى. ومن الأريح توزيعها على أنصاف أيام منفصلة بدل حشرها في يوم واحد.",
+          en: "It depends what you are after. Carpets, spices, ceramics and gifts: the Grand Bazaar and Spice Bazaar. Brands: Nişantaşı and Bağdat Avenue. Wide choice under one roof: the large malls. Splitting these across separate half-days is easier than squeezing all three into one.",
+        },
+      },
+      {
+        question: { tr: "Aldıklarımı taşımak sorun olur mu?", ar: "هل يشكّل حمل المشتريات مشكلة؟", en: "Is carrying purchases a problem?" },
+        answer: {
+          tr: "Çarşılarda yürüme mesafeleri uzun ve sokaklar dardır; poşetler birikince gezinin keyfi kaçar. Aracın gün boyu yanınızda olması burada işe yarar: alınanlar araca bırakılır, gezmeye elleriniz boş devam edilir. Dönüş bagajı için valiz ağırlığını da baştan hesaba katmakta fayda var.",
+          ar: "مسافات المشي في الأسواق طويلة والأزقة ضيقة؛ وحين تتراكم الأكياس تفقد الجولة متعتها. وهنا تظهر فائدة بقاء السيارة معك طوال اليوم: تُترك المشتريات في السيارة وتتابع التجوّل ويداك فارغتان. ومن المفيد أيضاً حساب وزن الحقائب للعودة منذ البداية.",
+          en: "Walking distances in the bazaars are long and the lanes narrow; once the bags pile up the fun goes out of the trip. This is where having the vehicle with you all day helps: purchases go in the car and you carry on empty-handed. It is also worth planning your luggage allowance for the flight home in advance.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -788,6 +1063,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Kahvaltı", ar: "الفطور", en: "Breakfast" },
         value: { tr: "Türk kahvaltısı etsiz ve bol", ar: "الفطور التركي بلا لحم ووفير", en: "Turkish breakfast is meat-free and generous" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Türkiye'de et ürünleri helal mi?", ar: "هل اللحوم في تركيا حلال؟", en: "Is meat in Türkiye halal?" },
+        answer: {
+          tr: "Türkiye'de kasaplık ve et üretimi yaygın olarak helal usulle yapılır, bu yüzden lokantaların büyük çoğunluğunda et konusunda ayrı bir sorun çıkmaz. Dikkat edilmesi gereken nokta alkol servisi yapan işletmeler ve bazı uluslararası zincirlerin tedarikidir; emin olmak isteyen misafir doğrudan sorabilir.",
+          ar: "الذبح وإنتاج اللحوم في تركيا يجريان على النحو الحلال في الغالب، ولذلك لا تثير اللحوم مشكلة خاصة في معظم المطاعم. أما ما ينبغي الانتباه إليه فهو المطاعم التي تقدّم الكحول وموردو بعض السلاسل العالمية؛ ومن أراد التأكد فبإمكانه السؤال مباشرة.",
+          en: "Butchery and meat production in Türkiye are widely halal, so meat is not a separate concern in the great majority of restaurants. What to watch for is venues serving alcohol and the sourcing of some international chains; guests who want certainty can simply ask.",
+        },
+      },
+      {
+        question: { tr: "Türk kahvaltısı nasıl bir şey?", ar: "كيف هو الفطور التركي؟", en: "What is a Turkish breakfast like?" },
+        answer: {
+          tr: "Peynir çeşitleri, zeytin, domates, salatalık, bal, kaymak, reçel ve sıcak ekmekten oluşan geniş bir sofradır; et içermediği için helal konusunda hiçbir tereddüt bırakmaz. Yumurta çeşitleri ve börek de eklenir. Kahvaltı sofraları özellikle Boğaz kıyısı semtlerinde uzun ve keyifli kurulur.",
+          ar: "هو مائدة واسعة من أصناف الجبن والزيتون والطماطم والخيار والعسل والقشطة والمربى والخبز الساخن؛ ولأنه خالٍ من اللحم فلا يترك أي تردد بشأن الحلال. ويُضاف إليه البيض بأنواعه والبوريك. وتُمدّ موائد الفطور طويلةً وممتعة خاصةً في أحياء ساحل البوسفور.",
+          en: "A wide spread of cheeses, olives, tomatoes, cucumber, honey, clotted cream, jam and hot bread; since it contains no meat it raises no halal question at all. Eggs and börek are added too. Breakfast is served long and leisurely, especially in the Bosphorus-shore districts.",
+        },
+      },
+      {
+        question: { tr: "Arap mutfağı sunan lokantalar nerede bulunur?", ar: "أين توجد مطاعم المطبخ العربي؟", en: "Where can you find Arabic cuisine?" },
+        answer: {
+          tr: "Fatih, Aksaray ve Beyoğlu çevresinde Arap mutfağı sunan lokanta sayısı fazladır ve menüler Arapça yazılıdır. Bununla birlikte Türk mutfağını denemeden dönmemek gerekir; kebap, pide, mercimek çorbası ve ızgara balık çoğu Körfez damak tadına yakın durur.",
+          ar: "يكثر عدد المطاعم التي تقدّم المطبخ العربي في محيط الفاتح وأقسراي وبي أوغلو، وقوائم الطعام فيها مكتوبة بالعربية. ومع ذلك لا ينبغي العودة دون تجربة المطبخ التركي؛ فالكباب والبيده وشوربة العدس والسمك المشوي قريبة من ذوق الخليج.",
+          en: "Around Fatih, Aksaray and Beyoğlu there are many restaurants serving Arabic cuisine with menus in Arabic. Even so, it would be a shame to leave without trying Turkish food — kebab, pide, lentil soup and grilled fish sit close to Gulf tastes.",
+        },
       },
     ],
     sections: [
@@ -857,6 +1158,32 @@ export const guides: Guide[] = [
         value: { tr: "İkindi ve gün batımı", ar: "العصر وغروب الشمس", en: "Late afternoon and sunset" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "Boğaz turu ne kadar sürer?", ar: "كم تستغرق جولة البوسفور؟", en: "How long does a Bosphorus cruise take?" },
+        answer: {
+          tr: "Kısa turlar bir buçuk ile iki saat arasındadır ve iki köprü arasındaki klasik hattı kapsar. Tam gün turlar Karadeniz ağzına, Anadolu Kavağı'na kadar gider ve öğle molası içerir. İlk ziyarette kısa tur çoğu misafir için yeterli oluyor.",
+          ar: "تتراوح الجولات القصيرة بين ساعة ونصف وساعتين وتغطي المسار الكلاسيكي بين الجسرين. أما جولات اليوم الكامل فتمتد حتى مدخل البحر الأسود عند أناضولو كواغي وتتضمن استراحة غداء. وفي الزيارة الأولى تكفي الجولة القصيرة معظم الضيوف.",
+          en: "Short cruises run one and a half to two hours and cover the classic route between the two bridges. Full-day cruises go as far as the mouth of the Black Sea at Anadolu Kavağı and include a lunch break. On a first visit the short cruise suits most guests.",
+        },
+      },
+      {
+        question: { tr: "Boğaz turu için en iyi saat hangisi?", ar: "ما أفضل وقت لجولة البوسفور؟", en: "What is the best time of day for a Bosphorus cruise?" },
+        answer: {
+          tr: "İkindi ve gün batımı saatleri. Işık yalıların ve camilerin üzerine yandan düşer, fotoğraflar en iyi bu saatte çıkar ve sıcak yaz öğlelerinden kaçınılmış olur. Sabah turları daha sakindir; gece turlarında ise şehir ışıklı görünür ama ayrıntılar kaybolur.",
+          ar: "ساعات العصر والغروب. فالضوء يسقط جانبياً على القصور الخشبية والمساجد، وتخرج الصور في أجمل حالاتها، وتتجنّب حرّ الظهيرة الصيفية. أما جولات الصباح فأهدأ؛ وفي الجولات الليلية تبدو المدينة مضاءة لكن التفاصيل تضيع.",
+          en: "Late afternoon and sunset. The light falls sideways across the waterfront mansions and mosques, photographs come out best, and you avoid the hot summer midday. Morning cruises are calmer; on night cruises the city looks lit up but the detail is lost.",
+        },
+      },
+      {
+        question: { tr: "Tekne turu nereden kalkıyor?", ar: "من أين تنطلق جولة القارب؟", en: "Where do the boats depart from?" },
+        answer: {
+          tr: "Eminönü, Kabataş ve Beşiktaş en yaygın kalkış noktaları. Sultanahmet'te kalanlar için Eminönü yürüme mesafesinde; Taksim'de kalanlar için Kabataş daha yakın. Özel tekne kiralamada kalkış noktası konakladığınız yere göre seçilebilir.",
+          ar: "إمينونو وكاباتاش وبشيكتاش هي أكثر نقاط الانطلاق شيوعاً. فمن يقيم في السلطان أحمد تكون إمينونو على مسافة مشي منه، ومن يقيم في تقسيم تكون كاباتاش أقرب إليه. وعند استئجار قارب خاص يمكن اختيار نقطة الانطلاق بحسب مكان إقامتك.",
+          en: "Eminönü, Kabataş and Beşiktaş are the most common departure points. If you are staying in Sultanahmet, Eminönü is within walking distance; from Taksim, Kabataş is closer. With a private boat charter the departure point can be chosen to suit where you are staying.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -922,6 +1249,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Çocuk koltuğu", ar: "مقعد الأطفال", en: "Child seat" },
         value: { tr: "Talebe göre, ek ücretsiz", ar: "عند الطلب وبدون رسوم", en: "On request, no extra charge" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Tarihî yarımadada bebek arabası kullanılır mı?", ar: "هل يمكن استخدام عربة الأطفال في شبه الجزيرة التاريخية؟", en: "Can you use a pushchair in the historic peninsula?" },
+        answer: {
+          tr: "Zor. Sultanahmet ve çevresinde sokaklar arnavut kaldırımı, kaldırımlar dar ve zemin sık sık eğimli. Küçük çocuklar için kanguru ya da sırt taşıyıcı çoğu ailenin daha rahat bulduğu çözüm. Alışveriş merkezlerinde ve Boğaz sahilinde ise bebek arabası sorunsuz kullanılır.",
+          ar: "صعب. ففي السلطان أحمد وما حوله تكون الشوارع مرصوفة بالحجارة والأرصفة ضيقة والأرض مائلة في كثير من المواضع. ولذلك تجد معظم العائلات أن الحمّالة الأمامية أو حقيبة الظهر أريح للأطفال الصغار. أما في المولات وعلى ساحل البوسفور فتُستخدم عربة الأطفال دون مشكلة.",
+          en: "It is difficult. In and around Sultanahmet the streets are cobbled, the pavements narrow and the ground often sloped. For small children most families find a carrier or backpack easier. In the malls and along the Bosphorus shore a pushchair is no problem at all.",
+        },
+      },
+      {
+        question: { tr: "Çocuk koltuğu sağlanıyor mu?", ar: "هل يتوفر مقعد للأطفال؟", en: "Are child seats provided?" },
+        answer: {
+          tr: "Evet ve ek ücret alınmaz, ancak talebin önceden bildirilmesi gerekir; koltuk araçta hazır durmaz, çocuğun yaşına göre takılır. Rezervasyon sırasında çocukların yaşını yazmanız yeterli. Uzun yolculuklarda bu ayrıntı hem güvenlik hem konfor açısından fark yaratıyor.",
+          ar: "نعم ودون رسوم إضافية، لكن يجب ذكر الطلب مسبقاً؛ فالمقعد لا يكون جاهزاً داخل السيارة بل يُركَّب بحسب عمر الطفل. ويكفي أن تذكر أعمار الأطفال عند الحجز. وفي الرحلات الطويلة يُحدث هذا التفصيل فرقاً في السلامة والراحة معاً.",
+          en: "Yes, at no extra charge, but the request must be made in advance; the seat is not kept in the vehicle and is fitted according to the child's age. Just give the children's ages at booking. On long journeys this detail makes a difference to both safety and comfort.",
+        },
+      },
+      {
+        question: { tr: "Çocuklar için hangi duraklar daha iyi geçiyor?", ar: "ما المحطات الأنسب للأطفال؟", en: "Which stops work best for children?" },
+        answer: {
+          tr: "Açık alanlı ve hareketli duraklar: Boğaz'da tekne turu, Emirgan ve Gülhane gibi parklar, Miniatürk ve akvaryum gibi mekânlar. Uzun süre ayakta beklemek gerektiren müzeler küçük yaşlarda zorlayıcı olur; bunları günün ilk durağına koymak, çocuk henüz dinçken gezmeyi sağlar.",
+          ar: "المحطات المفتوحة والمليئة بالحركة: جولة القارب في البوسفور، وحدائق مثل أميرغان وغولهانه، وأماكن مثل مينياتورك والأكواريوم. أما المتاحف التي تستلزم وقوفاً طويلاً فتكون مرهقة في الأعمار الصغيرة؛ ووضعها كمحطة أولى في اليوم يتيح زيارتها والطفل ما زال نشيطاً.",
+          en: "Open-air, active stops: a Bosphorus boat trip, parks like Emirgan and Gülhane, places like Miniatürk and the aquarium. Museums that involve long spells of standing are hard on younger children; putting them first in the day means visiting while the child is still fresh.",
+        },
       },
     ],
     sections: [
@@ -991,6 +1344,32 @@ export const guides: Guide[] = [
         value: { tr: "Bu programda yok", ar: "غير مدرج في هذا البرنامج", en: "Not in this plan" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "Üç günde İstanbul'un ne kadarı görülür?", ar: "كم يمكن رؤيته من إسطنبول في ثلاثة أيام؟", en: "How much of Istanbul can you see in three days?" },
+        answer: {
+          tr: "Ana hatlarıyla şehir görülür: tarihî yarımada, Boğaz ve Beyoğlu üç güne rahat sığar. Sığmayan şey şehir dışı gezileridir — Sapanca ya da Bursa eklemek programı bozar. Üç günlük ziyaretlerde şehir dışını bir sonraki sefere bırakmak en iyi sonucu veriyor.",
+          ar: "تُرى المدينة في خطوطها العريضة: شبه الجزيرة التاريخية والبوسفور وبي أوغلو تتّسع لها ثلاثة أيام بأريحية. أما ما لا يتّسع فهو الرحلات خارج المدينة — فإضافة سبانجا أو بورصة تُخلّ بالبرنامج. وأفضل نتيجة في الزيارات الثلاثية أن يُترك الخارج لزيارة قادمة.",
+          en: "You see the city in outline: the historic peninsula, the Bosphorus and Beyoğlu fit comfortably into three days. What does not fit is out-of-town trips — adding Sapanca or Bursa breaks the programme. On a three-day visit, leaving the day trips for next time works best.",
+        },
+      },
+      {
+        question: { tr: "Kısa ziyarette nerede kalmak daha mantıklı?", ar: "أين يُفضّل الإقامة في الزيارة القصيرة؟", en: "Where is it best to stay on a short visit?" },
+        answer: {
+          tr: "Sultanahmet ya da Taksim. Üç günlük programda yolda geçen her saat pahalıdır; merkezde kalmak günde bir saate kadar kazandırabilir. Boğaz kıyısı ve uzak semtler daha uzun ziyaretlerde anlamlı, kısa ziyarette ulaşım süresi keyfi götürür.",
+          ar: "السلطان أحمد أو تقسيم. ففي برنامج من ثلاثة أيام تكون كل ساعة تُقضى على الطريق مكلفة؛ والإقامة في المركز قد توفّر ما يصل إلى ساعة يومياً. أما ساحل البوسفور والأحياء البعيدة فتناسب الزيارات الأطول، إذ يلتهم وقت التنقل متعة الزيارة القصيرة.",
+          en: "Sultanahmet or Taksim. On a three-day programme every hour on the road is expensive; staying central can save up to an hour a day. The Bosphorus shore and outlying districts make sense on longer visits — on a short one, travel time eats the enjoyment.",
+        },
+      },
+      {
+        question: { tr: "Üç günlük programda neyi çıkarmak gerekir?", ar: "ما الذي ينبغي حذفه من برنامج الأيام الثلاثة؟", en: "What has to be cut from a three-day programme?" },
+        answer: {
+          tr: "Şehir dışı geziler, uzak müzeler ve uzun alışveriş turları. Bunun yerine tarihî yarımadaya bir tam gün, Boğaz ve Beyoğlu'na bir gün, üçüncü güne ise ilk iki günde yetişemediğiniz tek bir bölge ayrılır. Her günü tek bölgeye bağlamak, üç günü altı gün gibi kullandırır.",
+          ar: "الرحلات خارج المدينة، والمتاحف البعيدة، وجولات التسوق الطويلة. وبدلاً منها يُخصَّص يوم كامل لشبه الجزيرة التاريخية، ويوم للبوسفور وبي أوغلو، واليوم الثالث لمنطقة واحدة لم تلحق بها في اليومين الأولين. وربط كل يوم بمنطقة واحدة يجعلك تستفيد من الأيام الثلاثة وكأنها ستة.",
+          en: "Out-of-town trips, distant museums and long shopping tours. Instead, give a full day to the historic peninsula, a day to the Bosphorus and Beyoğlu, and the third day to the one area you did not reach. Tying each day to a single area makes three days work like six.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -1056,6 +1435,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Boğaz geçişi", ar: "عبور البوسفور", en: "Crossing the Bosphorus" },
         value: { tr: "Vapur, en keyiflisi", ar: "العبّارة، الأمتع", en: "Ferry, the nicest way" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "İstanbulkart nedir, nasıl alınır?", ar: "ما هي بطاقة إسطنبول كارت وكيف تُشترى؟", en: "What is the İstanbulkart and how do you get one?" },
+        answer: {
+          tr: "Şehrin ortak ulaşım kartıdır ve metro, tramvay, otobüs, vapur, füniküler dâhil bütün hatlarda geçer. İstasyonlardaki otomatlardan alınır ve yine aynı otomatlardan yüklenir. Aynı kart birden fazla kişi için kullanılabilir; her binişte ayrı okutmak yeterli.",
+          ar: "هي بطاقة النقل الموحّدة في المدينة، وتصلح لجميع الخطوط بما فيها المترو والترام والحافلات والعبّارات والقطار المائل. تُشترى من الأجهزة الموجودة في المحطات، وتُشحن من الأجهزة نفسها. ويمكن استخدام البطاقة الواحدة لأكثر من شخص؛ إذ يكفي تمريرها عند كل صعود.",
+          en: "It is the city's shared transport card and works on every line — metro, tram, bus, ferry and funicular. You buy it from machines at the stations and top it up at the same machines. One card can be used for several people; just tap it once per passenger.",
+        },
+      },
+      {
+        question: { tr: "Turistik yerlere hangi hat gider?", ar: "أي خط يوصل إلى الأماكن السياحية؟", en: "Which line goes to the tourist sites?" },
+        answer: {
+          tr: "Tarihî yarımadanın omurgası T1 tramvay hattıdır: Sultanahmet, Eminönü ve Kapalıçarşı bu hat üzerindedir. Taksim ve Şişli metroyla bağlanır. Boğaz'ın iki yakası arasında geçiş için vapur hem en hızlı hem en keyifli seçenek.",
+          ar: "العمود الفقري لشبه الجزيرة التاريخية هو خط الترام T1: فالسلطان أحمد وإمينونو والبازار الكبير تقع عليه. أما تقسيم وشيشلي فيرتبطان بالمترو. وللانتقال بين ضفتي البوسفور تبقى العبّارة الأسرع والأمتع معاً.",
+          en: "The backbone of the historic peninsula is the T1 tram line: Sultanahmet, Eminönü and the Grand Bazaar all sit on it. Taksim and Şişli are connected by metro. To cross between the two sides of the Bosphorus, the ferry is both the fastest and the most enjoyable option.",
+        },
+      },
+      {
+        question: { tr: "Ne zaman toplu taşıma yerine özel araç kullanmalı?", ar: "متى يُفضّل استخدام السيارة الخاصة بدل النقل العام؟", en: "When should you use a private vehicle instead of public transport?" },
+        answer: {
+          tr: "Bagajlı yolculuklarda, kalabalık aileyle gezerken, gün içinde şehrin iki ucuna gidilecekse ve gece geç saatlerde. Tek başına ve hafif bagajla gezen biri için metro çoğu zaman daha hızlıdır. İkisini karıştırmak da mümkün: gündüz tramvay, akşam araç.",
+          ar: "في الرحلات مع الأمتعة، وعند التنقل مع عائلة كبيرة، وإذا كان اليوم يشمل طرفي المدينة، وفي ساعات الليل المتأخرة. أما من يتجوّل وحده بأمتعة خفيفة فالمترو أسرع له غالباً. ويمكن الجمع بين الاثنين: الترام نهاراً والسيارة مساءً.",
+          en: "With luggage, when travelling as a large family, when the day spans opposite ends of the city, and late at night. For someone alone with light luggage the metro is usually faster. Mixing the two also works: tram by day, vehicle in the evening.",
+        },
       },
     ],
     sections: [
@@ -1125,6 +1530,32 @@ export const guides: Guide[] = [
         value: { tr: "Rüzgâr ve rahat ayakkabı", ar: "الرياح وحذاء مريح", en: "Wind and comfortable shoes" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "İstanbul'da yazın ne giyilmeli?", ar: "ماذا يُلبس في إسطنبول صيفاً؟", en: "What should you wear in Istanbul in summer?" },
+        answer: {
+          tr: "İnce ve pamuklu kumaşlar, açık renkler ve mutlaka rahat ayakkabı. Nem yüzünden hava termometrenin gösterdiğinden ağır hissettirir. Akşamları Boğaz kıyısında rüzgâr çıkar, ince bir üst işe yarar. Camileri ziyaret edecekseniz omuz ve diz kapatan kıyafet yanınızda bulunsun.",
+          ar: "أقمشة خفيفة قطنية وألوان فاتحة وحذاء مريح بالضرورة. فالرطوبة تجعل الجو أثقل مما يشير إليه الميزان. وفي المساء تهبّ الريح على ساحل البوسفور، فيفيد وجود طبقة خفيفة. وإن كنت ستزور المساجد فليكن معك لباس يغطي الكتفين والركبتين.",
+          en: "Light cotton fabrics, pale colours and, above all, comfortable shoes. Humidity makes the air feel heavier than the thermometer says. Wind picks up along the Bosphorus in the evening, so a light layer helps. If you plan to visit mosques, bring clothing that covers shoulders and knees.",
+        },
+      },
+      {
+        question: { tr: "Kışın İstanbul çok mu soğuk?", ar: "هل إسطنبول شديدة البرودة في الشتاء؟", en: "Is Istanbul very cold in winter?" },
+        answer: {
+          tr: "Sıcaklık genelde sıfırın çok altına inmez ama rüzgâr ve nem soğuğu olduğundan keskin hissettirir. Aralık–mart arası en yağışlı dönemdir; su geçirmez bir mont ve kaymayan ayakkabı işe yarar. Kar her yıl yağar ama uzun sürmez, birkaç gün içinde erir.",
+          ar: "لا تنخفض الحرارة عادةً كثيراً تحت الصفر، لكن الريح والرطوبة تجعلان البرد أقسى مما هو عليه. والفترة بين كانون الأول وآذار هي الأكثر مطراً؛ ويفيد فيها معطف مقاوم للماء وحذاء غير زلق. ويتساقط الثلج كل عام لكنه لا يدوم، إذ يذوب خلال أيام قليلة.",
+          en: "Temperatures rarely drop far below freezing, but wind and damp make the cold feel sharper than it is. December to March is the wettest period; a waterproof coat and non-slip shoes help. Snow falls every year but does not last, melting within a few days.",
+        },
+      },
+      {
+        question: { tr: "Camileri ziyaret ederken nelere dikkat edilir?", ar: "ما الذي يُراعى عند زيارة المساجد؟", en: "What should you keep in mind when visiting mosques?" },
+        answer: {
+          tr: "Ayakkabılar girişte çıkarılır, bu yüzden kolay çıkarılıp giyilebilen ayakkabı pratik olur. Kadın ziyaretçiler için başörtüsü gerekir; büyük camilerin girişinde ödünç örtü bulunur ama kendi örtünüz daha rahattır. Namaz vakitlerinde ziyaret kısa süreliğine durur.",
+          ar: "تُخلع الأحذية عند المدخل، لذلك يكون الحذاء سهل الخلع واللبس عملياً. ويلزم غطاء الرأس للزائرات؛ وتتوفر أغطية للاستعارة عند مداخل المساجد الكبرى، لكن غطاءك الخاص أريح. وتتوقف الزيارة لفترة قصيرة في أوقات الصلاة.",
+          en: "Shoes come off at the entrance, so footwear that slips on and off easily is practical. Women visitors need a head covering; the larger mosques lend scarves at the door, but your own is more comfortable. Visits pause briefly during prayer times.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -1192,6 +1623,32 @@ export const guides: Guide[] = [
         value: { tr: "Tek yön 3 saati aşarsa konaklama", ar: "إن تجاوز الاتجاه الواحد 3 ساعات فبِت هناك", en: "Over 3 hrs one way: stay the night" },
       },
     ],
+    faq: [
+      {
+        question: { tr: "İstanbul'dan günübirlik nerelere gidilir?", ar: "إلى أين يمكن الذهاب من إسطنبول في رحلة يوم واحد؟", en: "Where can you go on a day trip from Istanbul?" },
+        answer: {
+          tr: "Sapanca ve Maşukiye, Bursa ve Uludağ, Yalova ile Şile en çok tercih edilen günübirlik duraklar. Hepsi tek yön iki–iki buçuk saat mesafede. Bu sınırın ötesindeki şehirler günübirlik programa sığmaz; yolda geçen süre gezilecek süreyi aşmaya başlar.",
+          ar: "سبانجا وماشوكية، وبورصة وأولوداغ، ويالوفا وشيله هي أكثر الوجهات المطلوبة لرحلات اليوم الواحد. وجميعها على بعد ساعتين إلى ساعتين ونصف في الاتجاه الواحد. أما المدن الأبعد من هذا الحد فلا تتّسع لها رحلة اليوم الواحد؛ إذ يبدأ وقت الطريق يتجاوز وقت الزيارة.",
+          en: "Sapanca and Maşukiye, Bursa and Uludağ, Yalova and Şile are the most popular day-trip destinations — all within two to two and a half hours each way. Cities beyond that limit do not fit a day trip; the time on the road starts to exceed the time spent there.",
+        },
+      },
+      {
+        question: { tr: "Hangi şehirlere uçakla gitmek gerekir?", ar: "ما المدن التي يلزم الوصول إليها بالطائرة؟", en: "Which cities do you need to fly to?" },
+        answer: {
+          tr: "Trabzon, Bodrum, Antalya, İzmir ve Kapadokya karayoluyla gidilecek mesafede değil. Bu şehirlere uçakla gidilir, iç hat uçuşları kısa sürer ve şehirde ulaşım yerinden ayarlanır. Karayolu bu mesafelerde tatilin bir gününü tek yönde harcar.",
+          ar: "طرابزون وبودروم وأنطاليا وإزمير وكابادوكيا ليست على مسافة تُقطع براً. فيُذهب إليها بالطائرة، والرحلات الداخلية قصيرة، ويُرتَّب التنقل داخل المدينة من هناك. أما الطريق البري فيستهلك في هذه المسافات يوماً كاملاً من الإجازة في اتجاه واحد.",
+          en: "Trabzon, Bodrum, Antalya, İzmir and Cappadocia are not within driving distance. You fly to these, domestic flights are short, and local transport is arranged on arrival. By road, these distances cost a full day of the holiday in one direction.",
+        },
+      },
+      {
+        question: { tr: "Program kurarken hangi kural işe yarar?", ar: "ما القاعدة المفيدة عند وضع البرنامج؟", en: "What rule helps when planning an itinerary?" },
+        answer: {
+          tr: "Basit bir ölçü: tek yön yolculuk üç saati aşıyorsa o durak günübirlik değil, konaklamalı planlanmalı. Bu kural hem yorgunluğu hem de \"gittik ama göremedik\" hissini önler. Üç saatin altındaki duraklar sabah çıkıp akşam dönerek rahatça gezilir.",
+          ar: "معيار بسيط: إذا تجاوزت الرحلة في اتجاه واحد ثلاث ساعات فتلك المحطة تُخطَّط بمبيت لا كرحلة يوم واحد. وتمنع هذه القاعدة الإرهاق وشعور «ذهبنا ولم نرَ شيئاً» معاً. أما المحطات دون الثلاث ساعات فتُزار بأريحية بالخروج صباحاً والعودة مساءً.",
+          en: "A simple measure: if the one-way journey exceeds three hours, plan that stop with an overnight rather than as a day trip. The rule prevents both exhaustion and the feeling of having gone somewhere without really seeing it. Stops under three hours work comfortably as morning-out, evening-back.",
+        },
+      },
+    ],
     sections: [
       {
         heading: {
@@ -1257,6 +1714,32 @@ export const guides: Guide[] = [
       {
         label: { tr: "Süre", ar: "المدة", en: "Length" },
         value: { tr: "5–7 gün dengeli", ar: "5–7 أيام متوازنة", en: "5–7 days is balanced" },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Balayı için Türkiye'de nereye gidilir?", ar: "إلى أين يُذهب في تركيا لشهر العسل؟", en: "Where do honeymooners go in Türkiye?" },
+        answer: {
+          tr: "Klasik rota İstanbul, Boğaz ve Sapanca üçlüsüdür; şehir, deniz ve doğayı kısa mesafelerde birleştirir. Yaz aylarında Bodrum ve Ege koyları öne çıkar. Kışın kar isteyen çiftler için Uludağ ve Kartepe rotaya eklenir.",
+          ar: "المسار الكلاسيكي هو ثلاثي إسطنبول والبوسفور وسبانجا؛ إذ يجمع المدينة والبحر والطبيعة ضمن مسافات قصيرة. وفي أشهر الصيف تتقدّم بودروم وخلجان بحر إيجه. أما في الشتاء فتُضاف أولوداغ وكارتبه لمن يرغب من الأزواج في رؤية الثلج.",
+          en: "The classic route is Istanbul, the Bosphorus and Sapanca — city, sea and nature within short distances. In summer Bodrum and the Aegean bays come to the fore. In winter, couples who want snow add Uludağ and Kartepe to the route.",
+        },
+      },
+      {
+        question: { tr: "Balayı için kaç gün ayırmalı?", ar: "كم يوماً يُخصَّص لشهر العسل؟", en: "How many days should a honeymoon be?" },
+        answer: {
+          tr: "Beş ila yedi gün dengeli bir süre. Üç gün şehir, iki gün doğa ya da deniz, kalan günler serbest kalırsa program yormaz. Balayında her günü doldurmak iyi bir fikir değil; boş bırakılan yarım günler çoğu çiftin en çok hatırladığı zaman oluyor.",
+          ar: "من خمسة إلى سبعة أيام مدة متوازنة. فإذا خُصِّصت ثلاثة أيام للمدينة ويومان للطبيعة أو البحر وتُرك الباقي حراً، لا يصبح البرنامج مرهقاً. وليس من الحكمة ملء كل يوم في شهر العسل؛ فأنصاف الأيام المتروكة فارغة هي غالباً ما يتذكره الأزواج أكثر.",
+          en: "Five to seven days is balanced. Three days in the city, two for nature or the sea, and the rest left free keeps the trip from becoming tiring. Filling every day is not a good idea on a honeymoon; the half-days left empty are often what couples remember most.",
+        },
+      },
+      {
+        question: { tr: "Mahremiyet açısından nelere dikkat edilmeli?", ar: "ما الذي يُراعى من ناحية الخصوصية؟", en: "What should you consider about privacy?" },
+        answer: {
+          tr: "Özel araç ve özel program burada belirleyici: kalabalık bir grup turunda gün başkalarının temposuna göre akar. Camları kararmış araç, otelden alış-bırakış ve programın tümüyle size ait olması balayında en çok istenen ayrıntılar. Otel seçerken de sessiz semtler öne çıkıyor.",
+          ar: "السيارة الخاصة والبرنامج الخاص هما الفيصل هنا: ففي الجولة الجماعية يسير اليوم على إيقاع الآخرين. أما النوافذ المعتمة والاستقبال من الفندق والعودة إليه وكون البرنامج ملكاً لكما وحدكما فهي أكثر التفاصيل طلباً في شهر العسل. وعند اختيار الفندق تتقدّم الأحياء الهادئة.",
+          en: "A private vehicle and a private programme are decisive here: on a group tour the day runs to other people's pace. Tinted windows, hotel pick-up and drop-off, and a programme that belongs entirely to you are the details most requested for honeymoons. Quieter districts also come to the fore when choosing a hotel.",
+        },
       },
     ],
     sections: [

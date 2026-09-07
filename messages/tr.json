@@ -690,7 +690,8 @@
     "allGuides": "Tüm rehberler",
     "relatedTitle": "Diğer rehberler",
     "ctaTitle": "Bu rehberdeki programı sizin için kuralım",
-    "ctaText": "Tarihinizi ve kişi sayısını yazın; güzergâhı ve sabit fiyatı aynı gün gönderelim."
+    "ctaText": "Tarihinizi ve kişi sayısını yazın; güzergâhı ve sabit fiyatı aynı gün gönderelim.",
+    "faqTitle": "Bu rehberle ilgili sık sorulanlar"
   },
   "hotelsPage": {
     "title": "İstanbul'da Oteller",

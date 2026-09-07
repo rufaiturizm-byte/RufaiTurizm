@@ -7,7 +7,8 @@ import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { ReadingProgress } from "@/components/site/scroll-helpers";
-import { ArticleSchema, BreadcrumbSchema } from "@/components/site/json-ld";
+import { ArticleSchema, BreadcrumbSchema, FaqSchema } from "@/components/site/json-ld";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TableOfContents } from "@/components/site/table-of-contents";
@@ -73,10 +74,20 @@ export default async function GuideDetailPage({
     href: { pathname: "/guides/[slug]", params: { slug } },
   });
 
-  const toc = guide.sections.map((section, index) => ({
-    id: headingId(section.heading[lang] ?? section.heading.tr, index),
-    label: section.heading[lang] ?? section.heading.tr,
+  const faqItems = guide.faq.map((item) => ({
+    question: item.question[lang] ?? item.question.tr,
+    answer: item.answer[lang] ?? item.answer.tr,
   }));
+
+  /* İçindekiler listesine soru-cevap başlığı da giriyor: yazının sonunda
+     duran bir bölüm, listede görünmezse okunmuyor. */
+  const toc = [
+    ...guide.sections.map((section, index) => ({
+      id: headingId(section.heading[lang] ?? section.heading.tr, index),
+      label: section.heading[lang] ?? section.heading.tr,
+    })),
+    { id: "rehber-sss", label: t("faqTitle") },
+  ];
 
   const others = guides.filter((item) => item.slug !== guide.slug).slice(0, 3);
 
@@ -186,6 +197,25 @@ export default async function GuideDetailPage({
             ) : null}
           </section>
         ))}
+
+        {/*
+          Yazıya özel soru-cevap. Rehberler sitenin en ince sayfalarıydı ve
+          asıl mesele uzunluk değildi: misafirin Google'a yazdığı cümle
+          ("kaç km", "hangi mevsim", "kaç gün") yazının içinde bir yerde
+          geçiyor ama SORU biçiminde durmuyordu. FAQPage şeması da burada.
+        */}
+        <section className="mt-14">
+          <FaqSchema items={faqItems} />
+          <h2
+            id="rehber-sss"
+            className="scroll-mt-28 font-display text-[24px] font-semibold leading-snug sm:text-[28px]"
+          >
+            {t("faqTitle")}
+          </h2>
+          <div className="mt-6">
+            <FaqAccordion items={faqItems} />
+          </div>
+        </section>
 
         {/* Yazı sonu çağrısı */}
         <div

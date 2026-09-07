@@ -567,8 +567,8 @@
     "fillHint": "Nereden nereye gideceğinizi yazın, gerisini WhatsApp'ta konuşalım."
   },
   "trustBoxes": {
-    "airports": "İstanbul'un tüm havalimanları",
-    "airportsDesc": "IST ve SAW kapsamında",
+    "airports": "Havalimanı karşılaması",
+    "airportsDesc": "IST · SAW · AYT · BJV · TZX",
     "fixed": "Sabit fiyat garantisi",
     "fixedDesc": "Sürpriz ücret ve zam yok",
     "driver": "Arapça konuşan şoför",

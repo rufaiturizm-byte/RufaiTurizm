@@ -567,8 +567,8 @@
     "fillHint": "Tell us where from and where to; we will sort the rest on WhatsApp."
   },
   "trustBoxes": {
-    "airports": "All Istanbul airports",
-    "airportsDesc": "IST and SAW covered",
+    "airports": "Airport meet and greet",
+    "airportsDesc": "IST · SAW · AYT · BJV · TZX",
     "fixed": "Fixed-price guarantee",
     "fixedDesc": "No surprise charges",
     "driver": "Arabic-speaking driver",

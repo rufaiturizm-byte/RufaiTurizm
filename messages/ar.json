@@ -567,8 +567,8 @@
     "fillHint": "اكتب من أين وإلى أين، والباقي نتحدّث عنه على واتساب."
   },
   "trustBoxes": {
-    "airports": "كل مطارات إسطنبول",
-    "airportsDesc": "IST و SAW",
+    "airports": "الاستقبال من المطار",
+    "airportsDesc": "IST · SAW · AYT · BJV · TZX",
     "fixed": "ضمان السعر الثابت",
     "fixedDesc": "لا رسوم إضافية",
     "driver": "سائق يتحدث العربية",

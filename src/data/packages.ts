@@ -23,6 +23,20 @@
 
 type Text = { tr: string; ar: string; en: string };
 
+/**
+ * Pakete özel soru-cevap.
+ *
+ * Paket sayfaları sitenin en ince grubuydu. Sorular /sss'teki genel
+ * listeyle de, hizmet ve rehber sayfalarındakilerle de çakışmıyor;
+ * hepsi bu programa özgü ("Sapanca ve Bursa aynı güne sığar mı",
+ * "Uludağ'da kar ne zaman"). Sayfa başına tek FAQPage şeması kuralı
+ * korunuyor.
+ */
+export interface PackageFaq {
+  question: Text;
+  answer: Text;
+}
+
 /** Programın bir günü. */
 export interface PackageDay {
   title: Text;
@@ -41,6 +55,7 @@ export interface Package {
   itinerary: PackageDay[];
   /** Fiyata dahil olanlar — anahtar `included.*` mesajlarından gelir. */
   includes: string[];
+  faq: PackageFaq[];
   /**
    * Başlangıç fiyatı (USD). Yazılmazsa kart "Fiyat talep üzerine" gösterir.
    * Sezon ve kişi sayısı fiyatı değiştirdiği için şimdilik hiçbirinde yok.
@@ -101,6 +116,32 @@ export const packages: Package[] = [
       },
     ],
     includes: ["transfer", "vehicle", "guide", "prayer"],
+    faq: [
+      {
+        question: { tr: "Dört gün İstanbul için yeterli mi?", ar: "هل تكفي أربعة أيام لإسطنبول؟", en: "Are four days enough for Istanbul?" },
+        answer: {
+          tr: "Şehri ana hatlarıyla görmeye yeter: tarihî yarımada, Boğaz ve Beyoğlu dört güne rahat sığar. Sığmayan şey şehir dışı gezileridir — Sapanca ya da Bursa eklemek bu programı bozar. Dört günlük ziyaretlerde şehir dışını bir sonraki sefere bırakmak en iyi sonucu veriyor.",
+          ar: "تكفي لرؤية المدينة في خطوطها العريضة: شبه الجزيرة التاريخية والبوسفور وبي أوغلو تتّسع لها أربعة أيام بأريحية. أما ما لا يتّسع فهو الرحلات خارج المدينة — فإضافة سبانجا أو بورصة تُخلّ بهذا البرنامج. وأفضل نتيجة في الزيارات القصيرة أن يُترك الخارج لزيارة قادمة.",
+          en: "Enough to see the city in outline: the historic peninsula, the Bosphorus and Beyoğlu fit comfortably into four days. What does not fit is out-of-town trips — adding Sapanca or Bursa breaks this programme. On a four-day visit, leaving the day trips for next time works best.",
+        },
+      },
+      {
+        question: { tr: "Otel bu programa dahil mi?", ar: "هل الفندق مشمول في هذا البرنامج؟", en: "Is the hotel included in this programme?" },
+        answer: {
+          tr: "İsterseniz oteli de biz ayarlarız, isterseniz kendi otelinizde kalırsınız — program iki şekilde de yürür. Otel önerirken semtin nasıl bir yer olduğunu ve metroya kaç dakika olduğunu önceden söyleriz. Konaklama eklendiğinde toplam fiyat tek rakam olarak gelir.",
+          ar: "إن شئت تولّينا حجز الفندق أيضاً، وإن شئت بقيت في فندقك الخاص — والبرنامج يسير في الحالتين. وعند ترشيح فندق نوضّح لك مسبقاً طبيعة الحي وكم دقيقة يبعد عن المترو. وحين تُضاف الإقامة يصلك السعر الإجمالي كرقم واحد.",
+          en: "We can arrange the hotel too, or you can stay at your own — the programme runs either way. When we suggest a hotel we tell you in advance what the neighbourhood is like and how many minutes it is to the metro. With accommodation added, the total comes as a single figure.",
+        },
+      },
+      {
+        question: { tr: "İlk gün neden programsız?", ar: "لماذا اليوم الأول بلا برنامج؟", en: "Why is the first day left open?" },
+        answer: {
+          tr: "Uçuş yorgunluğu üstünüzdeyken başlayan program keyif vermiyor; özellikle çocuklu ailelerde ilk günü zorlamak sonraki üç günü de yoruyor. Uçağınız sabah erken inerse ve dinç hissederseniz o günü de kullanabiliriz — programı öne çekmek tek mesaj meselesi.",
+          ar: "البرنامج الذي يبدأ وأنت ما زلت متعباً من الطيران لا يمنح متعة؛ وخاصةً مع العائلات التي معها أطفال، فإرهاق اليوم الأول يُتعب الأيام الثلاثة التالية. وإن هبطت طائرتك صباحاً باكراً وشعرت بالنشاط فيمكننا استخدام ذلك اليوم أيضاً — وتقديم البرنامج لا يحتاج أكثر من رسالة.",
+          en: "A programme that starts while the flight is still on you is no pleasure; with children especially, pushing the first day tires the next three. If you land early and feel fresh we can use that day too — moving the programme forward takes one message.",
+        },
+      },
+    ],
   },
   {
     slug: "istanbul-bursa-6-gun",
@@ -168,6 +209,32 @@ export const packages: Package[] = [
       },
     ],
     includes: ["transfer", "vehicle", "guide", "prayer", "intercity"],
+    faq: [
+      {
+        question: { tr: "Bursa hangi gün, sırası değiştirilebilir mi?", ar: "في أي يوم بورصة، وهل يمكن تغيير الترتيب؟", en: "Which day is Bursa, and can the order change?" },
+        answer: {
+          tr: "Programda dördüncü güne konuyor: ilk iki gün şehre alışma ve tarihî yarımada, sonra Boğaz, ardından şehir dışı. Sıralama değiştirilebilir ama hafta sonu feribot ve Uludağ yolu kalabalıklaşır; hafta içine denk getirmek daha rahat bir gün sağlıyor.",
+          ar: "تُوضع في اليوم الرابع من البرنامج: اليومان الأولان للتأقلم مع المدينة وشبه الجزيرة التاريخية، ثم البوسفور، ثم الخروج من المدينة. ويمكن تغيير الترتيب، لكن العبّارة وطريق أولوداغ يزدحمان في عطلة نهاية الأسبوع؛ وتوافقها مع أيام الأسبوع يمنح يوماً أكثر راحة.",
+          en: "It sits on day four: the first two days settle you into the city and the historic peninsula, then the Bosphorus, then out of town. The order can change, but the ferry and the Uludağ road get busy at weekends; a weekday makes for an easier day.",
+        },
+      },
+      {
+        question: { tr: "Uludağ'da kar ne zaman bulunur?", ar: "متى يوجد الثلج في أولوداغ؟", en: "When is there snow on Uludağ?" },
+        answer: {
+          tr: "Aralıktan mart sonuna kadar; ocak ve şubatta en kalın haline ulaşır. Yaz aylarında zirve yeşil ve serin olur, kar yoktur. Kar görmek programınızın asıl sebebiyse tarihi buna göre seçmek gerekir — yazın gidip kar bulamamak en sık yaşanan hayal kırıklığı.",
+          ar: "من كانون الأول حتى نهاية آذار؛ ويبلغ ذروته في كانون الثاني وشباط. أما في الصيف فتكون القمة خضراء ومنعشة بلا ثلج. وإن كانت رؤية الثلج هي سبب برنامجك الأساسي فينبغي اختيار التاريخ على هذا الأساس — فالذهاب صيفاً وعدم إيجاد الثلج أكثر خيبة أمل متكررة.",
+          en: "From December to the end of March, deepest in January and February. In summer the summit is green and cool, with no snow. If snow is the reason for your trip, the dates have to be chosen accordingly — going in summer and finding none is the most common disappointment.",
+        },
+      },
+      {
+        question: { tr: "Altı gün iki şehir için yeterli mi?", ar: "هل تكفي ستة أيام لمدينتين؟", en: "Are six days enough for two cities?" },
+        answer: {
+          tr: "Evet, çünkü Bursa günübirlik gidiliyor — konaklama değişmiyor, aynı otelde kalmaya devam ediyorsunuz. Bavul toplamak ve otel değiştirmek olmadığı için iki şehir tek şehir temposunda geziliyor. Üçüncü bir şehir eklenirse konaklama değişir ve süre sekiz güne çıkar.",
+          ar: "نعم، لأن بورصة تُزار في يوم واحد — فالإقامة لا تتغيّر وتبقى في الفندق نفسه. ولأنه لا حاجة لحزم الحقائب وتبديل الفندق، تُزار المدينتان بإيقاع مدينة واحدة. أما إذا أُضيفت مدينة ثالثة فتتغيّر الإقامة وترتفع المدة إلى ثمانية أيام.",
+          en: "Yes, because Bursa is a day trip — the accommodation does not change and you stay in the same hotel. With no packing and no hotel change, two cities move at the pace of one. Add a third city and the accommodation changes, taking the length to eight days.",
+        },
+      },
+    ],
   },
   {
     slug: "istanbul-sapanca-bursa-8-gun",
@@ -255,6 +322,32 @@ export const packages: Package[] = [
       },
     ],
     includes: ["transfer", "vehicle", "guide", "prayer", "intercity", "freeDay"],
+    faq: [
+      {
+        question: { tr: "Sekiz günde üç yer yorucu olmaz mı?", ar: "ألا يكون ثلاثة أماكن في ثمانية أيام مرهقاً؟", en: "Isn't three places in eight days tiring?" },
+        answer: {
+          tr: "Programın kurulma biçimi bunu önlüyor: her güne tek ana bölge düşüyor, iki şehir dışı çıkış arka arkaya değil arayla konuyor ve ortada tam serbest bir gün var. Yorucu olan gün sayısı değil, günde kaç yere sıkıştırıldığı — üç durak pratik sınır, dördüncüsü keyifsiz geçiyor.",
+          ar: "طريقة بناء البرنامج تمنع ذلك: لكل يوم منطقة رئيسية واحدة، والخروجان من المدينة ليسا متتاليين بل بينهما فاصل، وفي الوسط يوم حر بالكامل. فالمرهق ليس عدد الأيام بل كم مكاناً يُحشر في اليوم الواحد — وثلاث محطات هي الحد العملي، والرابعة تمرّ بلا متعة.",
+          en: "The way the programme is built prevents it: one main area per day, the two out-of-town trips spaced rather than back to back, and a completely free day in the middle. What tires people is not the number of days but how many places are squeezed into one — three stops is the practical limit, a fourth passes without pleasure.",
+        },
+      },
+      {
+        question: { tr: "Serbest günde araç ve şoför yanımda mı?", ar: "هل تبقى السيارة والسائق معي في اليوم الحر؟", en: "Do I keep the car and driver on the free day?" },
+        answer: {
+          tr: "İsterseniz evet — araç ve şoför gün boyu emrinizde kalır, nereye gideceğinize siz karar verirsiniz ve her durakta beklenir. İstemezseniz o gün araç çıkmaz; otelde dinlenmek ya da yürüme mesafesinde gezmek de bir seçim. Rezervasyonda hangisini istediğinizi söylemeniz yeterli.",
+          ar: "إن شئت فنعم — تبقى السيارة والسائق تحت تصرفك طوال اليوم، وأنت من يقرر الوجهات، ويُنتظر عند كل محطة. وإن لم تشأ فلا تخرج السيارة ذلك اليوم؛ فالراحة في الفندق أو التجوّل على مسافة مشي خيار أيضاً. ويكفي أن تخبرنا عند الحجز بما تريد.",
+          en: "If you want, yes — the car and driver stay at your disposal all day, you decide where to go and you are waited for at every stop. If you would rather not, no vehicle goes out that day; resting at the hotel or wandering within walking distance is a choice too. Just tell us at booking.",
+        },
+      },
+      {
+        question: { tr: "Sapanca ve Bursa aynı güne sığar mı?", ar: "هل تتّسع سبانجا وبورصة ليوم واحد؟", en: "Can Sapanca and Bursa fit in one day?" },
+        answer: {
+          tr: "Hayır, ve denenmesini önermiyoruz. İkisi İstanbul'un iki farklı yönünde: Sapanca doğuda karayoluyla, Bursa güneyde feribotla. Aynı güne sıkıştırıldığında gün yolda geçer, iki yerin de yalnız otoparkı görülür. Bu yüzden programda ayrı günlerde ve arayla duruyorlar.",
+          ar: "لا، ولا ننصح بمحاولة ذلك. فهما في اتجاهين مختلفين من إسطنبول: سبانجا شرقاً براً، وبورصة جنوباً بالعبّارة. وإذا حُشرتا في يوم واحد مضى اليوم على الطريق ولم يُرَ من المكانين إلا موقف السيارات. ولذلك تقعان في البرنامج في يومين منفصلين وبينهما فاصل.",
+          en: "No, and we would not suggest trying. They lie in different directions from Istanbul: Sapanca east by road, Bursa south by ferry. Squeezed into one day, the day is spent on the road and you see little of either but the car park. That is why the programme places them on separate, spaced days.",
+        },
+      },
+    ],
   },
   {
     slug: "trabzon-karadeniz-5-gun",
@@ -314,6 +407,32 @@ export const packages: Package[] = [
       },
     ],
     includes: ["transfer", "vehicle", "guide", "prayer"],
+    faq: [
+      {
+        question: { tr: "Trabzon'a nasıl gidiliyor, uçak dahil mi?", ar: "كيف يُذهب إلى طرابزون، وهل التذكرة مشمولة؟", en: "How do you get to Trabzon, is the flight included?" },
+        answer: {
+          tr: "Uçakla; İstanbul'dan karayolu bin kilometreyi aşıyor ve tek yön bir gün alıyor. Uçak bileti programa dahil değil ama isterseniz sizin adınıza biz alırız — tarih esnekliğinizi sorup en uygun saati birlikte seçeriz. Karşılama Trabzon havalimanında yapılır.",
+          ar: "بالطائرة؛ فالطريق البري من إسطنبول يتجاوز ألف كيلومتر ويستغرق يوماً في الاتجاه الواحد. وتذكرة الطيران غير مشمولة في البرنامج، لكن يمكننا شراؤها نيابة عنك إن شئت — نسألك عن مرونة التواريخ ونختار معاً أنسب موعد. ويتم الاستقبال في مطار طرابزون.",
+          en: "By air; the road from Istanbul is over a thousand kilometres and takes a full day each way. The flight is not part of the package, but we can book it for you — we ask how flexible your dates are and choose the best time together. You are met at Trabzon airport.",
+        },
+      },
+      {
+        question: { tr: "Yayla sezonu ne zaman açılıyor?", ar: "متى يبدأ موسم المرتفعات؟", en: "When does the highland season open?" },
+        answer: {
+          tr: "Haziran sonundan eylüle kadar. Bu aralığın dışında Ayder ve yüksek yaylalar sisli, soğuk ve zaman zaman yolu kapalı olabilir; program o günü sahil ve şehir çevresine çevirir. Uzungöl ve Sümela ise yıl boyunca gezilebilir, yalnız kış aylarında yol daha yavaş ilerler.",
+          ar: "من أواخر حزيران حتى أيلول. وخارج هذه الفترة تكون آيدر والمرتفعات العالية ضبابية وباردة وقد يُغلق طريقها أحياناً؛ فيحوّل البرنامج ذلك اليوم إلى الساحل ومحيط المدينة. أما أوزنجول وسوميلا فيمكن زيارتهما طوال العام، غير أن الطريق يسير أبطأ في أشهر الشتاء.",
+          en: "From late June to September. Outside that window Ayder and the higher plateaus are misty, cold and occasionally cut off; the programme turns that day towards the coast and the city instead. Uzungöl and Sümela can be visited year-round, though the road is slower in winter.",
+        },
+      },
+      {
+        question: { tr: "İstanbul programıyla birleştirilebilir mi?", ar: "هل يمكن دمجه مع برنامج إسطنبول؟", en: "Can it be combined with an Istanbul programme?" },
+        answer: {
+          tr: "Evet, en çok istenen birleşim bu: dört gün İstanbul, ardından iç hat uçuşuyla beş gün Karadeniz. Toplam dokuz–on gün ediyor ve iki bölge birbirinin tam zıddı olduğu için seyahat monotonlaşmıyor. İki programı birleştirdiğimizde uçuş saatlerini de birbirine göre ayarlarız.",
+          ar: "نعم، وهذا هو الدمج الأكثر طلباً: أربعة أيام في إسطنبول ثم خمسة أيام في البحر الأسود برحلة داخلية. ويصبح المجموع تسعة إلى عشرة أيام، ولأن المنطقتين على طرفي نقيض لا تصبح الرحلة رتيبة. وعند دمج البرنامجين نضبط مواعيد الطيران بعضها على بعض.",
+          en: "Yes, and it is the most requested combination: four days in Istanbul, then five on the Black Sea via a domestic flight. That comes to nine or ten days, and because the two regions are opposites the trip never becomes monotonous. When we combine them we also line the flights up with each other.",
+        },
+      },
+    ],
   },
 ];
 

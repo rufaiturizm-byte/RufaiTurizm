@@ -6,7 +6,8 @@ import { ArrowRight, CalendarDays, Check, Info, MapPin, Sparkles } from "lucide-
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
-import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
+import { BreadcrumbSchema, FaqSchema, TouristTripSchema } from "@/components/site/json-ld";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { AssuranceBand } from "@/components/site/assurance-band";
@@ -59,6 +60,10 @@ export default async function PackageDetailPage({
   const name = item.name[lang] ?? item.name.tr;
   const excerpt = item.excerpt[lang] ?? item.excerpt.tr;
   const others = packages.filter((other) => other.slug !== item.slug).slice(0, 3);
+  const faqItems = item.faq.map((entry) => ({
+    question: entry.question[lang] ?? entry.question.tr,
+    answer: entry.answer[lang] ?? entry.answer.tr,
+  }));
 
   return (
     <main id="main" className="flex flex-1 flex-col">
@@ -165,6 +170,17 @@ export default async function PackageDetailPage({
                 </li>
               ))}
             </ul>
+
+            {/* Programa özel soru-cevap. Sorular /sss ve hizmet
+                sayfalarındakilerle çakışmıyor, o yüzden FAQPage şeması
+                burada da duruyor — sayfa başına tek şema kuralı bozulmadan. */}
+            <h2 className="mt-14 font-display text-[24px] font-semibold sm:text-[28px]">
+              {t("faqTitle")}
+            </h2>
+            <div className="mt-6">
+              <FaqSchema items={faqItems} />
+              <FaqAccordion items={faqItems} />
+            </div>
 
             <div
               className="mt-8 flex items-start gap-4 rounded-[var(--radius-card)] border px-6 py-5"

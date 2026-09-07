@@ -15,6 +15,10 @@ değişikliği gerekmez.
 | uzungol.jpg | Uzungöl, Trabzon | Sadra Hakim |
 | havalimani.jpg | Havalimanı bekleme salonu ve uçak | Oskar Kadaksoo |
 | ../tours/antalya.jpg | Antalya Kaleiçi, eski liman ve surlar | Ant Rozetsky |
+| kemer.jpg | Kemer: iskele ve denize inen Toroslar | Ondrej Bocek |
+| side.jpg | Side, Apollon Tapınağı sütunları (Medusa başlı friz) | Mert Kahveci |
+| alanya.jpg | Alanya limanı, Kızıl Kule ve kale | Aysegul Aytören |
+| turgutreis.jpg | Turgutreis: koy, yelkenliler ve fener | Deniz Vatan |
 
 Her kare içeriği doğrulanarak seçildi: arama sonucundaki açıklamalar genel
 ("a building that looks like a mosque") olduğu için görsellerin hepsi tek tek
@@ -27,3 +31,21 @@ Oteller sayfasında iki bölge YANLIŞ fotoğrafla gösteriliyordu:
 Taksim/Beyoğlu için Kız Kulesi (Üsküdar'da) ve Anadolu yakası için Sapanca
 (İstanbul'da bile değil). Elimizdeki 13 görsel tüm sayfalara yetmediği için
 aynı kareler tekrar tekrar kullanılıyordu.
+
+
+## Antalya ve Bodrum güzergâhları için eklenenler (8 Eylül 2026)
+
+Dört kare eklendi, dört aday elendi. Elenenler ve nedenleri:
+
+- Unsplash aramasında "Side / antik" etiketiyle çıkan bir tiyatro fotoğrafı
+  aslında **Hierapolis** (Pamukkale) idi — Side'ye 400 kilometre uzakta.
+  Antalya güzergâh sayfasında kullanılsaydı düpedüz yanlış bilgi olurdu.
+  Etiketlere güvenilmedi, her kare açılıp içeriği teyit edildi.
+- "Yalıkavak" etiketli bir kare, üzerinde başka bir işletmenin tabelası
+  (NOVIKOV) olan bir bina fotoğrafıydı; sayfamızda ortaklık ima ederdi.
+- İki kare de kapak olarak elendi: biri tepeden çekim ve çok karanlıktı
+  (beyaz başlık metni okunmazdı), diğerinin göğü düz griydi.
+
+Bu yüzden Yalıkavak yerine **Turgutreis** güzergâh sayfası yazıldı:
+elimizde içeriği doğrulanmış bir Turgutreis fotoğrafı vardı, Yalıkavak
+için yoktu. Yalıkavak, kapsam listesinde (routes.ts) yer alıyor.

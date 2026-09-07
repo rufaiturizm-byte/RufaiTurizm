@@ -14,9 +14,25 @@ import { routeTitle } from "@/lib/route-title";
  * ziyaretçi ulaşamaz; iç bağlantısı olmayan sayfa sitenin bir parçası
  * sayılmaz. Bu blok transfer sayfasında ve ana sayfada duruyor.
  */
-export async function RouteCards({ locale }: { locale: string }) {
+export async function RouteCards({
+  locale,
+  limit,
+}: {
+  locale: string;
+  /**
+   * Kaç kart gösterilecek.
+   *
+   * Güzergâh sayısı Antalya ve Bodrum eklenince yediden on üçe çıktı.
+   * Transfer sayfasında hepsi anlamlı — ziyaretçi oraya zaten güzergâh
+   * aramaya geliyor. Ana sayfada on üç kart, sayfanın geri kalanını
+   * ezen bir blok olurdu; orada sekiz tane duruyor ve devamı transfer
+   * sayfasında.
+   */
+  limit?: number;
+}) {
   const t = await getTranslations("routePage");
   const lang = locale as Locale;
+  const shown = limit ? transferRoutes.slice(0, limit) : transferRoutes;
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
@@ -28,7 +44,7 @@ export async function RouteCards({ locale }: { locale: string }) {
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {transferRoutes.map((route) => {
+        {shown.map((route) => {
           const title = routeTitle(route.from[lang] ?? route.from.tr, route.to[lang] ?? route.to.tr, locale);
           const href = {
             pathname: "/transfer/[route]" as const,

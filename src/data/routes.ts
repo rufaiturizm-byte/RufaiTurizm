@@ -111,18 +111,77 @@ export const routeGroups: RouteGroup[] = [
       { tr: "Polonezköy", ar: "قرية البولونيز", en: "Polonezkoy" },
     ],
   },
+  /*
+   * Bölgeler ayrı gruplarda.
+   *
+   * Önceki hali tek bir "diğer şehirler" torbasıydı: Trabzon ile Bodrum
+   * aynı kartın içindeydi ve Antalya HİÇ geçmiyordu — oysa Antalya turu,
+   * Antalya paketi ve dört Antalya güzergâh sayfası var. Kapsam bölümü
+   * sitenin arama motorundaki tutunma yüzeyi; orada adı geçmeyen bir
+   * bölge için aranmıyoruz.
+   */
   {
-    key: "other",
-    image: "/images/places/uzungol.jpg",
+    key: "antalya",
+    image: "/images/places/side.jpg",
     title: {
-      tr: "Diğer şehirlerde transfer ve tur",
-      ar: "النقل والجولات في مدن أخرى",
-      en: "Transfers and tours in other cities",
+      tr: "Antalya ve Akdeniz kıyısı",
+      ar: "أنطاليا وساحل البحر المتوسط",
+      en: "Antalya and the Mediterranean coast",
     },
     note: {
-      tr: "Uçuşla gidilen şehirlerde de karşılama ve araç hizmeti veriyoruz.",
-      ar: "نوفّر الاستقبال وخدمة السيارة في المدن التي تُقصد جواً أيضاً.",
-      en: "We also provide meet-and-greet and vehicles in cities reached by air.",
+      tr: "Antalya Havalimanı (AYT) karşılama ve bölge içi transferler.",
+      ar: "الاستقبال في مطار أنطاليا (AYT) والتنقّلات داخل المنطقة.",
+      en: "Meet-and-greet at Antalya Airport (AYT) and transfers within the region.",
+    },
+    stops: [
+      { tr: "Antalya merkez", ar: "مركز أنطاليا", en: "Antalya centre" },
+      { tr: "Kaleiçi", ar: "كاليتشي", en: "Kaleici" },
+      { tr: "Lara", ar: "لارا", en: "Lara" },
+      { tr: "Konyaaltı", ar: "كونيا آلتي", en: "Konyaalti" },
+      { tr: "Kemer", ar: "كمر", en: "Kemer" },
+      { tr: "Belek", ar: "بيليك", en: "Belek" },
+      { tr: "Side", ar: "سيدي", en: "Side" },
+      { tr: "Manavgat", ar: "مانافغات", en: "Manavgat" },
+      { tr: "Alanya", ar: "ألانيا", en: "Alanya" },
+      { tr: "Düden Şelalesi", ar: "شلالات دودان", en: "Duden Waterfall" },
+    ],
+  },
+  {
+    key: "aegean",
+    image: "/images/tours/bodrum.jpg",
+    title: {
+      tr: "Bodrum ve Ege kıyısı",
+      ar: "بودروم وساحل بحر إيجه",
+      en: "Bodrum and the Aegean coast",
+    },
+    note: {
+      tr: "Milas-Bodrum Havalimanı (BJV) karşılama ve yarımada içi transferler.",
+      ar: "الاستقبال في مطار ميلاس-بودروم (BJV) والتنقّلات داخل شبه الجزيرة.",
+      en: "Meet-and-greet at Milas–Bodrum Airport (BJV) and transfers around the peninsula.",
+    },
+    stops: [
+      { tr: "Bodrum merkez", ar: "مركز بودروم", en: "Bodrum centre" },
+      { tr: "Gümbet", ar: "غومبيت", en: "Gumbet" },
+      { tr: "Bitez", ar: "بيتيز", en: "Bitez" },
+      { tr: "Yalıkavak", ar: "يالي كافاك", en: "Yalikavak" },
+      { tr: "Turgutreis", ar: "تورغوتريس", en: "Turgutreis" },
+      { tr: "Türkbükü", ar: "توركبوكو", en: "Turkbuku" },
+      { tr: "Torba", ar: "توربا", en: "Torba" },
+      { tr: "Gündoğan", ar: "غوندوغان", en: "Gundogan" },
+    ],
+  },
+  {
+    key: "blacksea",
+    image: "/images/places/uzungol.jpg",
+    title: {
+      tr: "Trabzon ve Karadeniz",
+      ar: "طرابزون والبحر الأسود",
+      en: "Trabzon and the Black Sea",
+    },
+    note: {
+      tr: "Trabzon Havalimanı (TZX) karşılama ve yayla turları.",
+      ar: "الاستقبال في مطار طرابزون (TZX) وجولات الهضاب.",
+      en: "Meet-and-greet at Trabzon Airport (TZX) and highland tours.",
     },
     stops: [
       { tr: "Trabzon", ar: "طرابزون", en: "Trabzon" },
@@ -130,10 +189,7 @@ export const routeGroups: RouteGroup[] = [
       { tr: "Sümela Manastırı", ar: "دير سوميلا", en: "Sumela Monastery" },
       { tr: "Ayder Yaylası", ar: "هضبة آيدر", en: "Ayder Plateau" },
       { tr: "Rize", ar: "ريزه", en: "Rize" },
-      { tr: "Bodrum", ar: "بودروم", en: "Bodrum" },
-      { tr: "Gümbet", ar: "غومبيت", en: "Gumbet" },
-      { tr: "Bitez", ar: "بيتيز", en: "Bitez" },
-      { tr: "Yalıkavak", ar: "يالي كافاك", en: "Yalikavak" },
+      { tr: "Zigana", ar: "زيغانا", en: "Zigana" },
     ],
   },
 ];

@@ -187,7 +187,8 @@ export default async function HomePage({
             kapasite, bagaj ve donanım hiçbir yerde yazmıyor, ziyaretçi
             "hangi araçla geleceksiniz" sorusunun cevabını almadan
             rezervasyona gidiyordu. */}
-        <RouteCards locale={locale} />
+        {/* Ana sayfada sekiz kart; on üçünün tamamı transfer sayfasında. */}
+        <RouteCards locale={locale} limit={8} />
 
         <VehicleList />
 

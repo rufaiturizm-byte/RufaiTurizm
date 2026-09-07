@@ -20,7 +20,7 @@ import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TableOfContents } from "@/components/site/table-of-contents";
 import { headingId } from "@/lib/heading-id";
-import { transferRoutes, transferRouteBySlug } from "@/data/transfer-routes";
+import { transferRoutes, transferRouteBySlug, relatedRoutes } from "@/data/transfer-routes";
 import type { Locale } from "@/i18n/routing";
 import { routeTitle } from "@/lib/route-title";
 
@@ -85,7 +85,9 @@ export default async function TransferRoutePage({
     label: section.heading[lang] ?? section.heading.tr,
   }));
 
-  const others = transferRoutes.filter((item) => item.slug !== route.slug);
+  /* Aynı havalimanından kalkanlar önce: Antalya sayfasının altında
+     İstanbul güzergâhı listelemek ziyaretçiye bir şey anlatmıyor. */
+  const others = relatedRoutes(route.slug);
 
   const facts = [
     { icon: PlaneLanding, label: t("airport"), value: route.airport },
@@ -235,7 +237,7 @@ export default async function TransferRoutePage({
                   <h3 className="text-[14.5px] font-bold leading-snug">
                     <Link
                       href={href}
-                      className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                      className="inline-block py-1 transition-colors hover:text-[color:var(--brand-gold-deep)]"
                     >
                       {itemTitle}
                     </Link>

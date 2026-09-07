@@ -4,6 +4,7 @@ import { ArrowRight, ChevronDown, ShieldCheck } from "lucide-react";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
+import { AssuranceBand } from "@/components/site/assurance-band";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TravelAgencySchema, WebSiteSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
@@ -191,6 +192,7 @@ export default async function HomePage({
         <VehicleList />
 
         <GuidesTeaser locale={locale} />
+        <AssuranceBand />
 
         <FaqPreview />
         <ClosingCta locale={locale} />

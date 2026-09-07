@@ -1,12 +1,9 @@
-/**
- * Site geneli sabitler. İletişim bilgileri tek yerden yönetilir.
- * TODO: Gerçek numaralar geldiğinde güncellenecek.
- */
+/** Site geneli sabitler. İletişim bilgileri tek yerden yönetilir. */
 export const siteConfig = {
   url: "https://rufaiturizm.com",
 
   /** WhatsApp numarası — uluslararası biçim, sadece rakam (wa.me için). */
-  whatsappNumber: "905000000000",
+  whatsappNumber: "905416455263",
 
   /** Görüntülenen telefon numarası. */
   phoneDisplay: "+90 500 000 00 00",
@@ -47,16 +44,33 @@ export const siteConfig = {
   /** Belgenin herkese açık doğrulama adresi. */
   tursabVerifyUrl: "https://www.tursab.org.tr/acenta-arama",
 
-  /** Google işletme profili — yorum bölümündeki bağlantı için. */
-  googleReviewsUrl: "",
+  /**
+   * Google işletme profili.
+   *
+   * Ana sayfadaki 4,9 puanı buraya bağlanıyor. Doğrulanamayan bir puan
+   * Körfez pazarında güven kırar — müşteri kontrol eder, bulamazsa
+   * rakamın tamamına şüpheyle bakar. Tıklanabilir olduğu anda aynı rakam
+   * en güçlü güven sinyaline dönüşüyor.
+   *
+   * Kısa `share.google` bağlantısı işletmenin kendi paylaşım adresi.
+   * Google Business Profile'ın "Paylaş" düğmesinden çıkan
+   * `maps.app.goo.gl/...` biçimi daha kalıcıdır; eline geçince burayı
+   * değiştirmek yeter, başka hiçbir yere dokunmak gerekmez.
+   */
+  googleReviewsUrl: "https://share.google/EdbOymjePUlTZVxoS",
 } as const;
 
 /**
- * Gerçek iletişim bilgisi girilmiş mi?
+ * Aranabilir bir telefon numarası girilmiş mi?
  *
  * Yer tutucu numara canlıda görünürse müşteri boş bir numarayı arar ve
- * güvenini kaybeder — hiç göstermemek daha dürüst. Numara girildiği anda
- * telefon satırları kendiliğinden geri gelir.
+ * güvenini kaybeder — hiç göstermemek daha dürüst.
+ *
+ * Denetim `phoneHref` üzerinden yapılır, `whatsappNumber` üzerinden DEĞİL:
+ * ikisi ayrı alan ve WhatsApp numarasının girilmiş olması o hattın
+ * aranabildiği anlamına gelmez. Önceki hali WhatsApp numarasına bakıyordu,
+ * yani gerçek WhatsApp numarası girildiği anda sitede hâlâ yer tutucu olan
+ * telefon numarası görünür hale gelecekti.
  */
-export const hasRealPhone = !siteConfig.whatsappNumber.startsWith("90500000");
+export const hasRealPhone = !siteConfig.phoneHref.startsWith("+90500000");
 

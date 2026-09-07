@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, Info, MapPin } from "lucide-react";
+import {
+  ArrowRight,
+  Info,
+  MapPin,
+  PlaneLanding,
+  TramFront,
+  TriangleAlert,
+} from "lucide-react";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
@@ -172,6 +179,51 @@ export default async function HotelsPage({
                     </p>
                   </div>
                 </div>
+              </div>
+
+              {/*
+                Semtin pratik gerçeği. Bant "burası nasıl bir yer" diyor,
+                kartlar "hangi otel" diyordu; aradaki asıl soru cevapsızdı:
+                oraya nasıl gidilir, neyi göze almak gerekir, havalimanı ne
+                kadar uzak. Ortadaki kart bilerek olumsuz — her semtin bir
+                bedeli var, onu yazmayan liste satış broşürü olur.
+              */}
+              <div className="mx-auto w-full max-w-7xl px-5 pt-6 sm:px-8">
+                <dl className="grid gap-4 sm:grid-cols-3">
+                  {(
+                    [
+                      {
+                        icon: TramFront,
+                        label: t("gettingAroundLabel"),
+                        value: area.practical.gettingAround,
+                      },
+                      {
+                        icon: TriangleAlert,
+                        label: t("watchOutLabel"),
+                        value: area.practical.watchOut,
+                      },
+                      {
+                        icon: PlaneLanding,
+                        label: t("airportLabel"),
+                        value: area.practical.airport,
+                      },
+                    ] as const
+                  ).map(({ icon: Icon, label, value }) => (
+                    <div key={label} className="accent-card p-5">
+                      <dt className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                        <Icon
+                          className="size-3.5"
+                          style={{ color: "var(--brand-gold-deep)" }}
+                          aria-hidden="true"
+                        />
+                        {label}
+                      </dt>
+                      <dd className="mt-2.5 text-[13.5px] leading-[1.75]">
+                        {value[lang] ?? value.tr}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
 
               {/* Oteller */}

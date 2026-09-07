@@ -1,14 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import {
-  BadgeCheck,
-  CalendarCheck,
-  Languages,
-  MessagesSquare,
-  PlaneLanding,
-  ShieldCheck,
-  Smile,
-  Star,
-} from "lucide-react";
+import { ArrowUpRight, BadgeCheck, CalendarCheck, Languages, MessagesSquare, PlaneLanding, ShieldCheck, Smile, Star } from "lucide-react";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { siteConfig } from "@/config/site";
 
@@ -94,6 +85,14 @@ export async function TrustStats() {
       suffix: " / 5",
       label: tStats("ratingLabel"),
       desc: tStats("ratingDesc"),
+      /*
+       * Puan Google profiline bağlanıyor. Doğrulanamayan bir 4,9 Körfez
+       * pazarında ters teper: müşteri kontrol eder, bulamazsa yalnız
+       * puana değil sayfadaki bütün rakamlara şüpheyle bakar. Tıklanabilir
+       * olduğu anda aynı rakam sayfanın en güçlü güven sinyaline dönüşür.
+       * Adres girilmemişse bağlantı hiç kurulmaz, kart düz kalır.
+       */
+      href: siteConfig.googleReviewsUrl || undefined,
     },
     {
       icon: CalendarCheck,
@@ -125,10 +124,19 @@ export async function TrustStats() {
           className="grid sm:grid-cols-2 lg:grid-cols-4"
           style={{ background: "var(--surface)" }}
         >
-          {stats.map(({ icon: Icon, ...stat }) => (
-            <div
+          {stats.map(({ icon: Icon, ...stat }) => {
+            const href = "href" in stat ? stat.href : undefined;
+            const Wrapper = href ? "a" : "div";
+
+            return (
+            <Wrapper
               key={stat.label}
-              className="flex items-start gap-4 px-6 py-9 not-first:border-t sm:not-first:border-t-0 sm:not-nth-[2n+1]:border-s sm:nth-[n+3]:border-t lg:nth-[n+3]:border-t-0 lg:not-first:border-s"
+              {...(href
+                ? { href, target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+              className={`flex items-start gap-4 px-6 py-9 not-first:border-t sm:not-first:border-t-0 sm:not-nth-[2n+1]:border-s sm:nth-[n+3]:border-t lg:nth-[n+3]:border-t-0 lg:not-first:border-s${
+                href ? " transition-colors hover:bg-secondary" : ""
+              }`}
               style={{ borderColor: "var(--hairline)" }}
             >
               <span
@@ -160,12 +168,16 @@ export async function TrustStats() {
                 >
                   {stat.label}
                 </div>
-                <div className="mt-1.5 text-[12.5px] leading-snug text-muted-foreground">
+                <div className="mt-1.5 flex items-center gap-1.5 text-[12.5px] leading-snug text-muted-foreground">
                   {stat.desc}
+                  {href ? (
+                    <ArrowUpRight className="size-3.5 shrink-0 rtl:-scale-x-100" aria-hidden="true" />
+                  ) : null}
                 </div>
               </div>
-            </div>
-          ))}
+            </Wrapper>
+            );
+          })}
         </div>
       </div>
     </section>

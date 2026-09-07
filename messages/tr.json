@@ -716,7 +716,10 @@
     "hotelCount": "otel",
     "helpTitle": "Hangi otel size uygun, birlikte bakalım",
     "helpText": "Tarihinizi, kişi sayınızı ve bütçenizi yazın; bölgeyi ve oteli birlikte seçelim, rezervasyonu biz yapalım.",
-    "photoNote": "Görseller bölgeyi temsil eder, otelin kendisini değil."
+    "photoNote": "Görseller bölgeyi temsil eder, otelin kendisini değil.",
+    "gettingAroundLabel": "Ulaşım",
+    "watchOutLabel": "Göze alınacaklar",
+    "airportLabel": "Havalimanına mesafe"
   },
   "meta": {
     "home": "Rufai Turizm: İstanbul havalimanı transferi, Arapça rehberli turlar, şoförlü Mercedes Vito, uçak bileti ve otel rezervasyonu. Sabit fiyat, 7/24 WhatsApp desteği.",
@@ -766,5 +769,23 @@
     "nearSawAirport": "SAW havalimanına yakın",
     "quiet": "Sakin bölge",
     "palace": "Saray yapısı"
+  },
+  "assurance": {
+    "eyebrow": "Rezervasyon güvenceniz",
+    "title": "Yazmadan önce bilmeniz gerekenler",
+    "subtitle": "Bunlar reklam cümlesi değil, uyduğumuz kurallar. Hepsi rezervasyon sırasında yazılı olarak da geçer.",
+    "prepayTitle": "Ön ödeme istemiyoruz",
+    "prepayDesc": "Rezervasyon için peşin para göndermezsiniz. Ödemeyi seyahat sırasında nakit ya da havaleyle yaparsınız.",
+    "cancelTitle": "24 saat öncesine kadar ücretsiz iptal",
+    "cancelDesc": "Program başlangıcından bir gün öncesine kadar iptal ederseniz hiçbir ücret çıkmaz. Planınız değişirse yazmanız yeterli.",
+    "priceTitle": "Anlaştığımız fiyat değişmez",
+    "priceDesc": "Fiyat rezervasyonda netleşir ve orada kalır. Varışta ek ücret, gece zammı ya da bekleme bedeli yazmayız.",
+    "prayerTitle": "Namaz ve helal yemek programda",
+    "prayerDesc": "Güzergâh namaz vakitlerine göre kurulur, yol üstündeki camilerde mola verilir. Öğle yemeği helal seçenek sunan yerlerde.",
+    "privacyTitle": "Aileniz kendi aracında",
+    "privacyDesc": "Tanımadığınız bir grupla birleştirilmezsiniz. Camlar kararmış, araç ve şoför yalnız size ait.",
+    "licenseTitle": "TÜRSAB belgeli acente",
+    "licenseDesc": "Kültür ve Turizm Bakanlığı belgeli seyahat acentesiyiz. Belge no {no} — kaydı resmî listeden doğrulayın.",
+    "verifyCta": "Belgeyi doğrula"
   }
 }

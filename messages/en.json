@@ -716,7 +716,10 @@
     "hotelCount": "hotels",
     "helpTitle": "Let us find the right hotel together",
     "helpText": "Send your dates, party size and budget; we will pick the district and the hotel with you and handle the booking.",
-    "photoNote": "Photographs show the district, not the hotel itself."
+    "photoNote": "Photographs show the district, not the hotel itself.",
+    "gettingAroundLabel": "Getting around",
+    "watchOutLabel": "The trade-off",
+    "airportLabel": "Distance to the airport"
   },
   "meta": {
     "home": "Rufai Tourism: Istanbul airport transfers, Arabic-guided tours, a chauffeured Mercedes Vito, flight tickets and hotel bookings. Fixed prices, 24/7 WhatsApp.",
@@ -766,5 +769,23 @@
     "nearSawAirport": "Near Sabiha Gokcen",
     "quiet": "Quiet area",
     "palace": "Palace building"
+  },
+  "assurance": {
+    "eyebrow": "Your booking assurances",
+    "title": "What to know before you message us",
+    "subtitle": "These are not advertising lines but rules we keep, and they are put in writing at booking too.",
+    "prepayTitle": "No prepayment required",
+    "prepayDesc": "You send nothing up front to hold a booking. You pay during the trip, in cash or by transfer.",
+    "cancelTitle": "Free cancellation up to 24 hours",
+    "cancelDesc": "Cancel up to a day before the programme starts and there is no charge at all. If your plans change, just write to us.",
+    "priceTitle": "The agreed price does not move",
+    "priceDesc": "The price is settled at booking and stays there. No arrival surcharge, no night rate, no waiting fee.",
+    "prayerTitle": "Prayer and halal food built in",
+    "prayerDesc": "Routes are built around prayer times, with stops at mosques along the way. Lunch is at places with halal options.",
+    "privacyTitle": "Your family travels alone",
+    "privacyDesc": "You are never merged with a group of strangers. Tinted windows, and the vehicle and driver are yours alone.",
+    "licenseTitle": "TÜRSAB-licensed agency",
+    "licenseDesc": "We are a travel agency licensed by the Turkish Ministry of Culture and Tourism. Licence no {no} — verify the record in the official register.",
+    "verifyCta": "Verify the licence"
   }
 }

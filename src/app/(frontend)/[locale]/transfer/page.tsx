@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
+import { AssuranceBand } from "@/components/site/assurance-band";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TransferForm } from "@/components/site/transfer-form";
@@ -115,6 +116,8 @@ export default async function TransferPage({
       <TransferWhy />
 
       <TransferSteps />
+
+      <AssuranceBand />
 
       <FaqPreview />
       <ClosingCta locale={locale} />

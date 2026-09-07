@@ -3,6 +3,7 @@ import { tours } from "@/data/tours";
 import { services } from "@/data/services";
 import { guides } from "@/data/guides";
 import { transferRoutes } from "@/data/transfer-routes";
+import { packages } from "@/data/packages";
 import { siteConfig } from "@/config/site";
 
 const base = siteConfig.url;
@@ -36,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // her dilin kendi adresi alternates içinde ayrı ayrı verilir.
   const sections: { ar: string; tr: string; en: string; priority: number }[] = [
     { ar: "/جولاتنا", tr: "/turlar", en: "/tours", priority: 0.9 },
+    { ar: "/برامج-سياحية", tr: "/paketler", en: "/packages", priority: 0.9 },
     { ar: "/خدماتنا", tr: "/hizmetler", en: "/services", priority: 0.9 },
     { ar: "/النقل-من-المطار", tr: "/transfer", en: "/transfer", priority: 0.9 },
     { ar: "/أدلة-السفر", tr: "/seyahat-rehberi", en: "/travel-guides", priority: 0.8 },
@@ -75,6 +77,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ar: `/أدلة-السفر/${guide.slug}`,
       tr: `/seyahat-rehberi/${guide.slug}`,
       en: `/travel-guides/${guide.slug}`,
+    })),
+    ...packages.map((item) => ({
+      ar: `/برامج-سياحية/${item.slug}`,
+      tr: `/paketler/${item.slug}`,
+      en: `/packages/${item.slug}`,
     })),
     ...transferRoutes.map((route) => ({
       ar: `/النقل-من-المطار/${route.slug}`,

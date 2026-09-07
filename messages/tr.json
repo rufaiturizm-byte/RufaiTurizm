@@ -12,7 +12,8 @@
     "contact": "İletişim",
     "faq": "SSS",
     "guides": "Seyahat Rehberi",
-    "hotels": "Oteller"
+    "hotels": "Oteller",
+    "packages": "Paketler"
   },
   "home": {
     "hero": {
@@ -590,14 +591,36 @@
     "vehicle": "Klimalı özel araç ve yakıt",
     "fixedPrice": "Sabit fiyat — sürpriz ücret yok",
     "water": "Araçta su ikramı",
-    "parking": "Otopark ve köprü geçiş ücretleri"
+    "parking": "Otopark ve köprü geçiş ücretleri",
+    "transfer": "Havalimanı karşılama ve dönüş transferi",
+    "intercity": "Şehirlerarası yolculuklar, aynı araç ve şoför",
+    "prayer": "Namaz vakitlerine göre kurulmuş program",
+    "freeDay": "Program dışı serbest gün"
   },
   "packages": {
-    "title": "Paketlerimiz ve Teklifler",
-    "subtitle": "Konaklama, transfer ve turları birlikte kapsayan çok günlü programlar",
+    "title": "Paket Programlar",
+    "subtitle": "Konaklamanızı, transferinizi ve turlarınızı tek programda birleştiriyoruz.",
     "days": "gün",
     "allPackages": "Tüm paketler",
-    "discount": "indirim"
+    "discount": "indirim",
+    "eyebrow": "Paketler",
+    "heroSubtitle": "Dört ilâ sekiz günlük hazır programlar. Hepsi özel araçla, Arapça rehber eşliğinde ve otelden alışla yürür.",
+    "itineraryTitle": "Gün gün program",
+    "dayLabel": "Gün",
+    "includedTitle": "Programa dahil",
+    "priceTitle": "Fiyat nasıl belirleniyor",
+    "priceText": "Paket fiyatı kişi sayısına, otel sınıfına ve tarihe göre değişir; bu yüzden sitede sabit bir rakam yazmıyoruz. Tarihinizi ve kişi sayınızı yazın, toplam fiyatı aynı gün yazılı olarak gönderelim. Onaylamadan hiçbir işlem başlamaz.",
+    "flexTitle": "Program size göre değişir",
+    "flexText": "Bu programlar bir başlangıç noktası. Gün ekleyebilir, durak çıkarabilir ya da sıralamayı değiştirebilirsiniz — turlarımız özel olduğu için gruba uymak zorunda değilsiniz.",
+    "listTitle": "Hazır paket programlarımız",
+    "askPrice": "Bu paket için fiyat sor",
+    "cityLabel": "Kapsadığı şehirler",
+    "relatedTitle": "Diğer paketler",
+    "introTitle": "Neden hazır program?",
+    "intro1": "Türkiye'ye ilk kez gelen bir aile, transferi bir yerden, turu başka yerden, oteli üçüncü bir yerden ayarladığında günlerin nasıl birleşeceğini kendisi hesaplamak zorunda kalıyor. Havalimanından otele kaç saat, hangi turdan sonra hangisi yorucu olur, şehir dışı hangi güne konur — bunlar seyahatten önce cevaplanmazsa yolda cevaplanıyor ve genelde vakit kaybıyla.",
+    "intro2": "Hazır program bu işi baştan yapar. Aşağıdaki dört program, ayrı ayrı zaten yürüttüğümüz turların gün gün sıralanmış hali; yeni bir hizmet değil, olan hizmetlerin doğru sırası. Her birinde havalimanı karşılaması, şehirlerarası yolculuklar ve otelden alış aynı araçla ve aynı şoförle yapılır.",
+    "intro3": "Program bir taahhüt değil, bir başlangıç noktası. Gün ekleyebilir, durak çıkarabilir, sıralamayı değiştirebilirsiniz — turlarımız özel olduğu için kimsenin takvimine uymak zorunda değilsiniz. Konaklamayı da isterseniz biz ayarlarız, isterseniz kendi otelinizde kalırsınız.",
+    "howTitle": "Nasıl ilerliyoruz"
   },
   "notIncluded": {
     "tickets": "Müze ve ören yeri giriş ücretleri",
@@ -765,7 +788,8 @@
     "guides": "Türkiye’ye gelmeden en çok sorulanlar: havalimanından şehre ulaşım, hangi semtte kalınır, Sapanca ve Trabzon rotaları, hangi mevsimde ne olur.",
     "about": "TÜRSAB belgeli seyahat acentesi. Arapça, Türkçe ve İngilizce hizmet; sabit fiyat, aileye uygun programlar ve tüm seyahat boyunca tek muhatap. Belge No 12539.",
     "contact": "WhatsApp'tan yazın, aynı gün dönelim. Transfer, tur, uçak bileti ve otel rezervasyonu için 7/24 ulaşabilirsiniz. Arapça, Türkçe ve İngilizce hizmet veriyoruz.",
-    "faq": "Fiyatlar sabit mi, Arapça rehber var mı, havalimanında karşılıyor musunuz, ön ödeme gerekiyor mu? Misafirlerimizin en çok sorduğu 20 sorunun net cevapları."
+    "faq": "Fiyatlar sabit mi, Arapça rehber var mı, havalimanında karşılıyor musunuz, ön ödeme gerekiyor mu? Misafirlerimizin en çok sorduğu 20 sorunun net cevapları.",
+    "packages": "İstanbul, Bursa, Sapanca ve Trabzon için 4-8 günlük hazır paket programlar. Özel araç, Arapça rehber, otelden alış; program isteğinize göre değişir."
   },
   "related": {
     "title": "Keşfetmeye devam edin",
@@ -777,7 +801,8 @@
     "guides": "Seyahat rehberleri",
     "faq": "Sıkça sorulan sorular",
     "about": "Hakkımızda ve belgelerimiz",
-    "contact": "Bize ulaşın"
+    "contact": "Bize ulaşın",
+    "packages": "Çok günlük paket programlar"
   },
   "routePage": {
     "eyebrow": "Güzergâh",

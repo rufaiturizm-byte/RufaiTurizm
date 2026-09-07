@@ -12,7 +12,8 @@
     "contact": "Contact",
     "faq": "FAQ",
     "guides": "Travel Guides",
-    "hotels": "Hotels"
+    "hotels": "Hotels",
+    "packages": "Packages"
   },
   "home": {
     "hero": {
@@ -590,14 +591,36 @@
     "vehicle": "Private air-conditioned vehicle and fuel",
     "fixedPrice": "Fixed price — no surprise fees",
     "water": "Complimentary water on board",
-    "parking": "Parking and bridge tolls"
+    "parking": "Parking and bridge tolls",
+    "transfer": "Airport meet-and-greet and return transfer",
+    "intercity": "Intercity journeys with the same vehicle and driver",
+    "prayer": "An itinerary built around prayer times",
+    "freeDay": "A free day outside the programme"
   },
   "packages": {
-    "title": "Our Packages and Offers",
-    "subtitle": "Multi-day programmes covering accommodation, transfers and tours",
+    "title": "Tour Packages",
+    "subtitle": "We bring your stay, your transfers and your tours into a single programme.",
     "days": "days",
     "allPackages": "All packages",
-    "discount": "off"
+    "discount": "off",
+    "eyebrow": "Packages",
+    "heroSubtitle": "Ready-made programmes of four to eight days. All run with a private vehicle, an Arabic-speaking guide and hotel pick-up.",
+    "itineraryTitle": "Day by day",
+    "dayLabel": "Day",
+    "includedTitle": "What the programme includes",
+    "priceTitle": "How the price is set",
+    "priceText": "A package price depends on the number of travellers, the hotel class and the dates, so we do not publish a fixed figure. Send your dates and party size and we will put the total in writing the same day. Nothing starts until you approve it.",
+    "flexTitle": "The programme bends to you",
+    "flexText": "These are a starting point. You can add a day, drop a stop or reorder the route — the tours are private, so you never have to fit a group's schedule.",
+    "listTitle": "Our ready-made packages",
+    "askPrice": "Ask about this package",
+    "cityLabel": "Cities covered",
+    "relatedTitle": "Other packages",
+    "introTitle": "Why a ready-made programme?",
+    "intro1": "A family arriving in Türkiye for the first time, arranging the transfer in one place, the tour in another and the hotel in a third, ends up working out for themselves how the days will fit together: how many hours from the airport to the hotel, which tour becomes tiring after which, on what day the out-of-town trip belongs. If those questions are not answered before the trip, they get answered on the road — usually at the cost of time.",
+    "intro2": "A ready-made programme does that work in advance. The four programmes below are not a new service; they are the right order for tours we already run separately, day by day. In each of them the airport meet-and-greet, the intercity journeys and the hotel pick-ups happen with the same vehicle and the same driver.",
+    "intro3": "The programme is a starting point, not a commitment. You can add a day, drop a stop or reorder it — the tours are private, so you never have to fit anyone else's schedule. We can arrange the accommodation too, or you can stay at your own hotel.",
+    "howTitle": "How it works"
   },
   "notIncluded": {
     "tickets": "Museum and historic site entry fees",
@@ -765,7 +788,8 @@
     "guides": "What people ask before coming to Türkiye: getting from the airport into the city, which district to stay in, Sapanca and Trabzon routes, and each season.",
     "about": "A TÜRSAB-licensed travel agency, licence no 12539. Service in Arabic, Turkish and English, fixed prices and one contact for the whole trip.",
     "contact": "Message us on WhatsApp and we will reply the same day. Reachable 24/7 for transfers, tours, flight tickets and hotel bookings, in Arabic, Turkish and English.",
-    "faq": "Are prices fixed? Is there an Arabic-speaking guide? Do you meet us at the airport? Is prepayment required? Clear answers to the 20 questions guests ask most."
+    "faq": "Are prices fixed? Is there an Arabic-speaking guide? Do you meet us at the airport? Is prepayment required? Clear answers to the 20 questions guests ask most.",
+    "packages": "Ready-made 4-8 day packages for Istanbul, Bursa, Sapanca and Trabzon. Private vehicle, Arabic-speaking guide, hotel pick-up, and an itinerary that bends to you."
   },
   "related": {
     "title": "Keep exploring",
@@ -777,7 +801,8 @@
     "guides": "Travel guides",
     "faq": "Frequently asked questions",
     "about": "About us and our licence",
-    "contact": "Get in touch"
+    "contact": "Get in touch",
+    "packages": "Multi-day tour packages"
   },
   "routePage": {
     "eyebrow": "Route",

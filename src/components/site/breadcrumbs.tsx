@@ -4,7 +4,17 @@ import { Link } from "@/i18n/navigation";
 export type Crumb = {
   label: string;
   /** Son kırıntı bağlantısız kalır: bulunduğunuz sayfaya link verilmez. */
-  href?: "/" | "/transfer" | "/tours" | "/services" | "/hotels" | "/guides" | "/about" | "/faq" | "/contact";
+  href?:
+    | "/"
+    | "/transfer"
+    | "/tours"
+    | "/packages"
+    | "/services"
+    | "/hotels"
+    | "/guides"
+    | "/about"
+    | "/faq"
+    | "/contact";
 };
 
 /**

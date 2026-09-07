@@ -32,6 +32,21 @@ export const pathnames = {
     tr: "/turlar",
     en: "/tours",
   },
+  /*
+   * Paket programlar. Arapça yol adı bilerek "برامج-سياحية": Körfez'den
+   * gelen misafir tam olarak bu kelimeyi arıyor ("برنامج سياحي في اسطنبول"),
+   * "باقات" değil.
+   */
+  "/packages": {
+    ar: "/برامج-سياحية",
+    tr: "/paketler",
+    en: "/packages",
+  },
+  "/packages/[slug]": {
+    ar: "/برامج-سياحية/[slug]",
+    tr: "/paketler/[slug]",
+    en: "/packages/[slug]",
+  },
   "/tours/[slug]": {
     ar: "/جولاتنا/[slug]",
     tr: "/turlar/[slug]",

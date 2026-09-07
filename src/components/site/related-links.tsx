@@ -14,11 +14,21 @@ import { Link } from "@/i18n/navigation";
  * Bulunduğu sayfa listeden düşürülüyor: kendine link veren bir "ilgili
  * sayfalar" bloğu hem gereksiz hem kafa karıştırıcı.
  */
-type Key = "transfer" | "tours" | "services" | "hotels" | "guides" | "faq" | "about" | "contact";
+type Key =
+  | "transfer"
+  | "tours"
+  | "packages"
+  | "services"
+  | "hotels"
+  | "guides"
+  | "faq"
+  | "about"
+  | "contact";
 
 const HREFS = {
   transfer: "/transfer",
   tours: "/tours",
+  packages: "/packages",
   services: "/services",
   hotels: "/hotels",
   guides: "/guides",

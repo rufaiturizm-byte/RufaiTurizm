@@ -82,7 +82,7 @@ export async function RouteCards({ locale }: { locale: string }) {
 
                 <Link
                   href={href}
-                  className="mt-4 inline-flex items-center gap-2 text-[13px] font-bold"
+                  className="mt-3 inline-flex py-1.5 items-center gap-2 text-[13px] font-bold"
                   style={{ color: "var(--brand-gold-deep)" }}
                 >
                   {t("allRoutes")}

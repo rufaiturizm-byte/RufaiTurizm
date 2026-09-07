@@ -24,7 +24,18 @@ export async function Footer() {
   const tCta = await getTranslations("cta");
 
   const heading = "mb-5 text-[12px] font-extrabold uppercase tracking-[0.18em]";
-  const link = "text-[13.5px] transition-colors hover:text-white";
+  /*
+   * Dikey dolgu dokunma alanı için, süs değil.
+   *
+   * Telefonda ölçtüm: altbilgideki on yedi bağlantı 14 piksel yüksekliğinde
+   * kutular olarak çıkıyordu. WCAG 2.5.8 en az 24×24 piksel istiyor ve
+   * sebebi somut — 14 piksellik bir hedefe parmakla isabet ettirmek zor,
+   * yaşlı ya da titremesi olan kullanıcı için neredeyse imkânsız.
+   * `inline-block` + `py-1.5` hedefi 26 piksele çıkarıyor, görünüm aynı
+   * kalıyor çünkü satır aralığı zaten o boşluğu taşıyordu.
+   */
+  const link =
+    "inline-block py-1.5 text-[13.5px] transition-colors hover:text-white";
 
   const quickLinks = [
     { href: "/" as const, label: tNav("home") },

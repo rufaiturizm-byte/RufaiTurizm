@@ -93,7 +93,7 @@ export async function GuidesTeaser({ locale }: { locale: string }) {
 
                 <Link
                   href={href}
-                  className="mt-4 inline-flex items-center gap-2 text-[13.5px] font-bold"
+                  className="mt-3 inline-flex py-1.5 items-center gap-2 text-[13.5px] font-bold"
                   style={{ color: "var(--brand-gold-deep)" }}
                 >
                   {t("readCta")}

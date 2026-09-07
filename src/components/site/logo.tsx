@@ -19,7 +19,14 @@ export function Logo({
   className = "",
   tone = "light",
   sub = "TOURISM",
-  size = 40,
+  /*
+   * Rozetin boyutu.
+   *
+   * 40 pikselde amblem okunmuyordu: dairenin içinde "Rufai" yazısı, beş
+   * yıldız ve şerit var; bu kadar ayrıntı o ölçekte lapa oluyor. 48 piksel
+   * üst çubuğun yüksekliğini (64px) zorlamadan ayrıntıyı geri getiriyor.
+   */
+  size = 48,
   flourish = false,
 }: {
   className?: string;

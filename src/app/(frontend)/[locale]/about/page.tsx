@@ -13,6 +13,8 @@ import { WhyUs } from "@/components/site/why-us";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { ClosingCta } from "@/components/site/transfer-sections";
+import { BadgeCheck, Building2, CarFront, Scale } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 export async function generateMetadata({
   params,
@@ -141,6 +143,88 @@ export default async function AboutPage({
               <p>{t("p5")}</p>
               <p>{t("p6")}</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/*
+        Doğrulanabilir kanıt.
+        
+        Sayfanın geri kalanı "nasıl çalışırız" anlatıyordu — hepsi doğru ama
+        hepsi bizim ağzımızdan. Körfez'den gelen misafirin asıl sorusu başka:
+        bu şirket gerçek mi? Buradaki dört maddenin dördü de ziyaretçinin
+        kendi kontrol edebileceği şeyler; TÜRSAB kaydı doğrudan resmî
+        listeye bağlı.
+
+        Dördüncü madde bilerek olumsuz. "Herkese uygun değiliz" demek
+        müşteri kaybettirir gibi görünür ama tersini yapan her siteye
+        benzemekten çıkarır — ve yanlış beklentiyle gelen misafir zaten
+        memnun ayrılmıyor.
+      */}
+      <section
+        className="border-y"
+        style={{ background: "var(--brand-cream)", borderColor: "var(--hairline)" }}
+      >
+        <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
+          <SectionHeading
+            eyebrow={t("proofEyebrow")}
+            title={t("proofTitle")}
+            subtitle={t("proofSubtitle")}
+          />
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            {(
+              [
+                { icon: Building2, title: t("proof1Title"), desc: t("proof1Desc") },
+                { icon: CarFront, title: t("proof2Title"), desc: t("proof2Desc") },
+                {
+                  icon: BadgeCheck,
+                  title: t("proof3Title"),
+                  desc: t("proof3Desc"),
+                  href: siteConfig.tursabVerifyUrl,
+                  cta: t("verifyCta"),
+                },
+                { icon: Scale, title: t("proof4Title"), desc: t("proof4Desc") },
+              ] as const
+            ).map(({ icon: Icon, title, desc, ...rest }) => {
+              const href = "href" in rest ? rest.href : undefined;
+              const cta = "cta" in rest ? rest.cta : undefined;
+
+              return (
+                <div key={title} className="accent-card flex flex-col p-7">
+                  <span
+                    className="inline-flex size-11 items-center justify-center rounded-[0.75rem]"
+                    style={{
+                      background: "color-mix(in oklab, var(--brand-gold) 20%, transparent)",
+                      border: "1px solid color-mix(in oklab, var(--brand-gold) 42%, transparent)",
+                      color: "var(--brand-gold-deep)",
+                    }}
+                  >
+                    <Icon className="size-[18px]" aria-hidden="true" />
+                  </span>
+
+                  <h3 className="mt-5 text-[16px] font-bold leading-snug">{title}</h3>
+                  <p className="mt-2.5 flex-1 text-[14px] leading-[1.85] text-foreground/80">
+                    {desc}
+                  </p>
+
+                  {href && cta ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex w-fit items-center rounded-full border px-4 py-2 text-[12.5px] font-bold transition-colors hover:bg-secondary"
+                      style={{
+                        borderColor: "color-mix(in oklab, var(--brand-gold-deep) 46%, transparent)",
+                        color: "var(--brand-gold-deep)",
+                      }}
+                    >
+                      {cta}
+                    </a>
+                  ) : null}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

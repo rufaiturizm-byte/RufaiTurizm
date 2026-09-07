@@ -384,7 +384,19 @@
     "storyTitle": "Kimiz",
     "storyEyebrow": "Hikâyemiz",
     "promiseTitle": "Misafirlerimize sözümüz",
-    "promiseEyebrow": "Söz"
+    "promiseEyebrow": "Söz",
+    "proofEyebrow": "Somut olan",
+    "proofTitle": "Neden bize güvenebilirsiniz",
+    "proofSubtitle": "Söz vermek kolay. Aşağıdakiler kontrol edebileceğiniz şeyler.",
+    "proof1Title": "İstanbul'da fiziksel ofisimiz var",
+    "proof1Desc": "Sanal bir adres ya da yalnız telefonla çalışan bir aracı değiliz. İstanbul'da tabelası olan bir ofisimiz ve araçlarımızın park ettiği kendi alanımız var. Sitedeki fotoğraflar stok değil, o ofisin ve o araçların fotoğrafı.",
+    "proof2Title": "Araçlar kendi filomuzdan",
+    "proof2Desc": "Rezervasyonunuzu alıp işi başkasına devretmiyoruz. Filodaki araçların tamamı aynı model siyah Mercedes Vito ve hepsi bizim işlettiğimiz araçlar. Kalabalık aileler için ikinci araç çıktığında o da dışarıdan tutulmuş olmuyor.",
+    "proof3Title": "TÜRSAB kaydı doğrulanabilir",
+    "proof3Desc": "Belge numaramız 12539. Türkiye'de belgesiz seyahat acenteliği yasak; belge, Kültür ve Turizm Bakanlığı denetimi altında çalıştığımız anlamına gelir. Bize inanmanız gerekmiyor — kaydı TÜRSAB'ın resmî acenta arama sayfasından kendiniz görebilirsiniz.",
+    "proof4Title": "Herkese uygun değiliz",
+    "proof4Desc": "En ucuzu arayan bir gezgin için doğru adres değiliz: özel araç, şoför ve sabit fiyatla çalışıyoruz, gruba katarak fiyat düşürmüyoruz. Bunu baştan söylemek, sonradan hayal kırıklığı yaşatmaktan iyi.",
+    "verifyCta": "TÜRSAB kaydını görüntüle"
   },
   "contact": {
     "title": "İletişim",

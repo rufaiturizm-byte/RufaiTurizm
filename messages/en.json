@@ -384,7 +384,19 @@
     "storyTitle": "Who we are",
     "storyEyebrow": "Our story",
     "promiseTitle": "Our promise to guests",
-    "promiseEyebrow": "Promise"
+    "promiseEyebrow": "Promise",
+    "proofEyebrow": "What can be checked",
+    "proofTitle": "Why you can trust us",
+    "proofSubtitle": "Promises are easy. What follows are things you can verify yourself.",
+    "proof1Title": "We have a physical office in Istanbul",
+    "proof1Desc": "We are not a virtual address or a broker working by phone alone. We have an office with a sign in Istanbul and our own yard where the vehicles are parked. The photographs on this site are not stock images — they are of that office and those vehicles.",
+    "proof2Title": "The vehicles are our own fleet",
+    "proof2Desc": "We do not take your booking and hand the work to someone else. Every vehicle in the fleet is the same model of black Mercedes Vito, and we operate all of them ourselves. When a second vehicle goes out for a larger family, it is not hired in from outside.",
+    "proof3Title": "The TÜRSAB record can be verified",
+    "proof3Desc": "Our licence number is 12539. Operating as a travel agency without a licence is prohibited in Türkiye, so the licence means we work under the supervision of the Ministry of Culture and Tourism. You do not have to take our word for it — you can see the record yourself on TÜRSAB's official agency search page.",
+    "proof4Title": "We are not right for everyone",
+    "proof4Desc": "If you are looking for the cheapest option, we are not the right address: we work with a private vehicle, a chauffeur and a fixed price, and we do not lower the price by folding you into a group. Saying so up front beats disappointing you later.",
+    "verifyCta": "View the TÜRSAB record"
   },
   "contact": {
     "title": "Contact",

@@ -59,6 +59,7 @@ export default async function HotelsPage({
   const t = await getTranslations("hotelsPage");
   const tNav = await getTranslations("nav");
   const tCta = await getTranslations("cta");
+  const tTags = await getTranslations("hotelTags");
   const lang = locale as Locale;
 
   return (
@@ -194,7 +195,7 @@ export default async function HotelsPage({
                         {hotel.name}
                       </h3>
 
-                      <p className="mt-3 flex flex-1 items-start gap-2 text-[13.5px] leading-[1.7] text-muted-foreground">
+                      <p className="mt-3 flex items-start gap-2 text-[13.5px] leading-[1.7] text-muted-foreground">
                         <MapPin
                           className="mt-0.5 size-3.5 shrink-0"
                           style={{ color: "var(--brand-gold-deep)" }}
@@ -202,6 +203,23 @@ export default async function HotelsPage({
                         />
                         {hotel.desc[lang] ?? hotel.desc.tr}
                       </p>
+
+                      {/* Etiketler konum ve yapı temelli; yıldız ya da
+                          hizmet kalitesi iddiası taşımıyorlar. */}
+                      <ul className="mt-4 flex flex-1 flex-wrap content-start gap-2">
+                        {hotel.tags.map((tag) => (
+                          <li
+                            key={tag}
+                            className="rounded-full border px-3 py-1.5 text-[11.5px] font-semibold"
+                            style={{
+                              background: "color-mix(in oklab, var(--brand-sky) 14%, transparent)",
+                              borderColor: "color-mix(in oklab, var(--brand-sky) 32%, transparent)",
+                            }}
+                          >
+                            {tTags(tag)}
+                          </li>
+                        ))}
+                      </ul>
 
                       <WhatsAppLink
                         subject={`${hotel.name} — ${name}`}

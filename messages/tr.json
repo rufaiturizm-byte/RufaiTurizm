@@ -646,5 +646,18 @@
     "ctaTitle": "Bu güzergâh için sabit fiyat alın",
     "ctaText": "Uçuş saatinizi ve kişi sayısını yazın; fiyatı ve şoför bilgisini aynı gün gönderelim.",
     "note": "Mesafe ve süreler yaklaşıktır; trafiğe göre değişir. Fiyat araç başınadır, kişi başı değil."
+  },
+  "hotelTags": {
+    "historic": "Tarihî yapı",
+    "walkToSights": "Ayasofya yürüme mesafesi",
+    "bosphorusView": "Boğaz manzarası",
+    "nearMetro": "Metroya yakın",
+    "nearTram": "Tramvaya yakın",
+    "seaside": "Deniz kenarı",
+    "garden": "Geniş bahçe",
+    "nearMalls": "Alışveriş merkezlerine yakın",
+    "nearSawAirport": "SAW havalimanına yakın",
+    "quiet": "Sakin bölge",
+    "palace": "Saray yapısı"
   }
 }

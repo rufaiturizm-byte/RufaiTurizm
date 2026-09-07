@@ -646,5 +646,18 @@
     "ctaTitle": "Get a fixed price for this route",
     "ctaText": "Send your flight time and party size; we will come back the same day with the price and driver details.",
     "note": "Distances and times are approximate and vary with traffic. Prices are per vehicle, not per person."
+  },
+  "hotelTags": {
+    "historic": "Historic building",
+    "walkToSights": "Walk to Hagia Sophia",
+    "bosphorusView": "Bosphorus view",
+    "nearMetro": "Near the metro",
+    "nearTram": "Near the tram",
+    "seaside": "On the water",
+    "garden": "Large garden",
+    "nearMalls": "Near the malls",
+    "nearSawAirport": "Near Sabiha Gokcen",
+    "quiet": "Quiet area",
+    "palace": "Palace building"
   }
 }

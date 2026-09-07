@@ -27,7 +27,13 @@ export interface HotelArea {
   name: Text;
   /** Bölgenin kime uygun olduğu. */
   note: Text;
-  hotels: { name: string; desc: Text }[];
+  /*
+   * Etiketler kapalı bir sözlükten geliyor (messages hotelTags.*) ve
+   * hepsi KONUM ya da YAPI temelli: "Boğaz manzarası", "tramvaya yakın",
+   * "tarihî yapı" gibi doğrulanabilir şeyler. Yıldız, hizmet kalitesi ya
+   * da "en iyi" türü sıfatlar bilerek yok — onları doğrulayamayız.
+   */
+  hotels: { name: string; desc: Text; tags: string[] }[];
 }
 
 export const hotelAreas: HotelArea[] = [
@@ -49,6 +55,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "بين آيا صوفيا وجامع السلطان أحمد، في مبنى تاريخي.",
           en: "Between Hagia Sophia and the Blue Mosque, in a historic building.",
         },
+        tags: ["historic", "walkToSights"],
       },
       {
         name: "Sura Hagia Sophia Hotel",
@@ -57,6 +64,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "قريب جداً من آيا صوفيا، فندق كبير يضم غرفاً عائلية.",
           en: "Very close to Hagia Sophia; a large hotel with family rooms.",
         },
+        tags: ["walkToSights", "nearTram"],
       },
       {
         name: "Levni Hotel & Spa",
@@ -65,6 +73,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "على خط لاليلي–بايزيد، قريب من البازار المسقوف والترام.",
           en: "On the Laleli–Beyazit line, close to the Grand Bazaar and the tram.",
         },
+        tags: ["nearTram", "quiet"],
       },
     ],
   },
@@ -88,6 +97,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "فوق ميدان تقسيم مباشرة، بإطلالة على المدينة والبوسفور.",
           en: "Right above Taksim Square, with city and Bosphorus views.",
         },
+        tags: ["nearMetro", "bosphorusView"],
       },
       {
         name: "Pera Palace Hotel",
@@ -96,6 +106,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "في تبه باشي، فندق تاريخي مفتوح منذ عام 1892.",
           en: "In Tepebasi; a historic hotel open since 1892.",
         },
+        tags: ["historic", "nearMetro"],
       },
       {
         name: "Hilton Istanbul Bosphorus",
@@ -104,6 +115,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "في حربية، فندق كبير بحديقة واسعة يناسب العائلات.",
           en: "In Harbiye; a large, family-friendly hotel with extensive grounds.",
         },
+        tags: ["garden", "nearMalls"],
       },
       {
         name: "Divan Istanbul",
@@ -112,6 +124,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "في إلمَداغ، على مسافة سير من منطقة نيشانتاشي للتسوّق.",
           en: "In Elmadag, walking distance from the Nisantasi shopping district.",
         },
+        tags: ["nearMalls", "nearMetro"],
       },
     ],
   },
@@ -133,6 +146,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "على ضفة البوسفور، داخل قصر عثماني قديم.",
           en: "On the Bosphorus shore, inside a former Ottoman palace.",
         },
+        tags: ["palace", "seaside"],
       },
       {
         name: "Shangri-La Bosphorus, Istanbul",
@@ -141,6 +155,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "في بشكتاش، بجوار قصر دولمة بهجة.",
           en: "In Besiktas, next to Dolmabahce Palace.",
         },
+        tags: ["bosphorusView", "seaside"],
       },
       {
         name: "Swissôtel The Bosphorus, Istanbul",
@@ -149,6 +164,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "على تلة في ماتشكا؛ معروف بحديقته الواسعة ومسبحه.",
           en: "On the hill in Macka; known for its large garden and pool.",
         },
+        tags: ["garden", "bosphorusView"],
       },
       {
         name: "Conrad Istanbul Bosphorus",
@@ -157,6 +173,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "على مرتفعات بشكتاش، بغرف تطلّ على البوسفور.",
           en: "On the Besiktas heights, with Bosphorus-view rooms.",
         },
+        tags: ["bosphorusView", "nearMalls"],
       },
     ],
   },
@@ -180,6 +197,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "في آتاشهير، قريب من منطقة الأعمال وطريق المطار.",
           en: "In Atasehir, close to the business district and the airport road.",
         },
+        tags: ["nearMalls", "quiet"],
       },
       {
         name: "DoubleTree by Hilton Istanbul Moda",
@@ -188,6 +206,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "في مودا بكاديكوي، قريب من ممشى الساحل.",
           en: "In Kadikoy Moda, close to the seaside promenade.",
         },
+        tags: ["seaside", "quiet"],
       },
       {
         name: "Wyndham Grand Istanbul Kalamış Marina",
@@ -196,6 +215,7 @@ export const hotelAreas: HotelArea[] = [
           ar: "في مارينا كالاميش، على البحر وفي منطقة هادئة.",
           en: "At Kalamis Marina, on the water in a quiet area.",
         },
+        tags: ["seaside", "nearSawAirport"],
       },
     ],
   },

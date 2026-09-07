@@ -57,7 +57,7 @@ export async function RouteCards({ locale }: { locale: string }) {
                 <h3 className="font-display text-[17px] font-semibold leading-snug">
                   <Link
                     href={href}
-                    className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                    className="inline-block py-0.5 transition-colors hover:text-[color:var(--brand-gold-deep)]"
                   >
                     {title}
                   </Link>

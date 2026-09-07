@@ -78,7 +78,7 @@ export async function TourCompare() {
                     <td className={`${td} font-bold`}>
                       <Link
                         href={href}
-                        className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                        className="inline-block py-1.5 transition-colors hover:text-[color:var(--brand-gold-deep)]"
                       >
                         {tTours(`${tour.key}.name`)}
                       </Link>
@@ -97,7 +97,7 @@ export async function TourCompare() {
                     <td className={`${td} text-end`}>
                       <Link
                         href={href}
-                        className="inline-flex items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold"
+                        className="inline-flex items-center gap-1.5 whitespace-nowrap py-1 text-[13px] font-semibold"
                         style={{ color: "var(--brand-gold-deep)" }}
                       >
                         {tCommon("details")}

@@ -280,14 +280,14 @@ export default async function GuideDetailPage({
                     <h3 className="font-display text-[17px] font-semibold leading-snug">
                       <Link
                         href={href}
-                        className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                        className="inline-block py-0.5 transition-colors hover:text-[color:var(--brand-gold-deep)]"
                       >
                         {itemTitle}
                       </Link>
                     </h3>
                     <Link
                       href={href}
-                      className="mt-3 inline-flex items-center gap-2 text-[13px] font-bold"
+                      className="mt-3 inline-flex items-center gap-2 py-1 text-[13px] font-bold"
                       style={{ color: "var(--brand-gold-deep)" }}
                     >
                       {t("readCta")}

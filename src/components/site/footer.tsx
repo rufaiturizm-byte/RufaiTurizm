@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
 import { siteConfig, hasRealPhone } from "@/config/site";
 import { tours } from "@/data/tours";
+import { services } from "@/data/services";
 
 /**
  * Altbilgi.
@@ -19,6 +20,7 @@ export async function Footer() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");
   const tTours = await getTranslations("tours");
+  const tServices = await getTranslations("services");
   const tContact = await getTranslations("contact");
   const tCredentials = await getTranslations("credentials");
   const tCta = await getTranslations("cta");
@@ -107,8 +109,35 @@ export async function Footer() {
             </ul>
           </div>
 
+          {/*
+            Hizmet detay sayfaları buraya bilerek eklendi.
+            Bağlantı denetiminde çıktı: bölüm sayfaları (turlar, hizmetler,
+            transfer) üst menüde olduğu için her sayfadan bağlantı alıyor ve
+            53 iç bağlantıya sahipler; hizmet DETAY sayfaları (vito-vip,
+            transfer, tours, flight-hotel) ise yalnız 2 bağlantı alıyordu —
+            ana sayfa ve hizmet listesi. Yani sitenin ticari niyeti en
+            yüksek dört sayfası, en zayıf bağlanan sayfalarıydı. Turlar
+            için bu blok zaten vardı; eksik olan aynısının hizmetlerde
+            yapılmamış olmasıydı.
+          */}
           <div>
             <h3 className={heading} style={{ color: "var(--brand-gold-label)" }}>
+              {tNav("services")}
+            </h3>
+            <ul className="space-y-3">
+              {services.map((service) => (
+                <li key={service.key}>
+                  <Link
+                    href={{ pathname: "/services/[slug]", params: { slug: service.slug } }}
+                    className={link}
+                  >
+                    {tServices(`${service.key}.title`)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className={`${heading} mt-9`} style={{ color: "var(--brand-gold-label)" }}>
               {tNav("tours")}
             </h3>
             <ul className="space-y-3">
@@ -138,7 +167,7 @@ export async function Footer() {
               ) : null}
               <li className="flex items-center gap-3">
                 <Mail className="size-4 shrink-0" style={{ color: "var(--brand-gold)" }} aria-hidden="true" />
-                <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-white">
+                <a href={`mailto:${siteConfig.email}`} className="inline-block py-1 transition-colors hover:text-white">
                   {siteConfig.email}
                 </a>
               </li>

@@ -45,7 +45,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
               {item.href && !last ? (
                 <Link
                   href={item.href}
-                  className="text-white/60 underline-offset-4 transition-colors hover:text-white hover:underline"
+                  className="inline-block py-1 text-white/60 underline-offset-4 transition-colors hover:text-white hover:underline"
                 >
                   {item.label}
                 </Link>

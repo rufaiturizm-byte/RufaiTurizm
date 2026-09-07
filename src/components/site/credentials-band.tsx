@@ -57,7 +57,7 @@ export async function CredentialsBand() {
             href={siteConfig.tursabVerifyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 inline-flex items-center gap-2 text-[13.5px] font-semibold underline-offset-4 hover:underline"
+            className="mt-3 inline-flex items-center gap-2 py-1 text-[13.5px] font-semibold underline-offset-4 hover:underline"
             style={{ color: "var(--brand-gold-deep)" }}
           >
             {t("verifyCta")}

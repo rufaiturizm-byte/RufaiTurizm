@@ -29,9 +29,20 @@ export function PhotoGallery({
 }) {
   const [index, setIndex] = useState<number | null>(null);
 
+  /*
+   * Sütun sayısı fotoğraf sayısından türetiliyor, sabit dört değil.
+   * Sabitken üç gerçek fotoğrafla dördüncü kareyi doldurmak için birini
+   * tekrarlamak gerekiyordu; aynı aracın iki kez göründüğü bir şerit,
+   * "sitede gördüğünüz araç havalimanında gelen araçtır" sözünü
+   * zayıflatan bir ayrıntı.
+   */
+  const columns = Math.min(photos.length, 4);
+  const gridClass =
+    columns === 1 ? "" : columns === 2 ? "sm:grid-cols-2" : columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-4";
+
   return (
     <>
-      <div className={`grid gap-px sm:grid-cols-4 ${className}`} style={{ background: "var(--hairline)" }}>
+      <div className={`grid gap-px ${gridClass} ${className}`} style={{ background: "var(--hairline)" }}>
         {photos.map((photo, i) => (
           <button
             key={`${photo.src}-${i}`}
@@ -46,7 +57,7 @@ export function PhotoGallery({
               src={photo.src}
               alt={photo.alt}
               fill
-              sizes="(max-width: 640px) 50vw, 25vw"
+              sizes={`(max-width: 640px) 50vw, ${Math.round(100 / columns)}vw`}
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
 

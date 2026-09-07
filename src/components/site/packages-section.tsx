@@ -93,7 +93,7 @@ export async function PackagesSection({ locale }: { locale: string }) {
                 <h3 className="text-[15.5px] font-bold">
                   <Link
                     href={href}
-                    className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                    className="inline-block py-1 transition-colors hover:text-[color:var(--brand-gold-deep)]"
                   >
                     {name}
                   </Link>

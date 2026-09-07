@@ -245,7 +245,7 @@ export default async function TransferRoutePage({
                   </div>
                   <Link
                     href={href}
-                    className="mt-3 inline-flex items-center gap-2 text-[13px] font-bold"
+                    className="mt-3 inline-flex items-center gap-2 py-1 text-[13px] font-bold"
                     style={{ color: "var(--brand-gold-deep)" }}
                   >
                     {t("distance")}: {item.distance[lang] ?? item.distance.tr}

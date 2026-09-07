@@ -1,31 +1,71 @@
 # Rufai Turizm
 
-> TÜRSAB belgeli (No 12539) seyahat acentesi. İstanbul merkezli; havalimanı
-> transferi, şoförlü Mercedes Vito, Arapça rehberli günlük turlar, uçak bileti
-> ve otel rezervasyonu. Hizmet dilleri: Arapça, Türkçe, İngilizce.
+> TÜRSAB belgeli (No 12539) seyahat acentesi, ticari unvan RUFAİ İSTANBUL
+> TURİZM. İstanbul merkezli; havalimanı transferi, şoförlü Mercedes Vito,
+> Arapça rehberli turlar, çok günlü paket programlar, uçak bileti ve otel
+> rezervasyonu. Hizmet dilleri: Arapça, Türkçe, İngilizce.
 > وكالة سفر مرخّصة من TÜRSAB في إسطنبول: النقل من المطار، سيارة مع سائق،
-> جولات بمرشد يتحدث العربية، وحجز الطيران والفنادق.
+> جولات بمرشد يتحدث العربية، برامج سياحية متعددة الأيام، وحجز الطيران والفنادق.
 
 Ana pazar Körfez ülkeleridir ve varsayılan dil Arapçadır: kök adres (/)
-Arapça sürümü sunar, /tr Türkçe, /en İngilizce.
+Arapça sürümü sunar, /tr Türkçe, /en İngilizce. Bölüm adresleri de dile
+göre değişir (/جولاتنا = /tr/turlar = /en/tours).
 
-Fiyatlar araç başınadır, kişi başı değildir. Kesin fiyat tarihe ve kişi
-sayısına göre WhatsApp üzerinden netleşir; sitede güzergâh fiyat listesi
+Fiyatlar araç başınadır, kişi başı değildir. Turların "başlangıç" fiyatı
+yayınlanır; paket programların fiyatı yayınlanmaz, çünkü otel sınıfı, kişi
+sayısı ve tarihe göre değişir ve tek bir rakam yanıltıcı olur. Kesin fiyat
+WhatsApp üzerinden netleşir. Güzergâh bazlı transfer fiyat listesi
 yayınlanmaz.
 
 ## Hizmetler
-- [Havalimanı transferi](https://rufaiturizm.com/tr/transfer): İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW); isimli tabelayla karşılama, uçuş takibi, sabit fiyat.
-- [Hizmetlerimiz](https://rufaiturizm.com/tr/hizmetler): Vito VIP araç, transfer ve karşılama, tur hizmeti, uçak bileti ve otel rezervasyonu.
-- [Turlar](https://rufaiturizm.com/tr/turlar): İstanbul, Bursa, Sapanca, Trabzon, Bodrum. Özel tur; grupla birleştirme yok.
-- [Oteller](https://rufaiturizm.com/tr/oteller): İstanbul'da semt semt otel rehberi. Anlaşmalı otel listesi DEĞİLDİR; rezervasyon misafir adına yapılır.
+- [Havalimanı transferi](https://rufaiturizm.com/tr/transfer): isimli tabelayla karşılama, uçuş takibi, sabit fiyat. Hizmet verilen havalimanları: İstanbul (IST), Sabiha Gökçen (SAW), Antalya (AYT), Bodrum–Milas (BJV), Trabzon (TZX).
+- [Şoförlü Mercedes Vito](https://rufaiturizm.com/tr/hizmetler/vito-vip): bagajla birlikte 6 kişiye kadar.
+- [Tur hizmeti](https://rufaiturizm.com/tr/hizmetler/tours): özel tur, gruplarla birleştirme yok.
+- [Uçak bileti ve otel rezervasyonu](https://rufaiturizm.com/tr/hizmetler/flight-hotel): rezervasyon misafir adına yapılır.
 
-## Araç
-Tek araç kullanılır: şoförlü Mercedes Vito, bagajla birlikte 6 kişiye kadar.
-Site üzerinde gösterilen araç görselleri stok fotoğraftır ve künyeleri
-public/images/fleet/KUNYE.md içinde belirtilmiştir.
+## Turlar
+Günlük özel turlar. [Tüm turlar](https://rufaiturizm.com/tr/turlar)
+- İstanbul (8 saat), Bursa (10 saat), Sapanca (9 saat), Trabzon (12 saat),
+  Bodrum (10 saat), Antalya (10 saat).
+
+## Paket programlar
+Çok günlü programlar. [Tüm paketler](https://rufaiturizm.com/tr/paketler)
+- İstanbul 4 gün; İstanbul + Bursa 6 gün; İstanbul + Sapanca + Bursa 8 gün;
+  Trabzon ve Karadeniz 5 gün; Antalya ve Akdeniz 5 gün; Bodrum ve Ege 5 gün.
+- Her programda gün gün gezi planı, nelerin dahil olduğu ve programa özel
+  soru-cevap bulunur. Mevsim uyarıları bilerek dürüsttür: Bodrum programı
+  kasım–nisan arası için Bodrum'u önermez, Antalya programı Alanya'nın beş
+  güne sığmayacağını yazar.
+
+## Konaklama
+- [Otel rehberi](https://rufaiturizm.com/tr/oteller): İstanbul'da semt semt
+  nerede kalınır, havalimanına mesafe ve nelere dikkat edilmeli. Anlaşmalı
+  otel listesi DEĞİLDİR.
+
+## Araçlar
+Şoförlü Mercedes Vito. Filoda beş araç var ve hepsi aynı model/donanımdadır;
+başka araç sınıfı (sedan, midibüs, otobüs) yoktur ve listelenmez.
+Sitedeki filo ve ofis fotoğraflarının tamamı işletmenin kendi çekimidir,
+stok görsel değildir (künye: public/images/fleet/KUNYE.md). Tek istisna
+public/images/chauffeur.jpg dosyasıdır ve stok olduğu künyede belirtilmiştir.
+
+## Verilmeyen hizmetler
+Aşağıdakiler bilerek sunulmaz; site bunları hiçbir yerde vaat etmez:
+yat/tekne kiralama, aparthotel veya kiralık daire, düğün ve gelin arabası,
+şoförsüz araç kiralama, vize işlemleri.
 
 ## Seyahat rehberleri
-- [Tüm rehberler](https://rufaiturizm.com/tr/seyahat-rehberi): havalimanından şehre ulaşım, İstanbul'da nerede kalınır, Sapanca ve Maşukiye, Trabzon ve Uzungöl, mevsim rehberi, bir haftalık aile programı, alışveriş rehberi, Bursa ve Uludağ.
+Yirmi rehber, dört başlık altında. [Tüm rehberler](https://rufaiturizm.com/tr/seyahat-rehberi)
+- Varış ve ulaşım: havalimanından şehre ulaşım (IST ve SAW), toplu taşıma,
+  şehirler arası mesafeler.
+- Planlama: ne zaman gidilmeli, hava durumu ve giyim, üç günlük ve bir
+  haftalık programlar.
+- Günübirlik ve bölgeler: Sapanca ve Maşukiye, Bursa ve Uludağ, Trabzon ve
+  Uzungöl, Boğaz turu, [Antalya bölge rehberi](https://rufaiturizm.com/tr/seyahat-rehberi/antalya-bolge-rehberi)
+  (Kemer'den Alanya'ya ilçe ilçe), [Bodrum ve Ege rehberi](https://rufaiturizm.com/tr/seyahat-rehberi/bodrum-ege-rehberi)
+  (yarımadadaki koylar ve tekne turları).
+- Pratik bilgiler: nerede kalınır, helal yemek, alışveriş, Arapça konuşan
+  şoför ve rehber, çocuklu ailelerle İstanbul, balayı.
 
 ## Kurumsal
 - [Hakkımızda](https://rufaiturizm.com/tr/hakkimizda)
@@ -35,4 +75,5 @@ public/images/fleet/KUNYE.md içinde belirtilmiştir.
 ## Doğrulama
 TÜRSAB belge numarası 12539, tursab.org.tr/acenta-arama üzerinden
 doğrulanabilir. Sitede yayınlanan tek belge budur; sahip olunmayan belge
-veya sertifika gösterilmez.
+veya sertifika gösterilmez. Müşteri yorumu bölümü, doğrulanabilir gerçek
+yorum girilene kadar bilerek boştur — uydurma yorum yayınlanmaz.

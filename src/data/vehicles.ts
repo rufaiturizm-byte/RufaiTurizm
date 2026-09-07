@@ -34,7 +34,6 @@ export const vehicles: Vehicle[] = [
       { src: "/images/fleet/vito-exterior.jpg", altKey: "exteriorAlt" },
       { src: "/images/fleet/vito-interior.jpg", altKey: "interiorAlt" },
       { src: "/images/fleet/vito-fleet.jpg", altKey: "fleetAlt" },
-      { src: "/images/fleet/vito-exterior.jpg", altKey: "exteriorAlt" },
     ],
     featureKeys: ["f1", "f2", "f3", "f4", "f5", "f6"],
   },

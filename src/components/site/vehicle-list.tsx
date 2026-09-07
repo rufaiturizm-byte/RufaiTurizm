@@ -129,7 +129,21 @@ export async function VehicleList() {
         ))}
       </div>
 
-      <p className="mt-4 text-[12.5px] text-muted-foreground">{t("stockNote")}</p>
+      {/*
+        Filo notu. Site tek araç anlatıyordu ("Aracımız", "Tek araç") ama
+        elimizdeki fotoğraflar beş aynı model Vito gösteriyor. Tek araçlık
+        bir anlatım hem şirketi olduğundan küçük gösteriyor hem de SSS'teki
+        "kalabalık aileler için birden fazla araç ayarlıyoruz" cümlesini
+        taşeronluk gibi okutuyordu. Sayı yazmıyoruz — filo büyüklüğü
+        değişebilir, fotoğraf zaten kendi kanıtını taşıyor.
+      */}
+      <div
+        className="mt-6 flex flex-col gap-1.5 border-s-2 ps-4"
+        style={{ borderColor: "color-mix(in oklab, var(--brand-gold) 55%, transparent)" }}
+      >
+        <p className="text-[13px] leading-[1.75]">{t("fleetNote")}</p>
+        <p className="text-[12.5px] text-muted-foreground">{t("stockNote")}</p>
+      </div>
     </section>
   );
 }

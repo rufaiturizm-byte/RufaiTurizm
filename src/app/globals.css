@@ -192,6 +192,26 @@
     0 26px 50px color-mix(in oklab, var(--brand-night) 10%, transparent),
     0 60px 120px color-mix(in oklab, var(--brand-night) 16%, transparent);
 
+  /*
+   * Kenar ışığı.
+   *
+   * Katmanlı gölge kartı yüzeyden KALDIRIYOR ama üstüne ışık DÜŞÜRMÜYOR.
+   * Gerçek bir nesnenin üst kenarı, ışığı yakaladığı için zemininden bir
+   * tık daha açıktır; ekranda bunun karşılığı 1px'lik içe gölge. Premium
+   * arayüzleri düz olanlardan ayıran ayrıntı büyük ölçüde bu — gölgenin
+   * kendisi değil, gölgeyle birlikte gelen kenar ışığı.
+   *
+   * Koyu zeminde beyaz çok sert kalıyor, o yüzden ayrı bir değer var.
+   */
+  --edge-light: inset 0 1px 0 color-mix(in oklab, white 88%, transparent);
+  --edge-light-dark: inset 0 1px 0 color-mix(in oklab, white 12%, transparent);
+
+  /* Açık zeminli paneller için hazır bileşimler: kenar ışığı + yükseklik.
+     Koyu bantlarda kullanılmaz, orada beyaz kenar sert kalıyor. */
+  --shadow-panel-flat: var(--edge-light), var(--shadow-e1);
+  --shadow-panel: var(--edge-light), var(--shadow-e2);
+  --shadow-panel-lift: var(--edge-light), var(--shadow-e3);
+
   --shadow-card: var(--shadow-e2);
   --shadow-card-hover: var(--shadow-e3);
   --shadow-gold: 0 12px 32px color-mix(in oklab, var(--brand-gold) 42%, transparent);
@@ -287,15 +307,19 @@ body {
   background: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
+  /* Kenar ışığı accent-card ile aynı: iki kart ailesi sayfada yan yana
+     geldiğinde biri diğerinden daha "basılı" durmasın. */
+  box-shadow: var(--shadow-panel);
   transition:
     box-shadow 320ms var(--ease-soft),
+    border-color 320ms var(--ease-soft),
     transform 320ms var(--ease-soft);
 }
 
 @media (hover: hover) {
   .surface-card-lift:hover {
-    box-shadow: var(--shadow-card-hover);
+    box-shadow: var(--shadow-panel-lift);
+    border-color: color-mix(in oklab, var(--brand-gold) 30%, var(--hairline));
     transform: translateY(-4px);
   }
 }
@@ -317,7 +341,12 @@ body {
   );
   border: 1px solid color-mix(in oklab, white 9%, transparent);
   border-radius: var(--radius-card);
-  box-shadow: 0 18px 44px color-mix(in oklab, black 32%, transparent);
+  /* Gölge düz siyahtı — koyu lacivert zeminde delik gibi duruyordu.
+     Markaya çekildi ve üstüne kenar ışığı kondu. */
+  box-shadow:
+    var(--edge-light-dark),
+    0 8px 20px color-mix(in oklab, var(--brand-night) 42%, transparent),
+    0 24px 56px color-mix(in oklab, var(--brand-night) 34%, transparent);
 }
 
 /* Altın düğmeler: dolgunun altında markaya çalan bir hâle. */
@@ -499,9 +528,12 @@ body {
   background: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-card);
-  box-shadow: var(--shadow-e1);
+  /* e1 kart için fazla düzdü: kartlar sayfaya basılmış gibi duruyordu.
+     e2 + kenar ışığı ikilisi onları yüzeyden kaldırıyor. */
+  box-shadow: var(--edge-light), var(--shadow-e2);
   transition:
     box-shadow 320ms var(--ease-soft),
+    border-color 320ms var(--ease-soft),
     transform 320ms var(--ease-soft);
 }
 
@@ -520,9 +552,23 @@ body {
   transition: width 420ms var(--ease-soft);
 }
 
+/* Şerit `inset-inline-start` ile tutturulduğu için RTL'de sağ kenardan
+   başlıyor, ama gradyan hâlâ soldan sağa akıyordu: altın uç tutturulduğu
+   kenarda değil, karşı uçta kalıyordu. Yön de çevrilmeli. */
+[dir="rtl"] .accent-card::before {
+  background: linear-gradient(
+    to left,
+    var(--brand-gold) 0%,
+    color-mix(in oklab, var(--brand-gold) 45%, var(--brand-sky)) 100%
+  );
+}
+
 @media (hover: hover) {
   .accent-card:hover {
-    box-shadow: var(--shadow-e3);
+    box-shadow: var(--edge-light), var(--shadow-e3);
+    /* Kenarlık da ısınıyor: yalnız gölge büyüyünce kart yükseliyor ama
+       "seçili" hissi vermiyordu. */
+    border-color: color-mix(in oklab, var(--brand-gold) 30%, var(--hairline));
     transform: translateY(-3px);
   }
   .accent-card:hover::before {

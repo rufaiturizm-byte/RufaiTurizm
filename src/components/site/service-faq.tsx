@@ -57,7 +57,7 @@ export async function ServiceFaq({ serviceKey }: { serviceKey: ServiceKey }) {
             background: "var(--surface)",
             border: "1px solid var(--hairline)",
             borderRadius: "var(--radius-card)",
-            boxShadow: "var(--shadow-e2)",
+            boxShadow: "var(--shadow-panel)",
           }}
         >
           <div className="p-7">

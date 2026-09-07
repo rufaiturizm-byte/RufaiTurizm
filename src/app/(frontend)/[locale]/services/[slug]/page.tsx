@@ -259,7 +259,7 @@ export default async function ServiceDetailPage({
             style={{
               background: "var(--surface)",
               borderColor: "color-mix(in oklab, var(--brand-gold) 40%, transparent)",
-              boxShadow: "var(--shadow-e3)",
+              boxShadow: "var(--shadow-panel-lift)",
             }}
           >
             {service.priceFrom ? (

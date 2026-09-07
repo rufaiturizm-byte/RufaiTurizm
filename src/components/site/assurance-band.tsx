@@ -65,7 +65,7 @@ export async function AssuranceBand() {
           style={{
             background: "color-mix(in oklab, white 10%, transparent)",
             borderRadius: "var(--radius-card)",
-            boxShadow: "var(--shadow-e3)",
+            boxShadow: "var(--edge-light-dark), var(--shadow-e3)",
           }}
         >
           {items.map(({ icon: Icon, title, desc, ...rest }) => {

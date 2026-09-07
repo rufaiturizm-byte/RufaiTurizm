@@ -28,7 +28,10 @@ async function PromiseStrip() {
   ];
 
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4" style={{ background: "var(--brand-night)" }}>
+    <div
+      className="grid sm:grid-cols-2 lg:grid-cols-4"
+      style={{ background: "var(--brand-night)", boxShadow: "var(--edge-light-dark)" }}
+    >
       {promises.map(({ icon: Icon, title, desc }) => (
         <div
           key={title}
@@ -115,6 +118,8 @@ export async function TrustStats() {
     <section className="mx-auto w-full max-w-7xl px-5 pt-14 sm:px-8">
       <div
         className="overflow-hidden"
+        /* Kenar ışığı YOK: bu kabın üstünde koyu lacivert şerit duruyor,
+           beyaz bir iç çizgi orada sert bir kontur gibi görünürdü. */
         style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e2)" }}
       >
         <PromiseStrip />

@@ -41,7 +41,7 @@ export function FaqAccordion({
             background: "var(--surface)",
             borderColor: "var(--hairline)",
             borderRadius: "0.9rem",
-            boxShadow: "var(--shadow-e1)",
+            boxShadow: "var(--shadow-panel-flat)",
           }}
         >
           <AccordionPrimitive.Header>

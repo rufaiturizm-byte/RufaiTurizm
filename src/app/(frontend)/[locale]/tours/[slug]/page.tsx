@@ -253,7 +253,7 @@ export default async function TourDetailPage({
             style={{
               background: "var(--surface)",
               borderColor: "color-mix(in oklab, var(--brand-gold) 40%, transparent)",
-              boxShadow: "var(--shadow-e3)",
+              boxShadow: "var(--shadow-panel-lift)",
             }}
           >
             <div className="text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">

@@ -149,7 +149,7 @@ export async function ServicesOverview() {
         style={{
           background: "var(--surface)",
           borderColor: "var(--hairline)",
-          boxShadow: "var(--shadow-e1)",
+          boxShadow: "var(--shadow-panel-flat)",
         }}
       >
         <div className="flex items-center gap-4">

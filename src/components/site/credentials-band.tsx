@@ -30,7 +30,7 @@ export async function CredentialsBand() {
           background: "var(--surface)",
           borderColor: "var(--hairline)",
           borderRadius: "var(--radius-card)",
-          boxShadow: "var(--shadow-e1)",
+          boxShadow: "var(--shadow-panel-flat)",
         }}
       >
         {/* Amblem kırmızı-gri: krem zeminde okunmuyor, o yüzden kendi

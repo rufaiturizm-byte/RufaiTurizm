@@ -102,7 +102,7 @@ export function TransferForm() {
         background: "var(--surface)",
         borderColor: "var(--hairline)",
         borderRadius: "1.6rem",
-        boxShadow: "var(--shadow-e4)",
+        boxShadow: "var(--edge-light), var(--shadow-e4)",
       }}
     >
       {/* Kartın kenarında dolaşan ışık — sayfanın tek etkileşimli alanı,

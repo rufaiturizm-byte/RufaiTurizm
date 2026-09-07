@@ -700,7 +700,11 @@
     "relatedTitle": "Diğer rehberler",
     "ctaTitle": "Bu rehberdeki programı sizin için kuralım",
     "ctaText": "Tarihinizi ve kişi sayısını yazın; güzergâhı ve sabit fiyatı aynı gün gönderelim.",
-    "faqTitle": "Bu rehberle ilgili sık sorulanlar"
+    "faqTitle": "Bu rehberle ilgili sık sorulanlar",
+    "topicArrival": "Varış ve ulaşım",
+    "topicPlanning": "Program ve zamanlama",
+    "topicDaytrips": "Şehir dışı rotalar",
+    "topicPractical": "Konaklama ve pratik bilgi"
   },
   "hotelsPage": {
     "title": "İstanbul'da Oteller",

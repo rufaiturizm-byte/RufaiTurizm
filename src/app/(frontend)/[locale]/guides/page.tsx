@@ -12,7 +12,7 @@ import { RouteCoverage } from "@/components/site/route-coverage";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
-import { guides } from "@/data/guides";
+import { guides, guideTopics, guidesByTopic } from "@/data/guides";
 import type { Locale } from "@/i18n/routing";
 
 export async function generateMetadata({
@@ -84,11 +84,45 @@ export default async function GuidesPage({
         <TrustBoxes />
       </div>
 
-      <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-20 sm:px-8">
+      {/*
+        Konu seçici. On sekiz yazı tek ızgaradayken ziyaretçi aradığını
+        ancak bütün başlıkları okuyarak buluyordu. Bunlar sayfa içi
+        bağlantı — JavaScript gerektirmez, RTL'de de doğru çalışır.
+      */}
+      <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
         <SectionHeading eyebrow={t("eyebrow")} title={t("allGuides")} rule={false} />
 
+        <nav aria-label={t("allGuides")} className="-mt-4 flex flex-wrap gap-2.5">
+          {guideTopics.map((topic) => (
+            <a
+              key={topic}
+              href={`#${topic}`}
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[13px] font-semibold transition-colors hover:bg-secondary"
+              style={{ borderColor: "var(--hairline)", background: "var(--surface)" }}
+            >
+              {t(`topic${topic.charAt(0).toUpperCase()}${topic.slice(1)}`)}
+              <span className="text-[12px] tabular-nums text-muted-foreground">
+                {guidesByTopic(topic).length}
+              </span>
+            </a>
+          ))}
+        </nav>
+      </section>
+
+      {guideTopics.map((topic, topicIndex) => (
+      <section
+        key={topic}
+        id={topic}
+        className={`mx-auto w-full max-w-7xl scroll-mt-24 px-5 sm:px-8 ${
+          topicIndex === guideTopics.length - 1 ? "pt-14 pb-20" : "pt-14"
+        }`}
+      >
+        <h2 className="mb-7 font-display text-[26px] font-semibold leading-snug sm:text-[30px]">
+          {t(`topic${topic.charAt(0).toUpperCase()}${topic.slice(1)}`)}
+        </h2>
+
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {guides.map((guide) => {
+          {guidesByTopic(topic).map((guide) => {
             const title = guide.title[lang] ?? guide.title.tr;
             const href = {
               pathname: "/guides/[slug]" as const,
@@ -115,14 +149,16 @@ export default async function GuidesPage({
                 </Link>
 
                 <div className="flex flex-1 flex-col p-5">
-                  <h2 className="font-display text-[18px] font-semibold leading-snug">
+                  {/* Konu başlığı h2 olduğu için kart başlıkları h3:
+                      "Varış ve ulaşım" > "Havalimanından şehre" sıradüzeni. */}
+                  <h3 className="font-display text-[18px] font-semibold leading-snug">
                     <Link
                       href={href}
                       className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
                     >
                       {title}
                     </Link>
-                  </h2>
+                  </h3>
                   <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
                     {guide.excerpt[lang] ?? guide.excerpt.tr}
                   </p>
@@ -141,6 +177,7 @@ export default async function GuidesPage({
           })}
         </div>
       </section>
+      ))}
 
       <RouteCoverage locale={locale} />
       <ClosingCta locale={locale} />

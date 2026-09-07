@@ -700,7 +700,11 @@
     "relatedTitle": "Other guides",
     "ctaTitle": "Let us build the programme in this guide for you",
     "ctaText": "Send your dates and party size; we will come back the same day with the route and a fixed price.",
-    "faqTitle": "Common questions about this guide"
+    "faqTitle": "Common questions about this guide",
+    "topicArrival": "Arrival and getting around",
+    "topicPlanning": "Planning and timing",
+    "topicDaytrips": "Trips outside the city",
+    "topicPractical": "Where to stay and practical tips"
   },
   "hotelsPage": {
     "title": "Hotels in Istanbul",

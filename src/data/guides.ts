@@ -52,8 +52,25 @@ export interface GuideFaq {
   answer: Text;
 }
 
+/**
+ * Rehberin konu grubu.
+ *
+ * On sekiz yazı tek bir ızgarada duruyordu: hangi yazının neyle ilgili
+ * olduğu ancak başlığı okuyunca anlaşılıyordu. Gruplar hem taramayı
+ * kolaylaştırıyor hem de listeye anahtar kelimeli ara başlıklar veriyor.
+ */
+export type GuideTopic = "arrival" | "planning" | "daytrips" | "practical";
+
+/** Listede görünecek sıra. */
+export const guideTopics: GuideTopic[] = ["arrival", "planning", "daytrips", "practical"];
+
+export function guidesByTopic(topic: GuideTopic) {
+  return guides.filter((guide) => guide.topic === topic);
+}
+
 export interface Guide {
   slug: string;
+  topic: GuideTopic;
   image: string;
   /** Okuma süresi (dakika) — listede gösterilir. */
   minutes: number;
@@ -77,6 +94,7 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     slug: "istanbul-havalimanindan-sehre-ulasim",
+    topic: "arrival",
     image: "/images/places/havalimani.jpg",
     minutes: 4,
     title: {
@@ -184,6 +202,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "sabiha-gokcenden-istanbula-ulasim",
+    topic: "arrival",
     image: "/images/chauffeur.jpg",
     minutes: 3,
     title: {
@@ -273,6 +292,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "istanbulda-nerede-kalinir",
+    topic: "practical",
     image: "/images/places/sultanahmet.jpg",
     minutes: 5,
     title: {
@@ -380,6 +400,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "sapanca-masukiye-rehberi",
+    topic: "daytrips",
     image: "/images/tours/sapanca.jpg",
     minutes: 4,
     title: {
@@ -487,6 +508,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "trabzon-uzungol-karadeniz",
+    topic: "daytrips",
     image: "/images/places/uzungol.jpg",
     minutes: 5,
     title: {
@@ -594,6 +616,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "turkiyeye-ne-zaman-gitmeli",
+    topic: "planning",
     image: "/images/places/bogaz-kopru.jpg",
     minutes: 4,
     title: {
@@ -701,6 +724,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "istanbulda-bir-hafta-aile-programi",
+    topic: "planning",
     image: "/images/places/galata.jpg",
     minutes: 6,
     title: {
@@ -826,6 +850,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "arapca-konusan-sofor-ve-rehber",
+    topic: "practical",
     image: "/images/chauffeur.jpg",
     minutes: 3,
     title: {
@@ -927,6 +952,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "bursa-uludag-gunubirlik",
+    topic: "daytrips",
     image: "/images/tours/bursa.jpg",
     minutes: 4,
     title: {
@@ -1028,6 +1054,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "turkiyede-alisveris-rehberi",
+    topic: "practical",
     image: "/images/tours/istanbul.jpg",
     minutes: 4,
     title: {
@@ -1129,6 +1156,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "istanbulda-helal-yemek-rehberi",
+    topic: "practical",
     image: "/images/places/kadikoy.jpg",
     minutes: 4,
     title: {
@@ -1230,6 +1258,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "bogaz-turu-rehberi",
+    topic: "daytrips",
     image: "/images/places/bogaz-kopru.jpg",
     minutes: 4,
     title: {
@@ -1331,6 +1360,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "cocuklu-ailelerle-istanbul",
+    topic: "practical",
     image: "/images/chauffeur.jpg",
     minutes: 4,
     title: {
@@ -1432,6 +1462,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "istanbulda-uc-gun-programi",
+    topic: "planning",
     image: "/images/places/sultanahmet.jpg",
     minutes: 4,
     title: {
@@ -1533,6 +1564,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "istanbulda-toplu-tasima-rehberi",
+    topic: "arrival",
     image: "/images/places/kadikoy.jpg",
     minutes: 4,
     title: {
@@ -1634,6 +1666,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "istanbulda-hava-durumu-ve-giyim",
+    topic: "planning",
     image: "/images/places/bogaz-kopru.jpg",
     minutes: 4,
     title: {
@@ -1735,6 +1768,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "turkiyede-sehirler-arasi-mesafeler",
+    topic: "arrival",
     image: "/images/tours/trabzon.jpg",
     minutes: 4,
     title: {
@@ -1836,6 +1870,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "turkiyede-balayi-rehberi",
+    topic: "practical",
     image: "/images/tours/bodrum.jpg",
     minutes: 4,
     title: {

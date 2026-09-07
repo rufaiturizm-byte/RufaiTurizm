@@ -80,9 +80,12 @@ export function WhatsAppFloatingButton({ subject }: { subject?: string }) {
          WhatsApp çağrısı üst üste binmemeli. */
       className={cn(
         "fixed bottom-5 z-50 hidden items-center gap-2 rounded-full lg:flex",
-        "end-5 bg-[#25D366] px-4 py-3 text-white shadow-lg",
+        "end-5 px-4 py-3 text-white",
         "transition-transform hover:scale-105 active:scale-95",
       )}
+      /* Renk ve gölge sitenin geri kalanıyla aynı yerden: sabit yeşil ve
+         Tailwind'in siyah `shadow-lg`si sayfadaki tek yabancı yüzeydi. */
+      style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e3)" }}
     >
       <WhatsAppIcon className="size-6" />
       <span className="hidden text-sm font-medium sm:inline">{t("whatsapp")}</span>

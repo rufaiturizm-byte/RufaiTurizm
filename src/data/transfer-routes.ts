@@ -5,10 +5,10 @@
  * "İstanbul havalimanından Sultanahmet'e" diye arıyor. Transfer sayfası bu
  * aramaların hepsini tek başına karşılayamaz.
  *
- * NEDEN 43 DEĞİL 5: `routes.ts` içinde 43 semt var ve bunların hepsi için
+ * NEDEN 43 DEĞİL 7: `routes.ts` içinde 43 semt var ve bunların hepsi için
  * şablondan sayfa üretmek teknik olarak kolay. Üretmedik — aralarındaki tek
  * fark semt adı olan 43 sayfa ince içeriktir (thin content) ve arama
- * motorunda faydadan çok zarar getirir. Buradaki beş güzergâhın her biri
+ * motorunda faydadan çok zarar getirir. Buradaki yedi güzergâhın her biri
  * gerçekten farklı bir yolculuk: farklı mesafe, farklı köprü, farklı trafik
  * saati, varışta farklı semt. Anlatacak ayrı şeyi olmayan bir güzergâh
  * buraya girmiyor.

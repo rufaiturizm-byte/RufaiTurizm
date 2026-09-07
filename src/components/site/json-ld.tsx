@@ -6,7 +6,7 @@ import type {
   WebSite,
   WithContext,
 } from "schema-dts";
-import { siteConfig, hasRealPhone } from "@/config/site";
+import { siteConfig, hasRealPhone, hasGoogleProfileUrl } from "@/config/site";
 
 /**
  * Yapısal veri. Rakip analizinden: en güçlü SEO'ya sahip rakip
@@ -32,6 +32,12 @@ export function TravelAgencySchema({
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     name,
+    /*
+     * Ticari unvan ayrıca veriliyor: TÜRSAB kaydında ve faturada
+     * "RUFAİ İSTANBUL TURİZM" yazıyor, sitede ise "Rufai Turizm". Belgeyi
+     * doğrulamaya giden birinin iki adı eşleştirebilmesi gerekiyor.
+     */
+    legalName: siteConfig.legalName,
     url: siteConfig.url,
     description,
     /*
@@ -44,12 +50,69 @@ export function TravelAgencySchema({
     email: siteConfig.email,
     priceRange: "€€",
     image: `${siteConfig.url}/images/hero-ortakoy.jpg`,
+    logo: `${siteConfig.url}/brand/logo.png`,
+    /*
+     * Google işletme profiline bağ.
+     *
+     * `sameAs` Google'ın "bu site ile şu işletme kaydı aynı varlık mı"
+     * sorusunu cevapladığı alan; bağlandığında profildeki puan, fotoğraf
+     * ve yorumlar aramada bu siteyle birlikte anılır. Yerel aramadaki en
+     * ucuz kazanç bu.
+     *
+     * Ama yalnız GERÇEK profil adresiyle yayınlanıyor (bkz.
+     * `hasGoogleProfileUrl`): elimizdeki kısa bağlantı takip edildiğinde
+     * profile değil bir arama sonucuna düşüyor ve arama sonucunu kimlik
+     * diye işaretlemek yanlış bir iddia olur.
+     */
+    ...(hasGoogleProfileUrl ? { sameAs: [siteConfig.googleReviewsUrl] } : {}),
+    /*
+     * TÜRSAB belge numarası makine okunur biçimde.
+     * Sayfada zaten yazılı ve doğrulama bağlantısı var; burada olması
+     * belgeyi bir metin parçası değil, kimlik bilgisi yapıyor.
+     */
+    identifier: {
+      "@type": "PropertyValue",
+      name: "TÜRSAB",
+      value: siteConfig.credentials.tursab,
+    },
+    /*
+     * Hizmet verilen yerler tek tek sayılıyor.
+     *
+     * Önceki hali yalnız "Türkiye" diyordu; oysa turlar ve paketler altı
+     * belirli şehirde yapılıyor ve arama da şehir adıyla geliyor
+     * ("جولة انطاليا", "bodrum transfer"). Buraya sunmadığımız bir şehir
+     * yazılmıyor: liste tours.ts'teki gerçek destinasyonlarla aynı.
+     */
+    areaServed: [
+      { "@type": "Country", name: "Türkiye" },
+      ...["İstanbul", "Antalya", "Bodrum", "Trabzon", "Bursa", "Sapanca"].map(
+        (city) => ({ "@type": "City" as const, name: city }),
+      ),
+    ],
+    /*
+     * 7/24 — altbilginin ve iletişim sayfasının zaten söylediği şey.
+     * WhatsApp hattı için geçerli; ayrı bir vaat eklenmiyor, var olan
+     * vaat makine okunur hale getiriliyor.
+     */
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday",
+        "https://schema.org/Sunday",
+      ],
+      opens: "00:00",
+      closes: "23:59",
+    },
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.address.city,
       addressCountry: siteConfig.address.country,
     },
-    areaServed: { "@type": "Country", name: "Türkiye" },
     knowsLanguage: ["ar", "tr", "en"],
   };
 

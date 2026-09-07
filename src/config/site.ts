@@ -74,3 +74,24 @@ export const siteConfig = {
  */
 export const hasRealPhone = !siteConfig.phoneHref.startsWith("+90500000");
 
+/**
+ * Google bağlantısı, işletme profilinin KENDİ adresi mi?
+ *
+ * Yapısal veride `sameAs`, "bu site ile şu kayıt aynı işletmedir" demektir
+ * ve varlığın kendi sayfasını göstermelidir. Elimizdeki `share.google`
+ * kısa bağlantısı bunu yapmıyor: takip edildiğinde bir Google ARAMA
+ * sonucuna düşüyor, profil sayfasına değil. Arama sonucunu kimlik diye
+ * yayınlamak yanlış bir iddia olur ve hiç yayınlamamaktan kötüdür.
+ *
+ * İnsan için bu bağlantı yine de iş görüyor (puanın altındaki bağlantı
+ * durmaya devam ediyor); makineye verilen kimlik iddiası ise ancak
+ * gerçek profil adresiyle yapılabilir.
+ *
+ * Google Business Profile → "Paylaş" düğmesinden çıkan
+ * `maps.app.goo.gl/...` ya da doğrudan `google.com/maps/place/...`
+ * adresi `googleReviewsUrl` alanına yazıldığı anda `sameAs`
+ * kendiliğinden yayına giriyor; başka hiçbir yere dokunmak gerekmez.
+ */
+export const hasGoogleProfileUrl = /(?:maps\.app\.goo\.gl|google\.[a-z.]+\/maps\/place)/.test(
+  siteConfig.googleReviewsUrl,
+);

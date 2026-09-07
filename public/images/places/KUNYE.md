@@ -14,6 +14,7 @@ değişikliği gerekmez.
 | kadikoy.jpg | Kadıköy iskelesi ve sahil | Fatmanur Şimşek |
 | uzungol.jpg | Uzungöl, Trabzon | Sadra Hakim |
 | havalimani.jpg | Havalimanı bekleme salonu ve uçak | Oskar Kadaksoo |
+| ../tours/antalya.jpg | Antalya Kaleiçi, eski liman ve surlar | Ant Rozetsky |
 
 Her kare içeriği doğrulanarak seçildi: arama sonucundaki açıklamalar genel
 ("a building that looks like a mosque") olduğu için görsellerin hepsi tek tek

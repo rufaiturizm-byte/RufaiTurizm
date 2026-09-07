@@ -434,6 +434,248 @@ export const packages: Package[] = [
       },
     ],
   },
+  {
+    slug: "antalya-akdeniz-5-gun",
+    days: 5,
+    image: "/images/tours/antalya.jpg",
+    name: {
+      tr: "Antalya ve Akdeniz 5 Günlük Program",
+      ar: "برنامج أنطاليا والبحر المتوسط 5 أيام",
+      en: "Antalya and the Mediterranean in 5 Days",
+    },
+    city: {
+      tr: "Antalya",
+      ar: "أنطاليا",
+      en: "Antalya",
+    },
+    excerpt: {
+      tr: "Kaleiçi, Side, Düden Şelalesi ve tekne turu; deniz ile tarihi aynı programda birleştiren Akdeniz rotası.",
+      ar: "كاليتشي وسيدة وشلال دودان وجولة القارب؛ مسار المتوسط الذي يجمع البحر والتاريخ في برنامج واحد.",
+      en: "Kaleiçi, Side, the Düden Waterfall and a boat trip — the Mediterranean route that joins sea and history in one programme.",
+    },
+    itinerary: [
+      {
+        title: {
+          tr: "Varış ve karşılama",
+          ar: "الوصول والاستقبال",
+          en: "Arrival and welcome",
+        },
+        body: {
+          tr: "Antalya havalimanında isimli tabelayla karşılama ve otele transfer. Merkez ve Lara için yol 15–30 dakika, Belek 30–40, Side 60–75 dakika sürer. İlk gün bilerek boş bırakılır.",
+          ar: "الاستقبال في مطار أنطاليا بلافتة تحمل اسمك والتوصيل إلى الفندق. ويستغرق الطريق إلى المركز ولارا من 15 إلى 30 دقيقة، وإلى بيليك 30 إلى 40، وإلى سيدة 60 إلى 75 دقيقة. ويُترك اليوم الأول فارغاً عن قصد.",
+          en: "Met at Antalya airport with a name board and taken to your hotel. The drive is 15–30 minutes to the centre and Lara, 30–40 to Belek, 60–75 to Side. The first day is deliberately left open.",
+        },
+      },
+      {
+        title: {
+          tr: "Kaleiçi ve şehir",
+          ar: "كاليتشي والمدينة",
+          en: "Kaleiçi and the city",
+        },
+        body: {
+          tr: "Hadrian Kapısı, dar taş sokaklar, Osmanlı konakları ve eski limanda demirli gulet tekneleri. Öğleden sonra Düden Şelalesi'nin denize döküldüğü nokta, akşam Kaleiçi çarşısında serbest zaman.",
+          ar: "بوابة هادريان والأزقة الحجرية الضيقة والبيوت العثمانية وقوارب الغوليت الراسية في الميناء القديم. وبعد الظهر النقطة التي يصبّ فيها شلال دودان في البحر، ومساءً وقت حر في سوق كاليتشي.",
+          en: "Hadrian's Gate, narrow stone lanes, Ottoman houses and gulets moored in the old harbour. In the afternoon, the point where the Düden Waterfall meets the sea; in the evening, free time in the Kaleiçi bazaar.",
+        },
+      },
+      {
+        title: {
+          tr: "Side ve antik sahil",
+          ar: "سيدة والساحل الأثري",
+          en: "Side and the ancient coast",
+        },
+        body: {
+          tr: "Antik tiyatro ve Apollon Tapınağı denizin hemen kenarında; tarihi görmek için ayrı bir müzeye gitmek gerekmiyor. Dönüşte Manavgat çevresinde mola, ardından sahilde serbest zaman.",
+          ar: "المسرح الأثري ومعبد أبولو على حافة البحر مباشرة؛ فلا حاجة لزيارة متحف منفصل لرؤية التاريخ. وفي العودة استراحة في محيط مانافغات، ثم وقت حر على الشاطئ.",
+          en: "The ancient theatre and the Temple of Apollo stand right at the water's edge; you do not need a separate museum to see the history. A stop around Manavgat on the way back, then free time on the beach.",
+        },
+      },
+      {
+        title: {
+          tr: "Tekne turu ya da serbest gün",
+          ar: "جولة القارب أو يوم حر",
+          en: "Boat trip or a free day",
+        },
+        body: {
+          tr: "Deniz mevsimindeyseniz koylarda yüzme molalı tekne turu; dışındaysanız gün serbest bırakılır ya da Kemer tarafına, dağın denize indiği koylara geçilir. Araç ve şoför isterseniz gün boyu yanınızda kalır.",
+          ar: "إن كنت في موسم البحر فجولة قارب مع استراحات سباحة في الخلجان؛ وإن كنت خارجه فيُترك اليوم حراً أو يُنتقل إلى جهة كمر حيث ينزل الجبل إلى البحر. وتبقى السيارة والسائق معك طوال اليوم إن شئت.",
+          en: "In swimming season, a boat trip with swim stops in the bays; outside it, the day is left free or spent towards Kemer where the mountains meet the sea. The car and driver stay with you all day if you wish.",
+        },
+      },
+      {
+        title: {
+          tr: "Alışveriş ve dönüş",
+          ar: "التسوق والعودة",
+          en: "Shopping and departure",
+        },
+        body: {
+          tr: "Uçuş saatine göre çarşı ya da alışveriş merkezinde yarım gün, ardından havalimanına transfer. Aldıklarınız araçta taşınır.",
+          ar: "نصف يوم في السوق أو المول بحسب موعد الرحلة، ثم التوصيل إلى المطار. وتُحمل مشترياتك في السيارة.",
+          en: "Half a day at the bazaar or a mall depending on your flight, then the transfer to the airport. Purchases travel in the car.",
+        },
+      },
+    ],
+    includes: ["transfer", "vehicle", "guide", "prayer"],
+    faq: [
+      {
+        question: {
+          tr: "Antalya'da hangi bölgede kalmalıyım?",
+          ar: "في أي منطقة أقيم في أنطاليا؟",
+          en: "Which area should I stay in?",
+        },
+        answer: {
+          tr: "Bu program merkez, Lara ya da Belek–Side hattında kalmaya göre kurulmuş; üçünden hangisinde olursanız olun günlük çıkışlar aynı sürede yapılır. Kemer ve özellikle Alanya'da kalırsanız her gün ekstra yol eklenir — Alanya merkeze 100–130 dakika uzaklıkta. Nerede kalacağınızı söylerseniz güzergâhı ona göre kurarız.",
+          ar: "وُضع هذا البرنامج على أساس الإقامة في المركز أو لارا أو خط بيليك–سيدة؛ وأياً كان اختيارك من الثلاثة تُنفَّذ الخرجات اليومية في المدة نفسها. أما إن أقمت في كمر وخاصة ألانيا فيُضاف طريق إضافي كل يوم — فألانيا تبعد عن المركز 100 إلى 130 دقيقة. أخبرنا بمكان إقامتك ونضع المسار على أساسه.",
+          en: "This programme assumes you are staying in the centre, Lara or on the Belek–Side stretch; from any of the three the day trips take the same time. Staying in Kemer, and especially Alanya, adds road time every day — Alanya is 100–130 minutes from the centre. Tell us where you are staying and we build the route around it.",
+        },
+      },
+      {
+        question: {
+          tr: "Alanya bu programa eklenebilir mi?",
+          ar: "هل يمكن إضافة ألانيا إلى هذا البرنامج؟",
+          en: "Can Alanya be added?",
+        },
+        answer: {
+          tr: "Eklenebilir ama ayrı bir tam gün ister; gidiş-dönüş dört saati yolda geçirir. Beş günlük programa sıkıştırmak yerine altı güne çıkarmak daha iyi sonuç veriyor. Alanya kalesi, Damlataş Mağarası ve uzun sahil bir günü hak ediyor.",
+          ar: "يمكن، لكنه يتطلب يوماً كاملاً مستقلاً؛ إذ تمضي أربع ساعات على الطريق ذهاباً وإياباً. وبدل حشره في برنامج خمسة أيام، فإن رفعه إلى ستة أيام يعطي نتيجة أفضل. فقلعة ألانيا وكهف دامالاتاش والشاطئ الطويل تستحق يوماً كاملاً.",
+          en: "It can be, but it needs a full day of its own; the round trip spends four hours on the road. Rather than squeezing it into five days, extending to six works better. Alanya's castle, the Damlataş Cave and the long beach deserve a day.",
+        },
+      },
+      {
+        question: {
+          tr: "Deniz hangi aylarda ılık?",
+          ar: "في أي الأشهر يكون البحر دافئاً؟",
+          en: "Which months is the sea warm?",
+        },
+        answer: {
+          tr: "Mayıstan ekime kadar; temmuz ve ağustos en sıcak dönem, hem denizde hem karada. Nisan ve kasımda hava gezmek için ideal ama deniz serin gelebilir. Kışın deniz soğuktur; buna karşılık şehir yeşil kalır ve aynı gün Toros dağlarında kar görülebilir.",
+          ar: "من أيار حتى تشرين الأول؛ وتموز وآب أشدّ الفترات حرارة، في البحر والبر معاً. وفي نيسان وتشرين الثاني يكون الجو مثالياً للتجوّل لكن البحر قد يبدو بارداً. أما في الشتاء فالبحر بارد؛ في المقابل تبقى المدينة خضراء ويمكن رؤية الثلج في جبال طوروس في اليوم نفسه.",
+          en: "May to October; July and August are the hottest, in the water and out of it. April and November are ideal for sightseeing but the sea can feel cool. In winter the sea is cold, though the city stays green and you can see snow in the Taurus mountains the same day.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "bodrum-ege-5-gun",
+    days: 5,
+    image: "/images/tours/bodrum.jpg",
+    name: {
+      tr: "Bodrum ve Ege 5 Günlük Program",
+      ar: "برنامج بودروم وبحر إيجه 5 أيام",
+      en: "Bodrum and the Aegean in 5 Days",
+    },
+    city: {
+      tr: "Bodrum",
+      ar: "بودروم",
+      en: "Bodrum",
+    },
+    excerpt: {
+      tr: "Kale, koylar, tekne turu ve Yalıkavak marinası; yarımadanın dört farklı yüzü beş güne yayılıyor.",
+      ar: "القلعة والخلجان وجولة القارب ومارينا ياليكافاك؛ أربعة وجوه مختلفة لشبه الجزيرة موزّعة على خمسة أيام.",
+      en: "The castle, the bays, a boat trip and Yalıkavak marina — the peninsula's four faces spread across five days.",
+    },
+    itinerary: [
+      {
+        title: {
+          tr: "Varış ve karşılama",
+          ar: "الوصول والاستقبال",
+          en: "Arrival and welcome",
+        },
+        body: {
+          tr: "Bodrum–Milas havalimanında karşılama ve otele transfer; yarımadaya göre 30–50 dakika. Akşam kaldığınız koyda serbest zaman.",
+          ar: "الاستقبال في مطار بودروم–ميلاس والتوصيل إلى الفندق؛ من 30 إلى 50 دقيقة بحسب موقعك في شبه الجزيرة. ووقت حر مساءً في الخليج الذي تقيم فيه.",
+          en: "Met at Bodrum–Milas airport and taken to your hotel; 30–50 minutes depending on where you are on the peninsula. Free time in your bay in the evening.",
+        },
+      },
+      {
+        title: {
+          tr: "Bodrum merkez ve kale",
+          ar: "مركز بودروم والقلعة",
+          en: "Bodrum centre and the castle",
+        },
+        body: {
+          tr: "Bodrum Kalesi ve Sualtı Arkeoloji Müzesi, Antik Tiyatro'dan liman manzarası, ardından çarşıda serbest zaman. Akşam marinada yürüyüş.",
+          ar: "قلعة بودروم ومتحف الآثار تحت الماء، وإطلالة الميناء من المسرح الأثري، ثم وقت حر في السوق. ونزهة مسائية في المارينا.",
+          en: "Bodrum Castle and the Museum of Underwater Archaeology, harbour views from the ancient theatre, then free time in the bazaar. An evening walk along the marina.",
+        },
+      },
+      {
+        title: {
+          tr: "Tekne turu",
+          ar: "جولة القارب",
+          en: "Boat trip",
+        },
+        body: {
+          tr: "Günün merkezi denizde: üç–dört koyda yüzme molası ve teknede öğle yemeği. Özel tekne isterseniz saat ve güzergâh size ait olur, aile mahremiyeti korunur.",
+          ar: "محور اليوم في البحر: استراحات سباحة في ثلاثة أو أربعة خلجان وغداء على متن القارب. وإن أردت قارباً خاصاً فالتوقيت والمسار لك وحدك وتُحفظ خصوصية العائلة.",
+          en: "The day's centre is the water: swim stops in three or four bays and lunch on board. With a private charter the timing and route are yours and family privacy is kept.",
+        },
+      },
+      {
+        title: {
+          tr: "Yalıkavak ve kuzey koyları",
+          ar: "ياليكافاك وخلجان الشمال",
+          en: "Yalıkavak and the northern bays",
+        },
+        body: {
+          tr: "Yalıkavak marinası, Türkbükü ve Gündoğan tarafı; yarımadanın en sakin ucu. Gün batımı için Turgutreis'e geçilebilir. Yarımada küçük olduğu için bunların hepsi tek güne sığar.",
+          ar: "مارينا ياليكافاك وجهة توركبوكو وغوندوغان؛ وهي أهدأ أطراف شبه الجزيرة. ويمكن الانتقال إلى تورغوتريس لمشاهدة الغروب. ولأن شبه الجزيرة صغيرة يتّسع كل هذا ليوم واحد.",
+          en: "Yalıkavak marina, Türkbükü and Gündoğan — the calmest end of the peninsula. You can move on to Turgutreis for the sunset. Because the peninsula is small, all of this fits in one day.",
+        },
+      },
+      {
+        title: {
+          tr: "Serbest gün ve dönüş",
+          ar: "يوم حر والعودة",
+          en: "A free day and departure",
+        },
+        body: {
+          tr: "Uçuş saatine göre koyda son bir sabah ya da çarşıda alışveriş, ardından havalimanına transfer.",
+          ar: "صباح أخير في الخليج أو تسوق في السوق بحسب موعد الرحلة، ثم التوصيل إلى المطار.",
+          en: "A last morning in the bay or shopping in the bazaar depending on your flight, then the transfer to the airport.",
+        },
+      },
+    ],
+    includes: ["transfer", "vehicle", "guide", "prayer", "freeDay"],
+    faq: [
+      {
+        question: {
+          tr: "Bodrum'da hangi koyda kalmalıyım?",
+          ar: "في أي خليج أقيم في بودروم؟",
+          en: "Which bay should I stay in?",
+        },
+        answer: {
+          tr: "Yarımada uçtan uca kırk dakika olduğu için hangi koyda kalırsanız kalın program aksamaz. Sakinlik ve marina için Yalıkavak ya da Türkbükü; merkeze yakınlık ve hareket için Gümbet ve Bitez; aileler ve gün batımı için Turgutreis. Nerede kalacağınızı söylerseniz günlerin sırasını ona göre çeviririz.",
+          ar: "لأن شبه الجزيرة تُقطع في أربعين دقيقة من طرف إلى طرف فلن يتعطل البرنامج أياً كان الخليج الذي تقيم فيه. للهدوء والمارينا: ياليكافاك أو توركبوكو؛ وللقرب من المركز والحيوية: غومبيت وبيتز؛ وللعائلات والغروب: تورغوتريس. أخبرنا بمكان إقامتك ونعيد ترتيب الأيام على أساسه.",
+          en: "Because the peninsula is forty minutes end to end, the programme works from any bay. For quiet and a marina, Yalıkavak or Türkbükü; for proximity to the centre and some life, Gümbet and Bitez; for families and sunsets, Turgutreis. Tell us where you are staying and we reorder the days around it.",
+        },
+      },
+      {
+        question: {
+          tr: "Kışın Bodrum'a gitmek olur mu?",
+          ar: "هل تصلح بودروم للزيارة شتاءً؟",
+          en: "Does Bodrum work in winter?",
+        },
+        answer: {
+          tr: "Açıkça söyleyelim: önermiyoruz. Kasımdan nisana kadar yarımadanın büyük bölümü kapanır; otel, restoran ve tekne seçeneği çok azalır ve deniz zaten girilecek sıcaklıkta olmaz. Bu program mayıs–ekim arası için kurulmuştur. Kış aylarında Türkiye'de deniz arıyorsanız Antalya daha iyi bir cevap.",
+          ar: "لنقلها بصراحة: لا ننصح بذلك. فمن تشرين الثاني حتى نيسان يُغلق معظم شبه الجزيرة؛ وتقلّ خيارات الفنادق والمطاعم والقوارب كثيراً، والبحر أصلاً ليس بدرجة تسمح بالسباحة. وقد وُضع هذا البرنامج لما بين أيار وتشرين الأول. وإن كنت تبحث عن البحر في تركيا شتاءً فأنطاليا جواب أفضل.",
+          en: "Plainly: we would not recommend it. From November to April much of the peninsula closes; hotels, restaurants and boats thin out sharply and the sea is not warm enough to swim anyway. This programme is built for May to October. If you want the sea in Türkiye in winter, Antalya is the better answer.",
+        },
+      },
+      {
+        question: {
+          tr: "İstanbul'la birleştirilebilir mi?",
+          ar: "هل يمكن دمجه مع إسطنبول؟",
+          en: "Can it be combined with Istanbul?",
+        },
+        answer: {
+          tr: "Evet ve sık isteniyor: dört gün İstanbul, ardından kısa bir iç hat uçuşuyla beş gün Bodrum. Şehir ve deniz arka arkaya gelince seyahat monotonlaşmıyor. İki programı birleştirdiğimizde uçuş saatlerini birbirine göre ayarlar, iki şehirdeki karşılamaları da biz yaparız.",
+          ar: "نعم، وهو مطلوب كثيراً: أربعة أيام في إسطنبول ثم خمسة في بودروم برحلة داخلية قصيرة. وحين تتعاقب المدينة والبحر لا تصبح الرحلة رتيبة. وعند دمج البرنامجين نضبط مواعيد الطيران بعضها على بعض ونتولى الاستقبال في المدينتين.",
+          en: "Yes, and it is often requested: four days in Istanbul, then five in Bodrum on a short domestic flight. City followed by sea keeps the trip from becoming monotonous. When we combine them we line up the flights and handle the meet-and-greet in both cities.",
+        },
+      },
+    ],
+  },
 ];
 
 export function packageBySlug(slug: string) {

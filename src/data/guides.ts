@@ -2001,6 +2001,302 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "antalya-bolge-rehberi",
+    topic: "daytrips",
+    image: "/images/tours/antalya.jpg",
+    minutes: 6,
+    title: {
+      tr: "Antalya bölge rehberi: Kaleiçi, Side, Kemer, Belek ve Alanya",
+      ar: "دليل منطقة أنطاليا: كاليتشي وسيدة وكمر وبيليك وألانيا",
+      en: "The Antalya region: Kaleiçi, Side, Kemer, Belek and Alanya",
+    },
+    excerpt: {
+      tr: "Antalya tek bir şehir değil, iki yüz kilometrelik bir sahil şeridi. Hangi ilçe kime uyar, mesafeler ne kadar, hangi mevsimde ne olur.",
+      ar: "أنطاليا ليست مدينة واحدة بل شريط ساحلي بطول مئتي كيلومتر. أي منطقة تناسب مَن، وكم المسافات، وماذا يحدث في كل موسم.",
+      en: "Antalya is not one city but two hundred kilometres of coast. Which district suits whom, how far apart they are, and what each season brings.",
+    },
+    facts: [
+      {
+        label: {
+          tr: "Sahil uzunluğu",
+          ar: "طول الساحل",
+          en: "Coastline",
+        },
+        value: {
+          tr: "Kemer'den Alanya'ya ~200 km",
+          ar: "نحو 200 كم من كمر إلى ألانيا",
+          en: "~200 km from Kemer to Alanya",
+        },
+      },
+      {
+        label: {
+          tr: "Deniz sezonu",
+          ar: "موسم البحر",
+          en: "Swimming season",
+        },
+        value: {
+          tr: "Mayıs – ekim",
+          ar: "أيار – تشرين الأول",
+          en: "May – October",
+        },
+      },
+      {
+        label: {
+          tr: "Ulaşım",
+          ar: "الوصول",
+          en: "Getting there",
+        },
+        value: {
+          tr: "Uçakla; İstanbul'dan ~1,5 saat",
+          ar: "جواً؛ نحو ساعة ونصف من إسطنبول",
+          en: "By air; ~1.5 hours from Istanbul",
+        },
+      },
+    ],
+    seo: {
+      title: {
+        tr: "Antalya Bölge Rehberi",
+        ar: "دليل منطقة أنطاليا",
+        en: "Antalya Region Guide",
+      },
+      description: {
+        tr: "Kaleiçi, Side, Kemer, Belek ve Alanya karşılaştırmalı: hangi ilçe kime uyar, havalimanına mesafeler, deniz sezonu ve hangi ayda ne olur.",
+        ar: "مقارنة بين كاليتشي وسيدة وكمر وبيليك وألانيا: أي منطقة تناسب مَن، والمسافات إلى المطار، وموسم البحر، وماذا يحدث في كل شهر.",
+        en: "Kaleiçi, Side, Kemer, Belek and Alanya compared: which district suits whom, distances to the airport, the swimming season and what each month brings.",
+      },
+    },
+    faq: [
+      {
+        question: {
+          tr: "Antalya'da hangi bölgede kalmalıyım?",
+          ar: "في أي منطقة أقيم في أنطاليا؟",
+          en: "Which area should I stay in around Antalya?",
+        },
+        answer: {
+          tr: "Şehir hayatı, müze ve çarşı istiyorsanız Kaleiçi ve merkez; sakin bir sahil tatili istiyorsanız Belek ya da Side; dağ ve deniz bir aradaysa Kemer; daha canlı ve uygun fiyatlı bir seçenek arıyorsanız Alanya. Aileler genelde merkeze yakın kalıp günübirlik çıkıyor; her gün otel değiştirmek bu bölgede en çok yorulan tercih.",
+          ar: "إن أردت حياة المدينة والمتاحف والأسواق فكاليتشي والمركز؛ وإن أردت عطلة شاطئية هادئة فبيليك أو سيدة؛ وإن أردت الجبل والبحر معاً فكمر؛ وإن كنت تبحث عن خيار أكثر حيوية وأنسب سعراً فألانيا. والعائلات غالباً تقيم قرب المركز وتخرج في رحلات يومية؛ فتبديل الفندق كل يوم هو أكثر الخيارات إرهاقاً في هذه المنطقة.",
+          en: "For city life, museums and bazaars, Kaleiçi and the centre; for a quiet beach holiday, Belek or Side; for mountains and sea together, Kemer; for something livelier and better value, Alanya. Families usually stay near the centre and take day trips — changing hotel every day is the most tiring choice in this region.",
+        },
+      },
+      {
+        question: {
+          tr: "Antalya havalimanından ilçelere ne kadar sürer?",
+          ar: "كم تستغرق الرحلة من مطار أنطاليا إلى المناطق؟",
+          en: "How long is it from Antalya airport to the districts?",
+        },
+        answer: {
+          tr: "Merkez ve Lara yaklaşık 15–30 dakika, Belek 30–40, Kemer 50–70, Side 60–75 ve Alanya 100–130 dakika. Süreler yaklaşıktır; yaz aylarında sahil yolu yoğunlaşır. Alanya'yı programa katacaksanız gidiş-dönüşün dört saati yolda geçeceğini hesaba katın.",
+          ar: "المركز ولارا نحو 15 إلى 30 دقيقة، وبيليك 30 إلى 40، وكمر 50 إلى 70، وسيدة 60 إلى 75، وألانيا 100 إلى 130 دقيقة. وهذه أوقات تقريبية، ويزداد ازدحام الطريق الساحلي في الصيف. وإن أدرجت ألانيا في البرنامج فاحسب أن أربع ساعات ستمضي على الطريق ذهاباً وإياباً.",
+          en: "The centre and Lara are roughly 15–30 minutes, Belek 30–40, Kemer 50–70, Side 60–75 and Alanya 100–130. These are approximate; the coast road gets busier in summer. If you add Alanya to the plan, allow four hours on the road for the round trip.",
+        },
+      },
+      {
+        question: {
+          tr: "Yaz dışında Antalya'ya gitmek mantıklı mı?",
+          ar: "هل من المنطقي زيارة أنطاليا خارج الصيف؟",
+          en: "Is Antalya worth visiting outside summer?",
+        },
+        answer: {
+          tr: "Evet, hatta bazı misafirler için daha iyi. Nisan–mayıs ve ekim–kasım aralığında hava ılık, kalabalık az ve gezmek rahat; deniz mayıs sonundan ekime kadar zaten girilebilir durumda. Kışın deniz soğuktur ama şehir yeşil kalır ve Toros dağlarında kar bulunur — sahilde on beş derece, dağda kar aynı gün mümkün.",
+          ar: "نعم، بل هي أفضل لبعض الضيوف. ففي نيسان وأيار وتشرين الأول وتشرين الثاني يكون الجو دافئاً والزحام قليلاً والتجوّل مريحاً؛ والبحر صالح للسباحة من أواخر أيار حتى تشرين الأول. أما في الشتاء فالبحر بارد لكن المدينة تبقى خضراء ويوجد الثلج في جبال طوروس — خمس عشرة درجة على الساحل وثلج في الجبل في اليوم نفسه أمر ممكن.",
+          en: "Yes, and for some guests it is better. April–May and October–November are mild, uncrowded and comfortable for sightseeing, and the sea is swimmable from late May to October anyway. In winter the sea is cold but the city stays green and there is snow in the Taurus mountains — fifteen degrees on the coast and snow in the mountains on the same day is possible.",
+        },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Antalya bir şehir değil, bir sahil şeridi",
+          ar: "أنطاليا ليست مدينة بل شريط ساحلي",
+          en: "Antalya is a coastline, not a city",
+        },
+        body: {
+          tr: "Haritada tek bir isim görünür ama Antalya'nın turistik bölgesi Kemer'den Alanya'ya iki yüz kilometre uzanır. Bu yüzden \"Antalya'ya gidiyoruz\" cümlesi tek başına bir şey anlatmaz: Kemer'de kalan biriyle Side'de kalan biri aynı tatili yaşamaz. Merkez, Roma ve Osmanlı katmanlarını taşıyan Kaleiçi'yle şehir tatili sunar; doğusu Belek ve Side'yle geniş kumsallara, batısı Kemer'le çam ormanı ve dağ eteğine açılır. Alanya en uzak ve en canlı uç.",
+          ar: "على الخريطة يظهر اسم واحد، لكن منطقة أنطاليا السياحية تمتد مئتي كيلومتر من كمر إلى ألانيا. ولذلك فإن عبارة «سنذهب إلى أنطاليا» لا تقول شيئاً بمفردها: فمن يقيم في كمر لا يعيش العطلة نفسها التي يعيشها من يقيم في سيدة. المركز يقدّم عطلة مدينة بكاليتشي التي تحمل طبقات رومانية وعثمانية؛ وشرقه ينفتح على رمال واسعة في بيليك وسيدة، وغربه على غابات الصنوبر وسفح الجبل في كمر. وألانيا هي الطرف الأبعد والأكثر حيوية.",
+          en: "On a map it looks like one name, but the tourist region of Antalya runs two hundred kilometres from Kemer to Alanya. \"We're going to Antalya\" therefore says little on its own: someone staying in Kemer is not having the same holiday as someone in Side. The centre offers a city break around Kaleiçi with its Roman and Ottoman layers; to the east Belek and Side open onto wide sands, to the west Kemer runs into pine forest and the foot of the mountains. Alanya is the furthest and liveliest end.",
+        },
+        image: "/images/tours/antalya.jpg",
+        imageAlt: {
+          tr: "Antalya Kaleiçi ve eski liman",
+          ar: "كاليتشي أنطاليا والميناء القديم",
+          en: "Kaleiçi and the old harbour, Antalya",
+        },
+      },
+      {
+        heading: {
+          tr: "İlçe ilçe: hangisi kime uyar",
+          ar: "منطقة منطقة: أيّها يناسب مَن",
+          en: "District by district: which suits whom",
+        },
+        body: {
+          tr: "Kaleiçi ve merkez, gezmeyi sevenler için: müze, çarşı, restoran ve Düden Şelalesi yakın. Belek sakin ve düzenlidir, geniş kumsalı ve golf sahalarıyla bilinir; kalabalıktan uzak durmak isteyen aileler burayı seçer. Side antik tiyatro ve Apollon Tapınağı'yla tarihi denizle birleştirir. Kemer'de dağ denize kadar iner, koylar küçük ve çamlıdır. Alanya kalesi, mağaraları ve uzun sahiliyle daha hareketli, fiyatlar da genelde daha uygundur.",
+          ar: "كاليتشي والمركز لمن يحب التجوّل: المتاحف والأسواق والمطاعم وشلال دودان قريبة. وبيليك هادئة ومنظمة، تشتهر برمالها الواسعة وملاعب الغولف؛ وتختارها العائلات التي تريد الابتعاد عن الزحام. وسيدة تجمع التاريخ بالبحر بمسرحها الأثري ومعبد أبولو. وفي كمر ينزل الجبل حتى البحر، والخلجان صغيرة وتحيط بها أشجار الصنوبر. أما ألانيا فأكثر حركة بقلعتها وكهوفها وشاطئها الطويل، وأسعارها غالباً أنسب.",
+          en: "Kaleiçi and the centre suit people who like to explore: museums, bazaars, restaurants and the Düden Waterfall are all close. Belek is calm and orderly, known for its wide sand and golf courses; families who want to avoid crowds choose it. Side joins history to the sea with its ancient theatre and Temple of Apollo. In Kemer the mountains come down to the water and the bays are small and pine-fringed. Alanya, with its castle, caves and long beach, is livelier, and prices are generally friendlier.",
+        },
+      },
+      {
+        heading: {
+          tr: "Program kurarken",
+          ar: "عند وضع البرنامج",
+          en: "When planning",
+        },
+        body: {
+          tr: "En sık yapılan hata her gün başka bir ilçeye gitmek. Sahil yolu tek şerittir ve yazın ağırlaşır; günde iki uzak durak, günün yarısını araçta geçirmek demektir. İşe yarayan düzen şu: merkeze ya da Belek–Side hattına yerleşip günübirlik çıkmak. Bir gün Kaleiçi ve şehir, bir gün Side ya da Kemer, bir gün tekne turu, bir gün tam serbest. Alanya eklenecekse ona ayrı bir tam gün ayırmak gerekir. Antalya turumuz bu düzenin bir günlük halidir; kalan günleri size göre kurarız.",
+          ar: "أكثر خطأ يتكرر هو الذهاب كل يوم إلى منطقة مختلفة. فالطريق الساحلي ذو مسار واحد ويثقل في الصيف؛ ومحطتان بعيدتان في اليوم تعنيان قضاء نصف اليوم في السيارة. والترتيب المجدي هو الإقامة في المركز أو على خط بيليك–سيدة والخروج في رحلات يومية: يوم لكاليتشي والمدينة، ويوم لسيدة أو كمر، ويوم لجولة القارب، ويوم حر بالكامل. وإن أُضيفت ألانيا فتحتاج يوماً كاملاً خاصاً بها. وجولة أنطاليا لدينا هي النسخة اليومية من هذا الترتيب؛ وبقية الأيام نضعها على مقاسك.",
+          en: "The commonest mistake is going to a different district every day. The coast road is single-lane and slows in summer; two distant stops in one day means half the day in the car. What works is basing yourself in the centre or on the Belek–Side stretch and taking day trips: one day for Kaleiçi and the city, one for Side or Kemer, one for a boat trip, one entirely free. If Alanya is added it needs a full day of its own. Our Antalya tour is the one-day version of this arrangement; we build the remaining days around you.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "bodrum-ege-rehberi",
+    topic: "daytrips",
+    image: "/images/tours/bodrum.jpg",
+    minutes: 6,
+    title: {
+      tr: "Bodrum ve Ege rehberi: koylar, marinalar ve hangi mevsim",
+      ar: "دليل بودروم وبحر إيجه: الخلجان والمارينا وأي موسم",
+      en: "Bodrum and the Aegean: bays, marinas and when to go",
+    },
+    excerpt: {
+      tr: "Yarımadanın hangi ucu kime uyar, tekne turu nasıl işler, deniz ne zaman ılıktır ve Bodrum'da bir hafta nasıl geçirilir.",
+      ar: "أي طرف من شبه الجزيرة يناسب مَن، وكيف تسير جولة القارب، ومتى يدفأ البحر، وكيف يُقضى أسبوع في بودروم.",
+      en: "Which end of the peninsula suits whom, how boat trips work, when the sea is warm, and how to spend a week in Bodrum.",
+    },
+    facts: [
+      {
+        label: {
+          tr: "Konum",
+          ar: "الموقع",
+          en: "Location",
+        },
+        value: {
+          tr: "Ege kıyısı, Muğla",
+          ar: "ساحل بحر إيجه، موغلا",
+          en: "Aegean coast, Muğla",
+        },
+      },
+      {
+        label: {
+          tr: "Deniz sezonu",
+          ar: "موسم البحر",
+          en: "Swimming season",
+        },
+        value: {
+          tr: "Haziran – ekim başı",
+          ar: "حزيران – أوائل تشرين الأول",
+          en: "June – early October",
+        },
+      },
+      {
+        label: {
+          tr: "Yarımada içi",
+          ar: "داخل شبه الجزيرة",
+          en: "Across the peninsula",
+        },
+        value: {
+          tr: "Uçtan uca 40 dk",
+          ar: "40 دقيقة من طرف إلى طرف",
+          en: "40 min end to end",
+        },
+      },
+    ],
+    seo: {
+      title: {
+        tr: "Bodrum ve Ege Rehberi",
+        ar: "دليل بودروم وبحر إيجه",
+        en: "Bodrum and Aegean Guide",
+      },
+      description: {
+        tr: "Yalıkavak, Gümbet, Türkbükü ve Turgutreis karşılaştırmalı; tekne turu nasıl işler, deniz hangi aylarda ılık ve yarımadada mesafeler ne kadar.",
+        ar: "مقارنة بين ياليكافاك وغومبيت وتوركبوكو وتورغوتريس؛ وكيف تسير جولة القارب، وفي أي الأشهر يدفأ البحر، وكم المسافات في شبه الجزيرة.",
+        en: "Yalıkavak, Gümbet, Türkbükü and Turgutreis compared: how boat trips work, which months the sea is warm, and distances across the peninsula.",
+      },
+    },
+    faq: [
+      {
+        question: {
+          tr: "Bodrum'da hangi koyda kalmalıyım?",
+          ar: "في أي خليج أقيم في بودروم؟",
+          en: "Which bay should I stay in?",
+        },
+        answer: {
+          tr: "Yalıkavak marinasıyla en gösterişli ve en sakin uçtur; Türkbükü sakin ve butik; Gümbet ve Bitez merkeze yakın, hareketli ve daha uygun; Turgutreis gün batımıyla bilinir ve aileler için rahat. Bodrum merkez kale, çarşı ve restoranlarla en canlısı. Yarımada küçük: bir uçtan diğerine yaklaşık kırk dakika, yani kaldığınız koy tatili belirler ama hiçbir yeri kaçırmanıza sebep olmaz.",
+          ar: "ياليكافاك هي الطرف الأكثر أناقة وهدوءاً بمارينتها؛ وتوركبوكو هادئة وبوتيكية؛ وغومبيت وبيتز قريبتان من المركز وأكثر حيوية وأنسب سعراً؛ وتورغوتريس تشتهر بغروبها ومريحة للعائلات. أما مركز بودروم فهو الأكثر حياة بقلعته وسوقه ومطاعمه. وشبه الجزيرة صغيرة: نحو أربعين دقيقة من طرف إلى آخر، أي أن الخليج الذي تقيم فيه يحدد طابع العطلة لكنه لا يحرمك من أي مكان.",
+          en: "Yalıkavak, with its marina, is the smartest and calmest end; Türkbükü is quiet and boutique; Gümbet and Bitez are close to the centre, livelier and better value; Turgutreis is known for its sunsets and comfortable for families. Bodrum centre, with the castle, bazaar and restaurants, is the liveliest. The peninsula is small — about forty minutes end to end — so the bay you choose sets the tone of the holiday without cutting you off from anywhere.",
+        },
+      },
+      {
+        question: {
+          tr: "Tekne turu nasıl işliyor?",
+          ar: "كيف تسير جولة القارب؟",
+          en: "How do boat trips work?",
+        },
+        answer: {
+          tr: "İki biçimi var. Günlük turlar sabah limandan kalkar, üç–dört koyda yüzme molası verir ve teknede öğle yemeği içerir; ekonomiktir ama başka misafirlerle paylaşılır. Özel tekne kiralamada saat ve güzergâh size aittir, aile mahremiyeti korunur. Hangisini istediğinizi rezervasyonda söylemeniz yeterli; ikisinde de mayo, havlu ve güneş koruması gerekir.",
+          ar: "لها شكلان. الجولات اليومية تنطلق صباحاً من الميناء وتتوقف للسباحة في ثلاثة أو أربعة خلجان وتشمل الغداء على القارب؛ وهي اقتصادية لكنها مشتركة مع ضيوف آخرين. أما استئجار قارب خاص فالتوقيت والمسار لك وحدك وتُحفظ خصوصية العائلة. ويكفي أن تخبرنا عند الحجز بما تريد؛ وفي الحالتين يلزم ملابس بحر ومنشفة وواقٍ من الشمس.",
+          en: "There are two forms. Day trips leave the harbour in the morning, stop to swim in three or four bays and include lunch on board; they are economical but shared with other guests. With a private charter the timing and route are yours and family privacy is kept. Just tell us which you want at booking; either way you need swimwear, a towel and sun protection.",
+        },
+      },
+      {
+        question: {
+          tr: "Bodrum'a ne zaman gitmeli?",
+          ar: "متى تُزار بودروم؟",
+          en: "When should you visit Bodrum?",
+        },
+        answer: {
+          tr: "Deniz için haziran–eylül; temmuz ve ağustos en sıcak ve en kalabalık dönem, ekim başına kadar deniz ılık kalır. Mayıs ve ekim gezmek için ideal: hava ılık, koylar boş, fiyatlar düşük ama deniz serin gelebilir. Kışın yarımadanın büyük bölümü kapanır — otel ve restoran seçeneği çok azalır, o yüzden kış ayları önerilmez.",
+          ar: "للبحر من حزيران إلى أيلول؛ وتموز وآب أشدّ حرارة وأكثر ازدحاماً، ويبقى البحر دافئاً حتى أوائل تشرين الأول. وأيار وتشرين الأول مثاليان للتجوّل: الجو دافئ والخلجان خالية والأسعار منخفضة، لكن البحر قد يكون بارداً. أما في الشتاء فيُغلق معظم شبه الجزيرة — إذ تقلّ خيارات الفنادق والمطاعم كثيراً، ولذلك لا نوصي بأشهر الشتاء.",
+          en: "For swimming, June to September; July and August are the hottest and busiest, and the sea stays warm into early October. May and October are ideal for exploring: mild weather, empty bays, lower prices, though the sea may feel cool. In winter much of the peninsula closes — hotels and restaurants thin out sharply, so the winter months are not recommended.",
+        },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Yarımada küçük, karakterleri farklı",
+          ar: "شبه الجزيرة صغيرة وطباعها مختلفة",
+          en: "A small peninsula with distinct characters",
+        },
+        body: {
+          tr: "Bodrum yarımadası uçtan uca kırk dakika sürer ama her koyun kendi karakteri vardır. Kuzeyde Yalıkavak ve Türkbükü sakin ve pahalı; batıda Turgutreis gün batımıyla ve daha geniş kumsalıyla ailelere uygun; merkeze yakın Gümbet ve Bitez hareketli ve uygun fiyatlı. Merkez ise kale, çarşı ve limanla günün her saati canlıdır. Mesafeler kısa olduğu için nerede kalırsanız kalın diğerlerini gün içinde görebilirsiniz — bu, Antalya'dan en belirgin farkı.",
+          ar: "تُقطع شبه جزيرة بودروم في أربعين دقيقة من طرف إلى طرف، لكن لكل خليج طباعه. ففي الشمال ياليكافاك وتوركبوكو هادئتان وغاليتان؛ وفي الغرب تناسب تورغوتريس العائلات بغروبها ورمالها الأوسع؛ وقرب المركز تنبض غومبيت وبيتز بالحياة بأسعار أنسب. أما المركز فحيّ في كل ساعات اليوم بقلعته وسوقه ومينائه. ولأن المسافات قصيرة يمكنك رؤية البقية خلال اليوم أينما أقمت — وهذا أوضح فرق عن أنطاليا.",
+          en: "The Bodrum peninsula takes forty minutes end to end, yet every bay has its own character. In the north, Yalıkavak and Türkbükü are calm and expensive; to the west, Turgutreis suits families with its sunsets and wider sand; near the centre, Gümbet and Bitez are lively and better value. The centre itself, with the castle, bazaar and harbour, is alive at every hour. Because the distances are short you can see the others during the day wherever you stay — the clearest difference from Antalya.",
+        },
+        image: "/images/tours/bodrum.jpg",
+        imageAlt: {
+          tr: "Bodrum sahili ve marina",
+          ar: "ساحل بودروم والمارينا",
+          en: "The Bodrum shore and marina",
+        },
+      },
+      {
+        heading: {
+          tr: "Denizin ve teknenin düzeni",
+          ar: "نظام البحر والقارب",
+          en: "How the sea and the boats work",
+        },
+        body: {
+          tr: "Bodrum'da tatilin merkezinde tekne vardır. Günlük turlar üç–dört koyda yüzme molası verir ve öğle yemeğini teknede sunar; özel kiralamada saat ve güzergâh size aittir. Ege'nin suyu Akdeniz'e göre bir tık serindir; deniz haziranda ısınır, ağustosta en ılık halini alır ve ekim başına kadar girilebilir. Koyların çoğu kum değil çakıl ya da platformdur — deniz ayakkabısı işe yarar, özellikle çocuklarda.",
+          ar: "القارب في قلب العطلة في بودروم. فالجولات اليومية تتوقف للسباحة في ثلاثة أو أربعة خلجان وتقدّم الغداء على متنها؛ وفي الاستئجار الخاص يكون التوقيت والمسار لك. وماء بحر إيجه أبرد قليلاً من المتوسط؛ يدفأ البحر في حزيران ويبلغ أدفأ حالاته في آب ويبقى صالحاً للسباحة حتى أوائل تشرين الأول. ومعظم الخلجان ليست رملية بل حصوية أو ذات منصات — وحذاء البحر مفيد، خاصة للأطفال.",
+          en: "In Bodrum the boat is at the centre of the holiday. Day trips stop to swim in three or four bays and serve lunch on board; on a private charter the timing and route are yours. Aegean water is a touch cooler than the Mediterranean; the sea warms in June, peaks in August and stays swimmable into early October. Most bays are pebble or platform rather than sand — water shoes help, especially with children.",
+        },
+      },
+      {
+        heading: {
+          tr: "Kaç gün ve neyle birlikte",
+          ar: "كم يوماً ومع ماذا",
+          en: "How many days, and with what",
+        },
+        body: {
+          tr: "Yalnız Bodrum için üç–dört gün yeterli: bir gün merkez ve kale, bir gün tekne turu, bir gün koylarda serbest zaman. Daha uzun kalacaksanız Didim, Milas ya da Efes günübirlik eklenebilir. İstanbul'la birleştirmek de yaygın: dört gün İstanbul, ardından kısa bir iç hat uçuşuyla dört gün Bodrum. Şehir ve deniz arka arkaya geldiğinde seyahat monotonlaşmıyor — Karadeniz rotasıyla aynı mantık, sadece yeşil yerine mavi.",
+          ar: "لبودروم وحدها تكفي ثلاثة أو أربعة أيام: يوم للمركز والقلعة، ويوم لجولة القارب، ويوم حر في الخلجان. وإن أطلت الإقامة فيمكن إضافة ديديم أو ميلاس أو أفسس كرحلة يومية. والدمج مع إسطنبول شائع أيضاً: أربعة أيام في إسطنبول ثم أربعة في بودروم برحلة داخلية قصيرة. وحين تتعاقب المدينة والبحر لا تصبح الرحلة رتيبة — المنطق نفسه في مسار البحر الأسود، لكن بالأزرق بدل الأخضر.",
+          en: "For Bodrum alone, three or four days is enough: one for the centre and castle, one for a boat trip, one free in the bays. Staying longer, Didim, Milas or Ephesus can be added as day trips. Combining with Istanbul is common too: four days in Istanbul, then four in Bodrum on a short domestic flight. City followed by sea keeps the trip from becoming monotonous — the same logic as the Black Sea route, with blue instead of green.",
+        },
+      },
+    ],
+  },
 ];
 
 export function guideBySlug(slug: string) {

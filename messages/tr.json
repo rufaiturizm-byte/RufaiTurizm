@@ -274,6 +274,24 @@
       "pace": "Tekne turunda yürüyüş yok; kale ve çarşı gezisinde orta düzey. Güneş koruması gerekir.",
       "tip": "Tekne turlarında yüzme molası verilir; mayo ve havlu getirin. Öğle güneşi Ege'de sert, şapka işe yarar.",
       "metaDescription": "Bodrum Kalesi, turkuaz koylar ve Ege'de tekne turu. Özel araç ve Arapça rehberle; otelden alış, kendi programınıza göre esneyen bir gün."
+    },
+    "antalya": {
+      "name": "Antalya Turu",
+      "description": "Kaleiçi, Düden Şelalesi ve Akdeniz koyları.",
+      "city": "Antalya",
+      "long": "Antalya turu, Akdeniz kıyısının tarihini ve denizini aynı günde birleştirir. Sabah Kaleiçi'nde başlanır: Roma döneminden kalma Hadrian Kapısı, dar taş sokaklar, Osmanlı konakları ve eski limanda demirli gulet tekneleri. Öğleden sonra Düden Şelalesi'nin denize döküldüğü noktaya geçilir, ardından Konyaaltı ya da Lara sahilinde serbest zaman bırakılır. Gün, Kaleiçi çarşısında alışveriş ve akşam limanında yürüyüşle kapanır.",
+      "highlights": [
+        "Kaleiçi ve Hadrian Kapısı",
+        "Eski liman ve gulet tekneleri",
+        "Düden Şelalesi",
+        "Konyaaltı ve Lara sahilleri",
+        "Antalya Müzesi (isteğe bağlı)",
+        "Kaleiçi çarşısında serbest zaman"
+      ],
+      "season": "Nisan–kasım. Deniz mayıstan ekime kadar ılık; temmuz–ağustos çok sıcak, program sabah erkene ve ikindi sonrasına yayılır. Kış aylarında şehir sakin ve yeşildir.",
+      "pace": "Kaleiçi'nde 2–3 km yürüyüş, sokaklar taş döşeli ve yer yer eğimli. Şelale yürüyüşü kısa. Bebek arabası Kaleiçi'nde zorlar.",
+      "tip": "Gölge azdır; şapka, güneş kremi ve su gerekir. Deniz mevsimindeyseniz mayo getirin, sahilde mola veriyoruz. Kaleiçi sokaklarında pazarlık geçer.",
+      "metaDescription": "Kaleiçi, Hadrian Kapısı, Düden Şelalesi ve Akdeniz sahilleri tek günde. Özel araç ve Arapça rehberle, otelden alış; program size göre esner."
     }
   },
   "whyUs": {

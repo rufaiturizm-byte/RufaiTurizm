@@ -1,7 +1,7 @@
 /**
  * Tur destinasyonları. İsim, şehir ve açıklama i18n'den (`tours.<key>`) okunur.
  */
-export type TourKey = "istanbul" | "bursa" | "sapanca" | "trabzon" | "bodrum";
+export type TourKey = "istanbul" | "bursa" | "sapanca" | "trabzon" | "bodrum" | "antalya";
 
 export interface Tour {
   key: TourKey;
@@ -32,6 +32,7 @@ export const tours: Tour[] = [
   { key: "sapanca", slug: "sapanca-turu", priceFrom: 50, priceUsdFrom: 54, currency: "EUR", durationHours: 9, image: "/images/tours/sapanca.jpg", geo: { lat: 40.6911, lng: 30.2661 } },
   { key: "trabzon", slug: "trabzon-turu", priceFrom: 75, priceUsdFrom: 81, currency: "EUR", durationHours: 12, image: "/images/tours/trabzon.jpg", geo: { lat: 41.0015, lng: 39.7178 } },
   { key: "bodrum", slug: "bodrum-turu", priceFrom: 65, priceUsdFrom: 70, currency: "EUR", durationHours: 10, image: "/images/tours/bodrum.jpg", geo: { lat: 37.0344, lng: 27.4305 } },
+  { key: "antalya", slug: "antalya-turu", priceFrom: 70, priceUsdFrom: 76, currency: "EUR", durationHours: 10, image: "/images/tours/antalya.jpg", geo: { lat: 36.8841, lng: 30.7056 } },
 ];
 
 export function tourBySlug(slug: string) {

@@ -45,6 +45,28 @@
         "Araçta ücretsiz su ve internet",
         "Çocuk koltuğu talebe göre",
         "Aynı şoför, tüm seyahat boyunca"
+      ],
+      "long2": "Kapasite konusunda baştan açık olalım: altı koltuğun altısı da doluyken bagaj bölümü dört büyük valiz alır. Yedi kişilik bir aile ya da kişi başına iki valizle gelen bir grup için ikinci araç gerekir. Bunu rezervasyon sırasında söyleriz; havalimanında bagajın sığmadığını görmek kimsenin istediği bir sürpriz değil. Çocuk ve bebek koltuğu ek ücretsizdir ama araçta hazır durmaz, talep üzerine takılır — çocuğunuzun yaşını yazmanız yeterli.",
+      "bestFor": "Bagajlı aileler, üç ilâ altı kişilik gruplar ve şehirlerarası uzun yolculuklar. Tek başına ya da çift olarak seyahat ediyorsanız daha küçük bir araç yeterli olur; bunu size biz söyleriz.",
+      "how": "Araç saatlik değil, iş üzerinden fiyatlanır: havalimanı transferi, tam gün şehir içi kullanım ve şehirlerarası yolculuk ayrı hesaplanır. Tam gün kullanımda araç ve şoför gün boyu sizinledir, program arasında bekler.",
+      "note": "Çocuk koltuğu ve fazladan bagaj rezervasyonda bildirilmelidir. Şoförsüz kiralama yapmıyoruz; araç her zaman şoförüyle gelir.",
+      "faq": [
+        {
+          "question": "Altı kişiyle birlikte kaç valiz sığar?",
+          "answer": "Altı yolcu varken bagaj bölümüne dört büyük valiz ve birkaç el bagajı girer. Kişi başına iki valizle geliyorsanız ikinci araç öneririz — rezervasyonda kişi ve valiz sayısını yazın, sığıp sığmadığını önceden söyleyelim."
+        },
+        {
+          "question": "Aracı şoförsüz kiralayabilir miyim?",
+          "answer": "Hayır. Vito'yu yalnızca şoförüyle veriyoruz. Şehri bilen, Arapça konuşan bir şoförle gelmesi bu hizmetin özü; kendi kendine sürüş için araç kiralama şirketlerine yönlendiririz."
+        },
+        {
+          "question": "Aracı tam gün kendi programım için kiralayabilir miyim?",
+          "answer": "Evet. Tam gün kullanımda araç ve şoför gün boyu sizinle kalır; nereye gideceğinize siz karar verirsiniz, şoför her durakta bekler. Hazır bir tur programı takip etme zorunluluğu yoktur."
+        },
+        {
+          "question": "Şehirlerarası yolculukta aynı araç mı geliyor?",
+          "answer": "Evet. Bursa, Sapanca ya da başka bir şehre giderken araç da şoför de değişmez. Otelinizden alan şoför, dönüşte de sizi bırakan kişidir; her seferinde kendinizi yeniden anlatmak zorunda kalmazsınız."
+        }
       ]
     },
     "transfer": {
@@ -58,6 +80,28 @@
         "Sabit fiyat, rezervasyonda netleşir",
         "Gidiş-dönüş rezervasyonunda indirim",
         "Ara durak ekleme imkânı"
+      ],
+      "long2": "İstanbul Havalimanı'nda karşılama, dış hatlar geliş katındaki çıkış kapılarının hemen karşısında olur; şoför isminizin yazılı olduğu tabelayla bekler. Sabiha Gökçen'de geliş salonu daha küçüktür ve tek buluşma noktası vardır, karışma ihtimali yoktur. Pasaport kuyruğu yoğun saatlerde uzayabilir; şoför uçağın iniş saatini değil sizin salona çıkışınızı bekler ve bu süre için ücret yazmayız. Bagajınız çıkmaz ya da gecikirse WhatsApp'tan tek satır yazmanız yeterli.",
+      "bestFor": "Türkiye'ye ilk kez gelenler, gece inen uçuşlar ve küçük çocuklu aileler. Taksi kuyruğunda beklemek ya da fiyat pazarlığı yapmak istemeyen herkes.",
+      "how": "Rezervasyonda uçuş numarasını, iniş saatini ve otel adresini alırız. Uçuşu iniş gününe kadar takip eder, şoförü yeni saate göre yönlendiririz. Fiyat araç başınadır ve rezervasyonda netleşir; varışta üzerine bir şey eklenmez.",
+      "note": "Uçuş numarası olmadan takip yapamayız — rezervasyonda mutlaka isteriz. Otel adresi sonradan değişirse WhatsApp'tan yazmanız yeterli, ek ücret çıkmaz.",
+      "faq": [
+        {
+          "question": "Şoförü havalimanında tam olarak nerede bulacağım?",
+          "answer": "İstanbul Havalimanı'nda dış hatlar geliş katında, bagaj alanından çıktığınız kapıların hemen karşısında isminizin yazılı olduğu tabelayla bekler. Sabiha Gökçen'de geliş salonu tek olduğu için buluşma noktası da tektir. Şoförün adı ve telefonu uçuştan önce WhatsApp'tan size ulaşır."
+        },
+        {
+          "question": "Havalimanından otele yolculuk ne kadar sürer?",
+          "answer": "İstanbul Havalimanı'ndan Taksim ve Sultanahmet çevresine trafiğe göre yaklaşık 45-70 dakika sürer. Sabiha Gökçen'den Avrupa yakasına geçiş 60-90 dakikayı bulur. Süreler yaklaşıktır; akşam saatlerinde köprü trafiği uzatabilir."
+        },
+        {
+          "question": "Gece yarısı inen uçuşlarda da karşılama var mı?",
+          "answer": "Evet, saat sınırı yoktur. Gece üçte inen bir uçuş için de şoför aynı şekilde tabelayla bekler. Gece transferlerinde ek ücret uygulamıyoruz; fiyat gündüzle aynıdır."
+        },
+        {
+          "question": "Rezervasyon için hangi bilgiler gerekiyor?",
+          "answer": "Uçuş numarası, iniş tarihi ve saati, otel adı veya adresi, kişi sayısı ve valiz sayısı. Çocuk varsa yaşını da yazın, koltuğu ona göre hazırlarız. Bu beş bilgiyle rezervasyon dakikalar içinde tamamlanır."
+        }
       ]
     },
     "tours": {
@@ -71,12 +115,34 @@
         "Otelden alış, otele bırakış",
         "Çocuklu aileler için esnek tempo",
         "İstek üzerine özel güzergâh"
+      ],
+      "long2": "Bir tur günü şöyle geçer: şoför otelinizin önünde sizi bekler, ilk durağa geçilir, gün içinde namaz vakitlerinde güzergâh üzerindeki camilerde mola verilir ve öğle yemeği için helal seçenek sunan bir restorana uğranır. Durakların sırası hava ve trafiğe göre değişebilir, ama durak sayısı korunur. Müze ve ören yeri giriş ücretleri kişiye göre değiştiği için fiyata dahil edilmez; hangi durakta ne kadar ödeneceğini rezervasyondan önce yazılı olarak söyleriz.",
+      "bestFor": "Kendi temposunda gezmek isteyen aileler, ilk kez Türkiye'ye gelen ve dil derdi yaşamak istemeyen misafirler, kalabalık gruba karışmak istemeyen çiftler.",
+      "how": "Otelinizden alınır, gün sonunda otelinize bırakılırsınız. Program hazır listeden seçilebilir ya da baştan sizin isteğinize göre kurulur. Fiyat kişi başı değil araç başınadır; iki kişi de altı kişi de gitseniz araç fiyatı aynıdır.",
+      "note": "Müze giriş ücretleri ve öğle yemeği fiyata dahil değildir. Program başlangıcından 24 saat öncesine kadar yapılan iptallerde ücret almayız.",
+      "faq": [
+        {
+          "question": "Müze giriş ücretleri fiyata dahil mi?",
+          "answer": "Hayır. Müze ve saray giriş ücretleri kişi sayısına, yaşa ve müzenin o yılki tarifesine göre değiştiği için fiyata dahil etmiyoruz. Bunu gizlemek yerine rezervasyondan önce hangi durakta yaklaşık ne ödeneceğini yazılı olarak paylaşıyoruz; isterseniz biletleri sizin adınıza biz alırız."
+        },
+        {
+          "question": "Hazır turu kendi isteğime göre değiştirebilir miyim?",
+          "answer": "Evet. Hazır programlar bir başlangıç noktası; durak çıkarabilir, ekleyebilir ya da sıralamayı değiştirebilirsiniz. Bütünüyle kendi güzergâhınızı da kurabiliriz — nereleri görmek istediğinizi yazın, gün planını biz çıkaralım."
+        },
+        {
+          "question": "Turda rehber mi var, yoksa yalnızca şoför mü?",
+          "answer": "Şehir turlarında Arapça konuşan bir rehber eşlik eder ve gezdiğiniz yerin tarihini anlatır. Doğa ve alışveriş ağırlıklı bazı güzergâhlarda ise Arapça konuşan şoför yönlendirmeyi üstlenir. Hangi programda hangisinin olduğunu rezervasyondan önce açıkça söyleriz."
+        },
+        {
+          "question": "Kaç kişiden itibaren tur düzenliyorsunuz?",
+          "answer": "Bir kişiden itibaren. Turlar özel olduğu için asgari kişi sayısı aramıyoruz; grup dolsun diye beklemezsiniz. Fiyat araç başına verildiği için kalabalıklaştıkça kişi başına düşen tutar azalır."
+        }
       ]
     },
     "flightHotel": {
       "title": "Uçak Bileti ve Otel Rezervasyonu",
       "description": "Uygun fiyatlı uçak bileti ve aileye uygun otel seçenekleriyle rezervasyon.",
-      "long": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Otel seçerken aileye uygunluk, harama yakınlık değil ama merkeze ve metroya yakınlık, kahvaltı dahil olup olmadığı gibi ayrıntıları önceden söyleriz. Tek bir WhatsApp konuşmasında bilet, otel, transfer ve turu birlikte planlayabilirsiniz.",
+      "long": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Otel seçerken aileye uygunluk, merkeze ve metroya yakınlık, kahvaltının dahil olup olmadığı gibi ayrıntıları önceden söyleriz. Tek bir WhatsApp konuşmasında bilet, otel, transfer ve turu birlikte planlayabilirsiniz.",
       "features": [
         "Uçak bileti araştırma ve rezervasyon",
         "Aileye uygun otel seçenekleri",
@@ -84,6 +150,28 @@
         "Bilet, otel, transfer tek konuşmada",
         "Rezervasyon öncesi net toplam fiyat",
         "Seyahat boyunca tek muhatap"
+      ],
+      "long2": "Otel önerirken size iki şeyi peşinen söyleriz: otelin bulunduğu semtin nasıl bir yer olduğu ve metro ile tramvaya kaç dakika yürüneceği. Sultanahmet'te kalmak tarihi yarımadayı yürüyerek gezdirir ama akşamları sessizdir; Taksim ve Şişli hareketlidir ama trafiği yoğundur. Bu farkları rezervasyondan önce anlatırız. Uçak biletinde ise tarih esnekliğinizi sorarız — bir gün önce ya da sonra uçmak çoğu zaman ciddi fark yaratır.",
+      "bestFor": "Bileti, oteli, transferi ve turu tek yerden halletmek isteyenler; hangi semtte kalacağına karar veremeyen ve Türkçe site karıştırmak istemeyen misafirler.",
+      "how": "Tarihlerinizi, kişi sayısını ve bütçenizi WhatsApp'tan yazarsınız; size iki-üç seçenek toplam fiyatıyla birlikte gelir. Beğendiğinizi onaylarsınız, rezervasyonu biz yaparız. Bilet, otel, transfer ve tur aynı konuşmada ilerler.",
+      "note": "Vize başvurusu yürütmüyoruz. Uçak biletinde değişiklik ve iptal koşulları havayolunun kendi kurallarına tabidir; bileti almadan önce bu koşulları size yazarız.",
+      "faq": [
+        {
+          "question": "Rezervasyon için ekstra hizmet bedeli alıyor musunuz?",
+          "answer": "Size verdiğimiz toplam fiyat neyse onu ödersiniz. Rezervasyondan sonra üzerine ayrı bir hizmet bedeli eklenmez; fiyatı onaylamadan hiçbir işlem başlatmayız."
+        },
+        {
+          "question": "Vize işlemlerinde yardımcı oluyor musunuz?",
+          "answer": "Hayır, vize başvurusu yürütmüyoruz. Vize kuralları ülkeye ve pasaporta göre değişiyor ve sık güncelleniyor; yanlış bilgi vermektense bu işi yapmadığımızı söylemeyi tercih ediyoruz. Başvurunuzu kendi ülkenizdeki Türkiye konsolosluğu ya da resmî e-Vize sitesi üzerinden yapmanız gerekir."
+        },
+        {
+          "question": "Hangi otelleri öneriyorsunuz?",
+          "answer": "Sitemizdeki oteller sayfasında İstanbul'un dört ana bölgesinde öne çıkan otelleri semt semt listeledik. Bu bir anlaşmalı otel listesi değil, nerede kalacağınıza karar vermenize yardımcı olacak bir yol haritası. Seçtiğiniz oteli sizin adınıza rezerve edebiliriz."
+        },
+        {
+          "question": "Uçak biletimi sonradan değiştirebilir miyim?",
+          "answer": "Değişiklik ve iptal, bileti aldığınız havayolunun kurallarına ve bilet sınıfına bağlıdır. Bazı biletler değiştirilebilir, bazıları hiç iade edilmez. Bilet almadan önce hangi sınıfta ne mümkün olduğunu size yazılı olarak söyleriz."
+        }
       ]
     },
     "priceFrom": "'dan başlayan fiyatlarla"
@@ -236,7 +324,12 @@
     "step4Desc": "Şoförünüz otelinizde; seyahat boyunca aynı numaradan bize ulaşırsınız.",
     "fleetTitle": "Aracımız",
     "fleetSubtitle": "Tüm transfer ve turlarımız Mercedes Vito ile yapılır",
-    "offerTitle": "Neler sunuyoruz"
+    "offerTitle": "Neler sunuyoruz",
+    "practicalTitle": "Rezervasyondan önce bilinmesi gerekenler",
+    "bestForLabel": "Kimler için uygun",
+    "howLabel": "Nasıl işliyor",
+    "noteLabel": "Bilmeniz gerekenler",
+    "serviceFaqTitle": "Bu hizmet hakkında sık sorulanlar"
   },
   "toursPage": {
     "title": "Tur Programlarımız",

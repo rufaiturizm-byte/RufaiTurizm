@@ -45,6 +45,28 @@
         "Complimentary water and wi-fi on board",
         "Child seat on request",
         "The same driver throughout your stay"
+      ],
+      "long2": "Let us be straight about capacity: with all six seats taken, the luggage compartment holds four large suitcases plus a few carry-ons. A family of seven, or a group travelling with two suitcases each, needs a second vehicle. We tell you this at booking, because discovering it at the airport is nobody's idea of a good surprise. Child and infant seats cost nothing extra, but they are not kept in the vehicle by default — they are fitted on request, so just tell us your child's age.",
+      "bestFor": "Families travelling with luggage, groups of three to six, and long intercity journeys. If you are travelling alone or as a couple a smaller car will do, and we will say so ourselves.",
+      "how": "The vehicle is priced by the job, not by the hour: airport transfers, full-day city use and intercity journeys are quoted separately. On a full-day booking the car and driver stay with you all day and wait between stops.",
+      "note": "Child seats and extra luggage must be mentioned at booking. We do not offer self-drive rental; the vehicle always comes with its driver.",
+      "faq": [
+        {
+          "question": "How many suitcases fit with six passengers?",
+          "answer": "With six passengers the luggage compartment takes four large suitcases and a few carry-ons. If everyone is travelling with two suitcases we will suggest a second vehicle — tell us the number of people and bags at booking and we will confirm whether it fits before you arrive."
+        },
+        {
+          "question": "Can I rent the vehicle without a driver?",
+          "answer": "No. The Vito comes with its driver only. Having someone who knows the city and speaks Arabic is the point of this service; for self-drive we will point you to a car rental company instead."
+        },
+        {
+          "question": "Can I book the vehicle for a full day on my own itinerary?",
+          "answer": "Yes. On a full-day booking the car and driver stay with you all day, you decide where to go, and the driver waits at every stop. There is no obligation to follow a ready-made tour programme."
+        },
+        {
+          "question": "Is it the same vehicle on intercity journeys?",
+          "answer": "Yes. Travelling to Bursa, Sapanca or anywhere else, neither the vehicle nor the driver changes. The driver who picked you up from your hotel is the one who brings you back, so you never have to explain your plans from scratch again."
+        }
       ]
     },
     "transfer": {
@@ -58,6 +80,28 @@
         "Fixed price, confirmed at booking",
         "Discount on round-trip bookings",
         "Extra stops can be added"
+      ],
+      "long2": "At Istanbul Airport the meet-and-greet happens in international arrivals, directly opposite the exit doors, where your driver waits with a name board. At Sabiha Gökçen the arrivals hall is smaller and there is a single meeting point, so there is no room for confusion. Passport queues can run long at peak hours; the driver waits for you to come out, not for the plane to land, and we do not charge for that time. If your luggage is delayed or missing, one line on WhatsApp is enough.",
+      "bestFor": "First-time visitors to Türkiye, flights landing at night, and families with small children. Anyone who would rather not queue for a taxi or haggle over the fare.",
+      "how": "At booking we take your flight number, landing time and hotel address. We track the flight until arrival day and send the driver according to the new time. The price is per vehicle, fixed at booking, with nothing added on arrival.",
+      "note": "We cannot track a flight without its number, so we always ask for it at booking. If your hotel changes later, a WhatsApp message is enough and there is no extra charge.",
+      "faq": [
+        {
+          "question": "Where exactly will I find the driver at the airport?",
+          "answer": "At Istanbul Airport he waits in international arrivals, opposite the doors you come through after baggage claim, holding a board with your name. At Sabiha Gökçen there is a single arrivals hall and a single meeting point. Your driver's name and phone number reach you on WhatsApp before your flight."
+        },
+        {
+          "question": "How long is the journey from the airport to the hotel?",
+          "answer": "From Istanbul Airport to the Taksim and Sultanahmet area takes roughly 45-70 minutes depending on traffic. From Sabiha Gökçen to the European side takes 60-90 minutes. These are approximate; bridge traffic in the evening can stretch them."
+        },
+        {
+          "question": "Do you meet flights that land after midnight?",
+          "answer": "Yes, there is no time limit. A flight landing at three in the morning is met with the same name board. We do not apply a night surcharge; the price is the same as during the day."
+        },
+        {
+          "question": "What information do you need to make a booking?",
+          "answer": "Flight number, landing date and time, hotel name or address, number of passengers and number of suitcases. If you are travelling with children, add their ages so we can fit the right seat. With those five details a booking takes minutes."
+        }
       ]
     },
     "tours": {
@@ -71,6 +115,28 @@
         "Hotel pick-up and drop-off",
         "Relaxed pace for families with children",
         "Custom routes on request"
+      ],
+      "long2": "A tour day runs like this: the driver waits outside your hotel, you set off for the first stop, the route pauses at prayer times at mosques along the way, and lunch happens at a restaurant with halal options. The order of stops can shift with weather and traffic, but the number of stops does not. Museum and heritage site entrance fees are not included, because they vary from person to person; we tell you in writing before booking roughly what is payable at each stop.",
+      "bestFor": "Families who want to travel at their own pace, first-time visitors who would rather not struggle with the language, and couples who do not want to be folded into a large group.",
+      "how": "You are collected from your hotel and returned there at the end of the day. Pick a ready-made programme from the list, or we build one from scratch around what you want to see. The price is per vehicle, not per person; two people or six, the vehicle price is the same.",
+      "note": "Museum entrance fees and lunch are not included in the price. Cancellations made up to 24 hours before the programme starts are free of charge.",
+      "faq": [
+        {
+          "question": "Are museum entrance fees included in the price?",
+          "answer": "No. Museum and palace entrance fees change with the number of visitors, their ages and that year's tariff, so we leave them out of the price. Rather than hide that, we share in writing before booking roughly what is payable at each stop — and we can buy the tickets on your behalf if you prefer."
+        },
+        {
+          "question": "Can I change a ready-made tour to suit me?",
+          "answer": "Yes. The ready-made programmes are a starting point; you can drop a stop, add one, or reorder the day. We can also build a route entirely around you — write down the places you want to see and we will plan the day."
+        },
+        {
+          "question": "Is there a guide on the tour, or only a driver?",
+          "answer": "City tours are accompanied by an Arabic-speaking guide who explains the history of each place. On some nature and shopping routes the Arabic-speaking driver takes on the guiding instead. We tell you plainly which applies to your programme before you book."
+        },
+        {
+          "question": "What is the minimum group size for a tour?",
+          "answer": "One person. Because our tours are private there is no minimum, and you never wait for a group to fill up. Since the price is per vehicle, the more of you travel together, the less each person pays."
+        }
       ]
     },
     "flightHotel": {
@@ -84,6 +150,28 @@
         "Ticket, hotel and transfer in one conversation",
         "Clear total price before you book",
         "One point of contact for the whole trip"
+      ],
+      "long2": "When we suggest a hotel we tell you two things up front: what the surrounding neighbourhood is actually like, and how many minutes on foot it is to the metro and tram. Staying in Sultanahmet lets you walk the historic peninsula but the evenings are quiet; Taksim and Şişli are livelier but the traffic is heavier. We explain those differences before you book. On flights we ask how flexible your dates are — flying a day earlier or later often makes a real difference.",
+      "bestFor": "Travellers who want the ticket, the hotel, the transfer and the tour arranged in one place, and guests who cannot decide which district to stay in and would rather not read Turkish websites.",
+      "how": "You send your dates, party size and budget on WhatsApp; two or three options come back with the total price for each. You approve the one you like and we make the booking. Ticket, hotel, transfer and tour all move through the same conversation.",
+      "note": "We do not handle visa applications. Change and cancellation terms on a flight ticket follow the airline's own rules, and we put those in writing before the ticket is bought.",
+      "faq": [
+        {
+          "question": "Do you charge an extra service fee for bookings?",
+          "answer": "You pay the total price we quote you, and nothing more. No separate service charge is added after booking, and we start no process until you have approved the price."
+        },
+        {
+          "question": "Do you help with visa applications?",
+          "answer": "No, we do not handle visa applications. Visa rules differ by country and passport and change often; we would rather tell you this is not something we do than give you wrong information. You need to apply through the Turkish consulate in your own country or the official e-Visa site."
+        },
+        {
+          "question": "Which hotels do you recommend?",
+          "answer": "The hotels page on our site lists notable hotels across four main districts of Istanbul, neighbourhood by neighbourhood. It is not a list of partner hotels — it is a map to help you decide where to stay. We can book the hotel you choose on your behalf."
+        },
+        {
+          "question": "Can I change my flight ticket later?",
+          "answer": "Changes and cancellations depend on the airline's rules and your fare class. Some tickets can be changed, others are entirely non-refundable. We tell you in writing what is possible in your fare class before the ticket is bought."
+        }
       ]
     },
     "priceFrom": "starting prices"
@@ -236,7 +324,12 @@
     "step4Desc": "Your driver is at your hotel, and you reach us on the same number throughout.",
     "fleetTitle": "Our vehicle",
     "fleetSubtitle": "Every transfer and tour is operated with a Mercedes Vito",
-    "offerTitle": "What we offer"
+    "offerTitle": "What we offer",
+    "practicalTitle": "What to know before you book",
+    "bestForLabel": "Who it suits",
+    "howLabel": "How it works",
+    "noteLabel": "Worth knowing",
+    "serviceFaqTitle": "Questions about this service"
   },
   "toursPage": {
     "title": "Tour Programs",

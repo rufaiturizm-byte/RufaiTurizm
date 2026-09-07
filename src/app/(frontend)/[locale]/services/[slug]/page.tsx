@@ -2,7 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, Banknote, Headphones, MessagesSquare, Users } from "lucide-react";
+import {
+  ArrowLeft,
+  Banknote,
+  Headphones,
+  Info,
+  MessagesSquare,
+  Route,
+  UserRoundCheck,
+  Users,
+} from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
@@ -23,7 +32,7 @@ import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCoverage } from "@/components/site/route-coverage";
-import { FaqPreview } from "@/components/site/faq-preview";
+import { ServiceFaq } from "@/components/site/service-faq";
 import { services, serviceBySlug } from "@/data/services";
 
 /** Transfer formu yalnızca ulaşım hizmetlerinde anlamlı. */
@@ -153,6 +162,9 @@ export default async function ServiceDetailPage({
             <p className="mt-5 text-[15.5px] leading-[1.95] text-foreground/80">
               {t(`${service.key}.long`)}
             </p>
+            <p className="mt-4 text-[15.5px] leading-[1.95] text-foreground/80">
+              {t(`${service.key}.long2`)}
+            </p>
 
             <h2 className="mt-12 font-display text-[24px] font-semibold sm:text-[28px]">
               {tPage("featuresTitle")}
@@ -167,6 +179,41 @@ export default async function ServiceDetailPage({
                 </li>
               ))}
             </ul>
+
+            {/*
+              Pratik bilgiler. Sayfa hizmetin NE olduğunu anlatıyordu ama
+              rezervasyondan önceki üç soruyu cevaplamıyordu: bana uygun mu,
+              nasıl işliyor, nelere dikkat etmeliyim. Tur sayfalarında bu
+              blok zaten vardı; hizmet sayfalarında yoktu.
+            */}
+            <h2 className="mt-12 font-display text-[24px] font-semibold sm:text-[28px]">
+              {tPage("practicalTitle")}
+            </h2>
+            <dl className="mt-6 grid gap-4 sm:grid-cols-3">
+              {(
+                [
+                  {
+                    icon: UserRoundCheck,
+                    label: tPage("bestForLabel"),
+                    value: t(`${service.key}.bestFor`),
+                  },
+                  { icon: Route, label: tPage("howLabel"), value: t(`${service.key}.how`) },
+                  { icon: Info, label: tPage("noteLabel"), value: t(`${service.key}.note`) },
+                ] as const
+              ).map(({ icon: Icon, label, value }) => (
+                <div key={label} className="accent-card p-5">
+                  <dt className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                    <Icon
+                      className="size-3.5"
+                      style={{ color: "var(--brand-gold-deep)" }}
+                      aria-hidden="true"
+                    />
+                    {label}
+                  </dt>
+                  <dd className="mt-2.5 text-[13.5px] leading-[1.75]">{value}</dd>
+                </div>
+              ))}
+            </dl>
 
             <h2 className="mt-12 font-display text-[24px] font-semibold sm:text-[28px]">
               {tWhy("title")}
@@ -272,7 +319,7 @@ export default async function ServiceDetailPage({
       )}
 
       <RouteCoverage locale={locale} />
-      <FaqPreview />
+      <ServiceFaq serviceKey={service.key} />
       <ClosingCta locale={locale} />
       <RelatedLinks exclude={["services"]} />
       <CredentialsBand />

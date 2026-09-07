@@ -104,5 +104,22 @@ export const routing = defineRouting({
   defaultLocale: "ar",
   // Varsayılan dil ön ek almaz: "/" = ar, "/tr", "/en"
   localePrefix: "as-needed",
+  /*
+   * Tarayıcı diline göre otomatik yönlendirme KAPALI.
+   *
+   * Açıkken kök adres ziyaretçinin `Accept-Language` başlığına bakıyor ve
+   * Türkçe ya da İngilizce tercih eden herkesi 307 ile /tr veya /en'e
+   * atıyordu. İki sorunu vardı:
+   *
+   * 1. Marka adresi tutarsızdı — rufaiturizm.com kimde hangi dilde
+   *    açılacağı ziyaretçinin tarayıcı ayarına kalmıştı. Ana pazar Körfez
+   *    olan bir sitede kök adres her zaman Arapça açılmalı.
+   * 2. Tarayıcısı Türkçe olan bir Körfez misafiri (Türkiye'de aldığı
+   *    telefonda ya da Türkçe arayüzlü cihazda) Arapça siteyi hiç
+   *    görmeden Türkçeye düşüyordu.
+   *
+   * Dil değiştirici üst menüde sabit duruyor; isteyen tek tıkla geçiyor.
+   */
+  localeDetection: false,
   pathnames,
 });

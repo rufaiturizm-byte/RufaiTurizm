@@ -246,6 +246,9 @@ export function TransferForm() {
         target={ready ? "_blank" : undefined}
         rel="noopener noreferrer"
         aria-disabled={!ready}
+        /* Sayfanın en önemli eylemi: bu görünürken köşedeki yüzen
+           WhatsApp düğmesi çekilsin, üstüne binmesin. */
+        data-wa-inline=""
         onClick={(event) => {
           if (ready) return;
           event.preventDefault();

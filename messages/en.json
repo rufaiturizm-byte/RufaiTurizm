@@ -434,7 +434,28 @@
     "a12": "Yes. We are based in Istanbul but arrange transfers and tours to Bursa, Sapanca, Trabzon, Bodrum and other cities on request. On intercity journeys the same vehicle and driver stay with you.",
     "allQuestions": "All questions",
     "stillTitle": "Didn't find your answer?",
-    "stillText": "Write to us and we will come back the same day. Arabic, Turkish and English."
+    "stillText": "Write to us and we will come back the same day. Arabic, Turkish and English.",
+    "groupBooking": "Booking and payment",
+    "groupAirport": "Airport and transfers",
+    "groupTours": "Tours and itinerary",
+    "groupVehicle": "Vehicle, family and stays",
+    "groupTrust": "Licences and assurances",
+    "q13": "How far in advance should I book?",
+    "a13": "In the summer months and around Ramadan and the Eid holidays vehicles fill up early, and we suggest writing to us one or two weeks ahead for those dates. Otherwise a few days is enough, often the same day. We can only be certain once we see your dates — write to us and we will check availability straight away.",
+    "q14": "Do you operate during Ramadan and the Eid holidays?",
+    "a14": "Yes. During Ramadan the programme is built around iftar and suhoor: daytime stops are lightened and a place for iftar is arranged in advance. At Eid the city and roads get busier, so we move sightseeing earlier. Booking early matters in these periods.",
+    "q15": "What if my flight details change after booking?",
+    "a15": "Just send the new flight number and time on WhatsApp; there is no extra charge. The same goes for a change of hotel address. The earlier you tell us the better, but even at the last minute the vehicle and driver are redirected to the new information.",
+    "q16": "Can I change the itinerary during the trip?",
+    "a16": "Yes. Because the tours are private you can drop a stop, add one or reorder the day as you go — just tell your driver and guide. If the day runs longer or the route changes significantly we discuss the difference beforehand; nobody is caught out.",
+    "q17": "What languages are the tours conducted in?",
+    "a17": "Arabic, Turkish and English. City tours are accompanied by an Arabic-speaking guide; on some nature and shopping routes the Arabic-speaking driver takes on the guiding. We tell you plainly which applies to your programme before you book.",
+    "q18": "Is there wi-fi and water in the vehicle?",
+    "a18": "Yes, both free of charge. The vehicle has wireless internet and cold water, plus charging on longer journeys. The rear air conditioning runs separately and the windows are tinted.",
+    "q19": "Do you also book hotels and flight tickets?",
+    "a19": "Yes. Send us your dates, party size and budget and we will come back with two or three options and the total price for each; you approve the one you like and we make the booking. When we suggest a hotel we tell you in advance what the neighbourhood is like and how many minutes it is to the metro. We do not handle visa applications.",
+    "q20": "What does the TÜRSAB licence mean, and how do I verify it?",
+    "a20": "It means we operate as a travel agency under the supervision of the Turkish Ministry of Culture and Tourism; working without a licence is prohibited in Türkiye. Our licence number is 12539, and you can see for yourself that it is registered in our name through the agency search page on tursab.org.tr."
   },
   "footer": {
     "about": "Rufai Tourism — a travel agency in Türkiye offering transfers, tours, flight tickets and hotel bookings.",
@@ -730,7 +751,7 @@
     "guides": "What people ask before coming to Türkiye: getting from the airport into the city, which district to stay in, Sapanca and Trabzon routes, and each season.",
     "about": "A TÜRSAB-licensed travel agency, licence no 12539. Service in Arabic, Turkish and English, fixed prices and one contact for the whole trip.",
     "contact": "Message us on WhatsApp and we will reply the same day. Reachable 24/7 for transfers, tours, flight tickets and hotel bookings, in Arabic, Turkish and English.",
-    "faq": "Are prices fixed? Is there an Arabic-speaking guide? Do you meet us at the airport? What if the flight is delayed? Answers to the 12 questions guests ask most."
+    "faq": "Are prices fixed? Is there an Arabic-speaking guide? Do you meet us at the airport? Is prepayment required? Clear answers to the 20 questions guests ask most."
   },
   "related": {
     "title": "Keep exploring",

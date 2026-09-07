@@ -15,7 +15,26 @@ import { ClosingCta } from "@/components/site/transfer-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 
-const QUESTIONS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] as const;
+/**
+ * Sorular konu gruplarında.
+ *
+ * Yirmi soru tek bir akordeonda alt alta dizilince ziyaretçi aradığını
+ * ancak hepsini açarak buluyor. Gruplar hem taramayı kolaylaştırıyor hem
+ * de sayfaya anahtar kelimeli ara başlıklar veriyor — "الحجز والدفع",
+ * "الوثائق والضمانات" gibi aramaların karşılığı bunlar.
+ *
+ * Numaralandırma kesintisiz akıyor (01…20), grup başına sıfırlanmıyor:
+ * numara sıra bildiriyor, grup içi konum değil.
+ */
+const GROUPS = [
+  { key: "groupBooking", questions: ["1", "5", "10", "11", "13", "14"] },
+  { key: "groupAirport", questions: ["4", "7", "15"] },
+  { key: "groupTours", questions: ["2", "6", "8", "12", "16", "17"] },
+  { key: "groupVehicle", questions: ["3", "9", "18", "19"] },
+  { key: "groupTrust", questions: ["20"] },
+] as const;
+
+const QUESTIONS = GROUPS.flatMap((group) => group.questions);
 
 export async function generateMetadata({
   params,
@@ -97,7 +116,27 @@ export default async function FaqPage({
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.55fr_1fr] lg:items-start">
-          <FaqAccordion items={items} />
+          <div className="flex flex-col gap-10">
+            {GROUPS.map((group, groupIndex) => (
+              <div key={group.key}>
+                <h2 className="mb-5 font-display text-[21px] font-semibold leading-snug sm:text-[24px]">
+                  {t(group.key)}
+                </h2>
+                <FaqAccordion
+                  items={group.questions.map((number) => ({
+                    question: t(`q${number}`),
+                    answer: t(`a${number}`),
+                  }))}
+                  startAt={
+                    GROUPS.slice(0, groupIndex).reduce(
+                      (total, previous) => total + previous.questions.length,
+                      1,
+                    )
+                  }
+                />
+              </div>
+            ))}
+          </div>
 
           <aside
             className="relative isolate overflow-hidden lg:sticky lg:top-24"

@@ -434,7 +434,28 @@
     "a12": "Evet. İstanbul merkezli çalışıyoruz ancak Bursa, Sapanca, Trabzon, Bodrum ve talep üzerine diğer şehirlere transfer ve tur düzenliyoruz. Şehirlerarası yolculuklarda aynı araç ve şoför sizinle kalır.",
     "allQuestions": "Tüm sorular",
     "stillTitle": "Cevabını bulamadınız mı?",
-    "stillText": "Yazın, aynı gün içinde dönelim. Arapça, Türkçe ve İngilizce."
+    "stillText": "Yazın, aynı gün içinde dönelim. Arapça, Türkçe ve İngilizce.",
+    "groupBooking": "Rezervasyon ve ödeme",
+    "groupAirport": "Havalimanı ve transfer",
+    "groupTours": "Turlar ve program",
+    "groupVehicle": "Araç, aile ve konaklama",
+    "groupTrust": "Belgeler ve güvence",
+    "q13": "Ne kadar önceden rezervasyon yapmalıyım?",
+    "a13": "Yaz ayları, Ramazan ve bayram dönemlerinde araçlar erken doluyor; bu tarihlerde bir–iki hafta önceden yazmanızı öneriyoruz. Bunun dışında birkaç gün, çoğu zaman aynı gün bile yeterli oluyor. Kesin cevabı ancak tarihinizi görünce verebiliriz — yazın, müsaitliği hemen bakalım.",
+    "q14": "Ramazan ve bayram dönemlerinde hizmet veriyor musunuz?",
+    "a14": "Evet. Ramazan'da program iftar ve sahur saatlerine göre kurulur: gündüz duraklar hafifletilir, akşam iftar için önceden yer ayarlanır. Bayramda şehir ve yollar kalabalıklaşır, bu yüzden gezi saatlerini erkene alıyoruz. Bu dönemlerde erken rezervasyon önemli.",
+    "q15": "Uçuş bilgim rezervasyondan sonra değişirse ne yapmalıyım?",
+    "a15": "WhatsApp'tan yeni uçuş numarasını ve saatini yazmanız yeterli; ek ücret çıkmaz. Otel adresi değişirse de aynı şekilde. Değişikliği ne kadar erken bildirirseniz o kadar iyi, ama son dakikada bile araç ve şoför yeni bilgiye göre yönlendirilir.",
+    "q16": "Programı seyahat sırasında değiştirebilir miyim?",
+    "a16": "Evet. Turlar özel olduğu için gün içinde durak çıkarabilir, ekleyebilir ya da sıralamayı değiştirebilirsiniz — şoför ve rehberinize söylemeniz yeterli. Süre uzarsa ya da güzergâh belirgin biçimde değişirse farkı önceden konuşuruz; kimse sürprizle karşılaşmaz.",
+    "q17": "Turlar hangi dillerde yapılıyor?",
+    "a17": "Arapça, Türkçe ve İngilizce. Şehir turlarında Arapça konuşan bir rehber eşlik eder; doğa ve alışveriş ağırlıklı bazı güzergâhlarda Arapça konuşan şoför yönlendirmeyi üstlenir. Hangi programda hangisinin olduğunu rezervasyondan önce açıkça söyleriz.",
+    "q18": "Araçta internet ve su var mı?",
+    "a18": "Evet, ikisi de ücretsiz. Araçta kablosuz internet ve soğuk su bulunur; uzun yolculuklarda şarj imkânı da vardır. Arka bölmede klima ayrı çalışır ve camlar kararmıştır.",
+    "q19": "Otel ve uçak bileti rezervasyonu da yapıyor musunuz?",
+    "a19": "Evet. Tarihinizi, kişi sayınızı ve bütçenizi yazarsanız iki–üç seçeneği toplam fiyatıyla birlikte göndeririz; beğendiğinizi onaylarsınız, rezervasyonu biz yaparız. Otel önerirken semtin nasıl bir yer olduğunu ve metroya kaç dakika olduğunu önceden söyleriz. Vize başvurusu yürütmüyoruz.",
+    "q20": "TÜRSAB belgesi ne anlama geliyor, nasıl doğrularım?",
+    "a20": "TÜRSAB belgesi, Kültür ve Turizm Bakanlığı denetiminde çalışan bir seyahat acentesi olduğumuz anlamına gelir; belgesiz çalışmak Türkiye'de yasaktır. Belge numaramız 12539 ve tursab.org.tr üzerindeki acenta arama sayfasından adımıza kayıtlı olduğunu kendiniz görebilirsiniz."
   },
   "footer": {
     "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
@@ -730,7 +751,7 @@
     "guides": "Türkiye’ye gelmeden en çok sorulanlar: havalimanından şehre ulaşım, hangi semtte kalınır, Sapanca ve Trabzon rotaları, hangi mevsimde ne olur.",
     "about": "TÜRSAB belgeli seyahat acentesi. Arapça, Türkçe ve İngilizce hizmet; sabit fiyat, aileye uygun programlar ve tüm seyahat boyunca tek muhatap. Belge No 12539.",
     "contact": "WhatsApp'tan yazın, aynı gün dönelim. Transfer, tur, uçak bileti ve otel rezervasyonu için 7/24 ulaşabilirsiniz. Arapça, Türkçe ve İngilizce hizmet veriyoruz.",
-    "faq": "Fiyatlar sabit mi, Arapça rehber var mı, havalimanında karşılıyor musunuz, uçak rötar yaparsa ne olur? Misafirlerimizin en çok sorduğu 12 sorunun net cevapları."
+    "faq": "Fiyatlar sabit mi, Arapça rehber var mı, havalimanında karşılıyor musunuz, ön ödeme gerekiyor mu? Misafirlerimizin en çok sorduğu 20 sorunun net cevapları."
   },
   "related": {
     "title": "Keşfetmeye devam edin",

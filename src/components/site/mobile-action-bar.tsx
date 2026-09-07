@@ -36,8 +36,7 @@ export function MobileActionBar() {
         target="_blank"
         rel="noopener noreferrer"
         data-analytics="whatsapp-mobile-bar"
-        className="flex w-full items-center justify-center gap-2.5 rounded-[0.8rem] py-3.5 text-[15px] font-bold text-white"
-        style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e2)" }}
+        className="btn-wa flex w-full items-center justify-center gap-2.5 rounded-[0.8rem] py-3.5 text-[15px] font-bold text-white"
       >
         <WhatsAppIcon className="size-5" />
         {t("whatsapp")}

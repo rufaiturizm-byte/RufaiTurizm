@@ -56,7 +56,6 @@ export async function PackagesSection({ locale }: { locale: string }) {
                   <span
                     className="absolute end-0 top-0 px-3.5 py-2 text-[13px] font-extrabold text-white"
                     style={{
-                      background: "var(--brand-wa)",
                       borderEndStartRadius: "0.625rem",
                     }}
                   >
@@ -103,8 +102,7 @@ export async function PackagesSection({ locale }: { locale: string }) {
 
                 <WhatsAppLink
                   subject={name}
-                  className="mt-3.5 inline-flex items-center justify-center gap-2 rounded-md py-3 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
-                  style={{ background: "var(--brand-wa)" }}
+                  className="btn-wa mt-3.5 inline-flex items-center justify-center gap-2 rounded-md py-3 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
                 >
                   <MessageCircle className="size-4" aria-hidden="true" />
                   {tCta("bookNow")}

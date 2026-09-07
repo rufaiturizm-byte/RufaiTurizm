@@ -352,6 +352,54 @@ body {
     0 24px 56px color-mix(in oklab, var(--brand-night) 34%, transparent);
 }
 
+/*
+ * WhatsApp yeşili düğmeler.
+ *
+ * On yedi yerde `background: var(--brand-wa)` düz bir dikdörtgen olarak
+ * duruyordu: altın düğmelerin hâlesi ve kenar ışığı varken yeşiller
+ * boyanmış bloklar gibi kalıyor, kart ızgaralarında dört yeşil blok üst
+ * üste gelince sayfa ağırlaşıyordu.
+ *
+ * Renk DEĞİŞMEDİ — Körfez pazarında yeşil "bu WhatsApp'a gider" demek ve
+ * o tanınırlık fiyata değmez. Değişen yalnız yüzey: kenar ışığı, markaya
+ * çalan yumuşak hâle ve gerçek bir basma durumu.
+ */
+.btn-wa {
+  background: var(--brand-wa);
+  color: #fff;
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 24%, transparent),
+    0 8px 22px color-mix(in oklab, var(--brand-wa) 34%, transparent);
+  transition:
+    box-shadow 320ms var(--ease-soft),
+    transform 160ms var(--ease-soft);
+}
+
+@media (hover: hover) {
+  .btn-wa:hover {
+    box-shadow:
+      inset 0 1px 0 color-mix(in oklab, white 32%, transparent),
+      0 12px 30px color-mix(in oklab, var(--brand-wa) 45%, transparent);
+    transform: translateY(-2px);
+  }
+}
+
+.btn-wa:active {
+  transform: translateY(0) scale(0.985);
+  box-shadow:
+    inset 0 1px 3px color-mix(in oklab, black 26%, transparent),
+    0 3px 10px color-mix(in oklab, var(--brand-wa) 30%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-wa,
+  .btn-wa:hover,
+  .btn-wa:active {
+    transition: none;
+    transform: none;
+  }
+}
+
 /* Altın düğmeler: dolgunun altında markaya çalan bir hâle. */
 .cta-gold {
   border-radius: var(--radius-pill);

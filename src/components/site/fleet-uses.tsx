@@ -111,8 +111,7 @@ export async function FleetUses() {
 
               <WhatsAppLink
                 subject={title}
-                className="mt-3.5 inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-                style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e1)" }}
+                className="btn-wa mt-3.5 inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <WhatsAppIcon className="size-4" />
                 {tCta("bookNow")}

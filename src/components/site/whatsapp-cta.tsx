@@ -124,7 +124,6 @@ export function WhatsAppFloatingButton({ subject }: { subject?: string }) {
       )}
       /* Renk ve gölge sitenin geri kalanıyla aynı yerden: sabit yeşil ve
          Tailwind'in siyah `shadow-lg`si sayfadaki tek yabancı yüzeydi. */
-      style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e3)" }}
     >
       <WhatsAppIcon className="size-6" />
       <span className="hidden text-sm font-medium sm:inline">{t("whatsapp")}</span>

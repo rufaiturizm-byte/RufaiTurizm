@@ -73,8 +73,7 @@ export async function ServiceFaq({ serviceKey }: { serviceKey: ServiceKey }) {
 
             <WhatsAppLink
               subject={t(`${serviceKey}.title`)}
-              className="mt-6 inline-flex w-full items-center justify-center gap-2.5 rounded-[0.7rem] px-6 py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-              style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e2)" }}
+              className="btn-wa mt-6 inline-flex w-full items-center justify-center gap-2.5 rounded-[0.7rem] px-6 py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             >
               <WhatsAppIcon className="size-[18px]" />
               {tCta("whatsapp")}

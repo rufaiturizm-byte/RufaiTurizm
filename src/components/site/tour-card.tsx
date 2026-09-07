@@ -96,8 +96,7 @@ export async function TourCard({ tour }: { tour: Tour }) {
           </Link>
           <WhatsAppLink
             subject={name}
-            className="inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-            style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e1)" }}
+            className="btn-wa inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             {tCta("bookNow")}

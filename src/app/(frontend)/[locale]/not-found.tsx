@@ -76,8 +76,7 @@ export default async function NotFound() {
             </Link>
 
             <WhatsAppLink
-              className="inline-flex items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-              style={{ background: "var(--brand-wa)" }}
+              className="btn-wa inline-flex items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             >
               <WhatsAppIcon className="size-[18px]" />
               {tCta("whatsapp")}

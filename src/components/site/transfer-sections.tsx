@@ -100,8 +100,7 @@ export async function TransferTypes() {
 
               <WhatsAppLink
                 subject={t(`type${n}Title`)}
-                className="mt-4 inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-2.5 text-[12.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-                style={{ background: "var(--brand-wa)" }}
+                className="btn-wa mt-4 inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-2.5 text-[12.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <MessageCircle className="size-3.5" aria-hidden="true" />
                 {tCta("bookNow")}
@@ -180,8 +179,7 @@ export async function FleetGrid() {
 
           <WhatsAppLink
             subject={t("vito.name")}
-            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-            style={{ background: "var(--brand-wa)" }}
+            className="btn-wa inline-flex shrink-0 items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             {tCta("whatsapp")}

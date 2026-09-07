@@ -285,8 +285,7 @@ export default async function ServiceDetailPage({
 
             <WhatsAppLink
               subject={name}
-              className="mt-6 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
-              style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e2)" }}
+              className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             >
               <WhatsAppIcon className="size-5" />
               {tCta("bookNow")}

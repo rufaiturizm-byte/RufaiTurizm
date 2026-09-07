@@ -256,10 +256,8 @@ export function TransferForm() {
           document.getElementById("tf-from")?.focus();
         }}
         data-analytics="whatsapp-transfer-form"
-        className="mt-6 flex w-full items-center justify-center gap-3 rounded-[0.85rem] py-4.5 text-[16px] font-bold text-white transition-all"
+        className="btn-wa mt-6 flex w-full items-center justify-center gap-3 rounded-[0.85rem] py-4.5 text-[16px] font-bold"
         style={{
-          background: "var(--brand-wa)",
-          boxShadow: "var(--shadow-e2)",
           opacity: ready ? 1 : 0.55,
           cursor: ready ? "pointer" : "not-allowed",
         }}

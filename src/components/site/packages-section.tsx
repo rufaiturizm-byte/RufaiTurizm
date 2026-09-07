@@ -2,6 +2,9 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { CalendarDays, MapPin, MessageCircle } from "lucide-react";
 import { SectionHeading } from "./section-heading";
+import { ArrowRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { SectionAction } from "./section-heading";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { packages } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
@@ -26,24 +29,46 @@ export async function PackagesSection({ locale }: { locale: string }) {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
-      <SectionHeading eyebrow={tEyebrow("packages")} title={t("title")} subtitle={t("subtitle")} />
+      {/*
+        Bu bölüm paketleri gösteriyor ama detay sayfalarına HİÇ link
+        vermiyordu — rehberlerdeki hatanın aynısı: ana sayfada duran
+        ürünün kendi sayfasına giden yol yok. Kart başlığı ve "gün gün
+        program" bağlantısı eklendi.
+      */}
+      <SectionHeading
+        eyebrow={tEyebrow("packages")}
+        title={t("title")}
+        subtitle={t("subtitle")}
+        action={
+          <Link href="/packages">
+            <SectionAction>
+              {t("allPackages")}
+              <ArrowRight className="size-4 rtl:rotate-180" aria-hidden="true" />
+            </SectionAction>
+          </Link>
+        }
+      />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {packages.map((item) => {
           const name = item.name[lang] ?? item.name.tr;
+          const href = {
+            pathname: "/packages/[slug]" as const,
+            params: { slug: item.slug },
+          };
 
           return (
             <article
               key={item.slug}
-              className="flex flex-col overflow-hidden surface-card"
+              className="group flex flex-col overflow-hidden surface-card surface-card-lift"
             >
-              <div className="relative aspect-[4/3]">
+              <Link href={href} className="relative block aspect-[4/3] overflow-hidden">
                 <Image
                   src={item.image}
                   alt={name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <span
                   className="absolute start-3 top-3 inline-flex items-center gap-1.5 rounded px-2.5 py-1 text-[11.5px] font-bold text-white"
@@ -62,10 +87,17 @@ export async function PackagesSection({ locale }: { locale: string }) {
                     %{item.discountPercent}
                   </span>
                 ) : null}
-              </div>
+              </Link>
 
               <div className="flex flex-1 flex-col p-4">
-                <h3 className="text-[15.5px] font-bold">{name}</h3>
+                <h3 className="text-[15.5px] font-bold">
+                  <Link
+                    href={href}
+                    className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                  >
+                    {name}
+                  </Link>
+                </h3>
                 <div className="mt-2 flex flex-1 items-start gap-1.5 text-[13px] text-muted-foreground">
                   <MapPin
                     className="mt-0.5 size-3.5 shrink-0"
@@ -107,6 +139,15 @@ export async function PackagesSection({ locale }: { locale: string }) {
                   <MessageCircle className="size-4" aria-hidden="true" />
                   {tCta("bookNow")}
                 </WhatsAppLink>
+
+                <Link
+                  href={href}
+                  className="mt-2.5 inline-flex w-fit items-center gap-2 py-1.5 text-[12.5px] font-bold"
+                  style={{ color: "var(--brand-gold-deep)" }}
+                >
+                  {t("itineraryTitle")}
+                  <ArrowRight className="size-3.5 rtl:rotate-180" aria-hidden="true" />
+                </Link>
               </div>
             </article>
           );

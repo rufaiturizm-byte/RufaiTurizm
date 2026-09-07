@@ -47,7 +47,7 @@ export async function Header() {
 
         {/* Dokuz bağlantı lg genişliğinde sıkışıyor; tam menü xl'den
             itibaren, arada mobil menü devrede. */}
-        <nav className="hidden items-center gap-6 xl:flex 2xl:gap-8">
+        <nav className="hidden items-center gap-5 whitespace-nowrap xl:flex 2xl:gap-7">
           {items.map((item) => (
             <NavLink key={item.href} href={item.href}>
               {item.label}
@@ -58,7 +58,9 @@ export async function Header() {
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
           <WhatsAppLink
-            className="hidden items-center gap-2.5 rounded-[0.7rem] border px-5 py-2.5 text-[14px] font-semibold transition-colors hover:bg-[color:color-mix(in_oklab,var(--brand-gold)_12%,transparent)] sm:inline-flex"
+            /* whitespace-nowrap şart: menüye "Paketler" eklenince düğme
+               daralıp "احجز الآن" iki satıra bölünüyordu. */
+            className="hidden shrink-0 items-center gap-2.5 whitespace-nowrap rounded-[0.7rem] border px-5 py-2.5 text-[14px] font-semibold transition-colors hover:bg-[color:color-mix(in_oklab,var(--brand-gold)_12%,transparent)] sm:inline-flex"
             style={{
               borderColor: "color-mix(in oklab, var(--brand-gold) 62%, transparent)",
               color: "var(--brand-gold)",

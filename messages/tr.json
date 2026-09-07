@@ -104,7 +104,10 @@
         "Boğaz'da tekne turu",
         "Galata Kulesi ve Karaköy",
         "Öğle yemeği için mola"
-      ]
+      ],
+      "season": "Nisan–mayıs ve eylül–ekim. Yaz ortasında öğle saatleri sıcak ve kalabalık; program sabah erkene ve ikindi sonrasına yayılır.",
+      "pace": "Gün içinde toplam 3–4 km yürüyüş. Topkapı Sarayı'nın kendisi geniş bir alan; içeride bir-iki saat ayakta geçer.",
+      "tip": "Camilerde omuz ve diz kapalı olmalı, kadınlar için başörtüsü gerekir; girişte ücretsiz örtü verilir. Ayakkabı çıkarılır, çorap işe yarar."
     },
     "bursa": {
       "name": "Bursa Turu",
@@ -118,7 +121,10 @@
         "Cumalıkızık köyü (UNESCO)",
         "İnkaya Çınarı",
         "Bursa kestane şekeri ve İskender molası"
-      ]
+      ],
+      "season": "Kar manzarası için aralık–mart, yeşillik için nisan–haziran. Teleferik hava koşullarına göre kapanabilir.",
+      "pace": "Şehirde orta düzey yürüyüş; Cumalıkızık'ın taş sokakları dar ve eğimli, rahat ayakkabı gerekir.",
+      "tip": "Uludağ zirvesinde hava şehirden 8–10 derece soğuk olur; yaz aylarında bile ince bir üst almak gerekir."
     },
     "sapanca": {
       "name": "Sapanca Turu",
@@ -132,7 +138,10 @@
         "Dere üstü alabalık restoranları",
         "Ormanda doğa yürüyüşü",
         "Yerel ürün pazarı"
-      ]
+      ],
+      "season": "Nisan–ekim en rahat aralık. Kışın Kartepe kar için tercih edilir ama yol koşulları değişkendir.",
+      "pace": "Sitedeki en sakin program; yürüyüş az ve isteğe bağlı. Çocuklu ve yaşlı misafirler için en uygun tur.",
+      "tip": "Şelale çevresindeki yollar toprak ve ıslak olabilir; bebek arabası her yerde rahat gitmez."
     },
     "trabzon": {
       "name": "Trabzon Turu",
@@ -146,7 +155,10 @@
         "Hamsiköy sütlaç molası",
         "Trabzon Ayasofyası",
         "Çay bahçelerinde mola"
-      ]
+      ],
+      "season": "Yaylalar için haziran sonu–eylül. Kışın bazı yayla yolları kapanır; Uzungöl yıl boyu açıktır.",
+      "pace": "Yolculuk uzun, yürüyüş az. Sümela Manastırı'na çıkış yokuşlu ve her yaş için uygun değil.",
+      "tip": "Karadeniz Türkiye'nin en çok yağış alan bölgesi; yazın bile yağmurluk işe yarar ve sis manzarayı kapatabilir."
     },
     "bodrum": {
       "name": "Bodrum Turu",
@@ -160,7 +172,10 @@
         "Gümbet ve Bitez koyları",
         "Yalıkavak Marina",
         "Bodrum çarşısında serbest zaman"
-      ]
+      ],
+      "season": "Mayıs–ekim. Deniz temmuz–eylül arası en ılıktır; nisan ve kasım serin ama sakin.",
+      "pace": "Tekne turunda yürüyüş yok; kale ve çarşı gezisinde orta düzey. Güneş koruması gerekir.",
+      "tip": "Tekne turlarında yüzme molası verilir; mayo ve havlu getirin. Öğle güneşi Ege'de sert, şapka işe yarar."
     }
   },
   "whyUs": {
@@ -247,7 +262,11 @@
     "colHighlight": "Öne çıkan durak",
     "whatsIncludedTitle": "Fiyata dahil olan ve olmayanlar",
     "whatsIncludedSubtitle": "Rezervasyondan önce neyin dahil olduğunu bilmeniz için.",
-    "swipeHint": "Tabloyu yana kaydırarak tüm sütunları görebilirsiniz"
+    "swipeHint": "Tabloyu yana kaydırarak tüm sütunları görebilirsiniz",
+    "practicalTitle": "Bu turda pratik bilgiler",
+    "seasonLabel": "En iyi mevsim",
+    "paceLabel": "Tempo ve yürüyüş",
+    "tipLabel": "Bilmekte fayda var"
   },
   "about": {
     "title": "Hakkımızda",

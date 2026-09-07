@@ -1030,6 +1030,274 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "istanbulda-toplu-tasima-rehberi",
+    image: "/images/places/kadikoy.jpg",
+    minutes: 4,
+    title: {
+      tr: "İstanbul'da toplu taşıma: metro, tramvay, vapur",
+      ar: "المواصلات في إسطنبول: المترو والترام والعبّارات",
+      en: "Getting around Istanbul: metro, tram and ferry",
+    },
+    excerpt: {
+      tr: "İstanbulkart nedir, hangi hat nereye gider ve ne zaman özel araç daha mantıklı olur.",
+      ar: "ما هي بطاقة إسطنبول، وأي خط يذهب إلى أين، ومتى تكون السيارة الخاصة أنسب.",
+      en: "What the Istanbulkart is, which line goes where, and when a private car makes more sense.",
+    },
+    facts: [
+      {
+        label: { tr: "Ödeme", ar: "الدفع", en: "Payment" },
+        value: { tr: "İstanbulkart, tüm hatlarda geçerli", ar: "بطاقة إسطنبول، صالحة على كل الخطوط", en: "Istanbulkart, valid on all lines" },
+      },
+      {
+        label: { tr: "Tarihî yarımada", ar: "شبه الجزيرة التاريخية", en: "Historic peninsula" },
+        value: { tr: "T1 tramvay hattı", ar: "خط الترام T1", en: "The T1 tram line" },
+      },
+      {
+        label: { tr: "Boğaz geçişi", ar: "عبور البوسفور", en: "Crossing the Bosphorus" },
+        value: { tr: "Vapur, en keyiflisi", ar: "العبّارة، الأمتع", en: "Ferry, the nicest way" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "İstanbulkart ile başlayın",
+          ar: "ابدأ ببطاقة إسطنبول",
+          en: "Start with the Istanbulkart",
+        },
+        body: {
+          tr: "İstanbulkart metro, tramvay, otobüs, vapur ve füniküler hatlarının hepsinde geçer; havalimanı dahil çoğu istasyonda otomatlardan alınır ve yüklenir. Tek kartla ailenin tamamı geçebilir, yani her kişiye ayrı kart almak zorunlu değildir. Aktarmalarda indirimli tarife uygulanır.",
+          ar: "بطاقة إسطنبول صالحة على المترو والترام والحافلات والعبّارات والقطار المائل جميعاً؛ وتُشترى وتُشحن من الأجهزة في معظم المحطات بما فيها المطار. ويمكن للعائلة كلها العبور ببطاقة واحدة، فلا يلزم شراء بطاقة لكل شخص. وتُطبَّق تعرفة مخفّضة عند التبديل بين الخطوط.",
+          en: "The Istanbulkart works on the metro, tram, buses, ferries and funiculars; you buy and top it up from machines at most stations, including the airport. One card can pass a whole family, so you do not need one each. Transfers between lines are discounted.",
+        },
+      },
+      {
+        heading: {
+          tr: "Hangi hat nereye gider",
+          ar: "أي خط يذهب إلى أين",
+          en: "Which line goes where",
+        },
+        body: {
+          tr: "T1 tramvay hattı tarihî yarımadanın omurgasıdır: Sultanahmet, Kapalıçarşı, Eminönü ve Karaköy bu hat üzerindedir. M2 metro Taksim ve Şişli'yi bağlar. Vapurlar Eminönü, Karaköy, Kabataş ve Üsküdar arasında işler ve Boğaz'ı geçmenin en ucuz, en keyifli yoludur.",
+          ar: "خط الترام T1 هو العمود الفقري لشبه الجزيرة التاريخية: السلطان أحمد والبازار المسقوف وأمينونو وكاراكوي جميعها على هذا الخط. ومترو M2 يربط تقسيم بشيشلي. أما العبّارات فتعمل بين أمينونو وكاراكوي وكاباطاش وأسكودار، وهي أرخص وأمتع طريقة لعبور البوسفور.",
+          en: "The T1 tram is the spine of the historic peninsula: Sultanahmet, the Grand Bazaar, Eminonu and Karakoy are all on it. The M2 metro links Taksim and Sisli. Ferries run between Eminonu, Karakoy, Kabatas and Uskudar, and are the cheapest and most enjoyable way to cross the Bosphorus.",
+        },
+      },
+      {
+        heading: {
+          tr: "Ne zaman özel araç daha mantıklı",
+          ar: "متى تكون السيارة الخاصة أنسب",
+          en: "When a private car makes more sense",
+        },
+        body: {
+          tr: "Toplu taşıma tek başına ya da çift gezenler için ucuz ve hızlıdır. Bagajlı bir varış, dört-beş kişilik bir aile, bebek arabası, gece geç saat ya da şehir dışı bir gün söz konusuysa hesap değişir: aktarmalar ve merdivenler zaman ve enerji alır. Pratik yaklaşım ikisini karıştırmaktır — havalimanı ve şehir dışı için araç, tarihî yarımada içinde tramvay.",
+          ar: "المواصلات العامة رخيصة وسريعة لمن يسافر وحده أو لشخصين. أما مع الوصول بالحقائب، أو عائلة من أربعة أو خمسة، أو عربة أطفال، أو ساعة متأخرة ليلاً، أو يوم خارج المدينة، فيتغيّر الحساب: التبديلات والسلالم تأخذ وقتاً وطاقة. والنهج العملي هو المزج بينهما — سيارة للمطار وخارج المدينة، وترام داخل شبه الجزيرة التاريخية.",
+          en: "Public transport is cheap and quick for one or two travellers. With a luggage-laden arrival, a family of four or five, a pushchair, a late-night hour or a day out of town, the calculation changes: transfers and stairs cost time and energy. The practical approach is to mix them — a car for the airport and out-of-town days, the tram inside the historic peninsula.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "istanbulda-hava-durumu-ve-giyim",
+    image: "/images/places/bogaz-kopru.jpg",
+    minutes: 4,
+    title: {
+      tr: "İstanbul'da hava ve ne giyilir: ay ay rehber",
+      ar: "الطقس في إسطنبول وماذا ترتدي: دليل شهرياً",
+      en: "Istanbul weather and what to wear, month by month",
+    },
+    excerpt: {
+      tr: "Nem, rüzgâr ve yağmur — sıcaklık rakamının söylemediği üç şey ve valize ne koymalı.",
+      ar: "الرطوبة والرياح والمطر — ثلاثة أشياء لا يقولها رقم الحرارة، وماذا تضع في الحقيبة.",
+      en: "Humidity, wind and rain — three things the temperature number does not tell you, and what to pack.",
+    },
+    facts: [
+      {
+        label: { tr: "En sıcak", ar: "الأحرّ", en: "Hottest" },
+        value: { tr: "Temmuz–ağustos, nemli", ar: "يوليو–أغسطس، رطب", en: "July–August, humid" },
+      },
+      {
+        label: { tr: "En yağışlı", ar: "الأكثر مطراً", en: "Wettest" },
+        value: { tr: "Aralık–mart", ar: "ديسمبر–مارس", en: "December–March" },
+      },
+      {
+        label: { tr: "Her mevsim", ar: "في كل موسم", en: "Year-round" },
+        value: { tr: "Rüzgâr ve rahat ayakkabı", ar: "الرياح وحذاء مريح", en: "Wind and comfortable shoes" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Sıcaklık rakamı yanıltır",
+          ar: "رقم الحرارة يخدع",
+          en: "The temperature number misleads",
+        },
+        body: {
+          tr: "İstanbul denizle çevrilidir ve nem, hissedilen sıcaklığı yazın yukarı, kışın aşağı çeker: 30 derece Körfez'dekinden farklı hissedilir, 8 derece de öyle. Boğaz'dan gelen rüzgâr yıl boyu vardır ve akşamları belirgin şekilde serinletir; tekne turunda bunu en çok hissedersiniz.",
+          ar: "إسطنبول محاطة بالبحر، والرطوبة ترفع الإحساس بالحرارة صيفاً وتخفضه شتاءً: فثلاثون درجة هنا تُحسّ غير ما تُحسّ في الخليج، وكذلك ثماني درجات. ورياح البوسفور موجودة طوال العام وتبرّد المساء بوضوح؛ وتشعر بها أكثر ما تشعر في جولة القارب.",
+          en: "Istanbul is surrounded by water, and humidity pushes the felt temperature up in summer and down in winter: 30 degrees feels different from 30 in the Gulf, and so does 8. Wind off the Bosphorus is there year-round and cools the evenings noticeably; you feel it most on a boat trip.",
+        },
+      },
+      {
+        heading: {
+          tr: "Mevsim mevsim ne koymalı",
+          ar: "ماذا تضع في كل موسم",
+          en: "What to pack by season",
+        },
+        body: {
+          tr: "İlkbahar ve sonbaharda kat kat giyinmek en doğrusu: sabah serin, öğle ılık, akşam yine serin olur; ince bir yağmurluk yer kaplamaz. Yazın hafif ve nefes alan kumaşlar, şapka ve akşamlar için ince bir üst. Kışın su geçirmez ayakkabı, yağmurun kendisinden çok ıslak kaldırımlar yüzünden gerekir.",
+          ar: "في الربيع والخريف الأصحّ هو اللبس طبقات: الصباح بارد والظهر دافئ والمساء بارد مجدداً؛ ومعطف مطر خفيف لا يأخذ مساحة. وفي الصيف أقمشة خفيفة تتنفّس وقبعة وسترة رقيقة للمساء. وفي الشتاء يلزم حذاء مقاوم للماء، بسبب الأرصفة المبتلّة أكثر من المطر نفسه.",
+          en: "In spring and autumn layers are the answer: mornings are cool, midday mild, evenings cool again; a light waterproof takes no space. In summer, light breathable fabrics, a hat and a thin layer for evenings. In winter, waterproof shoes matter more because of wet pavements than because of the rain itself.",
+        },
+      },
+      {
+        heading: {
+          tr: "Camiler ve ayakkabı",
+          ar: "المساجد والأحذية",
+          en: "Mosques and shoes",
+        },
+        body: {
+          tr: "Cami ziyaretlerinde omuz ve diz kapalı olmalı, kadınlar için başörtüsü gerekir; girişte ücretsiz örtü verilir ama kendi şalınızı getirmek daha rahattır. Ayakkabılar çıkarılıp poşete konur, o yüzden kolay çıkan ayakkabı ve temiz çorap günü kolaylaştırır. Tarihî yarımadada zemin çoğu yerde taş döşelidir; topuklu ayakkabı bu turda işe yaramaz.",
+          ar: "في زيارة المساجد يجب ستر الكتفين والركبتين، وللنساء غطاء رأس؛ ويُعطى غطاء مجاني عند المدخل لكن إحضار شالك أريح. وتُخلع الأحذية وتوضع في كيس، لذا فالحذاء سهل الخلع والجوارب النظيفة يسهّلان اليوم. وأرض شبه الجزيرة التاريخية مرصوفة بالحجر في معظمها؛ والكعب العالي لا ينفع في هذه الجولة.",
+          en: "For mosque visits shoulders and knees must be covered and women need a headscarf; a free cover is given at the entrance, though bringing your own shawl is more comfortable. Shoes come off and go into a bag, so easy-off shoes and clean socks make the day easier. Much of the historic peninsula is cobbled; heels do not work on this tour.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "turkiyede-sehirler-arasi-mesafeler",
+    image: "/images/tours/trabzon.jpg",
+    minutes: 4,
+    title: {
+      tr: "Türkiye'de şehirler arası mesafeler ve süreler",
+      ar: "المسافات والمدد بين المدن التركية",
+      en: "Distances and travel times between Turkish cities",
+    },
+    excerpt: {
+      tr: "Hangi şehir günübirlik gidilir, hangisi uçak ister — programı kurmadan önce bilinmesi gereken.",
+      ar: "أي مدينة تُزار في يوم واحد وأيها تحتاج طائرة — ما يجب معرفته قبل وضع البرنامج.",
+      en: "Which cities work as a day trip and which need a flight — what to know before planning.",
+    },
+    facts: [
+      {
+        label: { tr: "Günübirlik", ar: "زيارة يوم", en: "Day trip" },
+        value: { tr: "Sapanca, Bursa, Yalova, Şile", ar: "سبانجا، بورصة، يالوفا، شيله", en: "Sapanca, Bursa, Yalova, Sile" },
+      },
+      {
+        label: { tr: "Uçakla", ar: "بالطائرة", en: "By air" },
+        value: { tr: "Trabzon, Bodrum, Antalya", ar: "طرابزون، بودروم، أنطاليا", en: "Trabzon, Bodrum, Antalya" },
+      },
+      {
+        label: { tr: "Kural", ar: "القاعدة", en: "Rule of thumb" },
+        value: { tr: "Tek yön 3 saati aşarsa konaklama", ar: "إن تجاوز الاتجاه الواحد 3 ساعات فبِت هناك", en: "Over 3 hrs one way: stay the night" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "İstanbul'dan günübirlik gidilenler",
+          ar: "ما يُزار من إسطنبول في يوم واحد",
+          en: "Day trips from Istanbul",
+        },
+        body: {
+          tr: "Sapanca yaklaşık 130 km, Yalova 130 km, Bursa 240 km, Şile ve Ağva 70–100 km uzaklıktadır. Bunların hepsi sabah çıkıp akşam dönülecek mesafededir. Bursa en uzunudur ve gün içinde iki-üç durak sığar; daha fazlasını sıkıştırmak günü yolda geçirmek olur.",
+          ar: "تبعد سبانجا نحو 130 كم، ويالوفا 130 كم، وبورصة 240 كم، وشيله وآغوا 70–100 كم. وكلها على مسافة تسمح بالخروج صباحاً والعودة مساءً. وبورصة أطولها، ويتّسع اليوم لمحطتين أو ثلاث؛ وحشر أكثر من ذلك يعني قضاء اليوم على الطريق.",
+          en: "Sapanca is about 130 km away, Yalova 130 km, Bursa 240 km, and Sile and Agva 70–100 km. All are close enough to leave in the morning and return in the evening. Bursa is the longest, and two or three stops fit into the day; squeezing in more means spending the day on the road.",
+        },
+      },
+      {
+        heading: {
+          tr: "Uçak isteyen şehirler",
+          ar: "المدن التي تحتاج طائرة",
+          en: "Cities that need a flight",
+        },
+        body: {
+          tr: "Trabzon İstanbul'a yaklaşık 1.000 km, Bodrum 700 km, Antalya 700 km uzaklıktadır; karayoluyla gitmek bir günü tamamen alır. Bu şehirlere uçakla gidilir ve orada ayrıca araç gerekir, çünkü asıl gezilecek yerler şehir merkezlerinin dışındadır: Uzungöl, Sümela, Ayder ya da Ege koyları.",
+          ar: "تبعد طرابزون عن إسطنبول نحو 1000 كم، وبودروم 700 كم، وأنطاليا 700 كم؛ والذهاب برّاً يستهلك يوماً كاملاً. تُقصد هذه المدن جواً، وتحتاج فيها إلى سيارة أيضاً، لأن الأماكن الأساسية خارج مراكز المدن: أوزنجول وسوميلا وآيدر أو خلجان إيجة.",
+          en: "Trabzon is about 1,000 km from Istanbul, Bodrum 700 km and Antalya 700 km; driving takes a full day. These are reached by air, and you still need a vehicle there, because the places worth seeing lie outside the city centres: Uzungol, Sumela, Ayder or the Aegean bays.",
+        },
+      },
+      {
+        heading: {
+          tr: "Programı kurarken kullanılabilecek kural",
+          ar: "قاعدة تنفع عند وضع البرنامج",
+          en: "A rule for building the plan",
+        },
+        body: {
+          tr: "Basit bir ölçü: tek yön üç saati aşıyorsa o şehri günübirlik yapmayın, geceleyin. Üç saatin altındaki her yer gidiş-dönüş bir güne sığar ama iki tarafta da trafik payı bırakmak gerekir. Uçuş günü şehir dışına çıkmamak da genel bir kolaylıktır: valizle yol, ilk günü olduğundan uzun gösterir.",
+          ar: "مقياس بسيط: إن تجاوز الاتجاه الواحد ثلاث ساعات فلا تجعل تلك المدينة زيارة يوم واحد، بل بِت فيها. وكل ما دون الثلاث ساعات يتّسع ذهاباً وإياباً في يوم، لكن يجب ترك هامش للازدحام في الاتجاهين. ومن التسهيلات العامة ألّا تخرج خارج المدينة في يوم الطيران: فالطريق بالحقائب يجعل اليوم الأول أطول مما هو.",
+          en: "A simple measure: if one direction is over three hours, do not make that city a day trip — stay the night. Anything under three hours fits there and back in a day, but leave a traffic margin both ways. Not leaving the city on a flight day is another general ease: travelling with suitcases makes the first day feel longer than it is.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "turkiyede-balayi-rehberi",
+    image: "/images/tours/bodrum.jpg",
+    minutes: 4,
+    title: {
+      tr: "Türkiye'de balayı: nereye, ne zaman, kaç gün",
+      ar: "شهر العسل في تركيا: أين ومتى وكم يوماً",
+      en: "A honeymoon in Türkiye: where, when and how long",
+    },
+    excerpt: {
+      tr: "İstanbul mu Ege mi Karadeniz mi — mevsime ve tempoya göre üç farklı rota.",
+      ar: "إسطنبول أم بحر إيجة أم البحر الأسود — ثلاثة مسارات بحسب الموسم والإيقاع.",
+      en: "Istanbul, the Aegean or the Black Sea — three routes by season and pace.",
+    },
+    facts: [
+      {
+        label: { tr: "Klasik rota", ar: "المسار الكلاسيكي", en: "Classic route" },
+        value: { tr: "İstanbul + Boğaz + Sapanca", ar: "إسطنبول + البوسفور + سبانجا", en: "Istanbul + Bosphorus + Sapanca" },
+      },
+      {
+        label: { tr: "Yaz rotası", ar: "مسار الصيف", en: "Summer route" },
+        value: { tr: "Bodrum ve Ege koyları", ar: "بودروم وخلجان إيجة", en: "Bodrum and the Aegean bays" },
+      },
+      {
+        label: { tr: "Süre", ar: "المدة", en: "Length" },
+        value: { tr: "5–7 gün dengeli", ar: "5–7 أيام متوازنة", en: "5–7 days is balanced" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Mahremiyet ilk şart",
+          ar: "الخصوصية شرط أول",
+          en: "Privacy comes first",
+        },
+        body: {
+          tr: "Balayı programında en çok fark yaratan şey, kalabalıkla paylaşılmayan bir düzendir: özel araç, grup turuna katılmama ve saatleri kendi belirleme. Bu, gezilecek yerlerin sayısını azaltır ama günü rahatlatır — balayında az yer iyi görmek, çok yeri koşarak görmekten daha iyi sonuç verir.",
+          ar: "أكثر ما يُحدث فرقاً في برنامج شهر العسل هو ترتيب لا يُشارَك فيه الزحام: سيارة خاصة، وعدم الانضمام إلى جولة جماعية، وتحديد الأوقات بأنفسكم. وهذا يقلّل عدد الأماكن لكنه يريح اليوم — وفي شهر العسل رؤية أماكن أقل بشكل جيد أفضل من رؤية كثيرة على عجل.",
+          en: "What makes the most difference on a honeymoon is an arrangement not shared with a crowd: a private vehicle, no group tour and setting your own hours. That reduces the number of places but eases the day — on a honeymoon, seeing fewer places well beats rushing through many.",
+        },
+      },
+      {
+        heading: {
+          tr: "Mevsime göre üç rota",
+          ar: "ثلاثة مسارات بحسب الموسم",
+          en: "Three routes by season",
+        },
+        body: {
+          tr: "İlkbahar ve sonbaharda İstanbul artı Sapanca ya da Bursa iyi çalışır: hava gezmeye uygun, kalabalık az. Yazın Ege tarafı öne çıkar; Bodrum'da tekne ile koy turu ve akşam marina. Kışın Uludağ ve Kartepe kar için tercih edilir, İstanbul'da ise Boğaz manzaralı bir otel programın merkezi olur.",
+          ar: "في الربيع والخريف تعمل إسطنبول مع سبانجا أو بورصة جيداً: الجو مناسب للتجوّل والزحام أقل. وفي الصيف تتقدّم جهة بحر إيجة؛ في بودروم جولة خلجان بالقارب ومساء في المارينا. وفي الشتاء تُقصد أولوداغ وكارتبه للثلج، وفي إسطنبول يصبح فندق بإطلالة على البوسفور مركز البرنامج.",
+          en: "In spring and autumn, Istanbul plus Sapanca or Bursa works well: the weather suits walking and there are fewer crowds. In summer the Aegean side comes forward; in Bodrum a boat trip round the bays and an evening at the marina. In winter people go to Uludag and Kartepe for snow, while in Istanbul a Bosphorus-view hotel becomes the centre of the plan.",
+        },
+      },
+      {
+        heading: {
+          tr: "Kaç gün ve nasıl bölünür",
+          ar: "كم يوماً وكيف تُقسَّم",
+          en: "How many days and how to split them",
+        },
+        body: {
+          tr: "Beş-yedi gün dengeli bir süredir: üç gün İstanbul, bir gün şehir dışı, kalanı serbest. Her güne bir ana durak koymak ve öğleden sonraları boş bırakmak, programın yorucu olmasını engeller. İki şehir arası uçuş varsa o günü gezi günü saymamak gerekir; havalimanı ve bekleme günün yarısını alır.",
+          ar: "خمسة إلى سبعة أيام مدة متوازنة: ثلاثة أيام في إسطنبول، ويوم خارج المدينة، والباقي حر. ووضع محطة رئيسية واحدة لكل يوم وترك فترات ما بعد الظهر فارغة يمنع أن يصبح البرنامج مُتعباً. وإن كان بين مدينتين رحلة طيران فلا يُحسب ذلك اليوم يوم زيارة؛ فالمطار والانتظار يأخذان نصف اليوم.",
+          en: "Five to seven days is a balanced length: three days in Istanbul, one out of town, the rest free. Putting one main stop in each day and leaving afternoons open keeps the programme from becoming tiring. If there is a flight between two cities, do not count that day as a sightseeing day; the airport and waiting take half of it.",
+        },
+      },
+    ],
+  },
 ];
 
 export function guideBySlug(slug: string) {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, Check, Clock, Info, MapPin, X } from "lucide-react";
+import { ArrowLeft, CalendarDays, Check, Clock, Footprints, Info, MapPin, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
@@ -195,6 +195,36 @@ export default async function TourDetailPage({
                 </ul>
               </div>
             </div>
+
+            {/*
+              Pratik bilgiler. Sayfa "ne göreceksiniz" anlatıyordu ama
+              rezervasyondan önceki asıl üç soruyu cevaplamıyordu: hangi
+              mevsimde gitmeli, ne kadar yürünüyor, neye dikkat etmeli.
+            */}
+            <h2 className="mt-12 font-display text-[24px] font-semibold sm:text-[28px]">
+              {tPage("practicalTitle")}
+            </h2>
+            <dl className="mt-6 grid gap-4 sm:grid-cols-3">
+              {(
+                [
+                  { icon: CalendarDays, label: tPage("seasonLabel"), value: t(`${tour.key}.season`) },
+                  { icon: Footprints, label: tPage("paceLabel"), value: t(`${tour.key}.pace`) },
+                  { icon: Info, label: tPage("tipLabel"), value: t(`${tour.key}.tip`) },
+                ] as const
+              ).map(({ icon: Icon, label, value }) => (
+                <div key={label} className="accent-card p-5">
+                  <dt className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                    <Icon
+                      className="size-3.5"
+                      style={{ color: "var(--brand-gold-deep)" }}
+                      aria-hidden="true"
+                    />
+                    {label}
+                  </dt>
+                  <dd className="mt-2.5 text-[13.5px] leading-[1.75]">{value}</dd>
+                </div>
+              ))}
+            </dl>
 
             <div
               className="mt-6 flex items-start gap-4 rounded-[var(--radius-card)] border px-6 py-5"

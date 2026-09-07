@@ -104,7 +104,10 @@
         "Bosphorus boat trip",
         "Galata Tower and Karakoy",
         "Lunch break"
-      ]
+      ],
+      "season": "April–May and September–October. In midsummer the middle of the day is hot and crowded, so the programme spreads across early morning and late afternoon.",
+      "pace": "Around 3–4 km of walking across the day. Topkapi Palace itself is a large site; you spend an hour or two on your feet inside.",
+      "tip": "In mosques shoulders and knees must be covered and women need a headscarf; a free cover is provided at the entrance. Shoes come off, so socks help."
     },
     "bursa": {
       "name": "Bursa Tour",
@@ -118,7 +121,10 @@
         "Cumalikizik village (UNESCO)",
         "The ancient Inkaya plane tree",
         "Iskender kebab and candied chestnuts"
-      ]
+      ],
+      "season": "December–March for snow, April–June for greenery. The cable car can close in bad weather.",
+      "pace": "Moderate walking in town; the stone lanes of Cumalikizik are narrow and sloping, so comfortable shoes matter.",
+      "tip": "At the summit of Uludag it is 8–10 degrees colder than the city; even in summer bring a light jacket."
     },
     "sapanca": {
       "name": "Sapanca Tour",
@@ -132,7 +138,10 @@
         "Trout restaurants over the streams",
         "Forest walk",
         "Local produce market"
-      ]
+      ],
+      "season": "April–October is the easiest window. In winter people go to Kartepe for snow, but road conditions vary.",
+      "pace": "The calmest programme on the site; walking is limited and optional. The best tour for families with children and older guests.",
+      "tip": "Paths around the waterfalls can be unpaved and wet; a pushchair will not roll easily everywhere."
     },
     "trabzon": {
       "name": "Trabzon Tour",
@@ -146,7 +155,10 @@
         "Hamsikoy rice pudding stop",
         "Hagia Sophia of Trabzon",
         "Tea garden break"
-      ]
+      ],
+      "season": "Late June–September for the plateaus. Some plateau roads close in winter; Uzungol is open year-round.",
+      "pace": "A long drive with little walking. The climb to the Sumela Monastery is steep and not suitable for every age.",
+      "tip": "The Black Sea is Türkiye's rainiest region; a raincoat helps even in summer and mist can close the view."
     },
     "bodrum": {
       "name": "Bodrum Tour",
@@ -160,7 +172,10 @@
         "Gumbet and Bitez bays",
         "Yalikavak Marina",
         "Free time in Bodrum bazaar"
-      ]
+      ],
+      "season": "May–October. The sea is warmest between July and September; April and November are cooler but quiet.",
+      "pace": "No walking on the boat trip; moderate around the castle and bazaar. Sun protection is needed.",
+      "tip": "Boat trips include a swimming stop, so bring swimwear and a towel. The midday Aegean sun is strong; a hat helps."
     }
   },
   "whyUs": {
@@ -247,7 +262,11 @@
     "colHighlight": "Highlight",
     "whatsIncludedTitle": "What the price includes and excludes",
     "whatsIncludedSubtitle": "So you know what is covered before you book.",
-    "swipeHint": "Swipe the table sideways to see all columns"
+    "swipeHint": "Swipe the table sideways to see all columns",
+    "practicalTitle": "Practical notes for this tour",
+    "seasonLabel": "Best season",
+    "paceLabel": "Pace and walking",
+    "tipLabel": "Worth knowing"
   },
   "about": {
     "title": "About Us",

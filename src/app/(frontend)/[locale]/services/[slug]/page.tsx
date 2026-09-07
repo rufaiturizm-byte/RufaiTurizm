@@ -55,7 +55,7 @@ export async function generateMetadata({
 
   return {
     title: t(`${service.key}.title`),
-    description: t(`${service.key}.description`),
+    description: t(`${service.key}.metaDescription`),
     openGraph: { images: [service.image] },
     alternates: alternatesFor({ pathname: "/services/[slug]", params: { slug } }, locale),
   };

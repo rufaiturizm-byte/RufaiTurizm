@@ -62,6 +62,16 @@ export interface Guide {
   facts: GuideFact[];
   sections: GuideSection[];
   faq: GuideFaq[];
+  /**
+   * Arama sonucundaki başlık ve açıklama.
+   *
+   * `title` ve `excerpt` sayfada ve kartta okunmak için yazıldı; arama
+   * sonucunun ölçüleri başka: başlık 60 karakterde kesiliyor (marka eki
+   * dahil), açıklama ise 155'e kadar yer veriyor ve tek satırlık bir
+   * özet o alanın yarısını boş bırakıyor. Bu yüzden ayrı yazılıyorlar.
+   * Verilmezse `title` ve `excerpt` kullanılır.
+   */
+  seo?: { title?: Text; description?: Text };
 }
 
 export const guides: Guide[] = [
@@ -93,6 +103,14 @@ export const guides: Guide[] = [
         value: { tr: "İstanbul Havalimanı (IST)", ar: "مطار إسطنبول (IST)", en: "Istanbul Airport (IST)" },
       },
     ],
+    seo: {
+      title: { tr: "İstanbul Havalimanı'ndan Şehre Ulaşım", ar: "من مطار إسطنبول إلى المدينة", en: "Istanbul Airport to City Centre" },
+      description: {
+        tr: "İstanbul Havalimanı merkeze 45–50 km. Metro, taksi ve özel transfer seçenekleri, gerçek yolculuk süreleri ve bagajlı bir aileyle hangisinin işe yaradığı.",
+        ar: "مطار إسطنبول يبعد 45–50 كم عن المركز. خيارات المترو والتاكسي والنقل الخاص، وأوقات الرحلة الحقيقية، وأيّها يناسب عائلة مع أمتعة.",
+        en: "Istanbul Airport is 45–50 km from the centre. Metro, taxi and private transfer options, real journey times, and which one works with luggage and family.",
+      },
+    },
     faq: [
       {
         question: { tr: "İstanbul Havalimanı şehir merkezine kaç kilometre?", ar: "كم تبعد مطار إسطنبول عن مركز المدينة؟", en: "How far is Istanbul Airport from the city centre?" },
@@ -192,6 +210,14 @@ export const guides: Guide[] = [
         value: { tr: "Sabiha Gökçen (SAW)", ar: "صبيحة كوكجن (SAW)", en: "Sabiha Gokcen (SAW)" },
       },
     ],
+    seo: {
+      title: { tr: "Sabiha Gökçen'den İstanbul'a Ulaşım", ar: "من صبيحة كوكجن إلى إسطنبول", en: "Sabiha Gökçen to Istanbul" },
+      description: {
+        tr: "Sabiha Gökçen Anadolu yakasında: Avrupa yakasına 60–90 dakika. İki havalimanı arasındaki fark, gece inen uçuşlar ve karşılama noktası.",
+        ar: "صبيحة كوكجن في الجانب الآسيوي: 60–90 دقيقة إلى الجانب الأوروبي. الفرق بين المطارين، والرحلات الليلية، ونقطة الاستقبال.",
+        en: "Sabiha Gökçen sits on the Asian side: 60–90 minutes to the European side. The difference between the two airports, night arrivals and where you are met.",
+      },
+    },
     faq: [
       {
         question: { tr: "Sabiha Gökçen'den Avrupa yakasına yolculuk ne kadar sürer?", ar: "كم تستغرق الرحلة من صبيحة كوكجن إلى الجانب الأوروبي؟", en: "How long does it take from Sabiha Gökçen to the European side?" },
@@ -273,6 +299,14 @@ export const guides: Guide[] = [
         value: { tr: "Ortaköy, Beşiktaş, Üsküdar", ar: "أورتاكوي، بشكتاش، أسكودار", en: "Ortakoy, Besiktas, Uskudar" },
       },
     ],
+    seo: {
+      title: { tr: "İstanbul'da Nerede Kalınır? Semt Rehberi", ar: "أين تسكن في إسطنبول؟ دليل الأحياء", en: "Where to Stay in Istanbul: District Guide" },
+      description: {
+        tr: "Sultanahmet, Taksim, Şişli ve Boğaz kıyısı karşılaştırmalı: hangi semt kime uyar, metroya uzaklık, akşamları nasıl bir yer ve ilk ziyarette hangisi seçilmeli.",
+        ar: "مقارنة بين السلطان أحمد وتقسيم وشيشلي وساحل البوسفور: أي حي يناسب مَن، والقرب من المترو، وكيف يكون المساء، وما يُختار في الزيارة الأولى.",
+        en: "Sultanahmet, Taksim, Şişli and the Bosphorus shore compared: which district suits whom, distance to the metro, what evenings are like, and where to stay first.",
+      },
+    },
     faq: [
       {
         question: { tr: "İstanbul'a ilk kez gelen biri hangi semtte kalmalı?", ar: "في أي حي يُفضّل أن يقيم زائر إسطنبول لأول مرة؟", en: "Which district should a first-time visitor stay in?" },
@@ -372,6 +406,14 @@ export const guides: Guide[] = [
         value: { tr: "İlkbahar ve sonbahar", ar: "الربيع والخريف", en: "Spring and autumn" },
       },
     ],
+    seo: {
+      title: { tr: "Sapanca ve Maşukiye Rehberi", ar: "دليل سبانجا وماشوكية", en: "Sapanca and Maşukiye Guide" },
+      description: {
+        tr: "İstanbul'a 130 km, günübirlik gidilir. Göl, şelaleler ve alabalık lokantaları; hangi mevsimde gitmeli ve çocuklu ailelerle nelere dikkat edilmeli.",
+        ar: "تبعد 130 كم عن إسطنبول وتصلح لرحلة يوم. البحيرة والشلالات ومطاعم السمك؛ وأفضل موسم للزيارة، وما يُراعى مع الأطفال.",
+        en: "130 km from Istanbul and doable in a day. The lake, the waterfalls and trout restaurants; the best season to go and what to watch for with children.",
+      },
+    },
     faq: [
       {
         question: { tr: "Sapanca İstanbul'dan kaç kilometre, günübirlik gidilir mi?", ar: "كم تبعد سبانجا عن إسطنبول وهل تصلح لرحلة يوم واحد؟", en: "How far is Sapanca from Istanbul, and can you do it in a day?" },
@@ -471,6 +513,14 @@ export const guides: Guide[] = [
         value: { tr: "Haziran sonu – eylül", ar: "أواخر يونيو – سبتمبر", en: "Late June – September" },
       },
     ],
+    seo: {
+      title: { tr: "Trabzon, Uzungöl ve Karadeniz Yaylaları", ar: "طرابزون وأوزنجول وهضاب البحر الأسود", en: "Trabzon, Uzungöl and the Black Sea" },
+      description: {
+        tr: "Uzungöl, Sümela ve Ayder için kaç gün gerekir, yayla sezonu ne zaman açılır, Trabzon'a neden uçakla gidilir — Karadeniz programını kurmadan önce.",
+        ar: "كم يوماً يلزم لأوزنجول وسوميلا وآيدر، ومتى يبدأ موسم المرتفعات، ولماذا يُذهب إلى طرابزون جواً — قبل وضع برنامج البحر الأسود.",
+        en: "How many days Uzungöl, Sümela and Ayder need, when the highland season opens, and why you fly to Trabzon — before planning a Black Sea trip.",
+      },
+    },
     faq: [
       {
         question: { tr: "Trabzon'a karayoluyla gidilir mi?", ar: "هل يمكن الذهاب إلى طرابزون براً؟", en: "Can you drive to Trabzon?" },
@@ -570,6 +620,14 @@ export const guides: Guide[] = [
         value: { tr: "Sapanca, Bolu, yaylalar", ar: "سبانجا، بولو، الهضاب", en: "Sapanca, Bolu, the plateaus" },
       },
     ],
+    seo: {
+      title: { tr: "Türkiye'ye Ne Zaman Gitmeli? Mevsim Rehberi", ar: "متى تزور تركيا؟ دليل المواسم", en: "When to Visit Türkiye: Season Guide" },
+      description: {
+        tr: "Ay ay hava, kalabalık ve fiyat dengesi. Nisan–mayıs neden en rahat dönem, yaz sıcağında nereye kaçılır, kar için hangi aylar planlanır.",
+        ar: "الطقس والزحام وتوازن الأسعار شهراً بشهر. لماذا نيسان وأيار أريح فترة، وإلى أين يُهرب من حر الصيف، وأي الأشهر تُخطَّط لرؤية الثلج.",
+        en: "Weather, crowds and prices month by month. Why April–May is the easiest window, where to escape the summer heat, and which months to plan for snow.",
+      },
+    },
     faq: [
       {
         question: { tr: "Türkiye'ye gitmek için en iyi aylar hangileri?", ar: "ما أفضل الأشهر لزيارة تركيا؟", en: "Which are the best months to visit Türkiye?" },
@@ -669,6 +727,14 @@ export const guides: Guide[] = [
         value: { tr: "İki günübirlik", ar: "رحلتان ليوم واحد", en: "Two day trips" },
       },
     ],
+    seo: {
+      title: { tr: "İstanbul'da Bir Hafta: Aile Programı", ar: "أسبوع في إسطنبول: برنامج عائلي", en: "One Week in Istanbul: Family Plan" },
+      description: {
+        tr: "Gün gün yedi günlük program: beş gün şehir, iki gün Sapanca ya da Bursa. Çocuklu ailelerde günde kaç durak gezilir ve şehir dışı hangi güne konur.",
+        ar: "برنامج سبعة أيام يوماً بيوم: خمسة أيام للمدينة ويومان لسبانجا أو بورصة. كم محطة في اليوم مع الأطفال، وفي أي يوم يُوضع الخروج من المدينة.",
+        en: "A seven-day plan, day by day: five days in the city, two for Sapanca or Bursa. How many stops a day with children, and where the day trips belong.",
+      },
+    },
     faq: [
       {
         question: { tr: "İstanbul için bir hafta yeterli mi?", ar: "هل يكفي أسبوع لزيارة إسطنبول؟", en: "Is one week enough for Istanbul?" },
@@ -786,6 +852,14 @@ export const guides: Guide[] = [
         value: { tr: "Tur programlarında", ar: "في البرامج السياحية", en: "On tour programmes" },
       },
     ],
+    seo: {
+      title: { tr: "Arapça Konuşan Şoför ve Rehber", ar: "سائق ومرشد يتحدث العربية", en: "Arabic-Speaking Driver and Guide" },
+      description: {
+        tr: "Dil, fiyattan sonra seyahat konforunu en çok belirleyen şey. Karşılamada, alışverişte ve turda nerede işe yarar, rehber ile şoför arasındaki fark nedir.",
+        ar: "اللغة هي العامل الأهم بعد السعر في راحة الرحلة. أين تنفع عند الاستقبال والتسوق والجولة، وما الفرق بين المرشد والسائق.",
+        en: "After price, language shapes the trip more than anything. Where it helps at arrivals, shopping and on tour, and how a guide differs from a driver.",
+      },
+    },
     faq: [
       {
         question: { tr: "Şoförün Arapça bilmesi neden önemli?", ar: "لماذا يهمّ أن يتحدث السائق العربية؟", en: "Why does it matter that the driver speaks Arabic?" },
@@ -879,6 +953,14 @@ export const guides: Guide[] = [
         value: { tr: "Aralık – mart", ar: "ديسمبر – مارس", en: "December – March" },
       },
     ],
+    seo: {
+      title: { tr: "Bursa ve Uludağ Günübirlik Rehberi", ar: "دليل بورصة وأولوداغ ليوم واحد", en: "Bursa and Uludağ Day Trip" },
+      description: {
+        tr: "Feribotla yaklaşık 2,5 saat. Uludağ teleferiği, Ulu Cami, Koza Han ve Cumalıkızık; kar mevsimi ne zaman ve tek güne neler sığar.",
+        ar: "نحو ساعتين ونصف بالعبّارة. تلفريك أولوداغ والجامع الكبير وخان الحرير وجومالي كيزيك؛ ومتى موسم الثلج وما يتّسع له يوم واحد.",
+        en: "About 2.5 hours by ferry. The Uludağ cable car, the Grand Mosque, Koza Han and Cumalıkızık; when the snow season runs and what fits in one day.",
+      },
+    },
     faq: [
       {
         question: { tr: "Bursa'ya feribotla mı karayoluyla mı gitmeli?", ar: "هل الأفضل الذهاب إلى بورصة بالعبّارة أم براً؟", en: "Should you reach Bursa by ferry or by road?" },
@@ -972,6 +1054,14 @@ export const guides: Guide[] = [
         value: { tr: "Çarşılarda geçerli", ar: "تنفع في البازارات", en: "Applies in the bazaars" },
       },
     ],
+    seo: {
+      title: { tr: "İstanbul'da Alışveriş Rehberi", ar: "دليل التسوق في إسطنبول", en: "Shopping in Istanbul: A Guide" },
+      description: {
+        tr: "Kapalıçarşı ve Mısır Çarşısı, Nişantaşı ve Bağdat Caddesi, alışveriş merkezleri. Nerede pazarlık geçer, ne nerede alınır ve poşetler nasıl taşınır.",
+        ar: "البازار الكبير والسوق المصري، ونيشانتاشي وشارع بغداد، والمولات. أين تنفع المساومة، وما يُشترى من أين، وكيف تُحمل المشتريات.",
+        en: "The Grand Bazaar and Spice Bazaar, Nişantaşı and Bağdat Avenue, the malls. Where haggling works, what to buy where, and how to carry it all.",
+      },
+    },
     faq: [
       {
         question: { tr: "Kapalıçarşı'da pazarlık yapılır mı?", ar: "هل تجري المساومة في البازار الكبير؟", en: "Do you haggle in the Grand Bazaar?" },
@@ -1065,6 +1155,14 @@ export const guides: Guide[] = [
         value: { tr: "Türk kahvaltısı etsiz ve bol", ar: "الفطور التركي بلا لحم ووفير", en: "Turkish breakfast is meat-free and generous" },
       },
     ],
+    seo: {
+      title: { tr: "İstanbul'da Helal Yemek Rehberi", ar: "دليل الطعام الحلال في إسطنبول", en: "Halal Food in Istanbul: A Guide" },
+      description: {
+        tr: "Türkiye'de et ürünleri yaygın olarak helal. Nelere dikkat edilir, hangi semtte ne bulunur, Türk kahvaltısı ve Arap mutfağı nerede yenir.",
+        ar: "اللحوم في تركيا حلال في الغالب. ما الذي يُنتبه إليه، وماذا يوجد في كل حي، وأين يُتناول الفطور التركي والمطبخ العربي.",
+        en: "Meat in Türkiye is widely halal. What to watch for, what each district offers, and where to find Turkish breakfast and Arabic cuisine.",
+      },
+    },
     faq: [
       {
         question: { tr: "Türkiye'de et ürünleri helal mi?", ar: "هل اللحوم في تركيا حلال؟", en: "Is meat in Türkiye halal?" },
@@ -1158,6 +1256,14 @@ export const guides: Guide[] = [
         value: { tr: "İkindi ve gün batımı", ar: "العصر وغروب الشمس", en: "Late afternoon and sunset" },
       },
     ],
+    seo: {
+      title: { tr: "Boğaz Turu Rehberi: Tekne ve Saatler", ar: "دليل جولة البوسفور: القارب والتوقيت", en: "Bosphorus Cruise Guide: Boats and Times" },
+      description: {
+        tr: "Kısa tur 1,5–2 saat, tam gün turu Anadolu Kavağı'na kadar. Eminönü, Kabataş ve Beşiktaş kalkışları, ne görülür ve en iyi saat neden ikindi.",
+        ar: "الجولة القصيرة 1.5–2 ساعة، وجولة اليوم الكامل حتى أناضولو كواغي. الانطلاق من إمينونو وكاباتاش وبشيكتاش، وماذا يُرى، ولماذا العصر أفضل وقت.",
+        en: "Short cruises run 1.5–2 hours, full-day ones reach Anadolu Kavağı. Departures from Eminönü, Kabataş and Beşiktaş, what you see, and why late afternoon wins.",
+      },
+    },
     faq: [
       {
         question: { tr: "Boğaz turu ne kadar sürer?", ar: "كم تستغرق جولة البوسفور؟", en: "How long does a Bosphorus cruise take?" },
@@ -1251,6 +1357,14 @@ export const guides: Guide[] = [
         value: { tr: "Talebe göre, ek ücretsiz", ar: "عند الطلب وبدون رسوم", en: "On request, no extra charge" },
       },
     ],
+    seo: {
+      title: { tr: "Çocuklu Ailelerle İstanbul", ar: "إسطنبول مع الأطفال", en: "Istanbul with Children" },
+      description: {
+        tr: "Bebek arabası tarihî yarımadada neden zor, günde kaç durak yeterli, çocuk koltuğu nasıl istenir ve hangi duraklar küçüklerle iyi geçer.",
+        ar: "لماذا تصعب عربة الأطفال في شبه الجزيرة التاريخية، وكم محطة تكفي في اليوم، وكيف يُطلب مقعد الطفل، وأي المحطات تناسب الصغار.",
+        en: "Why a pushchair is hard in the historic peninsula, how many stops a day is enough, how to request a child seat, and which stops suit small children.",
+      },
+    },
     faq: [
       {
         question: { tr: "Tarihî yarımadada bebek arabası kullanılır mı?", ar: "هل يمكن استخدام عربة الأطفال في شبه الجزيرة التاريخية؟", en: "Can you use a pushchair in the historic peninsula?" },
@@ -1344,6 +1458,14 @@ export const guides: Guide[] = [
         value: { tr: "Bu programda yok", ar: "غير مدرج في هذا البرنامج", en: "Not in this plan" },
       },
     ],
+    seo: {
+      title: { tr: "İstanbul'da Üç Gün: Kısa Program", ar: "ثلاثة أيام في إسطنبول", en: "Three Days in Istanbul" },
+      description: {
+        tr: "Üç güne tarihî yarımada, Boğaz ve Beyoğlu sığar; şehir dışı sığmaz. Gün gün program, nerede kalmalı ve kısa ziyarette neyi çıkarmak gerekir.",
+        ar: "ثلاثة أيام تتّسع لشبه الجزيرة التاريخية والبوسفور وبي أوغلو، لا لما خارج المدينة. البرنامج يوماً بيوم، وأين تسكن، وماذا تحذف.",
+        en: "Three days fit the historic peninsula, the Bosphorus and Beyoğlu — not day trips. A day-by-day plan, where to stay, and what to cut on a short visit.",
+      },
+    },
     faq: [
       {
         question: { tr: "Üç günde İstanbul'un ne kadarı görülür?", ar: "كم يمكن رؤيته من إسطنبول في ثلاثة أيام؟", en: "How much of Istanbul can you see in three days?" },
@@ -1437,6 +1559,14 @@ export const guides: Guide[] = [
         value: { tr: "Vapur, en keyiflisi", ar: "العبّارة، الأمتع", en: "Ferry, the nicest way" },
       },
     ],
+    seo: {
+      title: { tr: "İstanbul'da Toplu Taşıma Rehberi", ar: "دليل المواصلات في إسطنبول", en: "Istanbul Public Transport Guide" },
+      description: {
+        tr: "İstanbulkart nasıl alınır, T1 tramvayı nereye gider, vapurla Boğaz nasıl geçilir ve ne zaman özel araç toplu taşımadan daha mantıklı olur.",
+        ar: "كيف تُشترى بطاقة إسطنبول، وإلى أين يذهب ترام T1، وكيف يُعبر البوسفور بالعبّارة، ومتى تكون السيارة الخاصة أنسب من النقل العام.",
+        en: "How to buy an İstanbulkart, where the T1 tram goes, how to cross the Bosphorus by ferry, and when a private vehicle beats public transport.",
+      },
+    },
     faq: [
       {
         question: { tr: "İstanbulkart nedir, nasıl alınır?", ar: "ما هي بطاقة إسطنبول كارت وكيف تُشترى؟", en: "What is the İstanbulkart and how do you get one?" },
@@ -1530,6 +1660,14 @@ export const guides: Guide[] = [
         value: { tr: "Rüzgâr ve rahat ayakkabı", ar: "الرياح وحذاء مريح", en: "Wind and comfortable shoes" },
       },
     ],
+    seo: {
+      title: { tr: "İstanbul'da Hava ve Ne Giyilir", ar: "طقس إسطنبول وماذا تلبس", en: "Istanbul Weather and What to Wear" },
+      description: {
+        tr: "Yazın nem sıcaklığı yanıltır, kışın rüzgâr soğuğu keskinleştirir. Mevsim mevsim valize ne konur ve cami ziyaretinde nelere dikkat edilir.",
+        ar: "في الصيف تخدع الرطوبة، وفي الشتاء تزيد الريح قسوة البرد. ماذا تضع في الحقيبة لكل موسم، وما يُراعى عند زيارة المساجد.",
+        en: "Humidity misleads in summer, wind sharpens the cold in winter. What to pack season by season, and what to keep in mind when visiting mosques.",
+      },
+    },
     faq: [
       {
         question: { tr: "İstanbul'da yazın ne giyilmeli?", ar: "ماذا يُلبس في إسطنبول صيفاً؟", en: "What should you wear in Istanbul in summer?" },
@@ -1623,6 +1761,14 @@ export const guides: Guide[] = [
         value: { tr: "Tek yön 3 saati aşarsa konaklama", ar: "إن تجاوز الاتجاه الواحد 3 ساعات فبِت هناك", en: "Over 3 hrs one way: stay the night" },
       },
     ],
+    seo: {
+      title: { tr: "Türkiye'de Şehirler Arası Mesafeler", ar: "المسافات بين مدن تركيا", en: "Distances Between Turkish Cities" },
+      description: {
+        tr: "Sapanca, Bursa, Yalova ve Şile günübirlik; Trabzon, Bodrum ve Antalya uçakla. Program kurarken işe yarayan üç saat kuralı ve gerçek süreler.",
+        ar: "سبانجا وبورصة ويالوفا وشيله لرحلة يوم؛ وطرابزون وبودروم وأنطاليا جواً. قاعدة الثلاث ساعات المفيدة عند وضع البرنامج، والأوقات الحقيقية.",
+        en: "Sapanca, Bursa, Yalova and Şile are day trips; Trabzon, Bodrum and Antalya need a flight. The three-hour rule for planning, and real journey times.",
+      },
+    },
     faq: [
       {
         question: { tr: "İstanbul'dan günübirlik nerelere gidilir?", ar: "إلى أين يمكن الذهاب من إسطنبول في رحلة يوم واحد؟", en: "Where can you go on a day trip from Istanbul?" },
@@ -1716,6 +1862,14 @@ export const guides: Guide[] = [
         value: { tr: "5–7 gün dengeli", ar: "5–7 أيام متوازنة", en: "5–7 days is balanced" },
       },
     ],
+    seo: {
+      title: { tr: "Türkiye'de Balayı Rehberi", ar: "دليل شهر العسل في تركيا", en: "Honeymoon in Türkiye: A Guide" },
+      description: {
+        tr: "İstanbul, Boğaz ve Sapanca klasik rota; yazın Bodrum, kışın Uludağ. Kaç gün ayrılmalı, mahremiyet nasıl korunur ve program nasıl bölünür.",
+        ar: "إسطنبول والبوسفور وسبانجا هي المسار الكلاسيكي؛ وبودروم صيفاً وأولوداغ شتاءً. كم يوماً يلزم، وكيف تُحفظ الخصوصية، وكيف يُقسَّم البرنامج.",
+        en: "Istanbul, the Bosphorus and Sapanca is the classic route; Bodrum in summer, Uludağ in winter. How many days, how to keep privacy, how to split the trip.",
+      },
+    },
     faq: [
       {
         question: { tr: "Balayı için Türkiye'de nereye gidilir?", ar: "إلى أين يُذهب في تركيا لشهر العسل؟", en: "Where do honeymooners go in Türkiye?" },

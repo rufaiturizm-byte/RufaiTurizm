@@ -35,8 +35,11 @@ export async function generateMetadata({
   const lang = locale as Locale;
 
   return {
-    title: guide.title[lang] ?? guide.title.tr,
-    description: guide.excerpt[lang] ?? guide.excerpt.tr,
+    // Arama sonucu için yazılmış başlık/açıklama varsa o kullanılır;
+    // yoksa sayfadaki başlık ve özete düşer.
+    title: guide.seo?.title?.[lang] ?? guide.title[lang] ?? guide.title.tr,
+    description:
+      guide.seo?.description?.[lang] ?? guide.excerpt[lang] ?? guide.excerpt.tr,
     openGraph: { images: [guide.image] },
     alternates: alternatesFor({ pathname: "/guides/[slug]", params: { slug } }, locale),
   };

@@ -67,7 +67,8 @@
           "question": "Is it the same vehicle on intercity journeys?",
           "answer": "Yes. Travelling to Bursa, Sapanca or anywhere else, neither the vehicle nor the driver changes. The driver who picked you up from your hotel is the one who brings you back, so you never have to explain your plans from scratch again."
         }
-      ]
+      ],
+      "metaDescription": "A chauffeured, late-model Mercedes Vito for up to 6 passengers with luggage. Tinted windows, separate rear air conditioning, the same driver throughout."
     },
     "transfer": {
       "title": "Transfer & Meet and Greet",
@@ -102,7 +103,8 @@
           "question": "What information do you need to make a booking?",
           "answer": "Flight number, landing date and time, hotel name or address, number of passengers and number of suitcases. If you are travelling with children, add their ages so we can fit the right seat. With those five details a booking takes minutes."
         }
-      ]
+      ],
+      "metaDescription": "Meet and greet and hotel transfer from Istanbul Airport (IST) and Sabiha Gökçen (SAW). Fixed price, flight tracking, a name board at arrivals, luggage help."
     },
     "tours": {
       "title": "Guided Tours",
@@ -137,7 +139,8 @@
           "question": "What is the minimum group size for a tour?",
           "answer": "One person. Because our tours are private there is no minimum, and you never wait for a group to fill up. Since the price is per vehicle, the more of you travel together, the less each person pays."
         }
-      ]
+      ],
+      "metaDescription": "Private tours in Istanbul, Bursa, Sapanca, Trabzon and Bodrum. An Arabic-speaking guide, never merged with a group, prayer and meal breaks, hotel pick-up."
     },
     "flightHotel": {
       "title": "Flight & Hotel Booking",
@@ -172,7 +175,8 @@
           "question": "Can I change my flight ticket later?",
           "answer": "Changes and cancellations depend on the airline's rules and your fare class. Some tickets can be changed, others are entirely non-refundable. We tell you in writing what is possible in your fare class before the ticket is bought."
         }
-      ]
+      ],
+      "metaDescription": "We book flights and hotels on your behalf: hotel suggestions district by district, distance to the metro explained, and a clear total price before you book."
     },
     "priceFrom": "starting prices"
   },
@@ -195,7 +199,8 @@
       ],
       "season": "April–May and September–October. In midsummer the middle of the day is hot and crowded, so the programme spreads across early morning and late afternoon.",
       "pace": "Around 3–4 km of walking across the day. Topkapi Palace itself is a large site; you spend an hour or two on your feet inside.",
-      "tip": "In mosques shoulders and knees must be covered and women need a headscarf; a free cover is provided at the entrance. Shoes come off, so socks help."
+      "tip": "In mosques shoulders and knees must be covered and women need a headscarf; a free cover is provided at the entrance. Shoes come off, so socks help.",
+      "metaDescription": "Blue Mosque, Hagia Sophia, Topkapı, the Grand Bazaar and a Bosphorus cruise in one day. Private vehicle, Arabic-speaking guide, hotel pick-up, never a group."
     },
     "bursa": {
       "name": "Bursa Tour",
@@ -212,7 +217,8 @@
       ],
       "season": "December–March for snow, April–June for greenery. The cable car can close in bad weather.",
       "pace": "Moderate walking in town; the stone lanes of Cumalikizik are narrow and sloping, so comfortable shoes matter.",
-      "tip": "At the summit of Uludag it is 8–10 degrees colder than the city; even in summer bring a light jacket."
+      "tip": "At the summit of Uludag it is 8–10 degrees colder than the city; even in summer bring a light jacket.",
+      "metaDescription": "Uludağ cable car, the Grand Mosque, Koza Han and Cumalıkızık village. A day trip from Istanbul by ferry with a private vehicle, guide and hotel pick-up."
     },
     "sapanca": {
       "name": "Sapanca Tour",
@@ -229,7 +235,8 @@
       ],
       "season": "April–October is the easiest window. In winter people go to Kartepe for snow, but road conditions vary.",
       "pace": "The calmest programme on the site; walking is limited and optional. The best tour for families with children and older guests.",
-      "tip": "Paths around the waterfalls can be unpaved and wet; a pushchair will not roll easily everywhere."
+      "tip": "Paths around the waterfalls can be unpaved and wet; a pushchair will not roll easily everywhere.",
+      "metaDescription": "Lake Sapanca, the Maşukiye waterfalls and trout restaurants. 130 km from Istanbul as a day programme; collected from your hotel and returned by evening."
     },
     "trabzon": {
       "name": "Trabzon Tour",
@@ -246,7 +253,8 @@
       ],
       "season": "Late June–September for the plateaus. Some plateau roads close in winter; Uzungol is open year-round.",
       "pace": "A long drive with little walking. The climb to the Sumela Monastery is steep and not suitable for every age.",
-      "tip": "The Black Sea is Türkiye's rainiest region; a raincoat helps even in summer and mist can close the view."
+      "tip": "The Black Sea is Türkiye's rainiest region; a raincoat helps even in summer and mist can close the view.",
+      "metaDescription": "Uzungöl, Sumela Monastery and the Black Sea highlands with a private vehicle and Arabic-speaking guide. Highland season, distances and days needed explained."
     },
     "bodrum": {
       "name": "Bodrum Tour",
@@ -263,7 +271,8 @@
       ],
       "season": "May–October. The sea is warmest between July and September; April and November are cooler but quiet.",
       "pace": "No walking on the boat trip; moderate around the castle and bazaar. Sun protection is needed.",
-      "tip": "Boat trips include a swimming stop, so bring swimwear and a towel. The midday Aegean sun is strong; a hat helps."
+      "tip": "Boat trips include a swimming stop, so bring swimwear and a towel. The midday Aegean sun is strong; a hat helps.",
+      "metaDescription": "Bodrum Castle, turquoise bays and an Aegean boat trip. Private vehicle and Arabic-speaking guide, hotel pick-up, and a day that flexes around your plans."
     }
   },
   "whyUs": {
@@ -709,12 +718,12 @@
     "home": "Rufai Tourism: Istanbul airport transfers, Arabic-guided tours, a chauffeured Mercedes Vito, flight tickets and hotel bookings. Fixed prices, 24/7 WhatsApp.",
     "transfer": "Istanbul Airport (IST) and Sabiha Gokcen (SAW) transfers: meet and greet with a name sign, flight tracking, fixed price. Chauffeured Vito for up to 6.",
     "tours": "Istanbul, Bursa, Sapanca, Trabzon and Bodrum tours with an Arabic-speaking guide and private vehicle from your hotel. Priced per car, not per person.",
-    "services": "Airport transfers, chauffeured Vito, guided tours, flight tickets and hotel bookings. Your whole trip in Türkiye with one team, fixed prices and service in Arabic.",
+    "services": "Airport transfers, a chauffeured Vito, guided tours, flights and hotel bookings. Your whole trip in Türkiye with one team, fixed prices, service in Arabic.",
     "hotels": "Where to stay in Istanbul? The hotels our guests choose most in Sultanahmet, Taksim, along the Bosphorus and on the Asian side. We handle the booking.",
     "guides": "What people ask before coming to Türkiye: getting from the airport into the city, which district to stay in, Sapanca and Trabzon routes, and each season.",
     "about": "A TÜRSAB-licensed travel agency, licence no 12539. Service in Arabic, Turkish and English, fixed prices and one contact for the whole trip.",
     "contact": "Message us on WhatsApp and we will reply the same day. Reachable 24/7 for transfers, tours, flight tickets and hotel bookings, in Arabic, Turkish and English.",
-    "faq": "Are prices fixed? Is there an Arabic-speaking guide? Do you meet us at the airport? What if the flight is delayed? Clear answers to the 12 questions guests ask most."
+    "faq": "Are prices fixed? Is there an Arabic-speaking guide? Do you meet us at the airport? What if the flight is delayed? Answers to the 12 questions guests ask most."
   },
   "related": {
     "title": "Keep exploring",

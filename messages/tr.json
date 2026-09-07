@@ -67,7 +67,8 @@
           "question": "Şehirlerarası yolculukta aynı araç mı geliyor?",
           "answer": "Evet. Bursa, Sapanca ya da başka bir şehre giderken araç da şoför de değişmez. Otelinizden alan şoför, dönüşte de sizi bırakan kişidir; her seferinde kendinizi yeniden anlatmak zorunda kalmazsınız."
         }
-      ]
+      ],
+      "metaDescription": "Şoförlü, son model Mercedes Vito ile bagajınızla birlikte 6 kişiye kadar konforlu ulaşım. Kararmış cam, arkada ayrı klima, aynı şoför tüm seyahat boyunca."
     },
     "transfer": {
       "title": "Transfer ve Karşılama",
@@ -102,7 +103,8 @@
           "question": "Rezervasyon için hangi bilgiler gerekiyor?",
           "answer": "Uçuş numarası, iniş tarihi ve saati, otel adı veya adresi, kişi sayısı ve valiz sayısı. Çocuk varsa yaşını da yazın, koltuğu ona göre hazırlarız. Bu beş bilgiyle rezervasyon dakikalar içinde tamamlanır."
         }
-      ]
+      ],
+      "metaDescription": "İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW) karşılama ve otel transferi. Sabit fiyat, uçuş takibi, isimli tabelayla karşılama ve bagaj yardımı dahil."
     },
     "tours": {
       "title": "Tur Hizmeti",
@@ -137,7 +139,8 @@
           "question": "Kaç kişiden itibaren tur düzenliyorsunuz?",
           "answer": "Bir kişiden itibaren. Turlar özel olduğu için asgari kişi sayısı aramıyoruz; grup dolsun diye beklemezsiniz. Fiyat araç başına verildiği için kalabalıklaştıkça kişi başına düşen tutar azalır."
         }
-      ]
+      ],
+      "metaDescription": "İstanbul, Bursa, Sapanca, Trabzon ve Bodrum'da özel turlar. Arapça rehber, gruba katılma yok, namaz ve yemek molaları programda, otelden alış."
     },
     "flightHotel": {
       "title": "Uçak Bileti ve Otel Rezervasyonu",
@@ -172,7 +175,8 @@
           "question": "Uçak biletimi sonradan değiştirebilir miyim?",
           "answer": "Değişiklik ve iptal, bileti aldığınız havayolunun kurallarına ve bilet sınıfına bağlıdır. Bazı biletler değiştirilebilir, bazıları hiç iade edilmez. Bilet almadan önce hangi sınıfta ne mümkün olduğunu size yazılı olarak söyleriz."
         }
-      ]
+      ],
+      "metaDescription": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Semt semt otel önerisi, metroya yakınlık bilgisi ve rezervasyon öncesi net toplam fiyat."
     },
     "priceFrom": "'dan başlayan fiyatlarla"
   },
@@ -195,7 +199,8 @@
       ],
       "season": "Nisan–mayıs ve eylül–ekim. Yaz ortasında öğle saatleri sıcak ve kalabalık; program sabah erkene ve ikindi sonrasına yayılır.",
       "pace": "Gün içinde toplam 3–4 km yürüyüş. Topkapı Sarayı'nın kendisi geniş bir alan; içeride bir-iki saat ayakta geçer.",
-      "tip": "Camilerde omuz ve diz kapalı olmalı, kadınlar için başörtüsü gerekir; girişte ücretsiz örtü verilir. Ayakkabı çıkarılır, çorap işe yarar."
+      "tip": "Camilerde omuz ve diz kapalı olmalı, kadınlar için başörtüsü gerekir; girişte ücretsiz örtü verilir. Ayakkabı çıkarılır, çorap işe yarar.",
+      "metaDescription": "Sultanahmet, Ayasofya, Topkapı, Kapalıçarşı ve Boğaz turu tek günde. Özel araç, Arapça rehber, otelden alış; gruba katılmadan kendi temponuzla."
     },
     "bursa": {
       "name": "Bursa Turu",
@@ -212,7 +217,8 @@
       ],
       "season": "Kar manzarası için aralık–mart, yeşillik için nisan–haziran. Teleferik hava koşullarına göre kapanabilir.",
       "pace": "Şehirde orta düzey yürüyüş; Cumalıkızık'ın taş sokakları dar ve eğimli, rahat ayakkabı gerekir.",
-      "tip": "Uludağ zirvesinde hava şehirden 8–10 derece soğuk olur; yaz aylarında bile ince bir üst almak gerekir."
+      "tip": "Uludağ zirvesinde hava şehirden 8–10 derece soğuk olur; yaz aylarında bile ince bir üst almak gerekir.",
+      "metaDescription": "Uludağ teleferiği, Ulu Cami, Koza Han ve Cumalıkızık köyü. İstanbul'dan feribotla günübirlik; özel araç, Arapça rehber, otelden alış ve bırakış."
     },
     "sapanca": {
       "name": "Sapanca Turu",
@@ -229,7 +235,8 @@
       ],
       "season": "Nisan–ekim en rahat aralık. Kışın Kartepe kar için tercih edilir ama yol koşulları değişkendir.",
       "pace": "Sitedeki en sakin program; yürüyüş az ve isteğe bağlı. Çocuklu ve yaşlı misafirler için en uygun tur.",
-      "tip": "Şelale çevresindeki yollar toprak ve ıslak olabilir; bebek arabası her yerde rahat gitmez."
+      "tip": "Şelale çevresindeki yollar toprak ve ıslak olabilir; bebek arabası her yerde rahat gitmez.",
+      "metaDescription": "Sapanca Gölü, Maşukiye şelaleleri ve alabalık lokantaları. İstanbul'a 130 km, günübirlik program; özel araçla otelden alınır, akşam bırakılırsınız."
     },
     "trabzon": {
       "name": "Trabzon Turu",
@@ -246,7 +253,8 @@
       ],
       "season": "Yaylalar için haziran sonu–eylül. Kışın bazı yayla yolları kapanır; Uzungöl yıl boyu açıktır.",
       "pace": "Yolculuk uzun, yürüyüş az. Sümela Manastırı'na çıkış yokuşlu ve her yaş için uygun değil.",
-      "tip": "Karadeniz Türkiye'nin en çok yağış alan bölgesi; yazın bile yağmurluk işe yarar ve sis manzarayı kapatabilir."
+      "tip": "Karadeniz Türkiye'nin en çok yağış alan bölgesi; yazın bile yağmurluk işe yarar ve sis manzarayı kapatabilir.",
+      "metaDescription": "Uzungöl, Sümela Manastırı ve Karadeniz yaylaları. Arapça rehber eşliğinde özel araçla; yayla sezonu, mesafeler ve kaç gün gerektiği rehberde."
     },
     "bodrum": {
       "name": "Bodrum Turu",
@@ -263,7 +271,8 @@
       ],
       "season": "Mayıs–ekim. Deniz temmuz–eylül arası en ılıktır; nisan ve kasım serin ama sakin.",
       "pace": "Tekne turunda yürüyüş yok; kale ve çarşı gezisinde orta düzey. Güneş koruması gerekir.",
-      "tip": "Tekne turlarında yüzme molası verilir; mayo ve havlu getirin. Öğle güneşi Ege'de sert, şapka işe yarar."
+      "tip": "Tekne turlarında yüzme molası verilir; mayo ve havlu getirin. Öğle güneşi Ege'de sert, şapka işe yarar.",
+      "metaDescription": "Bodrum Kalesi, turkuaz koylar ve Ege'de tekne turu. Özel araç ve Arapça rehberle; otelden alış, kendi programınıza göre esneyen bir gün."
     }
   },
   "whyUs": {
@@ -709,7 +718,7 @@
     "home": "Rufai Turizm: İstanbul havalimanı transferi, Arapça rehberli turlar, şoförlü Mercedes Vito, uçak bileti ve otel rezervasyonu. Sabit fiyat, 7/24 WhatsApp desteği.",
     "transfer": "İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW) transferi: isimli tabelayla karşılama, uçuş takibi, sabit fiyat. Şoförlü Vito ile 6 kişiye kadar ulaşım.",
     "tours": "İstanbul, Bursa, Sapanca, Trabzon ve Bodrum turları. Arapça konuşan rehber, özel araç, otelden alış. Grupla birleştirme yok; fiyat araç başına, kişi başı değil.",
-    "services": "Havalimanı transferi, şoförlü Vito, rehberli turlar, uçak bileti ve otel rezervasyonu. Türkiye seyahatiniz baştan sona tek ekiple, sabit fiyat ve Arapça hizmetle.",
+    "services": "Havalimanı transferi, şoförlü Vito, rehberli turlar, uçak bileti ve otel rezervasyonu. Türkiye seyahatiniz tek ekiple, sabit fiyat ve Arapça hizmetle.",
     "hotels": "İstanbul’da nerede kalınır? Sultanahmet, Taksim, Boğaz ve Anadolu yakasında en çok tercih edilen oteller; rezervasyonu sizin adınıza biz yapıyoruz.",
     "guides": "Türkiye’ye gelmeden en çok sorulanlar: havalimanından şehre ulaşım, hangi semtte kalınır, Sapanca ve Trabzon rotaları, hangi mevsimde ne olur.",
     "about": "TÜRSAB belgeli seyahat acentesi. Arapça, Türkçe ve İngilizce hizmet; sabit fiyat, aileye uygun programlar ve tüm seyahat boyunca tek muhatap. Belge No 12539.",

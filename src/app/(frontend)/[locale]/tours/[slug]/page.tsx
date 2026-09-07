@@ -38,7 +38,9 @@ export async function generateMetadata({
 
   return {
     title: t(`${tour.key}.name`),
-    description: t(`${tour.key}.description`),
+    // Kartta okunan tek satırlık açıklama arama sonucunda alanın yarısını
+    // boş bırakıyordu; metaDescription o alan için ayrı yazıldı.
+    description: t(`${tour.key}.metaDescription`),
     openGraph: { images: [tour.image] },
     alternates: alternatesFor({ pathname: "/tours/[slug]", params: { slug } }, locale),
   };

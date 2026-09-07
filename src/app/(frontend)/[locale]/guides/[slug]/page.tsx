@@ -231,7 +231,7 @@ export default async function GuideDetailPage({
           <p className="text-[14.5px] leading-[1.8] text-muted-foreground">{t("ctaText")}</p>
           <WhatsAppLink
             subject={title}
-            className="inline-flex w-fit items-center gap-2.5 rounded-[0.7rem] px-6 py-3.5 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5"
+            className="inline-flex w-fit items-center gap-2.5 rounded-[0.7rem] px-6 py-3.5 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             style={{
               background: "var(--brand-gold)",
               color: "var(--brand-night)",

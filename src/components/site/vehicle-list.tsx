@@ -117,7 +117,7 @@ export async function VehicleList() {
 
                 <WhatsAppLink
                   subject={t("vito.name")}
-                  className="mt-5 inline-flex items-center justify-center gap-2.5 rounded-[0.7rem] py-3.5 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5"
+                  className="mt-5 inline-flex items-center justify-center gap-2.5 rounded-[0.7rem] py-3.5 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                   style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e1)" }}
                 >
                   <WhatsAppIcon className="size-[18px]" />

@@ -129,7 +129,7 @@ export async function ServicesOverview() {
 
                     <WhatsAppLink
                       subject={name}
-                      className="inline-flex shrink-0 items-center gap-2 rounded-[0.6rem] px-3.5 py-2.5 text-[12px] font-bold text-white transition-transform hover:-translate-y-0.5"
+                      className="inline-flex shrink-0 items-center gap-2 rounded-[0.6rem] px-3.5 py-2.5 text-[12px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                       style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e1)" }}
                     >
                       <MessageCircle className="size-3.5" aria-hidden="true" />
@@ -167,7 +167,7 @@ export async function ServicesOverview() {
 
         <WhatsAppLink
           subject={tHome2("quoteTitle")}
-          className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.7rem] px-6 py-3.5 text-[14px] font-bold transition-transform hover:-translate-y-0.5"
+          className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.7rem] px-6 py-3.5 text-[14px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           style={{
             background: "var(--brand-gold)",
             color: "var(--brand-night)",

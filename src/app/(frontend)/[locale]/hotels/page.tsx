@@ -291,7 +291,7 @@ export default async function HotelsPage({
                 {/* Bölge başına tek çağrı */}
                 <WhatsAppLink
                   subject={name}
-                  className="mt-5 flex items-center justify-center gap-2.5 rounded-[0.7rem] py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5"
+                  className="mt-5 flex items-center justify-center gap-2.5 rounded-[0.7rem] py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                   style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e1)" }}
                 >
                   <WhatsAppIcon className="size-[18px]" />
@@ -318,7 +318,7 @@ export default async function HotelsPage({
 
           <WhatsAppLink
             subject={t("title")}
-            className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5"
+            className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             style={{
               background: "var(--brand-gold)",
               color: "var(--brand-night)",

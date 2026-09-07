@@ -152,7 +152,7 @@ export default async function ContactPage({
               </p>
 
               <WhatsAppLink
-                className="mt-7 inline-flex items-center gap-3 rounded-[0.8rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5"
+                className="mt-7 inline-flex items-center gap-3 rounded-[0.8rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{
                   background: "var(--brand-gold)",
                   color: "var(--brand-night)",

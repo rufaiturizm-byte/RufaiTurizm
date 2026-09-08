@@ -122,8 +122,25 @@ export function WhatsAppFloatingButton({ subject }: { subject?: string }) {
         "transition-[transform,opacity] hover:scale-105 active:scale-95",
         hidden && "pointer-events-none translate-y-3 opacity-0",
       )}
-      /* Renk ve gölge sitenin geri kalanıyla aynı yerden: sabit yeşil ve
-         Tailwind'in siyah `shadow-lg`si sayfadaki tek yabancı yüzeydi. */
+      /*
+       * Renk ve gölge sitenin geri kalanıyla aynı yerden: sabit yeşil ve
+       * Tailwind'in siyah `shadow-lg`si sayfadaki tek yabancı yüzeydi.
+       *
+       * Bu satır bir ara SİLİNMİŞTİ. WhatsApp düğmeleri `.btn-wa` sınıfına
+       * geçirilirken buradaki inline stil kaldırıldı ama sınıf bilerek
+       * eklenmedi (sınıfın hover transform'u gizlenme animasyonuyla
+       * çakışıyor) — geriye arka planı hiç olmayan, krem zeminde beyaz
+       * ikon ve beyaz yazı taşıyan bir düğme kaldı. Kontrast 1,06:1.
+       *
+       * Düğme şu an her sayfada gizli duruyor (sayfada görünür bir satır
+       * içi çağrı olduğu sürece kendini gizliyor) ve hata bu yüzden gözle
+       * fark edilmiyordu; ama çağrısız bir boşluk oluştuğu ilk anda
+       * görünmez bir düğme olarak ortaya çıkardı.
+       *
+       * Sınıf yerine inline stil: yalnız yüzey ve gölge veriliyor,
+       * transform'a dokunulmuyor, çakışma da olmuyor.
+       */
+      style={{ background: "var(--brand-wa)", boxShadow: "var(--shadow-e3)" }}
     >
       <WhatsAppIcon className="size-6" />
       <span className="hidden text-sm font-medium sm:inline">{t("whatsapp")}</span>

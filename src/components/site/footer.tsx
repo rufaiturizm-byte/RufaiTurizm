@@ -190,7 +190,8 @@ export async function Footer() {
           <span className="h-px flex-1" style={{ background: "color-mix(in oklab, white 12%, transparent)" }} />
         </div>
 
-        <div className="mt-7 flex flex-col gap-4 text-[12.5px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+        {/* /45 iken kontrast 4,08:1 idi, WCAG AA 4,5 istiyor. */}
+        <div className="mt-7 flex flex-col gap-4 text-[12.5px] text-white/56 sm:flex-row sm:items-center sm:justify-between">
           <span>© 2026 {siteConfig.legalName} — {t("allRights")}</span>
           {siteConfig.credentials.tursab ? (
             <a

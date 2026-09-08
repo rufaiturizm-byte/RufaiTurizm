@@ -2,18 +2,18 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import {
   ArrowRight,
-  ArrowRightLeft,
-  Building2,
-  Camera,
-  Crown,
+  Car,
+  Map,
   MessageCircle,
   PhoneCall,
+  PlaneLanding,
+  Ticket,
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading, SectionAction } from "./section-heading";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { Reveal } from "./reveal";
-import { services, type ServiceKey } from "@/data/services";
+import { services } from "@/data/services";
 
 /**
  * Ana sayfadaki hizmet özeti.
@@ -27,12 +27,22 @@ import { services, type ServiceKey } from "@/data/services";
  * simge o ayrımı bir bakışta veriyor.
  */
 
-const ICONS: Record<ServiceKey, typeof Crown> = {
-  vitoVip: Crown,
-  transfer: ArrowRightLeft,
-  tours: Camera,
-  flightHotel: Building2,
-};
+/*
+ * Simgeler artık services.ts icindeki `icon` alanindan geliyor.
+ *
+ * Iki ayri tanim vardi: veri dosyasi car / plane-landing / map / ticket
+ * diyordu, bilesen ise kendi listesini tutuyordu ve veri alani hic
+ * okunmuyordu. Bilesenin sectikleri anlamca da zayifti — rehberli tur
+ * hizmeti icin FOTOGRAF MAKINESI, ucak bileti ve otel rezervasyonu icin
+ * BINA simgesi cikiyordu. Tek kaynak veri dosyasi; simge degistirmek
+ * icin artik bilesene dokunmak gerekmiyor.
+ */
+const ICONS = {
+  car: Car,
+  "plane-landing": PlaneLanding,
+  map: Map,
+  ticket: Ticket,
+} as const;
 
 export async function ServicesOverview() {
   const t = await getTranslations("services");
@@ -62,7 +72,7 @@ export async function ServicesOverview() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => {
           const name = t(`${service.key}.title`);
-          const Icon = ICONS[service.key];
+          const Icon = ICONS[service.icon];
           const href = {
             pathname: "/services/[slug]" as const,
             params: { slug: service.slug },

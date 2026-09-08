@@ -75,11 +75,11 @@
     "transfer": {
       "title": "Transfer ve Karşılama",
       "description": "Havalimanı karşılama ve otel transferi. Sabit fiyat, uçuş takibi ve bagaj yardımı dahil.",
-      "long": "Havalimanı karşılamada uçuşunuzu takip ederiz: uçak rötar yaparsa şoför bekler, ek ücret çıkmaz. Şoförümüz geliş kapısında isminizin yazılı olduğu tabelayla karşılar, bagajlarınızı taşır ve doğrudan otelinize götürür. İstanbul'un iki havalimanı da (IST ve SAW) kapsam içindedir.",
+      "long": "Havalimanı karşılamada uçuşunuzu takip ederiz: uçak rötar yaparsa şoför bekler, ek ücret çıkmaz. Şoförümüz geliş kapısında isminizin yazılı olduğu tabelayla karşılar, bagajlarınızı taşır ve doğrudan otelinize götürür. İstanbul (IST), Sabiha Gökçen (SAW), Antalya (AYT), Bodrum (BJV) ve Trabzon (TZX) havalimanları kapsam içindedir.",
       "features": [
         "Uçuş takibi — rötarda bekleme ücretsiz",
         "İsimli tabelayla geliş kapısında karşılama",
-        "IST ve SAW havalimanlarının ikisi de",
+        "Beş havalimanı: IST · SAW · AYT · BJV · TZX",
         "Sabit fiyat, rezervasyonda netleşir",
         "Gidiş-dönüş rezervasyonunda indirim",
         "Ara durak ekleme imkânı"

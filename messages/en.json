@@ -75,11 +75,11 @@
     "transfer": {
       "title": "Transfer & Meet and Greet",
       "description": "Airport pickup and hotel transfer at a fixed price, including flight tracking and luggage assistance.",
-      "long": "For airport pick-ups we track your flight: if the plane is delayed the driver waits and there is no extra charge. Your driver meets you at the arrivals gate with a name board, handles your luggage and takes you straight to your hotel. Both Istanbul airports (IST and SAW) are covered.",
+      "long": "For airport pick-ups we track your flight: if the plane is delayed the driver waits and there is no extra charge. Your driver meets you at the arrivals gate with a name board, handles your luggage and takes you straight to your hotel. Istanbul (IST), Sabiha Gokcen (SAW), Antalya (AYT), Bodrum (BJV) and Trabzon (TZX) airports are covered.",
       "features": [
         "Flight tracking — waiting on delays is free",
         "Name-board meet and greet at arrivals",
-        "Both IST and SAW airports",
+        "Five airports: IST · SAW · AYT · BJV · TZX",
         "Fixed price, confirmed at booking",
         "Discount on round-trip bookings",
         "Extra stops can be added"

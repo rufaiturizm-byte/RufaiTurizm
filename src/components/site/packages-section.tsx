@@ -49,7 +49,17 @@ export async function PackagesSection({ locale }: { locale: string }) {
         }
       />
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {/*
+        Sütun sayısı kart sayısından türüyor. Altı paket dört sütunda
+        4+2 diziliyordu: ikinci satırın sağ yarısı, yani iki kart
+        genişliğinde bir boşluk açık kalıyordu. Üç sütunda 3+3 tam
+        oturuyor ve kartlar da büyüyor.
+      */}
+      <div
+        className={`grid gap-5 sm:grid-cols-2 ${
+          packages.length % 4 === 0 ? "lg:grid-cols-4" : "lg:grid-cols-3"
+        }`}
+      >
         {packages.map((item) => {
           const name = item.name[lang] ?? item.name.tr;
           const href = {

@@ -2297,6 +2297,360 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "turkiyede-para-kart-ve-odeme",
+    topic: "practical",
+    image: "/images/places/kapalicarsi.jpg",
+    minutes: 5,
+    title: {
+      tr: "Türkiye'de para, kart ve ödeme: neyi nerede kullanırsınız",
+      ar: "النقود والبطاقات والدفع في تركيا: ماذا تستخدم وأين",
+      en: "Money, cards and payment in Türkiye: what works where",
+    },
+    excerpt: {
+      tr: "Nakit mi kart mı, döviz nerede bozdurulur, bahşiş ne kadar — pratik cevaplar, kur tahmini yok.",
+      ar: "نقداً أم بالبطاقة، وأين تصرف العملة، وكم البقشيش — إجابات عملية بلا تخمين لسعر الصرف.",
+      en: "Cash or card, where to change money, how much to tip — practical answers, no rate guessing.",
+    },
+    seo: {
+      title: {
+        tr: "Türkiye'de Para, Kart ve Ödeme Rehberi",
+        ar: "دليل النقود والبطاقات والدفع في تركيا",
+        en: "Money, Cards and Payment in Türkiye",
+      },
+      description: {
+        tr: "Nakit mi kart mı, dövizi nerede bozdurmalı, bahşiş ne kadar, kart neden reddedilir. Körfez'den gelen misafir için pratik ödeme rehberi.",
+        ar: "نقداً أم بالبطاقة، وأين تصرف العملة، وكم البقشيش، ولماذا تُرفض البطاقة. دليل دفع عملي لضيوف الخليج.",
+        en: "Cash or card, where to change money, how much to tip, why a card gets declined. A practical payment guide for Gulf visitors.",
+      },
+    },
+    facts: [
+      {
+        label: { tr: "Para birimi", ar: "العملة", en: "Currency" },
+        value: { tr: "Türk lirası (TL / ₺)", ar: "الليرة التركية (TL / ₺)", en: "Turkish lira (TL / ₺)" },
+      },
+      {
+        label: { tr: "Kart geçerliliği", ar: "قبول البطاقات", en: "Card acceptance" },
+        value: { tr: "Şehirde çok yaygın; pazarda ve küçük esnafta değil", ar: "واسع جداً في المدينة؛ لا في السوق الشعبي والدكاكين الصغيرة", en: "Very wide in the city; not in markets and small shops" },
+      },
+      {
+        label: { tr: "Bozdurma", ar: "الصرافة", en: "Exchange" },
+        value: { tr: "Şehirdeki döviz bürosu, havalimanı değil", ar: "مكاتب الصرافة في المدينة، لا في المطار", en: "Exchange offices in the city, not the airport" },
+      },
+      {
+        label: { tr: "Bahşiş", ar: "البقشيش", en: "Tipping" },
+        value: { tr: "Zorunlu değil; restoranda %5-10 âdet", ar: "غير إلزامي؛ المعتاد 5-10% في المطاعم", en: "Not required; 5-10% is customary in restaurants" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Nakit mi kart mı: ikisi de lazım",
+          ar: "نقداً أم بالبطاقة: تحتاج الاثنين",
+          en: "Cash or card: you need both",
+        },
+        body: {
+          tr: "Türkiye'de kartla ödeme çok yaygın. Restoran, otel, alışveriş merkezi, market, taksi, müze — hepsinde kart geçiyor ve temassız ödeme standart. Ama kartın işe yaramadığı yerler de var ve bunlar tam da misafirin gitmek istediği yerler: Kapalıçarşı'daki küçük tezgâhlar, sokak satıcıları, semt pazarları, bazı küçük lokantalar ve bahşiş. Cebinizde her zaman biraz nakit bulunsun; günlük harcamanın küçük kısmını nakit, büyük kısmını kart olarak planlamak işi görüyor.\n\nKartınızın yurt dışı kullanıma açık olduğundan emin olun ve seyahat tarihlerinizi bankanıza bildirin. Körfez bankalarının çoğunda bu, uygulamadan tek dokunuşla yapılan bir ayar. Bildirmeyen misafirin kartı ilk büyük harcamada güvenlik nedeniyle bloke oluyor ve bunu çözmek yurt dışından telefonla uğraşmak demek.",
+          ar: "الدفع بالبطاقة واسع الانتشار في تركيا. المطاعم والفنادق والمولات والأسواق والتاكسي والمتاحف — كلها تقبل البطاقة، والدفع اللاتلامسي هو المعتاد. لكن هناك أماكن لا تنفع فيها البطاقة، وهي بالضبط الأماكن التي يريد الضيف الذهاب إليها: البسطات الصغيرة في السوق المسقوف، والباعة في الشارع، وأسواق الأحياء، وبعض المطاعم الصغيرة، والبقشيش. فليكن في جيبك دائماً بعض النقد؛ ويكفي أن تخطط لجزء صغير من المصروف اليومي نقداً والجزء الأكبر بالبطاقة.\n\nتأكد أن بطاقتك مفعّلة للاستخدام خارج البلد، وأبلغ مصرفك بتواريخ سفرك. في معظم مصارف الخليج هذا إعداد يتم بلمسة واحدة من التطبيق. ومن لا يُبلغ تُحجب بطاقته عند أول عملية كبيرة لأسباب أمنية، وحلّ ذلك يعني الاتصال بالمصرف من خارج البلد.",
+          en: "Card payment is very widespread in Türkiye. Restaurants, hotels, malls, supermarkets, taxis, museums — all take cards, and contactless is standard. But there are places where a card is no use, and they are precisely the places guests want to go: the small stalls in the Grand Bazaar, street vendors, neighbourhood markets, some small restaurants, and tips. Always keep some cash on you; planning a small part of your daily spending as cash and the larger part on card works well.\n\nMake sure your card is enabled for use abroad and tell your bank your travel dates. At most Gulf banks this is a single tap in the app. A guest who does not do it finds the card blocked for security at the first large purchase — and fixing that means phoning the bank from another country.",
+        },
+      },
+      {
+        heading: {
+          tr: "Dövizi nerede bozdurmalı",
+          ar: "أين تصرف العملة",
+          en: "Where to change money",
+        },
+        body: {
+          tr: "Havalimanındaki döviz bürolarının kuru şehirdekilerden belirgin biçimde kötüdür. Bunun sebebi kötü niyet değil, kira: terminal içindeki bir metrekare şehirdekinin katı. Havalimanında yalnız ilk gün lazım olacak kadar bozdurun, gerisini şehirde yapın.\n\nŞehirde döviz bürosu her yerde var ve kurları vitrinde yazılı. Alış-satış farkı düşük olan bürolar genellikle turistik olmayan sokaklarda; Sultanahmet'in ana caddesindeki büro ile iki sokak arkadaki arasında gözle görülür fark çıkabiliyor. Bozdururken pasaport isteniyor, bu normal. Sokakta \"daha iyi kur\" diyerek yaklaşan kişilerden bozdurmayın.\n\nBankamatikten TL çekmek de mümkün ama iki ücret birden çıkabiliyor: bankamatiğin kendi ücreti ve kendi bankanızın yurt dışı işlem ücreti. Çekim yaparken ekranda \"kendi para biriminizde ödeyin\" seçeneği çıkarsa reddedin; o dönüşümün kuru genellikle kartınızın kurundan kötüdür.",
+          ar: "سعر مكاتب الصرافة في المطار أسوأ بوضوح من أسعار المدينة. والسبب ليس سوء نية بل الإيجار: المتر المربع داخل الصالة يساوي أضعاف مثيله في المدينة. اصرف في المطار ما يكفي اليوم الأول فقط، والباقي في المدينة.\n\nمكاتب الصرافة منتشرة في المدينة وأسعارها معلّقة على الواجهة. والمكاتب ذات الفارق الأقل بين الشراء والبيع تكون غالباً في شوارع غير سياحية؛ وقد يظهر فرق ملموس بين مكتب على الشارع الرئيسي في السلطان أحمد وآخر على بُعد شارعين. ويُطلب جواز السفر عند الصرف، وهذا أمر طبيعي. ولا تصرف عند من يقترب منك في الشارع عارضاً \"سعراً أفضل\".\n\nيمكن أيضاً سحب الليرة من الصراف الآلي، لكن قد تُحتسب رسمان معاً: رسم الجهاز نفسه ورسم مصرفك على العمليات الخارجية. وإذا ظهر لك على الشاشة خيار \"الدفع بعملتك\" فارفضه؛ فسعر ذلك التحويل أسوأ عادةً من سعر بطاقتك.",
+          en: "The exchange offices at the airport give noticeably worse rates than those in the city. The reason is not bad faith but rent: a square metre inside the terminal costs many times one in town. Change only what you need for the first day at the airport and do the rest in the city.\n\nExchange offices are everywhere in town and their rates are posted in the window. The ones with the narrowest buy-sell spread are usually on non-touristic streets; there can be a visible difference between an office on the main street in Sultanahmet and one two streets back. You will be asked for your passport, which is normal. Do not change money with anyone who approaches you in the street offering \"a better rate\".\n\nWithdrawing lira from an ATM is also possible, but two fees can apply: the machine's own fee and your bank's foreign transaction fee. If the screen offers to \"pay in your own currency\", decline; that conversion rate is usually worse than your card's.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bahşiş: ne kadar, nerede",
+          ar: "البقشيش: كم وأين",
+          en: "Tipping: how much and where",
+        },
+        body: {
+          tr: "Türkiye'de bahşiş zorunlu değil ve kimse sizden istemez, ama yaygındır. Restoranda memnun kaldıysanız hesabın yüzde beş-onu âdettendir; hesaba servis ücreti eklenmişse ayrıca bahşiş beklenmez. Kahve ya da çay gibi küçük hesaplarda para üstünü bırakmak yeterli.\n\nOtelde bavulu odaya çıkaran görevliye ve oda temizliğine küçük bir miktar bırakmak yaygın. Taksi ve özel transferde bahşiş beklenmiyor; para üstünü yuvarlamak âdet. Rehberli bir turdan memnun kaldıysanız gün sonunda vermek isteyebilirsiniz ama bu tamamen isteğe bağlı.\n\nBizim şoförlerimiz bahşiş istemez ve fiyatın içinde böyle bir kalem yoktur. Vermek isterseniz kabul edilir, vermezseniz hizmet aynıdır — bunu yazıyoruz çünkü \"ne kadar vermem gerekiyor\" sorusu misafirin yolculuk boyunca kafasında dolaşan gereksiz bir yük oluyor.",
+          ar: "البقشيش في تركيا غير إلزامي ولا يطلبه منك أحد، لكنه شائع. إذا أعجبك المطعم فمن المعتاد ترك خمسة إلى عشرة بالمئة من الفاتورة؛ وإن كانت رسوم الخدمة مضافة إلى الفاتورة فلا يُتوقع بقشيش إضافي. وفي الحسابات الصغيرة كالقهوة والشاي يكفي ترك الباقي.\n\nوفي الفندق يشيع ترك مبلغ صغير لمن يحمل الحقائب إلى الغرفة ولعاملات التنظيف. أما التاكسي والنقل الخاص فلا يُتوقع فيهما بقشيش؛ والمعتاد تقريب الباقي. وإذا أعجبتك جولة بمرشد فقد ترغب في إعطائه شيئاً في نهاية اليوم، لكن هذا اختياري تماماً.\n\nسائقونا لا يطلبون بقشيشاً وليس في السعر بند من هذا النوع. إن أردت أن تعطي فسيُقبل، وإن لم تعطِ فالخدمة هي نفسها — ونكتب هذا لأن سؤال \"كم ينبغي أن أعطي\" يبقى عبئاً لا لزوم له في ذهن الضيف طوال الرحلة.",
+          en: "Tipping in Türkiye is not compulsory and nobody will ask you for it, but it is common. If you were happy with a restaurant, five to ten per cent of the bill is customary; if a service charge is already on the bill, no further tip is expected. On small bills like coffee or tea, leaving the change is enough.\n\nAt a hotel it is common to leave a small amount for the person who carries your bags up and for housekeeping. Taxis and private transfers do not expect a tip; rounding up is the custom. If you enjoyed a guided tour you may want to give something at the end of the day, but it is entirely optional.\n\nOur drivers do not ask for tips and there is no such line in the price. If you want to give something it will be accepted; if you do not, the service is the same — we write this down because \"how much am I supposed to give\" becomes an unnecessary weight in a guest's mind for the whole trip.",
+        },
+      },
+      {
+        heading: {
+          tr: "Kartın reddedilmesinin üç sebebi",
+          ar: "ثلاثة أسباب لرفض البطاقة",
+          en: "Three reasons a card gets declined",
+        },
+        body: {
+          tr: "Birincisi bankanızın güvenlik kilidi: yurt dışından ilk büyük harcamada kart otomatik bloke olabiliyor. Seyahat bildirimi bunu önlüyor.\n\nİkincisi temassız limiti. Türkiye'de belli bir tutarın üstündeki temassız ödemelerde şifre isteniyor; kartınızın şifresini bilmiyorsanız (Körfez'de sık sık yalnız temassız kullanıldığı için hatırlanmıyor) ödeme geçmiyor. Yola çıkmadan şifrenizi teyit edin.\n\nÜçüncüsü kartın yurt dışı e-ticaret ve POS ayarlarının kapalı olması. Bu ayar bazı bankalarda varsayılan olarak kapalı geliyor ve yalnız uygulamadan açılıyor.\n\nHepsinin ortak çözümü aynı: yola çıkmadan bankayı arayıp üç şeyi teyit etmek — yurt dışı kullanım açık mı, günlük limit ne, kartın şifresi ne. Beş dakikalık bir iş, ama yapılmadığında tatil ortasında saatler alıyor.",
+          ar: "الأول هو القفل الأمني في مصرفك: قد تُحجب البطاقة تلقائياً عند أول عملية كبيرة من خارج البلد. وإشعار السفر يمنع ذلك.\n\nوالثاني حدّ الدفع اللاتلامسي. ففي تركيا يُطلب الرقم السري للمبالغ فوق حدّ معيّن؛ وإن كنت لا تعرف رقم بطاقتك (وهو أمر شائع في الخليج حيث يُستخدم اللاتلامسي وحده غالباً) فلن تمرّ العملية. تأكد من رقمك قبل السفر.\n\nوالثالث أن تكون إعدادات الشراء الخارجي ونقاط البيع مغلقة في البطاقة. هذا الإعداد مغلق افتراضياً في بعض المصارف ولا يُفتح إلا من التطبيق.\n\nوالحل واحد للثلاثة: اتصل بمصرفك قبل السفر وتأكد من ثلاثة أمور — هل الاستخدام الخارجي مفتوح، وما الحد اليومي، وما الرقم السري للبطاقة. عمل يستغرق خمس دقائق، لكن تركه يكلّف ساعات في منتصف الإجازة.",
+          en: "The first is your bank's security lock: a card can be blocked automatically at the first large purchase from abroad. A travel notification prevents this.\n\nThe second is the contactless limit. In Türkiye a PIN is requested above a certain amount; if you do not know your card's PIN — common in the Gulf, where contactless alone is often used — the payment will not go through. Confirm your PIN before you travel.\n\nThe third is the card's foreign e-commerce and point-of-sale settings being switched off. At some banks this is off by default and can only be turned on in the app.\n\nThe fix for all three is the same: call your bank before you leave and confirm three things — is foreign use enabled, what is the daily limit, and what is the card's PIN. Five minutes of work that costs hours in the middle of a holiday when it is skipped.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Türkiye'ye ne kadar nakit getirmeliyim?", ar: "كم من النقد ينبغي أن أحضر إلى تركيا؟", en: "How much cash should I bring to Türkiye?" },
+        answer: {
+          tr: "Kesin bir rakam veremeyiz çünkü harcama biçimi kişiden kişiye çok değişiyor. Pratik yaklaşım şu: otel, tur ve restoran gibi büyük kalemleri kartla ödemeyi planlayın, nakdi çarşı, pazar, küçük lokanta ve bahşiş gibi günlük küçük harcamalar için ayırın. Yanınızda az bir döviz getirip şehirde bozdurmak, çok nakit taşımaktan hem güvenli hem kolay.",
+          ar: "لا نستطيع إعطاء رقم قاطع لأن طريقة الإنفاق تختلف كثيراً من شخص لآخر. والنهج العملي هو: خطّط لدفع البنود الكبيرة كالفندق والجولات والمطاعم بالبطاقة، واحتفظ بالنقد للمصاريف اليومية الصغيرة كالسوق والمطاعم الصغيرة والبقشيش. وإحضار مبلغ صغير من العملة وصرفه في المدينة أأمن وأسهل من حمل نقد كثير.",
+          en: "We cannot give a firm figure because spending patterns vary a great deal. The practical approach: plan to pay the large items — hotel, tours, restaurants — by card, and keep cash for small daily spending such as the bazaar, markets, small restaurants and tips. Bringing a modest amount of foreign currency and changing it in town is both safer and easier than carrying a lot of cash.",
+        },
+      },
+      {
+        question: { tr: "Havalimanında döviz bozdurmak pahalı mı?", ar: "هل الصرف في المطار مكلف؟", en: "Is changing money at the airport expensive?" },
+        answer: {
+          tr: "Şehirdeki bürolara göre kuru belirgin biçimde düşük. Sebebi terminal kiraları. İlk gün için gereken kadar bozdurun — taksi, su, yemek — gerisini şehirde yapın. Aradaki fark tek seferde küçük görünse de bir haftalık tatilin toplamında hissedilir.",
+          ar: "سعره أدنى بوضوح من مكاتب المدينة، والسبب إيجارات الصالة. اصرف ما يلزم لليوم الأول فقط — تاكسي وماء وطعام — واترك الباقي للمدينة. والفارق قد يبدو صغيراً في مرة واحدة، لكنه ملموس في مجموع إجازة أسبوع.",
+          en: "The rate is noticeably lower than at offices in town, because of terminal rents. Change only what you need for the first day — taxi, water, a meal — and do the rest in the city. The difference looks small in one transaction but adds up over a week's holiday.",
+        },
+      },
+      {
+        question: { tr: "Şoföre bahşiş vermem gerekiyor mu?", ar: "هل يجب أن أعطي السائق بقشيشاً؟", en: "Am I expected to tip the driver?" },
+        answer: {
+          tr: "Hayır. Fiyatımızın içinde bahşiş kalemi yok ve şoförlerimiz bahşiş istemez. Vermek isterseniz kabul edilir, vermezseniz hizmet aynıdır. Bunu açıkça yazıyoruz çünkü \"ne kadar vermeliyim\" sorusu misafirin yolculuk boyunca taşıdığı gereksiz bir yük oluyor.",
+          ar: "لا. ليس في سعرنا بند للبقشيش، وسائقونا لا يطلبونه. إن أردت أن تعطي فسيُقبل، وإن لم تعطِ فالخدمة هي نفسها. ونكتب هذا صراحةً لأن سؤال \"كم ينبغي أن أعطي\" يبقى عبئاً لا لزوم له يحمله الضيف طوال الرحلة.",
+          en: "No. There is no tip line in our price and our drivers do not ask for one. If you want to give something it will be accepted; if you do not, the service is identical. We say this plainly because \"how much should I give\" becomes an unnecessary weight a guest carries for the whole trip.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "ramazan-ve-bayramda-turkiye",
+    topic: "planning",
+    image: "/images/places/suleymaniye.jpg",
+    minutes: 5,
+    title: {
+      tr: "Ramazan ve bayramda Türkiye: ne değişir, ne değişmez",
+      ar: "تركيا في رمضان والعيد: ما الذي يتغيّر وما الذي يبقى",
+      en: "Türkiye in Ramadan and Eid: what changes and what does not",
+    },
+    excerpt: {
+      tr: "Restoranlar açık mı, müzeler ne zaman kapanır, neden erken rezervasyon gerekir — mevsimin gerçek etkisi.",
+      ar: "هل المطاعم مفتوحة، ومتى تُغلق المتاحف، ولماذا يلزم الحجز مبكراً — أثر الموسم الحقيقي.",
+      en: "Are restaurants open, when do museums close, why book early — what the season actually changes.",
+    },
+    seo: {
+      title: {
+        tr: "Ramazan ve Bayramda Türkiye Seyahati Rehberi",
+        ar: "دليل السفر إلى تركيا في رمضان والعيد",
+        en: "Travelling in Türkiye during Ramadan and Eid",
+      },
+      description: {
+        tr: "Ramazanda restoranlar açık mı, iftar nasıl planlanır, bayramda ne kapanır ve neden erken rezervasyon şart. Körfez'den gelen aileler için.",
+        ar: "هل المطاعم مفتوحة في رمضان، وكيف يُخطَّط للإفطار، وماذا يُغلق في العيد، ولماذا الحجز المبكر ضروري. لعائلات الخليج.",
+        en: "Are restaurants open in Ramadan, how to plan iftar, what closes at Eid and why booking early matters. For Gulf families.",
+      },
+    },
+    facts: [
+      {
+        label: { tr: "Restoranlar", ar: "المطاعم", en: "Restaurants" },
+        value: { tr: "Ramazanda gün boyu açık", ar: "مفتوحة طوال النهار في رمضان", en: "Open all day during Ramadan" },
+      },
+      {
+        label: { tr: "Bayram tatili", ar: "عطلة العيد", en: "Eid holiday" },
+        value: { tr: "Resmî tatil; iç turizm zirvede", ar: "عطلة رسمية؛ ذروة السياحة الداخلية", en: "Public holiday; domestic travel peaks" },
+      },
+      {
+        label: { tr: "Rezervasyon", ar: "الحجز", en: "Booking" },
+        value: { tr: "Bayram için aylar önce", ar: "قبل العيد بأشهر", en: "Months ahead for Eid" },
+      },
+      {
+        label: { tr: "Camiler", ar: "المساجد", en: "Mosques" },
+        value: { tr: "Namaz saatlerinde ziyarete kapalı", ar: "مغلقة للزيارة في أوقات الصلاة", en: "Closed to visitors at prayer times" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Ramazanda hayat durmuyor",
+          ar: "الحياة لا تتوقف في رمضان",
+          en: "Life does not stop in Ramadan",
+        },
+        body: {
+          tr: "Körfez'den gelen misafirin en sık sorduğu şey bu: \"Ramazanda gündüz yemek bulabilir miyiz?\" Cevap evet. Türkiye'de restoranlar, kafeler ve alışveriş merkezlerindeki yemek katları ramazan boyunca gün içinde açık kalıyor. Turistik bölgelerde neredeyse hiçbir şey değişmiyor; daha muhafazakâr mahallelerde bazı küçük esnaf gündüz kapalı olabiliyor ama iki sokak ötede açık bir yer bulunuyor.\n\nDeğişen şey akşam. İftara doğru şehir yavaşlıyor, trafik yoğunlaşıyor ve restoranlar dolduğu için rezervasyonsuz masa bulmak zorlaşıyor. Sultanahmet Meydanı ve Eyüp gibi yerlerde iftar sofraları kuruluyor, akşam kalabalık oluyor. Bunu bilerek plan yapmak yeterli: gezmeyi öğleden sonra bitirin, iftar için yeri önceden ayarlayın.",
+          ar: "هذا أكثر ما يسأل عنه ضيوف الخليج: \"هل نجد طعاماً نهاراً في رمضان؟\" والجواب نعم. فالمطاعم والمقاهي وصالات الطعام في المولات تبقى مفتوحة نهاراً طوال رمضان في تركيا. وفي المناطق السياحية لا يكاد يتغيّر شيء؛ أما في الأحياء الأكثر محافظة فقد تُغلق بعض الدكاكين الصغيرة نهاراً، لكنك تجد مكاناً مفتوحاً على بُعد شارعين.\n\nالذي يتغيّر هو المساء. فمع اقتراب الإفطار تبطؤ المدينة ويشتدّ الزحام، وتمتلئ المطاعم فيصعب إيجاد طاولة بلا حجز. وتُقام موائد الإفطار في أماكن مثل ميدان السلطان أحمد وأيوب، فيكثر الناس مساءً. ويكفي أن تخطّط على هذا الأساس: أنهِ التجوّل بعد الظهر، ورتّب مكان الإفطار مسبقاً.",
+          en: "This is what Gulf guests ask most often: \"Will we find food during the day in Ramadan?\" The answer is yes. Restaurants, cafés and mall food courts stay open through the day in Türkiye all through Ramadan. In tourist areas almost nothing changes; in more conservative neighbourhoods some small shops may close during daylight, but you will find somewhere open two streets away.\n\nWhat changes is the evening. As iftar approaches the city slows, traffic thickens, and restaurants fill so a table without a booking becomes hard to find. Iftar tables are set up in places such as Sultanahmet Square and Eyüp, and the evenings get crowded. Planning around it is enough: finish sightseeing in the afternoon and arrange where you will break the fast in advance.",
+        },
+      },
+      {
+        heading: {
+          tr: "İftar ve namazı programa yerleştirmek",
+          ar: "وضع الإفطار والصلاة في البرنامج",
+          en: "Fitting iftar and prayer into the day",
+        },
+        body: {
+          tr: "Ramazanda gün planı normalden farklı kurulur. Sabah geç başlamak mantıklı; öğleden sonra en verimli saatler. İftardan bir saat önce yolda olmak istemezsiniz, çünkü o saatte trafik en yoğun hâlinde ve herkes bir yere yetişmeye çalışıyor.\n\nİftar saati mevsime göre değişiyor: kışa denk gelen ramazanda akşam beş civarı, yaza denk geldiğinde sekiz buçuğu geçebiliyor. Yaz ramazanında gün uzun olduğu için gezi programı da rahat; kış ramazanında akşam erken bastırdığı için gündüz daha sıkışık.\n\nBizim turlarımızda güzergâh namaz vakitlerine göre kuruluyor ve yol üstündeki camilerde mola veriliyor — bu ramazana özel bir şey değil, yıl boyu böyle. Ramazanda tek fark, gün sonunu iftar yerine göre planlamamız: nerede olmak istediğinizi söyleyin, programı ona göre bitirelim.",
+          ar: "يُبنى برنامج اليوم في رمضان على نحو مختلف. فمن المنطقي أن تبدأ الصباح متأخراً؛ وساعات ما بعد الظهر هي الأجدى. ولن ترغب أن تكون على الطريق قبل الإفطار بساعة، فذلك أشدّ أوقات الزحام ويحاول الجميع اللحاق بمكان ما.\n\nويختلف وقت الإفطار بحسب الموسم: في رمضان الشتاء يكون نحو الخامسة مساءً، وفي رمضان الصيف قد يتجاوز الثامنة والنصف. ولأن النهار طويل في رمضان الصيف يكون برنامج التجوّل مريحاً؛ أما في رمضان الشتاء فيحلّ المساء باكراً فيضيق النهار.\n\nوفي جولاتنا يُبنى المسار على أوقات الصلاة ويُتوقّف في المساجد الواقعة على الطريق — وهذا ليس خاصاً برمضان بل هو الحال طوال السنة. والفرق الوحيد في رمضان أننا نخطّط نهاية اليوم بحسب مكان الإفطار: قل لنا أين تريد أن تكون، وننهي البرنامج على ذلك.",
+          en: "A day in Ramadan is built differently. Starting late in the morning makes sense; the afternoon is the most productive stretch. You do not want to be on the road an hour before iftar, because that is when traffic is heaviest and everyone is trying to reach somewhere.\n\nThe time of iftar shifts with the season: in a winter Ramadan it is around five in the afternoon, in a summer one it can be past half past eight. Because the day is long in a summer Ramadan the sightseeing programme is relaxed; in a winter Ramadan evening comes early and the daylight is tighter.\n\nOn our tours the route is built around prayer times with stops at mosques along the way — that is not specific to Ramadan, it is how we work all year. The only difference in Ramadan is that we plan the end of the day around where you want to break the fast: tell us the place and we finish the programme there.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bayram: en kalabalık, en erken dolan hafta",
+          ar: "العيد: أزحم أسبوع وأسرعه امتلاءً",
+          en: "Eid: the busiest week, and the first to fill",
+        },
+        body: {
+          tr: "Ramazan Bayramı ve Kurban Bayramı Türkiye'de resmî tatil. Bu, ülke içindeki herkesin aynı anda tatile çıkması demek: oteller doluyor, uçak biletleri pahalılaşıyor, sahil yolları ve şehirlerarası güzergâhlar tıkanıyor. Körfez'den gelen misafirin tatili de çoğu zaman aynı haftaya denk geliyor, yani iki talep üst üste biniyor.\n\nSomut sonucu şu: bayram haftası için otel ve araç ayarlamak aylar öncesinden yapılmalı. Son iki haftaya kalındığında ya seçenek kalmıyor ya da fiyatlar normalin çok üstüne çıkıyor. Bu bizim koyduğumuz bir kural değil, piyasanın hâli — biz de o tarihlerde aynı arzın peşindeyiz.\n\nBayramın ilk günü çoğu müze ve resmî kurum kapalı, çarşılar yarım gün. İkinci günden itibaren normale dönüyor. Bayram sabahı camiler çok kalabalık; namaza gidecekseniz erken çıkmak gerekiyor.",
+          ar: "عيد الفطر وعيد الأضحى عطلة رسمية في تركيا. ومعنى ذلك أن الجميع داخل البلد يخرجون في إجازة في الوقت نفسه: تمتلئ الفنادق، وترتفع أسعار تذاكر الطيران، وتزدحم طرق الساحل والمسارات بين المدن. وغالباً ما تتزامن إجازة ضيوف الخليج مع الأسبوع نفسه، فيتراكب الطلبان.\n\nوالنتيجة العملية: يجب ترتيب الفندق والسيارة لأسبوع العيد قبل أشهر. ومن يترك الأمر لآخر أسبوعين لا يجد خيارات أو يجد أسعاراً أعلى بكثير من المعتاد. وهذه ليست قاعدة نضعها نحن بل حال السوق — فنحن أيضاً نسعى وراء العرض نفسه في تلك التواريخ.\n\nوفي أول أيام العيد تكون معظم المتاحف والدوائر الرسمية مغلقة والأسواق نصف يوم، ثم يعود الأمر إلى طبيعته من اليوم الثاني. وصباح العيد تكون المساجد شديدة الازدحام؛ فإن كنت ستصلي فاخرج مبكراً.",
+          en: "Eid al-Fitr and Eid al-Adha are public holidays in Türkiye. That means everyone inside the country goes on holiday at the same time: hotels fill, air fares rise, and the coast roads and intercity routes clog. Gulf guests' holidays often fall in the same week, so the two demands stack.\n\nThe practical consequence: hotels and vehicles for Eid week must be arranged months ahead. Leave it to the last fortnight and either there is nothing left or prices are far above normal. This is not a rule we impose; it is the state of the market — we are chasing the same supply on those dates.\n\nOn the first day of Eid most museums and government offices are closed and the bazaars work half a day. From the second day things return to normal. Mosques are very crowded on Eid morning; if you are going to pray, leave early.",
+        },
+      },
+      {
+        heading: {
+          tr: "Camileri ziyaret ederken",
+          ar: "عند زيارة المساجد",
+          en: "When visiting mosques",
+        },
+        body: {
+          tr: "Sultanahmet, Süleymaniye ve Ayasofya gibi camiler ibadete açık yapılar; müze değiller. Namaz vakitlerinde ziyarete kapatılıyorlar ve cuma günü öğle vaktinde kapalı kalma süresi daha uzun. Bir camiyi görmeyi planlıyorsanız vakti hesaba katın; kapıda beklemek yerine programı yarım saat kaydırmak yeterli.\n\nGiriş için omuz ve diz kapalı olmalı, kadınlar için başörtüsü gerekiyor. Girişte ücretsiz örtü veriliyor, yanınızda getirmek zorunda değilsiniz. Ayakkabılar çıkarılıp verilen poşete konuyor; çorap işe yarıyor.\n\nRamazanda camiler akşam teravih namazında çok dolu oluyor ve bu saatte ziyaret uygun değil. Gündüz saatleri, özellikle sabah, hem sakin hem fotoğraf için ışığı iyi.",
+          ar: "مساجد مثل السلطان أحمد والسليمانية وآيا صوفيا أبنية مفتوحة للعبادة، وليست متاحف. تُغلق أمام الزوار في أوقات الصلاة، ويطول إغلاقها ظهر الجمعة. فإن كنت تنوي زيارة مسجد فاحسب الوقت؛ ويكفي تأخير البرنامج نصف ساعة بدل الانتظار عند الباب.\n\nويلزم للدخول ستر الكتفين والركبتين، وغطاء رأس للنساء. ويُعطى الغطاء مجاناً عند المدخل فلا حاجة لإحضاره. وتُخلع الأحذية وتوضع في كيس يُعطى لك؛ والجوارب تنفع.\n\nوفي رمضان تمتلئ المساجد جداً في صلاة التراويح مساءً، ولا تناسب تلك الساعة الزيارة. أما ساعات النهار، وخاصة الصباح، فهادئة وضوؤها جيد للتصوير.",
+          en: "Mosques such as the Blue Mosque, Süleymaniye and Hagia Sophia are working places of worship, not museums. They close to visitors at prayer times, and the Friday midday closure is longer. If you plan to see a mosque, allow for the timing; shifting the programme by half an hour beats waiting at the door.\n\nShoulders and knees must be covered to enter, and women need a headscarf. A free covering is handed out at the entrance, so you do not have to bring one. Shoes come off and go into a bag you are given; socks are useful.\n\nIn Ramadan the mosques are very full for the evening tarawih prayer, and that hour is not suitable for a visit. Daytime, especially the morning, is both quieter and better lit for photographs.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Ramazanda Türkiye'de gündüz restoranlar açık mı?", ar: "هل المطاعم مفتوحة نهاراً في تركيا في رمضان؟", en: "Are restaurants open during the day in Ramadan in Türkiye?" },
+        answer: {
+          tr: "Evet. Restoranlar, kafeler ve alışveriş merkezlerindeki yemek katları gün boyu açık kalıyor; turistik bölgelerde neredeyse hiçbir şey değişmiyor. Daha muhafazakâr mahallelerde bazı küçük esnaf gündüz kapalı olabilir ama yakında açık bir yer bulunuyor. Değişen asıl şey akşam: iftara doğru trafik yoğunlaşıyor ve restoranlar doluyor.",
+          ar: "نعم. تبقى المطاعم والمقاهي وصالات الطعام في المولات مفتوحة طوال النهار؛ ولا يكاد يتغيّر شيء في المناطق السياحية. وفي الأحياء الأكثر محافظة قد تُغلق بعض الدكاكين الصغيرة نهاراً، لكنك تجد مكاناً مفتوحاً قريباً. والذي يتغيّر فعلاً هو المساء: يشتدّ الزحام وتمتلئ المطاعم مع اقتراب الإفطار.",
+          en: "Yes. Restaurants, cafés and mall food courts stay open all day; in tourist areas almost nothing changes. In more conservative neighbourhoods some small shops may close during daylight, but there is somewhere open nearby. What really changes is the evening: traffic thickens and restaurants fill as iftar approaches.",
+        },
+      },
+      {
+        question: { tr: "Bayramda gelmek mantıklı mı?", ar: "هل من المنطقي المجيء في العيد؟", en: "Does it make sense to come during Eid?" },
+        answer: {
+          tr: "Atmosfer için güzel ama pratik açıdan en zor hafta: Türkiye'de resmî tatil olduğu için iç turizm zirve yapıyor, oteller doluyor, biletler pahalılaşıyor ve yollar tıkanıyor. Gelecekseniz otel ve aracı aylar öncesinden ayarlayın. Tarihiniz esnekse bayramdan bir hafta önce ya da sonra gelmek aynı şehri çok daha rahat gezmenizi sağlıyor.",
+          ar: "جميل من حيث الأجواء لكنه أصعب أسبوع عملياً: فلأنه عطلة رسمية في تركيا تبلغ السياحة الداخلية ذروتها، وتمتلئ الفنادق، وترتفع أسعار التذاكر، وتزدحم الطرق. فإن كنت قادماً فرتّب الفندق والسيارة قبل أشهر. وإن كانت تواريخك مرنة فالمجيء قبل العيد بأسبوع أو بعده يجعلك تتجوّل في المدينة نفسها براحة أكبر بكثير.",
+          en: "Lovely for the atmosphere but practically the hardest week: because it is a public holiday in Türkiye, domestic travel peaks, hotels fill, fares rise and the roads clog. If you are coming, arrange the hotel and vehicle months ahead. If your dates are flexible, a week before or after Eid lets you see the same city far more comfortably.",
+        },
+      },
+      {
+        question: { tr: "Turlarınızda namaz molası veriliyor mu?", ar: "هل توجد وقفة للصلاة في جولاتكم؟", en: "Do your tours stop for prayers?" },
+        answer: {
+          tr: "Evet, güzergâh namaz vakitlerine göre kuruluyor ve yol üstündeki camilerde mola veriliyor. Bu ramazana özel değil, yıl boyu böyle çalışıyoruz. Öğle yemeği de helal seçenek sunan yerlerde veriliyor. Ramazanda tek fark, günü iftar yerine göre bitirmemiz — nerede olmak istediğinizi söylemeniz yeterli.",
+          ar: "نعم، يُبنى المسار على أوقات الصلاة ويُتوقَّف في المساجد الواقعة على الطريق. وهذا ليس خاصاً برمضان بل هكذا نعمل طوال السنة. والغداء يكون في أماكن تقدّم خيارات حلال. والفرق الوحيد في رمضان أننا ننهي اليوم بحسب مكان الإفطار — يكفي أن تقول لنا أين تريد أن تكون.",
+          en: "Yes, the route is built around prayer times with stops at mosques along the way. This is not specific to Ramadan; it is how we work all year. Lunch is taken at places offering halal options. The only difference in Ramadan is that we end the day around where you break the fast — just tell us the place.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "turkiyede-sim-kart-ve-internet",
+    topic: "practical",
+    image: "/images/places/levent.jpg",
+    minutes: 4,
+    title: {
+      tr: "Türkiye'de SIM kart ve internet: nasıl bağlanırsınız",
+      ar: "شريحة الاتصال والإنترنت في تركيا: كيف تتصل",
+      en: "SIM cards and internet in Türkiye: how to get online",
+    },
+    excerpt: {
+      tr: "Turist SIM'i mi eSIM mi, nereden alınır, telefon neden kilitlenir — bağlantı kurmanın pratik yolu.",
+      ar: "شريحة سياحية أم eSIM، ومن أين تُشترى، ولماذا يُقفل الهاتف — الطريق العملي للاتصال.",
+      en: "Tourist SIM or eSIM, where to buy, why phones get blocked — the practical way to stay connected.",
+    },
+    seo: {
+      title: {
+        tr: "Türkiye'de SIM Kart, eSIM ve İnternet Rehberi",
+        ar: "دليل شريحة الاتصال وeSIM والإنترنت في تركيا",
+        en: "SIM Cards and Internet in Türkiye",
+      },
+      description: {
+        tr: "Turist SIM kartı nereden alınır, eSIM daha mı iyi, telefon neden 120 gün sonra kilitlenir, ücretsiz wifi nerede var. Pratik bağlantı rehberi.",
+        ar: "من أين تُشترى الشريحة السياحية، وهل eSIM أفضل، ولماذا يُقفل الهاتف بعد 120 يوماً، وأين الواي فاي المجاني. دليل اتصال عملي.",
+        en: "Where to buy a tourist SIM, whether eSIM is better, why phones get blocked after 120 days, where free wifi is. A practical connectivity guide.",
+      },
+    },
+    facts: [
+      {
+        label: { tr: "Nereden", ar: "من أين", en: "Where" },
+        value: { tr: "Havalimanı ya da şehirdeki operatör bayisi", ar: "المطار أو وكيل المشغّل في المدينة", en: "Airport or an operator's shop in town" },
+      },
+      {
+        label: { tr: "Gerekli belge", ar: "المطلوب", en: "What you need" },
+        value: { tr: "Pasaport", ar: "جواز السفر", en: "Your passport" },
+      },
+      {
+        label: { tr: "eSIM", ar: "eSIM", en: "eSIM" },
+        value: { tr: "Uçmadan önce alınabilir; kayıt gerektirmez", ar: "يمكن شراؤها قبل السفر؛ لا تحتاج تسجيلاً", en: "Can be bought before you fly; no registration" },
+      },
+      {
+        label: { tr: "Dikkat", ar: "انتبه", en: "Watch out" },
+        value: { tr: "Yabancı telefon 120 gün sonra kilitlenir", ar: "الهاتف الأجنبي يُقفل بعد 120 يوماً", en: "A foreign phone is blocked after 120 days" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Üç seçenek: turist SIM, eSIM, dolaşım",
+          ar: "ثلاثة خيارات: شريحة سياحية، eSIM، تجوال",
+          en: "Three options: tourist SIM, eSIM, roaming",
+        },
+        body: {
+          tr: "Turist SIM kartı Türkiye'deki üç büyük operatörün hepsinde var ve genellikle belirli bir internet paketiyle satılıyor. Havalimanı gelen yolcu katında bayileri bulunuyor; şehirdeki mağazalardan almak çoğu zaman daha ucuz ama havalimanında almak ilk günü kurtarıyor. Alırken pasaport gerekiyor, kayıt işlemi birkaç dakika sürüyor.\n\neSIM, telefonu destekliyorsa en pratik yol: uçağa binmeden satın alıp uçaktan iner inmez etkinleştirebiliyorsunuz, mağaza aramak gerekmiyor ve fiziksel kartınız telefonda kalıyor — yani kendi numaranız açık kalırken internet eSIM'den geliyor. Türkiye'de eSIM hem yerli operatörlerden hem uluslararası sağlayıcılardan alınabiliyor.\n\nKendi hattınızla dolaşım (roaming) en kolay ama genellikle en pahalı seçenek. Kısa bir seyahatte, örneğin üç gün, dolaşım paketi almak SIM aramaktan daha mantıklı olabilir. Bir haftadan uzun kalacaksanız yerel bir çözüm neredeyse her zaman ucuza geliyor.",
+          ar: "الشريحة السياحية متوفرة لدى المشغّلين الثلاثة الكبار في تركيا وتُباع عادةً مع باقة إنترنت محددة. ولهم وكلاء في صالة القادمين بالمطار؛ والشراء من متاجر المدينة أرخص غالباً، لكن الشراء في المطار ينقذ اليوم الأول. ويُطلب جواز السفر عند الشراء، ويستغرق التسجيل دقائق.\n\nأما eSIM فهي الأيسر إن كان هاتفك يدعمها: تشتريها قبل ركوب الطائرة وتفعّلها فور نزولك، فلا تحتاج للبحث عن متجر، وتبقى شريحتك الأصلية في الهاتف — أي يظل رقمك الخاص فعّالاً بينما يأتي الإنترنت من الـ eSIM. وتتوفر eSIM في تركيا من المشغّلين المحليين ومن مزوّدين دوليين.\n\nوالتجوال برقمك هو الأسهل لكنه الأغلى عادةً. وفي رحلة قصيرة، ثلاثة أيام مثلاً، قد يكون شراء باقة تجوال أعقل من البحث عن شريحة. أما إن كانت إقامتك أطول من أسبوع فالحلّ المحلي أرخص دائماً تقريباً.",
+          en: "A tourist SIM is available from all three major operators in Türkiye and usually comes with a set data package. They have counters in the arrivals hall; buying in a city shop is often cheaper, but buying at the airport saves your first day. You need your passport, and registration takes a few minutes.\n\nAn eSIM is the most practical route if your phone supports it: you buy it before boarding and activate it the moment you land, with no shop to find, and your physical card stays in the phone — so your own number stays reachable while the data comes from the eSIM. eSIMs for Türkiye are sold both by local operators and by international providers.\n\nRoaming on your own line is the easiest but usually the most expensive. On a short trip — three days, say — a roaming bundle can make more sense than hunting for a SIM. Staying longer than a week, a local solution is almost always cheaper.",
+        },
+      },
+      {
+        heading: {
+          tr: "120 gün kuralı: telefonunuz neden kilitlenir",
+          ar: "قاعدة 120 يوماً: لماذا يُقفل هاتفك",
+          en: "The 120-day rule: why your phone gets blocked",
+        },
+        body: {
+          tr: "Türkiye'de yurt dışından getirilen bir telefon, içine Türk SIM kartı takıldıktan sonra belirli bir süre çalışır ve ardından şebekeye kapanır. Bu süre uzun zamandır 120 gün. Amaç kaçak telefon ticaretini engellemek; turisti hedeflemiyor ama sonucu turisti de etkiliyor.\n\nNormal bir tatilde bu kural sizi hiç ilgilendirmez — iki haftalık, hatta iki aylık bir seyahatte sorun çıkmaz. Ama Türkiye'ye sık gelen ya da uzun kalan misafirlerde ortaya çıkıyor: telefon bir gün aniden şebeke bulamaz oluyor ve wifi dışında çalışmıyor. Kilit telefona özel, SIM karta değil; kartı başka telefona takınca çalışıyor.\n\nSık gelenler için pratik çözüm eSIM ya da yalnız wifi kullanmak. Telefonu kalıcı olarak kaydettirmek mümkün ama harç ödemeli resmî bir işlem ve turist için genellikle mantıklı değil.",
+          ar: "الهاتف المُحضَر من خارج تركيا يعمل مدة معيّنة بعد وضع شريحة تركية فيه ثم يُغلق أمام الشبكة. وهذه المدة 120 يوماً منذ زمن. والغرض منع تجارة الهواتف غير النظامية؛ وهي لا تستهدف السائح لكن نتيجتها تطاله.\n\nوفي إجازة عادية لا تعنيك هذه القاعدة إطلاقاً — فلا مشكلة في رحلة أسبوعين بل حتى شهرين. لكنها تظهر عند من يتردّد على تركيا كثيراً أو يطيل الإقامة: يفقد الهاتف الشبكة فجأة في يوم ما ولا يعمل إلا على الواي فاي. والقفل خاص بالهاتف لا بالشريحة؛ فالشريحة تعمل في هاتف آخر.\n\nوالحل العملي لمن يتردّد كثيراً هو eSIM أو الاكتفاء بالواي فاي. ويمكن تسجيل الهاتف بشكل دائم لكنها معاملة رسمية برسوم، وغالباً لا تناسب السائح.",
+          en: "A phone brought in from abroad works for a set period in Türkiye once a Turkish SIM is put in it, and is then cut off from the network. That period has long been 120 days. The aim is to stop unregistered phone trading; it does not target tourists, but the effect reaches them.\n\nOn a normal holiday this rule will never concern you — a two-week or even two-month trip is fine. It shows up for guests who come often or stay long: one day the phone simply finds no network and works only on wifi. The block is on the handset, not the SIM; the card works in another phone.\n\nFor frequent visitors the practical answer is an eSIM or living on wifi. Registering the handset permanently is possible but it is an official procedure with a fee, and rarely worth it for a tourist.",
+        },
+      },
+      {
+        heading: {
+          tr: "Wifi nerede var, nerede yok",
+          ar: "أين يوجد واي فاي وأين لا",
+          en: "Where there is wifi and where there is not",
+        },
+        body: {
+          tr: "Otel, restoran, kafe ve alışveriş merkezlerinde ücretsiz wifi neredeyse standart; şifreyi personelden istemek yeterli. Havalimanlarında ücretsiz wifi var ama bağlanmak için genellikle telefon numarasıyla doğrulama gerekiyor ve yurt dışı numarası her zaman kabul edilmiyor — inişte ilk mesajınızı atamamanızın sebebi genelde bu.\n\nMüzelerde, camilerde ve toplu taşımada güvenilir bir bağlantı beklemeyin. Şehirlerarası yolda, özellikle Karadeniz'in dağ kesimlerinde ve Toroslar'da şebeke zaman zaman kesiliyor; harita kullanıyorsanız güzergâhı çevrimdışı indirin.\n\nAracımızda wifi yok — bunu yazıyoruz çünkü sorulduğunda net bir cevap olsun. Şoförle iletişim WhatsApp üzerinden kuruluyor ve karşılama sırasında bağlantınız yoksa isimli tabelayla beklediğimiz için birbirimizi bulmak sorun olmuyor.",
+          ar: "الواي فاي المجاني شبه قياسي في الفنادق والمطاعم والمقاهي والمولات؛ ويكفي طلب كلمة المرور من الموظفين. وفي المطارات يوجد واي فاي مجاني لكن الاتصال يتطلب عادةً تحققاً برقم هاتف، والرقم الأجنبي لا يُقبل دائماً — وهذا غالباً سبب عجزك عن إرسال أول رسالة عند الهبوط.\n\nولا تتوقع اتصالاً موثوقاً في المتاحف والمساجد والنقل العام. وعلى الطرق بين المدن، وخاصة في جبال البحر الأسود وطوروس، تنقطع الشبكة أحياناً؛ فإن كنت تستخدم الخرائط فحمّل المسار للاستخدام دون إنترنت.\n\nولا يوجد واي فاي في سيارتنا — ونكتب هذا ليكون الجواب واضحاً عند السؤال. والتواصل مع السائق يتم عبر واتساب، وإن لم يكن لديك اتصال عند الاستقبال فلن تكون مشكلة لأننا ننتظر بلافتة تحمل اسمك.",
+          en: "Free wifi is almost standard in hotels, restaurants, cafés and malls; asking staff for the password is enough. Airports have free wifi, but connecting usually needs verification by phone number and a foreign number is not always accepted — that is generally why you cannot send your first message on landing.\n\nDo not expect a reliable connection in museums, mosques or on public transport. On intercity roads, especially in the mountains of the Black Sea and the Taurus, the network drops from time to time; if you are using maps, download the route for offline use.\n\nThere is no wifi in our vehicle — we write that down so the answer is clear when asked. Contact with the driver goes through WhatsApp, and if you have no connection at the meeting point it does not matter, because we wait with a name board.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Havalimanından mı yoksa şehirden mi SIM almalıyım?", ar: "هل أشتري الشريحة من المطار أم من المدينة؟", en: "Should I buy a SIM at the airport or in town?" },
+        answer: {
+          tr: "Şehirdeki operatör mağazaları genellikle daha ucuz, ama havalimanından almak ilk günü kurtarıyor: yer bulmak, ulaşım ayarlamak ve ailenizle haberleşmek için ilk saatler en çok bağlantı gereken saatler. Pratik yol, gerçekten acele etmiyorsanız uçmadan önce eSIM almak — indiğiniz anda çalışıyor ve mağaza aramanız gerekmiyor.",
+          ar: "متاجر المشغّلين في المدينة أرخص عادةً، لكن الشراء من المطار ينقذ اليوم الأول: فالساعات الأولى هي أكثر ما تحتاج فيه الاتصال لإيجاد المكان وترتيب التنقّل والتواصل مع أهلك. والطريق العملي، إن لم تكن مستعجلاً حقاً، هو شراء eSIM قبل السفر — تعمل فور هبوطك ولا تحتاج للبحث عن متجر.",
+          en: "Operator shops in town are usually cheaper, but buying at the airport saves your first day: the first hours are when you most need a connection to find your place, arrange transport and reach your family. The practical route, unless you are truly in a hurry, is to buy an eSIM before you fly — it works the moment you land and there is no shop to find.",
+        },
+      },
+      {
+        question: { tr: "Telefonum Türkiye'de kilitlenir mi?", ar: "هل يُقفل هاتفي في تركيا؟", en: "Will my phone be blocked in Türkiye?" },
+        answer: {
+          tr: "Normal bir tatilde hayır. Yurt dışından getirilen bir telefon, içine Türk SIM kartı takıldıktan 120 gün sonra şebekeye kapanıyor; iki haftalık ya da iki aylık bir seyahatte bu süreye ulaşmıyorsunuz. Kural sık gelen ve uzun kalan misafirleri etkiliyor. Kilit telefona özel, SIM karta değil.",
+          ar: "في إجازة عادية لا. فالهاتف المُحضَر من الخارج يُغلق أمام الشبكة بعد 120 يوماً من وضع شريحة تركية فيه؛ ولا تبلغ هذه المدة في رحلة أسبوعين أو حتى شهرين. والقاعدة تمسّ من يتردّد كثيراً أو يطيل الإقامة. والقفل خاص بالهاتف لا بالشريحة.",
+          en: "On a normal holiday, no. A phone brought from abroad is cut off from the network 120 days after a Turkish SIM is put in it; a two-week or even two-month trip does not reach that. The rule affects frequent and long-staying visitors. The block is on the handset, not the SIM.",
+        },
+      },
+      {
+        question: { tr: "Aracınızda wifi var mı?", ar: "هل يوجد واي فاي في سيارتكم؟", en: "Is there wifi in your vehicle?" },
+        answer: {
+          tr: "Hayır, aracımızda wifi yok. Karşılamada bağlantınız olmasa da sorun çıkmıyor: geliş kapısında isimli tabelayla bekliyoruz, yani sizi bulmamız için internete ihtiyaç yok. Rezervasyon ve iletişim WhatsApp üzerinden yürüyor; otele vardığınızda oradaki wifi ile devam edebilirsiniz.",
+          ar: "لا، لا يوجد واي فاي في سيارتنا. ولن تكون هناك مشكلة إن لم يكن لديك اتصال عند الاستقبال: فنحن ننتظر عند بوابة الوصول بلافتة تحمل اسمك، أي لا نحتاج إنترنت لنجدك. والحجز والتواصل يجريان عبر واتساب؛ وعند وصولك الفندق يمكنك المتابعة بواي فاي الفندق.",
+          en: "No, there is no wifi in our vehicle. It does not matter if you have no connection at the meeting point: we wait at the arrivals gate with a name board, so no internet is needed for us to find you. Booking and contact run through WhatsApp; once at the hotel you can carry on with its wifi.",
+        },
+      },
+    ],
+  },
 ];
 
 export function guideBySlug(slug: string) {

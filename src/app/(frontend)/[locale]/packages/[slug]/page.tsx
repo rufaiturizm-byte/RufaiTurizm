@@ -80,7 +80,14 @@ export default async function PackageDetailPage({
       {/* Fiyat bilerek verilmiyor: sezona ve kişi sayısına göre değişiyor,
           sabit bir rakam sitenin "fiyat rezervasyonda netleşir" sözünü
           bozardı. Şema da fiyatsız geçerli. */}
-      <TouristTripSchema name={name} description={excerpt} image={item.image} />
+      {/* Gün gün program şemaya da giriyor: sayfada zaten yazılı ama
+          makineye verdiğimiz özet yalnız ad ve açıklamadan ibaretti. */}
+      <TouristTripSchema
+        name={name}
+        description={excerpt}
+        image={item.image}
+        itinerary={item.itinerary.map((day) => day.title[lang] ?? day.title.tr)}
+      />
 
       <section className="relative isolate">
         <Image

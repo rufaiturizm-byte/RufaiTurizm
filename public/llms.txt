@@ -19,7 +19,7 @@ yayınlanmaz.
 
 ## Hizmetler
 - [Havalimanı transferi](https://rufaiturizm.com/tr/transfer): isimli tabelayla karşılama, uçuş takibi, sabit fiyat. Hizmet verilen havalimanları: İstanbul (IST), Sabiha Gökçen (SAW), Antalya (AYT), Bodrum–Milas (BJV), Trabzon (TZX).
-- Güzergâh sayfaları (13): İstanbul ve Sabiha Gökçen'den Taksim, Sultanahmet, Kadıköy, Şişli-Nişantaşı, Beşiktaş-Ortaköy ve Bursa; Antalya'dan Kemer, Belek, Side ve Alanya; Bodrum-Milas'tan Bodrum merkez ve Turgutreis. Her sayfa o yolculuğa özel yazılmıştır (mesafe, süre, varışta nelere dikkat edilmeli); şablondan üretilmiş güzergâh sayfası yoktur.
+- Güzergâh sayfaları (14): İstanbul ve Sabiha Gökçen'den Taksim, Sultanahmet, Kadıköy, Şişli-Nişantaşı, Beşiktaş-Ortaköy ve Bursa; Antalya'dan Kemer, Belek, Side ve Alanya; Bodrum-Milas'tan Bodrum merkez, Yalıkavak ve Turgutreis. Her sayfa o yolculuğa özel yazılmıştır (mesafe, süre, varışta nelere dikkat edilmeli); şablondan üretilmiş güzergâh sayfası yoktur.
 - [Şoförlü Mercedes Vito](https://rufaiturizm.com/tr/hizmetler/vito-vip): bagajla birlikte 6 kişiye kadar.
 - [Tur hizmeti](https://rufaiturizm.com/tr/hizmetler/tours): özel tur, gruplarla birleştirme yok.
 - [Uçak bileti ve otel rezervasyonu](https://rufaiturizm.com/tr/hizmetler/flight-hotel): rezervasyon misafir adına yapılır.

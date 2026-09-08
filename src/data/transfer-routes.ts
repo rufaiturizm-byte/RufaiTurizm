@@ -52,6 +52,18 @@ export interface TransferRoute {
    */
   airport: "IST" | "SAW" | "AYT" | "BJV";
   image: string;
+  /*
+   * Kapak fotoğrafının ne gösterdiği — varış noktasından FARKLIYSA.
+   *
+   * Sayfa normalde `alt` olarak varış adını kullanıyor ve çoğu güzergâhta
+   * bu doğru: Kemer sayfasındaki fotoğraf Kemer, Alanya sayfasındaki
+   * Alanya. Ama Yalıkavak için içeriği doğrulanmış bir Yalıkavak
+   * fotoğrafı bulunamadı; elimizdeki kare Bodrum yarımadasından bir koy.
+   * Onu "Yalıkavak" diye etiketlemek, doğrulamadığımız bir şeyi iddia
+   * etmek olurdu — künyede elenen Hierapolis karesiyle aynı hata.
+   * Bu alan doluysa alt metni onu söylüyor.
+   */
+  imageAlt?: Text;
   from: Text;
   to: Text;
   distance: Text;
@@ -1117,6 +1129,101 @@ export const transferRoutes: TransferRoute[] = [
           tr: "Her zaman değil. Kale çevresinde ve çarşı içinde sokaklar dar, bir kısmı yaya trafiğine ayrılmış; sahildeki Cumhuriyet Caddesi akşam saatlerinde araca kapanıyor. Merkezdeki küçük butik otellerin bir bölümüne en yakın noktaya bırakılıp kısa bir yürüyüş kalıyor. Otel adını önceden aldığımızda şoför nereye kadar girebileceğini biliyor.",
           ar: "ليس دائماً. فحول القلعة وداخل السوق الشوارع ضيّقة وبعضها للمشاة فقط؛ وشارع الجمهورية على الساحل يُغلق أمام السيارات مساءً. وبعض الفنادق البوتيكية الصغيرة في المركز يتم الإنزال عند أقرب نقطة إليها ويبقى مشي قصير. وحين نأخذ اسم الفندق مسبقاً يعرف السائق إلى أين يستطيع الدخول.",
           en: "Not always. Around the castle and inside the bazaar the streets are narrow and some are pedestrian only; Cumhuriyet Caddesi on the waterfront closes to traffic in the evening. For some small boutique hotels in the centre you are dropped at the nearest point and a short walk remains. With the hotel name in advance the driver knows how far in he can go.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "bodrum-havalimani-yalikavak-transfer",
+    airport: "BJV",
+    image: "/images/places/bodrum-koy.jpg",
+    imageAlt: {
+      tr: "Bodrum yarımadasında bir koy: yamaçtaki beyaz evler ve demirli tekneler",
+      ar: "خليج في شبه جزيرة بودروم: بيوت بيضاء على المنحدر وقوارب راسية",
+      en: "A bay on the Bodrum peninsula: white houses on the hillside and boats at anchor",
+    },
+    from: { tr: "Bodrum Havalimanı (BJV)", ar: "مطار بودروم (BJV)", en: "Bodrum Airport (BJV)" },
+    to: { tr: "Yalıkavak", ar: "يالي كافاك", en: "Yalıkavak" },
+    distance: { tr: "yaklaşık 56 km", ar: "نحو 56 كم", en: "about 56 km" },
+    duration: { tr: "55 dk – 1 saat 20 dk", ar: "55 دقيقة – ساعة و20 دقيقة", en: "55 min – 1 hr 20 min" },
+    excerpt: {
+      tr: "Yarımadanın havalimanına en uzak noktası. Mesafeden çok yolun karakteri belirleyici: tepeler ve virajlar.",
+      ar: "أبعد نقطة في شبه الجزيرة عن المطار. وطابع الطريق أهم من المسافة: تلال ومنعطفات ومخارج تضيق في الصيف.",
+      en: "The furthest point on the peninsula. The road matters more than the distance: hills and bends.",
+    },
+    sections: [
+      {
+        heading: {
+          tr: "Yarımadanın en uzak noktası",
+          ar: "أبعد نقطة في شبه الجزيرة",
+          en: "The furthest point on the peninsula",
+        },
+        body: {
+          tr: "Yalıkavak, Milas-Bodrum Havalimanı'na yaklaşık 56 kilometre uzaklıkta ve yarımadanın havalimanına en uzak yerleşimi. Yol Bodrum merkeze kadar aynı güzergâhı izliyor, sonra merkeze girmeden kuzeybatıya sapıp tepeler arasından iniyor. Mesafe Turgutreis'ten yalnız birkaç kilometre fazla ama son bölüm daha virajlı; normal koşullarda bir saat civarında sürüyor.",
+          ar: "تبعد يالي كافاك نحو 56 كيلومتراً عن مطار ميلاس-بودروم، وهي أبعد تجمّع سكني في شبه الجزيرة عن المطار. يتبع الطريق المسار نفسه حتى مركز بودروم، ثم ينعطف شمالاً غرباً دون دخول المركز وينزل بين التلال. المسافة تزيد بضعة كيلومترات فقط عن تورغوتريس لكن القسم الأخير أكثر تعرّجاً؛ وتستغرق الرحلة نحو ساعة في الظروف العادية.",
+          en: "Yalıkavak is about 56 km from Milas–Bodrum Airport, the furthest settlement on the peninsula from it. The road follows the same route as far as Bodrum, then turns north-west without entering the town and drops through the hills. The distance is only a few kilometres more than Turgutreis, but the final stretch winds more; in normal conditions the drive takes around an hour.",
+        },
+      },
+      {
+        heading: {
+          tr: "Marina ve koylar",
+          ar: "المارينا والخلجان",
+          en: "The marina and the bays",
+        },
+        body: {
+          tr: "Yalıkavak'ı yarımadanın diğer koylarından ayıran şey büyük marinası: uluslararası yatların bağlandığı, çevresinde mağazalar ve restoranlar olan bir alan. Konaklama da buna göre şekillenmiş; tasarım otelleri ve villa siteleri ağırlıkta. Sahil Turgutreis'teki gibi uzun bir kumsal değil, birbirinden ayrı küçük koylar ve iskeleli plaj kulüpleri biçiminde.",
+          ar: "ما يميّز يالي كافاك عن خلجان شبه الجزيرة الأخرى هو مارينتها الكبيرة: منطقة ترسو فيها اليخوت الدولية وتحيط بها المتاجر والمطاعم. وقد تشكّلت الإقامة تبعاً لذلك؛ إذ تغلب فنادق التصميم ومجمّعات الفلل. والشاطئ ليس رملياً طويلاً كما في تورغوتريس، بل خلجان صغيرة متفرّقة ونوادٍ شاطئية بأرصفة خشبية.",
+          en: "What sets Yalıkavak apart from the peninsula's other bays is its large marina: a berth for international yachts, ringed by shops and restaurants. Accommodation has followed suit, weighted towards design hotels and villa developments. The shoreline is not one long sandy beach as at Turgutreis but a series of separate small coves and jetty beach clubs.",
+        },
+      },
+      {
+        heading: {
+          tr: "Buraya gelenler bölgeden pek çıkmıyor",
+          ar: "من يأتي إلى هنا نادراً ما يغادر المنطقة",
+          en: "People who come here rarely leave the area",
+        },
+        body: {
+          tr: "Bodrum merkeze araçla yaklaşık yarım saat, Turgutreis'e yirmi dakika. Yeme-içme ve alışveriş marina çevresinde toplandığı için buraya kalan misafirler çoğunlukla bölgeden çıkmıyor; günlük araç ihtiyacı diğer koylara göre daha az. Buna karşılık yaz akşamlarında marina çevresindeki yollar yoğunlaşıyor ve villa siteleri arasındaki sapaklar dar; villa kiralıyorsanız konum bağlantısını önceden almamız işi kolaylaştırıyor.",
+          ar: "مركز بودروم على نحو نصف ساعة بالسيارة، وتورغوتريس على عشرين دقيقة. ولأن المطاعم والتسوّق متجمّعة حول المارينا فإن من يقيم هنا غالباً لا يغادر المنطقة؛ والحاجة إلى سيارة يومية أقل مقارنةً بالخلجان الأخرى. في المقابل تزدحم الطرق حول المارينا في أمسيات الصيف، والمخارج بين مجمّعات الفلل ضيّقة؛ فإن كنت تستأجر فيلا فإن أخذ رابط الموقع مسبقاً يسهّل الأمر.",
+          en: "Bodrum centre is about half an hour by car, Turgutreis twenty minutes. Because eating and shopping cluster around the marina, guests staying here mostly do not leave the area and need a daily car less than in the other bays. On the other hand, the roads around the marina get busy on summer evenings and the turnings between villa developments are narrow; if you are renting a villa, taking the location link in advance makes things easier.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Bodrum Havalimanı'ndan Yalıkavak'a kaç km ve ne kadar sürer?",
+          ar: "كم تبعد يالي كافاك عن مطار بودروم وكم تستغرق الرحلة؟",
+          en: "How far is Yalıkavak from Bodrum Airport and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 56 kilometre ve normal koşullarda bir saat civarında. Yarımadanın havalimanına en uzak noktası burası; yol Bodrum merkeze kadar aynı güzergâhı izleyip sonra kuzeybatıya sapıyor ve son bölüm virajlı.",
+          ar: "نحو 56 كيلومتراً ونحو ساعة في الظروف العادية. وهي أبعد نقطة في شبه الجزيرة عن المطار؛ يتبع الطريق المسار نفسه حتى مركز بودروم ثم ينعطف شمالاً غرباً، والقسم الأخير متعرّج.",
+          en: "About 56 km and around an hour in normal conditions. It is the furthest point on the peninsula from the airport; the road follows the same route as far as Bodrum, then turns north-west, and the last stretch winds.",
+        },
+      },
+      {
+        question: {
+          tr: "Yalıkavak mı Turgutreis mi?",
+          ar: "يالي كافاك أم تورغوتريس؟",
+          en: "Yalıkavak or Turgutreis?",
+        },
+        answer: {
+          tr: "İkisi de yarımadanın batısında ve havalimanına benzer mesafede, ama karakterleri farklı. Yalıkavak marina çevresinde toplanmış, tasarım otelleri ve ayrı küçük koylarla daha pahalı bir taraf. Turgutreis uzun kumsalı ve haftalık pazarıyla aile tatiline daha dönük. Uzun kumsal isteyen Turgutreis'te, marina ve sakin koy isteyen Yalıkavak'ta daha memnun kalıyor.",
+          ar: "كلتاهما في غرب شبه الجزيرة وعلى مسافة متقاربة من المطار، لكن طابعهما مختلف. يالي كافاك متجمّعة حول المارينا، وهي الجهة الأغلى بفنادق التصميم والخلجان الصغيرة المنفصلة. أما تورغوتريس فأقرب إلى عطلة العائلة بشاطئها الرملي الطويل وسوقها الأسبوعي. فمن يريد شاطئاً رملياً طويلاً يرتاح في تورغوتريس، ومن يريد المارينا وخليجاً هادئاً يرتاح في يالي كافاك.",
+          en: "Both are on the western side of the peninsula and a similar distance from the airport, but they feel different. Yalıkavak clusters around the marina and is the more expensive side, with design hotels and separate small coves. Turgutreis leans towards family holidays with its long sandy beach and weekly market. If you want a long sandy beach you will be happier in Turgutreis; if you want the marina and a quiet cove, Yalıkavak.",
+        },
+      },
+      {
+        question: {
+          tr: "Yalıkavak'ta kalıp Bodrum merkeze gidip gelmek zor mu?",
+          ar: "هل يصعب التنقّل بين يالي كافاك ومركز بودروم؟",
+          en: "Is it hard to go back and forth between Yalıkavak and Bodrum centre?",
+        },
+        answer: {
+          tr: "Araçla yaklaşık yarım saat, yani günübirlik gidip gelmek mümkün. Ama yol tepelerden geçiyor ve yaz akşamlarında yoğunlaşıyor; her akşam merkeze inmeyi planlıyorsanız bunu hesaba katın. Yeme-içmenin çoğu zaten marina çevresinde toplandığı için buraya kalanların merkeze inme ihtiyacı genellikle sanıldığından az oluyor.",
+          ar: "نحو نصف ساعة بالسيارة، أي أن الذهاب والعودة في اليوم نفسه ممكن. لكن الطريق يمرّ بين التلال ويزدحم في أمسيات الصيف؛ فإن كنت تخطط للنزول إلى المركز كل مساء فضع ذلك في الحسبان. ولأن معظم المطاعم متجمّعة حول المارينا أصلاً، فإن حاجة المقيمين هنا للنزول إلى المركز أقل مما يُظنّ عادةً.",
+          en: "About half an hour by car, so a day trip is easy. But the road runs through the hills and gets busy on summer evenings, so factor that in if you plan to go into town every night. Since most of the eating and drinking clusters around the marina anyway, guests staying here usually need to go into town less than they expect.",
         },
       },
     ],

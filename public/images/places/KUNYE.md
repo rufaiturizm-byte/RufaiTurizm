@@ -19,6 +19,7 @@ değişikliği gerekmez.
 | side.jpg | Side, Apollon Tapınağı sütunları (Medusa başlı friz) | Mert Kahveci |
 | alanya.jpg | Alanya limanı, Kızıl Kule ve kale | Aysegul Aytören |
 | turgutreis.jpg | Turgutreis: koy, yelkenliler ve fener | Deniz Vatan |
+| bodrum-koy.jpg | Bodrum yarımadasında bir koy — yamaçta beyaz evler, demirli tekneler | (Unsplash) |
 
 Her kare içeriği doğrulanarak seçildi: arama sonucundaki açıklamalar genel
 ("a building that looks like a mosque") olduğu için görsellerin hepsi tek tek
@@ -49,3 +50,17 @@ Dört kare eklendi, dört aday elendi. Elenenler ve nedenleri:
 Bu yüzden Yalıkavak yerine **Turgutreis** güzergâh sayfası yazıldı:
 elimizde içeriği doğrulanmış bir Turgutreis fotoğrafı vardı, Yalıkavak
 için yoktu. Yalıkavak, kapsam listesinde (routes.ts) yer alıyor.
+
+## bodrum-koy.jpg neden "Yalıkavak" diye etiketlenmedi
+
+Yalıkavak güzergâh sayfası için içeriği doğrulanmış bir Yalıkavak
+fotoğrafı bulunamadı; aday kareler ya tanınabilir değildi ya da başka
+bir işletmenin tabelasını taşıyordu. Elimizdeki kare Bodrum
+yarımadasından bir koy ve öyle etiketleniyor.
+
+Bunun için `transfer-routes.ts` içine isteğe bağlı `imageAlt` alanı
+eklendi: sayfa normalde alt metni olarak varış adını kullanıyor
+(Kemer sayfasında Kemer fotoğrafı var), ama fotoğraf varış noktasının
+kendisi değilse alt metin onu söylüyor. Doğrulamadığımız bir yeri
+adıyla etiketlemek, bu klasörden elenen Hierapolis karesiyle aynı hata
+olurdu.

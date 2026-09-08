@@ -68,6 +68,9 @@ export default async function TourDetailPage({
 
   const name = t(`${tour.key}.name`);
   const description = t(`${tour.key}.description`);
+  /* Şehir adı şemadaki koordinatı adlandırıyor: çıplak enlem-boylam
+     yerine "Antalya" diyen bir Place daha okunabilir. */
+  const city = t(`${tour.key}.city`);
   const others = tours.filter((item) => item.key !== tour.key).slice(0, 4);
   const highlights = t.raw(`${tour.key}.highlights`) as string[];
 
@@ -89,6 +92,8 @@ export default async function TourDetailPage({
         image={tour.image}
         price={tour.priceFrom}
         currency={tour.currency}
+        durationHours={tour.durationHours}
+        geo={{ lat: tour.geo.lat, lng: tour.geo.lng, name: city }}
       />
 
       <section className="relative isolate">

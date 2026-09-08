@@ -134,7 +134,7 @@ export default async function TransferRoutePage({
       <section className="relative isolate">
         <Image
           src={route.image}
-          alt={to}
+          alt={route.imageAlt ? (route.imageAlt[lang] ?? route.imageAlt.tr) : to}
           fill
           priority
           sizes="100vw"

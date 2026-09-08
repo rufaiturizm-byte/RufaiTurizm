@@ -153,19 +153,37 @@ export function FaqSchema({
   return <JsonLd data={data} />;
 }
 
-/** Tur ve hizmet detay sayfaları için ürün benzeri kart. */
+/**
+ * Tur, hizmet ve paket detay sayfaları için ürün benzeri kart.
+ *
+ * `durationHours`, `geo` ve `itinerary` sonradan eklendi: üçünün de
+ * verisi zaten dosyalarda duruyordu ama şemaya girmiyordu. Sayfa "10 saat"
+ * yazıyor, tours.ts turun koordinatını tutuyor, paket sayfası gün gün
+ * programı basıyor — makineye verdiğimiz özet ise yalnız ad, açıklama ve
+ * görselden ibaretti. Yapay zekâ aramaları (ChatGPT, Perplexity, Google'ın
+ * özetleri) bu alanları düz metni yorumlamak yerine doğrudan okuyor.
+ */
 export function TouristTripSchema({
   name,
   description,
   image,
   price,
   currency,
+  durationHours,
+  geo,
+  itinerary,
 }: {
   name: string;
   description: string;
   image: string;
   price?: number;
   currency?: string;
+  /** Turun sürdüğü saat — ISO 8601 süresine çevrilir. */
+  durationHours?: number;
+  /** Turun geçtiği yerin koordinatı ve adı. */
+  geo?: { lat: number; lng: number; name: string };
+  /** Paketin gün gün programı; her gün bir durak olarak veriliyor. */
+  itinerary?: string[];
 }) {
   const data: WithContext<TouristTrip> = {
     "@context": "https://schema.org",
@@ -178,6 +196,29 @@ export function TouristTripSchema({
       name: "Rufai Turizm",
       url: siteConfig.url,
     },
+    ...(durationHours ? { duration: `PT${durationHours}H` } : {}),
+    ...(geo
+      ? {
+          itinerary: {
+            "@type": "Place",
+            name: geo.name,
+            geo: { "@type": "GeoCoordinates", latitude: geo.lat, longitude: geo.lng },
+          },
+        }
+      : {}),
+    ...(itinerary && itinerary.length
+      ? {
+          itinerary: {
+            "@type": "ItemList",
+            numberOfItems: itinerary.length,
+            itemListElement: itinerary.map((label, index) => ({
+              "@type": "ListItem" as const,
+              position: index + 1,
+              item: { "@type": "Place" as const, name: label },
+            })),
+          },
+        }
+      : {}),
     ...(price
       ? {
           offers: {

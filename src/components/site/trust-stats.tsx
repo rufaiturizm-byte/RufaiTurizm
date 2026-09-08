@@ -102,6 +102,10 @@ export async function TrustStats() {
       prefix: "",
       value: 2015,
       decimals: 0,
+      /* Yıl, sayı değil: binlik ayracıyla "2,015" basılıyor ve
+         "Deneyim Yılı" etiketinin altında iki bin on beş yıllık bir
+         tecrübe gibi okunuyordu. */
+      grouping: false,
       suffix: "",
       label: tStats("sinceLabel"),
       desc: tStats("sinceDesc"),
@@ -162,7 +166,11 @@ export async function TrustStats() {
                   ) : (
                     <>
                       {stat.prefix}
-                      <NumberTicker value={stat.value} decimalPlaces={stat.decimals} />
+                      <NumberTicker
+                        value={stat.value}
+                        decimalPlaces={stat.decimals}
+                        grouping={stat.grouping !== false}
+                      />
                       <span className="text-[24px] text-muted-foreground">{stat.suffix}</span>
                     </>
                   )}

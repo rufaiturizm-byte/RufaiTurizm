@@ -32,7 +32,7 @@ export async function AssuranceBand() {
   const t = await getTranslations("assurance");
 
   const items = [
-    { icon: Wallet, title: t("prepayTitle"), desc: t("prepayDesc") },
+    { icon: Wallet, title: t("prepayTitle"), desc: t("prepayDesc"), wide: true },
     { icon: CalendarX2, title: t("cancelTitle"), desc: t("cancelDesc") },
     { icon: BadgeCheck, title: t("priceTitle"), desc: t("priceDesc") },
     { icon: MoonStar, title: t("prayerTitle"), desc: t("prayerDesc") },
@@ -43,6 +43,7 @@ export async function AssuranceBand() {
       desc: t("licenseDesc", { no: siteConfig.credentials.tursab }),
       href: siteConfig.tursabVerifyUrl,
       cta: t("verifyCta"),
+      wide: true,
     },
   ];
 
@@ -61,22 +62,41 @@ export async function AssuranceBand() {
           tone="dark"
         />
 
-        <div className="grid gap-px overflow-hidden lg:grid-cols-3"
-          style={{
-            background: "color-mix(in oklab, white 10%, transparent)",
-            borderRadius: "var(--radius-card)",
-            boxShadow: "var(--edge-light-dark), var(--shadow-e3)",
-          }}
-        >
+        {/*
+          Altı madde tek bir ince çizgili ızgaradaydı: hepsi aynı düz
+          lacivert hücrede, hiçbiri diğerinden öne çıkmıyor ve blok
+          uzaktan tek bir gri kütle gibi okunuyordu. Oysa bunlar sayfanın
+          en güçlü kartları.
+
+          Artık her madde kendi kartında (`surface-card-dark` — globals.css'te
+          yazılıydı ama sitede hiç kullanılmıyordu) ve TÜRSAB kaydı geniş
+          duruyor: tek DOĞRULANABİLİR madde o, kalan beşi bizim
+          taahhüdümüz. Doğrulama bağı da orada, yani en çok yer hak eden
+          kart aynı zamanda tıklanabilir olanı.
+        */}
+        {/*
+          DÖRT sütun, iki kart iki sütun geniş. Üç sütunda denendi ve
+          tutmadı: altı maddeden biri geniş olunca yedi birim ediyor,
+          üçe bölünmüyor ve son satırda boşluk kalıyordu. Dörtte
+          2+1+1 ve 1+1+2 olarak tam oturuyor.
+
+          Geniş olan ikisi rastgele seçilmedi. Bu bileşenin kendi
+          notunda yazdığı gibi karar iki cümlede veriliyor: ön ödeme
+          istemememiz (ticari) ve TÜRSAB kaydı (hukuki, tek
+          DOĞRULANABİLİR madde — doğrulama bağı da onda).
+        */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map(({ icon: Icon, title, desc, ...rest }) => {
             const href = "href" in rest ? rest.href : undefined;
             const cta = "cta" in rest ? rest.cta : undefined;
+            const wide = "wide" in rest ? rest.wide : false;
 
             return (
               <div
                 key={title}
-                className="flex flex-col p-7"
-                style={{ background: "var(--brand-night)" }}
+                className={`reveal-rise surface-card-dark surface-card-dark-lift flex flex-col p-7 ${
+                  wide ? "lg:col-span-2" : ""
+                }`}
               >
                 <span className="icon-tile size-11" aria-hidden="true">
                   <Icon className="size-5" />

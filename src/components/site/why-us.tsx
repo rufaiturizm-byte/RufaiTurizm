@@ -23,7 +23,11 @@ export async function WhyUs() {
   ] as const;
 
   return (
-    <section style={{ background: "var(--brand-night)" }}>
+    <section
+      className="relative isolate overflow-hidden"
+      style={{ background: "var(--brand-night)" }}
+    >
+      <div className="aurora-veil -z-10" aria-hidden="true" />
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_0.85fr_1.2fr] lg:items-center lg:gap-12">
           {/*

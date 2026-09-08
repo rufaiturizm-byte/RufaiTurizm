@@ -918,3 +918,67 @@ header :where(a, button):focus-visible {
     animation: constellation-drift 120s linear infinite;
   }
 }
+
+/*
+ * Aurora perdesi — koyu bölümlerin derinlik katmanı.
+ *
+ * NEDEN. Sitedeki lacivert bölümler düz tek renkti; üzerine konan
+ * takımyıldız noktaları doku veriyordu ama ışık vermiyordu. Turizm
+ * sitelerinde önerilen "Aurora UI" yaklaşımı tam bunu çözüyor: büyük,
+ * yavaş akan gradyanlarla renk katmanlayarak derinlik.
+ *
+ * RENK EKLENMİYOR. Perde yalnız zaten paletimizde olan iki rengi
+ * kullanıyor: altın ve gök mavisi. Aurora'nın tipik elektrik mavisi /
+ * macenta çiftleri bilerek alınmadı — markanın rengi değişmemeli,
+ * yalnız zemin nefes almalı.
+ *
+ * OKUNURLUK. Yoğunluk düşük tutuldu ve bulanıklık yüksek: metnin
+ * altındaki zemin hiçbir noktada beyaz yazının 4.5:1 eşiğini
+ * kıramayacak kadar açılmıyor (kontrast denetimiyle doğrulandı).
+ *
+ * Hareket `transform` üzerinden: bileşik katmanda çalışır, yeniden
+ * boyama istemez. `background-position` ile yapılsaydı her karede
+ * gradyanlar yeniden çizilirdi.
+ */
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(-3%, -2%, 0) scale(1.08);
+  }
+  50% {
+    transform: translate3d(3%, 2%, 0) scale(1.16);
+  }
+  100% {
+    transform: translate3d(-2%, 3%, 0) scale(1.08);
+  }
+}
+
+.aurora-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      38% 46% at 16% 22%,
+      color-mix(in oklab, var(--brand-gold) 20%, transparent) 0%,
+      transparent 64%
+    ),
+    radial-gradient(
+      44% 52% at 84% 14%,
+      color-mix(in oklab, var(--brand-sky) 24%, transparent) 0%,
+      transparent 68%
+    ),
+    radial-gradient(
+      50% 44% at 64% 92%,
+      color-mix(in oklab, var(--brand-gold) 13%, transparent) 0%,
+      transparent 62%
+    );
+  filter: blur(26px);
+  opacity: 0.55;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .aurora-veil {
+    animation: aurora-drift 30s ease-in-out infinite;
+    will-change: transform;
+  }
+}

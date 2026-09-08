@@ -64,6 +64,7 @@ export async function PromoBanner({
               yazmak da çözerdi ama sitedeki diğer iki kullanım (güvence
               bandı, kapanış bandı) zaten ayrı katman kullanıyor.
             */}
+            <div className="aurora-veil -z-10" aria-hidden="true" />
             <div
               className="pattern-constellation pattern-drift absolute inset-0 -z-10 opacity-60"
               aria-hidden="true"

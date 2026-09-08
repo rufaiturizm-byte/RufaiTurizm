@@ -52,6 +52,7 @@ export async function AssuranceBand() {
       className="relative isolate mt-4 overflow-hidden py-20"
       style={{ background: "var(--brand-night)" }}
     >
+      <div className="aurora-veil -z-10" aria-hidden="true" />
       <div className="pattern-constellation absolute inset-0 -z-10 opacity-60" aria-hidden="true" />
 
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">

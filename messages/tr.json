@@ -8,6 +8,7 @@
     "menu": "Menü",
     "services": "Hizmetlerimiz",
     "tours": "Turlar",
+    "destinations": "Bölgeler",
     "transfer": "Transfer",
     "about": "Hakkımızda",
     "contact": "İletişim",
@@ -818,13 +819,15 @@
     "about": "TÜRSAB belgeli seyahat acentesi. Arapça, Türkçe ve İngilizce hizmet; sabit fiyat, aileye uygun programlar ve tüm seyahat boyunca tek muhatap. Belge No 12539.",
     "contact": "WhatsApp'tan yazın, aynı gün dönelim. Transfer, tur, uçak bileti ve otel rezervasyonu için 7/24 ulaşabilirsiniz. Arapça, Türkçe ve İngilizce hizmet veriyoruz.",
     "faq": "Fiyatlar sabit mi, Arapça rehber var mı, havalimanında karşılıyor musunuz, ön ödeme gerekiyor mu? Misafirlerimizin en çok sorduğu 20 sorunun net cevapları.",
-    "packages": "İstanbul, Bursa, Sapanca, Trabzon, Antalya ve Bodrum için 4-8 günlük hazır programlar. Özel araç, Arapça rehber, otelden alış."
+    "packages": "İstanbul, Bursa, Sapanca, Trabzon, Antalya ve Bodrum için 4-8 günlük hazır programlar. Özel araç, Arapça rehber, otelden alış.",
+    "destinations": "Türkiye'de hizmet verdiğimiz bölgeler: Antalya, Bodrum, İstanbul, Trabzon, Bursa, Sapanca. Nerede kalınır, havalimanı mesafeleri, mevsimler."
   },
   "related": {
     "title": "Keşfetmeye devam edin",
     "subtitle": "Aradığınız cevap burada değilse, bu sayfalar yardımcı olur.",
     "transfer": "Havalimanı transferi ve şoförlü araç",
     "tours": "Günlük turlar ve programlar",
+    "destinations": "Bölgeler ve şehirler",
     "services": "Tüm hizmetlerimiz",
     "hotels": "İstanbul'da nerede kalınır",
     "guides": "Seyahat rehberleri",
@@ -876,5 +879,23 @@
     "licenseTitle": "TÜRSAB belgeli acente",
     "licenseDesc": "Kültür ve Turizm Bakanlığı belgeli seyahat acentesiyiz. Belge no {no} — kaydı resmî listeden doğrulayın.",
     "verifyCta": "Belgeyi doğrula"
+  },
+  "destinationsPage": {
+    "title": "Bölgeler",
+    "heroSubtitle": "Türkiye'de hizmet verdiğimiz altı bölge: nerede kalınır, havalimanından ne kadar sürer, hangi mevsim uygun.",
+    "introTitle": "Şehir seçmek, otel seçmekten önce gelir",
+    "intro": "Çoğu misafir önce oteli seçiyor, sonra o otelin nerede olduğunu öğreniyor. Oysa Türkiye'de aynı şehrin adı iki yüz kilometrelik bir sahili kapsayabiliyor: havalimanına yarım saat de olabilirsiniz iki buçuk saat de, deniziniz kum da olabilir çakıl da. Bu sayfalar o kararı önce vermeniz için yazıldı — her bölgede ne olduğunu, nereye ne kadar sürdüğünü ve hangi mevsimin işe yaradığını söylüyor.",
+    "region": "Bölge",
+    "explore": "Bölgeyi incele",
+    "offerTitle": "{city} bölgesinde neler sunuyoruz",
+    "routesTitle": "Transfer güzergâhları",
+    "hotelsLink": "{city} bölgesinde nerede kalınır",
+    "faqTitle": "{city} hakkında sık sorulanlar",
+    "askTitle": "{city} için program mı kuralım?",
+    "askText": "Tarihinizi ve kişi sayısını yazın; aynı gün içinde sabit fiyat ve gün gün program gönderelim.",
+    "days": "gün",
+    "hubEyebrow": "Bölge rehberi",
+    "hubTitle": "{city} sayfasının tamamı",
+    "hubCta": "{city} rehberini aç"
   }
 }

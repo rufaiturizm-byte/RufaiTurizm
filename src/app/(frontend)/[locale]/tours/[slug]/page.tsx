@@ -14,6 +14,7 @@ import { packageBySlug } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
+import { CityHubLink } from "@/components/site/city-hub-link";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
@@ -393,6 +394,7 @@ export default async function TourDetailPage({
         </div>
       </section>
 
+      <CityHubLink city={tour.key} locale={locale} />
       <FaqPreview />
       <ClosingCta locale={locale} />
       <RelatedLinks exclude={["tours"]} />

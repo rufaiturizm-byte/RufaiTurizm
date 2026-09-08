@@ -25,6 +25,29 @@ değişikliği gerekmez.
 | alanya.jpg | Alanya limanı, Kızıl Kule ve kale | Aysegul Aytören |
 | turgutreis.jpg | Turgutreis: koy, yelkenliler ve fener | Deniz Vatan |
 | bodrum-koy.jpg | Bodrum yarımadasında bir koy — yamaçta beyaz evler, demirli tekneler | (Unsplash) |
+| duden.jpg | Aşağı Düden Şelalesi'nin denize dökülüşü, arkada Antalya | Shamoil |
+| suleymaniye.jpg | Haliç'ten Süleymaniye Camii ve Eminönü sırtı | Ibrahim Uzun |
+| bogaz-yali.jpg | Boğaz kıyısında yalılar, denizden görünüm | Hulki Okan Tabak |
+| bodrum-kale.jpg | Bodrum Kalesi (Aziz Petrus), akşam ışığında denizden | Włodzimierz Jaworski |
+| sumela.jpg | Sümela Manastırı, Altındere vadisinin kayalığında (Trabzon) | Adem Percem |
+| ayder.jpg | Ayder Yaylası, Rize — kırmızı çatılı evler ve karlı zirveler | Faruk Melik ÇEVİK |
+| karadeniz-vadi.jpg | Ayder'de dere ve dere üstü ahşap teras (Rize) | Abdelrahman Harfoosh |
+| uludag-teleferik.jpg | Bursa teleferiği: ormanın üstünde kabinler, aşağıda ova | Mesut Pişkin |
+| cumalikizik.jpg | Cumalıkızık (Bursa) — kaldırım taşlı sokak ve mavi konak | Kamil Kalkan |
+| bursa-kis.jpg | Bursa kışın: karlı çatılar, arkada Uludağ | Danil Ahmetşah |
+| sapanca-golu.jpg | Sapanca Gölü kıyısında iskele ve tekne (Sakarya) | Süleyman Can Sezgi |
+| sapanca-iskele.jpg | Sapanca Gölü'nde gün batımında ahşap iskele ve sazlık | Süleyman Can Sezgi |
+| sapanca-aksam.jpg | Sapanca Gölü akşamüstü, göl kıyısındaki ahşap teras | Süleyman Can Sezgi |
+| kapalicarsi.jpg | Kapalıçarşı, Kalpakçılar Caddesi (Fatih, İstanbul) | Linus Mimietz |
+| bodrum-koyu.jpg | Bodrum'da koy: demirli tekneler ve yamaçtaki beyaz evler | Metehan Karpuzoğlu |
+| yalikavak.jpg | Yalıkavak sahili, yukarıdan (drone) | Nihat Sinan Erul |
+| galata-halic.jpg | Haliç'ten Galata Kulesi ve vapur, akşam ışığı | Imad Alassiry |
+| koza-han.jpg | Koza Han avlusundaki mescit ve çay bahçesi (Bursa) | Musa Ortaç |
+| uzungol-vadi.jpg | Uzungöl ve vadi, yukarıdan (Trabzon) | Turhan Can Kargin |
+| kaleici-liman.jpg | Kaleiçi eski limanı: gulet tekneleri ve surlar (Antalya) | Igor Sporynin |
+| sapanca-yol.jpg | Sapanca Gölü kıyısında ahşap yürüyüş yolu, alacakaranlık | Süleyman Can Sezgi |
+| bursa-koy-sokak.jpg | Bursa'da köy sokağı: mavi evler, taş duvarlar, tezgâh | N Atac |
+| sapanca-orman.jpg | Sapanca'da ormanda ağaçların arasından güneş | Süleyman Can Sezgi |
 
 Her kare içeriği doğrulanarak seçildi: arama sonucundaki açıklamalar genel
 ("a building that looks like a mosque") olduğu için görsellerin hepsi tek tek
@@ -97,3 +120,53 @@ gün batımında vapur, çocuklu aileler rehberine Emirgan lale korusu.
 Bu yüzden elenen adaylar da oldu — gri ve soluk bir kar sokağı ile
 çok doygun renkli bir seramik tezgâhı, ikisi de konu olarak uygundu
 ama sayfanın rengine oturmuyordu.
+
+## Bölge, paket ve rehber sayfaları için eklenen yirmi üç kare (2026-09)
+
+Şehir merkezi sayfaları açılırken (`/bolgeler/...`) elimizdeki 25 görsel
+altı sayfaya yetmiyordu; yetmediği için aynı kareler otel, güzergâh ve
+rehber sayfalarında zaten ikişer üçer kez kullanılıyordu. Yukarıdaki son
+yirmi bir satır bunun için eklendi.
+
+Seçerken beş aday elendi: Unsplash+ (Getty) lisanslı olduğu için indirmeye
+403 dönen üç kare, gökyüzü tamamen patlamış bir cami kubbesi ve konum
+etiketi olmayan bir arnavut kaldırımı sokak. Sonuncusu Cumalıkızık
+aramasından gelmişti ama sayfasında konum yazmıyordu; yerine kooperatif
+tabelası karenin içinde okunan fotoğraf alındı — yani yeri fotoğrafın
+kendisinden doğrulanabiliyor. Kalanların hepsi tek tek açılıp ne
+olduğu görüldü; Unsplash'in kendi açıklamaları güvenilir değil ("a
+building on a cliff" gibi) ve daha önce Side diye etiketlenmiş bir kare
+aslında Hierapolis çıkmıştı.
+
+İki kare Trabzon değil Rize sınırlarında (ayder.jpg, karadeniz-vadi.jpg).
+Karadeniz turu Rize'ye geçtiği için kullanılıyorlar, ama alt metinlerinde
+ve künyede Rize yazıyor — Trabzon diye anılmıyorlar.
+
+Fotoğrafçı adları Unsplash sayfalarından alındı. Lisans atıf zorunlu
+kılmıyor, künye yine de tutuluyor.
+
+
+### Paketlerin kendi görselleri
+
+Son beş satır (galata-halic, koza-han, uzungol-vadi, kaleici-liman,
+sapanca-yol) paket sayfaları için. Altı paket, altı turla AYNI altı
+fotoğrafı kullanıyordu; bölge sayfasında tur kartıyla paket kartı yan
+yana düşünce ikisi tek bir kart kopyalanmış gibi görünüyordu — ana
+sayfada da tours/istanbul.jpg altı kez basılıyordu. Her görsel o paketin
+gerçekten gittiği yerden seçildi: Antalya programı Kaleiçi'ne gidiyor,
+Bursa programı Koza Han'a, Karadeniz programı Uzungöl'e. Bodrum paketi
+turgutreis.jpg'i kullanıyor; o kare zaten elimizdeydi ve sitede yalnız
+bir yerde geçiyordu.
+
+Elenen adaylar: Aspendos antik tiyatrosu (fotoğraf iyiydi ama Antalya
+programında Aspendos YOK — gitmediğimiz bir yeri kapak yapmak olurdu),
+"Uzungöl" aramasından gelen bir kare (aslında Amasya'ydı) ve konum
+etiketi Antalya olan bir orman şelalesi (Sapanca paketine konacaktı).
+
+### Rehberlerin kendi görselleri
+
+Son iki satır (bursa-koy-sokak, sapanca-orman) rehber kartları için;
+antalya-bolge-rehberi ise kemer.jpg'e alındı. Üç rehber, kendi
+şehirlerinin turuyla aynı fotoğrafı kullanıyordu ve bölge sayfasında tur
+kartıyla rehber kartı yan yana geliyordu. kemer.jpg boşaldı çünkü Antalya
+bölge sayfasının kapağı duden.jpg oldu.

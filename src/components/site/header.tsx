@@ -24,6 +24,7 @@ export async function Header() {
     { href: "/" as const, label: t("home") },
     { href: "/transfer" as const, label: t("transfer") },
     { href: "/tours" as const, label: t("tours") },
+    { href: "/destinations" as const, label: t("destinations") },
     { href: "/packages" as const, label: t("packages") },
     { href: "/services" as const, label: t("services") },
     { href: "/hotels" as const, label: t("hotels") },
@@ -55,9 +56,11 @@ export async function Header() {
           <Logo />
         </Link>
 
-        {/* Dokuz bağlantı lg genişliğinde sıkışıyor; tam menü xl'den
-            itibaren, arada mobil menü devrede. */}
-        <nav className="hidden items-center gap-5 whitespace-nowrap xl:flex 2xl:gap-7">
+        {/* On bir bağlantı lg genişliğinde sıkışıyor; tam menü xl'den
+            itibaren, arada mobil menü devrede. Bölgeler eklendiğinde
+            2xl'deki geniş boşluk da kaldırıldı: 1536 pikselde menü
+            "Rezervasyon" düğmesine dayanıyordu. */}
+        <nav className="hidden items-center gap-4 whitespace-nowrap xl:flex 2xl:gap-5">
           {items.map((item) => (
             <NavLink key={item.href} href={item.href}>
               {item.label}

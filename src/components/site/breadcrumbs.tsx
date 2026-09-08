@@ -9,6 +9,7 @@ export type Crumb = {
     | "/transfer"
     | "/tours"
     | "/packages"
+    | "/destinations"
     | "/services"
     | "/hotels"
     | "/guides"

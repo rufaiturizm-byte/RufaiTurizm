@@ -14,6 +14,7 @@ import { AssuranceBand } from "@/components/site/assurance-band";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
+import { CityHubLink } from "@/components/site/city-hub-link";
 import { packages, packageBySlug, relatedPackages } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
 
@@ -304,6 +305,7 @@ export default async function PackageDetailPage({
         </div>
       </section>
 
+      <CityHubLink city={item.destinationSlug} locale={locale} />
       <AssuranceBand />
       <ClosingCta locale={locale} />
       <RelatedLinks exclude={["packages"]} />

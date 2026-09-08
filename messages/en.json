@@ -8,6 +8,7 @@
     "menu": "Menu",
     "services": "Services",
     "tours": "Tours",
+    "destinations": "Destinations",
     "transfer": "Transfer",
     "about": "About Us",
     "contact": "Contact",
@@ -818,13 +819,15 @@
     "about": "A TÜRSAB-licensed travel agency, licence no 12539. Service in Arabic, Turkish and English, fixed prices and one contact for the whole trip.",
     "contact": "Message us on WhatsApp and we will reply the same day. Reachable 24/7 for transfers, tours, flight tickets and hotel bookings, in Arabic, Turkish and English.",
     "faq": "Are prices fixed? Is there an Arabic-speaking guide? Do you meet us at the airport? Is prepayment required? Clear answers to the 20 questions guests ask most.",
-    "packages": "Ready-made 4–8 day packages for Istanbul, Bursa, Sapanca, Trabzon, Antalya and Bodrum. Private vehicle, Arabic-speaking guide, hotel pick-up."
+    "packages": "Ready-made 4–8 day packages for Istanbul, Bursa, Sapanca, Trabzon, Antalya and Bodrum. Private vehicle, Arabic-speaking guide, hotel pick-up.",
+    "destinations": "The regions we serve in Türkiye: Antalya, Bodrum, Istanbul, Trabzon, Bursa, Sapanca. Where to stay, airport distances, seasons."
   },
   "related": {
     "title": "Keep exploring",
     "subtitle": "If your answer is not here, these pages will help.",
     "transfer": "Airport transfers and chauffeur service",
     "tours": "Day tours and programmes",
+    "destinations": "Regions and cities",
     "services": "All our services",
     "hotels": "Where to stay in Istanbul",
     "guides": "Travel guides",
@@ -876,5 +879,23 @@
     "licenseTitle": "TÜRSAB-licensed agency",
     "licenseDesc": "We are a travel agency licensed by the Turkish Ministry of Culture and Tourism. Licence no {no} — verify the record in the official register.",
     "verifyCta": "Verify the licence"
+  },
+  "destinationsPage": {
+    "title": "Destinations",
+    "heroSubtitle": "The six regions we serve in Türkiye: where to stay, how long from the airport, which season suits you.",
+    "introTitle": "Choosing the city comes before choosing the hotel",
+    "intro": "Most guests pick the hotel first and only then find out where it is. But in Türkiye one city name can cover two hundred kilometres of coast: you might be half an hour from the airport or two and a half, your sea might be sand or pebble. These pages exist so you can make that decision first — they tell you what is in each region, how long it takes to get where, and which season actually works.",
+    "region": "Region",
+    "explore": "Explore the region",
+    "offerTitle": "What we offer in {city}",
+    "routesTitle": "Transfer routes",
+    "hotelsLink": "Where to stay in {city}",
+    "faqTitle": "Common questions about {city}",
+    "askTitle": "Shall we plan {city} for you?",
+    "askText": "Send your dates and party size; we come back the same day with a fixed price and a day-by-day plan.",
+    "days": "days",
+    "hubEyebrow": "Area guide",
+    "hubTitle": "Everything on {city}",
+    "hubCta": "Open the {city} guide"
   }
 }

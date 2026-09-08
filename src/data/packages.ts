@@ -45,11 +45,30 @@ export interface PackageDay {
 
 export interface Package {
   slug: string;
+  /*
+   * Bağlı olduğu şehir merkezi sayfası (data/destinations.ts).
+   *
+   * Birden çok şehri gezen programlarda AĞIRLIK MERKEZİ yazılıyor, ilk
+   * durak değil: "İstanbul + Bursa 6 gün" programının okuru İstanbul'u
+   * zaten menüden buluyor, merak ettiği Bursa. Sekiz günlük programda da
+   * aynı sebeple Sapanca yazılı.
+   */
+  destinationSlug: string;
   name: Text;
   city: Text;
   days: number;
   /** Kartta ve listede görünen tek satırlık tanıtım. */
   excerpt: Text;
+  /*
+   * Kapak fotoğrafı — paketin kendi karesi, turunki DEĞİL.
+   *
+   * Altı paket altı turla aynı altı dosyayı kullanıyordu; bölge
+   * sayfasında tur kartıyla paket kartı yan yana düştüğü için tek kart
+   * iki kez basılmış gibi duruyordu, ana sayfada da aynı dosya altı kez
+   * geçiyordu. Görsel, paketin GERÇEKTEN uğradığı bir yerden seçilir:
+   * Antalya programı Kaleiçi'ne gidiyor, Bursa programı Koza Han'a.
+   * Gitmediğimiz bir yeri kapak yapmak sayfanın kendi metniyle çelişir.
+   */
   image: string;
   /** Gün gün program. */
   itinerary: PackageDay[];
@@ -68,8 +87,9 @@ export interface Package {
 export const packages: Package[] = [
   {
     slug: "istanbul-4-gun",
+    destinationSlug: "istanbul",
     days: 4,
-    image: "/images/tours/istanbul.jpg",
+    image: "/images/places/galata-halic.jpg",
     name: {
       tr: "İstanbul 4 Günlük Program",
       ar: "برنامج إسطنبول 4 أيام",
@@ -145,8 +165,9 @@ export const packages: Package[] = [
   },
   {
     slug: "istanbul-bursa-6-gun",
+    destinationSlug: "bursa",
     days: 6,
-    image: "/images/tours/bursa.jpg",
+    image: "/images/places/koza-han.jpg",
     name: {
       tr: "İstanbul ve Bursa 6 Günlük Program",
       ar: "برنامج إسطنبول وبورصة 6 أيام",
@@ -238,8 +259,9 @@ export const packages: Package[] = [
   },
   {
     slug: "istanbul-sapanca-bursa-8-gun",
+    destinationSlug: "sapanca",
     days: 8,
-    image: "/images/tours/sapanca.jpg",
+    image: "/images/places/sapanca-yol.jpg",
     name: {
       tr: "İstanbul, Sapanca ve Bursa 8 Günlük Program",
       ar: "برنامج إسطنبول وسبانجا وبورصة 8 أيام",
@@ -351,8 +373,9 @@ export const packages: Package[] = [
   },
   {
     slug: "trabzon-karadeniz-5-gun",
+    destinationSlug: "trabzon",
     days: 5,
-    image: "/images/tours/trabzon.jpg",
+    image: "/images/places/uzungol-vadi.jpg",
     name: {
       tr: "Trabzon ve Karadeniz 5 Günlük Program",
       ar: "برنامج طرابزون والبحر الأسود 5 أيام",
@@ -436,8 +459,9 @@ export const packages: Package[] = [
   },
   {
     slug: "antalya-akdeniz-5-gun",
+    destinationSlug: "antalya",
     days: 5,
-    image: "/images/tours/antalya.jpg",
+    image: "/images/places/kaleici-liman.jpg",
     name: {
       tr: "Antalya ve Akdeniz 5 Günlük Program",
       ar: "برنامج أنطاليا والبحر المتوسط 5 أيام",
@@ -557,8 +581,9 @@ export const packages: Package[] = [
   },
   {
     slug: "bodrum-ege-5-gun",
+    destinationSlug: "bodrum",
     days: 5,
-    image: "/images/tours/bodrum.jpg",
+    image: "/images/places/turgutreis.jpg",
     name: {
       tr: "Bodrum ve Ege 5 Günlük Program",
       ar: "برنامج بودروم وبحر إيجه 5 أيام",

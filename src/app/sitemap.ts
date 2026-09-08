@@ -6,6 +6,7 @@ import { services } from "@/data/services";
 import { guides } from "@/data/guides";
 import { transferRoutes } from "@/data/transfer-routes";
 import { packages } from "@/data/packages";
+import { destinations } from "@/data/destinations";
 import { siteConfig } from "@/config/site";
 
 const base = siteConfig.url;
@@ -89,6 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { href: "/packages", priority: 0.9, changeFrequency: "monthly" },
     { href: "/services", priority: 0.9, changeFrequency: "monthly" },
     { href: "/transfer", priority: 0.9, changeFrequency: "monthly" },
+    { href: "/destinations", priority: 0.9, changeFrequency: "monthly" },
     { href: "/guides", priority: 0.8, changeFrequency: "monthly" },
     { href: "/hotels", priority: 0.8, changeFrequency: "monthly" },
     { href: "/contact", priority: 0.7, changeFrequency: "yearly" },
@@ -108,6 +110,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...packages.map((item) => ({
       href: { pathname: "/packages/[slug]" as const, params: { slug: item.slug } },
       priority: 0.8,
+      changeFrequency: "monthly" as const,
+    })),
+    ...destinations.map((item) => ({
+      href: { pathname: "/destinations/[city]" as const, params: { city: item.slug } },
+      priority: 0.9,
       changeFrequency: "monthly" as const,
     })),
     ...guides.map((guide) => ({

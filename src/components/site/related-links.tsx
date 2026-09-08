@@ -18,6 +18,7 @@ type Key =
   | "transfer"
   | "tours"
   | "packages"
+  | "destinations"
   | "services"
   | "hotels"
   | "guides"
@@ -29,6 +30,7 @@ const HREFS = {
   transfer: "/transfer",
   tours: "/tours",
   packages: "/packages",
+  destinations: "/destinations",
   services: "/services",
   hotels: "/hotels",
   guides: "/guides",

@@ -432,7 +432,7 @@ export const guides: Guide[] = [
   {
     slug: "sapanca-masukiye-rehberi",
     topic: "daytrips",
-    image: "/images/tours/sapanca.jpg",
+    image: "/images/places/sapanca-orman.jpg",
     minutes: 4,
     title: {
       tr: "Sapanca ve Maşukiye rehberi",
@@ -984,7 +984,7 @@ export const guides: Guide[] = [
   {
     slug: "bursa-uludag-gunubirlik",
     topic: "daytrips",
-    image: "/images/tours/bursa.jpg",
+    image: "/images/places/bursa-koy-sokak.jpg",
     minutes: 4,
     title: {
       tr: "Bursa ve Uludağ: İstanbul'dan günübirlik rehber",
@@ -2004,7 +2004,7 @@ export const guides: Guide[] = [
   {
     slug: "antalya-bolge-rehberi",
     topic: "daytrips",
-    image: "/images/tours/antalya.jpg",
+    image: "/images/places/kemer.jpg",
     minutes: 6,
     title: {
       tr: "Antalya bölge rehberi: Kaleiçi, Side, Kemer, Belek ve Alanya",

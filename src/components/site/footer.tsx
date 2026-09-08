@@ -43,6 +43,7 @@ export async function Footer() {
     { href: "/" as const, label: tNav("home") },
     { href: "/transfer" as const, label: tNav("transfer") },
     { href: "/tours" as const, label: tNav("tours") },
+    { href: "/destinations" as const, label: tNav("destinations") },
     { href: "/packages" as const, label: tNav("packages") },
     { href: "/services" as const, label: tNav("services") },
     { href: "/hotels" as const, label: tNav("hotels") },

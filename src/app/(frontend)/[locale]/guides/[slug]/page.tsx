@@ -16,7 +16,9 @@ import { headingId } from "@/lib/heading-id";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
+import { CityHubLink } from "@/components/site/city-hub-link";
 import { guideBySlug, guides, relatedGuides } from "@/data/guides";
+import { destinationForGuide } from "@/data/destinations";
 import type { Locale } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -63,6 +65,8 @@ export default async function GuideDetailPage({
 
   const guide = guideBySlug(slug);
   if (!guide) notFound();
+
+  const cityHub = destinationForGuide(guide.slug);
 
   const t = await getTranslations("guidesPage");
   const tNav = await getTranslations("nav");
@@ -301,6 +305,7 @@ export default async function GuideDetailPage({
         </div>
       </section>
 
+      {cityHub ? <CityHubLink city={cityHub} locale={locale} /> : null}
       <RouteCoverage locale={locale} />
       <RelatedLinks exclude={["guides"]} />
       <CredentialsBand />

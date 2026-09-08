@@ -1345,3 +1345,22 @@ export function relatedRoutes(slug: string, count = 4) {
 
   return [...rotate(sameAirport), ...rotate(others)].slice(0, count);
 }
+
+/**
+ * Güzergâhın hangi şehir merkezi sayfasına ait olduğu.
+ *
+ * Havalimanından türetiliyor, elle yazılmıyor: on dört güzergâhın her
+ * birine ayrı bir alan eklemek aynı bilgiyi on dört kez tekrarlamak
+ * olurdu ve yeni güzergâh eklerken unutulacak ilk şey o olurdu.
+ * İstanbul'un iki havalimanı da aynı sayfaya çıkıyor.
+ */
+export function destinationForAirport(airport: TransferRoute["airport"]) {
+  switch (airport) {
+    case "AYT":
+      return "antalya";
+    case "BJV":
+      return "bodrum";
+    default:
+      return "istanbul";
+  }
+}

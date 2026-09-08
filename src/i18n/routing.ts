@@ -105,6 +105,23 @@ export const pathnames = {
     tr: "/seyahat-rehberi/[slug]",
     en: "/travel-guides/[slug]",
   },
+  /*
+   * Şehir merkezi sayfaları.
+   *
+   * Rakip analizinden: Arapça arama ŞEHİR + HİZMET biçiminde geliyor
+   * ("جولات سياحية أنطاليا"). Yol adı "وجهات-سياحية" — "وجهات سياحية في
+   * تركيا" araması bu kelimeyle yapılıyor.
+   */
+  "/destinations": {
+    ar: "/وجهات-سياحية",
+    tr: "/bolgeler",
+    en: "/destinations",
+  },
+  "/destinations/[city]": {
+    ar: "/وجهات-سياحية/[city]",
+    tr: "/bolgeler/[city]",
+    en: "/destinations/[city]",
+  },
   /* Konaklama: "otel rezervasyonu" hizmetimizin arama karşılığı burada. */
   "/hotels": {
     ar: "/فنادق-إسطنبول",

@@ -14,6 +14,7 @@ import { TrustBoxes } from "@/components/site/trust-stats";
 import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { RelatedLinks } from "@/components/site/related-links";
+import { CityHubLink } from "@/components/site/city-hub-link";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { FaqPreview } from "@/components/site/faq-preview";
 import { ClosingCta } from "@/components/site/transfer-sections";
@@ -21,7 +22,7 @@ import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TableOfContents } from "@/components/site/table-of-contents";
 import { headingId } from "@/lib/heading-id";
-import { transferRoutes, transferRouteBySlug, relatedRoutes } from "@/data/transfer-routes";
+import { transferRoutes, transferRouteBySlug, relatedRoutes, destinationForAirport } from "@/data/transfer-routes";
 import type { Locale } from "@/i18n/routing";
 import { routeTitle } from "@/lib/route-title";
 
@@ -297,6 +298,7 @@ export default async function TransferRoutePage({
         </div>
       </section>
 
+      <CityHubLink city={destinationForAirport(route.airport)} locale={locale} />
       <RouteCoverage locale={locale} />
       <FaqPreview />
       <ClosingCta locale={locale} />

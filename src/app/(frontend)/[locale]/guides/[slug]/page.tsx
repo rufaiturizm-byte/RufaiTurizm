@@ -225,9 +225,9 @@ export default async function GuideDetailPage({
           className="mt-14 flex flex-col gap-5 p-7 accent-card sm:p-8"
           style={{ boxShadow: "var(--shadow-e2)" }}
         >
-          <h2 className="font-display text-[21px] font-semibold leading-snug">
+          <h3 className="font-display text-[21px] font-semibold leading-snug">
             {t("ctaTitle")}
-          </h2>
+          </h3>
           <p className="text-[14.5px] leading-[1.8] text-muted-foreground">{t("ctaText")}</p>
           <WhatsAppLink
             subject={title}

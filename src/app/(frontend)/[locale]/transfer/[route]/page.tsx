@@ -217,7 +217,7 @@ export default async function TransferRoutePage({
         <p className="mt-10 text-[13px] leading-[1.8] text-muted-foreground">{t("note")}</p>
 
         <div className="mt-10 flex flex-col gap-5 p-7 accent-card sm:p-8">
-          <h2 className="font-display text-[21px] font-semibold leading-snug">{t("ctaTitle")}</h2>
+          <h3 className="font-display text-[21px] font-semibold leading-snug">{t("ctaTitle")}</h3>
           <p className="text-[14.5px] leading-[1.8] text-muted-foreground">{t("ctaText")}</p>
           <WhatsAppLink
             subject={title}

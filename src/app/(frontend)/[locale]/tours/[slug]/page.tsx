@@ -174,7 +174,7 @@ export default async function TourDetailPage({
 
             <div className="mt-10 grid gap-5 sm:grid-cols-2">
               <div className="accent-card p-6">
-                <h2 className="text-[16px] font-bold">{tPage("includedTitle")}</h2>
+                <h3 className="text-[16px] font-bold">{tPage("includedTitle")}</h3>
                 <ul className="mt-5 flex flex-col gap-3">
                   {(["guide", "pickup", "vehicle", "water", "parking", "fixedPrice"] as const).map(
                     (key) => (
@@ -192,7 +192,7 @@ export default async function TourDetailPage({
               </div>
 
               <div className="accent-card p-6">
-                <h2 className="text-[16px] font-bold">{tPage("notIncludedTitle")}</h2>
+                <h3 className="text-[16px] font-bold">{tPage("notIncludedTitle")}</h3>
                 <ul className="mt-5 flex flex-col gap-3">
                   {(["tickets", "lunch", "boat", "tips"] as const).map((key) => (
                     <li
@@ -250,7 +250,7 @@ export default async function TourDetailPage({
                 aria-hidden="true"
               />
               <div>
-                <h2 className="text-[15px] font-bold">{tPage("noteTitle")}</h2>
+                <h3 className="text-[15px] font-bold">{tPage("noteTitle")}</h3>
                 <p className="mt-2 text-[13.5px] leading-[1.8]">{tPage("note")}</p>
               </div>
             </div>
@@ -266,9 +266,9 @@ export default async function TourDetailPage({
                     <CalendarDays className="size-5" />
                   </span>
                   <div className="min-w-0">
-                    <h2 className="font-display text-[19px] font-semibold leading-snug">
+                    <h3 className="font-display text-[19px] font-semibold leading-snug">
                       {tPage("packageTitle")}
-                    </h2>
+                    </h3>
                     <p className="mt-2 text-[13.5px] leading-[1.8] text-muted-foreground">
                       {tPage("packageText")}
                     </p>

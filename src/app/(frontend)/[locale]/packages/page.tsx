@@ -142,14 +142,16 @@ export default async function PackagesPage({
                     {item.city[lang] ?? item.city.tr}
                   </div>
 
-                  <h2 className="mt-3 font-display text-[21px] font-semibold leading-snug sm:text-[24px]">
+                  {/* Liste kartı başlığı h3: bölümün kendi h2 başlığı
+                      ("Hazır paket programlarımız") zaten üstünde. */}
+                  <h3 className="mt-3 font-display text-[21px] font-semibold leading-snug sm:text-[24px]">
                     <Link
                       href={href}
                       className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
                     >
                       {name}
                     </Link>
-                  </h2>
+                  </h3>
 
                   <p className="mt-3 flex-1 text-[14px] leading-[1.8] text-muted-foreground">
                     {item.excerpt[lang] ?? item.excerpt.tr}

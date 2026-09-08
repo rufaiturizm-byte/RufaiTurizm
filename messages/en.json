@@ -834,6 +834,7 @@
     "otherRoutes": "Other routes",
     "ctaTitle": "Get a fixed price for this route",
     "ctaText": "Send your flight time and party size; we will come back the same day with the price and driver details.",
+    "faqTitle": "Common questions about this route",
     "note": "Distances and times are approximate and vary with traffic. Prices are per vehicle, not per person."
   },
   "hotelTags": {

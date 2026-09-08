@@ -24,6 +24,24 @@ export interface RouteSection {
   body: Text;
 }
 
+/**
+ * Güzergâha özel soru-cevap.
+ *
+ * Şema denetiminde çıktı: güzergâh sayfalarında yalnız BreadcrumbList
+ * vardı. Rehberler, paketler ve hizmetler FAQPage alıyordu; sitenin
+ * ticari niyeti en yüksek sayfaları ise işaretsizdi.
+ *
+ * Sorular şablon değil, her güzergâhın kendi malzemesinden çıkıyor:
+ * misafirin gerçekten yazdığı cümle bu ("كم تبعد كمر عن مطار انطاليا")
+ * ve cevabı da o güzergâha ait. Mesafe sorusunun biçimi güzergâhlar
+ * arasında benzer, çünkü insanlar onu böyle soruyor; cevaplar ise
+ * birbirinin kopyası değil.
+ */
+export interface RouteFaq {
+  question: Text;
+  answer: Text;
+}
+
 export interface TransferRoute {
   slug: string;
   /**
@@ -40,6 +58,7 @@ export interface TransferRoute {
   duration: Text;
   excerpt: Text;
   sections: RouteSection[];
+  faq: RouteFaq[];
 }
 
 export const transferRoutes: TransferRoute[] = [
@@ -91,6 +110,44 @@ export const transferRoutes: TransferRoute[] = [
           tr: "Taksim, metroya ve İstiklal Caddesi'ne yakınlığıyla şehrin ulaşım kalbidir; Şişli tarafı alışveriş merkezlerine ve hastanelere yakın olduğu için Körfez'den gelen misafirlerin sık tercih ettiği bölgedir. Tarihî yarımadaya tramvay ve metro ile ulaşılır, ancak yürüme mesafesinde değildir.",
           ar: "تقسيم هي قلب المواصلات في المدينة بقربها من المترو وشارع الاستقلال؛ وجهة شيشلي يفضّلها كثير من ضيوف الخليج لقربها من المولات والمستشفيات. ويُوصل إلى شبه الجزيرة التاريخية بالترام والمترو، لكنها ليست على مسافة سير.",
           en: "Taksim is the city's transport heart, close to the metro and Istiklal Street; the Sisli side is a frequent choice for Gulf visitors thanks to its malls and hospitals. The historic peninsula is reachable by tram and metro, but not on foot.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "İstanbul Havalimanı Taksim'e kaç km ve yolculuk ne kadar sürer?",
+          ar: "كم تبعد تقسيم عن مطار إسطنبول وكم تستغرق الرحلة؟",
+          en: "How far is Taksim from Istanbul Airport and how long does the drive take?",
+        },
+        answer: {
+          tr: "Taksim, İstanbul Havalimanı'na yaklaşık 40 kilometre uzaklıkta. Yolculuk normal koşullarda 45 dakika sürüyor; sabah ve akşam şehre giriş saatlerinde bir buçuk saati bulabiliyor. Öğle saatlerinde aynı yol belirgin biçimde hızlı.",
+          ar: "تبعد تقسيم نحو 40 كيلومتراً عن مطار إسطنبول. تستغرق الرحلة 45 دقيقة في الظروف العادية، وقد تصل إلى ساعة ونصف في ساعات الدخول إلى المدينة صباحاً ومساءً. أما في وقت الظهيرة فالطريق نفسه أسرع بوضوح.",
+          en: "Taksim is about 40 km from Istanbul Airport. The drive takes 45 minutes in normal conditions and can reach an hour and a half at the morning and evening peaks into the city. At midday the same road is noticeably quicker.",
+        },
+      },
+      {
+        question: {
+          tr: "Boğaz'ı geçmek gerekiyor mu?",
+          ar: "هل يلزم عبور البوسفور؟",
+          en: "Do we have to cross the Bosphorus?",
+        },
+        answer: {
+          tr: "Hayır. Taksim de İstanbul Havalimanı da Avrupa yakasında olduğu için köprü ya da tünel geçişi yok. Bu, Sabiha Gökçen'den gelen aynı yolculuğa göre en büyük farkı yaratan şey: köprü trafiği hesaba katılmıyor.",
+          ar: "لا. فتقسيم ومطار إسطنبول كلاهما في الجانب الأوروبي، لذا لا يوجد عبور جسر أو نفق. وهذا هو الفارق الأكبر مقارنةً بالرحلة نفسها انطلاقاً من صبيحة كوكجن: زحام الجسر غير محسوب هنا.",
+          en: "No. Taksim and Istanbul Airport are both on the European side, so there is no bridge or tunnel crossing. That is the biggest difference from the same journey out of Sabiha Gökçen: bridge traffic does not enter the calculation.",
+        },
+      },
+      {
+        question: {
+          tr: "Otelim İstiklal Caddesi'nde, araç kapıya gelebilir mi?",
+          ar: "فندقي في شارع الاستقلال، هل تصل السيارة إلى الباب؟",
+          en: "My hotel is on Istiklal Street — can the car reach the door?",
+        },
+        answer: {
+          tr: "İstiklal Caddesi araç trafiğine kapalı, dolayısıyla cadde üzerindeki otellere kapıya kadar gidilemiyor. Araç en yakın inilebilecek noktaya bırakıyor ve oradan kısa bir yürüyüş kalıyor. Rezervasyon sırasında otelin tam adresini aldığımızda şoför bu noktayı önceden biliyor, bagajla gereksiz tur atılmıyor.",
+          ar: "شارع الاستقلال مغلق أمام السيارات، لذا لا يمكن الوصول بالسيارة حتى باب الفنادق الواقعة عليه. تُنزلكم السيارة عند أقرب نقطة ممكنة ويبقى مشي قصير. وحين نأخذ عنوان الفندق الكامل عند الحجز يعرف السائق هذه النقطة مسبقاً، فلا تحدث لفّات إضافية بالحقائب.",
+          en: "Istiklal Street is closed to traffic, so hotels on the street itself cannot be reached by car. The vehicle drops you at the nearest possible point and a short walk remains. With the full hotel address taken at booking, the driver knows that point in advance and there is no circling with luggage.",
         },
       },
     ],
@@ -146,6 +203,44 @@ export const transferRoutes: TransferRoute[] = [
         },
       },
     ],
+    faq: [
+      {
+        question: {
+          tr: "İstanbul Havalimanı Sultanahmet'e kaç km ve ne kadar sürer?",
+          ar: "كم تبعد السلطان أحمد عن مطار إسطنبول وكم تستغرق الرحلة؟",
+          en: "How far is Sultanahmet from Istanbul Airport and how long does it take?",
+        },
+        answer: {
+          tr: "Sultanahmet, havalimanına yaklaşık 45 kilometre uzaklıkta ve yolculuk normal koşullarda 50 dakika civarında sürüyor. Yoğun saatlerde bir buçuk saate çıkabiliyor. Taksim'e göre biraz daha uzun, çünkü tarihi yarımadaya iniş şehir içi yollardan geçiyor.",
+          ar: "تبعد السلطان أحمد نحو 45 كيلومتراً عن المطار، وتستغرق الرحلة نحو 50 دقيقة في الظروف العادية، وقد ترتفع إلى ساعة ونصف في ساعات الذروة. وهي أطول قليلاً من تقسيم لأن النزول إلى شبه الجزيرة التاريخية يمرّ عبر طرق داخل المدينة.",
+          en: "Sultanahmet is about 45 km from the airport and the drive takes around 50 minutes in normal conditions, rising to an hour and a half at peak times. It is slightly longer than Taksim because the descent into the historic peninsula runs through city streets.",
+        },
+      },
+      {
+        question: {
+          tr: "Sultanahmet'teki dar sokaklara araç girebiliyor mu?",
+          ar: "هل تدخل السيارة أزقّة السلطان أحمد الضيقة؟",
+          en: "Can the car get into Sultanahmet's narrow streets?",
+        },
+        answer: {
+          tr: "Bir kısmına giriyor, bir kısmına girmiyor. Sultanahmet'in arka sokakları dar ve çoğu tek yönlü; bazı küçük oteller yalnızca yürüyerek ulaşılabilen noktalarda. Otelin adını önceden aldığımızda şoför en yakın inilebilecek yeri biliyor ve bunu varmadan önce size söylüyoruz.",
+          ar: "إلى بعضها نعم وإلى بعضها لا. فأزقة السلطان أحمد الخلفية ضيّقة ومعظمها باتجاه واحد، وبعض الفنادق الصغيرة تقع في مواضع لا يُوصل إليها إلا مشياً. وحين نأخذ اسم الفندق مسبقاً يعرف السائق أقرب نقطة نزول، ونخبركم بها قبل الوصول.",
+          en: "Some yes, some no. The back streets of Sultanahmet are narrow and mostly one-way, and a few small hotels sit where you can only arrive on foot. With the hotel name in advance the driver knows the nearest drop-off point, and we tell you before you arrive.",
+        },
+      },
+      {
+        question: {
+          tr: "Sultanahmet'te kalırsam gezilecek yerler yürüme mesafesinde mi?",
+          ar: "إن أقمت في السلطان أحمد، هل المعالم على مسافة مشي؟",
+          en: "If I stay in Sultanahmet, are the sights within walking distance?",
+        },
+        answer: {
+          tr: "Büyük ölçüde evet. Ayasofya, Sultanahmet Camii, Yerebatan Sarnıcı ve Topkapı Sarayı birbirine yürüme mesafesinde; Kapalıçarşı da yakın. Bu, ilk kez İstanbul'a gelen ve araçla vakit kaybetmek istemeyen misafirler için bölgenin en büyük avantajı.",
+          ar: "إلى حدّ كبير نعم. فآيا صوفيا وجامع السلطان أحمد وصهريج البازيليك وقصر توبكابي على مسافة مشي بعضها من بعض، والبازار المسقوف قريب أيضاً. وهذه أكبر ميزة للمنطقة لمن يزور إسطنبول أول مرة ولا يريد إضاعة الوقت في التنقل.",
+          en: "Largely yes. Hagia Sophia, the Blue Mosque, the Basilica Cistern and Topkapı Palace are all within walking distance of one another, and the Grand Bazaar is close. That is the area's biggest advantage for a first-time visitor who does not want to spend the day in a car.",
+        },
+      },
+    ],
   },
   {
     slug: "sabiha-gokcen-taksim-transfer",
@@ -195,6 +290,44 @@ export const transferRoutes: TransferRoute[] = [
           tr: "Uçuşunuz Sabiha Gökçen'e iniyorsa ve programınız Anadolu yakasında yoğunlaşıyorsa, Kadıköy ya da Ataşehir'de kalmak her gün Boğaz geçmekten kurtarır. Tarihî noktalar Avrupa yakasında olduğu için bu tercih programınıza göre değişir; rezervasyondan önce konuşulması gereken bir konudur.",
           ar: "إذا كانت رحلتك تهبط في صبيحة كوكجن وبرنامجك يتركّز في الجانب الآسيوي، فالإقامة في كاديكوي أو آتاشهير تعفيك من عبور البوسفور يومياً. ولأن المعالم التاريخية في الجانب الأوروبي فالأمر يتوقّف على برنامجك؛ وهو موضوع يُناقش قبل الحجز.",
           en: "If your flight lands at Sabiha Gokcen and your plans centre on the Asian side, staying in Kadikoy or Atasehir saves a daily Bosphorus crossing. Since the historic sights are on the European side, the choice depends on your programme — worth discussing before booking.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Sabiha Gökçen'den Taksim'e kaç km ve ne kadar sürer?",
+          ar: "كم تبعد تقسيم عن مطار صبيحة كوكجن وكم تستغرق الرحلة؟",
+          en: "How far is Taksim from Sabiha Gökçen and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 50 kilometre ve normal koşullarda bir ile bir buçuk saat arası. Mesafe İstanbul Havalimanı'ndan çok farklı değil ama Boğaz geçişi olduğu için süre daha az öngörülebilir.",
+          ar: "نحو 50 كيلومتراً، وما بين ساعة وساعة ونصف في الظروف العادية. المسافة ليست بعيدة كثيراً عن مطار إسطنبول، لكن المدة أقل قابلية للتوقّع بسبب عبور البوسفور.",
+          en: "About 50 km, and between one and one and a half hours in normal conditions. The distance is not far off Istanbul Airport, but the time is less predictable because of the Bosphorus crossing.",
+        },
+      },
+      {
+        question: {
+          tr: "Köprü trafiği yolculuğu ne kadar uzatır?",
+          ar: "كم يطيل زحام الجسر الرحلة؟",
+          en: "How much does bridge traffic add?",
+        },
+        answer: {
+          tr: "Sabiha Gökçen Anadolu yakasında, Taksim Avrupa yakasında; yani Boğaz mutlaka geçiliyor. Yoğun saatlerde köprü girişi yolculuğa yarım saat ekleyebiliyor. Gece inen uçuşlarda ise yol tenha ve aynı mesafe belirgin biçimde kısa sürüyor.",
+          ar: "مطار صبيحة كوكجن في الجانب الآسيوي وتقسيم في الجانب الأوروبي، أي أن عبور البوسفور حتمي. وفي ساعات الذروة قد يضيف مدخل الجسر نصف ساعة إلى الرحلة. أما في الرحلات الليلية فالطريق خالٍ وتستغرق المسافة نفسها وقتاً أقصر بوضوح.",
+          en: "Sabiha Gökçen is on the Asian side and Taksim on the European side, so the Bosphorus is always crossed. At peak times the approach to the bridge can add half an hour. On night arrivals the road is empty and the same distance takes noticeably less.",
+        },
+      },
+      {
+        question: {
+          tr: "Gece inen uçuşta karşılama var mı?",
+          ar: "هل يوجد استقبال في الرحلات الليلية؟",
+          en: "Is there a meet-and-greet for night arrivals?",
+        },
+        answer: {
+          tr: "Evet, saat farkı olmaksızın. Uçuş numarasını verdiğinizde uçuşu takip ediyoruz; rötar olursa bekleme için ek ücret çıkmıyor. Sabiha Gökçen'e gece inen çok sayıda uçuş var ve o saatte toplu taşıma seçenekleri sınırlı olduğu için karşılama bu güzergâhta özellikle işe yarıyor.",
+          ar: "نعم، دون فرق في التوقيت. وحين تعطينا رقم الرحلة نتابعها؛ وإن حدث تأخير فلا رسوم إضافية على الانتظار. وتصل رحلات كثيرة إلى صبيحة كوكجن ليلاً، وخيارات النقل العام في تلك الساعة محدودة، لذا يكون الاستقبال مفيداً بشكل خاص على هذا المسار.",
+          en: "Yes, at any hour. Give us the flight number and we track it; if it is delayed there is no extra charge for waiting. Many flights land at Sabiha Gökçen late at night and public transport options at that hour are limited, so meet-and-greet is particularly useful on this route.",
         },
       },
     ],
@@ -250,6 +383,44 @@ export const transferRoutes: TransferRoute[] = [
         },
       },
     ],
+    faq: [
+      {
+        question: {
+          tr: "Sabiha Gökçen'den Kadıköy'e kaç km ve ne kadar sürer?",
+          ar: "كم تبعد كاديكوي عن مطار صبيحة كوكجن وكم تستغرق الرحلة؟",
+          en: "How far is Kadıköy from Sabiha Gökçen and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 35 kilometre ve 40 dakika ile bir saat arası. Bu, Sabiha Gökçen'den yapılabilecek en kısa merkez transferlerinden biri, çünkü iki nokta da Anadolu yakasında ve köprü geçişi yok.",
+          ar: "نحو 35 كيلومتراً وما بين 40 دقيقة وساعة. وهذه من أقصر رحلات النقل إلى المركز انطلاقاً من صبيحة كوكجن، لأن النقطتين في الجانب الآسيوي ولا يوجد عبور جسر.",
+          en: "About 35 km and between 40 minutes and an hour. It is one of the shortest central transfers from Sabiha Gökçen, because both points are on the Asian side and there is no bridge crossing.",
+        },
+      },
+      {
+        question: {
+          tr: "Anadolu yakasında kalmak mantıklı mı?",
+          ar: "هل الإقامة في الجانب الآسيوي فكرة جيدة؟",
+          en: "Does it make sense to stay on the Asian side?",
+        },
+        answer: {
+          tr: "Uçuşunuz Sabiha Gökçen'e iniyorsa ve İstanbul'da kısa kalacaksanız evet. Kadıköy ve Moda daha sakin, yeme-içme tarafı güçlü ve tarihi yarımadaya vapurla 20 dakika. Ama gezilecek yerlerin çoğu Avrupa yakasında; her gün karşıya geçmeyi göze almanız gerekiyor.",
+          ar: "إن كانت رحلتك تهبط في صبيحة كوكجن وإقامتك في إسطنبول قصيرة، فنعم. فكاديكوي ومودا أهدأ، والمطاعم والمقاهي فيهما قوية، وشبه الجزيرة التاريخية على بُعد 20 دقيقة بالعبّارة. لكن معظم المعالم في الجانب الأوروبي، فعليك أن تقبل بالعبور يومياً.",
+          en: "If your flight lands at Sabiha Gökçen and your stay is short, yes. Kadıköy and Moda are calmer, strong on food and drink, and 20 minutes from the historic peninsula by ferry. But most of the sights are on the European side, so you have to accept crossing over each day.",
+        },
+      },
+      {
+        question: {
+          tr: "Dönüş uçuşu için ne kadar erken çıkmalıyım?",
+          ar: "كم يجب أن أخرج مبكراً لرحلة العودة؟",
+          en: "How early should I leave for my return flight?",
+        },
+        answer: {
+          tr: "Kadıköy'den Sabiha Gökçen'e yol kısa olsa da, çıkış saatini uçuştan geriye doğru hesaplarken yolun süresine ek olarak trafik payı bırakmak gerekiyor. Dönüş transferini planlarken uçuş saatinizi bize söylediğinizde alınma saatini birlikte belirliyoruz.",
+          ar: "رغم أن الطريق من كاديكوي إلى صبيحة كوكجن قصير، فعند حساب موعد الخروج رجوعاً من موعد الإقلاع ينبغي ترك هامش للزحام إضافةً إلى مدة الطريق. وعند تخطيط رحلة العودة، أخبرنا بموعد إقلاعك ونحدّد معاً وقت الاصطحاب.",
+          en: "Although the drive from Kadıköy to Sabiha Gökçen is short, when counting back from your departure you should leave a traffic margin on top of the driving time. When planning the return transfer, tell us your flight time and we set the pick-up together.",
+        },
+      },
+    ],
   },
   {
     slug: "istanbul-havalimani-sisli-nisantasi-transfer",
@@ -299,6 +470,44 @@ export const transferRoutes: TransferRoute[] = [
           tr: "Alışveriş günlerinde elde taşınacak paket sayısı tahmin edilenden fazla olur. Aracın gün boyu emrinizde olması bu bölgede en çok işe yarayan hizmettir: paketleri araca bırakıp gezmeye devam edebilir, akşam tek seferde otele dönebilirsiniz.",
           ar: "في أيام التسوّق يكون عدد الأكياس أكثر مما يُتوقّع. ووجود السيارة تحت تصرّفك طوال اليوم هو أنفع خدمة في هذه المنطقة: تترك الأكياس فيها وتواصل التجوّل، ثم تعود إلى الفندق مرة واحدة مساءً.",
           en: "On shopping days there are more bags than expected. Having the car at your disposal all day is the most useful service in this area: leave the bags in it, carry on, and return to the hotel once in the evening.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "İstanbul Havalimanı'ndan Şişli ve Nişantaşı'na kaç km?",
+          ar: "كم تبعد شيشلي ونيشانتاشي عن مطار إسطنبول؟",
+          en: "How far are Şişli and Nişantaşı from Istanbul Airport?",
+        },
+        answer: {
+          tr: "Yaklaşık 38 kilometre; normal koşullarda 40 dakika, yoğun saatlerde bir buçuk saate kadar çıkabiliyor. Havalimanından merkeze en yakın varış noktalarından biri ve Boğaz geçişi yok.",
+          ar: "نحو 38 كيلومتراً؛ 40 دقيقة في الظروف العادية، وقد ترتفع إلى ساعة ونصف في ساعات الذروة. وهي من أقرب نقاط الوصول إلى المركز من المطار، ولا يوجد عبور للبوسفور.",
+          en: "About 38 km: 40 minutes in normal conditions, up to an hour and a half at peak times. It is one of the closest central destinations to the airport, with no Bosphorus crossing.",
+        },
+      },
+      {
+        question: {
+          tr: "Alışveriş için Nişantaşı mı, AVM mi?",
+          ar: "للتسوّق: نيشانتاشي أم المولات؟",
+          en: "For shopping — Nişantaşı or the malls?",
+        },
+        answer: {
+          tr: "İkisi farklı şeyler. Nişantaşı sokak mağazacılığı: butikler, kafeler ve caddede yürüyerek gezmek. Şişli'deki büyük alışveriş merkezleri ise tek çatı altında marka yoğunluğu ve klima. Sıcak ya da yağmurlu günlerde ikincisi, gezerek alışveriş yapmak isteyene birincisi uygun.",
+          ar: "هما شيئان مختلفان. نيشانتاشي تسوّق شوارع: بوتيكات ومقاهٍ وتجوّل مشياً في الشارع. أما المولات الكبيرة في شيشلي فكثافة ماركات تحت سقف واحد مع تكييف. في الأيام الحارة أو الماطرة يناسب الثاني، ولمن يريد التسوّق متجوّلاً يناسب الأول.",
+          en: "They are different things. Nişantaşı is street shopping: boutiques, cafés, walking the avenue. The big malls in Şişli are brand density under one roof with air conditioning. On hot or rainy days the second suits better; for shopping while strolling, the first.",
+        },
+      },
+      {
+        question: {
+          tr: "Alışveriş sonrası paketlerle araç bekleyebilir mi?",
+          ar: "هل تنتظر السيارة بعد التسوّق مع الأغراض؟",
+          en: "Can the car wait while we shop and carry the bags?",
+        },
+        answer: {
+          tr: "Saatlik araç hizmetinde evet: araç ve şoför sizinle kalıyor, paketler araçta duruyor ve her mağaza sonrası taksi aramak gerekmiyor. Tek yönlü transferde ise araç sizi bırakıp ayrılıyor. Hangisini istediğinizi rezervasyon sırasında konuşuyoruz çünkü ikisi ayrı hizmet.",
+          ar: "في خدمة السيارة بالساعة نعم: تبقى السيارة والسائق معك، وتظل الأغراض في السيارة فلا تحتاج للبحث عن تاكسي بعد كل متجر. أما في النقل باتجاه واحد فالسيارة توصلك وتغادر. ونتفق على ما تريده عند الحجز لأنهما خدمتان منفصلتان.",
+          en: "With hourly car hire, yes: the vehicle and driver stay with you, the bags stay in the car and you do not hunt for a taxi after every shop. With a one-way transfer the car drops you and leaves. We agree which you want at booking, because they are two different services.",
         },
       },
     ],
@@ -354,6 +563,44 @@ export const transferRoutes: TransferRoute[] = [
         },
       },
     ],
+    faq: [
+      {
+        question: {
+          tr: "İstanbul Havalimanı'ndan Beşiktaş ve Ortaköy'e kaç km?",
+          ar: "كم تبعد بشيكتاش وأورتاكوي عن مطار إسطنبول؟",
+          en: "How far are Beşiktaş and Ortaköy from Istanbul Airport?",
+        },
+        answer: {
+          tr: "Yaklaşık 42 kilometre; normal koşullarda 45 dakika, yoğun saatlerde bir buçuk saat. Yolun son bölümü Boğaz sahilinden geçtiği için manzaralı ama aynı sebeple yavaş.",
+          ar: "نحو 42 كيلومتراً؛ 45 دقيقة في الظروف العادية وساعة ونصف في ساعات الذروة. والقسم الأخير من الطريق يمرّ على ساحل البوسفور فهو جميل المنظر، وبطيء للسبب نفسه.",
+          en: "About 42 km: 45 minutes in normal conditions, an hour and a half at peak times. The last stretch runs along the Bosphorus shore, which makes it scenic — and slow for the same reason.",
+        },
+      },
+      {
+        question: {
+          tr: "Boğaz manzaralı otel gerçekten değer mi?",
+          ar: "هل يستحق الفندق المطلّ على البوسفور فعلاً؟",
+          en: "Is a Bosphorus-view hotel really worth it?",
+        },
+        answer: {
+          tr: "Manzara gerçek ve karşılığı var, ama sahil yolu bölgenin tek ana arteri: akşamüstü ve hafta sonu trafiği bu yolda yoğunlaşıyor. Her gün Sultanahmet'e gidip gelecekseniz bunu hesaba katın. Kısa bir tatilde manzara için ödenen bedel çoğu misafire mantıklı geliyor.",
+          ar: "المنظر حقيقي ويستحق مقابله، لكن الطريق الساحلي هو الشريان الرئيسي الوحيد للمنطقة: فزحام ما بعد الظهر وعطلة نهاية الأسبوع يتركّز عليه. وإن كنت ستذهب وتعود إلى السلطان أحمد يومياً فضع ذلك في الحسبان. أما في إقامة قصيرة فإن ما يُدفع مقابل المنظر يبدو منطقياً لمعظم الضيوف.",
+          en: "The view is real and worth paying for, but the shore road is the area's only main artery: late-afternoon and weekend traffic concentrates on it. If you will travel to Sultanahmet and back every day, factor that in. On a short stay, most guests find the price of the view makes sense.",
+        },
+      },
+      {
+        question: {
+          tr: "Yalı otellerine araçla girmek zor mu?",
+          ar: "هل يصعب الوصول بالسيارة إلى فنادق اليالي؟",
+          en: "Is it hard to reach the waterfront hotels by car?",
+        },
+        answer: {
+          tr: "Bazılarında evet. Sahildeki tarihi yalı otellerinin girişleri dar ve sahil yolundan dönüş yapmak yoğun saatlerde zaman alıyor. Otelin adını önceden aldığımızda şoför girişi ve dönüş noktasını biliyor; bu güzergâhta fark yaratan ayrıntı bu.",
+          ar: "في بعضها نعم. فمداخل فنادق اليالي التاريخية على الساحل ضيّقة، والانعطاف من الطريق الساحلي يستغرق وقتاً في ساعات الذروة. وحين نأخذ اسم الفندق مسبقاً يعرف السائق المدخل ونقطة الانعطاف؛ وهذه هي التفصيلة التي تصنع الفرق على هذا المسار.",
+          en: "For some, yes. The entrances of the historic waterfront hotels are narrow, and turning off the shore road takes time at busy hours. With the hotel name in advance the driver knows the entrance and the turning point — on this route, that is the detail that matters.",
+        },
+      },
+    ],
   },
   {
     slug: "istanbul-havalimani-bursa-transfer",
@@ -403,6 +650,44 @@ export const transferRoutes: TransferRoute[] = [
           tr: "Şehirlerarası yolculuklarda araç ve şoför gün boyu sizinle kalır; Bursa'da Uludağ, Ulu Cami ve Cumalıkızık arasında ayrıca ulaşım aramanız gerekmez. Dönüş aynı gün planlanacaksa uçuş saatinden geriye doğru hesap yaparken yolun üç saatine ek olarak trafik payı bırakmak gerekir.",
           ar: "في الرحلات بين المدن تبقى السيارة والسائق معكم طوال اليوم؛ فلا تحتاجون إلى البحث عن مواصلات بين أولوداغ والجامع الكبير وجوما لي كيزيك في بورصة. وإذا كانت العودة في اليوم نفسه فعند الحساب رجوعاً من موعد الإقلاع يجب ترك هامش للازدحام إضافةً إلى ساعات الطريق الثلاث.",
           en: "On intercity trips the vehicle and driver stay with you all day; in Bursa you will not need separate transport between Uludag, the Ulu Mosque and Cumalikizik. If the return is planned for the same day, counting back from the flight time, leave a traffic margin on top of the three hours on the road.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "İstanbul'dan Bursa'ya araçla kaç saat sürer?",
+          ar: "كم ساعة تستغرق الرحلة بالسيارة من إسطنبول إلى بورصة؟",
+          en: "How many hours is the drive from Istanbul to Bursa?",
+        },
+        answer: {
+          tr: "Yaklaşık 240 kilometre ve üç ile üç buçuk saat. Bu bir şehirlerarası yolculuk, havalimanı transferi değil; günübirlik planlıyorsanız gidiş ve dönüşün toplam altı saatinizi alacağını baştan bilmek gerekiyor.",
+          ar: "نحو 240 كيلومتراً وما بين ثلاث وثلاث ساعات ونصف. وهذه رحلة بين مدينتين لا نقل من مطار؛ فإن كنت تخطط ليوم واحد فينبغي أن تعرف من البداية أن الذهاب والإياب سيأخذان ست ساعات من يومك.",
+          en: "About 240 km and three to three and a half hours. This is an intercity journey, not an airport transfer; if you are planning a day trip, know from the start that the round trip will take six hours of your day.",
+        },
+      },
+      {
+        question: {
+          tr: "Feribotlu güzergâh mı, karayolu mu daha iyi?",
+          ar: "أيهما أفضل: الطريق عبر العبّارة أم البرّي؟",
+          en: "Is the ferry route or the road better?",
+        },
+        answer: {
+          tr: "İkisinin de mantığı var. Karayolu Osmangazi Köprüsü üzerinden kesintisiz ilerliyor ve saati öngörülebilir. Feribot güzergâhı daha kısa sürebiliyor ama sefer saatine bağlı; kaçırılan bir sefer avantajı tümüyle siliyor. Uçuş saatinize göre hangisinin uygun olduğuna birlikte karar veriyoruz.",
+          ar: "لكلٍّ منهما منطقه. الطريق البرّي يمضي دون انقطاع عبر جسر عثمان غازي ووقته قابل للتوقّع. أما طريق العبّارة فقد يكون أقصر لكنه مرتبط بمواعيد الرحلات؛ وفوات رحلة واحدة يمحو الميزة تماماً. ونقرّر معاً أيهما يناسب بحسب موعد رحلتك.",
+          en: "Both make sense. The road route runs uninterrupted over the Osmangazi Bridge and its timing is predictable. The ferry route can be shorter but depends on sailing times; one missed sailing erases the advantage entirely. We decide together which suits your flight time.",
+        },
+      },
+      {
+        question: {
+          tr: "Bursa'da araç gün boyu bizimle kalıyor mu?",
+          ar: "هل تبقى السيارة معنا طوال اليوم في بورصة؟",
+          en: "Does the car stay with us all day in Bursa?",
+        },
+        answer: {
+          tr: "Evet. Şehirlerarası yolculuklarda araç ve şoför gün boyu sizinle; Uludağ, Ulu Cami ve Cumalıkızık arasında ayrıca ulaşım aramanız gerekmiyor. Aynı gün dönülecekse uçuş saatinden geriye hesap yaparken yolun üç saatine ek olarak trafik payı bırakmak gerekiyor.",
+          ar: "نعم. في الرحلات بين المدن تبقى السيارة والسائق معكم طوال اليوم؛ فلا تحتاجون إلى البحث عن مواصلات بين أولوداغ والجامع الكبير وجوما لي كيزيك. وإن كانت العودة في اليوم نفسه فعند الحساب رجوعاً من موعد الإقلاع يجب ترك هامش للزحام إضافةً إلى ساعات الطريق الثلاث.",
+          en: "Yes. On intercity trips the vehicle and driver stay with you all day; you will not need separate transport between Uludağ, the Ulu Mosque and Cumalıkızık. If you return the same day, counting back from your flight, leave a traffic margin on top of the three hours on the road.",
         },
       },
     ],
@@ -458,6 +743,44 @@ export const transferRoutes: TransferRoute[] = [
         },
       },
     ],
+    faq: [
+      {
+        question: {
+          tr: "Antalya Havalimanı'ndan Kemer'e kaç km ve ne kadar sürer?",
+          ar: "كم تبعد كمر عن مطار أنطاليا وكم تستغرق الرحلة؟",
+          en: "How far is Kemer from Antalya Airport and how long does it take?",
+        },
+        answer: {
+          tr: "Kemer merkez, Antalya Havalimanı'na yaklaşık 57 kilometre uzaklıkta ve yolculuk normal koşullarda 50 dakika ile bir saat arası sürüyor. Havalimanı şehrin doğusunda olduğu için önce Antalya batıya doğru geçiliyor, sonra sahil yoluna iniliyor.",
+          ar: "يبعد مركز كمر نحو 57 كيلومتراً عن مطار أنطاليا، وتستغرق الرحلة ما بين 50 دقيقة وساعة في الظروف العادية. وبما أن المطار يقع شرق المدينة، تُعبر أنطاليا أولاً غرباً ثم يُنزل إلى الطريق الساحلي.",
+          en: "Kemer town is about 57 km from Antalya Airport and the drive takes between 50 minutes and an hour in normal conditions. Because the airport is east of the city, you cross Antalya westwards first, then drop onto the coast road.",
+        },
+      },
+      {
+        question: {
+          tr: "Otelim Tekirova'da, süre değişir mi?",
+          ar: "فندقي في تكيروفا، هل تتغيّر المدة؟",
+          en: "My hotel is in Tekirova — does that change the time?",
+        },
+        answer: {
+          tr: "Evet, belirgin biçimde. Kemer adı Beldibi'nden Tekirova'ya kadar yaklaşık 25 kilometrelik bir otel şeridini kapsıyor. Beldibi'ne 40 dakikada varılırken Tekirova bir saati aşabiliyor. Bu yüzden rezervasyonda otelin tam adını alıyoruz; \"Kemer\" tek başına süreyi söylemeye yetmiyor.",
+          ar: "نعم، وبفارق واضح. فاسم كمر يشمل شريط فنادق يمتد نحو 25 كيلومتراً من بلديبي إلى تكيروفا. الوصول إلى بلديبي يستغرق 40 دقيقة، بينما قد تتجاوز تكيروفا الساعة. لذلك نأخذ اسم الفندق الكامل عند الحجز؛ فكلمة \"كمر\" وحدها لا تكفي لتحديد المدة.",
+          en: "Yes, noticeably. The name Kemer covers a hotel strip of some 25 km from Beldibi to Tekirova. Beldibi is 40 minutes away while Tekirova can pass the hour. That is why we take the exact hotel name at booking: \"Kemer\" alone is not enough to state a time.",
+        },
+      },
+      {
+        question: {
+          tr: "Sahil yolu virajlı mı, çocuklar için sorun olur mu?",
+          ar: "هل الطريق الساحلي متعرّج، وهل يزعج الأطفال؟",
+          en: "Is the coast road winding — will it bother children?",
+        },
+        answer: {
+          tr: "Yol virajlı ve yer yer denizin hemen üstünden geçiyor. Manzarası güzel ama araç tutan çocuklar için ön tarafta oturmak ve aralıklarla hava almak işe yarıyor. Yol boyunca dinlenme noktaları var, isteyen kısa bir mola verebiliyor.",
+          ar: "الطريق متعرّج ويمرّ في مواضع فوق البحر مباشرة. المنظر جميل، لكن للأطفال الذين يتعبون في السيارة يفيد الجلوس في المقدمة وأخذ الهواء على فترات. وتوجد على الطريق أماكن استراحة لمن أراد وقفة قصيرة.",
+          en: "The road winds and in places runs directly above the sea. The views are good, but for children prone to car sickness a front seat and regular fresh air help. There are rest stops along the way if you want a short break.",
+        },
+      },
+    ],
   },
   {
     slug: "antalya-havalimani-belek-transfer",
@@ -495,6 +818,44 @@ export const transferRoutes: TransferRoute[] = [
           tr: "Belek büyük ölçüde her şey dahil otellerden ve golf sahalarından oluşuyor; gezilecek bir kasaba merkezi ya da çarşı beklentisiyle gelen misafir hayal kırıklığına uğrayabiliyor. Buna karşılık uzun kumsalı, geniş otel bahçeleri ve havalimanına yakınlığıyla küçük çocuklu aileler için Antalya'nın en rahat bölgesi. Alışveriş ve eski şehir görmek isteyenler için Antalya merkez ve Kaleiçi araçla yaklaşık 45 dakika; Side ise yarım saat doğuda.",
           ar: "تتكوّن بيليك في معظمها من فنادق \"كل شيء مشمول\" وملاعب غولف؛ وقد يُصاب بخيبة أمل من يأتي متوقعاً مركز بلدة أو سوقاً للتجوّل. في المقابل، فإن شاطئها الطويل وحدائق فنادقها الواسعة وقربها من المطار تجعلها أريح مناطق أنطاليا للعائلات ذات الأطفال الصغار. ولمن يريد التسوّق ورؤية المدينة القديمة، فمركز أنطاليا وكالي إيتشي على نحو 45 دقيقة بالسيارة، وسيدي على نصف ساعة شرقاً.",
           en: "Belek is largely all-inclusive hotels and golf courses; a guest arriving expecting a town centre or a bazaar to wander may be disappointed. In exchange, its long sandy beach, generous hotel grounds and closeness to the airport make it the easiest part of Antalya for families with small children. For shopping and the old town, central Antalya and Kaleiçi are about 45 minutes by car; Side is half an hour east.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Antalya Havalimanı'ndan Belek'e kaç km ve ne kadar sürer?",
+          ar: "كم تبعد بيليك عن مطار أنطاليا وكم تستغرق الرحلة؟",
+          en: "How far is Belek from Antalya Airport and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 35 kilometre ve normal koşullarda 30-45 dakika. Belek, Antalya'nın büyük otel bölgeleri arasında havalimanına en yakın olanı ve yol Antalya şehir merkezine hiç girmiyor.",
+          ar: "نحو 35 كيلومتراً و30-45 دقيقة في الظروف العادية. وبيليك هي الأقرب إلى المطار بين مناطق الفنادق الكبرى في أنطاليا، والطريق لا يدخل مركز المدينة إطلاقاً.",
+          en: "About 35 km and 30–45 minutes in normal conditions. Belek is the closest of Antalya's major hotel areas to the airport, and the road never enters the city centre.",
+        },
+      },
+      {
+        question: {
+          tr: "Otelim ana yoldan görünmüyor, bulmak sorun olur mu?",
+          ar: "فندقي لا يُرى من الطريق الرئيسي، هل يصعب إيجاده؟",
+          en: "My hotel is not visible from the main road — is it hard to find?",
+        },
+        answer: {
+          tr: "Belek'teki otellerin çoğu çam ormanının içine uzanan uzun özel yolların ucunda ve bir kısmı aynı kavşaktan, birbirine benzeyen tabelalarla giriyor. Otelin tam adı ve mümkünse rezervasyon numarası elimizde olduğunda şoför doğru girişten dönüyor; bagajla yanlış kapıda inmek en can sıkıcı varış biçimi.",
+          ar: "معظم فنادق بيليك تقع في نهاية طرق خاصة طويلة داخل غابة الصنوبر، وبعضها يدخل من التقاطع نفسه بلافتات متشابهة. وحين يكون بحوزتنا اسم الفندق الكامل ورقم الحجز إن أمكن، ينعطف السائق من المدخل الصحيح؛ فالنزول بالحقائب عند بوابة خاطئة هو أسوأ صور الوصول.",
+          en: "Most Belek hotels sit at the end of long private lanes through pine forest, and several enter from the same junction behind near-identical signs. With the exact hotel name — and the booking reference if you have it — the driver takes the right entrance. Being dropped at the wrong gate with luggage is the worst kind of arrival.",
+        },
+      },
+      {
+        question: {
+          tr: "Belek'te otel dışında gezilecek yer var mı?",
+          ar: "هل توجد أماكن للزيارة في بيليك خارج الفندق؟",
+          en: "Is there anything to see in Belek outside the hotel?",
+        },
+        answer: {
+          tr: "Belek büyük ölçüde her şey dahil oteller ve golf sahalarından oluşuyor; gezilecek bir kasaba merkezi ya da çarşı beklentisiyle gelen misafir hayal kırıklığına uğrayabiliyor. Buna karşılık Antalya merkez ve Kaleiçi araçla yaklaşık 45 dakika, Side ise yarım saat doğuda; iki yer de günübirlik gidilebiliyor.",
+          ar: "تتكوّن بيليك في معظمها من فنادق \"كل شيء مشمول\" وملاعب غولف؛ وقد يُصاب بخيبة أمل من يأتي متوقعاً مركز بلدة أو سوقاً للتجوّل. في المقابل، مركز أنطاليا وكالي إيتشي على نحو 45 دقيقة بالسيارة، وسيدي على نصف ساعة شرقاً؛ وكلاهما يمكن زيارته في يوم واحد.",
+          en: "Belek is largely all-inclusive hotels and golf courses; a guest expecting a town centre or a bazaar may be disappointed. In exchange, central Antalya and Kaleiçi are about 45 minutes by car and Side half an hour east — both doable as day trips.",
         },
       },
     ],
@@ -546,6 +907,44 @@ export const transferRoutes: TransferRoute[] = [
         },
       },
     ],
+    faq: [
+      {
+        question: {
+          tr: "Antalya Havalimanı'ndan Side'ye kaç km ve ne kadar sürer?",
+          ar: "كم تبعد سيدي عن مطار أنطاليا وكم تستغرق الرحلة؟",
+          en: "How far is Side from Antalya Airport and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 65 kilometre ve normal koşullarda bir saat civarında. Yol tümüyle doğuya, D400 üzerinden gidiyor ve Antalya şehir merkezine girmiyor; bu yüzden yolculuğun büyük bölümü açık yolda geçiyor.",
+          ar: "نحو 65 كيلومتراً ونحو ساعة في الظروف العادية. يتجه الطريق شرقاً بالكامل عبر D400 ولا يدخل مركز أنطاليا، لذا يمضي معظم الرحلة على طريق مفتوح.",
+          en: "About 65 km and around an hour in normal conditions. The road runs entirely east on the D400 and does not enter central Antalya, so most of the journey is on open road.",
+        },
+      },
+      {
+        question: {
+          tr: "Antik kentteki otelime araç gelebilir mi?",
+          ar: "هل تصل السيارة إلى فندقي في المدينة الأثرية؟",
+          en: "Can the car reach my hotel in the ancient town?",
+        },
+        answer: {
+          tr: "Side'nin eski yerleşimi bir yarımada üzerinde ve içindeki sokakların büyük bölümü araç trafiğine kapalı. Araç sizi giriş noktasına kadar getiriyor, oradan otele kısa bir yürüyüş kalıyor. Bagajı ağır olan ya da yürümekte zorlanan misafir için bunu önceden bilmek önemli; otelin adını aldığımızda en yakın inilebilecek noktayı önceden söylüyoruz.",
+          ar: "تقع سيدي القديمة على شبه جزيرة ومعظم شوارعها الداخلية مغلقة أمام السيارات. توصلكم السيارة حتى نقطة الدخول، ثم يبقى مشي قصير إلى الفندق. ومعرفة ذلك مسبقاً مهمة لمن يحمل حقائب ثقيلة أو يجد صعوبة في المشي؛ وحين نأخذ اسم الفندق نخبركم بأقرب نقطة نزول.",
+          en: "Old Side sits on a peninsula and most of its inner streets are closed to traffic. The car brings you to the entry point and a short walk remains. For a guest with heavy luggage or difficulty walking this matters in advance; when we take the hotel name we tell you the nearest drop-off point beforehand.",
+        },
+      },
+      {
+        question: {
+          tr: "Side ile Manavgat aynı yer mi?",
+          ar: "هل سيدي ومانافغات المكان نفسه؟",
+          en: "Are Side and Manavgat the same place?",
+        },
+        answer: {
+          tr: "Hayır. Manavgat ayrı bir ilçe merkezi ve antik kente yaklaşık 8 kilometre. Çolaklı, Kumköy, Titreyengöl ve Sorgun da adreslerinde çoğu zaman Side geçse de birbirlerinden kilometrelerce uzakta. Bu yüzden \"Side\" demek transferi planlamaya yetmiyor; otelin adı ya da mahallesi gerekiyor ve aradaki fark yolculuğa 15-20 dakika ekleyebiliyor.",
+          ar: "لا. فمانافغات مركز قضاء مستقل يبعد نحو 8 كيلومترات عن المدينة الأثرية. وكذلك تشولاكلي وكومكوي وتيتره ينغول وسورغون يرد اسم سيدي في عناوينها غالباً رغم أنها تبعد كيلومترات بعضها عن بعض. لذلك لا تكفي كلمة \"سيدي\" لتخطيط النقل؛ نحتاج اسم الفندق أو الحيّ، وقد يضيف الفرق 15-20 دقيقة إلى الرحلة.",
+          en: "No. Manavgat is a separate district centre about 8 km from the ancient town. Çolaklı, Kumköy, Titreyengöl and Sorgun also usually carry Side in their addresses although they lie kilometres apart. So \"Side\" alone is not enough to plan a transfer; we need the hotel name or neighbourhood, and the difference can add 15–20 minutes.",
+        },
+      },
+    ],
   },
   {
     slug: "antalya-havalimani-alanya-transfer",
@@ -587,6 +986,44 @@ export const transferRoutes: TransferRoute[] = [
           tr: "Yol D400 üzerinden doğuya, Side ve Manavgat'ı geçerek devam ediyor; büyük bölümü bölünmüş ve rahat. Manavgat çevresinde ve Alanya girişinde trafik yoğunlaşabiliyor. Uzun yolculuğu bölmek isteyen misafirler genellikle Manavgat civarında kısa bir mola veriyor; isterseniz Manavgat Şelalesi bu güzergâh üzerinde kısa bir duraklama olarak eklenebiliyor. Böyle bir eklemeyi yolculuk öncesinde konuşmak gerekiyor, çünkü süreyi ve planı değiştiriyor.",
           ar: "يمضي الطريق شرقاً على D400 مروراً بسيدي ومانافغات؛ ومعظمه مزدوج ومريح. وقد تزدحم الحركة حول مانافغات وعند مدخل ألانيا. وعادةً ما يأخذ من يريد تقسيم الرحلة الطويلة استراحة قصيرة قرب مانافغات؛ ويمكن إضافة شلال مانافغات كتوقّف قصير على هذا المسار إن رغبت. ومثل هذه الإضافة ينبغي الاتفاق عليها قبل الرحلة لأنها تغيّر المدة والخطة.",
           en: "The road runs east on the D400 through Side and Manavgat; most of it is dual carriageway and comfortable. Traffic can build around Manavgat and at the entrance to Alanya. Guests who want to break the long drive usually stop briefly near Manavgat, and the Manavgat waterfall can be added as a short pause on this route if you like. Any such addition needs to be agreed before the journey, since it changes both the timing and the plan.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Antalya Havalimanı'ndan Alanya'ya kaç km ve ne kadar sürer?",
+          ar: "كم تبعد ألانيا عن مطار أنطاليا وكم تستغرق الرحلة؟",
+          en: "How far is Alanya from Antalya Airport and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 125 kilometre ve normal koşullarda iki saate yakın; yaz aylarında ve hafta sonlarında iki buçuk saati bulabiliyor. Antalya'nın en uzun transferi bu ve uçuş saatini seçerken hesaba katmakta fayda var.",
+          ar: "نحو 125 كيلومتراً وقرابة ساعتين في الظروف العادية، وقد تصل إلى ساعتين ونصف في الصيف وعطلات نهاية الأسبوع. وهي أطول رحلة نقل في أنطاليا، ومن المفيد أخذها في الحسبان عند اختيار موعد الطيران.",
+          en: "About 125 km and close to two hours in normal conditions, up to two and a half in summer and at weekends. It is Antalya's longest transfer and worth weighing when you choose your flight time.",
+        },
+      },
+      {
+        question: {
+          tr: "Alanya'ya daha yakın bir havalimanı var mı?",
+          ar: "هل يوجد مطار أقرب إلى ألانيا؟",
+          en: "Is there an airport closer to Alanya?",
+        },
+        answer: {
+          tr: "Evet: Gazipaşa-Alanya (GZP), şehre yaklaşık 40 kilometre, yani yarım saatlik bir yol. Uçuş seçenekleri Antalya'ya göre çok daha sınırlı ve her ülkeden doğrudan sefer yok; ama tatilinizin tamamını Alanya'da geçirecekseniz bilet ararken bakmaya değer, gidiş-dönüş dört saatlik yoldan kurtarabilir. Biz iki havalimanından da karşılıyoruz.",
+          ar: "نعم: غازي باشا-ألانيا (GZP)، على نحو 40 كيلومتراً من المدينة، أي طريق نصف ساعة. خيارات الطيران إليه أقل بكثير من أنطاليا ولا توجد رحلات مباشرة من كل بلد؛ لكن إن كنت ستقضي إجازتك كاملة في ألانيا فيستحق النظر عند البحث عن التذكرة، فقد يوفّر أربع ساعات ذهاباً وإياباً. ونحن نستقبل من المطارين معاً.",
+          en: "Yes: Gazipaşa–Alanya (GZP), about 40 km from town, roughly half an hour. Flight options are far more limited than Antalya and there is no direct service from every country, but if you are spending the whole holiday in Alanya it is worth checking — it can save four hours of driving over the round trip. We meet at both airports.",
+        },
+      },
+      {
+        question: {
+          tr: "Uzun yolda mola verilebiliyor mu?",
+          ar: "هل يمكن التوقّف للاستراحة في الطريق الطويل؟",
+          en: "Can we stop on the long drive?",
+        },
+        answer: {
+          tr: "Evet. Araçta su var ve uzun yolu bir çırpıda gitmek zorunda değilsiniz; misafirler genellikle Manavgat civarında kısa bir mola veriyor. İsterseniz Manavgat Şelalesi bu güzergâh üzerinde kısa bir duraklama olarak eklenebiliyor, ama bunu yolculuk öncesinde konuşmak gerekiyor çünkü süreyi ve planı değiştiriyor.",
+          ar: "نعم. يتوفر الماء في السيارة ولستم مضطرين لقطع الطريق دفعة واحدة؛ وعادةً ما يأخذ الضيوف استراحة قصيرة قرب مانافغات. ويمكن إضافة شلال مانافغات كتوقّف قصير على هذا المسار إن رغبتم، لكن ينبغي الاتفاق على ذلك قبل الرحلة لأنه يغيّر المدة والخطة.",
+          en: "Yes. There is water in the car and you do not have to do the road in one go; guests usually take a short break near Manavgat. The Manavgat waterfall can be added as a brief stop on this route if you like, but it needs to be agreed before the journey since it changes the timing and the plan.",
         },
       },
     ],
@@ -645,6 +1082,44 @@ export const transferRoutes: TransferRoute[] = [
         },
       },
     ],
+    faq: [
+      {
+        question: {
+          tr: "Bodrum Havalimanı merkeze kaç km ve ne kadar sürer?",
+          ar: "كم يبعد مطار بودروم عن المركز وكم تستغرق الرحلة؟",
+          en: "How far is Bodrum Airport from the centre and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 36 kilometre ve normal koşullarda 40 dakika civarında. Yol önce ovadan geçiyor, sonra yarımadanın boynundaki tepeleri aşarak Bodrum'a iniyor; bu iniş sırasında kale ve marina bir anda görünüyor.",
+          ar: "نحو 36 كيلومتراً ونحو 40 دقيقة في الظروف العادية. يمرّ الطريق أولاً في السهل ثم يعبر تلال عنق شبه الجزيرة وينزل إلى بودروم؛ وأثناء هذا النزول تظهر القلعة والمارينا فجأة.",
+          en: "About 36 km and around 40 minutes in normal conditions. The road crosses the plain first, then climbs over the hills at the neck of the peninsula and descends into Bodrum, where the castle and marina appear all at once.",
+        },
+      },
+      {
+        question: {
+          tr: "Havalimanı neden Bodrum'da değil?",
+          ar: "لماذا المطار ليس في بودروم؟",
+          en: "Why is the airport not in Bodrum?",
+        },
+        answer: {
+          tr: "Havalimanının tam adı Milas-Bodrum ve tesis Milas ilçesinde, Bodrum yarımadasının dışında. İsim yanıltıcı değil ama Bodrum'a ilk kez gelenlerin en sık şaşırdığı şey bu: uçaktan indiğinizde henüz yarımadada değilsiniz, oraya inen bir yolculuk daha var.",
+          ar: "الاسم الكامل للمطار هو ميلاس-بودروم، والمنشأة تقع في قضاء ميلاس خارج شبه جزيرة بودروم. التسمية ليست مضلّلة، لكنها أكثر ما يفاجئ القادمين إلى بودروم أول مرة: فعند نزولك من الطائرة لست في شبه الجزيرة بعد، وأمامك رحلة أخرى للنزول إليها.",
+          en: "The airport's full name is Milas–Bodrum, and it sits in the Milas district, outside the Bodrum peninsula. The name is not misleading, but it is what most surprises first-time visitors: when you step off the plane you are not on the peninsula yet — there is another drive down to it.",
+        },
+      },
+      {
+        question: {
+          tr: "Merkezdeki otelime araç kapıya gelebilir mi?",
+          ar: "هل تصل السيارة إلى باب فندقي في المركز؟",
+          en: "Can the car reach my hotel door in the centre?",
+        },
+        answer: {
+          tr: "Her zaman değil. Kale çevresinde ve çarşı içinde sokaklar dar, bir kısmı yaya trafiğine ayrılmış; sahildeki Cumhuriyet Caddesi akşam saatlerinde araca kapanıyor. Merkezdeki küçük butik otellerin bir bölümüne en yakın noktaya bırakılıp kısa bir yürüyüş kalıyor. Otel adını önceden aldığımızda şoför nereye kadar girebileceğini biliyor.",
+          ar: "ليس دائماً. فحول القلعة وداخل السوق الشوارع ضيّقة وبعضها للمشاة فقط؛ وشارع الجمهورية على الساحل يُغلق أمام السيارات مساءً. وبعض الفنادق البوتيكية الصغيرة في المركز يتم الإنزال عند أقرب نقطة إليها ويبقى مشي قصير. وحين نأخذ اسم الفندق مسبقاً يعرف السائق إلى أين يستطيع الدخول.",
+          en: "Not always. Around the castle and inside the bazaar the streets are narrow and some are pedestrian only; Cumhuriyet Caddesi on the waterfront closes to traffic in the evening. For some small boutique hotels in the centre you are dropped at the nearest point and a short walk remains. With the hotel name in advance the driver knows how far in he can go.",
+        },
+      },
+    ],
   },
   {
     slug: "bodrum-havalimani-turgutreis-transfer",
@@ -686,6 +1161,44 @@ export const transferRoutes: TransferRoute[] = [
           tr: "Turgutreis'te bir marina ve İstanköy (Kos) adasına giden feribot iskelesi bulunuyor; adaya geçmeyi düşünüyorsanız pasaport ve vize koşullarını önceden kontrol etmek gerekiyor, bu bizim düzenlediğimiz bir hizmet değil. Yarımada içi yollar yaz akşamlarında yoğunlaşıyor ve bazı sapaklar dar; otelin ya da villanın tam konumunu önceden aldığımızda şoför doğru sapağı biliyor. Villa kiralayan misafirler için adres tarifi çoğu zaman otel adından daha önemli.",
           ar: "توجد في تورغوتريس مارينا ومرفأ عبّارات إلى جزيرة كوس؛ فإن كنت تفكّر في العبور إلى الجزيرة فينبغي التحقق مسبقاً من شروط جواز السفر والتأشيرة، وهذه ليست خدمة ننظّمها نحن. وتزدحم طرق شبه الجزيرة في أمسيات الصيف وبعض المنعطفات ضيّقة؛ وحين نأخذ الموقع الدقيق للفندق أو الفيلا مسبقاً يعرف السائق المنعطف الصحيح. وبالنسبة لمن يستأجر فيلا فإن وصف العنوان غالباً أهم من اسم الفندق.",
           en: "Turgutreis has a marina and a ferry terminal for Kos; if you are thinking of crossing to the island, check passport and visa requirements in advance — it is not a service we arrange. Roads on the peninsula get busy on summer evenings and some turnings are narrow, so with the exact position of the hotel or villa in advance the driver knows the right turn. For guests renting a villa, a description of the address usually matters more than a hotel name.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Bodrum Havalimanı'ndan Turgutreis'e kaç km ve ne kadar sürer?",
+          ar: "كم تبعد تورغوتريس عن مطار بودروم وكم تستغرق الرحلة؟",
+          en: "How far is Turgutreis from Bodrum Airport and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 53 kilometre ve normal koşullarda bir saat civarında. Yol Bodrum merkeze kadar aynı güzergâhı izliyor, sonra merkeze girmeden batıya sapıyor. Yarımada içindeki bölüm virajlı ve iniş çıkışlı; mesafe kısa görünse de süresi buna göre uzun.",
+          ar: "نحو 53 كيلومتراً ونحو ساعة في الظروف العادية. يتبع الطريق المسار نفسه حتى مركز بودروم ثم ينعطف غرباً دون دخول المركز. والقسم داخل شبه الجزيرة متعرّج وكثير الصعود والهبوط؛ فرغم أن المسافة تبدو قصيرة إلا أن زمنها أطول.",
+          en: "About 53 km and around an hour in normal conditions. The road follows the same route as far as Bodrum, then turns west without entering the town. The stretch inside the peninsula is winding and hilly, so although the distance looks short the time is longer.",
+        },
+      },
+      {
+        question: {
+          tr: "Turgutreis mi Bodrum merkez mi bize uygun?",
+          ar: "أيهما يناسبنا: تورغوتريس أم مركز بودروم؟",
+          en: "Which suits us — Turgutreis or Bodrum centre?",
+        },
+        answer: {
+          tr: "Bodrum merkez gece hayatı, marina ve çarşısıyla hareketli; Turgutreis daha sakin, uzun sahili ve haftalık pazarıyla aile tatiline dönük. Batıya baktığı için gün batımı burada anılmaya değer. Merkeze araçla yaklaşık 20-25 dakika, yani sakinliği seçmek hareketliliğe erişimi kaybettirmiyor.",
+          ar: "مركز بودروم حيويّ بحياته الليلية ومارينته وسوقه؛ أما تورغوتريس فأهدأ، وبشاطئها الطويل وسوقها الأسبوعي هي أقرب إلى عطلة العائلة. ولأنها تطلّ غرباً فإن غروبها يستحق الذكر. والمركز على نحو 20-25 دقيقة بالسيارة، أي أن اختيار الهدوء لا يفقدك الوصول إلى الحركة.",
+          en: "Bodrum town is lively — nightlife, the marina, the bazaar. Turgutreis is quieter, with a long beach and a weekly market, and leans towards family holidays. Facing west, its sunset is worth mentioning. Bodrum centre is about 20–25 minutes by car, so choosing the calm does not cost you access to the busy side.",
+        },
+      },
+      {
+        question: {
+          tr: "Villa kiraladık, adres tarifi yeterli mi?",
+          ar: "استأجرنا فيلا، هل يكفي وصف العنوان؟",
+          en: "We rented a villa — is a description of the address enough?",
+        },
+        answer: {
+          tr: "Villa kiralayan misafirler için adres tarifi çoğu zaman otel adından daha önemli, çünkü yarımada içindeki bazı sapaklar dar ve haritada net görünmüyor. Konum bağlantısı ya da tarif önceden elimizde olduğunda şoför doğru sapağı biliyor. Yaz akşamlarında yarımada içi yollar yoğunlaşıyor, bu da varış saatini etkiliyor.",
+          ar: "بالنسبة لمن يستأجر فيلا فإن وصف العنوان غالباً أهم من اسم الفندق، لأن بعض المنعطفات داخل شبه الجزيرة ضيّقة ولا تظهر بوضوح على الخريطة. وحين يكون رابط الموقع أو الوصف بحوزتنا مسبقاً يعرف السائق المنعطف الصحيح. كما تزدحم طرق شبه الجزيرة في أمسيات الصيف، وهذا يؤثر على وقت الوصول.",
+          en: "For guests renting a villa, a description of the address usually matters more than a hotel name, because some turnings on the peninsula are narrow and unclear on a map. With a location link or directions in advance the driver knows the right turn. Roads on the peninsula also get busy on summer evenings, which affects arrival time.",
         },
       },
     ],

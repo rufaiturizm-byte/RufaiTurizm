@@ -194,6 +194,59 @@ export function TouristTripSchema({
 }
 
 /**
+ * Güzergâh sayfaları için yolculuk şeması.
+ *
+ * Şema denetiminde çıktı: güzergâh sayfalarında yalnız BreadcrumbList
+ * vardı. Turlar TouristTrip + Offer alıyor, hizmetler ve paketler bunun
+ * üstüne FAQPage alıyor; güzergâhlar ise sitenin ticari niyeti en yüksek
+ * sayfaları olmasına rağmen işaretsizdi.
+ *
+ * `itinerary` iki noktayı sırayla veriyor — bu sayfanın konusu bir yer
+ * değil, iki yer ARASINDAKİ yolculuk ve şemanın bunu söyleyebildiği tek
+ * yer burası.
+ *
+ * `offers` bilerek yok: güzergâh bazlı fiyat listesi yayınlamıyoruz
+ * (bkz. data/transfer-routes.ts). Şemaya rakam yazmak, sayfada
+ * söylemediğimiz bir fiyatı Google'a söylemek olurdu.
+ */
+export function TransferRouteSchema({
+  name,
+  description,
+  image,
+  from,
+  to,
+}: {
+  name: string;
+  description: string;
+  image: string;
+  from: string;
+  to: string;
+}) {
+  const data: WithContext<TouristTrip> = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    name,
+    description,
+    image: `${siteConfig.url}${image}`,
+    provider: {
+      "@type": "TravelAgency",
+      name: "Rufai Turizm",
+      url: siteConfig.url,
+    },
+    itinerary: {
+      "@type": "ItemList",
+      numberOfItems: 2,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, item: { "@type": "Place", name: from } },
+        { "@type": "ListItem", position: 2, item: { "@type": "Place", name: to } },
+      ],
+    },
+  };
+
+  return <JsonLd data={data} />;
+}
+
+/**
  * Kırıntı yolu. Google arama sonucunda adresin yerine
  * "Ana Sayfa › Turlar › İstanbul Turu" satırını gösterir; tıklama oranını
  * yükselten ucuz bir kazanç.

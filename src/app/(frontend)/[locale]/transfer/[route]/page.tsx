@@ -7,7 +7,8 @@ import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { ReadingProgress } from "@/components/site/scroll-helpers";
-import { BreadcrumbSchema } from "@/components/site/json-ld";
+import { BreadcrumbSchema, FaqSchema, TransferRouteSchema } from "@/components/site/json-ld";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { VehicleList } from "@/components/site/vehicle-list";
@@ -80,10 +81,20 @@ export default async function TransferRoutePage({
   const from = route.from[lang] ?? route.from.tr;
   const to = route.to[lang] ?? route.to.tr;
   const title = routeTitle(from, to, locale);
-  const toc = route.sections.map((section, index) => ({
-    id: headingId(section.heading[lang] ?? section.heading.tr, index),
-    label: section.heading[lang] ?? section.heading.tr,
+  const faqItems = route.faq.map((item) => ({
+    question: item.question[lang] ?? item.question.tr,
+    answer: item.answer[lang] ?? item.answer.tr,
   }));
+
+  /* Soru-cevap başlığı içindekiler listesine de giriyor: yazının sonunda
+     duran bir bölüm, listede görünmezse okunmuyor (rehberlerde de öyle). */
+  const toc = [
+    ...route.sections.map((section, index) => ({
+      id: headingId(section.heading[lang] ?? section.heading.tr, index),
+      label: section.heading[lang] ?? section.heading.tr,
+    })),
+    { id: "guzergah-sss", label: t("faqTitle") },
+  ];
 
   /* Aynı havalimanından kalkanlar önce: Antalya sayfasının altında
      İstanbul güzergâhı listelemek ziyaretçiye bir şey anlatmıyor. */
@@ -110,6 +121,14 @@ export default async function TransferRoutePage({
             }),
           },
         ]}
+      />
+
+      <TransferRouteSchema
+        name={title}
+        description={route.excerpt[lang] ?? route.excerpt.tr}
+        image={route.image}
+        from={from}
+        to={to}
       />
 
       <section className="relative isolate">
@@ -176,6 +195,24 @@ export default async function TransferRoutePage({
             </p>
           </section>
         ))}
+
+        {/*
+          Güzergâha özel soru-cevap ve FAQPage şeması.
+          Misafirin Google'a yazdığı cümle ("كم تبعد كمر عن مطار انطاليا")
+          yazının içinde geçiyordu ama SORU biçiminde durmuyordu.
+        */}
+        <section className="mt-14">
+          <FaqSchema items={faqItems} />
+          <h2
+            id="guzergah-sss"
+            className="scroll-mt-28 font-display text-[24px] font-semibold leading-snug sm:text-[28px]"
+          >
+            {t("faqTitle")}
+          </h2>
+          <div className="mt-6">
+            <FaqAccordion items={faqItems} />
+          </div>
+        </section>
 
         <p className="mt-10 text-[13px] leading-[1.8] text-muted-foreground">{t("note")}</p>
 

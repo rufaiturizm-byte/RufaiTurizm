@@ -118,7 +118,7 @@ export default async function FaqPage({
         <div className="grid gap-8 lg:grid-cols-[1.55fr_1fr] lg:items-start">
           <div className="flex flex-col gap-10">
             {GROUPS.map((group, groupIndex) => (
-              <div key={group.key}>
+              <div key={group.key} className="reveal-rise">
                 <h2 className="mb-5 font-display text-[21px] font-semibold leading-snug sm:text-[24px]">
                   {t(group.key)}
                 </h2>

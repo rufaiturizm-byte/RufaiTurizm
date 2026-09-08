@@ -191,7 +191,7 @@ export default async function AboutPage({
               const cta = "cta" in rest ? rest.cta : undefined;
 
               return (
-                <div key={title} className="accent-card flex flex-col p-7">
+                <div key={title} className="reveal-rise accent-card flex flex-col p-7">
                   <span
                     className="inline-flex size-11 items-center justify-center rounded-[0.75rem]"
                     style={{

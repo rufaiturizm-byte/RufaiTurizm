@@ -155,7 +155,7 @@ export default async function GuideDetailPage({
             mesafeyi, süreyi ve mevsimi burada tek bakışta alıyor. */}
         <dl className="mb-14 grid gap-4 sm:grid-cols-3">
           {guide.facts.map((fact, index) => (
-            <div key={index} className="accent-card p-5">
+            <div key={index} className="reveal-rise accent-card p-5">
               <dt className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
                 {fact.label[lang] ?? fact.label.tr}
               </dt>
@@ -270,7 +270,7 @@ export default async function GuideDetailPage({
               };
 
               return (
-                <article key={item.slug} className="accent-card group overflow-hidden">
+                <article key={item.slug} className="reveal-rise accent-card group overflow-hidden">
                   <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                     <Image
                       src={item.image}

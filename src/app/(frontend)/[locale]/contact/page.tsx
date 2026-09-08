@@ -185,7 +185,7 @@ export default async function ContactPage({
           <div className="grid gap-4 sm:grid-cols-2">
             {details.map(({ icon: Icon, title, value, href, ltr }, index) => {
               const wide = details.length % 2 === 1 && index === details.length - 1;
-              const cardClass = `accent-card p-5 ${wide ? "sm:col-span-2" : ""}`;
+              const cardClass = `reveal-rise accent-card p-5 ${wide ? "sm:col-span-2" : ""}`;
               const body = (
                 <>
                   <span
@@ -237,7 +237,7 @@ export default async function ContactPage({
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {topics.map(({ icon: Icon, text }, index) => (
-            <WhatsAppLink key={text} subject={text} className="accent-card block p-6">
+            <WhatsAppLink key={text} subject={text} className="reveal-rise accent-card block p-6">
               <span
                 className="inline-flex size-11 items-center justify-center rounded-full"
                 style={{ background: "var(--brand-night)", color: "var(--brand-gold)" }}

@@ -18,7 +18,16 @@
 
 export interface RouteGroup {
   key: string;
-  /** Grup kartının üstündeki fotoğraf. */
+  /*
+   * Grup kartının üstündeki fotoğraf.
+   *
+   * Bu bölüm ("Hizmet verdiğimiz noktalar") on bir sayfada birden
+   * görünüyor. Fotoğrafları turlardan ve rehberlerden ödünç alınmıştı;
+   * bu yüzden hangi sayfaya konsa orada zaten duran bir kareyi ikinci
+   * kez basıyordu — /transfer'de galata, side ve bodrum, /rehberler'de
+   * havalimani ve uzungöl iki kez çıkıyordu. Artık altı kare yalnız
+   * burada kullanılıyor ve hiçbir sayfada çakışmıyor.
+   */
   image: string;
   /** Grubun başlığı — kalkış noktası ya da bölge. */
   title: { tr: string; ar: string; en: string };
@@ -31,7 +40,7 @@ export interface RouteGroup {
 export const routeGroups: RouteGroup[] = [
   {
     key: "ist",
-    image: "/images/places/havalimani.jpg",
+    image: "/images/places/galata-sokak.jpg",
     title: {
       tr: "İstanbul Havalimanı (IST) transferleri",
       ar: "خدمة النقل من مطار إسطنبول (IST)",
@@ -59,7 +68,7 @@ export const routeGroups: RouteGroup[] = [
   },
   {
     key: "saw",
-    image: "/images/places/galata.jpg",
+    image: "/images/places/vapur-iskele.jpg",
     title: {
       tr: "Sabiha Gökçen Havalimanı (SAW) transferleri",
       ar: "خدمة النقل من مطار صبيحة كوكجن (SAW)",
@@ -85,7 +94,7 @@ export const routeGroups: RouteGroup[] = [
   },
   {
     key: "intercity",
-    image: "/images/tours/sapanca.jpg",
+    image: "/images/places/dag-yolu.jpg",
     title: {
       tr: "Şehirlerarası transfer ve günübirlik turlar",
       ar: "النقل بين المدن والجولات اليومية",
@@ -122,7 +131,7 @@ export const routeGroups: RouteGroup[] = [
    */
   {
     key: "antalya",
-    image: "/images/places/side.jpg",
+    image: "/images/places/konyaalti.jpg",
     title: {
       tr: "Antalya ve Akdeniz kıyısı",
       ar: "أنطاليا وساحل البحر المتوسط",
@@ -148,7 +157,7 @@ export const routeGroups: RouteGroup[] = [
   },
   {
     key: "aegean",
-    image: "/images/tours/bodrum.jpg",
+    image: "/images/places/ege-gunbatimi.jpg",
     title: {
       tr: "Bodrum ve Ege kıyısı",
       ar: "بودروم وساحل بحر إيجه",
@@ -172,7 +181,7 @@ export const routeGroups: RouteGroup[] = [
   },
   {
     key: "blacksea",
-    image: "/images/places/uzungol.jpg",
+    image: "/images/places/cay-bahceleri.jpg",
     title: {
       tr: "Trabzon ve Karadeniz",
       ar: "طرابزون والبحر الأسود",

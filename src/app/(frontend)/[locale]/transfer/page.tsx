@@ -10,7 +10,6 @@ import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCards } from "@/components/site/route-cards";
-import { FleetUses } from "@/components/site/fleet-uses";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
@@ -74,7 +73,10 @@ export default async function TransferPage({
       />
 
       <PageHero
-        image="/images/fleet/vito-exterior.jpg"
+        /* Kapak aracın dış çekimiydi; aynı kare aşağıda hem araç
+           listesinde hem hizmet türü kartında duruyordu, yani sayfada üç
+           kez. Havalimanı karesi hem tekil hem sayfanın konusuna yakın. */
+        image="/images/places/havalimani.jpg"
         imageAlt={locale === "ar" ? "سيارة فيتو VIP" : "VIP Vito aracı"}
         crumbs={[
           { label: tNav("home"), href: "/" },
@@ -107,8 +109,20 @@ export default async function TransferPage({
 
       <VehicleList />
 
-      <FleetUses />
+      {/*
+        FleetUses buradan KALDIRILDI (hizmetler sayfasında duruyor).
 
+        Hemen altındaki TransferTypes ile dört kartın üçü neredeyse
+        kelimesi kelimesine aynı şeyi söylüyordu:
+        "Geliş kapısında karşılama, bagaj yardımı ve doğrudan otele
+        transfer" iki bölümde de vardı; "Bursa, Sapanca, Yalova" ve
+        "saatlik ya da tam gün" cümleleri de öyle. Ziyaretçi aynı dört
+        maddeyi arka arkaya iki kez okuyordu ve aynı Vito fotoğrafı
+        sayfada beş yerde birden çıkıyordu.
+
+        TransferTypes kalıyor çünkü fotoğrafları gerçek: kendi ofisimiz
+        ve kendi araçlarımız. FleetUses'ın kareleri stoktu.
+      */}
       <TransferTypes />
 
       <RouteCoverage locale={locale} />

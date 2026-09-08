@@ -234,7 +234,7 @@ export const guides: Guide[] = [
   {
     slug: "sabiha-gokcenden-istanbula-ulasim",
     topic: "arrival",
-    image: "/images/chauffeur.jpg",
+    image: "/images/places/bogaz-kopru.jpg",
     minutes: 3,
     title: {
       tr: "Sabiha Gökçen'den İstanbul'a ulaşım",
@@ -648,7 +648,7 @@ export const guides: Guide[] = [
   {
     slug: "turkiyeye-ne-zaman-gitmeli",
     topic: "planning",
-    image: "/images/places/bogaz-kopru.jpg",
+    image: "/images/places/bursa-kis.jpg",
     minutes: 4,
     title: {
       tr: "Türkiye'ye ne zaman gitmeli? Mevsim rehberi",
@@ -1698,7 +1698,7 @@ export const guides: Guide[] = [
   {
     slug: "istanbulda-hava-durumu-ve-giyim",
     topic: "planning",
-    image: "/images/places/bogaz-kopru.jpg",
+    image: "/images/places/bogaz-yali.jpg",
     minutes: 4,
     title: {
       tr: "İstanbul'da hava ve ne giyilir: ay ay rehber",

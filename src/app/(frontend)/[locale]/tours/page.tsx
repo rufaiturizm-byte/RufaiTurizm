@@ -69,7 +69,10 @@ export default async function ToursPage({
       />
 
       <PageHero
-        image="/images/tours/istanbul.jpg"
+        /* Kapak İstanbul turunun kendi karesiydi; aynı fotoğraf hemen
+           aşağıda tur kartı olarak da duruyordu. Kapalıçarşı bu sayfada
+           başka hiçbir yerde geçmiyor. */
+        image="/images/places/kapalicarsi.jpg"
         imageAlt={tTours("istanbul.name")}
         crumbs={[
           { label: tNav("home"), href: "/" },

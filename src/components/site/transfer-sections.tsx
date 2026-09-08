@@ -317,8 +317,8 @@ export async function ServiceCities() {
  * eklenerek kurulmuştu. Doku boş bir dikdörtgenden iyiydi ama sayfanın
  * alt üçte biri (SSS, kapanış, belge bandı) tümüyle görselsiz kalıyordu:
  * ziyaretçi en önemli çağrıya, gideceği yeri bir kez daha görmeden
- * varıyordu. Artık altta Kız Kulesi var, üstünde okunurluğu koruyan
- * karartma ve aynı doku.
+ * varıyordu. Artık altta gece Boğaz manzarası var, üstünde okunurluğu
+ * koruyan karartma ve aynı doku.
  */
 export async function ClosingCta({ locale }: { locale?: string }) {
   const t = await getTranslations("home2");
@@ -334,9 +334,19 @@ export async function ClosingCta({ locale }: { locale?: string }) {
           boxShadow: "var(--shadow-e3)",
         }}
       >
+        {/*
+          Kız Kulesi'nden gece Boğaz manzarasına geçildi. Sorun estetik
+          değildi: aynı kare hemen üstteki SSS önizlemesinde de vardı ve
+          ikisi neredeyse her sayfada arka arkaya çıkıyordu — sayfanın
+          son iki bandı aynı fotoğrafı iki kez basıyordu.
+        */}
         <Image
-          src="/images/kizkulesi.jpg"
-          alt={locale === "ar" ? "برج الفتاة عند الغروب" : "Gün batımında Kız Kulesi"}
+          src="/images/places/istanbul-gece.jpg"
+          alt={
+            locale === "ar"
+              ? "جسر البوسفور وأفق إسطنبول ليلاً"
+              : "Gece Boğaz Köprüsü ve İstanbul silueti"
+          }
           fill
           sizes="(max-width: 1280px) 100vw, 1280px"
           quality={60}

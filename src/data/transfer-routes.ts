@@ -437,7 +437,7 @@ export const transferRoutes: TransferRoute[] = [
   {
     slug: "istanbul-havalimani-sisli-nisantasi-transfer",
     airport: "IST",
-    image: "/images/tours/istanbul.jpg",
+    image: "/images/places/levent.jpg",
     from: { tr: "İstanbul Havalimanı (IST)", ar: "مطار إسطنبول (IST)", en: "Istanbul Airport (IST)" },
     to: { tr: "Şişli ve Nişantaşı", ar: "شيشلي ونيشانتاشي", en: "Sisli and Nisantasi" },
     distance: { tr: "yaklaşık 38 km", ar: "نحو 38 كم", en: "about 38 km" },

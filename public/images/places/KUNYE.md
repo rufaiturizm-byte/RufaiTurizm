@@ -48,6 +48,14 @@ değişikliği gerekmez.
 | sapanca-yol.jpg | Sapanca Gölü kıyısında ahşap yürüyüş yolu, alacakaranlık | Süleyman Can Sezgi |
 | bursa-koy-sokak.jpg | Bursa'da köy sokağı: mavi evler, taş duvarlar, tezgâh | N Atac |
 | sapanca-orman.jpg | Sapanca'da ormanda ağaçların arasından güneş | Süleyman Can Sezgi |
+| galata-sokak.jpg | Beyoğlu'nda sokaktan Galata Kulesi | Osman Köycü |
+| vapur-iskele.jpg | İstanbul'da yamaçtaki evler ve bağlı vapurlar | Dmytro Nazarko |
+| dag-yolu.jpg | Çamların arasından geçen viraj yol (Ölüdeniz, Muğla) | Igor Sporynin |
+| konyaalti.jpg | Konyaaltı sahili ve arkada Beydağları (Antalya) | engin akyurt |
+| ege-gunbatimi.jpg | Ege'de gün batımı, Kuşadası sahili | Nilyufer Hadzha |
+| cay-bahceleri.jpg | Siste çay bahçeleri (Arhavi, Artvin) | Roland Egiazaryan |
+| istanbul-gece.jpg | Gece Boğaz Köprüsü ve İstanbul silueti | Joshua Kettle |
+| levent.jpg | Levent'te iş kuleleri ve sahil yolu (İstanbul) | Can Kibar |
 
 Her kare içeriği doğrulanarak seçildi: arama sonucundaki açıklamalar genel
 ("a building that looks like a mosque") olduğu için görsellerin hepsi tek tek
@@ -121,7 +129,7 @@ Bu yüzden elenen adaylar da oldu — gri ve soluk bir kar sokağı ile
 çok doygun renkli bir seramik tezgâhı, ikisi de konu olarak uygundu
 ama sayfanın rengine oturmuyordu.
 
-## Bölge, paket ve rehber sayfaları için eklenen yirmi üç kare (2026-09)
+## Bölge, paket, rehber ve güzergâh bölümü için eklenen otuz bir kare (2026-09)
 
 Şehir merkezi sayfaları açılırken (`/bolgeler/...`) elimizdeki 25 görsel
 altı sayfaya yetmiyordu; yetmediği için aynı kareler otel, güzergâh ve
@@ -170,3 +178,23 @@ antalya-bolge-rehberi ise kemer.jpg'e alındı. Üç rehber, kendi
 şehirlerinin turuyla aynı fotoğrafı kullanıyordu ve bölge sayfasında tur
 kartıyla rehber kartı yan yana geliyordu. kemer.jpg boşaldı çünkü Antalya
 bölge sayfasının kapağı duden.jpg oldu.
+
+### "Hizmet verdiğimiz noktalar" bölümünün altı karesi
+
+galata-sokak, vapur-iskele, dag-yolu, konyaalti, ege-gunbatimi ve
+cay-bahceleri yalnız routes.ts'te kullanılıyor. Bu bölüm on bir sayfada
+birden görünüyor ve fotoğraflarını turlardan/rehberlerden ödünç alıyordu;
+hangi sayfaya konsa orada zaten duran bir kareyi ikinci kez basıyordu.
+
+istanbul-gece.jpg ise sayfa sonundaki kapanış bandına ait. Orada Kız
+Kulesi vardı, ama hemen üstündeki SSS önizlemesi de aynı kareyi
+kullanıyordu — sayfanın son iki bandı üst üste aynı fotoğrafı
+gösteriyordu. Gece Boğaz manzarası bandın lacivert-altın zeminine de
+daha çok oturuyor.
+
+### levent.jpg
+
+"İstanbul Havalimanı → Şişli ve Nişantaşı" güzergâh kartı tarihi yarımada
+fotoğrafı taşıyordu; kart alışveriş ve sağlık turizmi bölgesini anlatırken
+görsel Sultanahmet'i gösteriyordu. Levent'in iş kuleleri o koridorun kendisi.
+Aynı kare ana sayfada tur kartıyla da çakışıyordu.

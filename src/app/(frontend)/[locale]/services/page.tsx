@@ -70,7 +70,10 @@ export default async function ServicesPage({
       />
 
       <PageHero
-        image="/images/fleet/vito-exterior.jpg"
+        /* Kapak aracın dış çekimiydi ama "Vito VIP Araç Hizmeti" kartı
+           da aynı kareyi taşıyor; sayfa açılır açılmaz aynı fotoğraf iki
+           kez görünüyordu. Boğaz köprüsü dört hizmetin ortak zemini. */
+        image="/images/places/bogaz-kopru.jpg"
         imageAlt={locale === "ar" ? "سيارة فيتو VIP" : "VIP Vito aracı"}
         crumbs={[
           { label: tNav("home"), href: "/" },

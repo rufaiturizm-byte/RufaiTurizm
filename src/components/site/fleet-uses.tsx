@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { CalendarClock, MapPin, PlaneLanding, Route } from "lucide-react";
 import { SectionHeading } from "./section-heading";
@@ -17,6 +16,13 @@ import { WhatsAppIcon } from "./icons";
  * transferi, şehir turu, şehirlerarası, emrinizde araç. Müşteri zaten bunları
  * arıyor ("havalimanı transfer", "şoförlü araç kiralama") — araç sınıfı değil.
  * Kartın altındaki not aynı araç olduğunu açıkça söylüyor.
+ *
+ * KARTLARDA FOTOĞRAF YOK. Elimizde üç araç fotoğrafı var, kart dörttü;
+ * biri iki kez kullanılıyordu ve /transfer sayfasında aynı Vito karesi
+ * beş yerde birden çıkıyordu — hemen üstteki araç listesi zaten aracın
+ * galerisini gösteriyor. Dört kez aynı minibüsü göstermek bu kartların
+ * söylediği şeye (dört ayrı yolculuk biçimi) hiçbir şey katmıyordu;
+ * simge daha net anlatıyor. Araç fotoğrafları araç listesinde duruyor.
  */
 export async function FleetUses() {
   const t = await getTranslations("fleet");
@@ -29,32 +35,24 @@ export async function FleetUses() {
       title: t("u1Title"),
       desc: t("u1Desc"),
       meta: t("u1Meta"),
-      image: "/images/fleet/vito-exterior.jpg",
-      alt: t("exteriorAlt"),
     },
     {
       icon: MapPin,
       title: t("u2Title"),
       desc: t("u2Desc"),
       meta: t("u2Meta"),
-      image: "/images/fleet/vito-exterior.jpg",
-      alt: t("exteriorAlt"),
     },
     {
       icon: Route,
       title: t("u3Title"),
       desc: t("u3Desc"),
       meta: t("u3Meta"),
-      image: "/images/fleet/vito-interior.jpg",
-      alt: t("interiorAlt"),
     },
     {
       icon: CalendarClock,
       title: t("u4Title"),
       desc: t("u4Desc"),
       meta: t("u4Meta"),
-      image: "/images/fleet/vito-fleet.jpg",
-      alt: t("fleetAlt"),
     },
   ];
 
@@ -68,36 +66,28 @@ export async function FleetUses() {
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {uses.map(({ icon: Icon, title, desc, meta, image, alt }) => (
+        {uses.map(({ icon: Icon, title, desc, meta }) => (
           <article
             key={title}
             className="group flex flex-col overflow-hidden surface-card surface-card-lift"
           >
-            <div className="relative aspect-[16/11] overflow-hidden">
-              <Image
-                src={image}
-                alt={alt}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <span
-                className="absolute start-3 top-3 inline-flex items-center gap-1.5 rounded-[0.4rem] px-2.5 py-1 text-[11px] font-bold"
-                style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
-              >
-                {t("vito.name")}
-              </span>
-            </div>
+            <div className="flex flex-1 flex-col p-6">
+              <div className="flex items-center gap-3">
+                <span
+                  className="inline-flex size-11 shrink-0 items-center justify-center rounded-[0.8rem]"
+                  style={{ background: "var(--brand-night)", color: "var(--brand-gold)" }}
+                >
+                  <Icon className="size-[19px]" aria-hidden="true" />
+                </span>
+                <span
+                  className="inline-flex items-center rounded-[0.4rem] px-2.5 py-1 text-[11px] font-bold"
+                  style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
+                >
+                  {t("vito.name")}
+                </span>
+              </div>
 
-            <div className="flex flex-1 flex-col p-5">
-              <span
-                className="mb-3 inline-flex size-10 items-center justify-center rounded-full"
-                style={{ background: "var(--brand-night)", color: "var(--brand-gold)" }}
-              >
-                <Icon className="size-[18px]" aria-hidden="true" />
-              </span>
-
-              <h3 className="font-display text-[17.5px] font-semibold leading-snug">{title}</h3>
+              <h3 className="mt-4 font-display text-[17.5px] font-semibold leading-snug">{title}</h3>
               <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
                 {desc}
               </p>

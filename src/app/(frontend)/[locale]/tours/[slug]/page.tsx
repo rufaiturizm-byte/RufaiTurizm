@@ -287,6 +287,23 @@ export default async function TourDetailPage({
                 </div>
               </div>
             ) : null}
+
+            {/*
+              Bölgenin gezi rehberine köprü. Tur sayfası "bugün ne
+              göreceksiniz" diyor; rehber aynı bölgeyi daha geniş
+              anlatıyor. Rehberler ticari sayfalardan hiç bağlantı
+              almıyordu ve sitenin en zayıf bağlanan sayfalarıydı.
+            */}
+            {tour.guideSlug ? (
+              <Link
+                href={{ pathname: "/guides/[slug]", params: { slug: tour.guideSlug } }}
+                className="mt-5 inline-flex items-center gap-2 py-1 text-[13.5px] font-bold"
+                style={{ color: "var(--brand-gold-deep)" }}
+              >
+                {tPage("guideLinkLabel")}
+                <ArrowRight className="size-3.5 rtl:rotate-180" aria-hidden="true" />
+              </Link>
+            ) : null}
           </div>
 
           {/* Rezervasyon kutusu */}

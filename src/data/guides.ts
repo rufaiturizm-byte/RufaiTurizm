@@ -2797,6 +2797,146 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "otel-secerken-nelere-bakmali",
+    topic: "practical",
+    image: "/images/places/yalikavak.jpg",
+    minutes: 6,
+    title: {
+      tr: "Otel seçerken nelere bakmalı: yıldız, manzara, aile odası, banyo",
+      ar: "ما الذي تنظر إليه عند اختيار الفندق: النجوم والإطلالة وغرفة العائلة والحمّام",
+      en: "What to check when choosing a hotel: stars, view, family rooms, bathroom",
+    },
+    excerpt: {
+      tr: "Yıldız sayısı ne anlatır ne anlatmaz, manzaranın gerçek bedeli, aile odası tuzağı ve sorulması gereken banyo sorusu.",
+      ar: "ماذا يعني عدد النجوم وماذا لا يعني، والثمن الحقيقي للإطلالة، وفخّ غرفة العائلة، وسؤال الحمّام الذي يجب طرحه.",
+      en: "What a star rating does and does not tell you, the real price of a view, the family-room trap, and the bathroom question to ask.",
+    },
+    seo: {
+      title: {
+        tr: "Türkiye'de Otel Seçme Rehberi",
+        ar: "دليل اختيار الفندق في تركيا",
+        en: "Choosing a Hotel in Türkiye",
+      },
+      description: {
+        tr: "Yıldız sayısı neyi anlatır, deniz manzarası ne kadara mal olur, aile odası gerçekten kaç kişilik, banyoda şataf var mı nasıl sorulur.",
+        ar: "ماذا يعني عدد النجوم، وكم تكلّف الإطلالة على البحر، وكم شخصاً تتّسع غرفة العائلة فعلاً، وكيف تسأل عن وجود شطّاف في الحمّام.",
+        en: "What a star rating means, what a sea view really costs, how many a family room actually sleeps, and how to ask whether the bathroom has a bidet spray.",
+      },
+    },
+    facts: [
+      {
+        label: { tr: "Yıldız", ar: "النجوم", en: "Stars" },
+        value: { tr: "Tesis özelliğini ölçer, kaliteyi değil", ar: "تقيس مرافق المنشأة لا جودتها", en: "Measures facilities, not quality" },
+      },
+      {
+        label: { tr: "Manzara", ar: "الإطلالة", en: "The view" },
+        value: { tr: "Aynı otelde odalar arası ciddi fark", ar: "فرق كبير بين الغرف في الفندق نفسه", en: "A big gap between rooms in the same hotel" },
+      },
+      {
+        label: { tr: "Aile odası", ar: "غرفة العائلة", en: "Family room" },
+        value: { tr: "Tanımı otele göre değişir; teyit edin", ar: "تعريفها يختلف بين فندق وآخر؛ تأكّد", en: "Defined differently by each hotel; confirm" },
+      },
+      {
+        label: { tr: "Bizim rolümüz", ar: "دورنا", en: "Our role" },
+        value: { tr: "Oteli siz seçersiniz, komisyon almayız", ar: "أنت تختار الفندق ولا نأخذ عمولة", en: "You choose; we take no commission" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Yıldız sayısı neyi anlatır, neyi anlatmaz",
+          ar: "ماذا يعني عدد النجوم وماذا لا يعني",
+          en: "What a star rating does and does not tell you",
+        },
+        body: {
+          tr: "Türkiye'de yıldız, Kültür ve Turizm Bakanlığı'nın belgelendirdiği bir sınıflandırma ve tesisin ÖZELLİKLERİNİ ölçüyor: oda sayısı, asansör, restoran, toplantı salonu, havuz gibi kalemler. Hizmetin kalitesini, personelin ilgisini ya da odanın temizliğini ölçmüyor.\n\nSonuç şu: iyi işletilen bir dört yıldızlı otel, kötü işletilen bir beş yıldızlıdan daha iyi bir tatil verebiliyor. Beş yıldızın gerçekten fark yarattığı yerler büyük tesisler — havuz, spa, birden fazla restoran, geniş lobi. Şehir merkezinde küçük bir butik otelde bunların hiçbiri yok ama oda ve konum çok daha iyi olabiliyor.\n\nPratik yöntem: yıldıza değil, son altı ayın yorumlarına bakın ve özellikle tekrar eden şikâyeti arayın. Bir kişinin \"gürültülüydü\" demesi rastlantı; on kişinin aynı şeyi söylemesi bilgidir. Yorumları okurken kendi sezonunuza yakın tarihleri seçin — yazın klimadan şikâyet eden bir otel kışın sorunsuz olabilir.",
+          ar: "النجوم في تركيا تصنيف تعتمده وزارة الثقافة والسياحة، وهي تقيس مرافق المنشأة: عدد الغرف، والمصعد، والمطعم، وقاعة الاجتماعات، والمسبح ونحوها. ولا تقيس جودة الخدمة ولا اهتمام الموظفين ولا نظافة الغرفة.\n\nوالنتيجة أن فندق أربع نجوم يُدار جيداً قد يمنحك إجازة أفضل من فندق خمس نجوم يُدار بسوء. والأماكن التي تُحدث فيها الخمس نجوم فرقاً حقيقياً هي المنشآت الكبيرة — المسبح والسبا وتعدّد المطاعم واتساع البهو. أما في فندق بوتيك صغير وسط المدينة فلا شيء من ذلك، لكن الغرفة والموقع قد يكونان أفضل بكثير.\n\nوالطريقة العملية: لا تنظر إلى النجوم بل إلى تقييمات الأشهر الستة الأخيرة، وابحث خاصةً عن الشكوى المتكررة. فقول شخص واحد \"كان مزعجاً\" مصادفة؛ وقول عشرة الشيء نفسه معلومة. واختر عند القراءة تواريخ قريبة من موسمك — فالفندق الذي يُشتكى من تكييفه صيفاً قد يكون بلا مشكلة شتاءً.",
+          en: "In Türkiye the star rating is a classification certified by the Ministry of Culture and Tourism, and it measures a property's FACILITIES: number of rooms, lifts, restaurant, meeting room, pool and so on. It does not measure service quality, staff attentiveness or how clean the room is.\n\nThe consequence: a well-run four-star can give you a better holiday than a badly run five-star. Where five stars genuinely make a difference is in large resorts — pool, spa, several restaurants, a big lobby. A small boutique hotel in the city centre has none of that, yet the room and the location may be far better.\n\nThe practical method: look not at the stars but at the last six months of reviews, and specifically hunt for the repeated complaint. One person saying \"it was noisy\" is chance; ten people saying it is information. When reading, pick dates close to your own season — a hotel criticised for its air conditioning in summer may be faultless in winter.",
+        },
+      },
+      {
+        heading: {
+          tr: "Deniz ve Boğaz manzarası: gerçek bedeli",
+          ar: "الإطلالة على البحر والبوسفور: ثمنها الحقيقي",
+          en: "Sea and Bosphorus views: the real price",
+        },
+        body: {
+          tr: "\"Boğaz manzaralı otel\" araması çok yapılıyor ve haklı bir istek; ama iki ayrıntı fiyatı ve memnuniyeti belirliyor.\n\nBirincisi manzaranın DERECESİ. Otellerde genellikle üç kademe var: tam manzara, yan manzara ve \"kısmi manzara\". Sonuncusu çoğu zaman pencerenin kenarından bir dilim deniz demek ve fiyatı tam manzaraya yakın olabiliyor. Rezervasyon yaparken oda tipinin adını değil, o odadan çekilmiş fotoğrafı isteyin.\n\nİkincisi kaç saat o manzaraya bakacağınız. Şehir turu yapan bir aile odaya yalnız uyumaya dönüyor; manzara için ödenen fark, aslında karanlıkta kullanılan bir pencere için ödeniyor. Buna karşılık Boğaz kıyısında kahvaltı etmek ya da akşam balkonda oturmak planınızın bir parçasıysa fark yerini buluyor.\n\nAntalya'da \"deniz manzarası\" başka bir şey ifade ediyor: orada otel genellikle sahilde ve manzara odanın değil tesisin özelliği. Trabzon'da ise sahil oteli merkeze yakın ama yaylalara uzak olabiliyor — manzara ile mesafeyi birlikte düşünmek gerekiyor.",
+          ar: "البحث عن \"فندق بإطلالة على البوسفور\" كثير (ويكتبها بعضهم \"البسفور\")، وهو طلب محقّ؛ لكن تفصيلين يحدّدان السعر والرضا.\n\nالأول درجة الإطلالة. ففي الفنادق ثلاث مراتب عادةً: إطلالة كاملة، وجانبية، و\"جزئية\". والأخيرة تعني غالباً شريحة من البحر من طرف النافذة، وقد يقترب سعرها من الكاملة. فعند الحجز لا تطلب اسم نوع الغرفة بل صورة مأخوذة من تلك الغرفة نفسها.\n\nوالثاني كم ساعة ستنظر إلى تلك الإطلالة. فالعائلة التي تتجوّل في المدينة لا تعود إلى الغرفة إلا للنوم؛ والفرق المدفوع مقابل الإطلالة يُدفع في الحقيقة لنافذة تُستعمل في الظلام. أما إن كان الفطور على ضفة البوسفور أو الجلوس في الشرفة مساءً جزءاً من خطتك فالفرق في محلّه.\n\nو\"الإطلالة على البحر\" في أنطاليا تعني شيئاً آخر: فالفندق هناك على الشاطئ غالباً، والإطلالة صفة للمنشأة لا للغرفة. أما في طرابزون فقد يكون فندق الساحل قريباً من المركز بعيداً عن المرتفعات — فينبغي التفكير في الإطلالة والمسافة معاً.",
+          en: "\"Hotel with a Bosphorus view\" is a much-searched phrase and a fair wish; but two details decide both the price and the satisfaction.\n\nThe first is the DEGREE of the view. Hotels usually have three tiers: full view, side view and \"partial view\". The last often means a slice of sea from the edge of the window, and it can be priced close to a full view. When booking, ask not for the room type's name but for a photograph taken from that room.\n\nThe second is how many hours you will actually look at it. A family out sightseeing returns to the room only to sleep; the premium paid for the view is really being paid for a window used in the dark. If, on the other hand, breakfast by the Bosphorus or sitting on the balcony in the evening is part of your plan, the difference earns its keep.\n\nIn Antalya a \"sea view\" means something else: the hotel is usually on the beach and the view is a property of the resort rather than the room. In Trabzon a coastal hotel may be close to the centre but far from the highlands — view and distance have to be weighed together.",
+        },
+        image: "/images/places/bogaz-yali.jpg",
+        imageAlt: {
+          tr: "Boğaz kıyısındaki yalılar, denizden görünüm",
+          ar: "القصور الخشبية على ضفة البوسفور، من البحر",
+          en: "Waterfront mansions on the Bosphorus, seen from the water",
+        },
+      },
+      {
+        heading: {
+          tr: "Aile odası: adı aynı, tanımı farklı",
+          ar: "غرفة العائلة: الاسم واحد والتعريف مختلف",
+          en: "Family rooms: same name, different definitions",
+        },
+        body: {
+          tr: "\"Aile odası\" Türkiye'de standart bir tanımı olmayan bir ifade. Bir otelde iki yataklı geniş bir oda, başka bir otelde ara kapıyla bağlı iki oda, üçüncüsünde çekyatlı bir oda anlamına gelebiliyor. Beş kişilik bir aile için bu fark tatili belirliyor.\n\nRezervasyondan önce üç şeyi net sorun: odada kaç ayrı yatak var, çocuk için ilave yatak ücretli mi, ve iki oda alınacaksa bunlar bitişik olacak mı. Bitişiklik çoğu otelde \"talep üzerine\" yazıyor ve garanti değil — küçük çocuklu bir aile için bu, varışta öğrenilmemesi gereken bir bilgi.\n\nÇocuk yaş sınırlarına da bakın: birçok otelde belirli bir yaşa kadar çocuk ücretsiz kalıyor ama sınır otelden otele değişiyor ve yatak istenip istenmediğine göre farklılaşıyor. Bu ayrıntı fiyat teklifinde görünmüyor, sorulunca çıkıyor.\n\nBiz rezervasyonu sizin adınıza yaparken bu üç soruyu sizin yerinize soruyoruz ve cevabı yazılı olarak alıyoruz. Anlaşmalı otel listemiz yok — oteli siz seçiyorsunuz, biz yalnız teyit ediyoruz.",
+          ar: "\"غرفة العائلة\" عبارة بلا تعريف موحّد في تركيا. فقد تعني في فندق غرفة واسعة بسريرين، وفي آخر غرفتين يربطهما باب داخلي، وفي ثالث غرفة فيها كنبة سرير. وهذا الفرق يحدّد الإجازة لعائلة من خمسة.\n\nاسأل قبل الحجز عن ثلاثة أمور بوضوح: كم سريراً منفصلاً في الغرفة، وهل السرير الإضافي للطفل بمقابل، وإن أخذتم غرفتين فهل ستكونان متجاورتين. فالتجاور مكتوب في معظم الفنادق \"حسب التوفّر\" وليس مضموناً — وهذه معلومة لا ينبغي أن تعرفها عائلة بأطفال صغار عند الوصول.\n\nوانظر أيضاً في حدود أعمار الأطفال: ففي فنادق كثيرة يقيم الطفل مجاناً حتى سنّ معيّنة، لكن الحدّ يختلف بين فندق وآخر ويتغيّر بحسب طلب سرير من عدمه. ولا يظهر هذا التفصيل في عرض السعر، بل يظهر عند السؤال.\n\nونحن حين نحجز باسمك نسأل هذه الأسئلة الثلاثة نيابةً عنك ونأخذ الجواب كتابةً. وليست لدينا قائمة فنادق متعاقدة — أنت تختار الفندق ونحن نتحقّق فقط.",
+          en: "\"Family room\" has no standard definition in Türkiye. In one hotel it is a large room with two beds, in another two rooms joined by an internal door, in a third a room with a sofa bed. For a family of five that difference decides the holiday.\n\nAsk three things plainly before booking: how many separate beds are in the room, whether an extra bed for a child is charged, and if you take two rooms whether they will be adjacent. Adjacency is written as \"on request\" at most hotels and is not guaranteed — not something a family with small children should discover on arrival.\n\nLook at the child age limits too: at many hotels a child stays free up to a certain age, but the limit varies by hotel and shifts depending on whether a bed is requested. This detail does not appear in the quoted price; it appears when you ask.\n\nWhen we book in your name we ask these three questions for you and get the answer in writing. We have no list of partner hotels — you choose the hotel, we simply confirm.",
+        },
+      },
+      {
+        heading: {
+          tr: "Banyoda şataf var mı: sorulması gereken soru",
+          ar: "هل في الحمّام شطّاف: السؤال الذي يجب طرحه",
+          en: "Is there a bidet spray: the question worth asking",
+        },
+        body: {
+          tr: "Körfez'den gelen misafirin en sık aradığı ama Türk otellerinin ilanlarında neredeyse hiç yazmadığı özellik bu. Türkiye'de birçok otel banyosunda taharet musluğu ya da el duşu bulunuyor, ama bu bir standart değil ve oda tipine göre bile değişebiliyor. Otel sitesinde \"banyo özellikleri\" listesinde nadiren geçiyor.\n\nÖğrenmenin en kesin yolu doğrudan sormak. Rezervasyondan önce otele yazıp banyo fotoğrafı istemek, gelen cevabı da saklamak yeterli. Körfez misafiri ağırlayan oteller bu soruyu sık aldıkları için genellikle net cevap veriyor.\n\nAynı kategoride sorulmaya değer iki şey daha var: odada su ısıtıcı ya da çay-kahve seti bulunup bulunmadığı, ve kıbleyi gösteren bir işaret olup olmadığı. İkincisi büyük otellerde tavanda ya da çekmecede oluyor; olmadığında telefonun pusulası iş görüyor ama önceden bilmek rahat ettiriyor.\n\nBu soruları rezervasyonu sizin adınıza yaparken biz soruyoruz. Otel \"var\" diyorsa yazılı cevabı size iletiyoruz; emin değilse bunu da olduğu gibi söylüyoruz — varmış gibi göstermek varışta çıkan bir sorun olur.",
+          ar: "هذه أكثر ميزة يبحث عنها ضيوف الخليج، ولا تكاد تُذكر في إعلانات الفنادق التركية. ففي كثير من حمّامات الفنادق في تركيا شطّاف أو دُش يدوي، لكنه ليس معياراً ثابتاً وقد يختلف حتى بحسب نوع الغرفة. ونادراً ما يرد في قائمة \"مواصفات الحمّام\" على موقع الفندق.\n\nوأضمن طريقة للمعرفة هي السؤال المباشر. يكفي أن تراسل الفندق قبل الحجز وتطلب صورة للحمّام، وأن تحتفظ بالجواب. والفنادق التي تستقبل ضيوف الخليج تتلقّى هذا السؤال كثيراً فتجيب عنه بوضوح عادةً.\n\nوفي الباب نفسه أمران آخران يستحقّان السؤال: هل في الغرفة سخّان ماء أو طقم شاي وقهوة، وهل توجد علامة تدلّ على القبلة. والثانية تكون في الفنادق الكبيرة على السقف أو في الدرج؛ وعند غيابها تفي بوصلة الهاتف بالغرض، لكن معرفة ذلك مسبقاً أريح.\n\nونحن نسأل هذه الأسئلة حين نحجز باسمك. فإن قال الفندق \"نعم\" أرسلنا لك الجواب كتابةً؛ وإن لم يكن متأكداً قلنا لك ذلك كما هو — فإظهار الأمر كأنه موجود يتحوّل إلى مشكلة عند الوصول.",
+          en: "This is the feature Gulf guests search for most and Turkish hotel listings almost never mention. Many hotel bathrooms in Türkiye have a bidet tap or a hand shower, but it is not a standard and can vary even between room types. It rarely appears in the \"bathroom features\" list on a hotel's own site.\n\nThe surest way to find out is to ask directly. Message the hotel before booking, ask for a photograph of the bathroom, and keep the reply. Hotels that host Gulf guests get this question often and usually answer it clearly.\n\nTwo more things in the same category are worth asking: whether the room has a kettle or tea and coffee set, and whether there is a qibla marker. The second is on the ceiling or in a drawer at larger hotels; without one a phone compass does the job, but knowing in advance is easier.\n\nWe ask these questions when we book in your name. If the hotel says yes we pass you the written answer; if they are unsure we tell you that as it is — presenting it as present would become a problem on arrival.",
+        },
+      },
+      {
+        heading: {
+          tr: "Konum: neye yakın olmalı",
+          ar: "الموقع: قريباً من ماذا",
+          en: "Location: near what",
+        },
+        body: {
+          tr: "\"Merkezi otel\" ifadesi tek başına bir şey söylemiyor; asıl soru neye merkezi olduğu. İstanbul'da üç ayrı merkez var ve hangisine yakın olacağınız tatilinizi belirliyor: tarihi yarımada (Sultanahmet), gece ve yeme-içme (Taksim–Beyoğlu), alışveriş (Şişli–Nişantaşı).\n\nMetroya yakınlık çoğu zaman anıta yakınlıktan daha değerli. İstanbul'da trafik öngörülemez ama metro öngörülebilir; metro durağına beş dakika yürüme mesafesindeki bir otel, taksiyle yirmi dakikadaki bir otelden pratikte daha merkezi oluyor.\n\nHavalimanına yakınlık ise yalnız iki günü ilgilendiriyor: ilk ve son gün. Bunun için tatilin tamamını havalimanı bölgesinde geçirmek genellikle kötü bir takas — gece geç varan ya da erken uçan misafir için tek gecelik bir çözüm olarak düşünülebilir.\n\nOtelin adresini bize söylediğinizde transfer süresini tahmin değil gerçek olarak veriyoruz, çünkü aynı semt adı içinde bile oteller arasında yirmi dakika fark olabiliyor.",
+          ar: "عبارة \"فندق في المركز\" لا تقول شيئاً بمفردها؛ والسؤال الحقيقي: مركز ماذا. ففي إسطنبول ثلاثة مراكز مختلفة، وقربك من أيّها يحدّد إجازتك: شبه الجزيرة التاريخية (السلطان أحمد)، والسهر والمطاعم (تقسيم–بي أوغلو)، والتسوّق (شيشلي–نيشان تاشي).\n\nوالقرب من المترو أثمن غالباً من القرب من معلم. فالزحام في إسطنبول لا يمكن توقّعه أما المترو فيمكن؛ والفندق الذي يبعد خمس دقائق مشياً عن محطة مترو أكثر مركزيةً عملياً من فندق يبعد عشرين دقيقة بالتاكسي.\n\nأما القرب من المطار فيخصّ يومين فقط: الأول والأخير. وقضاء الإجازة كلها في محيط المطار من أجل ذلك مقايضة سيئة عادةً — ويمكن التفكير فيه كحلّ لليلة واحدة لمن يصل متأخراً ليلاً أو يسافر باكراً.\n\nوحين تخبرنا بعنوان الفندق نعطيك مدة النقل حقيقةً لا تخميناً، لأن الفارق بين فندقين داخل الحيّ الواحد قد يبلغ عشرين دقيقة.",
+          en: "\"Central hotel\" says nothing on its own; the real question is central to what. Istanbul has three separate centres, and which one you are near shapes your holiday: the historic peninsula (Sultanahmet), nightlife and eating (Taksim–Beyoğlu), and shopping (Şişli–Nişantaşı).\n\nBeing near a metro station is often worth more than being near a monument. Traffic in Istanbul is unpredictable; the metro is not. A hotel five minutes' walk from a metro stop is in practice more central than one twenty minutes away by taxi.\n\nProximity to the airport matters on two days only: the first and the last. Spending the whole holiday out by the airport for that is usually a poor trade — it can make sense as a one-night solution for a very late arrival or a very early departure.\n\nWhen you give us the hotel address we give you the transfer time as fact rather than estimate, because even within one district name two hotels can be twenty minutes apart.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Otel banyosunda şataf olup olmadığını nasıl öğrenirim?", ar: "كيف أعرف إن كان في حمّام الفندق شطّاف؟", en: "How do I find out whether a hotel bathroom has a bidet spray?" },
+        answer: {
+          tr: "En kesin yol otele doğrudan yazıp banyo fotoğrafı istemek; otel sitelerindeki özellik listelerinde bu madde neredeyse hiç geçmiyor. Türkiye'de birçok otelde taharet musluğu ya da el duşu var ama standart değil, oda tipine göre bile değişebiliyor. Rezervasyonu bizim yapmamız durumunda bu soruyu sizin yerinize soruyor ve cevabı yazılı olarak iletiyoruz; otel emin değilse bunu da olduğu gibi söylüyoruz.",
+          ar: "أضمن طريقة هي مراسلة الفندق مباشرةً وطلب صورة للحمّام؛ فهذا البند لا يكاد يرد في قوائم المواصفات على مواقع الفنادق. وفي كثير من فنادق تركيا شطّاف أو دُش يدوي لكنه ليس معياراً، وقد يختلف حتى بحسب نوع الغرفة. وإن تولّينا نحن الحجز سألنا هذا السؤال نيابةً عنك وأرسلنا الجواب كتابةً؛ وإن لم يكن الفندق متأكداً قلنا لك ذلك كما هو.",
+          en: "The surest way is to message the hotel directly and ask for a photograph of the bathroom; the item almost never appears in the feature lists on hotel websites. Many hotels in Türkiye have a bidet tap or hand shower, but it is not a standard and can vary even between room types. If we handle the booking we ask this for you and pass on the written answer; if the hotel is unsure, we tell you that as it is.",
+        },
+      },
+      {
+        question: { tr: "Beş yıldızlı otel her zaman daha mı iyi?", ar: "هل فندق الخمس نجوم أفضل دائماً؟", en: "Is a five-star hotel always better?" },
+        answer: {
+          tr: "Hayır. Türkiye'de yıldız, tesisin özelliklerini ölçen resmî bir sınıflandırma — oda sayısı, asansör, havuz, restoran gibi. Hizmet kalitesini ölçmüyor. İyi işletilen bir dört yıldızlı, kötü işletilen bir beş yıldızlıdan daha iyi bir tatil verebiliyor. Beş yıldızın gerçekten fark yarattığı yer büyük tesisler; şehir merkezindeki küçük butik otellerde bu kalemlerin çoğu zaten yok. Yıldız yerine son altı ayın yorumlarına ve orada tekrar eden şikâyete bakın.",
+          ar: "لا. فالنجوم في تركيا تصنيف رسمي يقيس مرافق المنشأة — عدد الغرف والمصعد والمسبح والمطعم ونحوها. وهي لا تقيس جودة الخدمة. وقد يمنحك فندق أربع نجوم يُدار جيداً إجازة أفضل من فندق خمس نجوم يُدار بسوء. والخمس نجوم تُحدث فرقاً حقيقياً في المنشآت الكبيرة؛ أما فنادق البوتيك الصغيرة وسط المدينة فلا تملك أصلاً معظم هذه البنود. فانظر بدل النجوم إلى تقييمات الأشهر الستة الأخيرة وإلى الشكوى المتكررة فيها.",
+          en: "No. In Türkiye the star rating is an official classification of a property's facilities — number of rooms, lifts, pool, restaurant and so on. It does not measure service. A well-run four-star can give a better holiday than a badly run five-star. Five stars genuinely matter at large resorts; a small boutique hotel in the city centre has most of those items anyway. Instead of stars, read the last six months of reviews and look for the repeated complaint.",
+        },
+      },
+      {
+        question: { tr: "Oteli siz mi seçiyorsunuz?", ar: "هل تختارون الفندق أنتم؟", en: "Do you choose the hotel?" },
+        answer: {
+          tr: "Hayır, oteli siz seçiyorsunuz. Anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz — bu yüzden sizi belirli bir otele yönlendirmek gibi bir çıkarımız da yok. Bölgeyi, bütçeyi ve kaç kişi olduğunuzu söylediğinizde uygun seçenekleri çıkarıp adınıza rezerve ediyoruz; aile odası, ilave yatak ve banyo gibi ayrıntıları da yazılı olarak teyit ediyoruz.",
+          ar: "لا، أنت من يختار الفندق. ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر — ولذلك ليست لنا مصلحة في توجيهك إلى فندق بعينه. وحين تخبرنا بالمنطقة والميزانية وعدد الأشخاص نستخرج الخيارات المناسبة ونحجز باسمك؛ ونؤكّد كتابةً تفاصيل مثل غرفة العائلة والسرير الإضافي والحمّام.",
+          en: "No, you choose the hotel. We have no list of partner hotels and add no commission to the price — so we have no interest in steering you to a particular one. Tell us the area, the budget and how many you are, and we find suitable options and book in your name; we also confirm details such as the family room, an extra bed and the bathroom in writing.",
+        },
+      },
+    ],
+  },
 ];
 
 export function guideBySlug(slug: string) {

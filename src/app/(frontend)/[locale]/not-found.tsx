@@ -20,9 +20,16 @@ export default async function NotFound() {
   const tNav = await getTranslations("nav");
   const tCta = await getTranslations("cta");
 
+  /*
+   * Bölüm listesi altbilgideki hızlı bağlantılarla aynı kalmalı.
+   * Paketler bölümü sonradan eklendiğinde burası güncellenmemişti:
+   * yanlış bağlantıya tıklayan misafir sekiz çıkış görüyordu ama
+   * paket programlar aralarında yoktu.
+   */
   const links = [
     { href: "/transfer" as const, label: tNav("transfer") },
     { href: "/tours" as const, label: tNav("tours") },
+    { href: "/packages" as const, label: tNav("packages") },
     { href: "/services" as const, label: tNav("services") },
     { href: "/hotels" as const, label: tNav("hotels") },
     { href: "/guides" as const, label: tNav("guides") },
@@ -87,7 +94,8 @@ export default async function NotFound() {
 
       {/* Bölümlerin tamamı: aranan sayfa yoksa bile gidilecek yer bellidir */}
       <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Dokuz bölüm: üç sütun tam oturuyor, dörtte son satırda tek kart kalıyordu. */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="accent-card block p-5">
               <div className="flex items-center justify-between gap-3">

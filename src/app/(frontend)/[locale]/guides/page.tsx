@@ -121,7 +121,17 @@ export default async function GuidesPage({
           {t(`topic${topic.charAt(0).toUpperCase()}${topic.slice(1)}`)}
         </h2>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/*
+          Sütun sayısı kart sayısından türüyor. Üç sütunlu ızgarada dört
+          kart olduğunda sonuncusu son satırda tek başına kalıp yanında
+          iki sütunluk delik bırakıyordu ("varış" ve "planlama" konuları
+          dörder yazı taşıyor). Dörtte iki sütun temiz bir 2×2 veriyor.
+        */}
+        <div
+          className={`grid gap-5 sm:grid-cols-2 ${
+            guidesByTopic(topic).length % 3 === 1 ? "lg:grid-cols-2" : "lg:grid-cols-3"
+          }`}
+        >
           {guidesByTopic(topic).map((guide) => {
             const title = guide.title[lang] ?? guide.title.tr;
             const href = {

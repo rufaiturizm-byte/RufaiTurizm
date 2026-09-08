@@ -62,7 +62,10 @@ export async function FaqPreview() {
           {/* Katmanlar pozitif z-index ile: negatif z-index, `isolate` ve
               `sticky` bir arada olunca fotoğraf boyanmıyordu. */}
           <Image
-            src="/images/tours/istanbul.jpg"
+            /* Kız Kulesi, tours/istanbul.jpg değil: o kare ana sayfada
+               beş ayrı bölümde çıkıyordu (hizmetler, turlar, paketler,
+               güzergâhlar ve burası) ve sayfa kendini tekrar ediyordu. */
+            src="/images/kizkulesi.jpg"
             alt={t("stillTitle")}
             fill
             sizes="(max-width: 1024px) 100vw, 460px"

@@ -231,7 +231,16 @@ export default async function HotelsPage({
               {/* Oteller */}
               {area.hotels ? (
               <div className="mx-auto w-full max-w-7xl px-5 pt-6 sm:px-8">
-                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {/*
+                  Sütun sayısı kart sayısından türüyor: Taksim ve Boğaz
+                  bölgelerinde dörder otel var ve üç sütunda sonuncusu
+                  tek başına düşüyordu.
+                */}
+                <div
+                  className={`grid gap-5 sm:grid-cols-2 ${
+                    area.hotels.length % 3 === 1 ? "lg:grid-cols-2" : "lg:grid-cols-3"
+                  }`}
+                >
                   {area.hotels.map((hotel) => (
                     <article key={hotel.name} className="accent-card flex flex-col p-6">
                       <span

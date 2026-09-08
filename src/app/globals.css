@@ -324,6 +324,29 @@ body {
   }
 }
 
+/*
+ * Çapa atlamaları için yumuşak kaydırma.
+ *
+ * Önceden bunu Lenis yapıyordu ama Lenis fare tekerleğini de ele
+ * geçiriyordu; kaydırma bir sayfada kilitlenince site kullanılamaz hale
+ * geliyor ve kazancı yalnızca görsel. CSS'in kendi scroll-behavior'ı
+ * SADECE programatik kaydırmaları ve içindekiler bağlantılarını
+ * yumuşatıyor — tekerleğe hiç dokunmuyor, yani kilitlenemiyor.
+ *
+ * scroll-padding-top yapışkan üst menünün yüksekliği kadar: çapaya
+ * atlayınca başlık menünün altında kalmıyor.
+ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .surface-card,
   .surface-card-lift:hover,

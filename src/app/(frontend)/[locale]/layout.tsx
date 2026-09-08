@@ -11,7 +11,6 @@ import { Footer } from "@/components/site/footer";
 import { WhatsAppFloatingButton } from "@/components/site/whatsapp-cta";
 import { BackToTop } from "@/components/site/scroll-helpers";
 import { MobileActionBar } from "@/components/site/mobile-action-bar";
-import { SmoothScroll } from "@/components/site/smooth-scroll";
 import { routing, isRtl, type Locale } from "@/i18n/routing";
 import "../../globals.css";
 
@@ -134,7 +133,6 @@ export default async function LocaleLayout({
           <a href="#main" className="skip-link">
             {tCommon("skipToContent")}
           </a>
-          <SmoothScroll />
           <Header />
           {children}
           <Footer />

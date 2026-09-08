@@ -10,8 +10,8 @@ import { useEffect, useState } from "react";
  * geliyor) onu bulmak için baştan sona kaydırmak zorundaydı.
  *
  * Okunan bölüm işaretleniyor: IntersectionObserver ile, kaydırma
- * olayına bağlanmadan — kaydırma dinleyicisi Lenis'in üstünde her karede
- * çalışırdı ve gereksiz.
+ * olayına bağlanmadan — her karede çalışan bir kaydırma dinleyicisi
+ * gereksiz maliyet olurdu.
  */
 export function TableOfContents({
   items,

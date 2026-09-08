@@ -43,10 +43,7 @@ export async function TourCompare() {
         />
 
         {/* Dar ekranda tablo kendi içinde yatay kayar; sayfa gövdesi kaymaz. */}
-        {/* data-lenis-prevent: tablo yatay kayarken Lenis sayfayı
-            oynatmasın, ikisi birbirini kilitliyordu. */}
         <div
-          data-lenis-prevent
           className="scroll-x-hint overflow-x-auto surface-card"
           style={{ borderRadius: "var(--radius-card)" }}
         >

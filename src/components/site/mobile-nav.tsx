@@ -36,7 +36,6 @@ export function MobileNav({ items }: { items: Item[] }) {
 
       <SheetContent
         side="right"
-        data-lenis-prevent
         className="border-0 overflow-y-auto p-0"
         style={{ background: "var(--brand-night)" }}
       >

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, CalendarDays, Check, Clock, Footprints, Info, MapPin, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays, Check, Clock, Footprints, Info, MapPin, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
@@ -10,6 +10,8 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
+import { packageBySlug } from "@/data/packages";
+import type { Locale } from "@/i18n/routing";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
@@ -71,6 +73,8 @@ export default async function TourDetailPage({
   /* Şehir adı şemadaki koordinatı adlandırıyor: çıplak enlem-boylam
      yerine "Antalya" diyen bir Place daha okunabilir. */
   const city = t(`${tour.key}.city`);
+  const lang = locale as Locale;
+  const matchingPackage = tour.packageSlug ? packageBySlug(tour.packageSlug) : undefined;
   const others = tours.filter((item) => item.key !== tour.key).slice(0, 4);
   const highlights = t.raw(`${tour.key}.highlights`) as string[];
 
@@ -250,6 +254,39 @@ export default async function TourDetailPage({
                 <p className="mt-2 text-[13.5px] leading-[1.8]">{tPage("note")}</p>
               </div>
             </div>
+            {/*
+              Günübirlik turdan çok günlü programa köprü.
+              Sayfa "bu turu bugün yapabilirsiniz" diyor; aynı bölgeyi
+              birkaç güne yaymak isteyen misafirin oradan çıkışı yoktu.
+            */}
+            {matchingPackage ? (
+              <div className="mt-6 accent-card p-6 sm:p-7">
+                <div className="flex items-start gap-4">
+                  <span className="icon-tile size-11 shrink-0" aria-hidden="true">
+                    <CalendarDays className="size-5" />
+                  </span>
+                  <div className="min-w-0">
+                    <h2 className="font-display text-[19px] font-semibold leading-snug">
+                      {tPage("packageTitle")}
+                    </h2>
+                    <p className="mt-2 text-[13.5px] leading-[1.8] text-muted-foreground">
+                      {tPage("packageText")}
+                    </p>
+                    <Link
+                      href={{
+                        pathname: "/packages/[slug]",
+                        params: { slug: matchingPackage.slug },
+                      }}
+                      className="mt-4 inline-flex items-center gap-2 py-1 text-[13.5px] font-bold"
+                      style={{ color: "var(--brand-gold-deep)" }}
+                    >
+                      {matchingPackage.name[lang] ?? matchingPackage.name.tr}
+                      <ArrowRight className="size-3.5 rtl:rotate-180" aria-hidden="true" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ) : null}
           </div>
 
           {/* Rezervasyon kutusu */}

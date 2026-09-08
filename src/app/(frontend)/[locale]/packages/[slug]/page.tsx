@@ -14,7 +14,7 @@ import { AssuranceBand } from "@/components/site/assurance-band";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
-import { packages, packageBySlug } from "@/data/packages";
+import { packages, packageBySlug, relatedPackages } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -59,7 +59,9 @@ export default async function PackageDetailPage({
 
   const name = item.name[lang] ?? item.name.tr;
   const excerpt = item.excerpt[lang] ?? item.excerpt.tr;
-  const others = packages.filter((other) => other.slug !== item.slug).slice(0, 3);
+  /* Kaydırmalı: her paket listeye farklı bir yerden başlasın, yoksa
+     dizinin sonundaki paketler hiç bağlantı almıyor. */
+  const others = relatedPackages(item.slug);
   const faqItems = item.faq.map((entry) => ({
     question: entry.question[lang] ?? entry.question.tr,
     answer: entry.answer[lang] ?? entry.answer.tr,

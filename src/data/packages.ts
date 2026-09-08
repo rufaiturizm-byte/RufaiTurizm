@@ -678,6 +678,28 @@ export const packages: Package[] = [
   },
 ];
 
+/**
+ * Bir paket sayfasının altında gösterilecek diğer paketler.
+ *
+ * Önceki hali `packages.filter(...).slice(0, 3)` idi: her sayfada hep
+ * ilk üç paket görünüyordu. Sonuç, bağlantı denetiminde çıktı — Antalya
+ * ve Bodrum paketlerine başka HİÇBİR paketten bağlantı gitmiyordu, o
+ * ikisi listeye hiç girmiyordu çünkü dizinin sonundalar. İlk üç paket
+ * sekiz bağlantı alırken son ikisi üç bağlantıyla kalıyordu.
+ *
+ * Aynı hata rehberlerde ve güzergâh sayfalarında da vardı ve orada
+ * kaydırmayla çözülmüştü; burada gözden kaçmış. Liste her paket için
+ * farklı bir yerden başlıyor, böylece altı paketin her biri eşit sayıda
+ * bağlantı alıyor.
+ */
+export function relatedPackages(slug: string, count = 3) {
+  const current = packages.findIndex((item) => item.slug === slug);
+  if (current < 0) return packages.slice(0, count);
+
+  const rest = [...packages.slice(current + 1), ...packages.slice(0, current)];
+  return rest.slice(0, count);
+}
+
 export function packageBySlug(slug: string) {
   return packages.find((item) => item.slug === slug);
 }

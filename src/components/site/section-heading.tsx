@@ -53,7 +53,7 @@ export function SectionHeading({
 
           {subtitle ? (
             <p
-              className={`mt-4 text-[15px] leading-[1.75] ${
+              className={`measure mt-4 text-[15px] leading-[1.75] ${
                 dark ? "text-white/62" : "text-muted-foreground"
               }`}
             >

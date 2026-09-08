@@ -107,7 +107,7 @@ export default async function HotelsPage({
             style={{ color: "var(--brand-night)" }}
             aria-hidden="true"
           />
-          <p className="text-[13.5px] leading-[1.8]">{t("disclaimer")}</p>
+          <p className="measure-wide text-[13.5px] leading-[1.8]">{t("disclaimer")}</p>
         </div>
       </section>
 
@@ -176,7 +176,7 @@ export default async function HotelsPage({
                     <h2 className="max-w-2xl font-display text-[28px] font-semibold leading-[1.12] text-white sm:text-[38px]">
                       {name}
                     </h2>
-                    <p className="max-w-2xl text-[14.5px] leading-[1.8] text-white/75">
+                    <p className="measure text-[14.5px] leading-[1.8] text-white/75">
                       {area.note[lang] ?? area.note.tr}
                     </p>
                   </div>
@@ -352,7 +352,7 @@ export default async function HotelsPage({
                   </div>
 
                   {/* Otel adı neden yok — sorulmadan cevaplanıyor. */}
-                  <p className="mt-5 max-w-3xl text-[13px] leading-[1.8] text-muted-foreground">
+                  <p className="measure mt-5 text-[13px] leading-[1.8] text-muted-foreground">
                     {t("subAreaNote")}
                   </p>
 

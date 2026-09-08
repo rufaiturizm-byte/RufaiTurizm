@@ -109,7 +109,7 @@ export async function TourCompare() {
         </div>
 
         <p className="mt-3 text-[12.5px] text-muted-foreground lg:hidden">{t("swipeHint")}</p>
-        <p className="mt-4 text-[13px] text-muted-foreground">{t("priceNote")}</p>
+        <p className="measure mt-4 text-[13px] text-muted-foreground">{t("priceNote")}</p>
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">

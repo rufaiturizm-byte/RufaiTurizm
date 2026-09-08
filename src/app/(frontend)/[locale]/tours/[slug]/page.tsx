@@ -152,10 +152,10 @@ export default async function TourDetailPage({
       <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-20 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
           <div>
-            <p className="text-[17px] leading-[1.85] font-medium text-foreground/90">
+            <p className="measure text-[17px] leading-[1.85] font-medium text-foreground/90">
               {description}
             </p>
-            <p className="mt-5 text-[15.5px] leading-[1.95] text-foreground/80">
+            <p className="measure mt-5 text-[15.5px] leading-[1.95] text-foreground/80">
               {t(`${tour.key}.long`)}
             </p>
 
@@ -252,7 +252,7 @@ export default async function TourDetailPage({
               />
               <div>
                 <h3 className="text-[15px] font-bold">{tPage("noteTitle")}</h3>
-                <p className="mt-2 text-[13.5px] leading-[1.8]">{tPage("note")}</p>
+                <p className="measure-wide mt-2 text-[13.5px] leading-[1.8]">{tPage("note")}</p>
               </div>
             </div>
             {/*
@@ -270,7 +270,7 @@ export default async function TourDetailPage({
                     <h3 className="font-display text-[19px] font-semibold leading-snug">
                       {tPage("packageTitle")}
                     </h3>
-                    <p className="mt-2 text-[13.5px] leading-[1.8] text-muted-foreground">
+                    <p className="measure-wide mt-2 text-[13.5px] leading-[1.8] text-muted-foreground">
                       {tPage("packageText")}
                     </p>
                     <Link

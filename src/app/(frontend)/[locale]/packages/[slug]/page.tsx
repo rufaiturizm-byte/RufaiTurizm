@@ -157,7 +157,7 @@ export default async function PackageDetailPage({
                     <h3 className="font-display text-[18px] font-semibold leading-snug">
                       {day.title[lang] ?? day.title.tr}
                     </h3>
-                    <p className="mt-2.5 text-[14.5px] leading-[1.85] text-foreground/80">
+                    <p className="measure mt-2.5 text-[14.5px] leading-[1.85] text-foreground/80">
                       {day.body[lang] ?? day.body.tr}
                     </p>
                   </div>
@@ -206,7 +206,9 @@ export default async function PackageDetailPage({
               />
               <div>
                 <h3 className="text-[15px] font-bold">{t("flexTitle")}</h3>
-                <p className="mt-2 text-[14px] leading-[1.8] text-foreground/80">{t("flexText")}</p>
+                <p className="measure-wide mt-2 text-[14px] leading-[1.8] text-foreground/80">
+                  {t("flexText")}
+                </p>
               </div>
             </div>
           </div>

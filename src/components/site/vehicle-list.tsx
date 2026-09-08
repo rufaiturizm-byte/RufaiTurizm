@@ -140,7 +140,7 @@ export async function VehicleList() {
         className="mt-6 flex flex-col gap-1.5 border-s-2 ps-4"
         style={{ borderColor: "color-mix(in oklab, var(--brand-gold) 55%, transparent)" }}
       >
-        <p className="text-[13px] leading-[1.75]">{t("fleetNote")}</p>
+        <p className="measure-wide text-[13px] leading-[1.75]">{t("fleetNote")}</p>
         <p className="text-[12.5px] text-muted-foreground">{t("stockNote")}</p>
       </div>
     </section>

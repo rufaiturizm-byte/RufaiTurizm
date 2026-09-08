@@ -174,7 +174,7 @@ export default async function GuideDetailPage({
             >
               {section.heading[lang] ?? section.heading.tr}
             </h2>
-            <p className="mt-4 text-[16px] leading-[1.95] text-foreground/85">
+            <p className="measure mt-4 text-[16px] leading-[1.95] text-foreground/85">
               {section.body[lang] ?? section.body.tr}
             </p>
 

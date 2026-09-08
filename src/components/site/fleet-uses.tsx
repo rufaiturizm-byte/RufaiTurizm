@@ -111,7 +111,9 @@ export async function FleetUses() {
         ))}
       </div>
 
-      <p className="mt-5 text-[13px] text-muted-foreground">{t("sameVehicleNote")}</p>
+      <p className="measure-wide mt-5 text-[13px] text-muted-foreground">
+        {t("sameVehicleNote")}
+      </p>
     </section>
   );
 }

@@ -982,3 +982,36 @@ header :where(a, button):focus-visible {
     will-change: transform;
   }
 }
+
+/*
+ * Okuma genişliği.
+ *
+ * Rahat okunan satır 45-75 karakterdir; 85'in üstünde göz satır sonundan
+ * bir sonrakinin başına dönerken yerini kaybetmeye başlar. Ölçtüğümüzde
+ * sitede kısıt hiç yoktu: en uzun satır 156 KARAKTERDİ (filo notu, 1198
+ * piksel boyunca tek satır), otel sayfasındaki not 112, tur ve hizmet
+ * detaylarının gövde sütunu 98-110 arası.
+ *
+ * İki ölçü var çünkü iki farklı iş yapıyorlar:
+ *  .measure      68ch — gövde metni, okunmak için yazılmış paragraflar.
+ *  .measure-wide 82ch — simgeli bilgi panellerindeki kısa notlar; orada
+ *                68ch panelin sağında rahatsız edici bir boşluk bırakıyor,
+ *                ama kısıtsız bırakmak da satırı 156 karaktere çıkarıyor.
+ *
+ * `ch` birimi yazı tipinin kendi "0" genişliğine bağlı olduğu için
+ * punto değiştiğinde ölçü kendiliğinden ayarlanıyor; piksel yazsaydık
+ * her punto için ayrı değer gerekirdi.
+ *
+ * DEĞERLER ÖLÇÜLEREK BULUNDU. "0" karakteri Türkçe metnin ortalama harf
+ * genişliğinden geniş olduğu için 1ch yaklaşık 1,34 GERÇEK karaktere
+ * denk geliyor: ilk denemede 82ch yazdım ve satır 110 karaktere çıktı.
+ * 52ch ≈ 70 karakter, 62ch ≈ 83 karakter; ikisi de tarayıcıda sayıldı,
+ * hesaplanmadı.
+ */
+.measure {
+  max-width: 52ch;
+}
+
+.measure-wide {
+  max-width: 62ch;
+}

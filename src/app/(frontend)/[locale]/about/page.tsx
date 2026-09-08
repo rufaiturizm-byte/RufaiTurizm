@@ -87,7 +87,7 @@ export default async function AboutPage({
               title={t("storyTitle")}
               rule={false}
             />
-            <div className="flex flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
+            <div className="measure flex flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
               <p>{t("p1")}</p>
               <p>{t("p2")}</p>
               <p>{t("p3")}</p>
@@ -138,7 +138,7 @@ export default async function AboutPage({
               title={t("promiseTitle")}
               rule={false}
             />
-            <div className="flex flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
+            <div className="measure flex flex-col gap-5 text-[15.5px] leading-[1.9] text-foreground/85">
               <p>{t("p4")}</p>
               <p>{t("p5")}</p>
               <p>{t("p6")}</p>

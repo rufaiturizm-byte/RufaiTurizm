@@ -156,13 +156,13 @@ export default async function ServiceDetailPage({
       <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-20 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
           <div>
-            <p className="text-[17px] leading-[1.85] font-medium text-foreground/90">
+            <p className="measure text-[17px] leading-[1.85] font-medium text-foreground/90">
               {description}
             </p>
-            <p className="mt-5 text-[15.5px] leading-[1.95] text-foreground/80">
+            <p className="measure mt-5 text-[15.5px] leading-[1.95] text-foreground/80">
               {t(`${service.key}.long`)}
             </p>
-            <p className="mt-4 text-[15.5px] leading-[1.95] text-foreground/80">
+            <p className="measure mt-4 text-[15.5px] leading-[1.95] text-foreground/80">
               {t(`${service.key}.long2`)}
             </p>
 

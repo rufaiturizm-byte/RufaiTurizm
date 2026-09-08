@@ -84,7 +84,7 @@ export default async function DestinationsPage({
           <h2 className="font-display text-[26px] font-semibold leading-snug sm:text-[32px] lg:sticky lg:top-28 lg:self-start">
             {t("introTitle")}
           </h2>
-          <p className="text-[15.5px] leading-[1.95] text-foreground/85">{t("intro")}</p>
+          <p className="measure text-[15.5px] leading-[1.95] text-foreground/85">{t("intro")}</p>
         </div>
       </section>
 

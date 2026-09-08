@@ -9,7 +9,7 @@ import {
   TramFront,
   TriangleAlert,
 } from "lucide-react";
-import { getPathname } from "@/i18n/navigation";
+import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
@@ -167,7 +167,9 @@ export default async function HotelsPage({
                         className="text-[11px] font-extrabold uppercase tracking-[0.2em]"
                         style={{ color: "var(--brand-gold-label)" }}
                       >
-                        {area.hotels.length} {t("hotelCount")}
+                        {area.hotels
+                          ? `${area.hotels.length} ${t("hotelCount")}`
+                          : `${area.subAreas?.length ?? 0} ${t("areaCount")}`}
                       </span>
                     </div>
 
@@ -227,6 +229,7 @@ export default async function HotelsPage({
               </div>
 
               {/* Oteller */}
+              {area.hotels ? (
               <div className="mx-auto w-full max-w-7xl px-5 pt-6 sm:px-8">
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {area.hotels.map((hotel) => (
@@ -287,11 +290,83 @@ export default async function HotelsPage({
                     </article>
                   ))}
                 </div>
+              </div>
+              ) : null}
 
-                {/* Bölge başına tek çağrı */}
+              {/*
+                Sahil bölgelerinde otel kartı yerine alt bölge kartı.
+                Antalya ve Bodrum'da misafirin asıl sorusu "hangi otel"
+                değil "hangi bölge" — Kemer ile Alanya arasındaki fark
+                havalimanına iki saat ve iki farklı tatil demek.
+              */}
+              {area.subAreas ? (
+                <div className="mx-auto w-full max-w-7xl px-5 pt-6 sm:px-8">
+                  <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    {area.subAreas.map((sub) => {
+                      const subName = sub.name[lang] ?? sub.name.tr;
+                      return (
+                        <article key={subName} className="accent-card flex flex-col p-6">
+                          <span
+                            className="inline-flex w-fit items-center gap-2 rounded-full px-3 py-1.5 text-[11.5px] font-bold"
+                            style={{
+                              background: "color-mix(in oklab, var(--brand-gold) 16%, transparent)",
+                              border: "1px solid color-mix(in oklab, var(--brand-gold) 38%, transparent)",
+                              color: "var(--brand-gold-deep)",
+                            }}
+                          >
+                            <PlaneLanding className="size-3.5" aria-hidden="true" />
+                            {sub.airport[lang] ?? sub.airport.tr}
+                          </span>
+
+                          <h3 className="mt-4 font-display text-[19px] font-semibold leading-snug">
+                            {subName}
+                          </h3>
+
+                          <p className="mt-3 flex-1 text-[13.5px] leading-[1.75] text-muted-foreground">
+                            {sub.desc[lang] ?? sub.desc.tr}
+                          </p>
+
+                          <WhatsAppLink
+                            subject={`${subName} — ${name}`}
+                            className="mt-5 inline-flex items-center gap-2 border-t pt-4 text-[13px] font-bold"
+                            style={{
+                              borderColor: "var(--hairline)",
+                              color: "var(--brand-gold-deep)",
+                            }}
+                          >
+                            {t("askAreaCta")}
+                            <ArrowRight className="size-3.5 rtl:rotate-180" aria-hidden="true" />
+                          </WhatsAppLink>
+                        </article>
+                      );
+                    })}
+                  </div>
+
+                  {/* Otel adı neden yok — sorulmadan cevaplanıyor. */}
+                  <p className="mt-5 max-w-3xl text-[13px] leading-[1.8] text-muted-foreground">
+                    {t("subAreaNote")}
+                  </p>
+
+                  {/* Rehbere köprü: bu sayfa nerede kalınır, rehber gezi planı. */}
+                  {area.guideSlug ? (
+                    <Link
+                      href={{ pathname: "/guides/[slug]", params: { slug: area.guideSlug } }}
+                      className="mt-4 inline-flex items-center gap-2 py-1 text-[13.5px] font-bold"
+                      style={{ color: "var(--brand-gold-deep)" }}
+                    >
+                      {t("guideLink")}
+                      <ArrowRight className="size-3.5 rtl:rotate-180" aria-hidden="true" />
+                    </Link>
+                  ) : null}
+                </div>
+              ) : null}
+
+
+              {/* Bölge başına tek çağrı — otel listesi olsun olmasın. */}
+              <div className="mx-auto w-full max-w-7xl px-5 pt-5 sm:px-8">
                 <WhatsAppLink
                   subject={name}
-                  className="btn-wa mt-5 flex items-center justify-center gap-2.5 rounded-[0.7rem] py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                  className="btn-wa flex items-center justify-center gap-2.5 rounded-[0.7rem] py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
                   <WhatsAppIcon className="size-[18px]" />
                   {name} — {tCta("bookNow")}

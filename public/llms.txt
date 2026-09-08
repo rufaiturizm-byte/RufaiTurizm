@@ -40,8 +40,12 @@ Günlük özel turlar. [Tüm turlar](https://rufaiturizm.com/tr/turlar)
 
 ## Konaklama
 - [Otel rehberi](https://rufaiturizm.com/tr/oteller): İstanbul'da semt semt
-  nerede kalınır, havalimanına mesafe ve nelere dikkat edilmeli. Anlaşmalı
-  otel listesi DEĞİLDİR.
+  nerede kalınır (Sultanahmet, Taksim, Boğaz, Anadolu yakası); Antalya ve
+  Bodrum'da ise bölge bölge (Lara-Konyaaltı, Belek, Kemer, Side-Manavgat,
+  Alanya / Bodrum merkez, Gümbet-Bitez, Yalıkavak, Turgutreis,
+  Torba-Türkbükü). Anlaşmalı otel listesi DEĞİLDİR ve sahil bölgelerinde
+  otel adı verilmez: oradaki asıl karar hangi bölgede kalınacağıdır,
+  oteli misafir seçer, rezervasyonu onun adına biz yaparız.
 
 ## Araçlar
 Şoförlü Mercedes Vito. Filoda beş araç var ve hepsi aynı model/donanımdadır;

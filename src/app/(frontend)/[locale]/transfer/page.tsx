@@ -12,6 +12,7 @@ import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCards } from "@/components/site/route-cards";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { PromoBanner } from "@/components/site/promo-banner";
 import { RelatedLinks } from "@/components/site/related-links";
 import { FaqPreview } from "@/components/site/faq-preview";
 import {
@@ -106,6 +107,8 @@ export default async function TransferPage({
       </section>
 
       <RouteCards locale={locale} />
+
+      <PromoBanner placement="transfer" locale={locale} />
 
       <VehicleList />
 

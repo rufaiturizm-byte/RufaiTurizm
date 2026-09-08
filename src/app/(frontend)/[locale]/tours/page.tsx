@@ -12,6 +12,7 @@ import { RouteCoverage } from "@/components/site/route-coverage";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { PromoBanner } from "@/components/site/promo-banner";
 import { RelatedLinks } from "@/components/site/related-links";
 import { WhyUs } from "@/components/site/why-us";
 import { FaqPreview } from "@/components/site/faq-preview";
@@ -104,6 +105,8 @@ export default async function ToursPage({
       </section>
 
       <TourCompare />
+
+      <PromoBanner placement="tours" locale={locale} />
 
       <RouteCoverage locale={locale} />
 

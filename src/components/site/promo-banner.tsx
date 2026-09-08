@@ -45,27 +45,54 @@ export async function PromoBanner({
         {list.map((banner) => (
           <div
             key={banner.id}
-            className="relative isolate overflow-hidden pattern-constellation"
+            className="relative isolate overflow-hidden"
             style={{
-              background: "var(--brand-night)",
+              backgroundColor: "var(--brand-night)",
               borderRadius: "var(--radius-card)",
               boxShadow: "var(--edge-light-dark), var(--shadow-e3)",
             }}
           >
+            {/*
+              Takımyıldız dokusu AYRI bir katman.
+
+              Önceden `pattern-constellation` bandın kendi sınıfındaydı ama
+              hemen altındaki satır içi `background: var(--brand-night)`
+              kısayolu `background-image`i de sıfırlıyordu — yani doku hiç
+              basılmıyordu, bant düz bir lacivert dikdörtgendi. Satır içi
+              stil sınıfı her zaman yener; kısayol yerine `backgroundColor`
+              yazmak da çözerdi ama sitedeki diğer iki kullanım (güvence
+              bandı, kapanış bandı) zaten ayrı katman kullanıyor.
+            */}
+            <div
+              className="pattern-constellation absolute inset-0 -z-10 opacity-60"
+              aria-hidden="true"
+            />
             {banner.image ? (
               <>
+                {/*
+                  Fotoğraf %35 saydamken ve gradyan sağ uçta bile %55
+                  lacivertken kare hiç görünmüyordu: bant, arkasında bir
+                  fotoğraf olduğu anlaşılmayan düz bir dikdörtgendi.
+                  Şimdi %50 saydam ve gradyan sağa doğru %62'ye kadar
+                  açılıyor — kare seçiliyor ama metnin altındaki zemin
+                  hiçbir noktada %62 laciverdin altına inmiyor, yani
+                  beyaz yazı her yerde okunur kalıyor.
+                */}
                 <Image
                   src={banner.image}
                   alt=""
                   fill
                   sizes="(max-width: 1280px) 100vw, 1280px"
-                  className="absolute inset-0 -z-10 object-cover object-center opacity-35"
+                  /* Bant masaüstünde 4,4:1; ortadan kesince manzaranın gökyüzü ve
+                     zemini gidiyor, geriye tanınmayan duvarlar kalıyordu.
+                     %35 üstten kesim binaların tepesini ve gökyüzünü tutuyor. */
+                  className="absolute inset-0 -z-10 object-cover object-[center_35%] opacity-50"
                 />
                 <div
                   className="absolute inset-0 -z-10"
                   style={{
                     background:
-                      "linear-gradient(to right, color-mix(in oklab, var(--brand-night) 94%, transparent) 30%, color-mix(in oklab, var(--brand-night) 55%, transparent) 100%)",
+                      "linear-gradient(to right, color-mix(in oklab, var(--brand-night) 95%, transparent) 0%, color-mix(in oklab, var(--brand-night) 90%, transparent) 48%, color-mix(in oklab, var(--brand-night) 62%, transparent) 100%)",
                   }}
                 />
               </>

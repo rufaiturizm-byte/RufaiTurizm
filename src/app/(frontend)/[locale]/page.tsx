@@ -12,6 +12,7 @@ import { TrustStats } from "@/components/site/trust-stats";
 import { SectionHeading, SectionAction } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { PromoBanner } from "@/components/site/promo-banner";
 import { PackagesSection } from "@/components/site/packages-section";
 import { Reviews } from "@/components/site/reviews";
 import { ServicesOverview } from "@/components/site/services-overview";
@@ -174,6 +175,8 @@ export default async function HomePage({
         </section>
 
         <PackagesSection locale={locale} />
+
+        <PromoBanner placement="home" locale={locale} />
 
         <DestinationsMarquee />
 

@@ -62,7 +62,6 @@ export function MobileNav({ items }: { items: Item[] }) {
         <div className="px-6 pt-6">
           <WhatsAppLink
             className="cta-gold flex items-center justify-center gap-2.5 px-5 py-3.5 text-[14.5px] font-bold"
-            style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
           >
             {tCta("bookNow")}
             <ArrowRight className="size-4 rtl:rotate-180" aria-hidden="true" />

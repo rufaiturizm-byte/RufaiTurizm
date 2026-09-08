@@ -423,8 +423,19 @@ html {
   }
 }
 
-/* Altın düğmeler: dolgunun altında markaya çalan bir hâle. */
+/*
+ * Altın düğmeler: dolgunun altında markaya çalan bir hâle.
+ *
+ * DOLGU DA BURADA. Önceden sınıf yalnız hâleyi ve yuvarlaklığı veriyor,
+ * altın zemini her çağıran taraf kendi `style`ında tekrar yazıyordu.
+ * Adı "cta-gold" olan ama hiçbir şeyi altın yapmayan bir sınıf tuzak:
+ * kampanya bandına eklendiğinde zemin yazılmadığı için düğme lacivert
+ * bandın üstünde beyaz yazılı, görünmez bir hayalet olarak çıktı.
+ * Zemin ve yazı rengi artık sınıfın kendisinde.
+ */
 .cta-gold {
+  background: var(--brand-gold);
+  color: var(--brand-night);
   border-radius: var(--radius-pill);
   /* Hâlenin üstüne kenar ışığı: düz altın dolgu, ışığı yakalayan bir
      yüzeyden çok boyanmış bir dikdörtgen gibi duruyordu. */

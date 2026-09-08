@@ -12,6 +12,7 @@ import { AssuranceBand } from "@/components/site/assurance-band";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { PromoBanner } from "@/components/site/promo-banner";
 import { RelatedLinks } from "@/components/site/related-links";
 import { packages } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
@@ -171,6 +172,8 @@ export default async function PackagesPage({
           })}
         </div>
       </section>
+
+      <PromoBanner placement="packages" locale={locale} />
 
       <ProcessSteps />
       <AssuranceBand />

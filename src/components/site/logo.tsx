@@ -46,7 +46,15 @@ export function Logo({
     <div className={`flex items-center gap-2.5 ${className}`}>
       <Image
         src="/brand/logo.png"
-        alt="Rufai Turizm"
+        /*
+         * alt boş: görselin hemen yanında marka adı YAZILI olarak
+         * duruyor ("RUFAI" + alt yazı). Dolu bir alt metin ekran
+         * okuyucuya aynı şeyi iki kez söyletiyordu. Ayrıca sabit
+         * "Rufai Turizm" dizesi Arapça sayfalarda da Latin harfle
+         * okunuyordu: 59 Arapça sayfanın her birinde iki kez, toplam
+         * 118 yerde. Süs görselin doğru alt metni boş olandır.
+         */
+        alt=""
         width={size}
         height={size}
         /* Küçük ve her sayfada; üst çubukta geç yüklenmesi göze batıyor. */

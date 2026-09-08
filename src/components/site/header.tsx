@@ -18,6 +18,7 @@ import { MobileNav } from "./mobile-nav";
 export async function Header() {
   const t = await getTranslations("nav");
   const tCta = await getTranslations("cta");
+  const tBrand = await getTranslations("brand");
 
   const items = [
     { href: "/" as const, label: t("home") },
@@ -48,7 +49,9 @@ export async function Header() {
         360 piksel ve üstünde görünüm birebir aynı kalıyor.
       */}
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-2 px-5 sm:gap-6 sm:px-8">
-        <Link href="/" aria-label="Rufai Tourism">
+        {/* Erişilebilir ad dile göre: Arapça sayfada marka
+            "روفاي للسياحة" diye duyurulmalı, "Rufai Tourism" diye değil. */}
+        <Link href="/" aria-label={tBrand("name")}>
           <Logo />
         </Link>
 

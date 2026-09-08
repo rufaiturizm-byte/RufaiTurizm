@@ -31,6 +31,7 @@ export async function RouteCards({
   limit?: number;
 }) {
   const t = await getTranslations("routePage");
+  const tCommon = await getTranslations("common");
   const lang = locale as Locale;
   const shown = limit ? transferRoutes.slice(0, limit) : transferRoutes;
 
@@ -43,7 +44,13 @@ export async function RouteCards({
         rule={false}
       />
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {/*
+        Telefonda iki sütun. Tek sütunda on dört kart 6.844 piksel
+        tutuyordu — 844 piksellik bir ekranda sekiz ekran boyu, yalnız
+        bu bölüm için. İki sütun bunu yarıya indiriyor ve altındaki
+        bölümler (araçlar, sık sorulanlar) ulaşılabilir mesafeye geliyor.
+      */}
+      <div className="grid gap-3.5 grid-cols-2 sm:gap-5 lg:grid-cols-4">
         {shown.map((route) => {
           const title = routeTitle(route.from[lang] ?? route.from.tr, route.to[lang] ?? route.to.tr, locale);
           const href = {
@@ -101,7 +108,12 @@ export async function RouteCards({
                   className="mt-3 inline-flex py-1.5 items-center gap-2 text-[13px] font-bold"
                   style={{ color: "var(--brand-gold-deep)" }}
                 >
-                  {t("allRoutes")}
+                  {/* Bu bağlantı TEK bir güzergâha gidiyor; önceki hali
+                      "Tüm güzergâhlar" diyordu. On dört kartın hepsinde aynı
+                      yanıltıcı metin vardı ve ekran okuyucu on dört farklı
+                      sayfaya giden on dört "Tüm güzergâhlar" bağlantısı
+                      duyuruyordu. */}
+                  {tCommon("details")}
                   <ArrowRight className="size-3.5 rtl:rotate-180" aria-hidden="true" />
                 </Link>
               </div>

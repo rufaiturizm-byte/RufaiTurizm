@@ -26,7 +26,8 @@ export function LanguageSwitcher() {
           type="button"
           onClick={() => router.replace({ pathname, params } as never, { locale: l })}
           aria-current={l === locale ? "true" : undefined}
-          className="rounded px-2.5 py-1 text-[12px] font-semibold transition-colors"
+          /* px-2 en dar ekranlar için; 360 pikselden itibaren eski hali. */
+          className="rounded px-2 py-1 text-[12px] font-semibold transition-colors min-[360px]:px-2.5"
           style={
             l === locale
               ? { background: "var(--brand-gold)", color: "var(--brand-night)" }

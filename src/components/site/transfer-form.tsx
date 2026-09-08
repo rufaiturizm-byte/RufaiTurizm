@@ -24,9 +24,22 @@ import { siteConfig } from "@/config/site";
 type Tab = "transfer" | "chauffeur";
 type ReturnKind = "none" | "same" | "different";
 
+/*
+ * Mobilde 16 piksel, masaüstünde 14,5.
+ *
+ * iOS Safari, yazı boyu 16 pikselin ALTINDA olan bir alana odaklanınca
+ * sayfayı kendiliğinden yakınlaştırıyor ve kullanıcı geri uzaklaştırmak
+ * zorunda kalıyor. Form sitenin ana dönüşüm yolu ve Körfez trafiğinin
+ * neredeyse tamamı telefondan geliyor; her dokunuşta sayfanın zıplaması
+ * dönüşümü doğrudan kırıyor.
+ *
+ * Aynı kalıp shadcn'in kendi input bileşeninde zaten var
+ * (`text-base md:text-sm`); bu form onu kaçırmıştı.
+ */
 const FIELD =
-  "w-full rounded-[0.7rem] border bg-background px-4 py-3.5 text-[14.5px] outline-none " +
-  "placeholder:text-muted-foreground/65 transition-colors focus:border-[color:var(--brand-gold-deep)]";
+  "w-full rounded-[0.7rem] border bg-background px-4 py-3.5 text-[16px] outline-none " +
+  "sm:text-[14.5px] placeholder:text-muted-foreground/65 transition-colors " +
+  "focus:border-[color:var(--brand-gold-deep)]";
 
 const LABEL =
   "mb-2.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-muted-foreground";

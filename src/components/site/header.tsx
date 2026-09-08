@@ -40,7 +40,14 @@ export async function Header() {
         borderColor: "color-mix(in oklab, white 8%, transparent)",
       }}
     >
-      <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
+      {/*
+        Boşluklar küçük ekranda daraltılıyor. 320 pikselde logo + dil
+        değiştirici + menü düğmesi toplamı kabı 21 piksel aşıyordu ve
+        sayfa yatayda 1 piksel kayıyordu. justify-between öğeleri zaten
+        iki uca yaydığı için boşluk yalnızca sıkışıkta devreye giriyor:
+        360 piksel ve üstünde görünüm birebir aynı kalıyor.
+      */}
+      <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-2 px-5 sm:gap-6 sm:px-8">
         <Link href="/" aria-label="Rufai Tourism">
           <Logo />
         </Link>
@@ -55,7 +62,7 @@ export async function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <LanguageSwitcher />
           <WhatsAppLink
             /* whitespace-nowrap şart: menüye "Paketler" eklenince düğme

@@ -1290,7 +1290,7 @@ export const guides: Guide[] = [
   {
     slug: "bogaz-turu-rehberi",
     topic: "daytrips",
-    image: "/images/places/bogaz-kopru.jpg",
+    image: "/images/places/bogaz-vapur.jpg",
     minutes: 4,
     title: {
       tr: "Boğaz turu rehberi: hangi tekne, ne kadar sürer",
@@ -1392,7 +1392,7 @@ export const guides: Guide[] = [
   {
     slug: "cocuklu-ailelerle-istanbul",
     topic: "practical",
-    image: "/images/chauffeur.jpg",
+    image: "/images/places/lale-bahce.jpg",
     minutes: 4,
     title: {
       tr: "Çocuklu ailelerle İstanbul: pratik notlar",
@@ -1494,7 +1494,7 @@ export const guides: Guide[] = [
   {
     slug: "istanbulda-uc-gun-programi",
     topic: "planning",
-    image: "/images/places/sultanahmet.jpg",
+    image: "/images/places/tarihi-yarimada.jpg",
     minutes: 4,
     title: {
       tr: "İstanbul'da üç gün: kısa ziyaret programı",
@@ -1596,7 +1596,7 @@ export const guides: Guide[] = [
   {
     slug: "istanbulda-toplu-tasima-rehberi",
     topic: "arrival",
-    image: "/images/places/kadikoy.jpg",
+    image: "/images/places/tramvay.jpg",
     minutes: 4,
     title: {
       tr: "İstanbul'da toplu taşıma: metro, tramvay, vapur",
@@ -2152,7 +2152,7 @@ export const guides: Guide[] = [
   {
     slug: "bodrum-ege-rehberi",
     topic: "daytrips",
-    image: "/images/tours/bodrum.jpg",
+    image: "/images/places/bodrum-koy.jpg",
     minutes: 6,
     title: {
       tr: "Bodrum ve Ege rehberi: koylar, marinalar ve hangi mevsim",

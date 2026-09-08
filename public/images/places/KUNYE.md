@@ -15,6 +15,11 @@ değişikliği gerekmez.
 | uzungol.jpg | Uzungöl, Trabzon | Sadra Hakim |
 | havalimani.jpg | Havalimanı bekleme salonu ve uçak | Oskar Kadaksoo |
 | ../tours/antalya.jpg | Antalya Kaleiçi, eski liman ve surlar | Ant Rozetsky |
+| ../tours/bursa.jpg | Bursa şehri ve arkasında Uludağ (Tophane Parkı) | Oğuzhan Kıran |
+| bogaz-vapur.jpg | Gün batımında vapur ve tarihi yarımada silueti | Slava Auchynnikau |
+| tramvay.jpg | İstiklal Caddesi nostaljik tramvayı (Taksim–Tünel) | Linus Mimietz |
+| tarihi-yarimada.jpg | Fenerbahçe vapuru, arkada Ayasofya ve Topkapı | ZEKERIYA SEN |
+| lale-bahce.jpg | Emirgan Korusu lale mevsimi (Sarıyer, İstanbul) | Rento Transfer |
 | kemer.jpg | Kemer: iskele ve denize inen Toroslar | Ondrej Bocek |
 | side.jpg | Side, Apollon Tapınağı sütunları (Medusa başlı friz) | Mert Kahveci |
 | alanya.jpg | Alanya limanı, Kızıl Kule ve kale | Aysegul Aytören |
@@ -64,3 +69,31 @@ eklendi: sayfa normalde alt metni olarak varış adını kullanıyor
 kendisi değilse alt metin onu söylüyor. Doğrulamadığımız bir yeri
 adıyla etiketlemek, bu klasörden elenen Hierapolis karesiyle aynı hata
 olurdu.
+
+## bursa.jpg değiştirildi (8 Eylül 2026)
+
+Önceki kare, patlamış beyaz gökyüzüne karşı bir cami çatısının dar
+kadrajıydı: Bursa olduğu anlaşılmıyordu, yer duygusu yoktu ve 16/10
+kart kırpımında büyük bölümü boş gökyüzü kalıyordu. Yenisi şehri
+altta, Uludağ'ı arkada gösteriyor — turun kendi anlatısı da bu
+("Uludağ'a teleferik yolculuğu"). Fotoğrafın çekildiği yer Tophane
+Parkı, Osmangazi; yani gerçekten Bursa, doğrulandı.
+
+## Dört yeni kare eklendi (8 Eylül 2026)
+
+Rehber kapaklarında tekrar çok fazlaydı: yirmi rehber yalnız on dört
+farklı görsel paylaşıyordu, dördü aynı Sultanahmet karesini, dördü aynı
+köprüyü, üçü de stok şoför fotoğrafını kullanıyordu. Aynı fotoğrafı
+listede üst üste görmek sayfayı ucuzlatıyor.
+
+Dört kare eklendi ve az kullanılan bir kare (bodrum-koy.jpg) yeniden
+dağıtıldı. Sonuç: yirmi kapak, on sekiz farklı görsel; en fazla tekrar
+dörtten ikiye indi.
+
+Seçimde iki ölçüt vardı. Birincisi konuya gerçekten uyması —
+toplu taşıma rehberine İstiklal tramvayı, Boğaz turu rehberine
+gün batımında vapur, çocuklu aileler rehberine Emirgan lale korusu.
+İkincisi sitenin paletiyle uyum: lacivert, altın ve sıcak taş tonları.
+Bu yüzden elenen adaylar da oldu — gri ve soluk bir kar sokağı ile
+çok doygun renkli bir seramik tezgâhı, ikisi de konu olarak uygundu
+ama sayfanın rengine oturmuyordu.

@@ -84,15 +84,25 @@ export default async function PackagesPage({
         satan şey günlerin BİRBİRİNE GÖRE sıralanmış olması. Buradaki üç
         paragraf onu anlatıyor ve aynı zamanda sayfaya Arapça aramanın
         karşılığı olan gövde metnini veriyor.
+
+        Düzen sayfanın geri kalanıyla aynı genişlikte (max-w-7xl).
+        Önceki hali max-w-3xl idi: her bölümü kenardan kenara uzanan bir
+        sayfanın ortasında dar, dayanaksız bir metin adası olarak
+        duruyordu. Sitede max-w-3xl yalnız rehber YAZILARINDA kullanılıyor
+        ve orada doğru — uzun metin için okuma genişliği. Burası liste
+        sayfası; başlık solda, metin sağda iki sütun hem hizayı tutuyor
+        hem okuma genişliğini koruyor.
       */}
-      <section className="mx-auto w-full max-w-3xl px-5 pt-20 sm:px-8">
-        <h2 className="font-display text-[26px] font-semibold leading-snug sm:text-[32px]">
-          {t("introTitle")}
-        </h2>
-        <div className="mt-6 flex flex-col gap-4 text-[15.5px] leading-[1.95] text-foreground/85">
-          <p>{t("intro1")}</p>
-          <p>{t("intro2")}</p>
-          <p>{t("intro3")}</p>
+      <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
+          <h2 className="font-display text-[26px] font-semibold leading-snug sm:text-[32px] lg:sticky lg:top-28 lg:self-start">
+            {t("introTitle")}
+          </h2>
+          <div className="flex flex-col gap-4 text-[15.5px] leading-[1.95] text-foreground/85">
+            <p>{t("intro1")}</p>
+            <p>{t("intro2")}</p>
+            <p>{t("intro3")}</p>
+          </div>
         </div>
       </section>
 

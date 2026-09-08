@@ -229,9 +229,14 @@ export default async function AboutPage({
         </div>
       </section>
 
-      <RelatedLinks exclude={["about"]} />
-      <CredentialsBand />
-
+      {/*
+        Kapanış blokları en sonda.
+        Önceki sırada "Keşfetmeye devam edin" ve belge bandı sayfanın
+        ortasında çıkıyor, ardından dört bölüm daha geliyordu: ziyaretçi
+        sayfanın bittiğini sanıp okumayı bırakabiliyordu. Sitedeki
+        on dört sayfanın tamamı ClosingCta -> RelatedLinks ->
+        CredentialsBand ile bitiyor; hakkımızda tek istisnaydı.
+      */}
       <WhyUs />
 
       <div className="pt-24">
@@ -241,6 +246,9 @@ export default async function AboutPage({
       <RouteCoverage locale={locale} />
 
       <ClosingCta locale={locale} />
+
+      <RelatedLinks exclude={["about"]} />
+      <CredentialsBand />
     </main>
   );
 }

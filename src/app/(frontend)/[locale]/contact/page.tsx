@@ -83,7 +83,14 @@ export default async function ContactPage({
           ltr: true,
         }]
       : []),
-    { icon: MapPin, title: tNav("contact"), value: siteConfig.address.city },
+    /*
+     * Etiket "Konum", "İletişim" değil.
+     * Önceki hali nav.contact anahtarını kullanıyordu ve kart
+     * "İletişim: İstanbul" diye okunuyordu; Arapçada daha kötüydü —
+     * nav.contact orada "تواصل معنا" (bize ulaşın), yani kart
+     * "Bize ulaşın: İstanbul" diyordu.
+     */
+    { icon: MapPin, title: t("locationTitle"), value: siteConfig.address.city },
   ];
 
   const topics = [
@@ -165,9 +172,20 @@ export default async function ContactPage({
             </div>
           </div>
 
-          {/* Bilgiler — düz satır değil, her biri kendi kartı */}
+          {/*
+            Bilgiler — düz satır değil, her biri kendi kartı.
+
+            Kart sayısı tek olduğunda sonuncusu iki sütuna yayılıyor.
+            Telefon numarası gerçek numara girilene kadar gizli
+            (hasRealPhone) ve liste beş öğede kalıyor; iki sütunlu
+            ızgarada son kart tek başına düşüp yanında delik bırakıyordu.
+            Numara eklendiğinde liste altıya çıkıyor ve yayılma
+            kendiliğinden kapanıyor.
+          */}
           <div className="grid gap-4 sm:grid-cols-2">
             {details.map(({ icon: Icon, title, value, href, ltr }, index) => {
+              const wide = details.length % 2 === 1 && index === details.length - 1;
+              const cardClass = `accent-card p-5 ${wide ? "sm:col-span-2" : ""}`;
               const body = (
                 <>
                   <span
@@ -200,11 +218,11 @@ export default async function ContactPage({
               );
 
               return href ? (
-                <a key={title} href={href} className="accent-card block p-5">
+                <a key={title} href={href} className={`${cardClass} block`}>
                   {body}
                 </a>
               ) : (
-                <div key={title} className="accent-card p-5">
+                <div key={title} className={cardClass}>
                   {body}
                 </div>
               );

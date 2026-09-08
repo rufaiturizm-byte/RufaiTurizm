@@ -380,7 +380,7 @@
     "priceNote": "Fiyatlar kişi başı değil, araç başınadır. Kesin fiyat kişi sayısına ve tarihe göre WhatsApp'tan netleşir.",
     "listTitle": "Tur programlarımız",
     "compareTitle": "Hangi tur size uygun?",
-    "compareSubtitle": "Beş programın süresi, çıkış şehri ve başlangıç fiyatı yan yana.",
+    "compareSubtitle": "Turların süresi, çıkış şehri ve başlangıç fiyatı yan yana.",
     "colTour": "Tur",
     "colCity": "Şehir",
     "colDuration": "Süre",
@@ -430,6 +430,7 @@
     "phoneTitle": "Telefon",
     "emailTitle": "E-posta",
     "hoursTitle": "Çalışma saatleri",
+    "locationTitle": "Konum",
     "hoursValue": "Haftanın 7 günü, 24 saat",
     "topicsTitle": "Hangi konularda yazabilirsiniz",
     "topic1": "Havalimanı karşılama ve transfer rezervasyonu",
@@ -641,7 +642,7 @@
     "relatedTitle": "Diğer paketler",
     "introTitle": "Neden hazır program?",
     "intro1": "Türkiye'ye ilk kez gelen bir aile, transferi bir yerden, turu başka yerden, oteli üçüncü bir yerden ayarladığında günlerin nasıl birleşeceğini kendisi hesaplamak zorunda kalıyor. Havalimanından otele kaç saat, hangi turdan sonra hangisi yorucu olur, şehir dışı hangi güne konur — bunlar seyahatten önce cevaplanmazsa yolda cevaplanıyor ve genelde vakit kaybıyla.",
-    "intro2": "Hazır program bu işi baştan yapar. Aşağıdaki dört program, ayrı ayrı zaten yürüttüğümüz turların gün gün sıralanmış hali; yeni bir hizmet değil, olan hizmetlerin doğru sırası. Her birinde havalimanı karşılaması, şehirlerarası yolculuklar ve otelden alış aynı araçla ve aynı şoförle yapılır.",
+    "intro2": "Hazır program bu işi baştan yapar. Aşağıdaki programlar, ayrı ayrı zaten yürüttüğümüz turların gün gün sıralanmış hali; yeni bir hizmet değil, olan hizmetlerin doğru sırası. Her birinde havalimanı karşılaması, şehirlerarası yolculuklar ve otelden alış aynı araçla ve aynı şoförle yapılır.",
     "intro3": "Program bir taahhüt değil, bir başlangıç noktası. Gün ekleyebilir, durak çıkarabilir, sıralamayı değiştirebilirsiniz — turlarımız özel olduğu için kimsenin takvimine uymak zorunda değilsiniz. Konaklamayı da isterseniz biz ayarlarız, isterseniz kendi otelinizde kalırsınız.",
     "howTitle": "Nasıl ilerliyoruz",
     "faqTitle": "Bu programla ilgili sık sorulanlar"
@@ -751,7 +752,7 @@
       "Bodrum"
     ],
     "title": "Havalimanı Transferi",
-    "subtitle": "İstanbul Havalimanı ve Sabiha Gökçen'den şehrin her noktasına sabit fiyatlı özel transfer.",
+    "subtitle": "İstanbul, Sabiha Gökçen, Antalya, Bodrum ve Trabzon havalimanlarından sabit fiyatlı özel transfer.",
     "intro": "Havalimanı transferi en çok tercih edilen hizmetimiz. Uçuşunuzu takip ediyor, geliş kapısında isminizin yazılı olduğu tabelayla karşılıyor ve bagajlarınızla birlikte doğrudan otelinize götürüyoruz. Fiyat rezervasyonda netleşir ve varışta değişmez."
   },
   "eyebrow": {
@@ -809,7 +810,7 @@
   },
   "meta": {
     "home": "Rufai Turizm: İstanbul havalimanı transferi, Arapça rehberli turlar, şoförlü Mercedes Vito, uçak bileti ve otel rezervasyonu. Sabit fiyat, 7/24 WhatsApp desteği.",
-    "transfer": "İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW) transferi: isimli tabelayla karşılama, uçuş takibi, sabit fiyat. Şoförlü Vito ile 6 kişiye kadar ulaşım.",
+    "transfer": "İstanbul (IST), Sabiha Gökçen (SAW), Antalya, Bodrum ve Trabzon havalimanı transferi: isimli tabelayla karşılama, uçuş takibi, sabit fiyat.",
     "tours": "İstanbul, Bursa, Sapanca, Trabzon ve Bodrum turları. Arapça konuşan rehber, özel araç, otelden alış. Grupla birleştirme yok; fiyat araç başına, kişi başı değil.",
     "services": "Havalimanı transferi, şoförlü Vito, rehberli turlar, uçak bileti ve otel rezervasyonu. Türkiye seyahatiniz tek ekiple, sabit fiyat ve Arapça hizmetle.",
     "hotels": "Türkiye'de nerede kalınır? İstanbul'da semt semt oteller, Antalya ve Bodrum'da bölge bölge konaklama rehberi. Rezervasyonu sizin adınıza yapıyoruz.",
@@ -835,7 +836,7 @@
   "routePage": {
     "eyebrow": "Güzergâh",
     "title": "Popüler transfer güzergâhları",
-    "subtitle": "En çok sorulan beş güzergâh: mesafe, süre ve varışta bilmeniz gerekenler.",
+    "subtitle": "En çok sorulan güzergâhlar: mesafe, süre ve varışta bilmeniz gerekenler.",
     "distance": "Mesafe",
     "duration": "Tahmini süre",
     "airport": "Kalkış",

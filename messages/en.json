@@ -380,7 +380,7 @@
     "priceNote": "Prices are per vehicle, not per person. The final price is confirmed on WhatsApp based on passenger count and date.",
     "listTitle": "Our tour programmes",
     "compareTitle": "Which tour suits you?",
-    "compareSubtitle": "Duration, departure city and starting price for all five programmes side by side.",
+    "compareSubtitle": "Duration, departure city and starting price for every tour side by side.",
     "colTour": "Tour",
     "colCity": "City",
     "colDuration": "Duration",
@@ -430,6 +430,7 @@
     "phoneTitle": "Phone",
     "emailTitle": "Email",
     "hoursTitle": "Working hours",
+    "locationTitle": "Location",
     "hoursValue": "24 hours a day, 7 days a week",
     "topicsTitle": "What we can help with",
     "topic1": "Airport meet-and-greet and transfer bookings",
@@ -641,7 +642,7 @@
     "relatedTitle": "Other packages",
     "introTitle": "Why a ready-made programme?",
     "intro1": "A family arriving in Türkiye for the first time, arranging the transfer in one place, the tour in another and the hotel in a third, ends up working out for themselves how the days will fit together: how many hours from the airport to the hotel, which tour becomes tiring after which, on what day the out-of-town trip belongs. If those questions are not answered before the trip, they get answered on the road — usually at the cost of time.",
-    "intro2": "A ready-made programme does that work in advance. The four programmes below are not a new service; they are the right order for tours we already run separately, day by day. In each of them the airport meet-and-greet, the intercity journeys and the hotel pick-ups happen with the same vehicle and the same driver.",
+    "intro2": "A ready-made programme does that work in advance. The programmes below are not a new service; they are the right order for tours we already run separately, day by day. In each of them the airport meet-and-greet, the intercity journeys and the hotel pick-ups happen with the same vehicle and the same driver.",
     "intro3": "The programme is a starting point, not a commitment. You can add a day, drop a stop or reorder it — the tours are private, so you never have to fit anyone else's schedule. We can arrange the accommodation too, or you can stay at your own hotel.",
     "howTitle": "How it works",
     "faqTitle": "Common questions about this programme"
@@ -751,7 +752,7 @@
       "Bodrum"
     ],
     "title": "Airport Transfer",
-    "subtitle": "Fixed-price private transfers from Istanbul Airport and Sabiha Gokcen to anywhere in the city.",
+    "subtitle": "Fixed-price private transfers from Istanbul, Sabiha Gokcen, Antalya, Bodrum and Trabzon airports.",
     "intro": "Airport transfer is our most requested service. We track your flight, meet you at arrivals with a name sign and take you and your luggage straight to your hotel. The price is set at booking and does not change on arrival."
   },
   "eyebrow": {
@@ -809,7 +810,7 @@
   },
   "meta": {
     "home": "Rufai Tourism: Istanbul airport transfers, Arabic-guided tours, a chauffeured Mercedes Vito, flight tickets and hotel bookings. Fixed prices, 24/7 WhatsApp.",
-    "transfer": "Istanbul Airport (IST) and Sabiha Gokcen (SAW) transfers: meet and greet with a name sign, flight tracking, fixed price. Chauffeured Vito for up to 6.",
+    "transfer": "Airport transfers from Istanbul (IST), Sabiha Gokcen (SAW), Antalya, Bodrum and Trabzon: meet and greet with a name sign, flight tracking, fixed price.",
     "tours": "Istanbul, Bursa, Sapanca, Trabzon and Bodrum tours with an Arabic-speaking guide and private vehicle from your hotel. Priced per car, not per person.",
     "services": "Airport transfers, a chauffeured Vito, guided tours, flights and hotel bookings. Your whole trip in Türkiye with one team, fixed prices, service in Arabic.",
     "hotels": "Where to stay in Turkey? Hotels in Istanbul district by district, plus an area-by-area guide to Antalya and Bodrum. We handle the booking on your behalf.",
@@ -835,7 +836,7 @@
   "routePage": {
     "eyebrow": "Route",
     "title": "Popular transfer routes",
-    "subtitle": "The five most-asked routes: distance, time and what to know on arrival.",
+    "subtitle": "The most-asked routes: distance, time and what to know on arrival.",
     "distance": "Distance",
     "duration": "Estimated time",
     "airport": "From",

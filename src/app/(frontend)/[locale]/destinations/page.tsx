@@ -102,7 +102,7 @@ export default async function DestinationsPage({
             return (
               <article
                 key={item.slug}
-                className="group relative isolate flex min-h-[340px] flex-col justify-end overflow-hidden"
+                className="reveal-rise group relative isolate flex min-h-[340px] flex-col justify-end overflow-hidden"
                 style={{
                   borderRadius: "var(--radius-card)",
                   boxShadow: "var(--shadow-e2)",

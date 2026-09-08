@@ -60,7 +60,7 @@ export async function TransferTypes() {
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {types.map(({ n, icon: Icon, image }, index) => (
-          <article key={n} className="accent-card group flex flex-col overflow-hidden">
+          <article key={n} className="reveal-rise accent-card group flex flex-col overflow-hidden">
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={image}
@@ -214,7 +214,7 @@ export async function TransferWhy() {
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {reasons.map(({ n, icon: Icon }, index) => (
-          <article key={n} className="accent-card p-6">
+          <article key={n} className="reveal-rise accent-card p-6">
             <span
               className={`inline-flex size-12 items-center justify-center rounded-[0.8rem] ${
                 index % 2 === 1 ? "tile-sky" : ""

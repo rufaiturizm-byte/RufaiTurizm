@@ -24,7 +24,6 @@ import { FaqPreview } from "@/components/site/faq-preview";
 import { GuidesTeaser } from "@/components/site/guides-teaser";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { DestinationsMarquee } from "@/components/site/destinations-marquee";
-import { Reveal } from "@/components/site/reveal";
 import { tours } from "@/data/tours";
 import { siteConfig } from "@/config/site";
 
@@ -165,10 +164,8 @@ export default async function HomePage({
             />
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {featured.map((tour, index) => (
-                <Reveal key={tour.key} delay={index * 0.08}>
-                  <TourCard tour={tour} />
-                </Reveal>
+              {featured.map((tour) => (
+                <TourCard key={tour.key} tour={tour} />
               ))}
             </div>
           </div>

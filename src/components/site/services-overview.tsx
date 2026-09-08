@@ -12,7 +12,6 @@ import {
 import { Link } from "@/i18n/navigation";
 import { SectionHeading, SectionAction } from "./section-heading";
 import { WhatsAppLink } from "./whatsapp-cta";
-import { Reveal } from "./reveal";
 import { services } from "@/data/services";
 
 /**
@@ -70,7 +69,7 @@ export async function ServicesOverview() {
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {services.map((service, index) => {
+        {services.map((service) => {
           const name = t(`${service.key}.title`);
           const Icon = ICONS[service.icon];
           const href = {
@@ -79,7 +78,7 @@ export async function ServicesOverview() {
           };
 
           return (
-            <Reveal key={service.key} delay={index * 0.08} className="flex">
+            <div key={service.key} className="reveal-rise flex">
               <article className="group flex w-full flex-col overflow-hidden surface-card surface-card-lift">
                 <div className="relative">
                   <Link href={href} className="relative block aspect-[16/11] overflow-hidden">
@@ -147,7 +146,7 @@ export async function ServicesOverview() {
                   </div>
                 </div>
               </article>
-            </Reveal>
+            </div>
           );
         })}
       </div>

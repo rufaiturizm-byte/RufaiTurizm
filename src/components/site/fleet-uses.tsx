@@ -69,7 +69,7 @@ export async function FleetUses() {
         {uses.map(({ icon: Icon, title, desc, meta }) => (
           <article
             key={title}
-            className="group flex flex-col overflow-hidden surface-card surface-card-lift"
+            className="reveal-rise group flex flex-col overflow-hidden surface-card surface-card-lift"
           >
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-center gap-3">

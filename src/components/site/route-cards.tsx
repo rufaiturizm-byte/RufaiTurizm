@@ -59,7 +59,7 @@ export async function RouteCards({
           };
 
           return (
-            <article key={route.slug} className="accent-card group flex flex-col overflow-hidden">
+            <article key={route.slug} className="reveal-rise accent-card group flex flex-col overflow-hidden">
               <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                 <Image
                   src={route.image}

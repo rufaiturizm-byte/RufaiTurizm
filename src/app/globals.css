@@ -797,3 +797,98 @@ header :where(a, button):focus-visible {
     mask-image: linear-gradient(to left, black calc(100% - 2.5rem), transparent 100%);
   }
 }
+
+/*
+ * Kaydırdıkça açılan kartlar — SIFIR JAVASCRIPT.
+ *
+ * NEDEN CSS. Önceki hali `Reveal` bileşeniydi (motion + BlurFade) ve iki
+ * sorunu vardı:
+ *
+ *  1. Gizli hali SUNUCUDAN geliyordu: HTML'de kart
+ *     `opacity:0; filter:blur(6px)` ile basılıyor, ancak tarayıcıda JS
+ *     çalışıp hidrasyon bitince görünür oluyordu. JS gelmezse ya da geç
+ *     gelirse ana sayfada sekiz kart hiç görünmüyordu. Pazarlama
+ *     sayfasında içeriğin görünürlüğünü JS'e bağlamak kötü bir takas.
+ *  2. Kaydırmada tetiklenmiyordu zaten: BlurFade'in `inView` bayrağı
+ *     verilmediği için `isInView` her zaman doğru oluyor ve animasyon
+ *     sayfa açılır açılmaz bitiyordu. Yani ödenen JS bedelinin karşılığı
+ *     alınmıyordu bile.
+ *
+ * Bunun yerine kaydırmaya bağlı CSS animasyonu. Kritik olan başarısızlık
+ * biçimi: `animation-timeline` desteklenmiyorsa (@supports tutmazsa)
+ * hiçbir kural uygulanmıyor ve kart OLDUĞU GİBİ GÖRÜNÜR kalıyor. Yani
+ * en kötü ihtimalde animasyon yok, kayıp içerik yok.
+ *
+ * Kademe için `animation-range` satır içinde kaydırılıyor: aynı satırdaki
+ * dört kart ekrana birlikte giriyor, hepsi aynı anda kalkınca hareket
+ * tek bir blok gibi duruyor.
+ */
+@keyframes reveal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal-rise {
+      animation: reveal-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 42%;
+    }
+
+    .reveal-rise:nth-child(4n + 2) {
+      animation-range: entry 4% entry 46%;
+    }
+    .reveal-rise:nth-child(4n + 3) {
+      animation-range: entry 8% entry 50%;
+    }
+    .reveal-rise:nth-child(4n + 4) {
+      animation-range: entry 12% entry 54%;
+    }
+  }
+}
+
+/*
+ * Takımyıldız dokusunun çok yavaş kayması.
+ *
+ * 120 saniyede bir tur: bakınca hareket ettiği fark edilmiyor, ama koyu
+ * bant artık basılı bir dikdörtgen gibi durmuyor. Hızlandırmak cazip
+ * geliyor, doğru değil — göz metinden koparsa bant reklam panosuna döner.
+ *
+ * `background-position` animasyonu bileşik katmanda çalışmaz (yeniden
+ * boyama ister); bu yüzden yalnız kampanya bandında, tek öğede kullanılıyor.
+ */
+@keyframes constellation-drift {
+  from {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  to {
+    background-position:
+      190px 190px,
+      -240px 240px,
+      210px -210px,
+      -260px -260px,
+      320px 320px,
+      -280px 280px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pattern-drift {
+    animation: constellation-drift 120s linear infinite;
+  }
+}

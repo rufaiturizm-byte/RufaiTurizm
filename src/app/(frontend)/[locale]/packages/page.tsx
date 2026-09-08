@@ -119,7 +119,7 @@ export default async function PackagesPage({
             };
 
             return (
-              <article key={item.slug} className="accent-card group flex flex-col overflow-hidden">
+              <article key={item.slug} className="reveal-rise accent-card group flex flex-col overflow-hidden">
                 <Link href={href} className="relative block aspect-[16/9] overflow-hidden">
                   <Image
                     src={item.image}

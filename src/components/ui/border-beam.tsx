@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, type MotionStyle, type Transition } from "motion/react"
+import { motion, useReducedMotion, type MotionStyle, type Transition } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
@@ -64,6 +64,21 @@ export const BorderBeam = ({
   initialOffset = 0,
   borderWidth = 1,
 }: BorderBeamProps) => {
+  /*
+   * Azaltılmış hareket.
+   *
+   * Bu bileşen bir CSS geçişi değil, sonsuz dönen bir motion döngüsü;
+   * globals.css'teki `prefers-reduced-motion` kuralları ona ulaşmıyordu.
+   * Hareket duyarlılığı olan (vestibüler rahatsızlık, migren) bir
+   * ziyaretçide kenarda durmadan dönen bir ışık gerçek bir sorun, üstelik
+   * sürekli çalışan animasyon pilde de yer kaplıyor.
+   *
+   * Kapatınca ışık tamamen kaybolmuyor: kenarda sabit duran, hafif bir
+   * altın çizgi kalıyor — kartın vurgulanmış olduğu bilgisi korunuyor,
+   * yalnız hareket gidiyor.
+   */
+  const reduced = useReducedMotion()
+
   return (
     <div
       className="pointer-events-none absolute inset-0 rounded-[inherit] border-(length:--border-beam-width) border-transparent mask-[linear-gradient(transparent,transparent),linear-gradient(#000,#000)] mask-intersect [mask-clip:padding-box,border-box]"
@@ -89,18 +104,26 @@ export const BorderBeam = ({
           } as MotionStyle
         }
         initial={{ offsetDistance: `${initialOffset}%` }}
-        animate={{
-          offsetDistance: reverse
-            ? [`${100 - initialOffset}%`, `${-initialOffset}%`]
-            : [`${initialOffset}%`, `${100 + initialOffset}%`],
-        }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration,
-          delay: -delay,
-          ...transition,
-        }}
+        animate={
+          reduced
+            ? { offsetDistance: `${initialOffset}%` }
+            : {
+                offsetDistance: reverse
+                  ? [`${100 - initialOffset}%`, `${-initialOffset}%`]
+                  : [`${initialOffset}%`, `${100 + initialOffset}%`],
+              }
+        }
+        transition={
+          reduced
+            ? { duration: 0 }
+            : {
+                repeat: Infinity,
+                ease: "linear",
+                duration,
+                delay: -delay,
+                ...transition,
+              }
+        }
       />
     </div>
   )

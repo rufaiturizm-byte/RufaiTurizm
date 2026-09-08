@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, Sparkle } from "lucide-react";
+import { BorderBeam } from "@/components/ui/border-beam";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { WhatsAppIcon } from "./icons";
 import { bannersFor, type BannerPlacement } from "@/data/banners";
@@ -64,7 +65,7 @@ export async function PromoBanner({
               bandı, kapanış bandı) zaten ayrı katman kullanıyor.
             */}
             <div
-              className="pattern-constellation absolute inset-0 -z-10 opacity-60"
+              className="pattern-constellation pattern-drift absolute inset-0 -z-10 opacity-60"
               aria-hidden="true"
             />
             {banner.image ? (
@@ -97,6 +98,23 @@ export async function PromoBanner({
                 />
               </>
             ) : null}
+
+            {/*
+              Kenarda dolaşan altın ışık. Transfer formunda zaten kullanılan
+              bileşen; bandın "şu an geçerli bir şey" olduğunu duruş
+              değiştirmeden söylüyor. Süre uzun (14 sn) ve ışık ince: hızlı
+              bir ışık bandı bir reklam panosuna çeviriyor.
+
+              Azaltılmış hareket seçiliyse ışık durur, kaybolmaz — kartın
+              vurgulandığı bilgisi korunur (bkz. ui/border-beam.tsx).
+            */}
+            <BorderBeam
+              size={220}
+              duration={14}
+              borderWidth={1.5}
+              colorFrom="var(--brand-gold)"
+              colorTo="color-mix(in oklab, var(--brand-gold) 15%, transparent)"
+            />
 
             <div className="flex flex-col gap-6 p-7 sm:p-9 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
               <div className="min-w-0">

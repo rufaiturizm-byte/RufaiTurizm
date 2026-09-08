@@ -60,7 +60,7 @@ export async function GuidesTeaser({ locale }: { locale: string }) {
           };
 
           return (
-            <article key={guide.slug} className="accent-card group flex flex-col overflow-hidden">
+            <article key={guide.slug} className="reveal-rise accent-card group flex flex-col overflow-hidden">
               <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                 <Image
                   src={guide.image}

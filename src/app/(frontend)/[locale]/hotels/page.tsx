@@ -314,7 +314,7 @@ export default async function HotelsPage({
                     {area.subAreas.map((sub) => {
                       const subName = sub.name[lang] ?? sub.name.tr;
                       return (
-                        <article key={subName} className="accent-card flex flex-col p-6">
+                        <article key={subName} className="reveal-rise accent-card flex flex-col p-6">
                           <span
                             className="inline-flex w-fit items-center gap-2 rounded-full px-3 py-1.5 text-[11.5px] font-bold"
                             style={{

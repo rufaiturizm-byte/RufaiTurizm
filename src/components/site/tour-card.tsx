@@ -28,7 +28,7 @@ export async function TourCard({ tour }: { tour: Tour }) {
   const href = { pathname: "/tours/[slug]" as const, params: { slug: tour.slug } };
 
   return (
-    <article className="group flex flex-col overflow-hidden surface-card surface-card-lift">
+    <article className="reveal-rise group flex flex-col overflow-hidden surface-card surface-card-lift">
       <Link href={href} className="relative block aspect-[4/3] overflow-hidden">
         <Image
           src={tour.image}

@@ -213,7 +213,7 @@ export default async function DestinationPage({
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {tour ? (
-            <article className="accent-card group flex flex-col overflow-hidden">
+            <article className="reveal-rise accent-card group flex flex-col overflow-hidden">
               <Link
                 href={{ pathname: "/tours/[slug]", params: { slug: tour.slug } }}
                 className="relative block aspect-[16/10] overflow-hidden"
@@ -249,7 +249,7 @@ export default async function DestinationPage({
           ) : null}
 
           {pack ? (
-            <article className="accent-card group flex flex-col overflow-hidden">
+            <article className="reveal-rise accent-card group flex flex-col overflow-hidden">
               <Link
                 href={{ pathname: "/packages/[slug]", params: { slug: pack.slug } }}
                 className="relative block aspect-[16/10] overflow-hidden"
@@ -282,7 +282,7 @@ export default async function DestinationPage({
           ) : null}
 
           {guides.map((guide) => (
-            <article key={guide.slug} className="accent-card group flex flex-col overflow-hidden">
+            <article key={guide.slug} className="reveal-rise accent-card group flex flex-col overflow-hidden">
               <Link
                 href={{ pathname: "/guides/[slug]", params: { slug: guide.slug } }}
                 className="relative block aspect-[16/10] overflow-hidden"

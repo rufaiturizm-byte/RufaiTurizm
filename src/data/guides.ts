@@ -235,7 +235,7 @@ export const guides: Guide[] = [
     slug: "sabiha-gokcenden-istanbula-ulasim",
     topic: "arrival",
     image: "/images/places/bogaz-kopru.jpg",
-    minutes: 3,
+    minutes: 6,
     title: {
       tr: "Sabiha Gökçen'den İstanbul'a ulaşım",
       ar: "الوصول من مطار صبيحة كوكجن إلى إسطنبول",
@@ -302,9 +302,9 @@ export const guides: Guide[] = [
           en: "Two airports, two different journeys",
         },
         body: {
-          tr: "Sabiha Gökçen (SAW) Anadolu yakasında, Pendik yakınlarındadır. Kadıköy ve Ataşehir gibi Anadolu yakası bölgelerine yakınlığı büyük avantajdır. Ancak oteliniz Sultanahmet, Taksim ya da Beşiktaş'taysa Boğaz'ı geçmeniz gerekir; bu, mesafeyi ve trafiğe bağlı süreyi belirgin biçimde artırır.",
-          ar: "يقع مطار صبيحة كوكجن (SAW) في الجانب الآسيوي قرب بنديك، وقربه من مناطق مثل كاديكوي وآتاشهير ميزة كبيرة. لكن إذا كان فندقك في السلطان أحمد أو تقسيم أو بشكتاش فعليك عبور البوسفور، وهذا يزيد المسافة والوقت بوضوح حسب الازدحام.",
-          en: "Sabiha Gokcen (SAW) is on the Asian side near Pendik, which is a real advantage for districts like Kadikoy and Atasehir. But if your hotel is in Sultanahmet, Taksim or Besiktas you have to cross the Bosphorus, and that lengthens both distance and traffic-dependent travel time.",
+          tr: "Sabiha Gökçen (SAW) Anadolu yakasında, Pendik yakınlarındadır. Kadıköy ve Ataşehir gibi Anadolu yakası bölgelerine yakınlığı büyük avantajdır: yol yarım saatte biter ve köprüye hiç girilmez. Ancak oteliniz Sultanahmet, Taksim ya da Beşiktaş'taysa Boğaz'ı geçmeniz gerekir; bu, mesafeyi ve trafiğe bağlı süreyi belirgin biçimde artırır.\n\nRakamla söyleyelim: Kadıköy'e yaklaşık 40 kilometre ve trafiksiz 35-45 dakika. Taksim'e ise 55 kilometre ve köprüden geçerek 60-90 dakika; akşam saatlerinde iki saati bulduğu oluyor. Aradaki fark tek bir yolculukta yarım saat gibi görünse de, dört gecelik bir seyahatte gidiş-dönüş iki saat eder.\n\nBu yüzden havalimanı seçimi bilet fiyatından önce otel adresine bakarak yapılmalı. Avrupa yakasında kalacak bir misafirin Sabiha Gökçen'e inmesi çoğu zaman bilet farkından daha pahalıya mal oluyor — üstelik bedeli parayla değil, tatilin ilk ve son günüyle ödeniyor.",
+          ar: "يقع مطار صبيحة كوكجن (SAW) في الجانب الآسيوي قرب بنديك، وقربه من مناطق مثل كاديكوي وآتاشهير ميزة كبيرة: ينتهي الطريق في نصف ساعة ولا تدخل الجسر أصلاً. لكن إذا كان فندقك في السلطان أحمد أو تقسيم أو بشكتاش فعليك عبور البوسفور، وهذا يزيد المسافة والوقت بوضوح حسب الازدحام.\n\nولنقل ذلك بالأرقام: نحو أربعين كيلومتراً إلى كاديكوي، و35-45 دقيقة بلا زحام. أما إلى تقسيم فخمسة وخمسون كيلومتراً و60-90 دقيقة مع عبور الجسر؛ وقد تبلغ ساعتين في ساعات المساء. وقد يبدو الفارق نصف ساعة في رحلة واحدة، لكنه ساعتان ذهاباً وإياباً في سفرة من أربع ليالٍ.\n\nولذلك ينبغي اختيار المطار بالنظر إلى عنوان الفندق قبل سعر التذكرة. فهبوط من سيقيم في الجانب الأوروبي في صبيحة كوكجن يكلّفه غالباً أكثر من فارق التذكرة — والثمن لا يُدفع مالاً بل من أول أيام الإجازة وآخرها.",
+          en: "Sabiha Gökçen (SAW) is on the Asian side near Pendik, which is a real advantage for districts like Kadıköy and Ataşehir: the drive is over in half an hour and you never touch a bridge. But if your hotel is in Sultanahmet, Taksim or Beşiktaş you have to cross the Bosphorus, and that lengthens both distance and traffic-dependent travel time.\n\nIn figures: about 40 km to Kadıköy, 35-45 minutes without traffic. To Taksim it is 55 km and 60-90 minutes across a bridge; in the evening it can reach two hours. The gap looks like half an hour on one journey, but over a four-night trip it is two hours there and back.\n\nSo the airport should be chosen by looking at the hotel address before the ticket price. For a guest staying on the European side, landing at Sabiha Gökçen usually costs more than the fare difference — and the price is paid not in money but in the first and last day of the holiday.",
         },
       },
       {
@@ -316,7 +316,31 @@ export const guides: Guide[] = [
         body: {
           tr: "Sabiha Gökçen'e gelen tarifelerin önemli bir kısmı gece geç saatte iner. Toplu taşımanın seyrekleştiği bu saatlerde, özellikle çocuklu bir aileyle, önceden ayarlanmış bir karşılama yolculuğun en rahat kısmına dönüşür. Şoförün adının ve plakanın önceden elinize ulaşması, gece yarısı tanımadığınız bir şehirde beklerken en çok işe yarayan ayrıntıdır.",
           ar: "كثير من الرحلات إلى صبيحة كوكجن تهبط في ساعة متأخرة من الليل. في هذه الساعات تقلّ وسائل النقل العام، وعندها يصبح الاستقبال المحجوز مسبقاً أريح جزء في الرحلة، خصوصاً مع الأطفال. ووصول اسم السائق ورقم اللوحة إليك قبل السفر هو التفصيل الأنفع وأنت تنتظر منتصف الليل في مدينة لا تعرفها.",
-          en: "A large share of flights into Sabiha Gokcen land late at night, when public transport thins out. With children in tow, a pre-arranged pickup becomes the easiest part of the trip. Getting the driver's name and plate number in advance is the detail that helps most while waiting at midnight in an unfamiliar city.",
+          en: "A large share of flights into Sabiha Gökçen land late at night, when public transport thins out. With children in tow, a pre-arranged pickup becomes the easiest part of the trip. Getting the driver's name and plate number in advance is the detail that helps most while waiting at midnight in an unfamiliar city.\n\nThere is a practical reason too: the metro and the airport buses run to a timetable, and after midnight the gaps stretch. A family with luggage and sleeping children changing vehicles twice at one in the morning is the part of the trip people remember, and not fondly.\n\nWe track the flight by its number. If the plane is late the driver waits and there is no extra charge for it — this is written down because at that hour it is the question guests worry about most.",
+        },
+      },
+      {
+        heading: {
+          tr: "Havalimanından çıkış: ne kadar sürer",
+          ar: "الخروج من المطار: كم يستغرق",
+          en: "Getting out of the airport: how long it takes",
+        },
+        body: {
+          tr: "Uçak indikten sonra dışarı çıkmak da zaman alıyor ve bu süre çoğu planın dışında kalıyor. Pasaport kontrolü yoğun saatlerde yirmi dakikayı bulabiliyor, bagajın banda düşmesi on beş-yirmi dakika daha. Yani iniş saatinden yaklaşık kırk dakika sonra çıkışta olursunuz; kalabalık bir saatte bir saat.\n\nSabiha Gökçen'in bu konuda bir avantajı var: terminal küçük ve tek çıkış noktası var. İstanbul Havalimanı'nda çıkış kapıları birbirinden uzak ve hangi kapıdan çıkacağınız bagaj bandına göre değişiyor; burada böyle bir karışıklık yok. Bagajınızı alıp yürüdüğünüz tek kapıdan çıkıyorsunuz.\n\nBiz uçuşu numarasından takip ettiğimiz için şoför sizden önce orada oluyor. Rötar olursa bekleme için ek ücret çıkmıyor. Kendi hattınız çalışmıyorsa da sorun değil: isimli tabelayla beklediğimiz için birbirimizi bulmak internete bağlı değil.",
+          ar: "الخروج بعد هبوط الطائرة يستغرق وقتاً أيضاً، وهذا الوقت يغيب عن معظم الخطط. فقد يبلغ ختم الجوازات عشرين دقيقة في ساعات الذروة، ونزول الحقائب على السير خمس عشرة إلى عشرين دقيقة أخرى. أي أنك تكون عند المخرج بعد نحو أربعين دقيقة من الهبوط؛ وساعة كاملة في وقت مزدحم.\n\nولصبيحة كوكجن ميزة هنا: الصالة صغيرة ولها نقطة خروج واحدة. أما في مطار إسطنبول فأبواب الخروج متباعدة ويختلف بابك بحسب سير الحقائب؛ ولا يوجد هذا الالتباس هنا. تأخذ حقيبتك وتخرج من الباب الوحيد الذي تمشي إليه.\n\nولأننا نتابع الرحلة برقمها يكون السائق هناك قبلك. وإن تأخرت الطائرة فلا رسوم على الانتظار. ولا مشكلة إن لم يعمل خطك: فنحن ننتظر بلافتة تحمل اسمك، أي أن لقاءنا لا يعتمد على الإنترنت.",
+          en: "Getting out after the plane lands takes time too, and that time is missing from most plans. Passport control can reach twenty minutes at busy hours, and bags another fifteen to twenty on the belt. So you reach the exit about forty minutes after landing; an hour at a busy time.\n\nSabiha Gökçen has an advantage here: the terminal is small and there is a single exit. At Istanbul Airport the exits are far apart and which one you use depends on your baggage belt; there is no such confusion here. You collect your bag and walk out of the one door in front of you.\n\nBecause we track the flight by its number the driver is there before you. If the plane is late there is no waiting charge. And it does not matter if your own line is not working: we wait with a name board, so finding each other does not depend on the internet."
+        },
+      },
+      {
+        heading: {
+          tr: "Anadolu yakasında kalmak mantıklı mı",
+          ar: "هل الإقامة في الجانب الآسيوي منطقية",
+          en: "Does staying on the Asian side make sense",
+        },
+        body: {
+          tr: "Sabiha Gökçen'e ineceksek Anadolu yakasında kalmak akla geliyor ve bazı misafirler için gerçekten doğru cevap. Kadıköy ve Üsküdar aynı bütçeye Avrupa yakasından daha geniş oda veriyor, sokakları daha az turistik ve yemek daha ucuz. Kadıköy'ün çarşısı ve sahil hattı başlı başına gezilecek bir yer.\n\nAma tarihi yerler karşı yakada. Ayasofya, Sultanahmet, Topkapı, Kapalıçarşı — hepsi Avrupa yakasında ve her gün karşıya geçmek gerekiyor. Vapurla yirmi dakika ve keyifli; ama sabah ve akşam iki kez yapılınca güne bir saat ekliyor.\n\nPratik ayrım şu: üç günlük bir seyahatte Avrupa yakasında kalın, çünkü yolda geçen her saat toplam sürenin büyük bir yüzdesi. Bir hafta ve üzerinde Anadolu yakası mantıklı; hem daha ucuz hem şehri turist gibi değil oturan gibi görüyorsunuz. Karar verirken bize otelin adresini söylemeniz yeterli, transferi ona göre planlıyoruz.",
+          ar: "إن كنا سنهبط في صبيحة كوكجن فقد يخطر الإقامة في الجانب الآسيوي، وهو فعلاً الجواب الصحيح لبعض الضيوف. فكاديكوي وأسكودار تعطيان غرفة أوسع بالميزانية نفسها مقارنة بالجانب الأوروبي، وشوارعهما أقل سياحية والطعام أرخص. وسوق كاديكوي وخط الساحل مكان يستحق التجوّل بذاته.\n\nلكن المعالم التاريخية في الضفة المقابلة. آيا صوفيا والسلطان أحمد وتوب كابي والسوق المسقوف — كلها في الجانب الأوروبي، ويلزم العبور كل يوم. والعبّارة عشرون دقيقة وممتعة؛ لكن تكرارها صباحاً ومساءً يضيف ساعة إلى اليوم.\n\nوالتمييز العملي: في رحلة من ثلاثة أيام أقم في الجانب الأوروبي، لأن كل ساعة على الطريق نسبة كبيرة من المدة الإجمالية. أما في أسبوع فأكثر فالجانب الآسيوي منطقي؛ فهو أرخص وترى المدينة كمقيم لا كسائح. ويكفي أن تقول لنا عنوان الفندق عند القرار، ونخطّط النقل على أساسه.",
+          en: "If we are landing at Sabiha Gökçen, staying on the Asian side comes to mind, and for some guests it is genuinely the right answer. Kadıköy and Üsküdar give a larger room for the same budget than the European side, their streets are less touristic and food is cheaper. Kadıköy's market and shore road are worth wandering in their own right.\n\nBut the historic sights are on the other bank. Hagia Sophia, the Blue Mosque, Topkapı, the Grand Bazaar — all on the European side, and you cross every day. The ferry takes twenty minutes and is a pleasure; but done twice a day it adds an hour.\n\nThe practical split: on a three-day trip, stay on the European side, because every hour on the move is a large percentage of the total. For a week or more the Asian side makes sense; it is cheaper and you see the city as a resident rather than a tourist. When you decide, just tell us the hotel address and we plan the transfer around it."
         },
       },
     ],
@@ -2647,6 +2671,128 @@ export const guides: Guide[] = [
           tr: "Hayır, aracımızda wifi yok. Karşılamada bağlantınız olmasa da sorun çıkmıyor: geliş kapısında isimli tabelayla bekliyoruz, yani sizi bulmamız için internete ihtiyaç yok. Rezervasyon ve iletişim WhatsApp üzerinden yürüyor; otele vardığınızda oradaki wifi ile devam edebilirsiniz.",
           ar: "لا، لا يوجد واي فاي في سيارتنا. ولن تكون هناك مشكلة إن لم يكن لديك اتصال عند الاستقبال: فنحن ننتظر عند بوابة الوصول بلافتة تحمل اسمك، أي لا نحتاج إنترنت لنجدك. والحجز والتواصل يجريان عبر واتساب؛ وعند وصولك الفندق يمكنك المتابعة بواي فاي الفندق.",
           en: "No, there is no wifi in our vehicle. It does not matter if you have no connection at the meeting point: we wait at the arrivals gate with a name board, so no internet is needed for us to find you. Booking and contact run through WhatsApp; once at the hotel you can carry on with its wifi.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "turkiyede-tatil-butcesi-nasil-kurulur",
+    topic: "planning",
+    image: "/images/places/galata-halic.jpg",
+    minutes: 6,
+    title: {
+      tr: "Türkiye tatil bütçesi: neyin ne kadar tuttuğunu anlamak",
+      ar: "ميزانية إجازة تركيا: كيف تفهم ما الذي يكلّف وكم",
+      en: "Budgeting a Türkiye holiday: understanding what costs what",
+    },
+    excerpt: {
+      tr: "Bütçeyi asıl belirleyen dört kalem, gizli maliyetler ve aynı tatili ucuzlatan üç karar.",
+      ar: "البنود الأربعة التي تحدّد الميزانية فعلاً، والتكاليف الخفية، وثلاثة قرارات تخفّض التكلفة.",
+      en: "The four items that actually set the budget, the hidden costs, and three decisions that lower it.",
+    },
+    seo: {
+      title: {
+        tr: "Türkiye Tatil Bütçesi Nasıl Kurulur",
+        ar: "كيف تضع ميزانية إجازة في تركيا",
+        en: "How to Budget a Holiday in Türkiye",
+      },
+      description: {
+        tr: "Bütçeyi belirleyen dört kalem, kimsenin hesaba katmadığı gizli maliyetler ve aynı tatili ucuzlatan üç karar. Rakam değil, yöntem.",
+        ar: "البنود الأربعة التي تحدّد الميزانية، والتكاليف الخفية التي لا يحسبها أحد، وثلاثة قرارات تخفّض تكلفة الإجازة نفسها. منهج لا أرقام.",
+        en: "The four items that set the budget, the hidden costs nobody counts, and three decisions that lower the cost of the same trip. Method, not numbers.",
+      },
+    },
+    facts: [
+      {
+        label: { tr: "En büyük kalem", ar: "أكبر بند", en: "Biggest item" },
+        value: { tr: "Konaklama — bütçenin genelde yarısı", ar: "الإقامة — نصف الميزانية عادةً", en: "Accommodation — usually half the budget" },
+      },
+      {
+        label: { tr: "En çok değişen", ar: "الأكثر تقلّباً", en: "Most variable" },
+        value: { tr: "Sezon; aynı otel iki katına çıkabilir", ar: "الموسم؛ قد يتضاعف سعر الفندق نفسه", en: "Season; the same hotel can double" },
+      },
+      {
+        label: { tr: "En çok unutulan", ar: "الأكثر نسياناً", en: "Most forgotten" },
+        value: { tr: "Şehir içi ulaşım ve müze girişleri", ar: "التنقّل داخل المدينة ورسوم المتاحف", en: "Getting around town and museum entries" },
+      },
+      {
+        label: { tr: "Bizim fiyatımız", ar: "سعرنا", en: "Our price" },
+        value: { tr: "Araç başına, kişi başına değil", ar: "لكل سيارة، لا لكل شخص", en: "Per vehicle, not per person" },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Neden bu sayfada rakam yok",
+          ar: "لماذا لا توجد أرقام في هذه الصفحة",
+          en: "Why there are no figures on this page",
+        },
+        body: {
+          tr: "\"Türkiye'de bir hafta kaç paraya\" sorusunun internetteki cevaplarının çoğu bir sayı veriyor. O sayı yazıldığı gün bile yaklaşıktı; altı ay sonra kesinlikle yanlış. Türk lirası hareketli, otel fiyatları sezona göre iki katına çıkıp geri iniyor ve bir ailenin harcaması dört kişilik başka bir aileninkiyle iki kat fark edebiliyor.\n\nBu yüzden burada rakam değil yöntem var: bütçeyi hangi kalemler belirliyor, hangileri sizin kontrolünüzde, hangi maliyet kimsenin planına girmiyor. Kendi rakamınızı bu çerçeveyle çıkarmak, birinin geçen yıl yazdığı toplamı kullanmaktan çok daha isabetli oluyor.\n\nBizim kendi hizmetimizin fiyatını da burada yazmıyoruz. Fiyat tarihe, kişi sayısına ve güzergâha göre değişiyor ve WhatsApp'tan sorduğunuzda sabit bir rakam olarak veriliyor — rehber metnine yazılan bir sayı, o sözün denetlenmediği bir yer olurdu.",
+          ar: "معظم الإجابات على الإنترنت عن سؤال \"كم تكلّف أسبوع في تركيا\" تعطي رقماً. وذلك الرقم كان تقريبياً يوم كُتب؛ وهو خطأ قطعاً بعد ستة أشهر. فالليرة التركية متحركة، وأسعار الفنادق تتضاعف ثم تعود بحسب الموسم، وقد يختلف إنفاق عائلة عن إنفاق عائلة أخرى من أربعة أفراد بالضعف.\n\nولذلك ما في هذه الصفحة منهج لا رقم: ما البنود التي تحدّد الميزانية، وأيّها تحت سيطرتك، وأي تكلفة لا تدخل في خطة أحد. واستخراج رقمك بهذا الإطار أدقّ بكثير من استعمال مجموع كتبه أحدهم العام الماضي.\n\nولا نكتب هنا سعر خدمتنا أيضاً. فالسعر يتغيّر بحسب التاريخ وعدد الأشخاص والمسار، ويُعطى رقماً ثابتاً حين تسأل عبر واتساب — والرقم المكتوب في نصّ دليل يكون مكاناً لا يُراقَب فيه ذلك الوعد.",
+          en: "Most answers online to \"how much does a week in Türkiye cost\" give you a number. That number was approximate the day it was written; six months later it is certainly wrong. The lira moves, hotel prices double and fall back with the season, and one family's spending can differ from another family of four by a factor of two.\n\nSo what is here is a method, not a figure: which items set the budget, which are within your control, and which cost never makes it into anyone's plan. Working out your own number from that frame is far more accurate than using a total somebody wrote last year.\n\nWe do not put our own price here either. It varies with the date, the number of people and the route, and it is given as a fixed figure when you ask on WhatsApp — a number written into a guide would be a place where that promise goes unchecked.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bütçeyi belirleyen dört kalem",
+          ar: "البنود الأربعة التي تحدّد الميزانية",
+          en: "The four items that set the budget",
+        },
+        body: {
+          tr: "Birincisi konaklama ve genellikle toplamın yarısı. Aynı şehirde, aynı gecede, dört yıldızlı bir otelle beş yıldızlı bir otel arasında kat farkı olabiliyor; semt de fiyatı belirliyor. Sultanahmet ve Taksim en pahalı, Şişli ve Anadolu yakası belirgin biçimde uygun.\n\nİkincisi ulaşım — hem oraya varmak hem orada dolaşmak. Uçak bileti sezona ve ne kadar önceden aldığınıza bağlı. Şehir içi ulaşım küçük görünüyor ama İstanbul gibi bir şehirde günde iki-üç yolculuk bir haftada toplanıyor; özellikle çocuklu ailelerde taksi ve özel araç tercih edildiği için bu kalem beklenenden büyük çıkıyor.\n\nÜçüncüsü yemek ve bu tamamen sizin kontrolünüzde. Otel kahvaltısı dahil bir odada sabahları çözülüyor; öğle ve akşam esnaf lokantasında yenirse turistik restoranın üçte birine iniyor ve çoğu zaman daha lezzetli oluyor.\n\nDördüncüsü gezi ve alışveriş. Müze girişleri, tekne turları, teleferik gibi kalemler tek tek küçük ama bir haftada toplamı görünür oluyor. Alışveriş ise bütçenin en öngörülemeyen parçası; Kapalıçarşı'ya \"bakmaya\" giren kimse boş çıkmıyor.",
+          ar: "الأول الإقامة، وهي عادةً نصف المجموع. ففي المدينة نفسها والليلة نفسها قد يكون بين فندق أربع نجوم وآخر خمس نجوم فرق مضاعف؛ والحيّ يحدّد السعر أيضاً. فالسلطان أحمد وتقسيم الأغلى، وشيشلي والجانب الآسيوي أنسب بوضوح.\n\nوالثاني التنقّل — الوصول إلى هناك والتحرّك هناك. فتذكرة الطيران تتبع الموسم ومدى تبكيرك في الشراء. والتنقّل داخل المدينة يبدو صغيراً، لكن في مدينة كإسطنبول تتراكم رحلتان أو ثلاث يومياً على مدى أسبوع؛ ويكبر هذا البند أكثر من المتوقع خاصة عند العائلات ذات الأطفال لأنها تفضّل التاكسي والسيارة الخاصة.\n\nوالثالث الطعام، وهو تحت سيطرتك تماماً. فالغرفة التي يشملها الفطور تحلّ الصباح؛ والغداء والعشاء في مطعم شعبي ينزل إلى ثلث سعر المطعم السياحي ويكون ألذّ في الغالب.\n\nوالرابع التجوّل والتسوّق. فبنود مثل رسوم المتاحف وجولات القوارب والتلفريك صغيرة منفردة لكن مجموعها في أسبوع يصبح ملموساً. أما التسوّق فأقلّ أجزاء الميزانية قابلية للتوقّع؛ فمن يدخل السوق المسقوف \"للنظر\" لا يخرج فارغاً.",
+          en: "The first is accommodation, usually half the total. In the same city on the same night the gap between a four-star and a five-star hotel can be a multiple; the district sets the price too. Sultanahmet and Taksim are the most expensive, Şişli and the Asian side noticeably kinder.\n\nThe second is transport — both getting there and moving around. Air fares follow the season and how far ahead you buy. Getting around town looks small, but in a city like Istanbul two or three journeys a day add up over a week; the item runs larger than expected for families with children, who prefer taxis and private cars.\n\nThe third is food, and this is entirely in your control. A room with breakfast included settles the mornings; lunch and dinner at a neighbourhood restaurant costs a third of a tourist one and is usually better.\n\nThe fourth is sightseeing and shopping. Museum entries, boat trips and cable cars are small one by one but visible in a week's total. Shopping is the least predictable part of the budget; nobody who goes into the Grand Bazaar \"just to look\" comes out empty-handed.",
+        },
+      },
+      {
+        heading: {
+          tr: "Kimsenin hesaba katmadığı maliyetler",
+          ar: "تكاليف لا يحسبها أحد",
+          en: "The costs nobody counts",
+        },
+        body: {
+          tr: "Havalimanı ile otel arası ilk ve son yolculuk. Bir hafta için düşünülen bütçede bu iki yolculuk genellikle unutuluyor, oysa gece varışında ya da bavullu bir aileyle en pahalı iki yolculuk bunlar oluyor.\n\nBankamatik ve kart ücretleri. Bir kere çekimde küçük, ama her çekimde iki ayrı ücret çıkabiliyor — makinenin kendi ücreti ve bankanızın yurt dışı işlem ücreti. Az sayıda büyük çekim yapmak, çok sayıda küçük çekimden ucuza geliyor.\n\nSu ve küçük harcamalar. Sıcak bir günde dört kişilik bir aile şaşırtıcı miktarda su alıyor; markete uğramak bunu üçte bire indiriyor.\n\nOtel dışında kalan öğünler. \"Kahvaltı dahil\" bir odada günde iki öğün açıkta kalıyor ve yedi günde on dört öğün ediyor. Bu kalemi baştan hesaplamak, tatilin ortasında bütçeyi yeniden kurmaktan iyi.\n\nBagaj. Dönüşte alışveriş yüzünden ek bagaj almak zorunda kalmak sık rastlanan bir sürpriz; havayolunun ücreti kapıda alındığında online alınandan yüksek oluyor.",
+          ar: "الرحلة الأولى والأخيرة بين المطار والفندق. غالباً ما تُنسى هاتان الرحلتان في ميزانية أسبوع، مع أنهما أغلى رحلتين عند الوصول ليلاً أو مع عائلة وحقائب.\n\nرسوم الصرافات والبطاقات. صغيرة في السحب الواحد، لكن قد يُحتسب رسمان في كل سحب — رسم الجهاز ورسم مصرفك على العمليات الخارجية. وقلّة السحوبات الكبيرة أرخص من كثرة السحوبات الصغيرة.\n\nالماء والمصاريف الصغيرة. ففي يوم حارّ تشتري عائلة من أربعة كمية ماء مدهشة؛ والمرور على البقالة ينزل بذلك إلى الثلث.\n\nالوجبات خارج الفندق. ففي غرفة \"شاملة الفطور\" تبقى وجبتان يومياً، أي أربع عشرة وجبة في سبعة أيام. وحساب هذا البند من البداية أفضل من إعادة بناء الميزانية في منتصف الإجازة.\n\nالحقائب. الاضطرار لشراء وزن إضافي في العودة بسبب التسوّق مفاجأة متكررة؛ ورسم شركة الطيران عند البوابة أعلى منه عبر الإنترنت.",
+          en: "The first and last journey between airport and hotel. These two are usually forgotten in a week's budget, yet on a night arrival or with a family and luggage they are the two most expensive rides.\n\nATM and card fees. Small on one withdrawal, but two separate fees can apply each time — the machine's own and your bank's foreign transaction charge. A few large withdrawals cost less than many small ones.\n\nWater and small purchases. On a hot day a family of four buys a surprising amount of water; a stop at a supermarket cuts that to a third.\n\nMeals outside the hotel. In a room with breakfast included, two meals a day remain — fourteen over seven days. Counting that item from the start beats rebuilding the budget mid-holiday.\n\nLuggage. Having to buy extra baggage on the way home because of shopping is a frequent surprise; the airline's fee at the gate is higher than online.",
+        },
+      },
+      {
+        heading: {
+          tr: "Aynı tatili ucuzlatan üç karar",
+          ar: "ثلاثة قرارات تخفّض تكلفة الإجازة نفسها",
+          en: "Three decisions that lower the cost of the same trip",
+        },
+        body: {
+          tr: "Birincisi tarih. Temmuz-ağustos ve bayram haftaları en pahalı dönem; aynı otel nisan, mayıs, ekim ya da kasımda belirgin biçimde ucuz ve şehir çok daha rahat geziliyor. Tarihiniz esnekse en büyük tasarruf burada.\n\nİkincisi semt. Sultanahmet'te kalmak yürüme mesafesini satın almak demek ve bunun bir bedeli var. Şişli, Fatih'in iç mahalleleri ya da Anadolu yakası aynı yıldız sayısında çok daha uygun; metro ile tarihi yarımadaya yarım saatte iniliyor. Günde bir saat yol, gecede ciddi bir fark karşılığında makul bir takas olabiliyor.\n\nÜçüncüsü ulaşımı toplamak. Dört kişilik bir aile için taksiyle üç ayrı yolculuk yapmak yerine gün boyu araç ve şoför tutmak çoğu zaman daha ucuza geliyor — hem beklemek yok hem bavul ve alışveriş poşetleri araçta kalıyor. Bizim fiyatımız araç başına, kişi başına değil; kalabalık ailelerde fark burada ortaya çıkıyor.",
+          ar: "الأول التاريخ. فتموز وآب وأسابيع العيد أغلى المواسم؛ والفندق نفسه أرخص بوضوح في نيسان وأيار وتشرين الأول والثاني، والتجوّل في المدينة أريح بكثير. وإن كانت تواريخك مرنة فأكبر توفير هنا.\n\nوالثاني الحيّ. فالإقامة في السلطان أحمد تعني شراء مسافة المشي، ولذلك ثمن. أما شيشلي أو الأحياء الداخلية في الفاتح أو الجانب الآسيوي فأنسب بكثير عند العدد نفسه من النجوم؛ وتنزل إلى شبه الجزيرة التاريخية بالمترو في نصف ساعة. وقد تكون ساعة على الطريق يومياً مقايضة معقولة مقابل فرق جادّ في سعر الليلة.\n\nوالثالث تجميع التنقّل. فبدل ثلاث رحلات منفصلة بالتاكسي لعائلة من أربعة، يكون استئجار سيارة وسائق طوال اليوم أرخص في الغالب — فلا انتظار، وتبقى الحقائب وأكياس التسوّق في السيارة. وسعرنا لكل سيارة لا لكل شخص؛ وهنا يظهر الفرق عند العائلات الكبيرة.",
+          en: "The first is the date. July, August and the Eid weeks are the most expensive; the same hotel is noticeably cheaper in April, May, October or November, and the city is far easier to move through. If your dates are flexible, the largest saving is here.\n\nThe second is the district. Staying in Sultanahmet means buying walking distance, and that has a price. Şişli, the inner neighbourhoods of Fatih or the Asian side are far kinder at the same star rating; the metro reaches the historic peninsula in half an hour. An hour a day on the move can be a reasonable trade for a serious difference per night.\n\nThe third is consolidating transport. For a family of four, hiring a car and driver for the day often costs less than three separate taxi journeys — no waiting, and luggage and shopping bags stay in the car. Our price is per vehicle, not per person; with larger families that is where the difference shows.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: { tr: "Türkiye'de bir hafta kaç paraya geliyor?", ar: "كم يكلّف أسبوع في تركيا؟", en: "How much does a week in Türkiye cost?" },
+        answer: {
+          tr: "Tek bir rakam vermek yanıltıcı olur: aynı hafta, aynı şehirde iki aile arasında iki kat fark çıkabiliyor ve döviz kuru ile sezon fiyatları sürekli değişiyor. Bütçeyi belirleyen dört kalem konaklama, ulaşım, yemek ve gezi-alışveriş; en büyüğü genellikle konaklama ve toplamın yaklaşık yarısı. Kendi rakamınızı bu dört kalemi ayrı ayrı hesaplayarak çıkarmak, birinin geçen yıl yazdığı toplamı kullanmaktan çok daha isabetli.",
+          ar: "إعطاء رقم واحد مضلّل: ففي الأسبوع نفسه والمدينة نفسها قد يبلغ الفارق بين عائلتين الضعف، وسعر الصرف وأسعار المواسم في تغيّر دائم. والبنود الأربعة التي تحدّد الميزانية هي الإقامة والتنقّل والطعام والتجوّل والتسوّق؛ وأكبرها عادةً الإقامة، وهي نحو نصف المجموع. واستخراج رقمك بحساب هذه البنود الأربعة منفصلةً أدقّ بكثير من استعمال مجموع كتبه أحدهم العام الماضي.",
+          en: "A single figure would mislead: in the same week and the same city two families can differ by a factor of two, and both the exchange rate and seasonal prices keep moving. The four items that set the budget are accommodation, transport, food, and sightseeing and shopping; the largest is usually accommodation, at roughly half the total. Working out your own figure from those four separately is far more accurate than using a total somebody wrote last year.",
+        },
+      },
+      {
+        question: { tr: "Fiyatınız kişi başına mı?", ar: "هل سعركم لكل شخص؟", en: "Is your price per person?" },
+        answer: {
+          tr: "Hayır, araç başına. Aynı araçta iki kişi de altı kişi de aynı ücreti ödüyor; kişi sayısı arttıkça kişi başına düşen tutar azalıyor. Kalabalık ailelerde fark burada ortaya çıkıyor: dört kişi için üç ayrı taksi yolculuğu yapmak yerine gün boyu araç tutmak çoğu zaman daha ucuza geliyor. Kesin fiyat tarihe, kişi sayısına ve güzergâha göre WhatsApp'tan sabit olarak veriliyor.",
+          ar: "لا، لكل سيارة. فسواء كنتم شخصين أو ستة في السيارة نفسها فالأجرة واحدة؛ وكلما زاد العدد قلّ النصيب لكل شخص. وهنا يظهر الفرق عند العائلات الكبيرة: فاستئجار سيارة طوال اليوم أرخص غالباً من ثلاث رحلات تاكسي منفصلة لأربعة أشخاص. والسعر النهائي يُعطى ثابتاً عبر واتساب بحسب التاريخ وعدد الأشخاص والمسار.",
+          en: "No, per vehicle. Two people and six people in the same car pay the same; the more of you there are, the less it works out per head. That is where the difference shows for larger families: hiring a car for the day often costs less than three separate taxi rides for four people. The final price is given as a fixed figure on WhatsApp according to the date, the number of people and the route.",
+        },
+      },
+      {
+        question: { tr: "Hangi ay daha ucuz?", ar: "أي شهر أرخص؟", en: "Which month is cheaper?" },
+        answer: {
+          tr: "Nisan, mayıs, ekim ve kasım hem otel hem uçak açısından belirgin biçimde uygun ve şehir çok daha rahat geziliyor. Temmuz-ağustos ile ramazan bayramı ve kurban bayramı haftaları en pahalı dönem: Türkiye'de resmî tatil olduğu için iç talep de aynı anda zirve yapıyor. Tarihiniz esnekse bayram haftasından bir hafta önce ya da sonra gelmek aynı tatili belirgin biçimde ucuzlatıyor.",
+          ar: "نيسان وأيار وتشرين الأول والثاني أنسب بوضوح من حيث الفنادق والطيران معاً، والتجوّل في المدينة أريح بكثير. أما تموز وآب وأسبوعا عيد الفطر وعيد الأضحى فأغلى المواسم: فلأنها عطلة رسمية في تركيا يبلغ الطلب الداخلي ذروته في الوقت نفسه. وإن كانت تواريخك مرنة فالمجيء قبل أسبوع العيد أو بعده يخفّض تكلفة الإجازة نفسها بوضوح.",
+          en: "April, May, October and November are noticeably kinder on both hotels and flights, and the city is far easier to move through. July and August, along with the weeks of Eid al-Fitr and Eid al-Adha, are the most expensive: because they are public holidays in Türkiye, domestic demand peaks at the same time. If your dates are flexible, coming a week before or after Eid lowers the cost of the same holiday noticeably.",
         },
       },
     ],

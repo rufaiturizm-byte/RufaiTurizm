@@ -12,7 +12,7 @@ import { RouteCoverage } from "@/components/site/route-coverage";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
-import { guides, guideTopics, guidesByTopic } from "@/data/guides";
+import { guideMinutes, guides, guideTopics, guidesByTopic } from "@/data/guides";
 import type { Locale } from "@/i18n/routing";
 
 export async function generateMetadata({
@@ -154,7 +154,7 @@ export default async function GuidesPage({
                     style={{ boxShadow: "var(--shadow-e1)" }}
                   >
                     <Clock className="size-3" aria-hidden="true" />
-                    {guide.minutes} {t("minutes")}
+                    {guideMinutes(guide)} {t("minutes")}
                   </span>
                 </Link>
 

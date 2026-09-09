@@ -17,7 +17,7 @@ import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
 import { CityHubLink } from "@/components/site/city-hub-link";
-import { guideBySlug, guides, relatedGuides } from "@/data/guides";
+import { guideBySlug, guideMinutes, guides, relatedGuides } from "@/data/guides";
 import { destinationForGuide } from "@/data/destinations";
 import type { Locale } from "@/i18n/routing";
 
@@ -143,7 +143,7 @@ export default async function GuideDetailPage({
           <p className="mt-4 text-[16px] leading-[1.8] text-white/78">{excerpt}</p>
           <div className="mt-5 inline-flex items-center gap-2 text-[12.5px] font-semibold text-white/70">
             <Clock className="size-4" aria-hidden="true" />
-            {guide.minutes} {t("minutes")}
+            {guideMinutes(guide)} {t("minutes")}
           </div>
         </div>
       </section>

@@ -103,8 +103,6 @@ export interface Guide {
   slug: string;
   topic: GuideTopic;
   image: string;
-  /** Okuma süresi (dakika) — listede gösterilir. */
-  minutes: number;
   title: Text;
   excerpt: Text;
   facts: GuideFact[];
@@ -127,7 +125,6 @@ export const guides: Guide[] = [
     slug: "istanbul-havalimanindan-sehre-ulasim",
     topic: "arrival",
     image: "/images/places/havalimani.jpg",
-    minutes: 6,
     title: {
       tr: "İstanbul Havalimanı'ndan şehre nasıl gidilir?",
       ar: "كيف تصل من مطار إسطنبول إلى المدينة؟",
@@ -259,7 +256,6 @@ export const guides: Guide[] = [
     slug: "sabiha-gokcenden-istanbula-ulasim",
     topic: "arrival",
     image: "/images/places/bogaz-kopru.jpg",
-    minutes: 6,
     title: {
       tr: "Sabiha Gökçen'den İstanbul'a ulaşım",
       ar: "الوصول من مطار صبيحة كوكجن إلى إسطنبول",
@@ -373,7 +369,6 @@ export const guides: Guide[] = [
     slug: "istanbulda-nerede-kalinir",
     topic: "practical",
     image: "/images/places/sultanahmet.jpg",
-    minutes: 5,
     title: {
       tr: "İstanbul'da nerede kalınır? Semt semt rehber",
       ar: "أين تسكن في إسطنبول؟ دليل حسب المناطق",
@@ -475,13 +470,78 @@ export const guides: Guide[] = [
           en: "The Bosphorus Bridge and the shore districts",
         },
       },
+      {
+        heading: {
+          tr: "Asya yakasında kalmak: Kadıköy ve çevresi",
+          ar: "الإقامة في الجانب الآسيوي: كاديكوي وما حولها",
+          en: "Staying on the Asian side: Kadıköy and around",
+        },
+        body: {
+          tr: "İstanbul'un yarısı Asya yakasında ve turistlerin çoğu orada hiç kalmıyor. Bu, semt seçimini genişleten bir boşluk.\n\nKadıköy'ün karakteri Avrupa yakasının turistik semtlerinden farklı: burası şehrin kendi hayatını yaşadığı yer. Salı pazarı, balık çarşısı, kitapçılar, kahveciler. Fiyatlar aynı yıldız sayısı için Sultanahmet ve Beşiktaş'tan gözle görülür biçimde daha uygun.\n\nUlaşım sanıldığı kadar zor değil. Marmaray Söğütlüçeşme'den Sirkeci'ye tünelden geçiyor ve tarihî yarımadaya varış çeyrek saati buluyor. Kadıköy–Eminönü ve Kadıköy–Karaköy vapurları da hem ulaşım hem de günde iki kez Boğaz manzarası demek.\n\nBir avantajı daha var: Sabiha Gökçen Havalimanı Asya yakasında. Oradan uçuyorsanız transfer süresi yarıya iniyor.\n\nBunun bedeli şu: tarihî yarımadaya her gidiş bir geçiş demek. Üç günlük bir ilk ziyarette bu kayıp ağır basıyor. Bir haftadan uzun kalanlar, ikinci kez gelenler ve kalabalıktan uzak durmak isteyenler içinse Kadıköy çoğu zaman daha iyi bir tatil veriyor.",
+          ar: "نصف إسطنبول في الجانب الآسيوي، ومعظم السيّاح لا يقيمون فيه أبداً. وهذه فجوة توسّع خيارات الأحياء.\n\nوطابع كاديكوي مختلف عن الأحياء السياحية في الجانب الأوروبي: فهنا تعيش المدينة حياتها هي. سوق الثلاثاء وسوق السمك والمكتبات والمقاهي. والأسعار لعدد النجوم نفسه أنسب بوضوح منها في السلطان أحمد وبشيكتاش.\n\nوالتنقّل ليس صعباً كما يُظنّ. فقطار مرمراي يعبر النفق من سوغوتلوتششمه إلى سيركجي، والوصول إلى شبه الجزيرة التاريخية يبلغ ربع ساعة. وعبّارات كاديكوي–أمينونو وكاديكوي–كاراكوي تجمع بين التنقّل وإطلالة على البوسفور مرّتين في اليوم.\n\nوثمّة ميزة أخرى: مطار صبيحة كوكجن في الجانب الآسيوي. فإن كنت تسافر منه انخفضت مدة النقل إلى النصف.\n\nوثمن ذلك: كل ذهاب إلى شبه الجزيرة التاريخية يعني عبوراً. وفي زيارة أولى من ثلاثة أيام تكون هذه الخسارة راجحة. أما من يقيم أكثر من أسبوع، أو يزور للمرة الثانية، أو يريد الابتعاد عن الزحام، فكاديكوي تمنحه في الغالب إجازة أفضل.",
+          en: "Half of Istanbul is on the Asian side, and most visitors never stay there. That gap widens the choice of districts.\n\nKadıköy has a different character from the tourist quarters across the water: this is where the city lives its own life. The Tuesday market, the fish market, bookshops, coffee houses. For the same star rating, prices are noticeably kinder than in Sultanahmet or Beşiktaş.\n\nGetting across is not as hard as it sounds. The Marmaray runs through the tunnel from Söğütlüçeşme to Sirkeci, and the historic peninsula is about a quarter of an hour away. The Kadıköy–Eminönü and Kadıköy–Karaköy ferries are both transport and a Bosphorus view twice a day.\n\nThere is one more advantage: Sabiha Gökçen Airport is on the Asian side. If you fly from there, the transfer time halves.\n\nThe price of all this: every trip to the historic peninsula is a crossing. On a three-day first visit that loss outweighs the gain. For anyone staying longer than a week, coming a second time, or wanting to keep away from the crowds, Kadıköy usually makes for a better holiday."
+        },
+        image: "/images/places/kadikoy.jpg",
+        imageAlt: {
+          tr: "Kadıköy iskelesi ve sahil",
+          ar: "رصيف كاديكوي والساحل",
+          en: "The Kadıköy pier and shore",
+        },
+      },
+      {
+        heading: {
+          tr: "Fatih, Aksaray ve Laleli: Arapçanın her yerde konuşulduğu bölge",
+          ar: "الفاتح وأكسراي ولاليلي: المنطقة التي تُتكلَّم فيها العربية في كل مكان",
+          en: "Fatih, Aksaray and Laleli: where Arabic is spoken everywhere",
+        },
+        body: {
+          tr: "Körfez'den gelen misafirlerin önemli bir bölümü bu üçgende kalıyor ve bunun somut sebepleri var.\n\nBirincisi dil. Aksaray ve Laleli'de tabelaların çoğu Arapça, lokantalarda ve dükkânlarda Arapça konuşuluyor. Türkçe ya da İngilizce bilmeyen bir misafir için bu, günlük hayatı tamamen değiştiren bir kolaylık.\n\nİkincisi yemek. Bölgede helal seçenek aramak gerekmiyor; Suriye, Lübnan ve Irak mutfağından lokantalar sokak aralarında. Sahur ve iftar saatlerinde açık yerler bulunuyor.\n\nÜçüncüsü konum ve fiyat. T1 tramvayı Aksaray'dan geçip Sultanahmet ve Eminönü'ne gidiyor; Yenikapı hem metro hem Marmaray aktarma noktası. Aynı yıldız sayısı Sultanahmet'ten belirgin biçimde daha uygun.\n\nDürüst tarafını da yazalım: bölge kalabalık, gürültülü ve binaların çoğu eski. Sokaklar akşam geç saatte de hareketli. Sessiz bir otel, geniş bir lobi ya da bakımlı bir sokak arıyorsanız burası o bölge değil. Küçük çocuklu bir aile için akşam gürültüsü uykuyu etkileyebiliyor — otelin ana cadde üzerinde mi ara sokakta mı olduğunu sormak burada başka semtlerden daha önemli.",
+          ar: "قسم كبير من ضيوفنا القادمين من الخليج يقيمون في هذا المثلث، ولذلك أسباب ملموسة.\n\nأولها اللغة. ففي أكسراي ولاليلي معظم اللافتات بالعربية، والعربية تُتكلَّم في المطاعم والمحال. وهذا لضيف لا يعرف التركية ولا الإنجليزية تيسير يغيّر الحياة اليومية كلها.\n\nوثانيها الطعام. فلا حاجة في المنطقة إلى البحث عن خيار حلال؛ فمطاعم المطبخ السوري واللبناني والعراقي في الأزقّة. وتجد أماكن مفتوحة في أوقات السحور والإفطار.\n\nوثالثها الموقع والسعر. فترام T1 يمرّ من أكسراي إلى السلطان أحمد وأمينونو؛ ويني قابي نقطة تحويل للمترو ولمرمراي معاً. وعدد النجوم نفسه أنسب بوضوح منه في السلطان أحمد.\n\nولنكتب الجانب الصريح أيضاً: المنطقة مزدحمة وصاخبة ومعظم مبانيها قديمة. والشوارع حيّة حتى وقت متأخر من الليل. فإن كنت تبحث عن فندق هادئ أو بهو واسع أو شارع مرتّب فليست هذه منطقتك. وعند عائلة معها أطفال صغار قد تؤثّر ضوضاء الليل في النوم — والسؤال عمّا إذا كان الفندق على الشارع الرئيسي أم في زقاق جانبي أهمّ هنا منه في سائر الأحياء.",
+          en: "A large share of our guests from the Gulf stay in this triangle, and there are concrete reasons for it.\n\nThe first is language. In Aksaray and Laleli most signs are in Arabic, and Arabic is spoken in the restaurants and shops. For a guest with no Turkish or English, that changes daily life entirely.\n\nThe second is food. You do not have to search for a halal option here; Syrian, Lebanese and Iraqi kitchens line the side streets. Places stay open for suhoor and iftar.\n\nThe third is location and price. The T1 tram runs from Aksaray to Sultanahmet and Eminönü; Yenikapı is an interchange for both the metro and the Marmaray. The same star rating costs noticeably less than in Sultanahmet.\n\nNow the frank side: the area is crowded and noisy, and most of the buildings are old. The streets are busy late into the evening. If you want a quiet hotel, a spacious lobby or a well-kept street, this is not that district. For a family with small children the evening noise can affect sleep — asking whether the hotel is on the main road or a side street matters more here than anywhere else."
+        },
+      },
+      {
+        heading: {
+          tr: "Bütçe: uygun otel hangi semtte çıkar, karşılığında ne verilir",
+          ar: "الميزانية: في أي حي تجد فندقاً بسعر مناسب، وما مقابله",
+          en: "Budget: which districts come cheaper, and what you give up",
+        },
+        body: {
+          tr: "İstanbul'da aynı yıldız sayısı semtten semte belirgin biçimde farklı fiyatlanıyor. Sıralama kabaca şöyle işliyor.\n\nEn uygun taraf: Fatih, Aksaray, Laleli ve Şişli'nin ara sokakları. Ardından Asya yakası — Kadıköy ve çevresi. Ortada Taksim ve Beyoğlu; burada aynı sokakta bile fiyat çok değişiyor. En pahalı uç: Boğaz kıyısı (Ortaköy, Beşiktaş, Bebek) ve Nişantaşı. Sultanahmet ise ikiye ayrılıyor — meydana bakan oteller pahalı, birkaç sokak arkası çok daha uygun.\n\nMevsim ikinci belirleyici. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek fiyatların olduğu zaman. Kasım–mart arası aynı otel çok daha uygun oluyor.\n\nBir uyarı: iyi bir semtte beklenenin çok altında bir fiyat genelde bir şey anlatıyor. Penceresiz ya da bodrum kat oda, ana cadde gürültüsü, asansörsüz bina, ya da otelin adındaki semtte olmaması. Bunlar ilan metninde yazmıyor. Rezervasyondan önce odanın hangi katta olduğunu ve penceresinin nereye baktığını yazılı olarak sormak, bu farkların çoğunu önceden ortaya çıkarıyor.\n\nBizim tarafımızdan bir not: otel fiyatına komisyon eklemiyoruz ve anlaşmalı otel listemiz yok. Kendiniz de rezerve edebilirsiniz; bizden isterseniz bu soruları sizin adınıza sorup cevabı yazılı iletiyoruz.",
+          ar: "في إسطنبول يُسعَّر عدد النجوم نفسه تسعيراً مختلفاً بوضوح من حيّ إلى آخر. والترتيب يجري تقريباً هكذا.\n\nالجهة الأنسب: الفاتح وأكسراي ولاليلي والأزقّة الجانبية في شيشلي. يليها الجانب الآسيوي — كاديكوي وما حولها. وفي الوسط تقسيم وبي أوغلو؛ وهنا يتفاوت السعر كثيراً حتى في الشارع الواحد. والطرف الأغلى: ساحل البوسفور (أورتاكوي وبشيكتاش وبَبَك) ونيشانتاشي. أما السلطان أحمد فينقسم قسمين — الفنادق المطلّة على الساحة غالية، وما وراءها بشوارع قليلة أنسب كثيراً.\n\nوالموسم عامل ثانٍ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي زمن أعلى الأسعار. ومن نوفمبر إلى مارس يصير الفندق نفسه أنسب بكثير.\n\nوتنبيه: السعر الذي يقلّ كثيراً عن المتوقّع في حيّ جيّد يقول شيئاً عادةً. غرفة بلا نافذة أو في الطابق السفلي، أو ضجيج الشارع الرئيسي، أو بناء بلا مصعد، أو أن الفندق ليس في الحي الذي يحمل اسمه. وهذا لا يُكتب في نصّ الإعلان. والسؤال كتابةً قبل الحجز عن طابق الغرفة وعمّا تطلّ عليه نافذتها يكشف معظم هذه الفروق مسبقاً.\n\nوملاحظة من جهتنا: لا نضيف عمولة على سعر الفندق وليست لدينا قائمة فنادق متعاقدة. ويمكنك الحجز بنفسك؛ وإن أردت منّا سألنا هذه الأسئلة نيابةً عنك وأرسلنا الجواب كتابةً.",
+          en: "In Istanbul the same star rating is priced very differently from district to district. The order runs roughly like this.\n\nThe kindest side: Fatih, Aksaray, Laleli and the side streets of Şişli. Then the Asian side — Kadıköy and around. In the middle sit Taksim and Beyoğlu, where prices swing widely even along one street. At the expensive end: the Bosphorus shore (Ortaköy, Beşiktaş, Bebek) and Nişantaşı. Sultanahmet splits in two — hotels facing the square are dear, a few streets back is far kinder.\n\nSeason is the second factor. The summer months and the two Eid periods carry the highest prices. From November to March the same hotel costs considerably less.\n\nA warning: a price far below expectation in a good district usually means something. A windowless or basement room, main-road noise, a building without a lift, or a hotel that is not in the district its name claims. None of this appears in the listing text. Asking in writing before booking which floor the room is on and what the window faces brings most of these differences out in advance.\n\nA note from our side: we add no commission to hotel prices and keep no list of partner hotels. You can book yourself; if you would rather we did it, we ask these questions on your behalf and send you the answers in writing."
+        },
+      },
+      {
+        heading: {
+          tr: "“Deniz manzarası” ve “Boğaz'a sıfır” ilanda ne demek",
+          ar: "ماذا يعني «إطلالة على البحر» و«على البوسفور مباشرة» في الإعلان",
+          en: "What “sea view” and “right on the Bosphorus” mean in a listing",
+        },
+        body: {
+          tr: "Otel ilanlarında en çok yanlış anlaşılan iki ifade bunlar ve ikisi de çok aranıyor.\n\n“Deniz manzarası” bir tanım değil, bir iddia. Odanın balkonunun bir köşesinden binalar arasında görünen bir şerit de bu adla satılabiliyor. Dürüst oteller buna “kısmi deniz manzarası” diyor; böyle bir ibare varsa ciddiye alın.\n\nİkinci karışıklık su ile ilgili. Sultanahmet ve Kumkapı tarafındaki oteller Marmara Denizi'ni görüyor, Boğaz'ı değil. İkisi farklı manzara: Marmara açık deniz ve gemi trafiği, Boğaz ise iki yaka, köprüler ve vapurlar. “Deniz manzaralı” arayıp Boğaz bekleyen misafir burada hayal kırıklığına uğruyor.\n\nBoğaz'a gerçekten sıfır otel sayısı az ve fiyatı yüksek. “Boğaz manzaralı” diyen otellerin çoğu yamaçta ve manzara çatıların üzerinden. Bu kötü demek değil — bazen daha geniş bir manzara demek — ama sahil yürüyüşü beklentisiyle rezerve edilmemeli.\n\nBir başka ayrıntı: Sultanahmet'te birçok otelde en iyi manzara çatı terasında, odalarda değil. İlan fotoğrafları genelde terastan çekiliyor.\n\nÇözüm tek bir soruda: “Bize rezerve edeceğiniz odanın penceresinden çekilmiş bir fotoğraf gönderir misiniz?” Cevap veren otel doğru söylüyordur; cevap vermeyen otel de size bir şey söylemiş olur.",
+          ar: "هاتان أكثر عبارتين يُساء فهمهما في إعلانات الفنادق، وكلتاهما كثيرة البحث.\n\nفـ«إطلالة على البحر» ليست وصفاً بل ادّعاء. فقد يُباع بهذا الاسم شريطٌ يُرى بين المباني من زاوية شرفة الغرفة. والفنادق الصادقة تسمّي هذا «إطلالة جزئية على البحر»؛ فإن وجدت هذه العبارة فخذها بجدّية.\n\nوالالتباس الثاني يتعلق بالماء نفسه. ففنادق جهة السلطان أحمد وكومكابي تطلّ على بحر مرمرة لا على البوسفور. وهما منظران مختلفان: مرمرة بحر مفتوح وحركة سفن، أما البوسفور فضفّتان وجسور وعبّارات. والضيف الذي يبحث عن «إطلالة بحرية» وهو ينتظر البوسفور يُصاب هنا بخيبة.\n\nوالفنادق الواقعة فعلاً على البوسفور مباشرة قليلة وأسعارها مرتفعة. ومعظم من يقول «إطلالة على البوسفور» يقع على المنحدر والمنظر من فوق السطوح. وهذا ليس سيّئاً — بل قد يكون منظراً أوسع — لكن لا يُحجز بتوقّع المشي على الكورنيش.\n\nوتفصيل آخر: في كثير من فنادق السلطان أحمد يكون أجمل منظر على سطح الفندق لا في الغرف. وصور الإعلان تُلتقط من السطح غالباً.\n\nوالحلّ في سؤال واحد: «هل ترسلون لنا صورة ملتقطة من نافذة الغرفة التي ستحجزونها لنا؟» فالفندق الذي يجيب صادق؛ والذي لا يجيب يكون قد قال لك شيئاً أيضاً.",
+          en: "These are the two most misread phrases in hotel listings, and both are heavily searched.\n\n“Sea view” is a claim, not a description. A strip of water glimpsed between buildings from one corner of the balcony can be sold under that name. Honest hotels call it a “partial sea view”; if you see that wording, take it seriously.\n\nThe second confusion is about which water. Hotels around Sultanahmet and Kumkapı look onto the Sea of Marmara, not the Bosphorus. They are different views: Marmara is open sea and shipping traffic, while the Bosphorus gives you two shores, bridges and ferries. A guest who searches for a sea view expecting the Bosphorus is disappointed here.\n\nHotels genuinely on the Bosphorus are few and expensive. Most that say “Bosphorus view” sit up the slope, looking over rooftops. That is not a bad thing — it can be a wider view — but it should not be booked in the expectation of a waterfront walk.\n\nOne more detail: in many Sultanahmet hotels the best view is from the roof terrace, not the rooms. The listing photographs are usually taken from the terrace.\n\nThe remedy is a single question: “Could you send a photograph taken from the window of the room you will book for us?” A hotel that answers is telling the truth; one that does not has also told you something."
+        },
+      },
+      {
+        heading: {
+          tr: "Otelin adı semtini söylemez: adresi haritada doğrulayın",
+          ar: "اسم الفندق لا يدلّ على حيّه: تحقّق من العنوان على الخريطة",
+          en: "A hotel's name does not tell you its district: check the address on a map",
+        },
+        body: {
+          tr: "Bu rehberdeki bütün semt tavsiyelerini boşa çıkarabilecek tek şey var: otelin adındaki semtte olmaması.\n\nİstanbul'da otel isimlerinde semt adı kullanmak serbest. Adında “Taksim” geçen bir otel meydana yirmi dakika yürüme mesafesinde ve yokuş yukarı olabiliyor. “Sultanahmet” adlı bir otel Kumkapı'da çıkabiliyor. Yorumlarda en sık geçen şikâyet de bu.\n\nKontrolü iki dakika sürüyor: otelin tam adresini isteyin, haritada aratın ve en yakın metro ya da tramvay durağına yürüme süresini ölçün. “Metroya yakın” ifadesi ölçü değil; “Şişhane durağına 6 dakika yürüyüş” ölçüdür.\n\nİkinci kontrol yokuş. İstanbul'un merkez semtlerinin çoğu eğimli. Haritada 700 metre görünen bir yol, bavulla ya da çocuk arabasıyla dik bir yokuşsa bambaşka bir şey. Sokak görünümüne bakmak bunu önceden gösteriyor.\n\nSon olarak konumun asıl önemi şurada: doğru semtte kalmak, günde bir buçuk saat yol farkı yaratıyor. Beş günlük bir tatilde bu, tam bir gün demek. Otel seçiminin geri kalanı — oda tipi, kahvaltı, banyo — ayrı bir rehberin konusu; biz burada yalnız semti ele aldık.\n\nHangi semtin size uyduğuna kaç kişi olduğunuz, kaç gün kalacağınız ve hangi havalimanına ineceğiniz birlikte karar veriyor. Bu üçünü yazın, size uygun iki-üç semt çıkaralım — otel seçimi sizin, biz yalnız bölgeyi daraltıyoruz.",
+          ar: "ثمّة أمر واحد قد يُبطل كل نصائح الأحياء في هذا الدليل: ألّا يكون الفندق في الحي الذي يحمل اسمه.\n\nففي إسطنبول يجوز استعمال اسم الحي في أسماء الفنادق. وقد يكون فندق في اسمه «تقسيم» على مسافة عشرين دقيقة مشياً من الساحة وفي طريق صاعد. وقد يتبيّن أن فندقاً اسمه «السلطان أحمد» يقع في كومكابي. وهذه أكثر شكوى تتكرّر في التقييمات.\n\nوالتحقّق يستغرق دقيقتين: اطلب العنوان الكامل للفندق، وابحث عنه على الخريطة، وقِس زمن المشي إلى أقرب محطة مترو أو ترام. فعبارة «قريب من المترو» ليست مقياساً؛ أما «ست دقائق مشياً إلى محطة شيشهانه» فمقياس.\n\nوالتحقّق الثاني هو الانحدار. فمعظم أحياء إسطنبول المركزية مائلة. والطريق الذي يبدو على الخريطة 700 متر شيءٌ آخر تماماً إن كان صعوداً حادّاً مع حقيبة أو عربة طفل. والنظر إلى مشهد الشارع يُظهر هذا مسبقاً.\n\nوأهمية الموقع الحقيقية هنا: الإقامة في الحي الصحيح تفرق ساعةً ونصفاً من الطريق في اليوم. وفي إجازة من خمسة أيام يعني ذلك يوماً كاملاً. أما بقية اختيار الفندق — نوع الغرفة والفطور والحمّام — فموضوع دليل آخر؛ ونحن تناولنا هنا الحيّ وحده.\n\nويقرّر أيُّ حيّ يناسبك ثلاثةُ أمور معاً: عددكم، وعدد أيام إقامتكم، والمطار الذي ستصلون إليه. فاكتب لنا هذه الثلاثة نستخرج لك حيّين أو ثلاثة تناسبك — واختيار الفندق لك، ونحن نضيّق المنطقة فحسب.",
+          en: "One thing can undo every district recommendation in this guide: the hotel not being in the district its name claims.\n\nIn Istanbul, using a district name in a hotel's name is unrestricted. A hotel with “Taksim” in its name can be a twenty-minute walk uphill from the square. One called “Sultanahmet” can turn out to be in Kumkapı. It is the complaint that recurs most often in reviews.\n\nChecking takes two minutes: ask for the full address, search it on a map, and measure the walking time to the nearest metro or tram stop. “Close to the metro” is not a measurement; “six minutes' walk to Şişhane station” is.\n\nThe second check is the gradient. Most of Istanbul's central districts are steep. A route that looks like 700 metres on a map is another thing entirely if it is a sharp climb with a suitcase or a pushchair. Street view shows this in advance.\n\nWhy location matters in the end: staying in the right district is worth about an hour and a half of travel a day. Over a five-day holiday that is a full day. The rest of choosing a hotel — room type, breakfast, bathroom — belongs to another guide; here we have dealt only with the district.\n\nWhich district suits you is decided by three things together: how many you are, how many nights you stay, and which airport you land at. Write us those three and we will narrow it to two or three districts — the hotel is your choice, we only narrow the area."
+        },
+      },
     ],
   },
   {
     slug: "sapanca-masukiye-rehberi",
     topic: "daytrips",
     image: "/images/places/sapanca-orman.jpg",
-    minutes: 6,
     title: {
       tr: "Sapanca ve Maşukiye rehberi",
       ar: "دليل سبانجا ومعشوقية",
@@ -613,7 +673,6 @@ export const guides: Guide[] = [
     slug: "trabzon-uzungol-karadeniz",
     topic: "daytrips",
     image: "/images/places/uzungol.jpg",
-    minutes: 6,
     title: {
       tr: "Trabzon, Uzungöl ve Karadeniz yaylaları",
       ar: "طرابزون وأوزنجول وهضاب البحر الأسود",
@@ -745,7 +804,6 @@ export const guides: Guide[] = [
     slug: "turkiyeye-ne-zaman-gitmeli",
     topic: "planning",
     image: "/images/places/bursa-kis.jpg",
-    minutes: 7,
     title: {
       tr: "Türkiye'ye ne zaman gitmeli? Mevsim rehberi",
       ar: "متى تزور تركيا؟ دليل المواسم",
@@ -889,7 +947,6 @@ export const guides: Guide[] = [
     slug: "istanbulda-bir-hafta-aile-programi",
     topic: "planning",
     image: "/images/places/galata.jpg",
-    minutes: 6,
     title: {
       tr: "İstanbul'da bir hafta: aileler için gün gün program",
       ar: "أسبوع في إسطنبول: برنامج يومي للعائلات",
@@ -1009,13 +1066,61 @@ export const guides: Guide[] = [
           en: "Leaving a free day at the end creates room to make up for something you missed, or simply to rest. Nisantasi and Bagdat Street are two good shopping options on two different sides. Keeping the day before your return flight light leaves margin for packing and the trip to the airport.",
         },
       },
+      {
+        heading: {
+          tr: "Programı yeniden sıralamak gereken günler",
+          ar: "الأيام التي يلزم فيها إعادة ترتيب البرنامج",
+          en: "The days that force you to reorder the plan",
+        },
+        body: {
+          tr: "Yukarıdaki sıralama iyi bir çerçeve ama takvimin kendisi bazı günleri yerinden oynatıyor.\n\nBirincisi kapalı günler. Müzelerin ve sarayların bir kısmının haftalık kapalı günü var; Dolmabahçe Sarayı pazartesi günleri ziyarete kapalı ve gişe on yediye kadar açık. Bu bilgi zaman zaman değişiyor, bu yüzden bir bloga değil kurumun kendi sayfasına bakmak gerekiyor. Programı kurmadan önce görmek istediğiniz üç-dört yeri listeleyip kapalı günlerini yan yana yazmak, haftanın iskeletini kendiliğinden belirliyor.\n\nİkincisi cuma. Camiler ibadet vakitlerinde ziyarete kapanıyor ve cuma öğle namazı bunun en uzunu. Ayasofya ve Sultanahmet Camii'ni cuma günü öğleden önceye ya da ikindiden sonraya almak, kapıda beklemeyi ortadan kaldırıyor.\n\nÜçüncüsü hava. İstanbul'da yağmur genellikle bir gün sürmüyor ama o günü açık havada geçirmek anlamsız. Boğaz turu ve şehir dışı günleri, kapalı mekân günleriyle — Kapalıçarşı, müzeler, alışveriş merkezi — yer değiştirebilecek biçimde planlanmalı. Bu esnekliği baştan kurmak, sonradan program bozmaktan kolay.\n\nDördüncüsü ramazan ve bayram. Bu dönemde şehir daha kalabalık, akşamları daha hareketli, gündüzleri bazı lokantalar kapalı olabiliyor. Sahur ve iftar saatleri günü tamamen yeniden kuruyor.",
+          ar: "الترتيب السابق إطار جيّد، لكن التقويم نفسه يزحزح بعض الأيام عن مواضعها.\n\nأولها أيام الإغلاق. فبعض المتاحف والقصور له يوم إغلاق أسبوعي؛ وقصر دولما بهجة مغلق للزيارة أيام الاثنين وشبّاك التذاكر مفتوح حتى الخامسة. وهذه المعلومة تتغيّر أحياناً، ولذلك يلزم النظر في صفحة المؤسسة نفسها لا في مدوّنة. وقبل بناء البرنامج، اكتب ثلاثة أو أربعة أماكن تريد رؤيتها وضع أيام إغلاقها إلى جوارها، فيتحدّد هيكل الأسبوع من تلقاء نفسه.\n\nوثانيها الجمعة. فالمساجد تُغلق أمام الزيارة في أوقات العبادة، وصلاة الجمعة أطولها. ووضع آيا صوفيا وجامع السلطان أحمد يوم الجمعة قبل الظهر أو بعد العصر يُلغي الانتظار على الباب.\n\nوثالثها الطقس. فالمطر في إسطنبول لا يدوم يوماً كاملاً عادةً، لكن قضاء ذلك اليوم في الهواء الطلق لا معنى له. فينبغي تخطيط يوم جولة البوسفور وأيام خارج المدينة بحيث يمكن تبديلها بأيام الأماكن المغلقة — السوق المسقوف والمتاحف والمركز التجاري. وبناء هذه المرونة من البداية أسهل من إفساد البرنامج لاحقاً.\n\nورابعها رمضان والعيد. ففي هذه الفترة تكون المدينة أكثر ازدحاماً وأكثر حيوية في المساء، وقد تُغلق بعض المطاعم نهاراً. ومواعيد السحور والإفطار تعيد بناء اليوم كلّه.",
+          en: "The order above is a good frame, but the calendar itself moves some days out of place.\n\nFirst, closing days. Some museums and palaces have a weekly closing day; Dolmabahçe Palace is closed to visitors on Mondays, with the ticket office open until five. This information changes from time to time, so check the institution's own page rather than a blog. Before building the plan, list the three or four places you most want to see and write their closing days beside them — the skeleton of the week decides itself.\n\nSecond, Friday. Mosques close to visitors during prayer times, and Friday midday prayer is the longest. Putting Hagia Sophia and the Blue Mosque before noon or after mid-afternoon on a Friday removes the wait at the door.\n\nThird, the weather. Rain in Istanbul rarely lasts a whole day, but spending that day outdoors makes no sense. The Bosphorus cruise and the out-of-town days should be planned so they can swap with indoor days — the Grand Bazaar, museums, a shopping centre. Building that flexibility in from the start is easier than unpicking the plan later.\n\nFourth, Ramadan and the Eids. The city is busier then, livelier in the evenings, and some restaurants may be closed during the day. Suhoor and iftar times rebuild the day completely."
+        },
+      },
+      {
+        heading: {
+          tr: "Çocukla tempo: bir günde kaç durak",
+          ar: "الإيقاع مع الأطفال: كم محطة في اليوم",
+          en: "Pace with children: how many stops in a day",
+        },
+        body: {
+          tr: "Bir haftalık programın çökmesinin en sık sebebi güne fazla şey koymak. Kural basit: küçük çocuklu bir ailede günde iki ana durak.\n\nBir ana durak yaklaşık iki-üç saat demek — geliş, sıra, gezme ve mola dahil. Üçüncü durak kâğıt üzerinde sığıyor, gerçekte sığmıyor: çocuk yoruluyor, sıcakta huysuzlanıyor ve akşam programı da bozuluyor.\n\nGünün ortasına otele dönmek zaman kaybı gibi görünüyor ama değil. İki saatlik bir ara — uyku ya da sadece serinleme — akşamı kurtarıyor. Otelin merkeze yakın olması bu yüzden manzaradan önemli; öğle arası için kırk dakika yol harcayan bir aile bunu yapamıyor.\n\nMolayı nereye vereceğinizi önceden bilmek de işe yarıyor. Tarihî yarımadada Gülhane Parkı ve çay bahçeleri, Boğaz kıyısında sahil boyu, Beyoğlu'nda ara sokaklardaki küçük meydanlar. Ayakta mola vermek mola değil.\n\nYemek saatleri de tempoyu belirliyor. Aç bir çocukla müze sırasında beklemek programın en kötü yirmi dakikası. Ana duraklardan önce yemek, sonra değil.\n\nSon olarak: bir günü tamamen boş bırakın. Yedi günün altısını doldurun, birini havuza, parka ya da hiçbir şeye ayırın. Bu boş gün, önceki günlerde kaçırdığınız şeyin de yedeği oluyor.",
+          ar: "أكثر ما يُسقط برنامج الأسبوع هو حشو اليوم بأكثر مما يحتمل. والقاعدة بسيطة: محطتان رئيسيتان في اليوم للعائلة التي معها أطفال صغار.\n\nوالمحطة الرئيسية تعني ساعتين إلى ثلاث — يدخل فيها الوصول والانتظار والتجوال والاستراحة. والمحطة الثالثة تتّسع على الورق ولا تتّسع في الواقع: فالطفل يتعب ويتضجّر في الحرّ ويفسد برنامج المساء أيضاً.\n\nوالعودة إلى الفندق منتصف اليوم تبدو إضاعةً للوقت وليست كذلك. فاستراحة ساعتين — نوماً أو مجرّد تبريد — تنقذ المساء. ولهذا يكون قرب الفندق من المركز أهمّ من الإطلالة؛ فالعائلة التي تنفق أربعين دقيقة طريقاً لاستراحة الظهر لا تستطيع فعل ذلك.\n\nومعرفة مكان الاستراحة مسبقاً تنفع أيضاً. ففي شبه الجزيرة التاريخية حديقة كولخانه ومقاهي الشاي، وعلى ساحل البوسفور امتداد الكورنيش، وفي بي أوغلو الساحات الصغيرة في الأزقّة. والاستراحة وقوفاً ليست استراحة.\n\nومواعيد الطعام تحدّد الإيقاع كذلك. فالانتظار في طابور متحف مع طفل جائع أسوأ عشرين دقيقة في البرنامج. فليكن الطعام قبل المحطات الرئيسية لا بعدها.\n\nوأخيراً: اترك يوماً فارغاً تماماً. املأ ستة من سبعة، وخصّص واحداً للمسبح أو الحديقة أو لا شيء. وهذا اليوم الفارغ يصير احتياطاً لما فاتك في الأيام السابقة.",
+          en: "The commonest reason a week-long plan collapses is putting too much into a day. The rule is simple: two main stops a day for a family with small children.\n\nA main stop means roughly two to three hours — arrival, queue, visit and a break included. A third stop fits on paper and not in reality: the child tires, gets fretful in the heat, and the evening goes with it.\n\nGoing back to the hotel in the middle of the day looks like lost time. It is not. A two-hour break — a nap, or simply cooling off — saves the evening. That is why a central hotel matters more than a view; a family that spends forty minutes travelling for a midday break cannot take one.\n\nKnowing in advance where you will stop also helps. On the historic peninsula, Gülhane Park and the tea gardens; along the Bosphorus, the waterfront; in Beyoğlu, the small squares off the side streets. A break taken standing up is not a break.\n\nMealtimes set the pace too. Waiting in a museum queue with a hungry child is the worst twenty minutes of the plan. Eat before the main stops, not after.\n\nFinally: leave one day completely empty. Fill six of the seven and give one to the pool, a park, or nothing at all. That empty day doubles as the spare for whatever you missed earlier in the week."
+        },
+      },
+      {
+        heading: {
+          tr: "Yokuş, taş sokak ve bebek arabası",
+          ar: "المنحدرات والأزقّة الحجرية وعربة الطفل",
+          en: "Hills, cobbles and pushchairs",
+        },
+        body: {
+          tr: "Haritada kısa görünen mesafeler İstanbul'da her zaman kısa değil, çünkü şehir tepeler üzerine kurulu.\n\nSultanahmet'in sokaklarının çoğu arnavut kaldırımı. Bebek arabası bu zeminde ağır ilerliyor ve tekerlek küçükse takılıyor. Galata ve Beyoğlu tarafında ana mesele yokuş: Karaköy'den Galata Kulesi'ne çıkış kısa ama dik. Tünel füniküleri bu yokuşun bir bölümünü alıyor ve çoğu ziyaretçi varlığından haberdar değil.\n\nToplu taşımada durum karışık. Metro istasyonlarının çoğunda asansör var; tramvay duraklarına çoğunlukla rampayla iniliyor; ama eski vapur iskelelerinde ve bazı üst geçitlerde merdiven kaçınılmaz.\n\nPratik sonuç: iki yaşın altındaki çocuk için kanguru taşıyıcı, İstanbul'da bebek arabasından çoğu zaman daha rahat. Arabayı tercih ediyorsanız büyük tekerlekli ve tek elle katlanabilen bir model fark yaratıyor.\n\nYetişkinler için tek bir madde: rahat, kapalı ve kaymayan ayakkabı. Bir haftalık programda günde altı-sekiz kilometre yürünüyor ve bunun önemli bölümü düz olmayan zeminde. Yeni alınmış bir ayakkabıyla İstanbul'a gelmek, ikinci günü topuk yarasıyla geçirmek demek.\n\nSıcak aylarda su ve şapka listenin başında; tarihî yarımadada gölge sanıldığından az.",
+          ar: "المسافات التي تبدو قصيرة على الخريطة ليست قصيرة دائماً في إسطنبول، لأن المدينة قائمة على تلال.\n\nفمعظم أزقّة السلطان أحمد مرصوفة بالحجارة. وعربة الطفل تتقدّم بثقل على هذه الأرضية وتتعثّر إن كانت عجلاتها صغيرة. وفي جهة غلطة وبي أوغلو تكون المسألة الأساسية الانحدار: فالصعود من كاراكوي إلى برج غلطة قصير لكنه حادّ. وقطار تونيل المائل يختصر جزءاً من هذا الصعود، ومعظم الزوار لا يعلمون بوجوده.\n\nوالحال في النقل العام مختلطة. ففي معظم محطات المترو مصاعد؛ ويُنزَل إلى محطات الترام بمنحدرات في الغالب؛ لكن الدرج لا مفرّ منه في أرصفة العبّارات القديمة وبعض الجسور العلوية.\n\nوالنتيجة العملية: حمّالة الصدر للطفل دون السنتين أريح في إسطنبول من العربة في أغلب الأحيان. وإن فضّلت العربة فإن طرازاً بعجلات كبيرة يُطوى بيد واحدة يُحدث فرقاً.\n\nوللكبار بند واحد: حذاء مريح مغلق غير قابل للانزلاق. ففي برنامج أسبوع يُمشى ستة إلى ثمانية كيلومترات يومياً، وقسم كبير منها على أرض غير مستوية. والقدوم إلى إسطنبول بحذاء جديد يعني قضاء اليوم الثاني بجرح في العقب.\n\nوفي الأشهر الحارّة يتصدّر الماءُ والقبعةُ القائمةَ؛ فالظلّ في شبه الجزيرة التاريخية أقلّ مما يُظنّ.",
+          en: "Distances that look short on a map are not always short in Istanbul, because the city is built on hills.\n\nMost of Sultanahmet's streets are cobbled. A pushchair moves heavily over that surface and catches if the wheels are small. Around Galata and Beyoğlu the main issue is the gradient: the climb from Karaköy up to the Galata Tower is short but steep. The Tünel funicular takes part of that climb off you, and most visitors do not know it exists.\n\nPublic transport is mixed. Most metro stations have lifts; tram stops are usually reached by ramp; but stairs are unavoidable at the older ferry piers and some footbridges.\n\nThe practical upshot: for a child under two, a carrier is usually more comfortable in Istanbul than a pushchair. If you prefer the pushchair, a model with large wheels that folds one-handed makes a real difference.\n\nFor adults, one item: comfortable, closed, non-slip shoes. A week's programme means six to eight kilometres of walking a day, much of it on uneven ground. Arriving in Istanbul in newly bought shoes means spending day two with a blistered heel.\n\nIn the hot months, water and a hat head the list; there is less shade on the historic peninsula than people expect."
+        },
+      },
+      {
+        heading: {
+          tr: "Bir hafta değil de beş gün ya da on gün olursa",
+          ar: "وإن كانت المدّة خمسة أيام أو عشرة بدل الأسبوع",
+          en: "If it is five days or ten instead of a week",
+        },
+        body: {
+          tr: "Yedi gün İstanbul için rahat bir süre ama herkesin takvimi buna uymuyor. Programı kısaltmanın ve uzatmanın doğru sırası var.\n\nBeş güne inerken kesilecek yer şehir dışı günleridir, tarihî yarımada değil. Bursa ya da Sapanca'yı çıkarıp iki günü şehre bırakmak, her günü yarım bırakmaktan iyi. Beş günlük düzen şöyle oluyor: iki gün tarihî yarımada, bir gün Boğaz ve Beyoğlu, bir gün tek bir şehir dışı ya da Adalar, bir gün alışveriş ve serbest.\n\nÜç güne inildiğinde bambaşka bir program gerekiyor; onu ayrı bir rehberde ele aldık.\n\nOn güne çıkarken hata, aynı listeye daha çok durak eklemek olur. Doğrusu tempoyu düşürmek ve mesafeyi açmak: ikinci bir şehir dışı gün, Asya yakasına bir tam gün, bir de hiç plan yapılmayan iki gün. On günlük programlarda misafirlerin en çok memnun kaldığı kısım genelde plansız bıraktığımız günler oluyor.\n\nOn günden uzun kalıyorsanız İstanbul'u tek merkez yapmak yerine ikinci bir şehre geçmek daha iyi sonuç veriyor — Antalya, Bodrum, Trabzon ya da Bursa. Bu noktada program çok şehirli bir plana dönüşüyor ve uçuş ile konaklamanın birlikte kurulması gerekiyor.\n\nBiz bu planı kaç kişi olduğunuza, çocukların yaşına ve hangi tarihlerde geleceğinize göre çıkarıyoruz. Programı yazıp gönderiyoruz; beğenmezseniz değiştiriyoruz, bir bedeli yok.",
+          ar: "سبعة أيام مدّة مريحة لإسطنبول، لكن تقويم كل إنسان لا يوافق ذلك. ولاختصار البرنامج وتمديده ترتيب صحيح.\n\nفعند النزول إلى خمسة أيام يكون الحذف من أيام خارج المدينة لا من شبه الجزيرة التاريخية. فإخراج بورصة أو سبانجا وترك يومين للمدينة خير من ترك كل يوم ناقصاً. ويصير نظام الخمسة أيام هكذا: يومان في شبه الجزيرة التاريخية، ويوم للبوسفور وبي أوغلو، ويوم لرحلة واحدة خارج المدينة أو للجزر، ويوم للتسوّق والوقت الحرّ.\n\nوعند النزول إلى ثلاثة أيام يلزم برنامج مختلف تماماً؛ وقد تناولناه في دليل مستقلّ.\n\nوعند الصعود إلى عشرة أيام يكون الخطأ إضافة محطات أكثر إلى القائمة نفسها. والصواب خفض الإيقاع وتوسيع المسافة: يوم ثانٍ خارج المدينة، ويوم كامل في الجانب الآسيوي، ويومان بلا خطة أصلاً. وفي برامج العشرة أيام يكون أكثر ما يرضي الضيوف عادةً هو الأيام التي تركناها بلا تخطيط.\n\nوإن كانت إقامتك أطول من عشرة أيام فالانتقال إلى مدينة ثانية يعطي نتيجة أفضل من جعل إسطنبول مركزاً وحيداً — أنطاليا أو بودروم أو طرابزون أو بورصة. وعند هذه النقطة يتحوّل البرنامج إلى خطة متعدّدة المدن ويلزم بناء الطيران والإقامة معاً.\n\nونحن نستخرج هذه الخطة بحسب عددكم وأعمار الأطفال والتواريخ التي ستأتون فيها. نكتب البرنامج ونرسله؛ وإن لم يعجبك غيّرناه، ولا مقابل لذلك."
+          ,
+          en: "Seven days is a comfortable length for Istanbul, but not everyone's calendar agrees. There is a right order for cutting the plan down and for stretching it.\n\nWhen coming down to five days, cut the out-of-town days, not the historic peninsula. Dropping Bursa or Sapanca and leaving two days for the city beats leaving every day half-finished. A five-day shape looks like this: two days on the historic peninsula, one for the Bosphorus and Beyoğlu, one for a single day trip or the islands, and one for shopping and free time.\n\nAt three days you need an entirely different plan; we have covered that in a separate guide.\n\nWhen stretching to ten days, the mistake is adding more stops to the same list. The right move is to slow the pace and widen the distance: a second day trip, a full day on the Asian side, and two days with no plan at all. On ten-day programmes, the part guests are happiest with is usually the days we left unplanned.\n\nIf you are staying longer than ten days, moving to a second city works better than making Istanbul your only base — Antalya, Bodrum, Trabzon or Bursa. At that point the plan becomes a multi-city one, and flights and hotels have to be built together.\n\nWe draw this plan up according to how many you are, the children's ages and the dates you are coming. We write the programme and send it; if you do not like it we change it, at no cost."
+        },
+      },
     ],
   },
   {
     slug: "arapca-konusan-sofor-ve-rehber",
     topic: "practical",
     image: "/images/chauffeur.jpg",
-    minutes: 6,
     title: {
       tr: "Türkiye'de Arapça konuşan şoför ve rehber neden fark yaratır?",
       ar: "لماذا يُحدث السائق والمرشد الناطق بالعربية فرقاً في تركيا؟",
@@ -1141,7 +1246,6 @@ export const guides: Guide[] = [
     slug: "bursa-uludag-gunubirlik",
     topic: "daytrips",
     image: "/images/places/bursa-koy-sokak.jpg",
-    minutes: 6,
     title: {
       tr: "Bursa ve Uludağ: İstanbul'dan günübirlik rehber",
       ar: "بورصة وأولوداغ: دليل رحلة يوم واحد من إسطنبول",
@@ -1267,7 +1371,6 @@ export const guides: Guide[] = [
     slug: "turkiyede-alisveris-rehberi",
     topic: "practical",
     image: "/images/tours/istanbul.jpg",
-    minutes: 6,
     title: {
       tr: "İstanbul'da alışveriş: çarşılar, caddeler ve merkezler",
       ar: "التسوّق في إسطنبول: البازارات والشوارع والمولات",
@@ -1393,7 +1496,6 @@ export const guides: Guide[] = [
     slug: "istanbulda-helal-yemek-rehberi",
     topic: "practical",
     image: "/images/places/kadikoy.jpg",
-    minutes: 6,
     title: {
       tr: "İstanbul'da helal yemek: nerede ne yenir",
       ar: "الطعام الحلال في إسطنبول: أين تأكل وماذا",
@@ -1519,7 +1621,6 @@ export const guides: Guide[] = [
     slug: "bogaz-turu-rehberi",
     topic: "daytrips",
     image: "/images/places/bogaz-vapur.jpg",
-    minutes: 6,
     title: {
       tr: "Boğaz turu rehberi: hangi tekne, ne kadar sürer",
       ar: "دليل جولة البوسفور: أي قارب وكم تستغرق",
@@ -1645,7 +1746,6 @@ export const guides: Guide[] = [
     slug: "cocuklu-ailelerle-istanbul",
     topic: "practical",
     image: "/images/places/lale-bahce.jpg",
-    minutes: 6,
     title: {
       tr: "Çocuklu ailelerle İstanbul: pratik notlar",
       ar: "إسطنبول مع الأطفال: ملاحظات عملية",
@@ -1771,7 +1871,6 @@ export const guides: Guide[] = [
     slug: "istanbulda-uc-gun-programi",
     topic: "planning",
     image: "/images/places/tarihi-yarimada.jpg",
-    minutes: 6,
     title: {
       tr: "İstanbul'da üç gün: kısa ziyaret programı",
       ar: "ثلاثة أيام في إسطنبول: برنامج زيارة قصيرة",
@@ -1897,7 +1996,6 @@ export const guides: Guide[] = [
     slug: "istanbulda-toplu-tasima-rehberi",
     topic: "arrival",
     image: "/images/places/tramvay.jpg",
-    minutes: 6,
     title: {
       tr: "İstanbul'da toplu taşıma: metro, tramvay, vapur",
       ar: "المواصلات في إسطنبول: المترو والترام والعبّارات",
@@ -2023,7 +2121,6 @@ export const guides: Guide[] = [
     slug: "istanbulda-hava-durumu-ve-giyim",
     topic: "planning",
     image: "/images/places/bogaz-yali.jpg",
-    minutes: 6,
     title: {
       tr: "İstanbul'da hava ve ne giyilir: ay ay rehber",
       ar: "الطقس في إسطنبول وماذا ترتدي: دليل شهرياً",
@@ -2149,7 +2246,6 @@ export const guides: Guide[] = [
     slug: "turkiyede-sehirler-arasi-mesafeler",
     topic: "arrival",
     image: "/images/tours/trabzon.jpg",
-    minutes: 6,
     title: {
       tr: "Türkiye'de şehirler arası mesafeler ve süreler",
       ar: "المسافات والمدد بين المدن التركية",
@@ -2275,7 +2371,6 @@ export const guides: Guide[] = [
     slug: "turkiyede-balayi-rehberi",
     topic: "practical",
     image: "/images/tours/bodrum.jpg",
-    minutes: 6,
     title: {
       tr: "Türkiye'de balayı: nereye, ne zaman, kaç gün",
       ar: "شهر العسل في تركيا: أين ومتى وكم يوماً",
@@ -2401,7 +2496,6 @@ export const guides: Guide[] = [
     slug: "antalya-bolge-rehberi",
     topic: "daytrips",
     image: "/images/places/kemer.jpg",
-    minutes: 6,
     title: {
       tr: "Antalya bölge rehberi: Kaleiçi, Side, Kemer, Belek ve Alanya",
       ar: "دليل منطقة أنطاليا: كاليتشي وسيدة وكمر وبيليك وألانيا",
@@ -2549,7 +2643,6 @@ export const guides: Guide[] = [
     slug: "bodrum-ege-rehberi",
     topic: "daytrips",
     image: "/images/places/bodrum-koy.jpg",
-    minutes: 6,
     title: {
       tr: "Bodrum ve Ege rehberi: koylar, marinalar ve hangi mevsim",
       ar: "دليل بودروم وبحر إيجه: الخلجان والمارينا وأي موسم",
@@ -2697,7 +2790,6 @@ export const guides: Guide[] = [
     slug: "turkiyede-para-kart-ve-odeme",
     topic: "practical",
     image: "/images/places/kapalicarsi.jpg",
-    minutes: 5,
     title: {
       tr: "Türkiye'de para, kart ve ödeme: neyi nerede kullanırsınız",
       ar: "النقود والبطاقات والدفع في تركيا: ماذا تستخدم وأين",
@@ -2819,7 +2911,6 @@ export const guides: Guide[] = [
     slug: "ramazan-ve-bayramda-turkiye",
     topic: "planning",
     image: "/images/places/suleymaniye.jpg",
-    minutes: 5,
     title: {
       tr: "Ramazan ve bayramda Türkiye: ne değişir, ne değişmez",
       ar: "تركيا في رمضان والعيد: ما الذي يتغيّر وما الذي يبقى",
@@ -2941,7 +3032,6 @@ export const guides: Guide[] = [
     slug: "turkiyede-sim-kart-ve-internet",
     topic: "practical",
     image: "/images/places/levent.jpg",
-    minutes: 4,
     title: {
       tr: "Türkiye'de SIM kart ve internet: nasıl bağlanırsınız",
       ar: "شريحة الاتصال والإنترنت في تركيا: كيف تتصل",
@@ -3051,7 +3141,6 @@ export const guides: Guide[] = [
     slug: "turkiyede-tatil-butcesi-nasil-kurulur",
     topic: "planning",
     image: "/images/places/galata-halic.jpg",
-    minutes: 6,
     title: {
       tr: "Türkiye tatil bütçesi: neyin ne kadar tuttuğunu anlamak",
       ar: "ميزانية إجازة تركيا: كيف تفهم ما الذي يكلّف وكم",
@@ -3173,7 +3262,6 @@ export const guides: Guide[] = [
     slug: "otel-secerken-nelere-bakmali",
     topic: "practical",
     image: "/images/places/yalikavak.jpg",
-    minutes: 6,
     title: {
       tr: "Otel seçerken nelere bakmalı: yıldız, manzara, aile odası, banyo",
       ar: "ما الذي تنظر إليه عند اختيار الفندق: النجوم والإطلالة وغرفة العائلة والحمّام",
@@ -3313,7 +3401,6 @@ export const guides: Guide[] = [
     slug: "istanbul-adalar-rehberi",
     topic: "daytrips",
     image: "/images/places/adalar.jpg",
-    minutes: 7,
     title: {
       tr: "Adalar: İstanbul'dan vapurla günübirlik rehber",
       ar: "جزر الأميرات: دليل رحلة يوم واحد بالعبّارة من إسطنبول",
@@ -3440,6 +3527,31 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+/**
+ * Okuma süresi (dakika).
+ *
+ * Önceden her rehberde elle yazılı bir sayıydı ve tutunamıyordu: bir yazı
+ * derinleştirildiğinde sayı olduğu yerde kalıyordu. Sonuçta aynı "6 dakika"
+ * etiketi hem 380 kelimelik hem 1.038 kelimelik yazının altında duruyordu —
+ * okuyucuya söylenen şey yanlıştı ve yanlışlığı her düzenlemede büyüyordu.
+ *
+ * Ölçü Arapça gövde: sitenin varsayılan dili o, ve üç dil arasında en uzun
+ * metin de o. Dakikada 150 kelime, sessiz okuma hızının alt bandı; hızlı
+ * okuyana abartılı görünmektense yavaş okuyan için doğru olsun diye böyle.
+ * Alt sınır üç dakika, çünkü "1 dakika" etiketi yazıyı olduğundan hafif
+ * gösteriyor.
+ */
+const DAKIKADA_KELIME = 150;
+
+export function guideMinutes(guide: Guide) {
+  const metin = [
+    ...guide.sections.map((section) => `${section.heading.ar} ${section.body.ar}`),
+    ...guide.faq.map((item) => `${item.question.ar} ${item.answer.ar}`),
+  ].join(" ");
+  const kelime = metin.split(/\s+/).filter(Boolean).length;
+  return Math.max(3, Math.round(kelime / DAKIKADA_KELIME));
+}
 
 export function guideBySlug(slug: string) {
   return guides.find((guide) => guide.slug === slug);

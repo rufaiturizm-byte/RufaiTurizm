@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { ArrowRight, Clock } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading, SectionAction } from "./section-heading";
-import { guides } from "@/data/guides";
+import { guideMinutes, guides } from "@/data/guides";
 import type { Locale } from "@/i18n/routing";
 
 /**
@@ -74,7 +74,7 @@ export async function GuidesTeaser({ locale }: { locale: string }) {
                   style={{ boxShadow: "var(--shadow-e1)" }}
                 >
                   <Clock className="size-3" aria-hidden="true" />
-                  {guide.minutes} {t("minutes")}
+                  {guideMinutes(guide)} {t("minutes")}
                 </span>
               </Link>
 

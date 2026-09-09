@@ -6,6 +6,7 @@ import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
+import { ProseSection } from "@/components/site/prose-section";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
 import { TrustStats } from "@/components/site/trust-stats";
@@ -247,6 +248,26 @@ export default async function AboutPage({
           </div>
         </div>
       </section>
+
+      {/*
+        Belgenin kendisi.
+        Kanıt kartlarından biri "TÜRSAB kaydı doğrulanabilir" diyor ve
+        resmî arama sayfasına bağlanıyor — ama oraya tıklayan misafir boş
+        bir arama kutusu görüyor ve ne yazacağını bilmiyor. Bölüm o adımı
+        yazıyor: hangi kutuya ne girilir, kayıt hangi adla açılır.
+
+        İkinci sebep, kaydın kendisinde çıkan ve sitede hiç geçmeyen bir
+        şey: rufaiturizm.com bu belgenin altında "doğrulanmış web sitesi"
+        olarak duruyor. Yani bu SAYFA ile belge arasındaki bağı TÜRSAB
+        kuruyor. Körfez'den bakan biri için elimizdeki en güçlü kanıt bu
+        ve söylenmiyordu.
+
+        Son paragraf bilerek belgenin sınırını söylüyor: belge hizmet
+        kalitesini garanti etmiyor. Sayfanın "herkese uygun değiliz"
+        maddesiyle aynı mantık — kanıtı olduğundan büyük göstermek,
+        kanıtın kendisini de şüpheli yapıyor.
+      */}
+      <ProseSection title={t("licenceTitle")} body={t("licenceText")} className="pt-20" />
 
       {/*
         Aksilik bölümü, kanıtların hemen ardında.

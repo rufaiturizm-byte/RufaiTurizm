@@ -3127,7 +3127,7 @@ export const guides: Guide[] = [
   {
     slug: "turkiyede-sim-kart-ve-internet",
     topic: "practical",
-    image: "/images/places/levent.jpg",
+    image: "/images/places/telefon-galata.jpg",
     title: {
       tr: "Türkiye'de SIM kart ve internet: nasıl bağlanırsınız",
       ar: "شريحة الاتصال والإنترنت في تركيا: كيف تتصل",
@@ -3236,7 +3236,7 @@ export const guides: Guide[] = [
   {
     slug: "turkiyede-tatil-butcesi-nasil-kurulur",
     topic: "planning",
-    image: "/images/places/galata-halic.jpg",
+    image: "/images/places/cay-ayasofya.jpg",
     title: {
       tr: "Türkiye tatil bütçesi: neyin ne kadar tuttuğunu anlamak",
       ar: "ميزانية إجازة تركيا: كيف تفهم ما الذي يكلّف وكم",

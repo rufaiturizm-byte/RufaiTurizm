@@ -57,6 +57,8 @@ değişikliği gerekmez.
 | istanbul-gece.jpg | Gece Boğaz Köprüsü ve İstanbul silueti | Joshua Kettle |
 | levent.jpg | Levent'te iş kuleleri ve sahil yolu (İstanbul) | Can Kibar |
 | adalar.jpg | Büyükada'nın denizden görünüşü — yamaçtaki köşkler ve çam ormanı | Merve Bayat |
+| cay-ayasofya.jpg | Elde çay bardağı, arkada Ayasofya (Sultanahmet) | Alexis J. |
+| telefon-galata.jpg | Haliç kıyısında telefonla Galata Kulesi'ni çeken kadın | Imad Alassiry |
 
 Her kare içeriği doğrulanarak seçildi: arama sonucundaki açıklamalar genel
 ("a building that looks like a mosque") olduğu için görsellerin hepsi tek tek
@@ -208,3 +210,15 @@ yoluyla gidiliyor. Aynı aramada Büyükada'da bir otelin tabelası
 önündeki bisiklet karesi de vardı; adaların araba yasağını iyi
 anlatıyordu ama tavsiye etmediğimiz bir işletmenin adı kapakta
 duracaktı, o yüzden kullanılmadı.
+
+### cay-ayasofya.jpg ve telefon-galata.jpg
+
+Bağlamsal rehber bağlantılarını eklediğimde iki sayfada aynı fotoğraf iki
+kez basılmaya başlamıştı: paketler sayfasında "tatil bütçesi" rehberinin
+kapağı İstanbul 4 gün paketiyle (galata-halic.jpg), transfer sayfasında
+"SIM kart" rehberinin kapağı Şişli–Nişantaşı güzergâhıyla (levent.jpg)
+çakışıyordu. İki rehbere kendi kapağı verildi.
+
+Telefon karesi SIM ve internet rehberi için konusuna birebir oturuyor:
+seyahatte telefonla fotoğraf çeken bir misafir. Çay karesi ise bütçe
+rehberinin anlattığı şeyin gündelik hali.

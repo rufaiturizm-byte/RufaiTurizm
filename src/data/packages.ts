@@ -43,6 +43,23 @@ export interface PackageDay {
   body: Text;
 }
 
+/**
+ * Programın uzun bölümleri.
+ *
+ * Gün gün program "ne yapacağız" diyor; alıcının sorduğu iki şey bunun
+ * dışında kalıyordu: fiyatı ne belirliyor ve bu program bana uyar mı.
+ * Paket kartlarında fiyat "istek üzerine" yazdığı için birincisi
+ * özellikle boşluktaydı.
+ *
+ * Tur ve hizmet sayfalarındaki `sections` ile aynı yapı; orada mesaj
+ * dosyalarında duruyor çünkü metinleri oradan geliyor, burada ise
+ * paketin kendi verisiyle birlikte.
+ */
+export interface PackageSection {
+  heading: Text;
+  body: Text;
+}
+
 export interface Package {
   slug: string;
   /*
@@ -81,6 +98,8 @@ export interface Package {
   image: string;
   /** Gün gün program. */
   itinerary: PackageDay[];
+  /** Gün gün programın altındaki uzun bölümler. */
+  sections?: PackageSection[];
   /** Fiyata dahil olanlar — anahtar `included.*` mesajlarından gelir. */
   includes: string[];
   faq: PackageFaq[];
@@ -115,6 +134,32 @@ export const packages: Package[] = [
       ar: "شبه الجزيرة التاريخية والبوسفور وبي أوغلو؛ الخطوط العريضة لإسطنبول دون الخروج من المدينة.",
       en: "The historic peninsula, the Bosphorus and Beyoğlu — Istanbul in outline, without leaving the city.",
     },
+    sections: [
+      {
+        heading: {
+          tr: "Fiyatı ne belirliyor",
+          ar: "ما الذي يحدّد السعر",
+          en: "What sets the price",
+        },
+        body: {
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu program kime uyar",
+          ar: "لمن يناسب هذا البرنامج",
+          en: "Who this programme suits",
+        },
+        body: {
+          tr: "Dört gün İstanbul'un ana başlıklarını görmeye yeten en kısa süre. Tarihî yarımada, Boğaz ve çarşılar rahat bir tempoyla sığıyor.\n\nİyi geldiği kişiler: İstanbul'a ilk kez gelenler, kısa izin kullananlar, ve şehir dışına çıkmadan tek bir yere odaklanmak isteyenler. İlk gün bilerek boş bırakılıyor — uçuş yorgunluğu, otele yerleşme ve ilk akşam için.\n\nYetmeyebileceği kişiler: Bursa ya da Sapanca'yı da görmek isteyenler. Dört güne günübirlik sıkıştırmak şehirdeki günlerden birini yiyor; o durumda altı ya da sekiz günlük programlar daha iyi oturuyor.\n\nÇocuklu ailelerde tempo düşürülebiliyor: günde iki ana durak bırakıp öğleden sonraları serbest tutmak dört günü de rahat geçiriyor.\n\nProgram hazır olarak alınmak zorunda değil. Gün sayısını, durakları ve günün temposunu birlikte ayarlıyoruz.",
+          ar: "أربعة أيام أقصر مدة تكفي لرؤية عناوين إسطنبول الرئيسية. فشبه الجزيرة التاريخية والبوسفور والأسواق تتّسع بإيقاع مريح.\n\nيناسب: من يزور إسطنبول لأول مرة، ومن إجازته قصيرة، ومن يريد التركيز على مكان واحد دون الخروج من المدينة. واليوم الأول يُترك فارغاً عمداً — لتعب الرحلة والاستقرار في الفندق والمساء الأول.\n\nوقد لا يكفي: من يريد رؤية بورصة أو سبانجا أيضاً. فحشر رحلة يوم واحد داخل أربعة أيام يأكل يوماً من أيام المدينة؛ وفي هذه الحال يستقيم برنامج الستة أو الثمانية أيام أكثر.\n\nوعند العائلات ذات الأطفال يمكن خفض الإيقاع: الاكتفاء بمحطتين رئيسيتين في اليوم وترك ما بعد الظهر حرّاً يجعل الأيام الأربعة تمرّ بأريحية.\n\nولست مضطراً إلى أخذ البرنامج جاهزاً. فنحن نضبط معك عدد الأيام والمحطات وإيقاع اليوم.",
+          en: "Four days is the shortest span that covers Istanbul's headline sights. The historic peninsula, the Bosphorus and the bazaars fit at a comfortable pace.\n\nIt suits: first-time visitors to Istanbul, those on short leave, and anyone who wants to focus on one place without leaving the city. The first day is deliberately left open — for the flight, settling into the hotel and the first evening.\n\nIt may not be enough for: anyone who also wants to see Bursa or Sapanca. Squeezing a day trip into four days eats one of the city days; the six- or eight-day programmes sit better then.\n\nWith children the pace can be dropped: two main stops a day with the afternoons left free carries all four days comfortably.\n\nThe programme does not have to be taken as it stands. We set the number of days, the stops and the pace of the day together.",
+        },
+      },
+    ],
     itinerary: [
       {
         title: { tr: "Varış ve karşılama", ar: "الوصول والاستقبال", en: "Arrival and welcome" },
@@ -198,6 +243,32 @@ export const packages: Package[] = [
       ar: "يضاف إلى برنامج المدينة جبل أولوداغ وقرية جومالي كيزيك؛ وهو المسار الأكثر طلباً في موسم الثلج.",
       en: "Uludağ and Cumalıkızık are added to the city programme — the most requested route in the snow season.",
     },
+    sections: [
+      {
+        heading: {
+          tr: "Fiyatı ne belirliyor",
+          ar: "ما الذي يحدّد السعر",
+          en: "What sets the price",
+        },
+        body: {
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu program kime uyar",
+          ar: "لمن يناسب هذا البرنامج",
+          en: "Who this programme suits",
+        },
+        body: {
+          tr: "Altı gün, İstanbul'u rahat görüp bir şehir daha eklemeye yeten süre. Dört gün İstanbul, ardından Bursa'da bir gece.\n\nBu düzenin sebebi şu: Bursa'yı günübirlik yapmak günün iki buçuk saatini yola veriyor ve tempo sıkışıyor. Bir gece kalmak günü ikiye bölüyor — teleferikte daha uzun kalmak, kaplıcalara gitmek ya da Cumalıkızık'ta kahvaltıyı acele etmeden yapmak mümkün oluyor.\n\nİyi geldiği kişiler: İstanbul'u ilk kez görüp yanına bir şey eklemek isteyenler, Osmanlı tarihiyle ilgilenenler, ve kar mevsiminde (aralık–mart) Uludağ'ı görmek isteyenler.\n\nKüçük çocuklu ailelerde fark daha büyük: günübirlikte çocuk yolda yoruluyor ve ikinci yarıda program işlemiyor. Bir gecelik konaklama iki günü de rahat geçiriyor.\n\nBursa'da konaklama İstanbul'a göre belirgin biçimde uygun; termal otelleri aynı bütçede daha iyi karşılık veriyor.",
+          ar: "ستة أيام مدة تكفي لرؤية إسطنبول بأريحية وإضافة مدينة أخرى. أربعة أيام في إسطنبول ثم ليلة في بورصة.\n\nوسبب هذا الترتيب: أن جعل بورصة رحلة يوم واحد يعطي ساعتين ونصف من اليوم للطريق فيضيق الإيقاع. والمبيت ليلة يقسم اليوم قسمين — فيمكن البقاء أطول في التلفريك، أو الذهاب إلى الحمّامات المعدنية، أو تناول الفطور في جومالي كيزيك دون عجلة.\n\nيناسب: من يرى إسطنبول لأول مرة ويريد أن يضيف إليها شيئاً، ومن يهتمّ بالتاريخ العثماني، ومن يريد رؤية أولوداغ في موسم الثلج (ديسمبر–مارس).\n\nوالفرق أكبر عند العائلات ذات الأطفال الصغار: ففي رحلة اليوم الواحد يتعب الطفل على الطريق ولا يعمل البرنامج في نصفه الثاني. والمبيت ليلة يجعل اليومين يمرّان بأريحية.\n\nوالإقامة في بورصة أنسب بوضوح منها في إسطنبول؛ وفنادقها الحرارية تعطي مقابلاً أفضل بالميزانية نفسها.",
+          en: "Six days is enough to see Istanbul comfortably and add one more city. Four days in Istanbul, then a night in Bursa.\n\nThe reason for that shape: making Bursa a day trip gives two and a half hours of the day to the road and tightens the pace. Staying a night splits the day in two — you can stay longer at the cable car, go to the thermal baths, or have breakfast at Cumalıkızık without hurrying.\n\nIt suits: those seeing Istanbul for the first time who want to add something, anyone interested in Ottoman history, and those who want Uludağ in the snow season (December–March).\n\nThe difference is larger for families with small children: on a day trip the child tires on the road and the second half of the programme stops working. A night makes both days pass comfortably.\n\nAccommodation in Bursa is noticeably kinder than in Istanbul, and its thermal hotels give better value at the same budget.",
+        },
+      },
+    ],
     itinerary: [
       {
         title: { tr: "Varış ve karşılama", ar: "الوصول والاستقبال", en: "Arrival and welcome" },
@@ -301,6 +372,32 @@ export const packages: Package[] = [
       ar: "المدينة والبحيرة والجبل معاً؛ وهي المدة الأكثر توازناً للعائلات مع رحلتين خارج المدينة.",
       en: "City, lake and mountain together — the most balanced length for families, with two day trips.",
     },
+    sections: [
+      {
+        heading: {
+          tr: "Fiyatı ne belirliyor",
+          ar: "ما الذي يحدّد السعر",
+          en: "What sets the price",
+        },
+        body: {
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu program kime uyar",
+          ar: "لمن يناسب هذا البرنامج",
+          en: "Who this programme suits",
+        },
+        body: {
+          tr: "Sekiz gün, üç yeri acele etmeden görmeye yeten süre — ve programın asıl mantığı bu: daha çok durak değil, daha az koşuşturma.\n\nDüzen şöyle: İstanbul, ardından Sapanca'da doğa günü, sonra Bursa. Sapanca en sakin durak; sitedeki programlar arasında yürüyüşün en az olduğu gün orası.\n\nİyi geldiği kişiler: iki haftadan kısa ama bir haftadan uzun izin kullananlar, şehirle doğayı aynı seyahatte isteyenler, ve küçük çocukla ya da yaşlı bir yakınla gezen aileler — araya sakin günler girdiği için tempo düşüyor.\n\nBu programda üçüncü bir şehir eklemeyi önermiyoruz. Sekiz güne dördüncü bir durak koymak iki günü daha yola verir; kazanılan şey kaybedilenden az.\n\nSekiz günden uzun kalıyorsanız İstanbul'u merkez tutmak yerine bir sahil şehrine geçmek daha iyi sonuç veriyor — Antalya ya da Bodrum. O noktada program çok şehirli bir plana dönüşüyor.",
+          ar: "ثمانية أيام مدة تكفي لرؤية ثلاثة أماكن دون عجلة — وهذا منطق البرنامج الحقيقي: محطات أقلّ ركضاً لا محطات أكثر.\n\nوالترتيب: إسطنبول، ثم يوم طبيعة في سبانجا، ثم بورصة. وسبانجا أهدأ محطة؛ وهي اليوم الأقلّ مشياً بين برامج الموقع.\n\nيناسب: من إجازته أطول من أسبوع وأقصر من أسبوعين، ومن يريد المدينة والطبيعة في سفرة واحدة، والعائلات التي تسافر مع طفل صغير أو قريب مسنّ — فدخول أيام هادئة بينها يخفض الإيقاع.\n\nولا نقترح إضافة مدينة ثالثة إلى هذا البرنامج. فوضع محطة رابعة في ثمانية أيام يعطي يومين آخرين للطريق؛ وما يُكسب أقلّ ممّا يُفقد.\n\nوإن كانت إقامتك أطول من ثمانية أيام فالانتقال إلى مدينة ساحلية يعطي نتيجة أفضل من جعل إسطنبول مركزاً — أنطاليا أو بودروم. وعند تلك النقطة يتحوّل البرنامج إلى خطة متعدّدة المدن.",
+          en: "Eight days is enough to see three places without hurrying — and that is the real logic of the programme: less rushing, not more stops.\n\nThe shape: Istanbul, then a day of countryside at Sapanca, then Bursa. Sapanca is the calmest stop; it is the day with the least walking of any programme on the site.\n\nIt suits: those with more than a week and less than a fortnight, anyone who wants both city and countryside in one trip, and families travelling with a small child or an elderly relative — the quiet days in between lower the pace.\n\nWe do not suggest adding a third city to this programme. A fourth stop in eight days gives two more days to the road; what you gain is less than what you lose.\n\nIf you are staying longer than eight days, moving to a coastal city works better than keeping Istanbul as the base — Antalya or Bodrum. At that point the plan becomes a multi-city one.",
+        },
+      },
+    ],
     itinerary: [
       {
         title: { tr: "Varış ve karşılama", ar: "الوصول والاستقبال", en: "Arrival and welcome" },
@@ -416,6 +513,32 @@ export const packages: Package[] = [
       ar: "أوزنجول وسوميلا والمرتفعات؛ المسار الأخضر للعائلات الهاربة من حر الصيف.",
       en: "Uzungöl, Sümela and the highlands — the green route for families escaping the summer heat.",
     },
+    sections: [
+      {
+        heading: {
+          tr: "Fiyatı ne belirliyor",
+          ar: "ما الذي يحدّد السعر",
+          en: "What sets the price",
+        },
+        body: {
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu program kime uyar",
+          ar: "لمن يناسب هذا البرنامج",
+          en: "Who this programme suits",
+        },
+        body: {
+          tr: "Trabzon'da beş gün, mesafelerden çıkan bir sayı. Gezilecek yerler şehir merkezinde değil ve tek güne sığmıyor: Uzungöl tek yön iki saat, Sümela ayrı bir gün.\n\nİyi geldiği kişiler: yeşil, sis ve yayla arayanlar, sıcaktan kaçmak isteyenler — yaz ortasında bile yaylalar serin. Körfez'den gelen misafirlerin Karadeniz'i özellikle sorması bu yüzden.\n\nZorlanabilecek kişiler: uzun araç yolculuğu küçük çocuklarda ve yaşlılarda yorgunluk yaratıyor; yollar da virajlı. Sümela'ya çıkış eğimli ve her yaşa uygun değil.\n\nMevsim burada başka yerlerden daha belirleyici: yayla sezonu haziran sonu–eylül. Kışın yollar kar nedeniyle kapanabiliyor ve Uzungöl'e ulaşım zorlaşıyor.\n\nTrabzon'a ulaşım uçakla: İstanbul'dan karayolu bin kilometreyi aşıyor ve tek yön bir gün alıyor. Uçak bileti programa dahil değil; isterseniz sizin adınıza alıyoruz ve varışta karşılıyoruz.",
+          ar: "خمسة أيام في طرابزون رقم يخرج من المسافات. فالأماكن التي تُزار ليست في مركز المدينة ولا تتّسع ليوم واحد: أوزنجول ساعتان في الاتجاه الواحد، وسوميلا يوم مستقلّ.\n\nيناسب: من يطلب الخضرة والضباب والمرتفعات، ومن يهرب من الحرّ — فالمرتفعات باردة حتى في وسط الصيف. ولهذا يسأل ضيوف الخليج عن البحر الأسود على وجه الخصوص.\n\nوقد يشقّ على: فالطريق الطويل يُتعب الأطفال الصغار وكبار السنّ؛ والطرق ملتوية أيضاً. والصعود إلى سوميلا منحدر ولا يناسب كل الأعمار.\n\nوالموسم هنا أكثر حسماً منه في غيره: موسم المرتفعات من أواخر يونيو إلى سبتمبر. وفي الشتاء قد تُغلق الطرق بالثلج ويصعب الوصول إلى أوزنجول.\n\nوالوصول إلى طرابزون جوّاً: فالطريق البرّي من إسطنبول يتجاوز ألف كيلومتر ويستهلك يوماً في الاتجاه الواحد. وتذكرة الطيران غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت ونستقبلك عند الوصول.",
+          en: "Five days in Trabzon is a number that comes out of the distances. The places worth seeing are not in the city centre and do not fit into one day: Uzungöl is two hours each way, Sümela is a day of its own.\n\nIt suits: people after greenery, mist and highlands, and those escaping the heat — the highlands stay cool even in midsummer. It is why Gulf guests ask about the Black Sea in particular.\n\nIt can be hard for: the long drives tire small children and older travellers, and the roads wind. The climb to Sümela is steep and does not suit every age.\n\nSeason matters more here than elsewhere: the highland season runs from late June to September. In winter roads can close with snow and reaching Uzungöl becomes difficult.\n\nTrabzon is reached by air: the road from Istanbul is over a thousand kilometres and takes a day each way. The flight is not part of the programme; we buy it in your name if you want, and meet you on arrival.",
+        },
+      },
+    ],
     itinerary: [
       {
         title: { tr: "Varış", ar: "الوصول", en: "Arrival" },
@@ -511,6 +634,32 @@ export const packages: Package[] = [
       ar: "كاليتشي وسيدة وشلال دودان وجولة القارب؛ مسار المتوسط الذي يجمع البحر والتاريخ في برنامج واحد.",
       en: "Kaleiçi, Side, the Düden Waterfall and a boat trip — the Mediterranean route that joins sea and history in one programme.",
     },
+    sections: [
+      {
+        heading: {
+          tr: "Fiyatı ne belirliyor",
+          ar: "ما الذي يحدّد السعر",
+          en: "What sets the price",
+        },
+        body: {
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu program kime uyar",
+          ar: "لمن يناسب هذا البرنامج",
+          en: "Who this programme suits",
+        },
+        body: {
+          tr: "Beş gün Antalya'da hem denize hem şehre yeten süre. Program merkez, Lara ya da Belek–Side hattında kalındığı varsayımıyla kurulu; o üçünden hangisinde olursanız olun günlük çıkışlar aynı sürede yapılıyor.\n\nİyi geldiği kişiler: sahil tatili isteyip otelde kapalı kalmak istemeyenler, antik kentlerle ilgilenenler (Aspendos ve Perge merkeze bir saatten yakın), ve küçük çocuklu aileler — Lara, Belek ve Side kum, denize giriş kademeli.\n\nDikkat edilecek şey kalış yeri. Kemer'de, özellikle Alanya'da kalıyorsanız her gün yola çıkmak gerekiyor; Alanya merkeze 100-130 dakika, yani gidiş-dönüş dört saat. Kalış yerinizi söylerseniz güzergâhı ona göre kuruyoruz.\n\nMevsim: mayıs–haziran ve eylül en dengeli aylar. Temmuz–ağustos en sıcak ve en kalabalık; öğle saatleri küçük çocuklarda zorlayıcı oluyor.\n\nUçak bileti programa dahil değil; isterseniz sizin adınıza alıyoruz.",
+          ar: "خمسة أيام في أنطاليا مدة تكفي للبحر والمدينة معاً. والبرنامج مبنيّ على افتراض الإقامة في المركز أو لارا أو خط بيليك–سيده؛ وأياً كان منها فالخروج اليومي يتمّ بالمدة نفسها.\n\nيناسب: من يريد إجازة ساحل ولا يريد البقاء حبيس الفندق، ومن يهتمّ بالمدن الأثرية (فأسبندوس وبيرغه على أقلّ من ساعة من المركز)، والعائلات ذات الأطفال الصغار — فلارا وبيليك وسيده رملية والنزول إلى البحر متدرّج.\n\nوما ينبغي الانتباه له مكان الإقامة. فإن كنت نازلاً في كيمر، وخاصة في ألانيا، لزم الخروج إلى الطريق كل يوم؛ فألانيا على 100 إلى 130 دقيقة من المركز، أي أربع ساعات ذهاباً وإياباً. وإن أخبرتنا بمكان إقامتك بنينا المسار عليه.\n\nوالموسم: مايو–يونيو وسبتمبر أكثر الأشهر توازناً. ويوليو وأغسطس أشدّها حرّاً وازدحاماً؛ وساعات الظهيرة فيهما ثقيلة على الأطفال الصغار.\n\nوتذكرة الطيران غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت.",
+          en: "Five days in Antalya is enough for both the sea and the city. The programme assumes you are staying in the centre, Lara or on the Belek–Side stretch; from any of the three the daily outings take the same time.\n\nIt suits: people who want a beach holiday without being shut inside the hotel, anyone interested in ancient cities (Aspendos and Perge are under an hour from the centre), and families with small children — Lara, Belek and Side are sand, with a gradual entry into the water.\n\nWhat to watch is where you stay. In Kemer, and especially Alanya, you set out on the road every day; Alanya is 100 to 130 minutes from the centre, four hours there and back. Tell us where you are staying and we build the route around it.\n\nSeason: May–June and September are the most balanced months. July and August are the hottest and busiest; the midday hours are demanding with small children.\n\nThe flight is not part of the programme; we buy it in your name if you want.",
+        },
+      },
+    ],
     itinerary: [
       {
         title: {
@@ -638,6 +787,32 @@ export const packages: Package[] = [
       ar: "القلعة والخلجان وجولة القارب ومارينا ياليكافاك؛ أربعة وجوه مختلفة لشبه الجزيرة موزّعة على خمسة أيام.",
       en: "The castle, the bays, a boat trip and Yalıkavak marina — the peninsula's four faces spread across five days.",
     },
+    sections: [
+      {
+        heading: {
+          tr: "Fiyatı ne belirliyor",
+          ar: "ما الذي يحدّد السعر",
+          en: "What sets the price",
+        },
+        body: {
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu program kime uyar",
+          ar: "لمن يناسب هذا البرنامج",
+          en: "Who this programme suits",
+        },
+        body: {
+          tr: "Beş gün Bodrum yarımadasını görmeye rahat yeten süre. Yarımada uçtan uca kırk dakika olduğu için program hangi koyda kalırsanız kalın aynı şekilde işliyor.\n\nİyi geldiği kişiler: denizi ve tekneyi sevenler, sıcak havada ayakta gezmek istemeyenler, ve sakin bir tatil arayanlar. Koylar arası mesafeler kısa olduğu için gün yormuyor.\n\nDikkat edilecek şey koy seçimi. Yarımadanın bazı bölgeleri gece hayatı üzerine kurulu — merkezin bar sokağı ve Gümbet yaz gecelerinde geç saate kadar hareketli. Küçük çocuklu aileler için Turgutreis, Yalıkavak, Bitez ya da Gümüşlük daha rahat.\n\nBeklenmemesi gereken bir şey daha var: Bodrum'da Antalya'daki gibi çocuk kulüplü dev her şey dahil tesisler yaygın değil; oteller daha küçük ve butik ölçekli. Çocuk için gün boyu program sunan bir tesis arıyorsanız Akdeniz programı bu ihtiyaca daha çok cevap veriyor.\n\nMevsim: mayıs–ekim. Kasım–nisan arası yarımadanın büyük bölümü kapalı ve tekne gezisi çalışmıyor.",
+          ar: "خمسة أيام مدة تكفي بأريحية لرؤية شبه جزيرة بودروم. ولأن شبه الجزيرة أربعون دقيقة من طرف إلى طرف يعمل البرنامج بالشكل نفسه أياً كان الخليج الذي تنزل فيه.\n\nيناسب: من يحبّ البحر والقارب، ومن لا يريد التجوال على قدميه في الحرّ، ومن يبحث عن إجازة هادئة. ولأن المسافات بين الخلجان قصيرة لا يُتعب اليوم.\n\nوما ينبغي الانتباه له اختيار الخليج. فبعض مناطق شبه الجزيرة قائمة على حياة الليل — فشارع الحانات في المركز وغومبت حيّان حتى وقت متأخر في ليالي الصيف. والأريح للعائلات ذات الأطفال الصغار تورغوت ريس أو ياليكاواك أو بيتز أو غوموشلوك.\n\nوثمّة ما لا ينبغي توقّعه أيضاً: فالمنشآت الضخمة بنظام «كل شيء مشمول» ونوادي الأطفال، كما في أنطاليا، ليست شائعة في بودروم؛ ففنادقها أصغر وأقرب إلى حجم البوتيك. فإن كنت تبحث عن منشأة تقدّم برنامجاً للطفل طوال اليوم فبرنامج المتوسط يلبّي هذه الحاجة أكثر.\n\nوالموسم: من مايو إلى أكتوبر. ومن نوفمبر إلى أبريل يكون القسم الأكبر من شبه الجزيرة مغلقاً ولا تعمل جولة القارب.",
+          en: "Five days is comfortably enough to see the Bodrum peninsula. Because the peninsula is forty minutes end to end, the programme works the same way whichever bay you stay in.\n\nIt suits: people who like the water and boats, those who do not want to be on their feet in the heat, and anyone after a quiet holiday. With short distances between the bays, the days are not tiring.\n\nWhat to watch is the choice of bay. Parts of the peninsula are built around nightlife — the bar street in town and Gümbet stay lively until late on summer nights. For families with small children, Turgutreis, Yalıkavak, Bitez or Gümüşlük are easier.\n\nThere is one more thing not to expect: the huge all-inclusive resorts with kids' clubs, as in Antalya, are not common in Bodrum; the hotels are smaller and closer to boutique scale. If you want a property that runs a full day's programme for a child, the Mediterranean programme answers that better.\n\nSeason: May to October. From November to April most of the peninsula is closed and the boat trip does not run.",
+        },
+      },
+    ],
     itinerary: [
       {
         title: {

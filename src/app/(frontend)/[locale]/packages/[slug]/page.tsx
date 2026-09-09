@@ -8,6 +8,7 @@ import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { BreadcrumbSchema, FaqSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
+import { LongSections } from "@/components/site/long-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { AssuranceBand } from "@/components/site/assurance-band";
@@ -251,6 +252,8 @@ export default async function PackageDetailPage({
           </aside>
         </div>
       </section>
+
+      <LongSections sections={item.sections} locale={locale} />
 
       {/* Diğer paketler */}
       <section

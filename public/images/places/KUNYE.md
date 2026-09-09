@@ -56,6 +56,7 @@ değişikliği gerekmez.
 | cay-bahceleri.jpg | Siste çay bahçeleri (Arhavi, Artvin) | Roland Egiazaryan |
 | istanbul-gece.jpg | Gece Boğaz Köprüsü ve İstanbul silueti | Joshua Kettle |
 | levent.jpg | Levent'te iş kuleleri ve sahil yolu (İstanbul) | Can Kibar |
+| adalar.jpg | Büyükada'nın denizden görünüşü — yamaçtaki köşkler ve çam ormanı | Merve Bayat |
 
 Her kare içeriği doğrulanarak seçildi: arama sonucundaki açıklamalar genel
 ("a building that looks like a mosque") olduğu için görsellerin hepsi tek tek
@@ -198,3 +199,12 @@ daha çok oturuyor.
 fotoğrafı taşıyordu; kart alışveriş ve sağlık turizmi bölgesini anlatırken
 görsel Sultanahmet'i gösteriyordu. Levent'in iş kuleleri o koridorun kendisi.
 Aynı kare ana sayfada tur kartıyla da çakışıyordu.
+
+### adalar.jpg
+
+Adalar rehberi için. Kare Büyükada'yı denizden, vapur güzergâhından
+gösteriyor — rehberin ilk anlattığı şey de bu: adalara yalnız deniz
+yoluyla gidiliyor. Aynı aramada Büyükada'da bir otelin tabelası
+önündeki bisiklet karesi de vardı; adaların araba yasağını iyi
+anlatıyordu ama tavsiye etmediğimiz bir işletmenin adı kapakta
+duracaktı, o yüzden kullanılmadı.

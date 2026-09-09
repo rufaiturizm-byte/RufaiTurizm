@@ -219,6 +219,7 @@ export const destinations: Destination[] = [
       "istanbulda-nerede-kalinir",
       "istanbul-havalimanindan-sehre-ulasim",
       "bogaz-turu-rehberi",
+      "istanbul-adalar-rehberi",
     ],
     routeSlugs: [
       "istanbul-havalimani-taksim-transfer",

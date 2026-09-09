@@ -3309,6 +3309,136 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "istanbul-adalar-rehberi",
+    topic: "daytrips",
+    image: "/images/places/adalar.jpg",
+    minutes: 7,
+    title: {
+      tr: "Adalar: İstanbul'dan vapurla günübirlik rehber",
+      ar: "جزر الأميرات: دليل رحلة يوم واحد بالعبّارة من إسطنبول",
+      en: "The Princes' Islands: a day-trip guide by ferry from Istanbul",
+    },
+    excerpt: {
+      tr: "Arabasız dört ada — hangi iskeleden kalkılır, bir güne kaçı sığar.",
+      ar: "أربع جزر بلا سيارات — من أي رصيف تنطلق، وكم جزيرة يتّسع لها يوم واحد.",
+      en: "Four car-free islands — which pier to sail from, and how many fit into one day.",
+    },
+    facts: [
+      {
+        label: { tr: "Ulaşım", ar: "الوصول", en: "Getting there" },
+        value: { tr: "Yalnız deniz yoluyla", ar: "بحراً فقط", en: "By sea only" },
+      },
+      {
+        label: { tr: "Yolculuk", ar: "مدة العبور", en: "Crossing" },
+        value: { tr: "İskeleye göre 30 dk – 1,5 saat", ar: "من 30 دقيقة إلى ساعة ونصف حسب الرصيف", en: "30 min – 1.5 hrs, by pier" },
+      },
+      {
+        label: { tr: "Adada ulaşım", ar: "التنقّل في الجزيرة", en: "On the island" },
+        value: { tr: "Bisiklet ve elektrikli taşıt", ar: "الدراجات والمركبات الكهربائية", en: "Bicycles and electric vehicles" },
+      },
+      {
+        label: { tr: "En iyi mevsim", ar: "أفضل موسم", en: "Best season" },
+        value: { tr: "Mayıs – haziran, eylül – ekim", ar: "مايو – يونيو، سبتمبر – أكتوبر", en: "May – June, September – October" },
+      },
+    ],
+    seo: {
+      title: { tr: "İstanbul Adalar Rehberi", ar: "دليل جزر الأميرات في إسطنبول", en: "Princes' Islands Guide, Istanbul" },
+      description: {
+        tr: "Adalara vapur Kabataş, Beşiktaş, Bostancı ve Maltepe'den kalkıyor — Eminönü'nden değil. Dört ada, araba yasağı ve bir güne neyin sığdığı.",
+        ar: "عبّارات جزر الأميرات تنطلق من قبة طاش وبشيكتاش وبوستانجي ومالتبه — لا من أمينونو. أربع جزر، ومنع السيارات، وما يتّسع له يوم واحد.",
+        en: "Ferries to the Princes' Islands leave from Kabataş, Beşiktaş, Bostancı and Maltepe — not Eminönü. Four islands, the car ban, what fits in a day.",
+      },
+    },
+    faq: [
+      {
+        question: { tr: "Eminönü'nden adalara vapur var mı?", ar: "هل توجد عبّارة إلى الجزر من أمينونو؟", en: "Is there a ferry to the islands from Eminönü?" },
+        answer: {
+          tr: "Hayır, Eminönü'nden adalara doğrudan sefer yok. Çok sorulan bir soru, çünkü Eminönü İstanbul'un en bilinen vapur iskelesi — ama oradan kalkan hatlar Boğaz turu ile Üsküdar ve Kadıköy yönü. Adalar hattının Avrupa yakasındaki iskeleleri Kabataş ve Beşiktaş. Eminönü'nde ya da Sultanahmet'te kalıyorsanız T1 tramvayının son durağı zaten Kabataş; oradan adalar vapuruna aktarma yapılıyor.",
+          ar: "لا، ليست هناك رحلة مباشرة إلى الجزر من أمينونو. والسؤال يتكرّر كثيراً لأن أمينونو أشهر رصيف عبّارات في إسطنبول — لكن الخطوط التي تنطلق منه هي جولة البوسفور واتجاه أسكودار وكاديكوي. أما رصيفا خط الجزر في الجانب الأوروبي فهما قبة طاش وبشيكتاش. وإن كنت نازلاً في أمينونو أو السلطان أحمد فإن المحطة الأخيرة لترام T1 هي قبة طاش أصلاً؛ ومنها يكون التحويل إلى عبّارة الجزر.",
+          en: "No, there is no direct sailing to the islands from Eminönü. It is a common question, because Eminönü is Istanbul's best-known ferry pier — but the lines leaving from it are the Bosphorus cruise and the Üsküdar and Kadıköy direction. On the European side the islands line runs from Kabataş and Beşiktaş. If you are staying in Eminönü or Sultanahmet, the last stop of the T1 tram is Kabataş anyway, and you change there for the islands ferry.",
+        },
+      },
+      {
+        question: { tr: "Adalar İstanbul'dan ne kadar uzakta?", ar: "كم تبعد جزر الأميرات عن إسطنبول؟", en: "How far are the islands from Istanbul?" },
+        answer: {
+          tr: "Adalar Marmara Denizi'nde, kıyıdan 13 ile 25 kilometre arasında değişen mesafelerde. Karaya en yakın olanı Kınalıada, en uzaktakiler ise küçük ve yerleşim olmayan adacıklar. Ama pratikte önemli olan kilometre değil, hangi iskeleden kalktığınız: Anadolu yakasındaki Bostancı ve Kartal'dan geçiş yarım saat civarında, Kabataş'tan kalkan ve dört adaya birden uğrayan vapurda Büyükada'ya varış bir buçuk saati bulabiliyor.",
+          ar: "الجزر في بحر مرمرة، على مسافات تتراوح بين 13 و25 كيلومتراً من الساحل. وأقربها إلى البرّ كنالي أدا، وأبعدها جُزيرات صغيرة غير مأهولة. لكن المهم عملياً ليس الكيلومترات بل الرصيف الذي تنطلق منه: فمن بوستانجي وكارتال في الجانب الآسيوي يكون العبور نحو نصف ساعة، أما العبّارة المنطلقة من قبة طاش والتي تمرّ بالجزر الأربع فقد يبلغ وصولها إلى بيوك أدا ساعةً ونصفاً.",
+          en: "The islands lie in the Sea of Marmara, between 13 and 25 kilometres from the shore. Kınalıada is the closest to land; the farthest are small uninhabited islets. In practice, though, what matters is not the distance but which pier you leave from: from Bostancı or Kartal on the Asian side the crossing is around half an hour, while the ferry from Kabataş calls at all four islands and can take an hour and a half to reach Büyükada.",
+        },
+      },
+      {
+        question: { tr: "Bir günde kaç ada gezilebilir?", ar: "كم جزيرة يمكن زيارتها في يوم واحد؟", en: "How many islands can you see in a day?" },
+        answer: {
+          tr: "Rahat bir tempoda bir ada, sıkıştırırsanız iki. Vapur adalar arasında da çalışıyor ve geçişler kısa, ama her inip binmede tarife beklemek gerekiyor; iki adada geçen bir gün, günün önemli bir bölümünü iskelede beklemekle geçiriyor. İlk kez gelen misafirlerin çoğu doğrudan son durak Büyükada'ya gidiyor — en büyüğü ve görülecek şeyin en çok olduğu ada orası. Daha sakin bir gün isteyene Heybeliada ya da Burgazada daha iyi geliyor.",
+          ar: "جزيرة واحدة بإيقاع مريح، واثنتان إن ضغطت البرنامج. والعبّارة تعمل بين الجزر أيضاً والمسافات بينها قصيرة، لكن كل نزول وصعود يستلزم انتظار موعد الرحلة؛ فاليوم الذي يمرّ على جزيرتين يقضي جزءاً كبيراً منه في الانتظار على الرصيف. ومعظم القادمين لأول مرة يذهبون مباشرة إلى المحطة الأخيرة بيوك أدا — فهي الأكبر وفيها أكثر ما يُرى. ومن يريد يوماً أهدأ تناسبه هيبلي أدا أو بورغاز أدا.",
+          en: "One island at a comfortable pace, two if you push. Ferries also run between the islands and the hops are short, but every landing means waiting for the next departure, so a two-island day spends a good part of itself on the pier. Most first-time visitors go straight to the last stop, Büyükada — it is the largest and has the most to see. Anyone wanting a quieter day is better served by Heybeliada or Burgazada.",
+        },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Adalara nasıl gidilir: doğru iskele",
+          ar: "كيف تصل إلى الجزر: الرصيف الصحيح",
+          en: "Getting to the islands: the right pier",
+        },
+        body: {
+          tr: "Adalara yalnız deniz yoluyla gidiliyor; karayolu bağlantısı yok, köprü yok. Bu yüzden gün, doğru vapur iskelesini seçmekle başlıyor.\n\nŞehir Hatları'nın adalar seferleri Avrupa yakasında Kabataş ve Beşiktaş'tan, Anadolu yakasında Bostancı, Maltepe, Pendik ve Tuzla'dan kalkıyor. Eminönü'nden adalara doğrudan sefer yok — bunu ayrıca yazıyoruz, çünkü en çok sorulan sorulardan biri. Eminönü, Boğaz turu ile Üsküdar ve Kadıköy hattının iskelesi.\n\nYolculuk süresi kalkış noktasına göre belirgin biçimde değişiyor. Anadolu yakasından, özellikle Bostancı ve Kartal'dan geçiş yarım saat civarında. Kabataş'tan kalkan vapur dört adaya birden uğradığı için Büyükada'ya varış bir buçuk saati bulabiliyor. Hızlı deniz otobüsleri bu süreyi kısaltıyor ama seferleri daha seyrek.\n\nSefer saatleri mevsime göre değişiyor ve kışın azalıyor; gitmeden bir gün önce güncel tarifeye bakmakta fayda var. Otelinize göre hangi iskelenin mantıklı olduğunu bize sorabilirsiniz: Sultanahmet'te kalan misafir için Kabataş, Kadıköy tarafında kalan için Bostancı, aynı geziyi bir saat kısaltan bir tercih.",
+          ar: "لا يُوصل إلى الجزر إلا بحراً؛ فلا طريق برّياً ولا جسر. ولذلك يبدأ اليوم باختيار رصيف العبّارة الصحيح.\n\nرحلات الجزر لدى خطوط المدينة (شهير هاتلاري) تنطلق في الجانب الأوروبي من قبة طاش وبشيكتاش، وفي الجانب الآسيوي من بوستانجي ومالتبه وبنديك وتوزلا. ولا توجد رحلة مباشرة إلى الجزر من أمينونو — ونكتب هذا على حدة لأنه من أكثر ما يُسأل عنه. فأمينونو رصيف جولة البوسفور وخط أسكودار وكاديكوي.\n\nومدة الرحلة تختلف بوضوح بحسب نقطة الانطلاق. فمن الجانب الآسيوي، ولا سيّما من بوستانجي وكارتال، يكون العبور نحو نصف ساعة. أما العبّارة المنطلقة من قبة طاش فتمرّ بالجزر الأربع، فقد يبلغ وصولها إلى بيوك أدا ساعةً ونصفاً. والقوارب البحرية السريعة تختصر هذه المدة لكن رحلاتها أقلّ عدداً.\n\nومواعيد الرحلات تتغيّر بحسب الموسم وتقلّ في الشتاء؛ فمن المفيد مراجعة الجدول المحدَّث قبل الذهاب بيوم. ويمكنك أن تسألنا أيّ رصيف أنسب بحسب فندقك: فقبة طاش للنازل في السلطان أحمد، وبوستانجي للنازل في جهة كاديكوي — وهو اختيار يختصر الرحلة نفسها ساعةً كاملة.",
+          en: "The islands can only be reached by sea; there is no road link and no bridge. So the day begins with choosing the right ferry pier.\n\nŞehir Hatları runs its island services from Kabataş and Beşiktaş on the European side, and from Bostancı, Maltepe, Pendik and Tuzla on the Asian side. There is no direct sailing to the islands from Eminönü — we write that separately, because it is one of the most frequent questions. Eminönü is the pier for the Bosphorus cruise and the Üsküdar and Kadıköy line.\n\nThe crossing time varies noticeably with the departure point. From the Asian side, particularly Bostancı and Kartal, it is around half an hour. The ferry from Kabataş calls at all four islands, so reaching Büyükada can take an hour and a half. Fast sea buses shorten that, but they run less often.\n\nTimetables change with the season and thin out in winter, so it is worth checking the current schedule the day before. You can ask us which pier makes sense for your hotel: Kabataş for a guest staying in Sultanahmet, Bostancı for one on the Kadıköy side — a choice that cuts an hour off the same trip."
+        },
+      },
+      {
+        heading: {
+          tr: "Dört ada, dört ayrı karakter",
+          ar: "أربع جزر، أربع شخصيات",
+          en: "Four islands, four characters",
+        },
+        body: {
+          tr: "Vapur sırayla dörde uğruyor: Kınalıada, Burgazada, Heybeliada ve son durak Büyükada.\n\nKınalıada karaya en yakın olanı ve en çıplak görüneni; ağaç örtüsü diğerlerine göre az, sahil yürüyüşü kısa. Yarım gün için yeterli, bütün bir gün için değil.\n\nBurgazada en sakini. Küçük bir meydan, birkaç balık lokantası ve kıyı boyunca uzanan bir yürüyüş yolu. Kalabalıktan uzak durmak isteyen misafirin adası.\n\nHeybeliada çam ormanıyla anılıyor. Deniz Lisesi'nin uzun beyaz binası vapurdan hemen görülüyor. Ada içi yürüyüş yolları burada daha gölgeli, bu da yaz aylarında ciddi bir fark.\n\nBüyükada en büyüğü — 5,4 kilometrekare — ve günübirlik gelenlerin çoğunun indiği yer. Ahşap köşkleri, çarşısı ve 203 metrelik Aya Yorgi tepesi burada. Tepeye çıkış yürüyerek yarım saat sürüyor ve son bölümü dik; yukarıdan Marmara'nın tamamı görünüyor.\n\nBeşinci bir ada olan Sedef Adası'na da sefer var ama çok seyrek; günübirlik program kurmaya uygun değil.",
+          ar: "تمرّ العبّارة بالجزر الأربع بالترتيب: كنالي أدا، ثم بورغاز أدا، ثم هيبلي أدا، والمحطة الأخيرة بيوك أدا.\n\nكنالي أدا أقربها إلى البرّ وأكثرها انكشافاً؛ فغطاؤها الشجري أقلّ من سواها والمشي على ساحلها قصير. تكفي لنصف يوم لا ليوم كامل.\n\nوبورغاز أدا أهدؤها. ساحة صغيرة وبضعة مطاعم سمك وممشى يمتدّ على طول الشاطئ. هي جزيرة من يريد الابتعاد عن الزحام.\n\nوهيبلي أدا تُعرف بغابة الصنوبر. ومبنى الثانوية البحرية الأبيض الطويل يُرى من العبّارة مباشرة. ومسارات المشي داخل الجزيرة هنا أكثر ظلاً، وهذا فرق جوهري في أشهر الصيف.\n\nوبيوك أدا أكبرها — 5.4 كيلومتر مربع — وفيها ينزل معظم القادمين ليوم واحد. فهنا القصور الخشبية والسوق وتلّة آيا يورغي البالغة 203 أمتار. والصعود إلى التلّة سيراً يستغرق نصف ساعة وآخره شديد الانحدار؛ ومن الأعلى يظهر بحر مرمرة كلّه.\n\nوهناك جزيرة خامسة هي جزيرة صدف تصلها رحلات أيضاً لكنها متباعدة جداً؛ فهي لا تصلح لبناء برنامج يوم واحد.",
+          en: "The ferry calls at four in turn: Kınalıada, Burgazada, Heybeliada, and Büyükada as the last stop.\n\nKınalıada is the closest to land and the barest-looking; it has less tree cover than the others and a short shoreline walk. Enough for half a day, not for a whole one.\n\nBurgazada is the quietest. A small square, a few fish restaurants and a path running along the shore. The island for a guest who wants to keep away from crowds.\n\nHeybeliada is known for its pine forest. The long white building of the Naval High School is visible straight from the ferry. The walking routes inland are shadier here, which matters a great deal in summer.\n\nBüyükada is the largest — 5.4 square kilometres — and where most day visitors get off. Its wooden mansions, its market street and the 203-metre Aya Yorgi hill are all here. The climb up takes half an hour on foot and the last stretch is steep; from the top the whole Sea of Marmara is in view.\n\nA fifth island, Sedef Adası, is also served, but very infrequently; it is not suited to building a day trip around."
+        },
+      },
+      {
+        heading: {
+          tr: "Adalarda araba yok: ulaşım nasıl oluyor",
+          ar: "لا سيارات في الجزر: كيف يكون التنقّل",
+          en: "No cars on the islands: how you get around",
+        },
+        body: {
+          tr: "Adalarda özel araç trafiği yasak. İzin verilen tek motorlu taşıtlar hizmet araçları: ambulans, itfaiye, çöp toplama.\n\nAda içi ulaşım üç şeyle yürüyor — yürümek, bisiklet ve elektrikli taşıtlar. Uzun yıllar adaların simgesi olan atlı faytonlar 2020'de ciddi bir at hastalığı sonrası kaldırıldı; yerlerini akülü elektrikli araçlar aldı. Bisiklet kiralayan dükkânlar iskelenin çevresinde yoğunlaşıyor.\n\nBunun pratik karşılığı şu: ada gezisi ayakta geçen bir gün. Büyükada'nın iç yolları eğimli ve tepeye doğru sertleşiyor. Yaz öğlelerinde gölge az, çeşme az.\n\nYürümekte zorlanan bir büyüğünüz varsa ya da bebek arabasıyla geliyorsanız planı buna göre kurmak gerekiyor. İskele çevresi, çarşı ve sahil bandı düz ve rahat; tepe kısmı değil. Elektrikli taşıtlar tam bu noktada işe yarıyor, ama yoğun günlerde sıra oluyor.\n\nYanınıza almanız gerekenler kısa bir liste: rahat ayakkabı, su, şapka ve güneş kremi. Adada market ve eczane var, fakat çarşı bölgesinde toplanmış durumda ve fiyatlar şehirdekinin üstünde. Tepeye çıkmadan önce suyunuzu almanız iyi olur.",
+          ar: "حركة المركبات الخاصة ممنوعة في الجزر. والمركبات الآلية الوحيدة المسموح بها هي مركبات الخدمة: الإسعاف والإطفاء وجمع النفايات.\n\nويقوم التنقّل داخل الجزيرة على ثلاثة أشياء — المشي والدراجات والمركبات الكهربائية. أما العربات التي تجرّها الخيل والتي كانت رمز الجزر سنوات طويلة فقد أُلغيت سنة 2020 إثر مرض خيلي خطير؛ وحلّت محلّها مركبات كهربائية تعمل بالبطاريات. ومحال تأجير الدراجات تتركّز حول الرصيف.\n\nومقابل هذا عملياً: زيارة الجزيرة يوم يمضي على الأقدام. فطرق بيوك أدا الداخلية مائلة وتشتدّ كلما اتجهت نحو التلّة. وفي أظهار الصيف يقلّ الظلّ وتقلّ الينابيع.\n\nوإن كان معك كبير في السنّ يشقّ عليه المشي، أو كنت قادماً بعربة أطفال، فينبغي بناء البرنامج على ذلك. فمحيط الرصيف والسوق وشريط الساحل مستوٍ ومريح؛ أما جهة التلّة فلا. وهنا تحديداً تنفع المركبات الكهربائية، غير أن الطوابير تطول في الأيام المزدحمة.\n\nوما ينبغي حمله قائمة قصيرة: حذاء مريح وماء وقبعة وواقٍ من الشمس. وفي الجزيرة بقالات وصيدليات، لكنها مجتمعة في منطقة السوق وأسعارها أعلى من أسعار المدينة. ومن الأفضل أن تأخذ ماءك قبل الصعود إلى التلّة.",
+          en: "Private vehicle traffic is banned on the islands. The only motor vehicles allowed are service ones: ambulances, fire engines, refuse collection.\n\nGetting around comes down to three things — walking, bicycles and electric vehicles. The horse-drawn phaetons that were the islands' emblem for many years were withdrawn in 2020 after a serious equine disease; battery-powered electric vehicles took their place. The bicycle rental shops cluster around the pier.\n\nWhat that means in practice: a visit to the islands is a day spent on your feet. Büyükada's inland roads are sloped and get harder as they climb. On summer middays there is little shade and few fountains.\n\nIf you have an older relative who finds walking difficult, or you are coming with a pushchair, the plan has to be built around that. The area near the pier, the market street and the shore strip are flat and easy; the hill is not. This is exactly where the electric vehicles help, though queues build on busy days.\n\nWhat to bring is a short list: comfortable shoes, water, a hat and sunscreen. There are shops and pharmacies on the island, but they are gathered in the market area and prices are above the city's. It is worth buying your water before starting up the hill."
+        },
+      },
+      {
+        heading: {
+          tr: "Ne zaman gitmeli, gün nasıl kurulur",
+          ar: "متى تذهب، وكيف يُبنى اليوم",
+          en: "When to go, and how to shape the day",
+        },
+        body: {
+          tr: "En iyi mevsim mayıs–haziran ile eylül–ekim. Hava yürüyüşe uygun, deniz ılık ve kalabalık temmuz–ağustostaki kadar değil.\n\nHafta sonu ile hafta içi arasındaki fark adalarda İstanbul'un başka hiçbir yerinde olmadığı kadar büyük. Yaz hafta sonlarında iskelelerde uzun kuyruklar oluşuyor, dönüş seferlerinde ayakta kalınabiliyor. Aynı gezi salı günü yapıldığında bambaşka bir gün oluyor.\n\nKışın adalar kapanmıyor ama tempo düşüyor: dükkânların bir kısmı kapalı, seferler seyrek, deniz rüzgârlı ve geçiş sarsıntılı olabiliyor. Sakinlik arayan için güzel, İstanbul'a ilk kez gelen için değil.\n\nGünü kurarken iki şey belirleyici. Birincisi erken çıkmak: sabahın ilk seferleriyle gidilen bir gün, öğleden sonra gidilen bir günün iki katı. İkincisi dönüş: son vapurun saatini gitmeden not almak gerekiyor, çünkü kaçırıldığında alternatif yok — karayolu bağlantısı olmadığı için adada gecelemek zorunda kalınıyor.\n\nGün için makul bir düzen şöyle: sabah erken vapur, öğleden önce Aya Yorgi tepesi (serinken), öğle yemeği çarşıda ya da sahilde, öğleden sonra bisikletle ya da elektrikli taşıtla ada turu, ikindi ışığında sahilde çay, son vapurdan bir önceki seferle dönüş. Son sefere bilerek yer bırakmak, kuyruk uzadığında elinizde tek yedek plan.",
+          ar: "أفضل موسم هو مايو–يونيو وسبتمبر–أكتوبر. فالجوّ مناسب للمشي، والبحر دافئ، والزحام دون ما هو عليه في يوليو وأغسطس.\n\nوالفرق بين عطلة الأسبوع وأيام الأسبوع في الجزر أكبر منه في أي مكان آخر بإسطنبول. ففي عطل الصيف تطول الطوابير على الأرصفة وقد تقف واقفاً في رحلة العودة. والرحلة نفسها يوم الثلاثاء يوم آخر تماماً.\n\nوالجزر لا تُغلق شتاءً لكن إيقاعها يهبط: قسم من المحال مغلق، والرحلات متباعدة، والبحر عاصف وقد يكون العبور مضطرباً. جميل لمن يطلب الهدوء، لا لمن يزور إسطنبول أول مرة.\n\nويحكم بناءَ اليوم أمران. الأول الخروج باكراً: فاليوم الذي يبدأ بأولى رحلات الصباح ضِعف اليوم الذي يبدأ بعد الظهر. والثاني العودة: يجب تدوين موعد آخر عبّارة قبل الذهاب، فليس ثمّة بديل إن فاتت — إذ لا اتصال برّياً، فتضطرّ إلى المبيت في الجزيرة.\n\nوترتيب معقول لليوم: عبّارة الصباح الباكر، ثم تلّة آيا يورغي قبل الظهر حين يكون الجوّ لطيفاً، ثم الغداء في السوق أو على الساحل، ثم جولة في الجزيرة بالدراجة أو بمركبة كهربائية بعد الظهر، ثم شاي على الشاطئ في ضوء العصر، والعودة بالرحلة التي تسبق الأخيرة. وترك الرحلة الأخيرة احتياطاً هو خطتك البديلة الوحيدة إن طال الطابور.",
+          en: "The best seasons are May–June and September–October. The weather suits walking, the sea is warm, and the crowds are not what they are in July and August.\n\nThe gap between a weekend and a weekday is wider on the islands than anywhere else in Istanbul. On summer weekends long queues form at the piers and you may stand all the way back. The same trip made on a Tuesday is an entirely different day.\n\nThe islands do not close in winter, but the pace drops: some shops are shut, sailings are sparse, the sea is windy and the crossing can be rough. Lovely for anyone seeking quiet — not for a first visit to Istanbul.\n\nTwo things decide how the day goes. First, leaving early: a day begun on the first morning sailings is worth twice one begun in the afternoon. Second, the return: note the time of the last ferry before you go, because there is no alternative if you miss it — with no road link, you would have to stay the night on the island.\n\nA sensible shape for the day: an early ferry, Aya Yorgi hill before noon while it is still cool, lunch in the market street or on the shore, an afternoon circuit by bicycle or electric vehicle, tea by the water in the late light, and the return on the sailing before the last one. Deliberately leaving the final departure spare is your only fallback if the queue grows."
+        },
+      },
+      {
+        heading: {
+          tr: "Bizim hizmetimiz nerede başlıyor, nerede bitiyor",
+          ar: "أين تبدأ خدمتنا وأين تنتهي",
+          en: "Where our service begins and ends",
+        },
+        body: {
+          tr: "Burada bir şeyi açıkça yazalım: adalarda özel araçla hizmet verilemiyor, çünkü araç trafiği yasak. Bizim işimiz vapur iskelesinde başlıyor ve orada bitiyor.\n\nUygulamada şöyle yürüyor: sizi otelinizden alıp konumunuza göre doğru iskeleye bırakıyoruz — Kabataş, Beşiktaş ya da Bostancı — ve dönüş vapurunun saatinde aynı iskelede karşılıyoruz. Aradaki süre size ait.\n\nBu, küçük çocukla ya da yaşlı bir yakınıyla gelen bir aile için sanıldığından büyük bir fark. Sıcak bir yaz sabahında Sultanahmet'ten Kabataş'a aktarmalı gitmekle otelin kapısından alınmak arasındaki mesafe, günün geri kalanının nasıl geçeceğini belirliyor.\n\nAdaları ayrı bir tur olarak satmıyoruz, çünkü satacak bir şey yok: vapur bileti herkesin İstanbulkart'la ödeyebileceği bir ücret ve adada rehberli bir programımız bulunmuyor. Böyle bir gün için size bir tur bedeli çıkarmak dürüst olmazdı.\n\nİstanbul programınızın bir gününü adalara ayırmak isterseniz planı ona göre kuruyoruz ve o günün transferini ayrıca ayarlıyoruz. Hangi iskelenin size yakın olduğunu, o gün hava ve deniz durumunun ne göründüğünü de önceden söylüyoruz — çünkü fırtınalı bir günde seferler iptal edilebiliyor ve programı bir gün kaydırmak, iskelede beklemekten iyidir.",
+          ar: "لنكتب هنا أمراً بوضوح: لا يمكن تقديم خدمة بسيارة خاصة في الجزر، لأن حركة المركبات ممنوعة. فعملنا يبدأ عند رصيف العبّارة وينتهي عنده.\n\nوهو يجري عملياً هكذا: نأخذك من فندقك ونوصلك إلى الرصيف المناسب بحسب موقعك — قبة طاش أو بشيكتاش أو بوستانجي — ونستقبلك على الرصيف نفسه في موعد عبّارة العودة. والوقت بينهما لك.\n\nوهذا فرق أكبر مما يُظنّ لعائلة معها طفل صغير أو قريب مسنّ. ففي صباح صيفي حارّ، المسافة بين أن تنتقل من السلطان أحمد إلى قبة طاش بتحويلات وأن تُؤخذ من باب الفندق هي التي تحدّد كيف يمضي بقية اليوم.\n\nونحن لا نبيع الجزر جولةً مستقلة، لأنه ليس ثمّة ما يُباع: فتذكرة العبّارة أجرة يدفعها الجميع ببطاقة إسطنبول، وليس لنا في الجزيرة برنامج مصحوب بمرشد. وأن نضع لك ثمن جولة مقابل يوم كهذا أمر لا يكون أميناً.\n\nوإن أردت تخصيص يوم من برنامجك في إسطنبول للجزر بنينا الخطة على ذلك ورتّبنا نقل ذلك اليوم على حدة. ونخبرك مسبقاً أيّ رصيف أقرب إليك، وكيف تبدو حال الجوّ والبحر في ذلك اليوم — فالرحلات قد تُلغى في يوم عاصف، وتأجيل البرنامج يوماً خير من الانتظار على الرصيف.",
+          en: "Let us put one thing plainly: we cannot provide a private-car service on the islands, because vehicle traffic is banned there. Our work begins at the ferry pier and ends there.\n\nIn practice it works like this: we collect you from your hotel and drop you at the right pier for where you are staying — Kabataş, Beşiktaş or Bostancı — and meet you at the same pier at the time of your return ferry. The hours in between are yours.\n\nFor a family travelling with a small child or an elderly relative, that is a bigger difference than it sounds. On a hot summer morning, the distance between changing trams from Sultanahmet to Kabataş and being picked up at the hotel door decides how the rest of the day goes.\n\nWe do not sell the islands as a separate tour, because there is nothing to sell: the ferry ticket is a fare anyone can pay with an İstanbulkart, and we run no guided programme on the island. Charging you a tour price for a day like that would not be honest.\n\nIf you want to give one day of your Istanbul programme to the islands, we build the plan around it and arrange that day's transfer separately. We will also tell you in advance which pier is nearest to you and how the weather and sea look for the day — sailings can be cancelled when it is stormy, and moving the plan by a day beats waiting at the pier."
+        },
+      },
+    ],
+  },
 ];
 
 export function guideBySlug(slug: string) {

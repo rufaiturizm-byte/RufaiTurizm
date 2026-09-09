@@ -55,6 +55,15 @@ export interface Package {
    */
   destinationSlug: string;
   name: Text;
+  /**
+   * Arama sonucu başlığı.
+   *
+   * `name` sayfada H1 olarak kalıyor ("برنامج إسطنبول 4 أيام") ve orada
+   * doğru. Ama aranan biçim başka: Arapça sorgu "برنامج سياحي في تركيا
+   * لمدة 4 ايام" diye geçiyor — "سياحي" kelimesi sorguda var, başlıkta
+   * yoktu. Verilmezse `name` kullanılır.
+   */
+  metaTitle?: Text;
   city: Text;
   days: number;
   /** Kartta ve listede görünen tek satırlık tanıtım. */
@@ -90,6 +99,11 @@ export const packages: Package[] = [
     destinationSlug: "istanbul",
     days: 4,
     image: "/images/places/galata-halic.jpg",
+    metaTitle: {
+      tr: "Türkiye Tur Programı: İstanbul 4 Gün",
+      ar: "برنامج سياحي في إسطنبول لمدة 4 أيام",
+      en: "Türkiye Tour Programme: Istanbul in 4 Days",
+    },
     name: {
       tr: "İstanbul 4 Günlük Program",
       ar: "برنامج إسطنبول 4 أيام",
@@ -168,6 +182,11 @@ export const packages: Package[] = [
     destinationSlug: "bursa",
     days: 6,
     image: "/images/places/koza-han.jpg",
+    metaTitle: {
+      tr: "Türkiye Turu: İstanbul ve Bursa 6 Gün",
+      ar: "برنامج سياحي في إسطنبول وبورصة لمدة 6 أيام",
+      en: "Türkiye Tour: Istanbul and Bursa in 6 Days",
+    },
     name: {
       tr: "İstanbul ve Bursa 6 Günlük Program",
       ar: "برنامج إسطنبول وبورصة 6 أيام",
@@ -262,6 +281,11 @@ export const packages: Package[] = [
     destinationSlug: "sapanca",
     days: 8,
     image: "/images/places/sapanca-yol.jpg",
+    metaTitle: {
+      tr: "Türkiye Turu: İstanbul, Sapanca, Bursa 8 Gün",
+      ar: "برنامج سياحي في إسطنبول وسبانجا وبورصة 8 أيام",
+      en: "Türkiye Tour: Istanbul, Sapanca, Bursa 8 Days",
+    },
     name: {
       tr: "İstanbul, Sapanca ve Bursa 8 Günlük Program",
       ar: "برنامج إسطنبول وسبانجا وبورصة 8 أيام",
@@ -376,6 +400,11 @@ export const packages: Package[] = [
     destinationSlug: "trabzon",
     days: 5,
     image: "/images/places/uzungol-vadi.jpg",
+    metaTitle: {
+      tr: "Karadeniz Turu: Trabzon ve Uzungöl 5 Gün",
+      ar: "برنامج سياحي في طرابزون والبحر الأسود 5 أيام",
+      en: "Black Sea Tour: Trabzon and Uzungöl in 5 Days",
+    },
     name: {
       tr: "Trabzon ve Karadeniz 5 Günlük Program",
       ar: "برنامج طرابزون والبحر الأسود 5 أيام",
@@ -462,6 +491,11 @@ export const packages: Package[] = [
     destinationSlug: "antalya",
     days: 5,
     image: "/images/places/kaleici-liman.jpg",
+    metaTitle: {
+      tr: "Akdeniz Turu: Antalya 5 Gün",
+      ar: "برنامج سياحي في أنطاليا لمدة 5 أيام",
+      en: "Mediterranean Tour: Antalya in 5 Days",
+    },
     name: {
       tr: "Antalya ve Akdeniz 5 Günlük Program",
       ar: "برنامج أنطاليا والبحر المتوسط 5 أيام",
@@ -584,6 +618,11 @@ export const packages: Package[] = [
     destinationSlug: "bodrum",
     days: 5,
     image: "/images/places/turgutreis.jpg",
+    metaTitle: {
+      tr: "Ege Turu: Bodrum 5 Gün",
+      ar: "برنامج سياحي في بودروم لمدة 5 أيام",
+      en: "Aegean Tour: Bodrum in 5 Days",
+    },
     name: {
       tr: "Bodrum ve Ege 5 Günlük Program",
       ar: "برنامج بودروم وبحر إيجه 5 أيام",

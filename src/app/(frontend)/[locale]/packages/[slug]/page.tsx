@@ -34,7 +34,7 @@ export async function generateMetadata({
   const lang = locale as Locale;
 
   return {
-    title: item.name[lang] ?? item.name.tr,
+    title: item.metaTitle?.[lang] ?? item.name[lang] ?? item.name.tr,
     description: item.excerpt[lang] ?? item.excerpt.tr,
     openGraph: { images: [item.image] },
     alternates: alternatesFor({ pathname: "/packages/[slug]", params: { slug } }, locale),

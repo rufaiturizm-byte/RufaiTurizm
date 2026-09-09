@@ -25,7 +25,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "guidesPage" });
 
   return {
-    title: t("title"),
+    /* Arama sonucu başlığı; H1 sayfada `title` olarak kalıyor. */
+    title: t("metaTitle"),
     description: tMeta("guides"),
     alternates: alternatesFor("/guides", locale),
   };

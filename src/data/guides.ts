@@ -567,7 +567,7 @@ export const guides: Guide[] = [
       },
     ],
     seo: {
-      title: { tr: "Sapanca ve Maşukiye Rehberi", ar: "دليل سبانجا وماشوكية", en: "Sapanca and Maşukiye Guide" },
+      title: { tr: "Sapanca, Maşukiye ve Kartepe: Günübirlik", ar: "سبانجا وماشوكية وكارتيبه: رحلة يوم واحد", en: "Sapanca, Maşukiye and Kartepe: A Day Trip" },
       description: {
         tr: "İstanbul'a 130 km, günübirlik gidilir. Göl, şelaleler ve alabalık lokantaları; hangi mevsimde gitmeli ve çocuklu ailelerle nelere dikkat edilmeli.",
         ar: "تبعد 130 كم عن إسطنبول وتصلح لرحلة يوم. البحيرة والشلالات ومطاعم السمك؛ وأفضل موسم للزيارة، وما يُراعى مع الأطفال.",
@@ -1396,7 +1396,7 @@ export const guides: Guide[] = [
       },
     ],
     seo: {
-      title: { tr: "İstanbul'da Alışveriş Rehberi", ar: "دليل التسوق في إسطنبول", en: "Shopping in Istanbul: A Guide" },
+      title: { tr: "İstanbul Alışveriş: Kapalıçarşı ve AVM'ler", ar: "التسوق في إسطنبول: البازار المسقوف والمولات", en: "Shopping in Istanbul: Grand Bazaar and Malls" },
       description: {
         tr: "Kapalıçarşı ve Mısır Çarşısı, Nişantaşı ve Bağdat Caddesi, alışveriş merkezleri. Nerede pazarlık geçer, ne nerede alınır ve poşetler nasıl taşınır.",
         ar: "البازار الكبير والسوق المصري، ونيشانتاشي وشارع بغداد، والمولات. أين تنفع المساومة، وما يُشترى من أين، وكيف تُحمل المشتريات.",
@@ -1896,7 +1896,7 @@ export const guides: Guide[] = [
       },
     ],
     seo: {
-      title: { tr: "İstanbul'da Üç Gün: Kısa Program", ar: "ثلاثة أيام في إسطنبول", en: "Three Days in Istanbul" },
+      title: { tr: "İstanbul 3 Günlük Program: Gün Gün Gezi Planı", ar: "برنامج سياحي في إسطنبول 3 أيام: يوماً بيوم", en: "Istanbul in 3 Days: A Day-by-Day Itinerary" },
       description: {
         tr: "Üç güne tarihî yarımada, Boğaz ve Beyoğlu sığar; şehir dışı sığmaz. Gün gün program, nerede kalmalı ve kısa ziyarette neyi çıkarmak gerekir.",
         ar: "ثلاثة أيام تتّسع لشبه الجزيرة التاريخية والبوسفور وبي أوغلو، لا لما خارج المدينة. البرنامج يوماً بيوم، وأين تسكن، وماذا تحذف.",
@@ -2021,7 +2021,7 @@ export const guides: Guide[] = [
       },
     ],
     seo: {
-      title: { tr: "İstanbul'da Toplu Taşıma Rehberi", ar: "دليل المواصلات في إسطنبول", en: "Istanbul Public Transport Guide" },
+      title: { tr: "İstanbulkart, Metro, Tramvay ve Vapur Rehberi", ar: "بطاقة إسطنبول والمترو والترام والعبّارة", en: "Istanbulkart, Metro, Tram and Ferry Guide" },
       description: {
         tr: "İstanbulkart nasıl alınır, T1 tramvayı nereye gider, vapurla Boğaz nasıl geçilir ve ne zaman özel araç toplu taşımadan daha mantıklı olur.",
         ar: "كيف تُشترى بطاقة إسطنبول، وإلى أين يذهب ترام T1، وكيف يُعبر البوسفور بالعبّارة، ومتى تكون السيارة الخاصة أنسب من النقل العام.",
@@ -2546,9 +2546,9 @@ export const guides: Guide[] = [
     ],
     seo: {
       title: {
-        tr: "Antalya Bölge Rehberi",
-        ar: "دليل منطقة أنطاليا",
-        en: "Antalya Region Guide",
+        tr: "Antalya Bölgeleri: Kemer, Side, Belek, Alanya",
+        ar: "مناطق أنطاليا: كيمر وسيده وبيليك وألانيا",
+        en: "Antalya Areas: Kemer, Side, Belek, Alanya",
       },
       description: {
         tr: "Kaleiçi, Side, Kemer, Belek ve Alanya karşılaştırmalı: hangi ilçe kime uyar, havalimanına mesafeler, deniz sezonu ve hangi ayda ne olur.",
@@ -2741,9 +2741,9 @@ export const guides: Guide[] = [
     ],
     seo: {
       title: {
-        tr: "Bodrum ve Ege Rehberi",
-        ar: "دليل بودروم وبحر إيجه",
-        en: "Bodrum and Aegean Guide",
+        tr: "Bodrum Koyları: Yalıkavak, Turgutreis, Bitez",
+        ar: "خلجان بودروم: ياليكاواك وتورغوت ريس وبيتز",
+        en: "Bodrum Bays: Yalıkavak, Turgutreis, Bitez",
       },
       description: {
         tr: "Yalıkavak, Gümbet, Türkbükü ve Turgutreis karşılaştırmalı; tekne turu nasıl işler, deniz hangi aylarda ılık ve yarımadada mesafeler ne kadar.",

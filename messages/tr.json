@@ -71,7 +71,8 @@
           "answer": "Evet. Bursa, Sapanca ya da başka bir şehre giderken araç da şoför de değişmez. Otelinizden alan şoför, dönüşte de sizi bırakan kişidir; her seferinde kendinizi yeniden anlatmak zorunda kalmazsınız."
         }
       ],
-      "metaDescription": "Şoförlü, son model Mercedes Vito ile bagajınızla birlikte 6 kişiye kadar konforlu ulaşım. Kararmış cam, arkada ayrı klima, aynı şoför tüm seyahat boyunca."
+      "metaDescription": "Şoförlü, son model Mercedes Vito ile bagajınızla birlikte 6 kişiye kadar konforlu ulaşım. Kararmış cam, arkada ayrı klima, aynı şoför tüm seyahat boyunca.",
+      "metaTitle": "Şoförlü Mercedes Vito — İstanbul"
     },
     "transfer": {
       "title": "Transfer ve Karşılama",
@@ -107,7 +108,8 @@
           "answer": "Uçuş numarası, iniş tarihi ve saati, otel adı veya adresi, kişi sayısı ve valiz sayısı. Çocuk varsa yaşını da yazın, koltuğu ona göre hazırlarız. Bu beş bilgiyle rezervasyon dakikalar içinde tamamlanır."
         }
       ],
-      "metaDescription": "İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW) karşılama ve otel transferi. Sabit fiyat, uçuş takibi, isimli tabelayla karşılama ve bagaj yardımı dahil."
+      "metaDescription": "İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW) karşılama ve otel transferi. Sabit fiyat, uçuş takibi, isimli tabelayla karşılama ve bagaj yardımı dahil.",
+      "metaTitle": "Havalimanı Transfer Hizmeti — Sabit Fiyat"
     },
     "tours": {
       "title": "Tur Hizmeti",
@@ -143,7 +145,8 @@
           "answer": "Bir kişiden itibaren. Turlar özel olduğu için asgari kişi sayısı aramıyoruz; grup dolsun diye beklemezsiniz. Fiyat araç başına verildiği için kalabalıklaştıkça kişi başına düşen tutar azalır."
         }
       ],
-      "metaDescription": "İstanbul, Bursa, Sapanca, Trabzon ve Bodrum'da özel turlar. Arapça rehber, gruba katılma yok, namaz ve yemek molaları programda, otelden alış."
+      "metaDescription": "İstanbul, Bursa, Sapanca, Trabzon ve Bodrum'da özel turlar. Arapça rehber, gruba katılma yok, namaz ve yemek molaları programda, otelden alış.",
+      "metaTitle": "Özel Turlar — Arapça Rehber veya Şoför"
     },
     "flightHotel": {
       "title": "Uçak Bileti ve Otel Rezervasyonu",
@@ -179,7 +182,8 @@
           "answer": "Değişiklik ve iptal, bileti aldığınız havayolunun kurallarına ve bilet sınıfına bağlıdır. Bazı biletler değiştirilebilir, bazıları hiç iade edilmez. Bilet almadan önce hangi sınıfta ne mümkün olduğunu size yazılı olarak söyleriz."
         }
       ],
-      "metaDescription": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Semt semt otel önerisi, metroya yakınlık bilgisi ve rezervasyon öncesi net toplam fiyat."
+      "metaDescription": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Semt semt otel önerisi, metroya yakınlık bilgisi ve rezervasyon öncesi net toplam fiyat.",
+      "metaTitle": "Uçak Bileti ve Otel Rezervasyonu"
     },
     "priceFrom": "'dan başlayan fiyatlarla"
   },
@@ -203,7 +207,8 @@
       "season": "Nisan–mayıs ve eylül–ekim. Yaz ortasında öğle saatleri sıcak ve kalabalık; program sabah erkene ve ikindi sonrasına yayılır.",
       "pace": "Gün içinde toplam 3–4 km yürüyüş. Topkapı Sarayı'nın kendisi geniş bir alan; içeride bir-iki saat ayakta geçer.",
       "tip": "Camilerde omuz ve diz kapalı olmalı, kadınlar için başörtüsü gerekir; girişte ücretsiz örtü verilir. Ayakkabı çıkarılır, çorap işe yarar.",
-      "metaDescription": "Sultanahmet, Ayasofya, Topkapı, Kapalıçarşı ve Boğaz turu tek günde. Özel araç, Arapça rehber, otelden alış; gruba katılmadan kendi temponuzla."
+      "metaDescription": "Sultanahmet, Ayasofya, Topkapı, Kapalıçarşı ve Boğaz turu tek günde. Özel araç, Arapça rehber, otelden alış; gruba katılmadan kendi temponuzla.",
+      "metaTitle": "İstanbul Turu — 8 Saat, Özel Araç ve Rehber"
     },
     "bursa": {
       "name": "Bursa Turu",
@@ -221,7 +226,8 @@
       "season": "Kar manzarası için aralık–mart, yeşillik için nisan–haziran. Teleferik hava koşullarına göre kapanabilir.",
       "pace": "Şehirde orta düzey yürüyüş; Cumalıkızık'ın taş sokakları dar ve eğimli, rahat ayakkabı gerekir.",
       "tip": "Uludağ zirvesinde hava şehirden 8–10 derece soğuk olur; yaz aylarında bile ince bir üst almak gerekir.",
-      "metaDescription": "Uludağ teleferiği, Ulu Cami, Koza Han ve Cumalıkızık köyü. İstanbul'dan feribotla günübirlik; özel araç, Arapça rehber, otelden alış ve bırakış."
+      "metaDescription": "Uludağ teleferiği, Ulu Cami, Koza Han ve Cumalıkızık köyü. İstanbul'dan feribotla günübirlik; özel araç, Arapça rehber, otelden alış ve bırakış.",
+      "metaTitle": "Bursa ve Uludağ Turu — İstanbul'dan 10 Saat"
     },
     "sapanca": {
       "name": "Sapanca Turu",
@@ -239,7 +245,8 @@
       "season": "Nisan–ekim en rahat aralık. Kışın Kartepe kar için tercih edilir ama yol koşulları değişkendir.",
       "pace": "Sitedeki en sakin program; yürüyüş az ve isteğe bağlı. Çocuklu ve yaşlı misafirler için en uygun tur.",
       "tip": "Şelale çevresindeki yollar toprak ve ıslak olabilir; bebek arabası her yerde rahat gitmez.",
-      "metaDescription": "Sapanca Gölü, Maşukiye şelaleleri ve alabalık lokantaları. İstanbul'a 130 km, günübirlik program; özel araçla otelden alınır, akşam bırakılırsınız."
+      "metaDescription": "Sapanca Gölü, Maşukiye şelaleleri ve alabalık lokantaları. İstanbul'a 130 km, günübirlik program; özel araçla otelden alınır, akşam bırakılırsınız.",
+      "metaTitle": "Sapanca ve Maşukiye Turu — 9 Saat"
     },
     "trabzon": {
       "name": "Trabzon Turu",
@@ -257,7 +264,8 @@
       "season": "Yaylalar için haziran sonu–eylül. Kışın bazı yayla yolları kapanır; Uzungöl yıl boyu açıktır.",
       "pace": "Yolculuk uzun, yürüyüş az. Sümela Manastırı'na çıkış yokuşlu ve her yaş için uygun değil.",
       "tip": "Karadeniz Türkiye'nin en çok yağış alan bölgesi; yazın bile yağmurluk işe yarar ve sis manzarayı kapatabilir.",
-      "metaDescription": "Uzungöl, Sümela Manastırı ve Karadeniz yaylaları. Arapça rehber eşliğinde özel araçla; yayla sezonu, mesafeler ve kaç gün gerektiği rehberde."
+      "metaDescription": "Uzungöl, Sümela Manastırı ve Karadeniz yaylaları. Arapça rehber eşliğinde özel araçla; yayla sezonu, mesafeler ve kaç gün gerektiği rehberde.",
+      "metaTitle": "Trabzon ve Uzungöl Turu — 12 Saat"
     },
     "bodrum": {
       "name": "Bodrum Turu",
@@ -275,7 +283,8 @@
       "season": "Mayıs–ekim. Deniz temmuz–eylül arası en ılıktır; nisan ve kasım serin ama sakin.",
       "pace": "Tekne turunda yürüyüş yok; kale ve çarşı gezisinde orta düzey. Güneş koruması gerekir.",
       "tip": "Tekne turlarında yüzme molası verilir; mayo ve havlu getirin. Öğle güneşi Ege'de sert, şapka işe yarar.",
-      "metaDescription": "Bodrum Kalesi, turkuaz koylar ve Ege'de tekne turu. Özel araç ve Arapça rehberle; otelden alış, kendi programınıza göre esneyen bir gün."
+      "metaDescription": "Bodrum Kalesi, turkuaz koylar ve Ege'de tekne turu. Özel araç ve Arapça rehberle; otelden alış, kendi programınıza göre esneyen bir gün.",
+      "metaTitle": "Bodrum ve Ege Koyları Turu — 10 Saat"
     },
     "antalya": {
       "name": "Antalya Turu",
@@ -293,7 +302,8 @@
       "season": "Nisan–kasım. Deniz mayıstan ekime kadar ılık; temmuz–ağustos çok sıcak, program sabah erkene ve ikindi sonrasına yayılır. Kış aylarında şehir sakin ve yeşildir.",
       "pace": "Kaleiçi'nde 2–3 km yürüyüş, sokaklar taş döşeli ve yer yer eğimli. Şelale yürüyüşü kısa. Bebek arabası Kaleiçi'nde zorlar.",
       "tip": "Gölge azdır; şapka, güneş kremi ve su gerekir. Deniz mevsimindeyseniz mayo getirin, sahilde mola veriyoruz. Kaleiçi sokaklarında pazarlık geçer.",
-      "metaDescription": "Kaleiçi, Hadrian Kapısı, Düden Şelalesi ve Akdeniz sahilleri tek günde. Özel araç ve Arapça rehberle, otelden alış; program size göre esner."
+      "metaDescription": "Kaleiçi, Hadrian Kapısı, Düden Şelalesi ve Akdeniz sahilleri tek günde. Özel araç ve Arapça rehberle, otelden alış; program size göre esner.",
+      "metaTitle": "Antalya ve Kaleiçi Turu — 10 Saat"
     }
   },
   "whyUs": {
@@ -360,7 +370,8 @@
     "bestForLabel": "Kimler için uygun",
     "howLabel": "Nasıl işliyor",
     "noteLabel": "Bilmeniz gerekenler",
-    "serviceFaqTitle": "Bu hizmet hakkında sık sorulanlar"
+    "serviceFaqTitle": "Bu hizmet hakkında sık sorulanlar",
+    "metaTitle": "Hizmetlerimiz: Transfer, Şoförlü Araç, Tur"
   },
   "toursPage": {
     "title": "Tur Programlarımız",
@@ -393,7 +404,8 @@
     "practicalTitle": "Bu turda pratik bilgiler",
     "seasonLabel": "En iyi mevsim",
     "paceLabel": "Tempo ve yürüyüş",
-    "tipLabel": "Bilmekte fayda var"
+    "tipLabel": "Bilmekte fayda var",
+    "metaTitle": "İstanbul, Bursa ve Sapanca Özel Turları"
   },
   "about": {
     "title": "Hakkımızda",
@@ -435,7 +447,8 @@
     "wrong4Desc": "Turlarımız özel; bir gruba bağlı değilsiniz. Gün durdurulabilir, kısaltılabilir ya da ertesi güne kaydırılabilir — bunun için kimseyi beklemiyoruz. Otele erken dönmek de bir seçenek.",
     "wrong5Title": "Bir şeyden memnun kalmadınız",
     "wrong5Desc": "Seyahatin İÇİNDE söyleyin, sonra değil. Aynı gün söylenen şey düzeltilebiliyor; dönüşten sonra söylenen şey artık yalnız bir yorum oluyor. Şikâyet duymayı tercih ederiz.",
-    "wrongNote": "Para tarafı — iptal, iade ve değişiklik koşulları — rezervasyonda yazılı olarak konuşuluyor ve teklifle birlikte gönderiliyor. Buraya genel bir cümle yazmıyoruz çünkü hizmete ve tarihe göre değişiyor."
+    "wrongNote": "Para tarafı — iptal, iade ve değişiklik koşulları — rezervasyonda yazılı olarak konuşuluyor ve teklifle birlikte gönderiliyor. Buraya genel bir cümle yazmıyoruz çünkü hizmete ve tarihe göre değişiyor.",
+    "metaTitle": "Hakkımızda — TÜRSAB Belgeli Seyahat Acentesi"
   },
   "contact": {
     "title": "İletişim",
@@ -470,7 +483,8 @@
     "prep5Desc": "Yalnız transfer mi, bir günlük tur mu, gün gün program mı. Otel ve uçak bileti de isterseniz onu da yazın.",
     "prep6Title": "Bagaj ve özel durumlar",
     "prep6Desc": "Fazla bavul, bebek arabası, tekerlekli sandalye ya da yürümekte zorlanan bir büyüğünüz varsa. Bunlar araç ve program seçimini değiştiriyor.",
-    "prepNote": "Hepsini bilmiyorsanız da yazın — elimizdekiyle başlar, eksikleri birlikte tamamlarız. Yanıtları Arapça, Türkçe ya da İngilizce veriyoruz."
+    "prepNote": "Hepsini bilmiyorsanız da yazın — elimizdekiyle başlar, eksikleri birlikte tamamlarız. Yanıtları Arapça, Türkçe ya da İngilizce veriyoruz.",
+    "metaTitle": "İletişim — WhatsApp'tan Aynı Gün Dönüş"
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular",
@@ -522,7 +536,8 @@
     "q19": "Otel ve uçak bileti rezervasyonu da yapıyor musunuz?",
     "a19": "Evet. Tarihinizi, kişi sayınızı ve bütçenizi yazarsanız iki–üç seçeneği toplam fiyatıyla birlikte göndeririz; beğendiğinizi onaylarsınız, rezervasyonu biz yaparız. Otel önerirken semtin nasıl bir yer olduğunu ve metroya kaç dakika olduğunu önceden söyleriz. Vize başvurusu yürütmüyoruz.",
     "q20": "TÜRSAB belgesi ne anlama geliyor, nasıl doğrularım?",
-    "a20": "TÜRSAB belgesi, Kültür ve Turizm Bakanlığı denetiminde çalışan bir seyahat acentesi olduğumuz anlamına gelir; belgesiz çalışmak Türkiye'de yasaktır. Belge numaramız 12539 ve tursab.org.tr üzerindeki acenta arama sayfasından adımıza kayıtlı olduğunu kendiniz görebilirsiniz."
+    "a20": "TÜRSAB belgesi, Kültür ve Turizm Bakanlığı denetiminde çalışan bir seyahat acentesi olduğumuz anlamına gelir; belgesiz çalışmak Türkiye'de yasaktır. Belge numaramız 12539 ve tursab.org.tr üzerindeki acenta arama sayfasından adımıza kayıtlı olduğunu kendiniz görebilirsiniz.",
+    "metaTitle": "Sıkça Sorulan Sorular — Rezervasyon ve Fiyat"
   },
   "footer": {
     "about": "Rufai Turizm — Türkiye'de transfer, tur, uçak bileti ve otel rezervasyonu hizmeti veren seyahat acentesi.",
@@ -675,7 +690,8 @@
     "intro2": "Hazır program bu işi baştan yapar. Aşağıdaki programlar, ayrı ayrı zaten yürüttüğümüz turların gün gün sıralanmış hali; yeni bir hizmet değil, olan hizmetlerin doğru sırası. Her birinde havalimanı karşılaması, şehirlerarası yolculuklar ve otelden alış aynı araçla ve aynı şoförle yapılır.",
     "intro3": "Program bir taahhüt değil, bir başlangıç noktası. Gün ekleyebilir, durak çıkarabilir, sıralamayı değiştirebilirsiniz — turlarımız özel olduğu için kimsenin takvimine uymak zorunda değilsiniz. Konaklamayı da isterseniz biz ayarlarız, isterseniz kendi otelinizde kalırsınız.",
     "howTitle": "Nasıl ilerliyoruz",
-    "faqTitle": "Bu programla ilgili sık sorulanlar"
+    "faqTitle": "Bu programla ilgili sık sorulanlar",
+    "metaTitle": "Türkiye Tur Paketleri: 4-8 Günlük Programlar"
   },
   "notIncluded": {
     "tickets": "Müze ve ören yeri giriş ücretleri",
@@ -783,7 +799,8 @@
     ],
     "title": "Havalimanı Transferi",
     "subtitle": "İstanbul, Sabiha Gökçen, Antalya, Bodrum ve Trabzon havalimanlarından sabit fiyatlı özel transfer.",
-    "intro": "Havalimanı transferi en çok tercih edilen hizmetimiz. Uçuşunuzu takip ediyor, geliş kapısında isminizin yazılı olduğu tabelayla karşılıyor ve bagajlarınızla birlikte doğrudan otelinize götürüyoruz. Fiyat rezervasyonda netleşir ve varışta değişmez."
+    "intro": "Havalimanı transferi en çok tercih edilen hizmetimiz. Uçuşunuzu takip ediyor, geliş kapısında isminizin yazılı olduğu tabelayla karşılıyor ve bagajlarınızla birlikte doğrudan otelinize götürüyoruz. Fiyat rezervasyonda netleşir ve varışta değişmez.",
+    "metaTitle": "İstanbul Havalimanı ve Sabiha Gökçen Transferi"
   },
   "eyebrow": {
     "services": "Hizmetler",
@@ -936,6 +953,7 @@
     "colMonths": "En iyi aylar",
     "colSuits": "Kime uyar",
     "combineTitle": "Kaç şehir birleştirilir",
-    "combineText": "İki hafta ve altındaki bir tatilde en fazla iki şehir işe yarıyor. Üçüncü şehir kâğıt üzerinde sığıyor ama pratikte iki gün daha yolda ve havalimanında geçiyor — bir saatlik iç hat uçuşu, otelden kapıya kadar beş-altı saat ediyor.\n\nEn çok tercih edilen düzen İstanbul'la başlayıp bir sahil şehrine geçmek: dört gün İstanbul, ardından Antalya ya da Bodrum. Bursa ve Sapanca ise ayrı şehir sayılmıyor — ikisi de İstanbul'dan günübirlik ve programa bir gün olarak giriyor.\n\nTrabzon farklı çalışıyor: gezilecek yerler şehir merkezinin dışında ve mesafeler uzun, o yüzden beş günün altında sıkışıyor ve başka bir şehirle aynı hafta içine kolay girmiyor."
+    "combineText": "İki hafta ve altındaki bir tatilde en fazla iki şehir işe yarıyor. Üçüncü şehir kâğıt üzerinde sığıyor ama pratikte iki gün daha yolda ve havalimanında geçiyor — bir saatlik iç hat uçuşu, otelden kapıya kadar beş-altı saat ediyor.\n\nEn çok tercih edilen düzen İstanbul'la başlayıp bir sahil şehrine geçmek: dört gün İstanbul, ardından Antalya ya da Bodrum. Bursa ve Sapanca ise ayrı şehir sayılmıyor — ikisi de İstanbul'dan günübirlik ve programa bir gün olarak giriyor.\n\nTrabzon farklı çalışıyor: gezilecek yerler şehir merkezinin dışında ve mesafeler uzun, o yüzden beş günün altında sıkışıyor ve başka bir şehirle aynı hafta içine kolay girmiyor.",
+    "metaTitle": "Türkiye'de Nereye: İstanbul, Antalya, Bodrum"
   }
 }

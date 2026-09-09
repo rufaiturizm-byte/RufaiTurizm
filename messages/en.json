@@ -71,7 +71,8 @@
           "answer": "Yes. Travelling to Bursa, Sapanca or anywhere else, neither the vehicle nor the driver changes. The driver who picked you up from your hotel is the one who brings you back, so you never have to explain your plans from scratch again."
         }
       ],
-      "metaDescription": "A chauffeured, late-model Mercedes Vito for up to 6 passengers with luggage. Tinted windows, separate rear air conditioning, the same driver throughout."
+      "metaDescription": "A chauffeured, late-model Mercedes Vito for up to 6 passengers with luggage. Tinted windows, separate rear air conditioning, the same driver throughout.",
+      "metaTitle": "Mercedes Vito with Driver in Istanbul"
     },
     "transfer": {
       "title": "Transfer & Meet and Greet",
@@ -107,7 +108,8 @@
           "answer": "Flight number, landing date and time, hotel name or address, number of passengers and number of suitcases. If you are travelling with children, add their ages so we can fit the right seat. With those five details a booking takes minutes."
         }
       ],
-      "metaDescription": "Meet and greet and hotel transfer from Istanbul Airport (IST) and Sabiha Gökçen (SAW). Fixed price, flight tracking, a name board at arrivals, luggage help."
+      "metaDescription": "Meet and greet and hotel transfer from Istanbul Airport (IST) and Sabiha Gökçen (SAW). Fixed price, flight tracking, a name board at arrivals, luggage help.",
+      "metaTitle": "Airport Transfer Service — Fixed Price"
     },
     "tours": {
       "title": "Guided Tours",
@@ -143,7 +145,8 @@
           "answer": "One person. Because our tours are private there is no minimum, and you never wait for a group to fill up. Since the price is per vehicle, the more of you travel together, the less each person pays."
         }
       ],
-      "metaDescription": "Private tours in Istanbul, Bursa, Sapanca, Trabzon and Bodrum. An Arabic-speaking guide, never merged with a group, prayer and meal breaks, hotel pick-up."
+      "metaDescription": "Private tours in Istanbul, Bursa, Sapanca, Trabzon and Bodrum. An Arabic-speaking guide, never merged with a group, prayer and meal breaks, hotel pick-up.",
+      "metaTitle": "Private Tours — Arabic Guide or Driver"
     },
     "flightHotel": {
       "title": "Flight & Hotel Booking",
@@ -179,7 +182,8 @@
           "answer": "Changes and cancellations depend on the airline's rules and your fare class. Some tickets can be changed, others are entirely non-refundable. We tell you in writing what is possible in your fare class before the ticket is bought."
         }
       ],
-      "metaDescription": "We book flights and hotels on your behalf: hotel suggestions district by district, distance to the metro explained, and a clear total price before you book."
+      "metaDescription": "We book flights and hotels on your behalf: hotel suggestions district by district, distance to the metro explained, and a clear total price before you book.",
+      "metaTitle": "Flight and Hotel Booking in Türkiye"
     },
     "priceFrom": "starting prices"
   },
@@ -203,7 +207,8 @@
       "season": "April–May and September–October. In midsummer the middle of the day is hot and crowded, so the programme spreads across early morning and late afternoon.",
       "pace": "Around 3–4 km of walking across the day. Topkapi Palace itself is a large site; you spend an hour or two on your feet inside.",
       "tip": "In mosques shoulders and knees must be covered and women need a headscarf; a free cover is provided at the entrance. Shoes come off, so socks help.",
-      "metaDescription": "Blue Mosque, Hagia Sophia, Topkapı, the Grand Bazaar and a Bosphorus cruise in one day. Private vehicle, Arabic-speaking guide, hotel pick-up, never a group."
+      "metaDescription": "Blue Mosque, Hagia Sophia, Topkapı, the Grand Bazaar and a Bosphorus cruise in one day. Private vehicle, Arabic-speaking guide, hotel pick-up, never a group.",
+      "metaTitle": "Istanbul Tour — 8 Hours, Private Car and Guide"
     },
     "bursa": {
       "name": "Bursa Tour",
@@ -221,7 +226,8 @@
       "season": "December–March for snow, April–June for greenery. The cable car can close in bad weather.",
       "pace": "Moderate walking in town; the stone lanes of Cumalikizik are narrow and sloping, so comfortable shoes matter.",
       "tip": "At the summit of Uludag it is 8–10 degrees colder than the city; even in summer bring a light jacket.",
-      "metaDescription": "Uludağ cable car, the Grand Mosque, Koza Han and Cumalıkızık village. A day trip from Istanbul by ferry with a private vehicle, guide and hotel pick-up."
+      "metaDescription": "Uludağ cable car, the Grand Mosque, Koza Han and Cumalıkızık village. A day trip from Istanbul by ferry with a private vehicle, guide and hotel pick-up.",
+      "metaTitle": "Bursa and Uludağ Tour from Istanbul — 10 Hours"
     },
     "sapanca": {
       "name": "Sapanca Tour",
@@ -239,7 +245,8 @@
       "season": "April–October is the easiest window. In winter people go to Kartepe for snow, but road conditions vary.",
       "pace": "The calmest programme on the site; walking is limited and optional. The best tour for families with children and older guests.",
       "tip": "Paths around the waterfalls can be unpaved and wet; a pushchair will not roll easily everywhere.",
-      "metaDescription": "Lake Sapanca, the Maşukiye waterfalls and trout restaurants. 130 km from Istanbul as a day programme; collected from your hotel and returned by evening."
+      "metaDescription": "Lake Sapanca, the Maşukiye waterfalls and trout restaurants. 130 km from Istanbul as a day programme; collected from your hotel and returned by evening.",
+      "metaTitle": "Sapanca and Maşukiye Tour — 9 Hours"
     },
     "trabzon": {
       "name": "Trabzon Tour",
@@ -257,7 +264,8 @@
       "season": "Late June–September for the plateaus. Some plateau roads close in winter; Uzungol is open year-round.",
       "pace": "A long drive with little walking. The climb to the Sumela Monastery is steep and not suitable for every age.",
       "tip": "The Black Sea is Türkiye's rainiest region; a raincoat helps even in summer and mist can close the view.",
-      "metaDescription": "Uzungöl, Sumela Monastery and the Black Sea highlands with a private vehicle and Arabic-speaking guide. Highland season, distances and days needed explained."
+      "metaDescription": "Uzungöl, Sumela Monastery and the Black Sea highlands with a private vehicle and Arabic-speaking guide. Highland season, distances and days needed explained.",
+      "metaTitle": "Trabzon and Uzungöl Tour — 12 Hours"
     },
     "bodrum": {
       "name": "Bodrum Tour",
@@ -275,7 +283,8 @@
       "season": "May–October. The sea is warmest between July and September; April and November are cooler but quiet.",
       "pace": "No walking on the boat trip; moderate around the castle and bazaar. Sun protection is needed.",
       "tip": "Boat trips include a swimming stop, so bring swimwear and a towel. The midday Aegean sun is strong; a hat helps.",
-      "metaDescription": "Bodrum Castle, turquoise bays and an Aegean boat trip. Private vehicle and Arabic-speaking guide, hotel pick-up, and a day that flexes around your plans."
+      "metaDescription": "Bodrum Castle, turquoise bays and an Aegean boat trip. Private vehicle and Arabic-speaking guide, hotel pick-up, and a day that flexes around your plans.",
+      "metaTitle": "Bodrum and Aegean Bays Tour — 10 Hours"
     },
     "antalya": {
       "name": "Antalya Tour",
@@ -293,7 +302,8 @@
       "season": "April to November. The sea is warm from May to October; July and August are very hot, so the programme spreads to early morning and late afternoon. In winter the city is quiet and green.",
       "pace": "Two to three kilometres of walking in Kaleiçi, on cobbled and sometimes sloping lanes. The waterfall walk is short. A pushchair is hard work in Kaleiçi.",
       "tip": "There is little shade; bring a hat, sunscreen and water. In swimming season bring swimwear — we stop at the beach. Haggling works in the Kaleiçi lanes.",
-      "metaDescription": "Kaleici, Hadrian's Gate, the Duden Waterfall and Mediterranean beaches in one day. Private vehicle, Arabic-speaking guide and hotel pick-up."
+      "metaDescription": "Kaleici, Hadrian's Gate, the Duden Waterfall and Mediterranean beaches in one day. Private vehicle, Arabic-speaking guide and hotel pick-up.",
+      "metaTitle": "Antalya and Kaleiçi Tour — 10 Hours"
     }
   },
   "whyUs": {
@@ -360,7 +370,8 @@
     "bestForLabel": "Who it suits",
     "howLabel": "How it works",
     "noteLabel": "Worth knowing",
-    "serviceFaqTitle": "Questions about this service"
+    "serviceFaqTitle": "Questions about this service",
+    "metaTitle": "Airport Transfer, Car with Driver and Tours"
   },
   "toursPage": {
     "title": "Tour Programs",
@@ -393,7 +404,8 @@
     "practicalTitle": "Practical notes for this tour",
     "seasonLabel": "Best season",
     "paceLabel": "Pace and walking",
-    "tipLabel": "Worth knowing"
+    "tipLabel": "Worth knowing",
+    "metaTitle": "Private Tours in Istanbul, Bursa and Sapanca"
   },
   "about": {
     "title": "About Us",
@@ -435,7 +447,8 @@
     "wrong4Desc": "Our tours are private; you are not tied to a group. The day can be paused, shortened or moved to tomorrow — nobody is kept waiting for that. Going back to the hotel early is an option too.",
     "wrong5Title": "You are unhappy with something",
     "wrong5Desc": "Say it during the trip, not after. What is said the same day can be fixed; what is said after you fly home is only a review. We would rather hear the complaint.",
-    "wrongNote": "The money side — cancellation, refunds and changes — is agreed in writing at booking and sent with the quote. We do not put a blanket sentence here because it varies by service and by date."
+    "wrongNote": "The money side — cancellation, refunds and changes — is agreed in writing at booking and sent with the quote. We do not put a blanket sentence here because it varies by service and by date.",
+    "metaTitle": "About Us — TÜRSAB-Licensed Travel Agency"
   },
   "contact": {
     "title": "Contact",
@@ -470,7 +483,8 @@
     "prep5Desc": "A transfer only, a single day tour, or a day-by-day programme. If you want hotels and flights arranged too, say so.",
     "prep6Title": "Luggage and anything special",
     "prep6Desc": "Extra suitcases, a pushchair, a wheelchair, or an older relative who finds walking difficult. These change the vehicle and the plan.",
-    "prepNote": "If you do not know all of it, write anyway — we start with what you have and fill in the rest together. We reply in Arabic, Turkish or English."
+    "prepNote": "If you do not know all of it, write anyway — we start with what you have and fill in the rest together. We reply in Arabic, Turkish or English.",
+    "metaTitle": "Contact — Same-Day Reply on WhatsApp"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -522,7 +536,8 @@
     "q19": "Do you also book hotels and flight tickets?",
     "a19": "Yes. Send us your dates, party size and budget and we will come back with two or three options and the total price for each; you approve the one you like and we make the booking. When we suggest a hotel we tell you in advance what the neighbourhood is like and how many minutes it is to the metro. We do not handle visa applications.",
     "q20": "What does the TÜRSAB licence mean, and how do I verify it?",
-    "a20": "It means we operate as a travel agency under the supervision of the Turkish Ministry of Culture and Tourism; working without a licence is prohibited in Türkiye. Our licence number is 12539, and you can see for yourself that it is registered in our name through the agency search page on tursab.org.tr."
+    "a20": "It means we operate as a travel agency under the supervision of the Turkish Ministry of Culture and Tourism; working without a licence is prohibited in Türkiye. Our licence number is 12539, and you can see for yourself that it is registered in our name through the agency search page on tursab.org.tr.",
+    "metaTitle": "FAQ — Booking, Prices and Airport Pickup"
   },
   "footer": {
     "about": "Rufai Tourism — a travel agency in Türkiye offering transfers, tours, flight tickets and hotel bookings.",
@@ -675,7 +690,8 @@
     "intro2": "A ready-made programme does that work in advance. The programmes below are not a new service; they are the right order for tours we already run separately, day by day. In each of them the airport meet-and-greet, the intercity journeys and the hotel pick-ups happen with the same vehicle and the same driver.",
     "intro3": "The programme is a starting point, not a commitment. You can add a day, drop a stop or reorder it — the tours are private, so you never have to fit anyone else's schedule. We can arrange the accommodation too, or you can stay at your own hotel.",
     "howTitle": "How it works",
-    "faqTitle": "Common questions about this programme"
+    "faqTitle": "Common questions about this programme",
+    "metaTitle": "Türkiye Tour Packages: 4 to 8 Day Programmes"
   },
   "notIncluded": {
     "tickets": "Museum and historic site entry fees",
@@ -783,7 +799,8 @@
     ],
     "title": "Airport Transfer",
     "subtitle": "Fixed-price private transfers from Istanbul, Sabiha Gokcen, Antalya, Bodrum and Trabzon airports.",
-    "intro": "Airport transfer is our most requested service. We track your flight, meet you at arrivals with a name sign and take you and your luggage straight to your hotel. The price is set at booking and does not change on arrival."
+    "intro": "Airport transfer is our most requested service. We track your flight, meet you at arrivals with a name sign and take you and your luggage straight to your hotel. The price is set at booking and does not change on arrival.",
+    "metaTitle": "Istanbul Airport and Sabiha Gökçen Transfers"
   },
   "eyebrow": {
     "services": "Services",
@@ -936,6 +953,7 @@
     "colMonths": "Best months",
     "colSuits": "Suits",
     "combineTitle": "How many cities you can combine",
-    "combineText": "On a holiday of two weeks or less, at most two cities work. A third fits on paper but in practice costs two more days on the road and at the airport — a one-hour domestic flight takes five to six hours door to door.\n\nThe most popular shape is to start in Istanbul and move to a coastal city: four days in Istanbul, then Antalya or Bodrum. Bursa and Sapanca do not count as separate cities — both are day trips from Istanbul and enter the plan as a single day.\n\nTrabzon works differently: the places worth seeing lie outside the city centre and the distances are long, so it is cramped in under five days and does not fit easily into the same week as another city."
+    "combineText": "On a holiday of two weeks or less, at most two cities work. A third fits on paper but in practice costs two more days on the road and at the airport — a one-hour domestic flight takes five to six hours door to door.\n\nThe most popular shape is to start in Istanbul and move to a coastal city: four days in Istanbul, then Antalya or Bodrum. Bursa and Sapanca do not count as separate cities — both are day trips from Istanbul and enter the plan as a single day.\n\nTrabzon works differently: the places worth seeing lie outside the city centre and the distances are long, so it is cramped in under five days and does not fit easily into the same week as another city.",
+    "metaTitle": "Where to Go in Türkiye: Istanbul, Antalya"
   }
 }

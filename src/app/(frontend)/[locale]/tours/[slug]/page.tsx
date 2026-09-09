@@ -40,7 +40,10 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "tours" });
 
   return {
-    title: t(`${tour.key}.name`),
+    /* Arama sonucu başlığı. `.name` sayfada H1 olarak kalıyor; orada
+       "جولة إسطنبول" yeterli, arama sonucunda değil — süre ve şehir
+       tıklanma kararını veren bilgiler. */
+    title: t(`${tour.key}.metaTitle`),
     // Kartta okunan tek satırlık açıklama arama sonucunda alanın yarısını
     // boş bırakıyordu; metaDescription o alan için ayrı yazıldı.
     description: t(`${tour.key}.metaDescription`),

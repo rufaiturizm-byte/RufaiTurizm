@@ -54,7 +54,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "services" });
 
   return {
-    title: t(`${service.key}.title`),
+    /* Arama sonucu başlığı; sayfadaki H1 `.title` olarak kalıyor. */
+    title: t(`${service.key}.metaTitle`),
     description: t(`${service.key}.metaDescription`),
     openGraph: { images: [service.image] },
     alternates: alternatesFor({ pathname: "/services/[slug]", params: { slug } }, locale),

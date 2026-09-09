@@ -33,7 +33,16 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "transferPage" });
 
   return {
-    title: t("title"),
+    /*
+       Arama sonucu başlığı, sayfa etiketi DEĞİL.
+       Önceki hali t("title") idi, yani H1 ile aynı: "النقل من المطار",
+       "جولاتنا السياحية". İkisi ayrı iş yapıyor — H1 sayfada okunan
+       etiket, <title> arama sonucunda tıklanan satır. Sonuç 31-36
+       karakterlik, şehir adı bile içermeyen başlıklardı; kimse
+       "havalimanı transferi" diye şehirsiz aramıyor. Rehberlerde ve
+       şehir sayfalarında bu ayrım seo.title ile zaten yapılıyordu.
+    */
+    title: t("metaTitle"),
     description: tMeta("transfer"),
     alternates: alternatesFor("/transfer", locale),
   };

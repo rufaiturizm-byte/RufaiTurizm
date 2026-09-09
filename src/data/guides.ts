@@ -1147,7 +1147,7 @@ export const guides: Guide[] = [
     slug: "turkiyede-alisveris-rehberi",
     topic: "practical",
     image: "/images/tours/istanbul.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "İstanbul'da alışveriş: çarşılar, caddeler ve merkezler",
       ar: "التسوّق في إسطنبول: البازارات والشوارع والمولات",
@@ -1241,6 +1241,30 @@ export const guides: Guide[] = [
           tr: "Alışveriş günü sonunda elde taşınacak paket sayısı çoğu zaman tahmin edilenden fazla olur. Aracın gün boyu emrinizde olması bu noktada işe yarar: paketleri araca bırakıp gezmeye devam edebilirsiniz. Halı gibi büyük alımlarda satıcılar kargo düzenler; ülkeye giriş kurallarını önceden öğrenmek gerekir.",
           ar: "في نهاية يوم التسوّق يكون عدد الأكياس أكثر مما يُتوقّع عادةً. وهنا تفيد السيارة الموضوعة تحت تصرّفك طوال اليوم: تترك الأكياس فيها وتواصل التجوّل. وفي المشتريات الكبيرة كالسجاد ينظّم البائعون الشحن؛ ومن اللازم معرفة قواعد الإدخال إلى بلدك مسبقاً.",
           en: "By the end of a shopping day there are usually more bags than expected. This is where having the car at your disposal helps: leave the bags in it and carry on. For large purchases such as carpets, sellers arrange shipping; check your own country's import rules in advance.",
+        },
+      },
+      {
+        heading: {
+          tr: "Şehir şehir: nerede ne alınır",
+          ar: "مدينة مدينة: ماذا تشتري وأين",
+          en: "City by city: what to buy where",
+        },
+        body: {
+          tr: "İstanbul her şeyi bulabileceğiniz yer ama her şeyin en iyisi burada değil. Kapalıçarşı halı, altın, deri ve hediyelik için; Mısır Çarşısı baharat, lokum ve kuruyemiş için. Nişantaşı ve İstinye Park markalar için, Osmanbey ise toptan tekstilin merkezi — perakende alıcıya da satan mağazalar var ama pazarlık ve nakit beklenir.\n\nBursa ipek ve havlu demek. Koza Han yüzyıllardır ipek çarşısı ve hâlâ ipek eşarp satılıyor; Bursa havlusu ve bornozu Türkiye'nin geri kalanından daha ucuza ve daha iyi kalitede bulunuyor. Kestane şekeri de burada alınır.\n\nAntalya'da alışveriş turistik: Kaleiçi'nde hediyelik, büyük alışveriş merkezlerinde marka. Deri ve takı mağazaları turlarla anlaşmalı olabiliyor; acele etmeden ve karşılaştırarak almak gerekiyor.\n\nBodrum el yapımı sandalet, deniz temalı takı ve butik giyim için. Fiyatlar İstanbul'un üstünde çünkü sezonluk ve turistik.\n\nTrabzon'da alınacak şey yiyecek: çay, fındık, bal ve mısır unu. Yayla balı gerçek olduğunda pahalıdır — çok ucuz olan yayla balı değildir.",
+          ar: "إسطنبول مكان تجد فيه كل شيء، لكن ليس فيها أفضل كل شيء. السوق المسقوف للسجاد والذهب والجلد والهدايا؛ وسوق المصريين للبهارات والملبن والمكسّرات. ونيشان تاشي وإستينيه بارك للماركات، أما عثمان بيه فمركز الجملة للنسيج — وفيه متاجر تبيع للأفراد أيضاً لكن يُتوقّع فيها المساومة والنقد.\n\nوبورصة تعني الحرير والمناشف. فخان كوزا سوق حرير منذ قرون وما زال يُباع فيه الوشاح الحريري؛ ومنشفة بورصة وبرنسها أرخص وأجود مما في بقية تركيا. والكستناء المحلّاة تُشترى هنا أيضاً.\n\nوالتسوّق في أنطاليا سياحي: هدايا في كالي إيتشي، وماركات في المولات الكبيرة. وقد تكون متاجر الجلد والمجوهرات متعاقدة مع الجولات؛ فينبغي الشراء دون استعجال وبعد المقارنة.\n\nوبودروم للصنادل اليدوية والمجوهرات ذات الطابع البحري والملابس البوتيك. والأسعار أعلى من إسطنبول لأنها موسمية وسياحية.\n\nوما يُشترى في طرابزون طعام: الشاي والبندق والعسل ودقيق الذرة. وعسل المرتفعات إن كان حقيقياً فهو غالٍ — والرخيص جداً ليس عسل مرتفعات.",
+          en: "Istanbul is where you can find everything, but not where everything is best. The Grand Bazaar is for carpets, gold, leather and souvenirs; the Spice Bazaar for spices, Turkish delight and nuts. Nişantaşı and İstinye Park are for brands, while Osmanbey is the wholesale textile district — some shops sell retail too, but haggling and cash are expected.\n\nBursa means silk and towels. Koza Han has been a silk market for centuries and still sells silk scarves; Bursa towels and bathrobes are cheaper and better than elsewhere in Türkiye. Candied chestnuts are bought here too.\n\nShopping in Antalya is touristic: souvenirs in Kaleiçi, brands in the large malls. Leather and jewellery shops may have arrangements with tours; buy without hurrying and after comparing.\n\nBodrum is for handmade sandals, sea-themed jewellery and boutique clothing. Prices run above Istanbul because it is seasonal and touristic.\n\nWhat you buy in Trabzon is food: tea, hazelnuts, honey and cornmeal. Genuine highland honey is expensive — very cheap highland honey is not highland honey."
+        },
+      },
+      {
+        heading: {
+          tr: "Fiyat, pazarlık ve vergi iadesi",
+          ar: "السعر والمساومة واسترداد الضريبة",
+          en: "Price, haggling and tax refunds",
+        },
+        body: {
+          tr: "Pazarlık her yerde geçerli değil. Alışveriş merkezlerinde, zincir mağazalarda ve markette fiyat sabit; pazarlık etmeye çalışmak yalnız zaman kaybı. Kapalıçarşı, semt pazarları ve küçük hediyelik dükkânlarında ise pazarlık beklenen bir şey ve yapmadığınızda fazla ödemiş oluyorsunuz.\n\nPazarlığın basit kuralı: ilk fiyatı duyduğunuzda düşünmek için zaman alın ve iki dükkân daha gezin. Aynı ürünün fiyatı çarşı içinde belirgin biçimde değişebiliyor ve satıcı sizin ilk gördüğünüz dükkândan almanızı bekliyor. Kararlıysanız ayrılmaya yönelmek çoğu zaman fiyatı düşürüyor.\n\nBüyük alışverişlerde vergi iadesi (Tax Free) hakkınız var. Belirli bir tutarın üstünde alışverişte mağazadan fatura ve iade formu isteyin; havalimanında çıkıştan önce gümrükte onaylatıp ödemeyi alıyorsunuz. Formu almayı unutmak sonradan telafi edilmiyor, bu yüzden alışveriş anında sormak gerekiyor.\n\nSahte marka konusunda net olalım: Türkiye'de taklit ürün satan yerler var ve bunlar ucuz. Yurt dışına çıkarken gümrükte sorun çıkarabiliyor; bilerek alıyorsanız bunu hesaba katın.",
+          ar: "المساومة لا تصلح في كل مكان. ففي المولات والمتاجر السلسلة والبقالات السعر ثابت، ومحاولة المساومة مضيعة للوقت. أما في السوق المسقوف وأسواق الأحياء ومحلات الهدايا الصغيرة فالمساومة أمر متوقّع، ومن لا يساوم يكون قد دفع زائداً.\n\nوقاعدة المساومة بسيطة: حين تسمع السعر الأول خذ وقتاً للتفكير وطُف على متجرين آخرين. فسعر المنتج نفسه قد يختلف بوضوح داخل السوق، والبائع يتوقّع أن تشتري من أول متجر رأيته. وإن كنت حازماً فالاتّجاه نحو المغادرة يخفّض السعر غالباً.\n\nولك حقّ استرداد الضريبة (Tax Free) في المشتريات الكبيرة. اطلب من المتجر الفاتورة واستمارة الاسترداد عند تجاوز مبلغ معيّن؛ ثم تصدّقها في الجمارك قبل المغادرة في المطار وتستلم المبلغ. ونسيان أخذ الاستمارة لا يُعوَّض لاحقاً، ولذلك يجب السؤال لحظة الشراء.\n\nولنكن واضحين في مسألة الماركات المقلّدة: توجد في تركيا أماكن تبيع منتجات مقلّدة وهي رخيصة. وقد تسبّب مشكلة في الجمارك عند الخروج من البلد؛ فإن كنت تشتريها عن علم فاحسب ذلك.",
+          en: "Haggling does not apply everywhere. In malls, chain stores and supermarkets the price is fixed; trying to bargain only wastes time. In the Grand Bazaar, neighbourhood markets and small souvenir shops, haggling is expected and not doing it means overpaying.\n\nThe simple rule: when you hear the first price, take time to think and visit two more shops. The price of the same item can vary noticeably within the bazaar, and the seller expects you to buy from the first shop you saw. If you are firm, moving to leave usually brings the price down.\n\nOn large purchases you are entitled to a tax refund. Above a certain amount, ask the shop for the invoice and the refund form; you have it stamped at customs before departure at the airport and collect the payment. Forgetting to take the form cannot be fixed afterwards, so ask at the moment of purchase.\n\nLet us be plain about counterfeits: there are places in Türkiye selling fake branded goods and they are cheap. They can cause problems at customs when leaving the country; if you buy them knowingly, factor that in."
         },
       },
     ],

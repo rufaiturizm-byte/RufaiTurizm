@@ -69,6 +69,22 @@
         {
           "question": "Şehirlerarası yolculukta aynı araç mı geliyor?",
           "answer": "Evet. Bursa, Sapanca ya da başka bir şehre giderken araç da şoför de değişmez. Otelinizden alan şoför, dönüşte de sizi bırakan kişidir; her seferinde kendinizi yeniden anlatmak zorunda kalmazsınız."
+        },
+        {
+          "question": "Bir günlük şoförlü araç ne kadar?",
+          "answer": "Sabit bir tarife yazmıyoruz çünkü fiyatı üç şey belirliyor: mesafe, aracın kaç saat sizinle kaldığı ve tarih. Havalimanından otele tek geçişle sabah alıp akşam bırakan bir gün arasında dört-beş kat fark var. Tarihinizi, kişi sayınızı ve güzergâhı yazın; aynı gün toplam tutarı gönderelim. Söylenen rakam varışta değişmez ve yol boyunca otopark, köprü ya da yakıt adı altında ek ücret çıkmaz."
+        },
+        {
+          "question": "Şoför gerçekten Arapça konuşuyor mu?",
+          "answer": "Evet. Ekibimizin tamamı Arapça, Türkçe ve İngilizce konuşuyor ve şoförü de bu yüzden kendi ekibimizden veriyoruz. Otel adresi, bagaj, çocuk koltuğu ya da mola isteği el işaretiyle değil konuşarak hallediliyor. Aynı şoför seyahatiniz boyunca sizinle kalıyor, her gün baştan anlatmak zorunda kalmıyorsunuz."
+        },
+        {
+          "question": "Gün içinde programa durak ekleyebilir miyim?",
+          "answer": "Evet, sık oluyor. Araç gün boyunca size ait olduğu için durak eklemek ya da bir yeri atlamak mümkün. Şoför isteğinizi çeviriyor; ek bir mesafe çıkıyorsa farkı o anda söylüyoruz, sonradan faturaya eklemiyoruz. Günlük araç tahsisi ile tek yön transfer arasındaki asıl fark da bu esneklik."
+        },
+        {
+          "question": "Antalya, Bodrum ve Trabzon'da da araç veriyor musunuz?",
+          "answer": "Evet. Şoförlü araç hizmetimiz altı bölgede çalışıyor: İstanbul, Antalya, Bodrum, Trabzon, Bursa ve Sapanca. Havalimanı karşılaması beş havalimanında var — IST, SAW, AYT, BJV ve TZX. Bursa ve Sapanca ayrı bölge sayılmıyor; ikisi de İstanbul'dan günübirlik ve araç İstanbul'dan çıkıyor."
         }
       ],
       "metaDescription": "Şoförlü, son model Mercedes Vito ile bagajınızla birlikte 6 kişiye kadar konforlu ulaşım. Kararmış cam, arkada ayrı klima, aynı şoför tüm seyahat boyunca.",
@@ -132,6 +148,22 @@
         {
           "question": "Rezervasyon için hangi bilgiler gerekiyor?",
           "answer": "Uçuş numarası, iniş tarihi ve saati, otel adı veya adresi, kişi sayısı ve valiz sayısı. Çocuk varsa yaşını da yazın, koltuğu ona göre hazırlarız. Bu beş bilgiyle rezervasyon dakikalar içinde tamamlanır."
+        },
+        {
+          "question": "Uçağım rötar yaparsa ne oluyor?",
+          "answer": "Uçuşu numarasından takip ediyoruz, bu yüzden şoför yeni saate göre geliyor ve bekleme için ek ücret çıkmıyor. Bagajınız kaybolur da gecikirseniz de şoför bekler. Uçuş tamamen iptal olduysa bize yazmanız yeterli; transferi yeni tarihe göre yeniden kuruyoruz."
+        },
+        {
+          "question": "Fiyat sabit mi, trafiğe göre değişiyor mu?",
+          "answer": "Sabit. Rezervasyonda söylediğimiz tutar varışta aynı kalıyor; trafik uzadı diye fiyat artmıyor. Yakıt, otopark, köprü ve otoyol geçişleri zaten fiyatın içinde. Değişen tek şey güzergâhın kendisi olur — başka bir adrese gitmek isterseniz farkı o anda söylüyoruz."
+        },
+        {
+          "question": "Yolda SIM kart ya da döviz için durabilir miyiz?",
+          "answer": "Evet, kısa bir mola sorun değil. Havalimanı çıkışında operatör bayileri var ve döviz bürosu da bulunuyor. Şoföre söylemeniz yeterli. Yalnız şunu bilin: havalimanındaki döviz kuru şehirdekinden genelde daha kötü, o yüzden yalnız ilk gün yetecek kadar bozdurmak daha mantıklı."
+        },
+        {
+          "question": "Sekiz kişilik bir aile için kaç araç gerekiyor?",
+          "answer": "İki araç. Vito altı yolcu taşıyor ve altı kişi oturduğunda arkada iki büyük valiz ile birkaç el bagajı kalıyor. Sekiz kişi bagajıyla birlikte tek araca sığmıyor. İkinci araç da kendi filomuzdan çıkıyor — rezervasyonu alıp başka bir firmaya devretmiyoruz. Kaç valiz olduğunu rezervasyonda sormamızın sebebi bu."
         }
       ],
       "metaDescription": "İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW) karşılama ve otel transferi. Sabit fiyat, uçuş takibi, isimli tabelayla karşılama ve bagaj yardımı dahil.",
@@ -187,6 +219,22 @@
         {
           "question": "Kaç kişiden itibaren tur düzenliyorsunuz?",
           "answer": "Bir kişiden itibaren. Turlar özel olduğu için asgari kişi sayısı aramıyoruz; grup dolsun diye beklemezsiniz. Fiyat araç başına verildiği için kalabalıklaştıkça kişi başına düşen tutar azalır."
+        },
+        {
+          "question": "Turda namaz vakitlerinde mola veriliyor mu?",
+          "answer": "Evet. Program sizin gününüze göre kuruluyor, bir otobüs tarifesine göre değil; namaz vakitlerinde mola veriliyor ve şoför en yakın camiyi biliyor. Öğle yemeği için durulacak yeri de siz seçiyorsunuz. Helal konusunda tereddüt varsa şoför soruyor, siz sormak zorunda kalmıyorsunuz."
+        },
+        {
+          "question": "Öğle yemeği fiyata dahil mi?",
+          "answer": "Hayır. Öğle yemeği, müze ve ören yeri giriş biletleri ile tekne turu bileti fiyata dahil değil. Müze biletlerini bilerek katmıyoruz çünkü ücretler değişiyor ve herkes aynı müzeye girmiyor — nereye gireceğinize siz karar verin istiyoruz. Fiyata dahil olanlar: özel araç ve şoför, otelden alış ve bırakış, yakıt, otopark ve geçiş ücretleri, araçta su."
+        },
+        {
+          "question": "Yarım günlük tur yapıyor musunuz?",
+          "answer": "Turlarımız tam gün üzerine kurulu; sürelerine tur sayfalarından bakabilirsiniz. Ama araç ve şoför size ait olduğu için günü erken bitirmek her zaman mümkün — çocuk yorulduysa ya da hava bozduysa otele dönmek bir sorun değil. Yalnız transfer arıyorsanız ayrı bir hizmetimiz var ve o daha uygun."
+        },
+        {
+          "question": "Tur ile hazır program arasındaki fark ne?",
+          "answer": "Tur tek bir gündür: sabah otelden alınır, akşam otele bırakılırsınız. Hazır program ise birden çok günü kapsar ve konaklama, şehirler arası geçişler ve günlük araç aynı planın içindedir. Dört ila sekiz günlük programlarımız paketler sayfasında; hepsi size göre değiştirilebiliyor, olduğu gibi almak zorunda değilsiniz."
         }
       ],
       "metaDescription": "İstanbul, Bursa, Sapanca, Trabzon ve Bodrum'da özel turlar. Arapça rehber, gruba katılma yok, namaz ve yemek molaları programda, otelden alış.",
@@ -242,6 +290,22 @@
         {
           "question": "Uçak biletimi sonradan değiştirebilir miyim?",
           "answer": "Değişiklik ve iptal, bileti aldığınız havayolunun kurallarına ve bilet sınıfına bağlıdır. Bazı biletler değiştirilebilir, bazıları hiç iade edilmez. Bilet almadan önce hangi sınıfta ne mümkün olduğunu size yazılı olarak söyleriz."
+        },
+        {
+          "question": "Banyosunda şattaf olan otel bulabilir misiniz?",
+          "answer": "Sorabiliriz ve soruyoruz. Bu kalem otel sitelerindeki özellik listelerinde neredeyse hiç yazmıyor, o yüzden oteli doğrudan arayıp banyonun fotoğrafını istiyoruz. Türkiye'deki birçok otelde taharet musluğu ya da el duşu var ama bu bir standart değil ve oda tipine göre bile değişebiliyor. Otelin cevabını olduğu gibi iletiyoruz; emin değilse \"emin değil\" diyoruz."
+        },
+        {
+          "question": "Ne kadar önceden rezervasyon yaptırmalıyım?",
+          "answer": "Yaz ayları, ramazan bayramı ve kurban bayramı dönemi için mümkün olduğunca erken — bu haftalar aylar öncesinden doluyor ve geç kalan hem daha az seçenek hem daha yüksek fiyat buluyor. Kasım–mart arasında birkaç hafta önce yeterli. Transfer ve tur için birkaç gün önceden haber vermek çoğu zaman yetiyor ama bayram haftalarında araç da doluyor."
+        },
+        {
+          "question": "Apart otel ya da daire rezervasyonu yapıyor musunuz?",
+          "answer": "Hayır. Aparthotel ve günlük daire kiralama hizmeti vermiyoruz ve bu konuda aracılık da yapmıyoruz. Otel rezervasyonu yapıyoruz; oteli siz seçiyorsunuz, biz sizin adınıza rezerve ediyor ve fiyatın üstüne komisyon koymuyoruz. Yapmadığımız bir işi yapıyormuş gibi göstermemeyi tercih ediyoruz."
+        },
+        {
+          "question": "Ödemeyi varışta yapabilir miyim?",
+          "answer": "Otele göre değişiyor: bazı oteller varışta ödeme kabul ediyor, bazıları rezervasyonda ön ödeme istiyor. Hangi otelin hangi koşulda çalıştığını rezervasyondan önce yazılı olarak söylüyoruz — sonradan öğrenilen bir şey olmasın. Rezervasyon sizin adınıza yapılıyor, bizim adımıza değil; resepsiyonda sizin isminiz görünüyor."
         }
       ],
       "metaDescription": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Semt semt otel önerisi, metroya yakınlık bilgisi ve rezervasyon öncesi net toplam fiyat.",

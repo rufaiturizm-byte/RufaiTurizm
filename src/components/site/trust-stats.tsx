@@ -202,8 +202,14 @@ export async function TrustStats() {
                           aria-hidden="true"
                           className="ms-2 inline-flex translate-y-[-6px] items-center rounded-full px-2.5 py-1 align-middle text-[11px] font-extrabold tracking-[0.08em]"
                           style={{
-                            background: "color-mix(in oklab, var(--brand-gold) 18%, transparent)",
-                            border: "1px solid color-mix(in oklab, var(--brand-gold) 42%, transparent)",
+                            /* Zemin tonu 18%'ten 10%'a indi: piksel
+                               ölçümünde rozet 4.49:1 veriyordu, gereken
+                               4.5. Altın tonunu koyultmak zemini de
+                               koyultuyor ve koyu altın metinle arayı
+                               kapatıyordu — ton hafifleyince pay açıldı.
+                               Kimlik altın kenarlıkta duruyor. */
+                            background: "color-mix(in oklab, var(--brand-gold) 10%, transparent)",
+                            border: "1px solid color-mix(in oklab, var(--brand-gold) 46%, transparent)",
                             color: "var(--brand-gold-deep)",
                           }}
                         >

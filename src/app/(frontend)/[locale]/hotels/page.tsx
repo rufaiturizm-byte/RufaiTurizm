@@ -148,7 +148,7 @@ export default async function HotelsPage({
                     className="absolute inset-0 z-10"
                     style={{
                       background:
-                        "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 93%, transparent) 0%, color-mix(in oklab, var(--brand-night) 62%, transparent) 48%, color-mix(in oklab, var(--brand-night) 16%, transparent) 100%)",
+                        "linear-gradient(to top, color-mix(in oklab, var(--brand-night) 93%, transparent) 0%, color-mix(in oklab, var(--brand-night) 74%, transparent) 52%, color-mix(in oklab, var(--brand-night) 20%, transparent) 100%)",
                     }}
                   />
 
@@ -164,9 +164,24 @@ export default async function HotelsPage({
                         className="h-6 w-px"
                         style={{ background: "color-mix(in oklab, white 28%, transparent)" }}
                       />
+                      {/*
+                        Sayaç kendi zemininde duruyor, doğrudan fotoğrafın
+                        üstünde değil. Bandın perdesi büyük metne göre
+                        ayarlı: beyaz başlık aşağıda, perdenin %65'lik
+                        kısmında oturuyor ve geçiyor. Ama bu etiket 11px ve
+                        altın; piksel ölçümünde açık fotoğraflarda 1.94:1'e
+                        kadar düşüyordu (gereken 4.5). Altın 11px'in eşiği
+                        tutturması için zeminin neredeyse opak lacivert
+                        olması gerekiyor — perdeyi o kadar koyultmak
+                        fotoğrafı harcar. Lacivert zemin + altın etiket
+                        eşleşmesi sitede zaten kullanılıyor (tablo başlığı).
+                      */}
                       <span
-                        className="text-[11px] font-extrabold uppercase tracking-[0.2em]"
-                        style={{ color: "var(--brand-gold-label)" }}
+                        className="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.2em]"
+                        style={{
+                          background: "var(--brand-night)",
+                          color: "var(--brand-gold-label)",
+                        }}
                       >
                         {area.hotels
                           ? `${area.hotels.length} ${t("hotelCount")}`

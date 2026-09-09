@@ -14,6 +14,7 @@ import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { PromoBanner } from "@/components/site/promo-banner";
 import { RelatedLinks } from "@/components/site/related-links";
+import { GuideLink } from "@/components/site/guide-link";
 import { FaqPreview } from "@/components/site/faq-preview";
 import {
   ClosingCta,
@@ -128,6 +129,7 @@ export default async function TransferPage({
       */}
       <TransferTypes />
 
+      <GuideLink slug="turkiyede-sim-kart-ve-internet" locale={locale} />
       <RouteCoverage locale={locale} />
 
       <TransferWhy />

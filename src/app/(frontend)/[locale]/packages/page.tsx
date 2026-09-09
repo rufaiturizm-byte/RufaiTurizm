@@ -14,6 +14,7 @@ import { ProcessSteps } from "@/components/site/process-steps";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { PromoBanner } from "@/components/site/promo-banner";
 import { RelatedLinks } from "@/components/site/related-links";
+import { GuideLink } from "@/components/site/guide-link";
 import { packages } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
 
@@ -175,6 +176,7 @@ export default async function PackagesPage({
 
       <PromoBanner placement="packages" locale={locale} />
 
+      <GuideLink slug="turkiyede-tatil-butcesi-nasil-kurulur" locale={locale} />
       <ProcessSteps />
       <AssuranceBand />
       <ClosingCta locale={locale} />

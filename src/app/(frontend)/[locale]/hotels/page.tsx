@@ -19,6 +19,7 @@ import { TrustBoxes } from "@/components/site/trust-stats";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
+import { GuideLink } from "@/components/site/guide-link";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { hotelAreas } from "@/data/hotels";
 import type { Locale } from "@/i18n/routing";
@@ -414,6 +415,7 @@ export default async function HotelsPage({
         </div>
       </section>
 
+      <GuideLink slug="otel-secerken-nelere-bakmali" locale={locale} />
       <RouteCoverage locale={locale} />
       <ClosingCta locale={locale} />
       <RelatedLinks exclude={["hotels"]} />

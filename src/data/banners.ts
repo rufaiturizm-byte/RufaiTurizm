@@ -110,6 +110,58 @@ export const banners: PromoBanner[] = [
       en: "We have no list of partner hotels and we add no commission to the price. Tell us the area, the budget and how many you are; we will find the options and book in your name.",
     },
   },
+  {
+    /*
+      Transfer sayfasının bandı. Sayfa sitenin en yüksek niyetli yeri —
+      buraya gelen kişi zaten transfer arıyor — ama bant yuvası boştu.
+      Söylediği her şey sitede zaten yazılı ve doğrulanabilir: uçuş
+      numarasından takip, isimli tabelayla karşılama, rötarda ek ücret
+      çıkmaması. Kampanya ya da indirim yok.
+    */
+    id: "transfer-ucus-takibi",
+    placement: "transfer",
+    eyebrow: { tr: "Karşılama", ar: "الاستقبال", en: "The meeting" },
+    title: {
+      tr: "Uçağınız gecikse de şoför orada olur",
+      ar: "حتى إن تأخرت طائرتك يكون السائق هناك",
+      en: "Even if your flight is late, the driver is there",
+    },
+    description: {
+      tr: "Uçuşu numarasından takip ediyoruz; şoför yeni saate göre gelir ve bekleme için ek ücret çıkmaz. Karşılama geliş kapısında, isminizin yazılı olduğu tabelayla.",
+      ar: "نتابع الرحلة برقمها؛ فيأتي السائق على الموعد الجديد ولا يُحتسب مقابل للانتظار. والاستقبال عند بوابة الوصول بلافتة تحمل اسمك.",
+      en: "We track the flight by its number; the driver comes at the new time and waiting is not charged. You are met at the arrivals gate with a name board.",
+    },
+    terms: {
+      tr: "Bagajınız gecikirse de şoför bekler",
+      ar: "وإن تأخرت أمتعتك ينتظر السائق أيضاً",
+      en: "If your luggage is delayed, the driver waits too",
+    },
+  },
+  {
+    /*
+      Turlar sayfasının bandı. Rakiplerin çoğu turu gruba katarak
+      ucuzlatıyor; bizim ayrıştığımız yer tam olarak burası ve tur
+      listesinde bunu söyleyen bir bant yoktu.
+    */
+    id: "turlar-gruba-katilmadan",
+    placement: "tours",
+    eyebrow: { tr: "Nasıl geziyoruz", ar: "كيف نتجوّل", en: "How we travel" },
+    title: {
+      tr: "Yabancı bir gruba katılmıyorsunuz",
+      ar: "لا تنضمّون إلى مجموعة غريبة",
+      en: "You do not join a group of strangers",
+    },
+    description: {
+      tr: "Turlar özel: araç yalnız size ait, otelden alıp otele bırakıyoruz. Kalkış saati, namaz ve yemek molaları ile günün temposu sizin programınıza göre kuruluyor.",
+      ar: "الجولات خاصة: السيارة لكم وحدكم، ونأخذكم من الفندق ونعيدكم إليه. وموعد الانطلاق واستراحات الصلاة والطعام وإيقاع اليوم تُبنى على برنامجكم أنتم.",
+      en: "The tours are private: the vehicle is yours alone, and we collect you from the hotel and return you there. The departure time, prayer and meal breaks and the pace of the day are built around your plan.",
+    },
+    terms: {
+      tr: "Fiyat araç başına, kişi başı değil",
+      ar: "السعر للسيارة لا للشخص",
+      en: "Priced per car, not per person",
+    },
+  },
 ];
 
 /** Bir yer için geçerli (süresi dolmamış) bantları verir. */

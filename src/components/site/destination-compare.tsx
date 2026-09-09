@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "./section-heading";
+import { ProseSection } from "./prose-section";
 import { destinations } from "@/data/destinations";
 import type { Locale } from "@/i18n/routing";
 
@@ -113,20 +114,7 @@ export async function DestinationCompare({ locale }: { locale: string }) {
         <p className="mt-3 text-[12.5px] text-muted-foreground lg:hidden">{tCommon("swipeHint")}</p>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14">
-          <h2 className="font-display text-[26px] font-semibold leading-snug sm:text-[32px] lg:sticky lg:top-28 lg:self-start">
-            {t("combineTitle")}
-          </h2>
-          <div className="measure flex flex-col gap-4 text-[15.5px] leading-[1.95] text-foreground/85">
-            {t("combineText")
-              .split("\n\n")
-              .map((paragraf, index) => (
-                <p key={index}>{paragraf}</p>
-              ))}
-          </div>
-        </div>
-      </section>
+      <ProseSection title={t("combineTitle")} body={t("combineText")} className="pb-20" />
     </>
   );
 }

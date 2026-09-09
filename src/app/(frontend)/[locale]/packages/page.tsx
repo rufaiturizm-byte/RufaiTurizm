@@ -7,6 +7,7 @@ import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema, ItemListSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
+import { ProseSection } from "@/components/site/prose-section";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { AssuranceBand } from "@/components/site/assurance-band";
 import { ClosingCta } from "@/components/site/transfer-sections";
@@ -104,18 +105,11 @@ export default async function PackagesPage({
         sayfası; başlık solda, metin sağda iki sütun hem hizayı tutuyor
         hem okuma genişliğini koruyor.
       */}
-      <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
-          <h2 className="font-display text-[26px] font-semibold leading-snug sm:text-[32px] lg:sticky lg:top-28 lg:self-start">
-            {t("introTitle")}
-          </h2>
-          <div className="measure flex flex-col gap-4 text-[15.5px] leading-[1.95] text-foreground/85">
-            <p>{t("intro1")}</p>
-            <p>{t("intro2")}</p>
-            <p>{t("intro3")}</p>
-          </div>
-        </div>
-      </section>
+      <ProseSection
+        title={t("introTitle")}
+        body={[t("intro1"), t("intro2"), t("intro3")]}
+        className="pt-20"
+      />
 
       {/*
         Kaç gün seçmeli.
@@ -125,20 +119,7 @@ export default async function PackagesPage({
         soruya cevap olduğunu yazıyor — dördün tek şehir, altının ikinci
         şehri eklediğiniz ilk uzunluk olması gibi.
       */}
-      <section className="mx-auto w-full max-w-7xl px-5 pt-16 sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
-          <h2 className="font-display text-[26px] font-semibold leading-snug sm:text-[32px] lg:sticky lg:top-28 lg:self-start">
-            {t("chooseTitle")}
-          </h2>
-          <div className="measure flex flex-col gap-4 text-[15.5px] leading-[1.95] text-foreground/85">
-            {t("chooseText")
-              .split("\n\n")
-              .map((paragraf, sira) => (
-                <p key={sira}>{paragraf}</p>
-              ))}
-          </div>
-        </div>
-      </section>
+      <ProseSection title={t("chooseTitle")} body={t("chooseText")} className="pt-16" />
 
       <section className="mx-auto w-full max-w-7xl px-5 pt-16 pb-16 sm:px-8">
         <SectionHeading eyebrow={t("eyebrow")} title={t("listTitle")} subtitle={t("subtitle")} />

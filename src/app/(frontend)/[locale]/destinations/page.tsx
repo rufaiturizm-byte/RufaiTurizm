@@ -12,6 +12,7 @@ import { ClosingCta } from "@/components/site/transfer-sections";
 import { RelatedLinks } from "@/components/site/related-links";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { DestinationCompare } from "@/components/site/destination-compare";
+import { ProseSection } from "@/components/site/prose-section";
 import { destinations } from "@/data/destinations";
 import type { Locale } from "@/i18n/routing";
 
@@ -89,14 +90,7 @@ export default async function DestinationsPage({
         <TrustBoxes />
       </div>
 
-      <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14">
-          <h2 className="font-display text-[26px] font-semibold leading-snug sm:text-[32px] lg:sticky lg:top-28 lg:self-start">
-            {t("introTitle")}
-          </h2>
-          <p className="measure text-[15.5px] leading-[1.95] text-foreground/85">{t("intro")}</p>
-        </div>
-      </section>
+      <ProseSection title={t("introTitle")} body={t("intro")} className="pt-20" />
 
       <PromoBanner placement="destinations" locale={locale} />
 
@@ -170,6 +164,25 @@ export default async function DestinationsPage({
       </section>
 
       <DestinationCompare locale={locale} />
+
+      {/*
+        Gün düzeni.
+        Tablodaki "kime uyar" hücresi üç kelime; asıl fark ise günün nasıl
+        geçtiğinde: sahilde otelde başlayıp otelde biten gün, İstanbul'da
+        sabah çıkıp akşam dönülen gün, Trabzon'da büyük kısmı araçta geçen
+        gün. Ziyaretçi hangi şehri seveceğini bundan anlıyor, "koylar,
+        tekne, sakinlik" listesinden değil.
+      */}
+      <ProseSection title={t("rhythmTitle")} body={t("rhythmText")} className="pb-20" />
+
+      {/*
+        İlk geliş / ikinci geliş.
+        Karşılaştırma tablosu şehirleri yan yana koyuyor ama tek bir soruyu
+        atlıyor: ilk kez gelen biriyle ikinci kez gelen birinin cevabı aynı
+        değil. Mevsim tarafı zaten "Türkiye'ye ne zaman gitmeli"
+        rehberinde; burada yalnız sıra kararı var.
+      */}
+      <ProseSection title={t("firstTitle")} body={t("firstText")} className="pb-20" />
 
       <ClosingCta locale={locale} />
       <RelatedLinks />

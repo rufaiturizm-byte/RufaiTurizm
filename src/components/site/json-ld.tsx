@@ -318,9 +318,13 @@ export function BreadcrumbSchema({
  * işaretlemek Google'a bunun bir hizmet sayfası değil bilgi içeriği
  * olduğunu söyler ve "kim yazdı" sorusuna kurumsal bir cevap verir.
  *
- * `datePublished` bilerek yok: uydurma bir tarih, içeriğin tazeliği
- * konusunda yanlış sinyal verir. Yazılar CMS'e taşındığında gerçek
- * tarihle birlikte eklenecek.
+ * `datePublished` uzun süre yoktu çünkü uydurma bir tarih, içeriğin
+ * tazeliği konusunda yanlış sinyal verir. Artık gerçek tarih var:
+ * guide-dates.ts, her rehberin hangi gün yazıldığını git geçmişinden
+ * alıyor. Tarih bulunamayan bir slug için alan yine basılmıyor —
+ * yanlış tarih basmaktansa eksik kalsın.
+ *
+ * `dateModified` hâlâ yok; gerekçesi guide-dates.ts'in başında.
  */
 export function ArticleSchema({
   headline,
@@ -328,13 +332,22 @@ export function ArticleSchema({
   image,
   url,
   locale,
+  datePublished,
 }: {
   headline: string;
   description: string;
   image: string;
   url: string;
   locale: string;
+  /** ISO tarih (YYYY-MM-DD). Bilinmiyorsa alan hiç basılmaz. */
+  datePublished?: string;
 }) {
+  const kurum = {
+    "@type": "Organization",
+    name: siteConfig.legalName,
+    url: siteConfig.url,
+  };
+
   const data = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -343,10 +356,10 @@ export function ArticleSchema({
     image: `${siteConfig.url}${image}`,
     inLanguage: locale,
     mainEntityOfPage: { "@type": "WebPage", "@id": `${siteConfig.url}${url}` },
-    author: { "@type": "Organization", name: siteConfig.legalName },
+    ...(datePublished ? { datePublished } : {}),
+    author: kurum,
     publisher: {
-      "@type": "Organization",
-      name: siteConfig.legalName,
+      ...kurum,
       logo: { "@type": "ImageObject", url: `${siteConfig.url}/brand/logo.png` },
     },
   };

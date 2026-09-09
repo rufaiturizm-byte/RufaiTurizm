@@ -8,6 +8,7 @@ import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { ReadingProgress } from "@/components/site/scroll-helpers";
 import { ArticleSchema, BreadcrumbSchema, FaqSchema } from "@/components/site/json-ld";
+import { guidePublishedDates } from "@/data/guide-dates";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
@@ -114,6 +115,7 @@ export default async function GuideDetailPage({
         image={guide.image}
         url={url}
         locale={locale}
+        datePublished={guidePublishedDates[guide.slug]}
       />
 
       {/* Kapak */}

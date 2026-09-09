@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { headingId } from "@/lib/heading-id";
 
 /**
  * Hizmet sayfasının uzun bölümleri.
@@ -26,20 +27,54 @@ export async function ServiceSections({ serviceKey }: { serviceKey: string }) {
   const bolumler = t.raw(`${serviceKey}.sections`) as Bolum[] | undefined;
   if (!Array.isArray(bolumler) || bolumler.length === 0) return null;
 
+  const tCommon = await getTranslations("common");
+
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-4 sm:px-8">
+      {/*
+        Bölüm dizini.
+        Bu bölümler eklendiğinde hizmet sayfası 11 başlıktan 17'ye çıktı ve
+        aradığı tek şey için gelen ziyaretçi — çoğu öyle geliyor: "fiyat
+        nasıl hesaplanıyor" — onu bulmak için sayfayı baştan sona
+        kaydırmak zorunda kalıyordu. Rehberlerdeki yan sütunlu içindekiler
+        buraya uymuyor: hizmet sayfası tam genişlikte, üst üste bölümlerden
+        kurulu. Çip sırası aynı işi düzeni bozmadan yapıyor.
+      */}
+      {bolumler.length > 2 ? (
+        <nav aria-label={tCommon("contents")} className="mb-12">
+          <p className="eyebrow-rule text-[11px] font-extrabold uppercase tracking-[0.16em] text-muted-foreground">
+            {tCommon("contents")}
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-2.5">
+            {bolumler.map((bolum, index) => (
+              <li key={bolum.heading}>
+                <a
+                  href={`#${headingId(bolum.heading, index)}`}
+                  className="accent-card inline-flex px-4 py-2 text-[13.5px] font-semibold transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                >
+                  {bolum.heading}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ) : null}
+
       <div className="flex flex-col gap-14">
-        {bolumler.map((bolum) => (
+        {bolumler.map((bolum, index) => (
           <article
             key={bolum.heading}
             className="reveal-rise grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14"
           >
-            <h2 className="font-display text-[24px] font-semibold leading-snug sm:text-[28px] lg:sticky lg:top-28 lg:self-start">
+            <h2
+              id={headingId(bolum.heading, index)}
+              className="font-display text-[24px] font-semibold leading-snug scroll-mt-28 sm:text-[28px] lg:sticky lg:top-28 lg:self-start"
+            >
               {bolum.heading}
             </h2>
             <div className="measure flex flex-col gap-4 text-[15.5px] leading-[1.95] text-foreground/85">
-              {bolum.body.split("\n\n").map((paragraf, index) => (
-                <p key={index}>{paragraf}</p>
+              {bolum.body.split("\n\n").map((paragraf, sira) => (
+                <p key={sira}>{paragraf}</p>
               ))}
             </div>
           </article>

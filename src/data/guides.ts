@@ -1525,7 +1525,7 @@ export const guides: Guide[] = [
     slug: "cocuklu-ailelerle-istanbul",
     topic: "practical",
     image: "/images/places/lale-bahce.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "Çocuklu ailelerle İstanbul: pratik notlar",
       ar: "إسطنبول مع الأطفال: ملاحظات عملية",
@@ -1619,6 +1619,30 @@ export const guides: Guide[] = [
           tr: "Boğaz tekne turu, teleferikle Uludağ'a çıkmak ve Sapanca'da göl kenarında yürümek çocukların en çok sevdiği bölümlerdir; hepsi az yürüyüş çok manzara içerir. Uzun müze gezileri ve kalabalık çarşılar ise en çabuk yorulunan yerlerdir. İyi bir gün bu ikisini dengeler: sabah bir tarihî nokta, öğleden sonra açık hava.",
           ar: "جولة القارب في البوسفور، والصعود بالتلفريك إلى أولوداغ، والمشي على ضفة بحيرة سبانجا هي أحبّ الأجزاء إلى الأطفال؛ وكلها مشي قليل ومناظر كثيرة. أما جولات المتاحف الطويلة والبازارات المزدحمة فأسرع ما يُتعب. واليوم الجيد يوازن بينهما: معلم تاريخي صباحاً وهواء طلق بعد الظهر.",
           en: "A Bosphorus boat trip, the cable car up Uludag and walking by the lake at Sapanca are the parts children like most; all involve little walking and plenty of view. Long museum visits and crowded bazaars tire everyone fastest. A good day balances the two: one historic site in the morning, open air in the afternoon.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bebek arabası nerede işe yarar, nerede yaramaz",
+          ar: "أين تنفع عربة الطفل وأين لا تنفع",
+          en: "Where a pushchair helps and where it does not",
+        },
+        body: {
+          tr: "İstanbul'un tarihi bölgesi arnavut kaldırımı ve eğimli. Sultanahmet çevresinde bebek arabası kullanılabiliyor ama taşlar arabayı sarsıyor ve bazı sokaklarda merdiven çıkıyor. Kapalıçarşı'nın içi kalabalık olduğunda araba manevra yapamıyor.\n\nBuna karşılık Boğaz kıyısı yolu, Emirgan Korusu, alışveriş merkezleri ve modern semtlerin kaldırımları rahat. Vapurlarda araba sorun değil; metroda asansör var ama her istasyonda değil, bazı eski istasyonlarda yalnız merdiven bulunuyor.\n\nKüçük çocuklu ailelerin çoğu ikili bir çözüm kuruyor: kısa mesafeler için kanguru ya da sırt taşıyıcı, uzun yürüyüşler ve dinlenme için katlanabilir hafif araba. Büyük ve ağır arabalar İstanbul'da avantaj değil.\n\nAracın gün boyu yanınızda olması bu tabloyu değiştiriyor: araba, bavul ve alışveriş poşetleri araçta kalıyor, siz yalnız gezdiğiniz noktada iniyorsunuz. Çocuklu ailelerin özel araç talebinin asıl sebebi konfor değil, bu taşıma yükü.",
+          ar: "المنطقة التاريخية في إسطنبول مرصوفة بالحصى ومائلة. ويمكن استعمال عربة الطفل حول السلطان أحمد لكن الحجارة تهزّ العربة وفي بعض الأزقّة درج. وداخل السوق المسقوف لا تستطيع العربة المناورة حين يشتدّ الزحام.\n\nفي المقابل فطريق ضفة البوسفور وحديقة أمير جان والمولات وأرصفة الأحياء الحديثة مريحة. ولا مشكلة في العبّارات؛ وفي المترو مصاعد لكن ليس في كل محطة، وبعض المحطات القديمة فيها درج فقط.\n\nومعظم العائلات ذات الأطفال الصغار تضع حلاً مزدوجاً: حمّالة صدر أو ظهر للمسافات القصيرة، وعربة خفيفة قابلة للطيّ للمشي الطويل والراحة. أما العربات الكبيرة الثقيلة فليست ميزة في إسطنبول.\n\nووجود السيارة معك طوال اليوم يغيّر هذه الصورة: تبقى العربة والحقائب وأكياس التسوّق في السيارة، وتنزل أنت عند نقطة التجوّل فقط. والسبب الحقيقي لطلب العائلات ذات الأطفال سيارةً خاصة ليس الرفاهية بل هذا الحمل.",
+          en: "The historic district of Istanbul is cobbled and sloping. A pushchair can be used around Sultanahmet but the stones shake it and some lanes have steps. Inside the Grand Bazaar, a pushchair cannot manoeuvre when it is crowded.\n\nBy contrast the Bosphorus shore road, Emirgan Park, the malls and the pavements of modern districts are easy. Ferries are no problem; the metro has lifts but not at every station, and some older ones have only stairs.\n\nMost families with small children arrive at a two-part answer: a carrier for short distances, and a light folding pushchair for long walks and rest. Large heavy pushchairs are not an advantage in Istanbul.\n\nHaving the car with you all day changes this picture: the pushchair, luggage and shopping bags stay in the vehicle and you get out only at the place you are visiting. The real reason families with children ask for a private car is not comfort but this carrying load."
+        },
+      },
+      {
+        heading: {
+          tr: "Günü çocuğa göre kurmak",
+          ar: "بناء اليوم على مقاس الطفل",
+          en: "Building the day around the child",
+        },
+        body: {
+          tr: "Çocuklu bir programın en sık yapılan hatası yetişkin programını alıp kısaltmak. İşe yarayan yöntem farklı: günü bir ana durak ve bir serbest alan olarak kurmak. Sabah bir müze ya da tarihi yer, öğleden sonra park, sahil ya da havuz. Üst üste iki müze küçük çocukta çalışmıyor.\n\nÖğle uykusu olan bir çocuk varsa o saati programa yazın. Araç içinde uyumak çoğu zaman işe yarıyor; şehirler arası ya da uzun bir yol o saate denk getirildiğinde gün kayıp olmuyor.\n\nYemek saatlerini erkene alın. Türk restoranlarında akşam yemeği geç başlıyor; çocuklu aile için altı-yedi civarı hem sakin hem hızlı servis anlamına geliyor.\n\nÇocukların en çok sevdiği duraklar genellikle en tarihi olanlar değil: vapur yolculuğu, Boğaz'da martı beslemek, teleferik, akvaryum ve büyük parklar. Bunlardan birini her güne koymak, tarihi yerleri de sorunsuz gezdiriyor.\n\nYanınıza su, atıştırmalık ve yedek kıyafet alın — İstanbul'da market her yerde var ama sıcak bir günde sıra beklemek istemezsiniz.",
+          ar: "أكثر خطأ في برنامج فيه أطفال هو أخذ برنامج الكبار واختصاره. والطريقة الناجحة مختلفة: أن يُبنى اليوم على محطة رئيسية واحدة ومساحة حرّة. متحف أو مكان تاريخي صباحاً، وحديقة أو شاطئ أو مسبح بعد الظهر. ومتحفان متتاليان لا ينفعان مع طفل صغير.\n\nوإن كان لديك طفل ينام في الظهيرة فاكتب تلك الساعة في البرنامج. والنوم داخل السيارة ينفع غالباً؛ فإذا وافقت تلك الساعةُ طريقاً طويلاً أو انتقالاً بين المدن لم يضع اليوم.\n\nوقدّم مواعيد الطعام. فالعشاء في المطاعم التركية يبدأ متأخراً؛ والسادسة أو السابعة تعني للعائلة ذات الأطفال هدوءاً وخدمة أسرع.\n\nوأكثر المحطات التي يحبها الأطفال ليست أكثرها تاريخيةً عادةً: رحلة العبّارة، وإطعام النوارس في البوسفور، والتلفريك، والأكواريوم، والحدائق الكبيرة. ووضع واحدة منها في كل يوم يجعل زيارة الأماكن التاريخية تمرّ بلا مشكلة.\n\nواحمل معك ماءً وخفيف طعام وملابس احتياطية — فالبقالات في كل مكان في إسطنبول، لكنك لا تريد الوقوف في طابور في يوم حارّ.",
+          en: "The commonest mistake in a plan with children is taking the adult plan and shortening it. The method that works is different: build the day around one main stop and one open space. A museum or historic site in the morning, a park, shore or pool in the afternoon. Two museums back to back does not work with a small child.\n\nIf you have a child who naps at midday, write that hour into the plan. Sleeping in the car usually works; if a long drive or an intercity leg falls at that hour, the day is not lost.\n\nMove mealtimes earlier. Dinner starts late in Turkish restaurants; six or seven means both a calm room and faster service for a family with children.\n\nThe stops children like most are usually not the most historic: a ferry ride, feeding the gulls on the Bosphorus, a cable car, an aquarium, big parks. Putting one of these in every day makes the historic sites pass without trouble.\n\nCarry water, snacks and a change of clothes — there are shops everywhere in Istanbul, but you do not want to queue on a hot day."
         },
       },
     ],
@@ -1981,7 +2005,7 @@ export const guides: Guide[] = [
     slug: "turkiyede-sehirler-arasi-mesafeler",
     topic: "arrival",
     image: "/images/tours/trabzon.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "Türkiye'de şehirler arası mesafeler ve süreler",
       ar: "المسافات والمدد بين المدن التركية",
@@ -2075,6 +2099,30 @@ export const guides: Guide[] = [
           tr: "Basit bir ölçü: tek yön üç saati aşıyorsa o şehri günübirlik yapmayın, geceleyin. Üç saatin altındaki her yer gidiş-dönüş bir güne sığar ama iki tarafta da trafik payı bırakmak gerekir. Uçuş günü şehir dışına çıkmamak da genel bir kolaylıktır: valizle yol, ilk günü olduğundan uzun gösterir.",
           ar: "مقياس بسيط: إن تجاوز الاتجاه الواحد ثلاث ساعات فلا تجعل تلك المدينة زيارة يوم واحد، بل بِت فيها. وكل ما دون الثلاث ساعات يتّسع ذهاباً وإياباً في يوم، لكن يجب ترك هامش للازدحام في الاتجاهين. ومن التسهيلات العامة ألّا تخرج خارج المدينة في يوم الطيران: فالطريق بالحقائب يجعل اليوم الأول أطول مما هو.",
           en: "A simple measure: if one direction is over three hours, do not make that city a day trip — stay the night. Anything under three hours fits there and back in a day, but leave a traffic margin both ways. Not leaving the city on a flight day is another general ease: travelling with suitcases makes the first day feel longer than it is.",
+        },
+      },
+      {
+        heading: {
+          tr: "İstanbul'dan mesafeler: rakamla",
+          ar: "المسافات من إسطنبول: بالأرقام",
+          en: "Distances from Istanbul, in figures",
+        },
+        body: {
+          tr: "Sapanca yaklaşık 140 kilometre, otoyoldan bir buçuk saat, trafikli saatte iki. Anadolu yakasından çıkıldığı için Kadıköy tarafında kalıyorsanız daha da kısa.\n\nBursa feribotla iki saat (Yenikapı ya da Pendik'ten Mudanya, ardından iskeleden merkeze yarım saat), karayoluyla Osmangazi Köprüsü üzerinden yaklaşık iki buçuk saat.\n\nAntalya karayoluyla 700 kilometre ve yaklaşık dokuz saat; kimse bu yolu tercih etmiyor, uçakla bir saat on dakika. Bodrum 800 kilometre, uçakla bir saat. Trabzon bin kilometreyi aşıyor ve karayolu tek yön bir gün alıyor; uçakla bir buçuk saat.\n\nBu rakamların pratik anlamı şu: Sapanca ve Bursa günübirlik, geri kalanı uçak istiyor. Şile ve Ağva da günübirlik listesine giriyor — Karadeniz kıyısında, İstanbul'a yaklaşık iki saat.\n\nGünübirlik bir çıkışta yolda geçen toplam süreyi hesaplamak gerekiyor: Sapanca gidiş-dönüş üç saat, Bursa beş saat. Beş saat yolda geçen bir günde görülebilecek şey sınırlı; Bursa'yı gerçekten görmek isteyen bir gece kalıyor.",
+          ar: "سبانجا على نحو مئة وأربعين كيلومتراً، ساعة ونصف على الطريق السريع وساعتان في وقت الزحام. والخروج يكون من الجهة الآسيوية، فإن كنت في ناحية كاديكوي فالطريق أقصر.\n\nوبورصة ساعتان بالعبّارة (من ينيكابي أو بنديك إلى مودانيا، ثم نصف ساعة من المرفأ إلى المركز)، ونحو ساعتين ونصف برّاً من فوق جسر عثمان غازي.\n\nوأنطاليا سبعمئة كيلومتر برّاً ونحو تسع ساعات؛ ولا أحد يختار هذا الطريق، فالطائرة ساعة وعشر دقائق. وبودروم ثمانمئة كيلومتر، والطائرة ساعة. وطرابزون تتجاوز الألف كيلومتر ويستغرق الطريق البرّي يوماً في الاتجاه الواحد؛ والطائرة ساعة ونصف.\n\nومعنى هذه الأرقام عملياً: سبانجا وبورصة رحلة يوم، وما عداهما يحتاج طائرة. وتدخل شيلة وآغوا في قائمة رحلات اليوم أيضاً — على ساحل البحر الأسود، على نحو ساعتين من إسطنبول.\n\nوفي رحلة اليوم الواحد ينبغي حساب مجموع الوقت على الطريق: سبانجا ثلاث ساعات ذهاباً وإياباً، وبورصة خمس. وما يمكن رؤيته في يوم تمضي منه خمس ساعات على الطريق محدود؛ ومن يريد رؤية بورصة حقاً يبيت ليلة.",
+          en: "Sapanca is about 140 km, ninety minutes on the motorway and two hours in traffic. You leave from the Asian side, so it is shorter still if you are staying around Kadıköy.\n\nBursa is two hours by ferry (Yenikapı or Pendik to Mudanya, then half an hour from the pier to the centre), or about two and a half hours by road over the Osmangazi Bridge.\n\nAntalya is 700 km and about nine hours by road; nobody chooses that, and the flight is an hour and ten minutes. Bodrum is 800 km, an hour by air. Trabzon is over a thousand kilometres and the road takes a full day one way; the flight is an hour and a half.\n\nThe practical meaning: Sapanca and Bursa are day trips, the rest need a plane. Şile and Ağva also belong on the day-trip list — on the Black Sea coast, about two hours from Istanbul.\n\nOn a day trip you have to count the total time on the road: Sapanca three hours there and back, Bursa five. What can be seen in a day that spends five hours travelling is limited; anyone who really wants to see Bursa stays a night."
+        },
+      },
+      {
+        heading: {
+          tr: "İç hat uçuşu mu, karayolu mu",
+          ar: "رحلة داخلية أم طريق برّي",
+          en: "Domestic flight or road",
+        },
+        body: {
+          tr: "Türkiye'de iç hat uçuşları sık ve mesafeler uzun olduğu için çoğu şehirlerarası yolculukta uçak tek mantıklı seçenek. Ama uçuşun \"bir saat\" olması yolculuğun bir saat sürdüğü anlamına gelmiyor.\n\nGerçek hesap şöyle: otelden havalimanına yol (İstanbul'da 45-90 dakika), uçuştan iki saat önce orada olmak, uçuş süresi, varış havalimanından otele yol. Bir saatlik bir uçuş kapıdan kapıya beş-altı saat ediyor. Bu yüzden iki gecelik bir kaçamak için uçak çoğu zaman mantıklı değil.\n\nKarayolu ise yalnız Sapanca, Bursa, Şile ve Ağva için geçerli. Bunların ötesinde araçla gitmek günü tamamen yolda geçirmek demek.\n\nÜçüncü bir seçenek var ama az biliniyor: yüksek hızlı tren. Ankara ve Konya hattı çalışıyor ve İstanbul'dan Ankara dört buçuk saat. Turistik rotalarda kullanışlı değil çünkü Antalya, Bodrum ve Trabzon'a hat yok.\n\nBiz şehirlerarası transferi karayolu mesafesi makulse araçla yapıyoruz; uzak şehirlerde uçuş bileti programa dahil değil ama isterseniz sizin adınıza alıyoruz ve varışta karşılıyoruz.",
+          ar: "الرحلات الداخلية في تركيا كثيرة والمسافات طويلة، ولذلك تكون الطائرة الخيار المعقول الوحيد في معظم الأسفار بين المدن. لكن كون الرحلة \"ساعة\" لا يعني أن السفر يستغرق ساعة.\n\nوالحساب الحقيقي هكذا: الطريق من الفندق إلى المطار (45-90 دقيقة في إسطنبول)، والوجود هناك قبل الرحلة بساعتين، ومدة الطيران، ثم الطريق من مطار الوصول إلى الفندق. فرحلة ساعة تصير خمس أو ست ساعات من الباب إلى الباب. ولذلك لا تكون الطائرة معقولة غالباً لهروب من ليلتين.\n\nأما الطريق البرّي فيصلح لسبانجا وبورصة وشيلة وآغوا فقط. وما وراءها يعني قضاء اليوم كله على الطريق.\n\nوهناك خيار ثالث قليل المعرفة: القطار السريع. وخط أنقرة وقونية يعمل، وأنقرة على أربع ساعات ونصف من إسطنبول. لكنه غير عملي في المسارات السياحية لعدم وجود خط إلى أنطاليا وبودروم وطرابزون.\n\nونحن ننقلك بين المدن بالسيارة إن كانت المسافة البرّية معقولة؛ وفي المدن البعيدة لا تكون تذكرة الطيران ضمن البرنامج لكننا نشتريها باسمك إن أردت ونستقبلك عند الوصول.",
+          en: "Domestic flights in Türkiye are frequent and the distances long, so a plane is the only sensible option on most intercity journeys. But a flight being \"one hour\" does not mean the journey takes an hour.\n\nThe real sum: hotel to airport (45-90 minutes in Istanbul), being there two hours before departure, the flight itself, then arrival airport to hotel. A one-hour flight becomes five or six hours door to door. That is why a plane rarely makes sense for a two-night break.\n\nThe road applies only to Sapanca, Bursa, Şile and Ağva. Beyond those, driving means spending the whole day travelling.\n\nThere is a third option that is little known: the high-speed train. The Ankara and Konya line runs, and Ankara is four and a half hours from Istanbul. It is not useful on tourist routes because there is no line to Antalya, Bodrum or Trabzon.\n\nWe do intercity transfers by road where the distance is reasonable; for distant cities the flight is not included in the programme, but we will buy it in your name if you wish and meet you on arrival."
         },
       },
     ],

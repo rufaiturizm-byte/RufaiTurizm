@@ -441,7 +441,22 @@
     "responseTitle": "Yanıt süresi",
     "responseValue": "WhatsApp mesajlarına genellikle bir saat içinde dönüyoruz.",
     "languagesTitle": "Konuştuğumuz diller",
-    "languagesValue": "Arapça, Türkçe ve İngilizce"
+    "languagesValue": "Arapça, Türkçe ve İngilizce",
+    "prepTitle": "Mesajınızda şunlar olsun",
+    "prepSubtitle": "Aynı gün sabit fiyat ve program taslağı gönderebilmemiz bu altı satıra bağlı. Eksikse önce bunları sormak zorunda kalıyoruz ve bir gün kayboluyor.",
+    "prep1Title": "Tarihler",
+    "prep1Desc": "Geliş ve dönüş tarihiniz. Fiyat mevsime göre değişiyor ve müsaitlik tarihe bağlı — tarih olmadan verilen rakam tahmin olur.",
+    "prep2Title": "Kaç kişi, çocuk var mı",
+    "prep2Desc": "Yetişkin ve çocuk sayısı, çocukların yaşı. Araç tipini ve çocuk koltuğunu buna göre hazırlıyoruz; Vito bagajla birlikte altı kişiye kadar.",
+    "prep3Title": "Hangi havalimanı",
+    "prep3Desc": "İstanbul Havalimanı mı Sabiha Gökçen mi — ikisi arası bir saatten fazla fark yaratıyor. Uçuş numaranız varsa yazın, uçuşu ondan takip ediyoruz.",
+    "prep4Title": "Otel adı ya da semt",
+    "prep4Desc": "Otel belliyse tam adını, değilse hangi semti düşündüğünüzü. Aynı havalimanından iki semte varış arasında yarım saat fark olabiliyor.",
+    "prep5Title": "Ne istediğiniz",
+    "prep5Desc": "Yalnız transfer mi, bir günlük tur mu, gün gün program mı. Otel ve uçak bileti de isterseniz onu da yazın.",
+    "prep6Title": "Bagaj ve özel durumlar",
+    "prep6Desc": "Fazla bavul, bebek arabası, tekerlekli sandalye ya da yürümekte zorlanan bir büyüğünüz varsa. Bunlar araç ve program seçimini değiştiriyor.",
+    "prepNote": "Hepsini bilmiyorsanız da yazın — elimizdekiyle başlar, eksikleri birlikte tamamlarız. Yanıtları Arapça, Türkçe ya da İngilizce veriyoruz."
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular",

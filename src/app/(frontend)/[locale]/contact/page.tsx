@@ -256,6 +256,37 @@ export default async function ContactPage({
         </div>
       </section>
 
+      {/*
+        Mesajda ne yazılmalı.
+        Site birçok yerde "aynı gün sabit fiyat" sözü veriyor ama o sözü
+        tutmayı mümkün kılan bilgiyi hiçbir yerde istemiyordu: tarih, kişi
+        sayısı, havalimanı, otel. Bunlar gelmediğinde ilk mesaj cevap değil
+        soru oluyor ve teklif ertesi güne kayıyor. Liste bilerek gerekçeli:
+        "tarih yazın" demek yerine tarihin fiyatı neden değiştirdiğini
+        söylemek, listeyi doldurma oranını artırıyor.
+      */}
+      <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+        <SectionHeading title={t("prepTitle")} subtitle={t("prepSubtitle")} rule={false} />
+
+        <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {[1, 2, 3, 4, 5, 6].map((no) => (
+            <li key={no} className="reveal-rise surface-card flex gap-4 p-6">
+              <span className="step-badge size-9 shrink-0 text-[14px] font-extrabold">{no}</span>
+              <div>
+                <h3 className="text-[15.5px] font-bold leading-snug">{t(`prep${no}Title`)}</h3>
+                <p className="mt-2 text-[13.5px] leading-[1.75] text-muted-foreground">
+                  {t(`prep${no}Desc`)}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <p className="measure mt-6 text-[13.5px] leading-[1.8] text-muted-foreground">
+          {t("prepNote")}
+        </p>
+      </section>
+
       <RouteCoverage locale={locale} />
       <FaqPreview />
       <RelatedLinks exclude={["contact"]} />

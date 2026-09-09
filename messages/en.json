@@ -441,7 +441,22 @@
     "responseTitle": "Response time",
     "responseValue": "We usually reply to WhatsApp messages within an hour.",
     "languagesTitle": "Languages we speak",
-    "languagesValue": "Arabic, Turkish and English"
+    "languagesValue": "Arabic, Turkish and English",
+    "prepTitle": "What to include in your message",
+    "prepSubtitle": "Whether we can send a fixed price and a draft programme the same day comes down to these six lines. Without them we have to ask first, and a day is lost.",
+    "prep1Title": "Your dates",
+    "prep1Desc": "Arrival and departure. Prices move with the season and availability depends on the date — a figure given without dates is a guess.",
+    "prep2Title": "How many, and any children",
+    "prep2Desc": "Adults, children and the children's ages. We prepare the vehicle type and child seats from this; a Vito takes up to six people with luggage.",
+    "prep3Title": "Which airport",
+    "prep3Desc": "Istanbul Airport or Sabiha Gökçen — more than an hour separates them. If you have the flight number, send it; that is how we track the flight.",
+    "prep4Title": "Hotel name or district",
+    "prep4Desc": "The full hotel name if it is booked, otherwise the district you have in mind. Two districts from the same airport can differ by half an hour.",
+    "prep5Title": "What you want",
+    "prep5Desc": "A transfer only, a single day tour, or a day-by-day programme. If you want hotels and flights arranged too, say so.",
+    "prep6Title": "Luggage and anything special",
+    "prep6Desc": "Extra suitcases, a pushchair, a wheelchair, or an older relative who finds walking difficult. These change the vehicle and the plan.",
+    "prepNote": "If you do not know all of it, write anyway — we start with what you have and fill in the rest together. We reply in Arabic, Turkish or English."
   },
   "faq": {
     "title": "Frequently Asked Questions",

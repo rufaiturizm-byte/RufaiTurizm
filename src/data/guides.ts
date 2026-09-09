@@ -1273,7 +1273,7 @@ export const guides: Guide[] = [
     slug: "istanbulda-helal-yemek-rehberi",
     topic: "practical",
     image: "/images/places/kadikoy.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "İstanbul'da helal yemek: nerede ne yenir",
       ar: "الطعام الحلال في إسطنبول: أين تأكل وماذا",
@@ -1369,13 +1369,37 @@ export const guides: Guide[] = [
           en: "Turkish breakfast is cheese, olives, eggs, honey and bread; being meat-free it raises no questions and is the easiest meal of the day with children. Baklava, künefe and ice cream are equally straightforward. Our driver knows where you can stop along the route; if you want to be sure about a place, just ask.",
         },
       },
+      {
+        heading: {
+          tr: "Restoranda ne sorulur",
+          ar: "ماذا تسأل في المطعم",
+          en: "What to ask in a restaurant",
+        },
+        body: {
+          tr: "Türkiye'de et zaten ağırlıklı olarak helal kesim ve domuz eti restoranların büyük çoğunluğunda hiç bulunmuyor. Yine de emin olmak isteyen misafirin soracağı iki net soru var: yemekte alkol kullanılıyor mu ve tatlıda jelatin var mı.\n\nAlkol bazı soslarda ve özellikle uluslararası mutfaklarda pişirme sırasında kullanılabiliyor; geleneksel Türk mutfağında bu alışkanlık yok ama otel restoranlarında ve fine dining mekânlarda sorulmaya değer. \"Bu yemekte şarap var mı\" sorusu Türkçe bilinen bir soru ve garsonlar yadırgamıyor.\n\nJelatin tatlıda ve bazı sütlü ürünlerde geçiyor. Türk tatlılarının çoğu (baklava, künefe, sütlaç, kazandibi) jelatin içermiyor ama pastane ürünlerinde ve paketli tatlılarda bulunabiliyor.\n\nAlkol servisi yapan bir restoran yemeğin helal olmadığı anlamına gelmiyor; ikisi ayrı şeyler. Alkolsüz bir ortam istiyorsanız bunu ayrıca sormanız gerekiyor — birçok aile restoranı ve kebapçı alkol servisi yapmıyor.",
+          ar: "اللحم في تركيا مذبوح حلالاً في الغالب أصلاً، ولحم الخنزير لا يوجد في الغالبية العظمى من المطاعم. ومع ذلك فللضيف الذي يريد التأكّد سؤالان واضحان: هل يُستخدم الكحول في الطبخ، وهل في الحلوى جيلاتين.\n\nقد يُستخدم الكحول في بعض الصلصات وخاصة في المطابخ العالمية أثناء الطهي؛ وهذه العادة غير موجودة في المطبخ التركي التقليدي، لكنها تستحق السؤال في مطاعم الفنادق وأماكن الطعام الفاخر. وسؤال \"هل في هذا الطبق نبيذ\" سؤال معروف بالتركية ولا يستغربه النُّدُل.\n\nوالجيلاتين يوجد في الحلويات وبعض منتجات الألبان. ومعظم الحلويات التركية (البقلاوة والكنافة والأرز باللبن والكازانديبي) لا تحتوي جيلاتين، لكنه قد يوجد في منتجات المخابز والحلويات المعبّأة.\n\nوتقديم المطعم للكحول لا يعني أن طعامه غير حلال؛ فهما أمران مختلفان. وإن أردت مكاناً بلا كحول فعليك السؤال عن ذلك تحديداً — وكثير من المطاعم العائلية ومحلات الكباب لا تقدّم الكحول.",
+          en: "Meat in Türkiye is predominantly halal-slaughtered already, and pork is absent from the great majority of restaurants. Still, a guest who wants certainty has two clear questions: is alcohol used in the cooking, and is there gelatine in the dessert.\n\nAlcohol can appear in some sauces and especially in international kitchens during cooking; traditional Turkish cooking does not use it, but it is worth asking in hotel restaurants and fine-dining places. \"Is there wine in this dish\" is a familiar question in Turkish and waiters do not find it odd.\n\nGelatine turns up in desserts and some dairy products. Most Turkish desserts — baklava, künefe, rice pudding, kazandibi — contain none, but it can be present in patisserie items and packaged sweets.\n\nA restaurant serving alcohol does not mean its food is not halal; the two are separate matters. If you want a place without alcohol you have to ask about that specifically — many family restaurants and kebab houses do not serve it."
+        },
+      },
+      {
+        heading: {
+          tr: "Otel kahvaltısı ve çocuk menüsü",
+          ar: "فطور الفندق وقائمة الأطفال",
+          en: "Hotel breakfast and children's menus",
+        },
+        body: {
+          tr: "Türk otel kahvaltısı açık büfe ve içeriği Körfez'den gelen misafire tanıdık geliyor: peynir çeşitleri, zeytin, domates, salatalık, yumurta, bal, reçel, ekmek. Şarküteri ürünleri (salam, sosis) sunulduğunda genellikle dana eti oluyor ama emin olmak için sormakta fayda var; birçok otel bu ürünlerin yanına içeriğini yazıyor.\n\nÇocuklu ailelerin en sık sorduğu şey sıcak süt ve sade yemek bulunup bulunmadığı. Açık büfede süt neredeyse her zaman var; sade pilav, makarna ve haşlanmış patates çoğu otelde bulunuyor. Baharatsız yemek istendiğinde mutfağa iletiliyor.\n\nÖğle ve akşam öğünleri için esnaf lokantası en pratik çözüm: vitrinde ne olduğunu görerek seçiyorsunuz, dil bilmek gerekmiyor ve fiyat turistik restoranın üçte biri. Bu lokantalarda alkol servisi olmuyor ve yemekler genellikle sade — çocuklu aile için en rahat seçenek.\n\nTurlarımızda öğle yemeği helal seçenek sunan yerlerde veriliyor ve bunu program kurulurken söylüyoruz; özel bir kısıtınız varsa (alerji, glutensiz) önceden bildirmeniz yeterli.",
+          ar: "فطور الفنادق التركية بوفيه مفتوح، ومحتواه مألوف لضيف الخليج: أصناف الجبن والزيتون والطماطم والخيار والبيض والعسل والمربّى والخبز. وحين تُقدَّم منتجات اللحوم المصنّعة (السلامي والنقانق) تكون من لحم البقر عادةً، لكن يُستحسن السؤال للتأكّد؛ وكثير من الفنادق يكتب المحتوى بجانبها.\n\nوأكثر ما تسأل عنه العائلات ذات الأطفال هو توفّر الحليب الساخن والطعام غير المتبّل. والحليب موجود في البوفيه دائماً تقريباً؛ والأرز السادة والمعكرونة والبطاطا المسلوقة متوفرة في معظم الفنادق. وعند طلب طعام بلا بهارات يُبلَّغ المطبخ.\n\nوللغداء والعشاء يبقى المطعم الشعبي أعمل حلّ: تختار وأنت ترى ما في الواجهة، ولا تحتاج لغة، والسعر ثلث المطعم السياحي. ولا تُقدَّم الكحول في هذه المطاعم والطعام فيها سادة عادةً — وهو أريح خيار للعائلة ذات الأطفال.\n\nوفي جولاتنا يكون الغداء في أماكن تقدّم خيارات حلال، ونقول ذلك عند وضع البرنامج؛ وإن كان لديك قيد خاص (حساسية، خلوّ من الغلوتين) فيكفي إخبارنا مسبقاً.",
+          en: "Turkish hotel breakfast is a buffet and its contents feel familiar to a Gulf guest: several cheeses, olives, tomato, cucumber, eggs, honey, jam, bread. Where cured meats are offered — salami, sausage — they are usually beef, but it is worth asking to be sure; many hotels label the contents beside them.\n\nWhat families with children ask most is whether there is warm milk and plain food. Milk is almost always on the buffet; plain rice, pasta and boiled potatoes are available at most hotels. A request for food without spices is passed to the kitchen.\n\nFor lunch and dinner a neighbourhood restaurant is the most practical answer: you choose by seeing what is in the display, no language is needed, and the price is a third of a tourist restaurant. These places do not serve alcohol and the food is usually plain — the easiest option for a family with children.\n\nOn our tours lunch is taken at places offering halal options, and we say so when the programme is built; if you have a specific restriction — an allergy, gluten-free — telling us in advance is enough."
+        },
+      },
     ],
   },
   {
     slug: "bogaz-turu-rehberi",
     topic: "daytrips",
     image: "/images/places/bogaz-vapur.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "Boğaz turu rehberi: hangi tekne, ne kadar sürer",
       ar: "دليل جولة البوسفور: أي قارب وكم تستغرق",
@@ -1469,6 +1493,30 @@ export const guides: Guide[] = [
           tr: "Öğle saatlerinde güneş tepededir ve fotoğraflar sert çıkar. İkindi ve gün batımı saatleri hem ışık hem sıcaklık açısından en iyisidir; yaz aylarında serinlik de o saatte başlar. Programı kurarken tekne saatini önceden belirlemek, gün içindeki diğer durakların sırasını da netleştirir.",
           ar: "في الظهيرة تكون الشمس في كبد السماء وتخرج الصور قاسية. أما العصر والغروب فالأفضل من حيث الضوء والحرارة معاً؛ وفي الصيف تبدأ البرودة في تلك الساعة. وتحديد موعد القارب مسبقاً عند وضع البرنامج يوضّح أيضاً ترتيب بقية محطات اليوم.",
           en: "At midday the sun is overhead and photographs come out harsh. Late afternoon and sunset are best for both light and temperature; in summer that is also when it starts to cool. Fixing the boat time in advance also settles the order of the day's other stops.",
+        },
+      },
+      {
+        heading: {
+          tr: "Tekne türleri: vapur, tur teknesi, özel tekne",
+          ar: "أنواع القوارب: العبّارة، قارب الجولات، القارب الخاص",
+          en: "Kinds of boat: ferry, tour boat, private boat",
+        },
+        body: {
+          tr: "Şehir hattı vapuru en ucuz ve en yerel seçenek. Eminönü'nden kalkıyor, İstanbulkart ile biniliyor ve iki yakayı da yakından geçiyor. Dezavantajı kalabalık olması ve saat çizelgesine bağlı kalmanız; oturacak yer bulmak yoğun saatlerde zor.\n\nTur teknesi turistler için düzenlenen tarifeli sefer. Eminönü ve Kabataş iskelelerinden kalkıyor, genellikle iki saat sürüyor ve Rumeli Hisarı ya da ikinci köprüye kadar çıkıp dönüyor. Güverte açık, anons var, fotoğraf için en rahatı. Bilet iskeleden alınıyor.\n\nÖzel tekne kiralamak üçüncü yol; grup halinde ya da özel bir gün için tercih ediliyor ve fiyatı diğer ikisinden belirgin biçimde yüksek. Biz özel yat ya da tekne kiralama hizmeti vermiyoruz — turumuzdaki Boğaz gezisi tarifeli tur teknesiyle yapılıyor.\n\nHangisini seçeceğiniz amaca bağlı: manzarayı görmek için vapur yeterli, rahat fotoğraf ve anlatım için tur teknesi, kalabalıktan uzak durmak için sabahın erken saatleri.",
+          ar: "عبّارة الخطوط البلدية أرخص الخيارات وأكثرها محليةً. تنطلق من إمينونو، ويُركب فيها ببطاقة إسطنبول، وتمرّ قريباً من الضفتين. وعيبها الازدحام والتقيّد بجدول المواعيد؛ وإيجاد مقعد صعب في ساعات الذروة.\n\nوقارب الجولات رحلة مجدولة منظّمة للسيّاح. ينطلق من مرفأي إمينونو وكاباتاش، ويستغرق ساعتين عادةً، ويصعد حتى قلعة روملي أو الجسر الثاني ثم يعود. وسطحه مكشوف وفيه شرح صوتي، وهو الأريح للتصوير. والتذكرة تُشترى من المرفأ.\n\nواستئجار قارب خاص هو الطريق الثالث؛ يُفضَّل للمجموعات أو ليوم خاص، وسعره أعلى بوضوح من الاثنين الآخرين. ونحن لا نقدّم خدمة تأجير اليخوت أو القوارب الخاصة — ورحلة البوسفور في جولتنا تكون بقارب جولات مجدول.\n\nواختيارك يعتمد على الغرض: العبّارة تكفي لرؤية المنظر، وقارب الجولات للتصوير المريح والشرح، وساعات الصباح الباكر للابتعاد عن الزحام.",
+          en: "The municipal ferry is the cheapest and most local option. It leaves from Eminönü, you board with an İstanbulkart, and it passes close to both shores. The drawbacks are the crowds and being tied to a timetable; finding a seat at busy hours is hard.\n\nA tour boat is a scheduled service organised for visitors. It leaves from the Eminönü and Kabataş piers, usually takes two hours, and runs up to Rumeli Fortress or the second bridge and back. The deck is open, there is commentary, and it is the easiest for photographs. Tickets are bought at the pier.\n\nChartering a private boat is the third route; chosen for groups or a special day, and priced noticeably above the other two. We do not offer private yacht or boat charter — the Bosphorus trip in our tour uses a scheduled tour boat.\n\nWhich to choose depends on the purpose: the ferry is enough to see the view, a tour boat for comfortable photographs and commentary, and the early morning for staying away from the crowds."
+        },
+      },
+      {
+        heading: {
+          tr: "Yolun üstünde ne var: iskele iskele",
+          ar: "ماذا على الطريق: مرفأً مرفأ",
+          en: "What is along the way, pier by pier",
+        },
+        body: {
+          tr: "Eminönü'nden kalkan bir tekne önce Galata Köprüsü'nün altından geçiyor; sağda tarihi yarımada silueti, solda Karaköy. Ardından Tophane ve Kabataş.\n\nDolmabahçe Sarayı sudan görüldüğünde asıl cephesiyle görünüyor — kara tarafından bakınca bu cephe görünmez. Hemen sonrasında Beşiktaş ve Ortaköy; Ortaköy Camii'nin köprünün ayağıyla birlikte göründüğü kare Boğaz'ın en çok fotoğraflanan noktası.\n\nKöprüyü geçtikten sonra iki yakada yalılar başlıyor: ahşap, çoğu on dokuzuncu yüzyıldan kalma kıyı konakları. Anadolu yakasında Kuzguncuk ve Beylerbeyi, Avrupa yakasında Arnavutköy ve Bebek.\n\nRumeli Hisarı çoğu turun dönüş noktası; Fatih Sultan Mehmet'in kuşatma öncesi yaptırdığı kale, sudan bakınca boyutu anlaşılıyor. Karşısında Anadolu Hisarı, daha küçük ve daha eski.\n\nDönüşte ışık değişiyor ve aynı kıyı bambaşka görünüyor — bu yüzden gidiş yönünde oturduğunuz taraf dönüşte de aynı kalıyorsa yer değiştirmek işe yarıyor.",
+          ar: "القارب المنطلق من إمينونو يمرّ أولاً تحت جسر غلطة؛ على اليمين ظلّ شبه الجزيرة التاريخية وعلى اليسار كاراكوي. ثم توب هانه وكاباتاش.\n\nوقصر دولمة بهجة يُرى من الماء بواجهته الأصلية — وهذه الواجهة لا تُرى من جهة البرّ. ويليه مباشرةً بشيكتاش وأورتاكوي؛ والمشهد الذي يظهر فيه جامع أورتاكوي مع قاعدة الجسر هو أكثر نقاط البوسفور تصويراً.\n\nوبعد عبور الجسر تبدأ القصور الخشبية على الضفتين: بيوت ساحلية خشبية معظمها من القرن التاسع عشر. في الجهة الآسيوية كوزغونجوك وبيلربيي، وفي الأوروبية أرناؤوط كوي وبيبك.\n\nوقلعة روملي نقطة عودة معظم الجولات؛ وهي القلعة التي بناها محمد الفاتح قبل الحصار، ويُدرك حجمها من الماء. ويقابلها حصن الأناضول، أصغر وأقدم.\n\nوفي العودة يتغيّر الضوء فتبدو الضفة نفسها مختلفة تماماً — ولذلك يفيد تغيير المقعد إن كنت ستبقى في الجهة نفسها التي جلست فيها ذهاباً.",
+          en: "A boat leaving Eminönü passes first under the Galata Bridge; the silhouette of the historic peninsula on one side, Karaköy on the other. Then Tophane and Kabataş.\n\nSeen from the water, Dolmabahçe Palace shows its true façade — the one you cannot see from the land side. Immediately after come Beşiktaş and Ortaköy; the frame in which the Ortaköy Mosque appears with the foot of the bridge is the most photographed point on the Bosphorus.\n\nPast the bridge the waterfront mansions begin on both shores: wooden houses, most of them nineteenth century. Kuzguncuk and Beylerbeyi on the Asian side, Arnavutköy and Bebek on the European.\n\nRumeli Fortress is the turning point of most tours; built by Mehmed the Conqueror before the siege, its scale only registers from the water. Opposite stands Anadolu Fortress, smaller and older.\n\nOn the way back the light changes and the same shore looks entirely different — which is why moving seats is worth it if you would otherwise stay on the same side."
         },
       },
     ],
@@ -1579,7 +1627,7 @@ export const guides: Guide[] = [
     slug: "istanbulda-uc-gun-programi",
     topic: "planning",
     image: "/images/places/tarihi-yarimada.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "İstanbul'da üç gün: kısa ziyaret programı",
       ar: "ثلاثة أيام في إسطنبول: برنامج زيارة قصيرة",
@@ -1673,6 +1721,30 @@ export const guides: Guide[] = [
           tr: "Üçüncü günü alışverişe ve serbest zamana ayırın: Nişantaşı ya da bir alışveriş merkezi, öğleden sonra da dinlenme. Üç günlük bir ziyarette şehir dışına çıkmayı (Bursa, Sapanca) bilerek programa koymuyoruz — yol iki tarafı da yorar ve İstanbul'un kendisinden çalar. Şehir dışı, beş gün ve üstü programlara aittir.",
           ar: "خصّص اليوم الثالث للتسوّق والوقت الحر: نيشانتاشي أو أحد المولات، وبعد الظهر راحة. وفي زيارة من ثلاثة أيام لا ندرج الخروج خارج المدينة (بورصة، سبانجا) عن قصد — فالطريق يُتعب في الاتجاهين ويسرق من إسطنبول نفسها. الخروج خارج المدينة يناسب برامج خمسة أيام فأكثر.",
           en: "Give the third day to shopping and free time: Nisantasi or a mall, with an afternoon to rest. On a three-day visit we deliberately leave out trips beyond the city (Bursa, Sapanca) — the road tires you both ways and takes from Istanbul itself. Out-of-town days belong to programmes of five days or more.",
+        },
+      },
+      {
+        heading: {
+          tr: "Üç gün yetmezse: beş, yedi ve on günlük şekiller",
+          ar: "إن لم تكفِ ثلاثة أيام: أشكال الخمسة والسبعة والعشرة",
+          en: "If three days is not enough: five, seven and ten-day shapes",
+        },
+        body: {
+          tr: "Beş gün, İstanbul'u acele etmeden gezmenin alt sınırı. Üç günlük iskelete iki gün eklendiğinde Adalar ya da Emirgan gibi bir nefes günü ve bir alışveriş günü giriyor; her gün üç yer yerine iki yer görülüyor ve akşamlar boş kalıyor.\n\nYedi gün İstanbul'a bir günübirlik ekleme imkânı veriyor. En çok tercih edilen üçü Bursa (feribotla iki saat), Sapanca–Maşukiye (bir buçuk saat) ve Şile–Ağva. Bir günübirlik yedi günü zenginleştiriyor; iki günübirlik ise İstanbul'u eksik bırakıyor.\n\nOn gün iki şehir demek. Klasik birleşim dört-beş gün İstanbul, ardından iç hat uçuşuyla beş gün Antalya, Bodrum ya da Trabzon. İki bölge birbirinin zıddı olduğu için seyahat monotonlaşmıyor. Bu on günü tek şehre yaymak yerine ikiye bölmek neredeyse her zaman daha iyi sonuç veriyor.\n\nOn beş ve yirmi gün üç bölge kaldırıyor: İstanbul + bir sahil + Karadeniz gibi. Ama burada bir uyarı var — her şehir değişimi bir günü yolda harcatıyor. Üç şehir demek iki taşınma günü demek; bunu programa yazmayan aile tatilin üçte birini bavulla geçiriyor.",
+          ar: "خمسة أيام هي الحدّ الأدنى لتجوّل في إسطنبول دون استعجال. فبإضافة يومين إلى الهيكل الثلاثي يدخل يوم تنفّس كجزر الأمراء أو أمير جان، ويوم للتسوّق؛ فتُرى مكانان في اليوم بدل ثلاثة وتبقى الأمسيات فارغة.\n\nوسبعة أيام تتيح إضافة رحلة يوم واحد إلى إسطنبول. وأكثرها تفضيلاً ثلاث: بورصة (ساعتان بالعبّارة)، وسبانجا–ماشوكية (ساعة ونصف)، وشيلة–آغوا. ورحلة يوم واحد تُثري الأيام السبعة؛ أما رحلتان فتتركان إسطنبول ناقصة.\n\nوعشرة أيام تعني مدينتين. والمزيج الكلاسيكي أربعة أو خمسة أيام في إسطنبول، ثم خمسة أيام في أنطاليا أو بودروم أو طرابزون برحلة داخلية. ولأن المنطقتين متضادّتان لا تصبح الرحلة رتيبة. وتقسيم هذه الأيام العشرة على مدينتين أفضل دائماً تقريباً من بسطها على مدينة واحدة.\n\nوخمسة عشر أو عشرون يوماً تحتمل ثلاث مناطق: إسطنبول + ساحل + البحر الأسود مثلاً. لكن هنا تنبيه — كل تغيير مدينة يستهلك يوماً على الطريق. فثلاث مدن تعني يومَي انتقال؛ والعائلة التي لا تكتب ذلك في البرنامج تقضي ثلث الإجازة مع الحقائب.",
+          en: "Five days is the floor for seeing Istanbul without hurrying. Adding two days to the three-day skeleton makes room for a breathing day — the Princes' Islands or Emirgan — and a shopping day; you see two places a day instead of three and the evenings stay free.\n\nSeven days allows one day trip out of Istanbul. The three most chosen are Bursa (two hours by ferry), Sapanca and Maşukiye (an hour and a half), and Şile and Ağva. One day trip enriches a week; two leave Istanbul unfinished.\n\nTen days means two cities. The classic combination is four or five days in Istanbul, then five in Antalya, Bodrum or Trabzon on a domestic flight. Because the two regions are opposites, the trip does not go flat. Splitting those ten days between two cities almost always beats spreading them over one.\n\nFifteen or twenty days carries three regions: Istanbul plus a coast plus the Black Sea, say. But a warning belongs here — every change of city spends a day on the road. Three cities means two moving days; a family that does not write that into the plan spends a third of the holiday with the luggage."
+        },
+      },
+      {
+        heading: {
+          tr: "Üç günlük planda en sık yapılan üç hata",
+          ar: "أكثر ثلاثة أخطاء في برنامج الثلاثة أيام",
+          en: "The three commonest mistakes in a three-day plan",
+        },
+        body: {
+          tr: "Birincisi günü fazla doldurmak. İstanbul'da iki nokta arası mesafe haritada kısa görünüyor ama trafik ve yürüyüş süresi ekleniyor. Bir güne dört büyük yer koyan program kâğıtta çalışıyor, sahada çalışmıyor; gün sonunda hiçbir yer doğru dürüst görülmemiş oluyor. Günde iki ana durak ve bir yedek, üç gün için doğru ölçü.\n\nİkincisi varış ve dönüş günlerini tam gün saymak. Uçak öğlen inen bir misafirin ilk günü aslında yarım gün; otele yerleşmek, biraz dinlenmek ve akşam yakın çevreyi gezmek yeterli. Dönüş günü de öyle — uçuştan üç saat önce havalimanında olmak gerektiği için o gün ancak kahvaltı ve kısa bir yürüyüş kaldırıyor. Üç gecelik bir seyahat pratikte iki tam gündür.\n\nÜçüncüsü kapalı günleri kontrol etmemek. Bazı müzeler haftanın bir günü kapalı ve camiler namaz vakitlerinde ziyarete kapanıyor; cuma öğle vakti bu süre daha uzun. Programı kurmadan önce gitmek istediğiniz yerlerin kapalı gününe bakmak, tek bir kontrolle kurtarılabilecek bir gün demek.",
+          ar: "الأول حشو اليوم أكثر من طاقته. فالمسافة بين نقطتين في إسطنبول تبدو قصيرة على الخريطة، لكن يُضاف إليها الزحام ووقت المشي. والبرنامج الذي يضع أربعة أماكن كبيرة في يوم واحد ينجح على الورق لا في الميدان؛ وفي آخر اليوم لا يكون أيّ مكان قد رُئي كما ينبغي. ومحطتان رئيسيتان في اليوم مع بديل احتياطي هو المقياس الصحيح لثلاثة أيام.\n\nوالثاني عدّ يومَي الوصول والمغادرة يومين كاملين. فمن تهبط طائرته ظهراً يكون يومه الأول نصف يوم في الحقيقة؛ يكفيه أن يستقرّ في الفندق ويرتاح قليلاً ويتجوّل مساءً في المحيط القريب. ويوم العودة كذلك — فلأنه يجب أن تكون في المطار قبل الرحلة بثلاث ساعات لا يحتمل ذلك اليوم سوى الفطور ونزهة قصيرة. فرحلة من ثلاث ليالٍ هي عملياً يومان كاملان.\n\nوالثالث عدم التحقّق من أيام الإغلاق. فبعض المتاحف تُغلق يوماً في الأسبوع، والمساجد تُغلق أمام الزوار في أوقات الصلاة، وتطول المدة ظهر الجمعة. والنظر في يوم إغلاق الأماكن التي تريدها قبل وضع البرنامج يعني يوماً كاملاً يمكن إنقاذه بتحقّق واحد.",
+          en: "The first is overfilling the day. The distance between two points in Istanbul looks short on the map, but traffic and walking time are added to it. A plan with four major sights in one day works on paper and not on the ground; at the end of it nothing has been properly seen. Two main stops a day plus one spare is the right measure for three days.\n\nThe second is counting the arrival and departure days as full days. For a guest whose plane lands at midday, the first day is really a half; settling into the hotel, resting a little and walking the nearby streets in the evening is enough. The departure day is the same — because you must be at the airport three hours before the flight, that day carries only breakfast and a short walk. A three-night trip is in practice two full days.\n\nThe third is not checking closing days. Some museums close one day a week, and mosques close to visitors at prayer times, for longer at Friday midday. Looking up the closing day of the places you want before building the plan is a whole day saved by a single check."
         },
       },
     ],

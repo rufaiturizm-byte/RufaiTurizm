@@ -631,9 +631,9 @@ export const packages: Package[] = [
           en: "Boat trip",
         },
         body: {
-          tr: "Günün merkezi denizde: üç–dört koyda yüzme molası ve teknede öğle yemeği. Özel tekne isterseniz saat ve güzergâh size ait olur, aile mahremiyeti korunur.",
-          ar: "محور اليوم في البحر: استراحات سباحة في ثلاثة أو أربعة خلجان وغداء على متن القارب. وإن أردت قارباً خاصاً فالتوقيت والمسار لك وحدك وتُحفظ خصوصية العائلة.",
-          en: "The day's centre is the water: swim stops in three or four bays and lunch on board. With a private charter the timing and route are yours and family privacy is kept.",
+          tr: "Günün merkezi denizde: üç–dört koyda yüzme molası ve teknede öğle yemeği. Tarifeli bir koy turudur, tekne başka misafirlerle paylaşılır; özel yat kiralama hizmeti vermiyoruz.",
+          ar: "محور اليوم في البحر: استراحات سباحة في ثلاثة أو أربعة خلجان وغداء على متن القارب. وهي جولة خلجان مجدولة والقارب مشترك مع ضيوف آخرين؛ ولا نقدّم خدمة تأجير اليخوت الخاصة.",
+          en: "The day's centre is the water: swim stops in three or four bays and lunch on board. It is a scheduled bay trip and the boat is shared with other guests; we do not offer private yacht charter.",
         },
       },
       {

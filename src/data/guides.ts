@@ -1673,9 +1673,9 @@ export const guides: Guide[] = [
       {
         question: { tr: "Tekne turu nereden kalkıyor?", ar: "من أين تنطلق جولة القارب؟", en: "Where do the boats depart from?" },
         answer: {
-          tr: "Eminönü, Kabataş ve Beşiktaş en yaygın kalkış noktaları. Sultanahmet'te kalanlar için Eminönü yürüme mesafesinde; Taksim'de kalanlar için Kabataş daha yakın. Özel tekne kiralamada kalkış noktası konakladığınız yere göre seçilebilir.",
-          ar: "إمينونو وكاباتاش وبشيكتاش هي أكثر نقاط الانطلاق شيوعاً. فمن يقيم في السلطان أحمد تكون إمينونو على مسافة مشي منه، ومن يقيم في تقسيم تكون كاباتاش أقرب إليه. وعند استئجار قارب خاص يمكن اختيار نقطة الانطلاق بحسب مكان إقامتك.",
-          en: "Eminönü, Kabataş and Beşiktaş are the most common departure points. If you are staying in Sultanahmet, Eminönü is within walking distance; from Taksim, Kabataş is closer. With a private boat charter the departure point can be chosen to suit where you are staying.",
+          tr: "Eminönü, Kabataş ve Beşiktaş en yaygın kalkış noktaları. Sultanahmet'te kalanlar için Eminönü yürüme mesafesinde; Taksim'de kalanlar için Kabataş daha yakın. Turumuzdaki Boğaz gezisi bu tarifeli tur teknesiyle yapılıyor; sizi kalkış iskelesine biz bırakıyoruz.",
+          ar: "إمينونو وكاباتاش وبشيكتاش هي أكثر نقاط الانطلاق شيوعاً. فمن يقيم في السلطان أحمد تكون إمينونو على مسافة مشي منه، ومن يقيم في تقسيم تكون كاباتاش أقرب إليه. وجولة البوسفور ضمن جولتنا تكون بقارب الجولات المجدولة هذا؛ ونحن نوصلك إلى رصيف الانطلاق.",
+          en: "Eminönü, Kabataş and Beşiktaş are the most common departure points. If you are staying in Sultanahmet, Eminönü is within walking distance; from Taksim, Kabataş is closer. The Bosphorus trip inside our tour uses this scheduled tour boat; we drive you to the departure pier.",
         },
       },
     ],
@@ -2723,9 +2723,9 @@ export const guides: Guide[] = [
           en: "How do boat trips work?",
         },
         answer: {
-          tr: "İki biçimi var. Günlük turlar sabah limandan kalkar, üç–dört koyda yüzme molası verir ve teknede öğle yemeği içerir; ekonomiktir ama başka misafirlerle paylaşılır. Özel tekne kiralamada saat ve güzergâh size aittir, aile mahremiyeti korunur. Hangisini istediğinizi rezervasyonda söylemeniz yeterli; ikisinde de mayo, havlu ve güneş koruması gerekir.",
-          ar: "لها شكلان. الجولات اليومية تنطلق صباحاً من الميناء وتتوقف للسباحة في ثلاثة أو أربعة خلجان وتشمل الغداء على القارب؛ وهي اقتصادية لكنها مشتركة مع ضيوف آخرين. أما استئجار قارب خاص فالتوقيت والمسار لك وحدك وتُحفظ خصوصية العائلة. ويكفي أن تخبرنا عند الحجز بما تريد؛ وفي الحالتين يلزم ملابس بحر ومنشفة وواقٍ من الشمس.",
-          en: "There are two forms. Day trips leave the harbour in the morning, stop to swim in three or four bays and include lunch on board; they are economical but shared with other guests. With a private charter the timing and route are yours and family privacy is kept. Just tell us which you want at booking; either way you need swimwear, a towel and sun protection.",
+          tr: "Bodrum turumuzun içindeki koy turu tarifeli bir gezidir: sabah limandan kalkar, üç–dört koyda yüzme molası verir ve öğle yemeğini teknede sunar. Ekonomiktir, ama tekne başka misafirlerle paylaşılır. Yarımadada özel yat ve tekne kiralayan işletmeler de var; biz bu hizmeti vermiyoruz ve aracılık da yapmıyoruz, o yüzden onu ayrıca kendiniz ayarlamanız gerekir. Her iki durumda da mayo, havlu ve güneş koruması gerekli.",
+          ar: "جولة الخلجان ضمن جولتنا في بودروم رحلة مجدولة: تنطلق صباحاً من الميناء وتتوقف للسباحة في ثلاثة أو أربعة خلجان وتقدّم الغداء على متن القارب. وهي اقتصادية، لكن القارب مشترك مع ضيوف آخرين. وفي شبه الجزيرة منشآت تؤجّر اليخوت والقوارب الخاصة أيضاً؛ ونحن لا نقدّم هذه الخدمة ولا نتوسّط فيها، فيلزم أن ترتّبها بنفسك على حدة. وفي الحالين يلزم ملابس بحر ومنشفة وواقٍ من الشمس.",
+          en: "The bay trip inside our Bodrum tour is a scheduled one: it leaves the harbour in the morning, stops to swim in three or four bays and serves lunch on board. It is economical, but the boat is shared with other guests. There are businesses on the peninsula that charter private yachts and boats as well; we do not offer that service and do not broker it, so you would arrange it yourself. Either way you need swimwear, a towel and sun protection.",
         },
       },
       {
@@ -2767,9 +2767,9 @@ export const guides: Guide[] = [
           en: "How the sea and the boats work",
         },
         body: {
-          tr: "Bodrum'da tatilin merkezinde tekne vardır. Günlük turlar üç–dört koyda yüzme molası verir ve öğle yemeğini teknede sunar; özel kiralamada saat ve güzergâh size aittir. Ege'nin suyu Akdeniz'e göre bir tık serindir; deniz haziranda ısınır, ağustosta en ılık halini alır ve ekim başına kadar girilebilir. Koyların çoğu kum değil çakıl ya da platformdur — deniz ayakkabısı işe yarar, özellikle çocuklarda.",
-          ar: "القارب في قلب العطلة في بودروم. فالجولات اليومية تتوقف للسباحة في ثلاثة أو أربعة خلجان وتقدّم الغداء على متنها؛ وفي الاستئجار الخاص يكون التوقيت والمسار لك. وماء بحر إيجه أبرد قليلاً من المتوسط؛ يدفأ البحر في حزيران ويبلغ أدفأ حالاته في آب ويبقى صالحاً للسباحة حتى أوائل تشرين الأول. ومعظم الخلجان ليست رملية بل حصوية أو ذات منصات — وحذاء البحر مفيد، خاصة للأطفال.",
-          en: "In Bodrum the boat is at the centre of the holiday. Day trips stop to swim in three or four bays and serve lunch on board; on a private charter the timing and route are yours. Aegean water is a touch cooler than the Mediterranean; the sea warms in June, peaks in August and stays swimmable into early October. Most bays are pebble or platform rather than sand — water shoes help, especially with children.",
+          tr: "Bodrum'da tatilin merkezinde tekne vardır. Günlük koy turları üç–dört koyda yüzme molası verir ve öğle yemeğini teknede sunar; tekne başka misafirlerle paylaşılır. Ege'nin suyu Akdeniz'e göre bir tık serindir; deniz haziranda ısınır, ağustosta en ılık halini alır ve ekim başına kadar girilebilir. Koyların çoğu kum değil çakıl ya da platformdur — deniz ayakkabısı işe yarar, özellikle çocuklarda.",
+          ar: "القارب في قلب العطلة في بودروم. فجولات الخلجان اليومية تتوقف للسباحة في ثلاثة أو أربعة خلجان وتقدّم الغداء على متنها؛ والقارب مشترك مع ضيوف آخرين. وماء بحر إيجه أبرد قليلاً من المتوسط؛ يدفأ البحر في حزيران ويبلغ أدفأ حالاته في آب ويبقى صالحاً للسباحة حتى أوائل تشرين الأول. ومعظم الخلجان ليست رملية بل حصوية أو ذات منصات — وحذاء البحر مفيد، خاصة للأطفال.",
+          en: "In Bodrum the boat is at the centre of the holiday. Day bay trips stop to swim in three or four bays and serve lunch on board; the boat is shared with other guests. Aegean water is a touch cooler than the Mediterranean; the sea warms in June, peaks in August and stays swimmable into early October. Most bays are pebble or platform rather than sand — water shoes help, especially with children.",
         },
       },
       {

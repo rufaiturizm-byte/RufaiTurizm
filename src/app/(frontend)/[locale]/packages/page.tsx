@@ -117,6 +117,29 @@ export default async function PackagesPage({
         </div>
       </section>
 
+      {/*
+        Kaç gün seçmeli.
+        Sayfadaki asıl karar bu: ziyaretçi dört, beş, altı ve sekiz günlük
+        programlara bakıp birini seçiyor ama gün sayısının neye göre
+        değiştiğini söyleyen bir yer yoktu. Bölüm her uzunluğun hangi
+        soruya cevap olduğunu yazıyor — dördün tek şehir, altının ikinci
+        şehri eklediğiniz ilk uzunluk olması gibi.
+      */}
+      <section className="mx-auto w-full max-w-7xl px-5 pt-16 sm:px-8">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
+          <h2 className="font-display text-[26px] font-semibold leading-snug sm:text-[32px] lg:sticky lg:top-28 lg:self-start">
+            {t("chooseTitle")}
+          </h2>
+          <div className="measure flex flex-col gap-4 text-[15.5px] leading-[1.95] text-foreground/85">
+            {t("chooseText")
+              .split("\n\n")
+              .map((paragraf, sira) => (
+                <p key={sira}>{paragraf}</p>
+              ))}
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto w-full max-w-7xl px-5 pt-16 pb-16 sm:px-8">
         <SectionHeading eyebrow={t("eyebrow")} title={t("listTitle")} subtitle={t("subtitle")} />
 

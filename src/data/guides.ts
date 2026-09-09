@@ -457,7 +457,7 @@ export const guides: Guide[] = [
     slug: "sapanca-masukiye-rehberi",
     topic: "daytrips",
     image: "/images/places/sapanca-orman.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "Sapanca ve Maşukiye rehberi",
       ar: "دليل سبانجا ومعشوقية",
@@ -559,13 +559,37 @@ export const guides: Guide[] = [
           en: "A Sapanca day involves far less walking than an Istanbul tour and moves at a gentle pace. Stops along the way are flexible and the programme can be shortened when children tire. Some paths are unpaved and sloping, so a pushchair will not roll easily everywhere.",
         },
       },
+      {
+        heading: {
+          tr: "Maşukiye ve Kartepe: gölün ötesi",
+          ar: "ماشوكية وكارتيبه: ما وراء البحيرة",
+          en: "Maşukiye and Kartepe: beyond the lake",
+        },
+        body: {
+          tr: "Sapanca'yı yalnız göl sanmak eksik kalır; asıl gün gölün güneyindeki ormanda geçiyor. Maşukiye, dere boyunca kurulmuş alabalık restoranlarıyla bilinen bir köy: masalar suyun üstüne kurulu, su sesi öğle molasını uzatıyor ve yazın hava gölden birkaç derece daha serin.\n\nOrmandaki şelaleler kısa yürüyüşlerle görülüyor. Yollar toprak ve nemli olabiliyor; kaymayan ayakkabı işe yarıyor ve bebek arabası her patikada rahat gitmiyor.\n\nKartepe yukarıda, yaklaşık bin altı yüz metrede. Yol boyunca çıkarken Sapanca Gölü'nü yukarıdan gören bir manzara noktası var ve fotoğraf molası orada veriliyor. Kışın kar için tercih ediliyor ama o dönemde yol koşulları değişken; sabah hava durumuna bakmadan çıkılmıyor.\n\nÜçünü tek güne sığdırmak mümkün: sabah göl kıyısı, öğle Maşukiye, öğleden sonra Kartepe manzarası. Bu, sitedeki en sakin programın neden en sakin olduğunu da açıklıyor — üç durak da birbirine yakın ve yürüyüş isteğe bağlı.",
+          ar: "من الناقص أن تُظنّ سبانجا بحيرةً فقط؛ فاليوم الحقيقي يمضي في الغابة جنوب البحيرة. وماشوكية قرية معروفة بمطاعم سمك السلمون المرقّط المقامة على النهر: الطاولات فوق الماء، وصوت الماء يطيل استراحة الغداء، والجو صيفاً أبرد من البحيرة بدرجات.\n\nوشلالات الغابة تُرى بمشي قصير. وقد تكون الدروب ترابية ورطبة؛ والحذاء غير الزلق ينفع، وعربة الطفل لا تسير بسهولة في كل ممرّ.\n\nوكارتيبه في الأعلى على نحو ألف وستمئة متر. وعلى الطريق صعوداً نقطة إطلالة ترى بحيرة سبانجا من فوق، وعندها تكون وقفة التصوير. وتُقصد شتاءً للثلج لكن حال الطريق في تلك الفترة متقلّبة؛ ولا يُخرج دون النظر في حال الطقس صباحاً.\n\nويمكن جمع الثلاثة في يوم واحد: ضفة البحيرة صباحاً، وماشوكية ظهراً، وإطلالة كارتيبه بعد الظهر. وهذا يفسّر أيضاً لماذا هذا أهدأ برنامج لدينا — فالمحطات الثلاث متقاربة والمشي اختياري.",
+          en: "Thinking of Sapanca as only a lake sells it short; the real day is spent in the forest south of it. Maşukiye is a village known for the trout restaurants built along the stream: tables set out over the water, the sound of it stretching lunch out, and air a few degrees cooler than at the lake in summer.\n\nThe waterfalls in the forest are reached on short walks. The paths can be earth and damp; shoes with grip help, and a pushchair does not run easily on every one.\n\nKartepe is above, at around 1,600 metres. On the way up there is a viewpoint looking down on Lake Sapanca, and the photo stop is made there. It draws visitors for snow in winter, but road conditions then are changeable; nobody sets off without checking the morning forecast.\n\nAll three fit into one day: the lakeshore in the morning, Maşukiye at midday, the Kartepe view in the afternoon. That also explains why this is the calmest programme we run — the three stops are close together and the walking is optional."
+        },
+      },
+      {
+        heading: {
+          tr: "Mevsim mevsim Sapanca",
+          ar: "سبانجا في كل موسم",
+          en: "Sapanca season by season",
+        },
+        body: {
+          tr: "İlkbahar (nisan–mayıs) burada en güzel dönem: orman tamamen yeşil, şelaleler kar suyuyla güçlü, hava yürümeye elverişli. Yağmur ihtimali var ama zaten ormana gidiyorsunuz.\n\nYaz (haziran–ağustos) İstanbul'un sıcağından kaçmak için tercih ediliyor; Maşukiye ormanı gölgeli ve serin. Hafta sonları çok kalabalık — İstanbul'dan gelen günübirlikçiler aynı yolları kullanıyor. Hafta içi gitmek aynı yeri bambaşka gösteriyor.\n\nSonbahar (eylül–kasım) fotoğraf için en iyi zaman: orman renk değiştiriyor, kalabalık dağılıyor ve göl kıyısı sakin.\n\nKış (aralık–mart) Kartepe'de kar demek ve İstanbul'dan en yakın kar burası. Ama göl kıyısı ıslak ve soğuk, orman patikaları çamurlu. Kar hedefiniz değilse kış Sapanca'nın en zayıf mevsimi.\n\nHer mevsim geçerli olan bir not: göle girilmiyor. Sapanca yüzmek için değil, yürümek ve oturmak için bir yer — denize girmek isteyen misafire Antalya ya da Bodrum öneriyoruz.",
+          ar: "الربيع (نيسان–أيار) أجمل فترة هنا: الغابة خضراء تماماً، والشلالات قوية بماء الثلج الذائب، والجو يسمح بالمشي. واحتمال المطر قائم لكنك ذاهب إلى الغابة أصلاً.\n\nوالصيف (حزيران–آب) يُفضَّل هرباً من حرّ إسطنبول؛ فغابة ماشوكية ظليلة وباردة. وعطل نهاية الأسبوع مزدحمة جداً — فقادمو اليوم الواحد من إسطنبول يستعملون الطرق نفسها. والذهاب في أيام الأسبوع يُظهر المكان نفسه مختلفاً تماماً.\n\nوالخريف (أيلول–تشرين الثاني) أفضل وقت للتصوير: تتغيّر ألوان الغابة، ويتفرّق الزحام، وتهدأ ضفة البحيرة.\n\nوالشتاء (كانون الأول–آذار) يعني الثلج في كارتيبه، وهو أقرب ثلج إلى إسطنبول. لكن ضفة البحيرة مبتلّة وباردة ودروب الغابة موحلة. وإن لم يكن الثلج هدفك فالشتاء أضعف مواسم سبانجا.\n\nوملاحظة تسري في كل موسم: لا يُسبح في البحيرة. فسبانجا مكان للمشي والجلوس لا للسباحة — ومن يريد السباحة ننصحه بأنطاليا أو بودروم.",
+          en: "Spring (April to May) is the finest window here: the forest fully green, the waterfalls strong with snowmelt, the air right for walking. Rain is possible, but you are going into the forest anyway.\n\nSummer (June to August) is chosen as an escape from Istanbul's heat; the Maşukiye forest is shaded and cool. Weekends are very crowded — day-trippers from Istanbul use the same roads. Going midweek shows you the same place transformed.\n\nAutumn (September to November) is the best time for photographs: the forest turns, the crowds disperse and the lakeshore is quiet.\n\nWinter (December to March) means snow at Kartepe, the nearest snow to Istanbul. But the lakeshore is wet and cold and the forest paths muddy. If snow is not your aim, winter is Sapanca's weakest season.\n\nOne note that holds all year: you do not swim in the lake. Sapanca is a place for walking and sitting, not bathing — guests who want to swim we point towards Antalya or Bodrum."
+        },
+      },
     ],
   },
   {
     slug: "trabzon-uzungol-karadeniz",
     topic: "daytrips",
     image: "/images/places/uzungol.jpg",
-    minutes: 5,
+    minutes: 6,
     title: {
       tr: "Trabzon, Uzungöl ve Karadeniz yaylaları",
       ar: "طرابزون وأوزنجول وهضاب البحر الأسود",
@@ -665,6 +689,30 @@ export const guides: Guide[] = [
           tr: "Karadeniz Türkiye'nin en çok yağış alan bölgesidir ve yaz aylarında bile yağmur ihtimali yüksektir. Sis, yaylalarda manzarayı tamamen kapatabilir; bu bölgeye giderken programı esnek tutmak gerekir. Yaylalar için en güvenli aralık haziran sonu ile eylül arasıdır, kışın bazı yayla yolları kapanır.",
           ar: "البحر الأسود أكثر مناطق تركيا هطولاً للأمطار، واحتمال المطر مرتفع حتى في الصيف. وقد يحجب الضباب المنظر تماماً في الهضاب؛ لذا يجب إبقاء البرنامج مرناً عند التوجّه إلى هناك. أفضل فترة للهضاب من أواخر يونيو حتى سبتمبر، وفي الشتاء تُغلق بعض طرق الهضاب.",
           en: "The Black Sea is Turkey's rainiest region and showers are likely even in summer. Mist can close the view on the plateaus entirely, so keep the programme flexible. Late June to September is the safest window for the plateaus; some plateau roads close in winter.",
+        },
+      },
+      {
+        heading: {
+          tr: "Ayder ve yaylalar: Rize'ye geçmek",
+          ar: "آيدر والمرتفعات: الانتقال إلى ريزه",
+          en: "Ayder and the highlands: crossing into Rize",
+        },
+        body: {
+          tr: "Karadeniz programının en çok istenen parçası yaylalar ve bunların çoğu Trabzon'da değil, Rize sınırlarında. Ayder Yaylası Trabzon'a yaklaşık 200 kilometre ve tek yön üç saat; yani ayrı bir tam gün istiyor.\n\nYayla sezonu haziran sonunda açılıyor ve eylülde kapanıyor. Bu aralığın dışında yollar sisli, soğuk ve zaman zaman kapalı oluyor. Mayısta gelip \"yaylaları göremedik\" diyen misafir her yıl oluyor; tarih konuşulurken bunu baştan söylemek gerekiyor.\n\nAyder'e giden yol Fırtına Vadisi'nden geçiyor: dere boyunca ahşap teraslı restoranlar, kemer köprüler ve çay bahçeleri. Yolun kendisi varış noktası kadar değerli, bu yüzden mola vermeden geçilmiyor.\n\nYaylada hava sahilden belirgin biçimde soğuk: ağustos sabahı on beş derece, akşam daha da düşüyor. İnce bir mont ya da hırka mevsim ne olursa olsun bavulda olmalı.\n\nSezon dışındaysanız gün Uzungöl, Sümela ve sahil çevresine çevriliyor — bu üçü yıl boyunca gezilebiliyor.",
+          ar: "أكثر أجزاء برنامج البحر الأسود طلباً هي المرتفعات، ومعظمها ليس في طرابزون بل ضمن حدود ريزه. فمرتفعات آيدر على نحو مئتي كيلومتر من طرابزون وثلاث ساعات في الاتجاه الواحد؛ أي أنها تحتاج يوماً كاملاً مستقلاً.\n\nويبدأ موسم المرتفعات في أواخر حزيران وينتهي في أيلول. وخارج هذا المدى تكون الطرق ضبابية وباردة وقد تُغلق أحياناً. وفي كل عام يأتي ضيف في أيار ثم يقول \"لم نرَ المرتفعات\"؛ ويجب قول ذلك من البداية عند الحديث عن التواريخ.\n\nوالطريق إلى آيدر يمرّ بوادي فرتينا: مطاعم بشرفات خشبية على النهر، وجسور مقوّسة، وبساتين شاي. والطريق نفسه لا يقلّ قيمةً عن الوجهة، ولذلك لا يُقطع بلا وقفات.\n\nوالجو في المرتفعات أبرد بوضوح من الساحل: خمس عشرة درجة صباح آب، وينخفض أكثر مساءً. ويجب أن يكون في الحقيبة معطف خفيف أو سترة في أي موسم.\n\nوإن كنت خارج الموسم يُحوَّل اليوم إلى أوزنجول وسوميلا ومحيط الساحل — وهذه الثلاثة تُزار طوال السنة.",
+          en: "The most requested part of a Black Sea programme is the highlands, and most of them are not in Trabzon but inside Rize province. Ayder plateau is about 200 km from Trabzon and three hours each way; it needs a separate full day.\n\nThe highland season opens at the end of June and closes in September. Outside that window the roads are misty, cold and sometimes shut. Every year a guest arrives in May and says \"we couldn't see the highlands\"; it has to be said plainly when dates are discussed.\n\nThe road to Ayder runs up the Fırtına valley: restaurants on wooden terraces over the river, arched stone bridges, tea gardens. The road is worth as much as the destination, which is why it is not driven without stops.\n\nUp on the plateau it is noticeably colder than the coast: fifteen degrees on an August morning, lower in the evening. A light jacket or cardigan belongs in the case whatever the season.\n\nOutside the season the day turns to Uzungöl, Sümela and the coast — all three can be visited all year."
+        },
+      },
+      {
+        heading: {
+          tr: "Karadeniz mutfağı ve ne alınır",
+          ar: "مطبخ البحر الأسود وماذا تشتري",
+          en: "Black Sea food, and what to take home",
+        },
+        body: {
+          tr: "Karadeniz mutfağı Türkiye'nin geri kalanından farklı ve iki malzeme etrafında dönüyor: mısır ve karalahana. Muhlama (kuymak) erimiş peynirle mısır unundan yapılıyor ve bölgenin imzası; kahvaltıda ya da öğle yemeğinde bulunuyor, ağır bir yemek olduğu için akşam tercih edilmiyor.\n\nHamsi mevsimi kasım–şubat; bu aylarda tavası, pilavı ve buğulaması her yerde. Yaz aylarında hamsi taze bulunmuyor, o dönemde alabalık öne çıkıyor — dere üstü restoranlarda ızgara olarak.\n\nHamsiköy sütlacı Trabzon–Zigana yolu üzerinde ve tur güzergâhında mola noktası; fırında pişiyor ve üstü kararmış oluyor.\n\nAlınacak şeyler yiyecek: Rize çayı, fındık, mısır unu ve bal. Yayla balı gerçek olduğunda pahalıdır — çok ucuz olan yayla balı değildir. Çay paketlisi her yerde satılıyor ama kaliteli olanı bahçenin kendi satış yerinden çıkıyor.\n\nBu duraklar günü uzatmıyor çünkü zaten yol üstündeler; program kurulurken mola noktaları olarak yerleştiriliyor.",
+          ar: "مطبخ البحر الأسود مختلف عن بقية تركيا ويدور حول مادتين: الذرة والكرنب الأسود. والمحلمة (كويماك) تُصنع من دقيق الذرة مع الجبن الذائب وهي توقيع المنطقة؛ تُقدَّم في الفطور أو الغداء، ولا تُفضَّل مساءً لأنها ثقيلة.\n\nوموسم الأنشوجة من تشرين الثاني إلى شباط؛ وفي هذه الأشهر تجدها مقلية وبالأرز ومطهوّة على البخار في كل مكان. ولا تتوفر طازجة في الصيف، فيتقدّم سمك السلمون المرقّط بدلاً منها — مشويّاً في المطاعم المقامة على الأنهار.\n\nوأرز هامسي كوي باللبن على طريق طرابزون–زيغانا وهو محطة استراحة على مسار الجولة؛ يُخبز في الفرن ويكون وجهه محمّراً.\n\nوما يُشترى طعام: شاي ريزه، والبندق، ودقيق الذرة، والعسل. وعسل المرتفعات إن كان حقيقياً فهو غالٍ — والرخيص جداً ليس عسل مرتفعات. والشاي المعبّأ يُباع في كل مكان لكن جيّده يخرج من منفذ البستان نفسه.\n\nوهذه المحطات لا تطيل اليوم لأنها على الطريق أصلاً؛ وتُوضع في البرنامج كنقاط استراحة.",
+          en: "Black Sea cooking differs from the rest of Türkiye and turns on two ingredients: maize and black cabbage. Muhlama, made of cornmeal with melted cheese, is the region's signature; it appears at breakfast or lunch and is rarely chosen in the evening because it is heavy.\n\nAnchovy season runs November to February; in those months it is fried, cooked with rice and steamed everywhere. Fresh anchovy is not available in summer, when trout takes its place — grilled at the restaurants built over the streams.\n\nHamsiköy rice pudding sits on the Trabzon–Zigana road and is a stop on the tour route; it is baked and comes with a browned top.\n\nWhat you take home is food: Rize tea, hazelnuts, cornmeal and honey. Genuine highland honey is expensive — very cheap highland honey is not highland honey. Packaged tea is sold everywhere, but the good sort comes from the plantation's own outlet.\n\nThese stops do not lengthen the day because they are already on the road; they are placed in the programme as rest points."
         },
       },
     ],
@@ -1777,7 +1825,7 @@ export const guides: Guide[] = [
     slug: "istanbulda-toplu-tasima-rehberi",
     topic: "arrival",
     image: "/images/places/tramvay.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "İstanbul'da toplu taşıma: metro, tramvay, vapur",
       ar: "المواصلات في إسطنبول: المترو والترام والعبّارات",
@@ -1871,6 +1919,30 @@ export const guides: Guide[] = [
           tr: "Toplu taşıma tek başına ya da çift gezenler için ucuz ve hızlıdır. Bagajlı bir varış, dört-beş kişilik bir aile, bebek arabası, gece geç saat ya da şehir dışı bir gün söz konusuysa hesap değişir: aktarmalar ve merdivenler zaman ve enerji alır. Pratik yaklaşım ikisini karıştırmaktır — havalimanı ve şehir dışı için araç, tarihî yarımada içinde tramvay.",
           ar: "المواصلات العامة رخيصة وسريعة لمن يسافر وحده أو لشخصين. أما مع الوصول بالحقائب، أو عائلة من أربعة أو خمسة، أو عربة أطفال، أو ساعة متأخرة ليلاً، أو يوم خارج المدينة، فيتغيّر الحساب: التبديلات والسلالم تأخذ وقتاً وطاقة. والنهج العملي هو المزج بينهما — سيارة للمطار وخارج المدينة، وترام داخل شبه الجزيرة التاريخية.",
           en: "Public transport is cheap and quick for one or two travellers. With a luggage-laden arrival, a family of four or five, a pushchair, a late-night hour or a day out of town, the calculation changes: transfers and stairs cost time and energy. The practical approach is to mix them — a car for the airport and out-of-town days, the tram inside the historic peninsula.",
+        },
+      },
+      {
+        heading: {
+          tr: "İstanbulkart nereden alınır, nasıl doldurulur",
+          ar: "من أين تُشترى بطاقة إسطنبول وكيف تُشحن",
+          en: "Where to get an İstanbulkart and how to load it",
+        },
+        body: {
+          tr: "Kart havalimanlarında, metro istasyonlarında ve iskelelerdeki otomatlardan alınıyor. Otomatlar Arapça ve İngilizce menü sunuyor; kartın kendisi için bir ücret ödüyorsunuz, üstüne bakiye yüklüyorsunuz.\n\nTek kart birden çok kişi için kullanılabiliyor: turnikeden geçerken art arda okutmanız yeterli. Dört kişilik bir aile için tek kart almak, dört ayrı kart almaktan hem ucuz hem pratik.\n\nDolum aynı otomatlardan ve büfelerden yapılıyor. Bakiye ekranda görünüyor; binerken yetmezse turnike geçirmiyor ve arkanızdaki sıra beklemek zorunda kalıyor — bu yüzden bakiyeyi bitmeden yüklemek iyi bir alışkanlık.\n\nKart metro, tramvay, otobüs, vapur, füniküler ve Marmaray'ın hepsinde geçiyor. Aynı yolculukta hat değiştirdiğinizde aktarma indirimi uygulanıyor; yani metrodan tramvaya geçmek iki tam bilet ödemek anlamına gelmiyor.\n\nAyrılırken kartta kalan bakiye iade edilmiyor; son gün fazla yükleme yapmamak mantıklı.",
+          ar: "تُشترى البطاقة من المطارات ومحطات المترو والأجهزة الموجودة في المرافئ. وتوفّر الأجهزة قائمة بالعربية والإنجليزية؛ تدفع ثمن البطاقة نفسها ثم تشحن عليها رصيداً.\n\nويمكن استعمال بطاقة واحدة لعدة أشخاص: يكفي تمريرها متتاليةً عند البوابة. وشراء بطاقة واحدة لعائلة من أربعة أرخص وأعمل من شراء أربع بطاقات.\n\nوالشحن يتم من الأجهزة نفسها ومن الأكشاك. والرصيد يظهر على الشاشة؛ وإن لم يكفِ عند الركوب لا تفتح البوابة ويضطر من خلفك للانتظار — ولذلك فمن العادات الجيدة أن تشحن قبل نفاد الرصيد.\n\nوالبطاقة صالحة في المترو والترام والحافلات والعبّارات والقطار المائل ومرمراي جميعاً. ويُطبَّق خصم التحويل عند تغيير الخط في الرحلة نفسها؛ أي أن الانتقال من المترو إلى الترام لا يعني دفع تذكرتين كاملتين.\n\nولا يُستردّ الرصيد المتبقّي في البطاقة عند المغادرة؛ فمن المعقول ألا تشحن مبلغاً كبيراً في اليوم الأخير.",
+          en: "The card is sold at the airports, metro stations and machines at the ferry piers. The machines offer Arabic and English menus; you pay for the card itself and then load credit onto it.\n\nOne card can be used for several people: tap it in succession at the turnstile. For a family of four, one card is both cheaper and more practical than four.\n\nTopping up is done at the same machines and at kiosks. The balance shows on the screen; if it is short when you board the gate will not open and the queue behind you waits — so loading before it runs out is a good habit.\n\nThe card works on the metro, trams, buses, ferries, funiculars and Marmaray alike. A transfer discount applies when you change lines within one journey, so going from metro to tram does not mean paying two full fares.\n\nAny credit left on the card is not refunded when you leave; it makes sense not to load a large sum on the last day."
+        },
+      },
+      {
+        heading: {
+          tr: "Vapur: en keyifli ve en öngörülebilir hat",
+          ar: "العبّارة: أمتع الخطوط وأكثرها قابلية للتوقّع",
+          en: "The ferry: the most enjoyable and most predictable line",
+        },
+        body: {
+          tr: "İstanbul'da toplu taşımanın en iyi parçası vapur. Trafiğe takılmıyor, saati belli, manzarası şehrin en pahalı turlarında satılan manzarayla aynı ve bileti bir metro yolculuğu kadar.\n\nEn çok kullanılan hatlar Eminönü–Üsküdar, Eminönü–Kadıköy, Karaköy–Kadıköy ve Beşiktaş–Üsküdar. Bunların hepsi yirmi dakika civarı ve gün boyu sık çalışıyor.\n\nAnadolu yakasında kalıyorsanız vapur günlük ulaşımınızın omurgası oluyor: köprü trafiğine girmeden karşıya geçiyorsunuz ve süre her seferinde aynı. Avrupa yakasında kalanlar içinse vapur bir ulaşım aracı değil, gezinin kendisi.\n\nÜst güvertede oturmak ve çay içmek İstanbulluların günlük alışkanlığı; martılara simit vermek de öyle. Bu, para vermeden yapılan ve çocukların en çok sevdiği aktivitelerden biri.\n\nAkşamüstü seferleri gün batımına denk geldiğinde tarihi yarımada silueti en iyi buradan görünüyor — tur teknesine binmeden, normal bilet fiyatına.",
+          ar: "أفضل أجزاء النقل العام في إسطنبول هي العبّارة. فهي لا تعلق في الزحام، ومواعيدها معلومة، ومنظرها هو نفسه المنظر الذي يُباع في أغلى جولات المدينة، وتذكرتها بسعر رحلة مترو.\n\nوأكثر الخطوط استعمالاً إمينونو–أسكودار، وإمينونو–كاديكوي، وكاراكوي–كاديكوي، وبشيكتاش–أسكودار. وكلها نحو عشرين دقيقة وتعمل بتواتر طوال اليوم.\n\nوإن كنت مقيماً في الجهة الآسيوية صارت العبّارة عمود تنقّلك اليومي: تعبر إلى الضفة الأخرى دون دخول زحام الجسر، والمدة واحدة في كل مرة. أما المقيم في الجهة الأوروبية فالعبّارة عنده ليست وسيلة نقل بل هي النزهة نفسها.\n\nوالجلوس في السطح العلوي وشرب الشاي عادة يومية عند أهل إسطنبول، وكذلك إطعام النوارس السميت. وهو من أكثر ما يحبّه الأطفال ولا يكلّف شيئاً.\n\nوحين توافق رحلات العصر غروبَ الشمس يُرى ظلّ شبه الجزيرة التاريخية من هنا أفضل ما يكون — دون ركوب قارب جولات، وبسعر التذكرة العادية.",
+          en: "The best part of public transport in Istanbul is the ferry. It does not get stuck in traffic, its times are known, its view is the same view sold on the city's most expensive tours, and the fare is that of a metro ride.\n\nThe most used lines are Eminönü–Üsküdar, Eminönü–Kadıköy, Karaköy–Kadıköy and Beşiktaş–Üsküdar. All run about twenty minutes and go frequently through the day.\n\nIf you are staying on the Asian side the ferry becomes the backbone of your daily travel: you cross without entering bridge traffic and the time is the same every trip. For those on the European side the ferry is not transport but the outing itself.\n\nSitting on the upper deck with a glass of tea is a daily habit for people in Istanbul, and so is feeding simit to the gulls. It is one of the things children enjoy most and it costs nothing.\n\nWhen the late-afternoon sailings meet the sunset, the silhouette of the historic peninsula is seen at its best from here — without boarding a tour boat, at the price of an ordinary ticket."
         },
       },
     ],
@@ -2131,7 +2203,7 @@ export const guides: Guide[] = [
     slug: "turkiyede-balayi-rehberi",
     topic: "practical",
     image: "/images/tours/bodrum.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "Türkiye'de balayı: nereye, ne zaman, kaç gün",
       ar: "شهر العسل في تركيا: أين ومتى وكم يوماً",
@@ -2225,6 +2297,30 @@ export const guides: Guide[] = [
           tr: "Beş-yedi gün dengeli bir süredir: üç gün İstanbul, bir gün şehir dışı, kalanı serbest. Her güne bir ana durak koymak ve öğleden sonraları boş bırakmak, programın yorucu olmasını engeller. İki şehir arası uçuş varsa o günü gezi günü saymamak gerekir; havalimanı ve bekleme günün yarısını alır.",
           ar: "خمسة إلى سبعة أيام مدة متوازنة: ثلاثة أيام في إسطنبول، ويوم خارج المدينة، والباقي حر. ووضع محطة رئيسية واحدة لكل يوم وترك فترات ما بعد الظهر فارغة يمنع أن يصبح البرنامج مُتعباً. وإن كان بين مدينتين رحلة طيران فلا يُحسب ذلك اليوم يوم زيارة؛ فالمطار والانتظار يأخذان نصف اليوم.",
           en: "Five to seven days is a balanced length: three days in Istanbul, one out of town, the rest free. Putting one main stop in each day and leaving afternoons open keeps the programme from becoming tiring. If there is a flight between two cities, do not count that day as a sightseeing day; the airport and waiting take half of it.",
+        },
+      },
+      {
+        heading: {
+          tr: "Nereye gitmeli: üç ayrı balayı",
+          ar: "إلى أين تذهب: ثلاث أنواع من شهر العسل",
+          en: "Where to go: three different honeymoons",
+        },
+        body: {
+          tr: "Balayı için Türkiye'de üç ayrı rota var ve seçim çiftin ne istediğine göre değişiyor.\n\nDeniz ve sessizlik isteyen için Ege ve Akdeniz. Bodrum yarımadasında Türkbükü ve Göltürkbükü sakinliğiyle biliniyor; Antalya tarafında Kemer ve Kaleiçi'nin butik otelleri. Mayıs sonu–ekim arası deniz mevsimi, temmuz–ağustos hem en sıcak hem en kalabalık.\n\nŞehir ve manzara isteyen için İstanbul. Boğaz kıyısındaki oteller, akşam vapur yolculuğu, Ortaköy ve Bebek'te yemek. İstanbul balayının tamamı olmak yerine genellikle başı ya da sonu oluyor — üç gün İstanbul, ardından sahil.\n\nYeşil ve serinlik isteyen için Karadeniz. Uzungöl ve yaylalar yaz aylarında en çok tercih edilen rota; kalabalıktan uzak, hava serin. Ama mesafeler uzun ve yol dağ yolu; dinlenmekten çok gezmek isteyen çiftlere uygun.\n\nEn sık kurulan birleşim üç-dört gün İstanbul, ardından iç hat uçuşuyla beş gün sahil. İki bölge birbirinin zıddı olduğu için seyahat monotonlaşmıyor.",
+          ar: "لشهر العسل في تركيا ثلاثة مسارات مختلفة، والاختيار يتبع ما يريده الزوجان.\n\nلمن يريد البحر والهدوء: إيجه والمتوسط. ففي شبه جزيرة بودروم تُعرف تركبوكو وغول‑تركبوكو بهدوئها؛ وفي ناحية أنطاليا فنادق كمر وكالي إيتشي البوتيك. وموسم البحر من أواخر أيار إلى تشرين الأول، وتموز وآب أشدّ حرّاً وازدحاماً.\n\nولمن يريد المدينة والمنظر: إسطنبول. فنادق ضفة البوسفور، ورحلة عبّارة مساءً، والعشاء في أورتاكوي وبيبك. وإسطنبول تكون عادةً بداية شهر العسل أو نهايته لا كلّه — ثلاثة أيام فيها ثم الساحل.\n\nولمن يريد الخضرة والبرودة: البحر الأسود. فأوزنجول والمرتفعات أكثر المسارات تفضيلاً في الصيف؛ بعيدة عن الزحام والجو بارد. لكن المسافات طويلة والطريق جبلي؛ فهي تناسب الزوجين اللذين يريدان التجوّل أكثر من الراحة.\n\nوأكثر التركيبات شيوعاً ثلاثة أو أربعة أيام في إسطنبول، ثم خمسة أيام على الساحل برحلة داخلية. ولأن المنطقتين متضادّتان لا تصبح الرحلة رتيبة.",
+          en: "There are three separate honeymoon routes in Türkiye, and the choice follows what the couple wants.\n\nFor sea and quiet: the Aegean and the Mediterranean. On the Bodrum peninsula, Türkbükü and Göltürkbükü are known for their calm; on the Antalya side, the boutique hotels of Kemer and Kaleiçi. The swimming season runs from late May to October, with July and August both the hottest and the busiest.\n\nFor city and view: Istanbul. Hotels along the Bosphorus, an evening ferry, dinner at Ortaköy or Bebek. Istanbul is usually the beginning or the end of a honeymoon rather than all of it — three days there, then the coast.\n\nFor green and cool air: the Black Sea. Uzungöl and the highlands are the most chosen route in summer; away from the crowds, cool air. But the distances are long and the roads mountain roads; it suits couples who want to explore more than to rest.\n\nThe commonest combination is three or four days in Istanbul, then five on the coast by domestic flight. Because the two regions are opposites, the trip does not go flat."
+        },
+      },
+      {
+        heading: {
+          tr: "Ne yapmıyoruz: gelin arabası ve sürpriz düzenleme",
+          ar: "ما لا نقدّمه: سيارة العروس والتنظيمات المفاجئة",
+          en: "What we do not do: wedding cars and surprise arrangements",
+        },
+        body: {
+          tr: "Balayı sayfalarında sık geçen iki hizmet var ve ikisini de vermiyoruz; bunu baştan yazmak sonradan hayal kırıklığı yaşatmaktan iyi.\n\nGelin arabası ve düğün organizasyonu yapmıyoruz. Süslü araç, çiçek düzenlemesi, fotoğrafçı ayarlama gibi işler bizim alanımız değil. Aracımız siyah Mercedes Vito ve transfer aracı olarak çalışıyor.\n\nOtel odasına sürpriz düzenleme (çiçek, pasta, balon) da bizim yaptığımız bir şey değil. Bunu doğrudan otelden istemek hem daha güvenilir hem daha ucuz; çoğu otel bu isteği rezervasyon notuna eklediğinizde karşılıyor. Biz rezervasyonu sizin adınıza yaparken bu notu iletebiliyoruz ama düzenlemeyi otel yapıyor, biz değil.\n\nYaptığımız şey ulaşım ve program: havalimanı karşılaması, şehirler arası transfer, gün boyu araç ve şoför, özel turlar. Balayı çiftlerinin en çok istediği şey de zaten bu — kalabalık bir gruba katılmadan, kendi tempolarında gezmek.",
+          ar: "هناك خدمتان تتكرران في صفحات شهر العسل ولا نقدّم أياً منهما؛ وكتابة ذلك من البداية أفضل من خيبة أمل لاحقة.\n\nلا نقدّم سيارة العروس ولا تنظيم الأعراس. فالسيارة المزيّنة وتنسيق الزهور وترتيب المصوّر ليست من مجالنا. وسيارتنا مرسيدس فيتو سوداء وتعمل سيارة نقل.\n\nولا نقوم كذلك بترتيب المفاجآت في غرفة الفندق (زهور، كعكة، بالونات). فطلب ذلك من الفندق مباشرةً أوثق وأرخص؛ ومعظم الفنادق تلبّيه إذا أضفته إلى ملاحظات الحجز. ونستطيع نحن إيصال هذه الملاحظة عند الحجز باسمك، لكن التنفيذ يكون من الفندق لا منّا.\n\nوما نقدّمه هو النقل والبرنامج: الاستقبال من المطار، والنقل بين المدن، وسيارة وسائق طوال اليوم، وجولات خاصة. وهذا أصلاً أكثر ما يطلبه الزوجان في شهر العسل — التجوّل بإيقاعهما دون الانضمام إلى مجموعة كبيرة.",
+          en: "Two services appear often on honeymoon pages and we provide neither; writing that down at the start beats disappointing someone later.\n\nWe do not do wedding cars or wedding organisation. A decorated vehicle, floral arrangements, arranging a photographer — none of that is our field. Our vehicle is a black Mercedes Vito working as a transfer car.\n\nSurprise arrangements in the hotel room — flowers, a cake, balloons — are not something we do either. Asking the hotel directly is both more reliable and cheaper; most hotels will oblige if you add it to the booking notes. We can pass that note on when we book in your name, but the hotel does the arranging, not us.\n\nWhat we do is transport and the programme: airport meet-and-greet, intercity transfers, a car and driver by the day, private tours. That is what honeymoon couples ask for most anyway — moving at their own pace without joining a large group."
         },
       },
     ],

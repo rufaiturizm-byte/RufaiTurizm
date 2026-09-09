@@ -33,6 +33,7 @@ import { WhatsAppIcon } from "@/components/site/icons";
 import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { ServiceFaq } from "@/components/site/service-faq";
+import { ServiceSections } from "@/components/site/service-sections";
 import { services, serviceBySlug } from "@/data/services";
 
 /** Transfer formu yalnızca ulaşım hizmetlerinde anlamlı. */
@@ -317,6 +318,8 @@ export default async function ServiceDetailPage({
       ) : (
         <ProcessSteps />
       )}
+
+      <ServiceSections serviceKey={service.key} />
 
       <RouteCoverage locale={locale} />
       <ServiceFaq serviceKey={service.key} />

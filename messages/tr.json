@@ -516,11 +516,11 @@
   "stats": {
     "guestsLabel": "Mutlu Misafir",
     "ratingLabel": "Google Puanımız",
-    "sinceLabel": "Deneyim Yılı",
+    "sinceLabel": "Yıllık Deneyim",
     "licenseLabel": "TÜRSAB Güvencesi",
     "guestsDesc": "Bizi tercih eden misafirlerimiz",
     "ratingDesc": "Yüzlerce değerlendirme",
-    "sinceDesc": "Sektördeki köklü tecrübemiz",
+    "sinceDesc": "{year}'ten beri hizmetteyiz",
     "licenseDesc": "Yetkili acente — Belge No {no}"
   },
   "home2": {

@@ -67,6 +67,9 @@ export async function TrustBoxes() {
   );
 }
 
+/** Şirketin kuruluş yılı. Deneyim süresi buradan hesaplanır. */
+const KURULUS_YILI = 2015;
+
 export async function TrustStats() {
   const tStats = await getTranslations("stats");
 
@@ -100,15 +103,30 @@ export async function TrustStats() {
     {
       icon: CalendarCheck,
       prefix: "",
-      value: 2015,
+      /*
+       * YIL DEĞİL, SÜRE.
+       *
+       * Burada "2015" yazıyordu ve iki sorunu vardı. Birincisi
+       * biçimlendirmeydi (binlik ayracıyla "2,015"), o düzeltildi. Ama
+       * asıl sorun kalmıştı: şeritteki diğer üç kutu birer MİKTAR
+       * gösteriyor (+12.000 misafir, 4,9 puan, TÜRSAB belgesi), ortada
+       * bir takvim yılı duruyordu. Etiketin altında okunduğunda ne
+       * dediği belirsizdi.
+       *
+       * Artık kuruluş yılından bugüne geçen süre gösteriliyor: bu bir
+       * miktar, diğer üçüyle aynı dilde ve sayaç animasyonu da anlamlı.
+       * Kuruluş yılı `desc` içinde ve karttaki rozette duruyor, yani
+       * bilgi kaybolmuyor.
+       *
+       * Hesaplanıyor, elle yazılmıyor: her yıl başında birinin
+       * güncellemesi gereken bir rakam eninde sonunda güncellenmez.
+       */
+      value: new Date().getFullYear() - KURULUS_YILI,
       decimals: 0,
-      /* Yıl, sayı değil: binlik ayracıyla "2,015" basılıyor ve
-         "Deneyim Yılı" etiketinin altında iki bin on beş yıllık bir
-         tecrübe gibi okunuyordu. */
-      grouping: false,
       suffix: "",
+      since: KURULUS_YILI,
       label: tStats("sinceLabel"),
-      desc: tStats("sinceDesc"),
+      desc: tStats("sinceDesc", { year: KURULUS_YILI }),
     },
     {
       icon: ShieldCheck,
@@ -166,12 +184,32 @@ export async function TrustStats() {
                   ) : (
                     <>
                       {stat.prefix}
-                      <NumberTicker
-                        value={stat.value}
-                        decimalPlaces={stat.decimals}
-                        grouping={stat.grouping !== false}
-                      />
+                      {/* `grouping` artık geçilmiyor: binlik ayracını
+                          kapatmayı gerektiren tek kutu takvim yılıydı,
+                          o da süreye çevrildi. Seçenek bileşende duruyor. */}
+                      <NumberTicker value={stat.value} decimalPlaces={stat.decimals} />
                       <span className="text-[24px] text-muted-foreground">{stat.suffix}</span>
+                      {/* Kuruluş yılı rozeti — yalnız deneyim kartında.
+                          Rakam artık süre olduğu için yıl bilgisi burada
+                          duruyor; kart da böylece diğer üçünden ayrılıyor. */}
+                      {"since" in stat && stat.since ? (
+                        <span
+                          /* Ekran okuyucudan gizli: kuruluş yılı hemen
+                             altındaki açıklamada zaten geçiyor
+                             ("2015'ten beri hizmetteyiz"). Rozet okunursa
+                             sayı kutusu "11 2015" diye seslendiriliyor
+                             ve rakam belirsizleşiyor. */
+                          aria-hidden="true"
+                          className="ms-2 inline-flex translate-y-[-6px] items-center rounded-full px-2.5 py-1 align-middle text-[11px] font-extrabold tracking-[0.08em]"
+                          style={{
+                            background: "color-mix(in oklab, var(--brand-gold) 18%, transparent)",
+                            border: "1px solid color-mix(in oklab, var(--brand-gold) 42%, transparent)",
+                            color: "var(--brand-gold-deep)",
+                          }}
+                        >
+                          {stat.since}
+                        </span>
+                      ) : null}
                     </>
                   )}
                 </div>

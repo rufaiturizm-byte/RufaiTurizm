@@ -516,11 +516,11 @@
   "stats": {
     "guestsLabel": "ضيف سعيد",
     "ratingLabel": "تقييم Google",
-    "sinceLabel": "سنة التأسيس",
+    "sinceLabel": "سنوات الخبرة",
     "licenseLabel": "ضمان TÜRSAB",
     "guestsDesc": "ضيوف اختارونا",
     "ratingDesc": "مئات التقييمات",
-    "sinceDesc": "خبرة راسخة في القطاع",
+    "sinceDesc": "نعمل في هذا المجال منذ {year}",
     "licenseDesc": "وكالة مرخّصة — رقم الوثيقة {no}"
   },
   "home2": {

@@ -516,11 +516,11 @@
   "stats": {
     "guestsLabel": "Happy Guests",
     "ratingLabel": "Google Rating",
-    "sinceLabel": "Serving Since",
+    "sinceLabel": "Years of Experience",
     "licenseLabel": "TÜRSAB Licensed",
     "guestsDesc": "Guests who chose us",
     "ratingDesc": "Hundreds of reviews",
-    "sinceDesc": "Deep-rooted experience",
+    "sinceDesc": "Serving guests since {year}",
     "licenseDesc": "Licensed agency — Licence No {no}"
   },
   "home2": {

@@ -135,7 +135,25 @@
         }
       ],
       "metaDescription": "Meet and greet and hotel transfer from Istanbul Airport (IST) and Sabiha Gökçen (SAW). Fixed price, flight tracking, a name board at arrivals, luggage help.",
-      "metaTitle": "Airport Transfer Service — Fixed Price"
+      "metaTitle": "Airport Transfer Service — Fixed Price",
+      "sections": [
+        {
+          "heading": "What happens after the plane lands",
+          "body": "The most misunderstood part of an airport pickup is assuming the landing time and the time you walk out are the same. The gap between them is missing from most plans.\n\nThe real sequence: the plane lands, docks at the gate, passport control can reach twenty minutes at busy hours, and another fifteen to twenty minutes pass before the luggage reaches the belt. So you are at the exit about forty minutes after landing; an hour at a busy time.\n\nThat wait is our problem, not yours. Because we track the flight by its number, the driver is there before you and waiting is not charged. If your luggage goes missing and you are delayed, the driver waits too.\n\nThe meeting point is the arrivals gate and the driver waits with a board carrying your name. So it does not matter if you have no internet — if your line is not active yet or you cannot reach the wifi, the pickup still works."
+        },
+        {
+          "heading": "Which airport, which district, how long",
+          "body": "Istanbul has two airports, and which one you land at changes the distance to your hotel entirely.\n\nIstanbul Airport (IST) is in the north-west of the city. To Taksim and Şişli it is about 40 kilometres: 45 minutes with clear roads, an hour and a half in the late afternoon. Sultanahmet is 45 kilometres and similar. Beşiktaş and Ortaköy are 42 kilometres.\n\nSabiha Gökçen (SAW) is on the Asian side, near Pendik. Asian-side districts such as Kadıköy and Ataşehir are reached in half an hour with no bridge crossing at all. But if your hotel is in Sultanahmet, Taksim or Beşiktaş you must cross a bridge, and the drive can stretch to an hour and a half or two.\n\nIn the other cities: Antalya Airport (AYT) lies east of the city — Belek 30–45 minutes, Side about an hour, Kemer 50 minutes to 1.5 hours, Alanya 1.5–2.5 hours. Bodrum–Milas (BJV) is about 36 kilometres and 40 minutes from the centre. Trabzon Airport (TZX) is inside the city, fifteen minutes from the middle.\n\nBecause we take the full hotel name at booking, we can give the real time rather than an estimate; two hotels inside the same area name can be twenty minutes apart."
+        },
+        {
+          "heading": "Night arrivals and early-morning flights",
+          "body": "A large share of flights from the Gulf land after midnight, and that is when public transport is at its weakest.\n\nNothing changes for a night arrival: the driver is at the arrivals gate as usual, with the name board as usual. We charge nothing for the hour and we have no line item called a night tariff.\n\nOn early-morning flights the real question is not traffic but what time you leave the hotel. If you need to be at the airport three hours before departure and the drive is forty-five minutes, we work out the departure time with you. Morning traffic in Istanbul thickens after half past six; leaving an hour early usually beats waiting an hour.\n\nWhen you give us your flight number we track the return the same way. If the departure time changes we move the booking to the new time at no extra charge."
+        },
+        {
+          "heading": "Luggage, child seats and larger families",
+          "body": "A Mercedes Vito carries six passengers, but seats and luggage fitting at the same time is a separate sum. With six people seated, the space behind takes two large suitcases and some hand luggage.\n\nIf you are six with six large cases, a second vehicle is needed, and it comes from our own fleet. Saying so at booking beats finding out at the airport — which is why we ask how many suitcases there are.\n\nChild and infant seats cost nothing extra but are not kept in the vehicle; you need to give the child's age at booking so one is fitted for that day. A pushchair goes in the boot and counts in the space calculation.\n\nIf you are travelling with a wheelchair, or an older relative who finds walking difficult, write that too: we set the meeting point and where the car pulls up around it."
+        }
+      ]
     },
     "tours": {
       "title": "Guided Tours",
@@ -172,7 +190,25 @@
         }
       ],
       "metaDescription": "Private tours in Istanbul, Bursa, Sapanca, Trabzon and Bodrum. An Arabic-speaking guide, never merged with a group, prayer and meal breaks, hotel pick-up.",
-      "metaTitle": "Private Tours — Arabic Guide or Driver"
+      "metaTitle": "Private Tours — Arabic Guide or Driver",
+      "sections": [
+        {
+          "heading": "The difference between a private tour and joining a group",
+          "body": "Most day-tour sellers in Türkiye lower the price by putting you in a group: a coach of fifteen to twenty people, a fixed route and one timetable everyone must keep. That is why it is cheap.\n\nOn our tours the vehicle is yours alone. We collect you from the hotel and return you there; nobody else gets in along the way. The trade-off is plain: per person a private tour costs more, but with families of more than three the gap closes, because the price is per car.\n\nWhat changes in practice is flexibility. On a group tour you get twenty minutes at a stop and the coach leaves. On a private tour you can stay forty, or leave after ten if you have had enough. Travelling with a small child or an elderly relative, that difference becomes the holiday itself.\n\nLet us say it plainly: we are not the right address for a traveller looking for the cheapest. We do not cut the price by merging groups, and we write that here rather than disappoint you later."
+        },
+        {
+          "heading": "The rhythm of the day: prayer, meals and children",
+          "body": "The programme is built around how Gulf families run their day, not around a coach timetable.\n\nThe departure time is yours. A family that breakfasts late can leave at ten; someone who wants to be out before the heat leaves at eight. A group tour offers no such choice.\n\nBreaks are taken at prayer times and the driver knows the nearest mosque. You choose where to stop for lunch; if there is any doubt about halal, the driver asks, so you do not have to.\n\nWith children we apply the rule of two main stops a day. A third fits on paper, but the child tires and the evening goes with it. If you want to return to the hotel mid-day and rest for two hours, that is possible too — the car is yours and so is the plan.\n\nIf you have a pushchair, a wheelchair or an older relative who finds walking hard, the stops are chosen around that: the cobbled lanes of the historic peninsula are not the same as the seafront."
+        },
+        {
+          "heading": "What the price includes and what it does not",
+          "body": "The tour price is per vehicle and is fixed at booking; it does not change on arrival.\n\nIncluded: the private car and driver, hotel pick-up and drop-off, fuel, parking and tolls, water in the vehicle, and an Arabic-speaking guide on city tours.\n\nNot included: museum and archaeological site entry tickets, lunch, boat-trip tickets and tips. We keep museum tickets out of the price because the fees change and because not everyone visits the same museums — we would rather the choice stayed yours.\n\nTipping is not obligatory and nobody will ask. It is a common habit in Türkiye but not an expectation; you tip if you were pleased.\n\nIf you want to add a stop to the programme the driver relays it; if there is a difference we say so at the time, and it is not added to the bill afterwards."
+        },
+        {
+          "heading": "Guide or driver, and on which tour",
+          "body": "We write this distinction out because the two are not the same, and confusing them skews expectations.\n\nOn city tours an Arabic-speaking guide accompanies you and explains the history of what you visit. In Türkiye, commentary inside museums and archaeological sites belongs to the licensed tourist-guiding profession; a driver may not legally do it.\n\nOn some nature and shopping routes the Arabic-speaking driver takes on the guiding instead. There is no museum to interpret on the shore of Lake Sapanca or in the Grand Bazaar; what helps there is someone who knows the way and speaks your language.\n\nWe tell you which applies to your programme before you book. You do not need to ask — it is written into the quote."
+        }
+      ]
     },
     "flightHotel": {
       "title": "Flight & Hotel Booking",
@@ -209,7 +245,25 @@
         }
       ],
       "metaDescription": "We book flights and hotels on your behalf: hotel suggestions district by district, distance to the metro explained, and a clear total price before you book.",
-      "metaTitle": "Flight and Hotel Booking in Türkiye"
+      "metaTitle": "Flight and Hotel Booking in Türkiye",
+      "sections": [
+        {
+          "heading": "Why let us handle the booking",
+          "body": "You can book the hotel yourself, and we say so plainly. A booking made through Booking.com or the hotel's own site usually goes through without trouble.\n\nThe one sensible reason to ask us is knowing the district and asking the right questions. We ask what the listing does not say — which floor the room is on, what the window faces, whether the bathroom has a bidet spray, whether a family room is genuinely one room or two adjoining, whether an extra bed is charged.\n\nWe have no list of partner hotels and we add no commission to the price. So we have no interest in steering you to a particular one; when we say which hotel suits you, we are not looking at our own pocket.\n\nWe pass on the hotel's answer as it is. If the hotel is unsure, we say \"unsure\"; we do not present our guess as the hotel's word."
+        },
+        {
+          "heading": "The questions we ask when choosing a hotel",
+          "body": "Before suggesting a hotel we ask you three things: how many you are and the children's ages, which airport you land at, and whether you want to explore or to rest. Those three settle the district on their own.\n\nThe district decision comes before the hotel, because the wrong district in Istanbul means an hour and a half of travel a day. Over a five-day holiday that is a full day. A guest in Sultanahmet walks out of the hotel to Hagia Sophia; a guest in Şişli sets out every day to see the same thing.\n\nThen we check the hotel's address on a map. In Türkiye a hotel may freely use a district name: one with \"Taksim\" in its name can be a twenty-minute walk uphill from the square. It is the complaint that recurs most in reviews.\n\nFinally we read the last six months of reviews rather than the star rating. Stars measure a property's facilities — rooms, lifts, pool — not the quality of service."
+        },
+        {
+          "heading": "Flights: what we do and what we do not",
+          "body": "We buy the ticket in your name and send the details in writing. On domestic connections we plan the arrival time together with the transfer — that is the commonest problem when the ticket and the pickup are arranged separately.\n\nChange and cancellation terms follow the airline's own rules and the fare class; we impose none of our own. Some tickets can be changed, some are never refundable. We tell you in writing before buying which class it is and what the terms are, so nothing is learned afterwards.\n\nWe do not handle visa applications. Visa rules vary by nationality and change often; we would rather not do the work at all than give you wrong information.\n\nThe ticket price is not part of the programme. In our packages the flight is a separate line, and we buy it in your name if you want or you buy it yourself — either is fine."
+        },
+        {
+          "heading": "How payment and confirmation work",
+          "body": "Before booking we send the total in writing: hotel name, room type, dates, how many people, whether breakfast is included. Those lines close off most of what could be argued about later.\n\nThe booking is made in your name, not ours. You are the one who arrives at the hotel and your name is the one at reception; you are not left depending on a middleman.\n\nIf a problem comes up, we hold the correspondence: room type, dates and confirmation. We deal with the hotel, so you are not left arguing at reception.\n\nContact runs through WhatsApp and everything stays written down. A confirmation given verbally on the phone is a confirmation nobody remembers later."
+        }
+      ]
     },
     "priceFrom": "starting prices"
   },

@@ -135,7 +135,25 @@
         }
       ],
       "metaDescription": "İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW) karşılama ve otel transferi. Sabit fiyat, uçuş takibi, isimli tabelayla karşılama ve bagaj yardımı dahil.",
-      "metaTitle": "Havalimanı Transfer Hizmeti — Sabit Fiyat"
+      "metaTitle": "Havalimanı Transfer Hizmeti — Sabit Fiyat",
+      "sections": [
+        {
+          "heading": "Uçak indikten sonra ne oluyor",
+          "body": "Karşılamanın en çok yanlış anlaşılan kısmı, iniş saati ile çıkış saatinin aynı şey sanılması. Aradaki fark çoğu planın dışında kalıyor.\n\nGerçek sıra şu: uçak iner, kapıya yanaşır, pasaport kontrolü yoğun saatlerde yirmi dakikayı bulur, bagajın banda düşmesi on beş-yirmi dakika daha sürer. Yani iniş saatinden yaklaşık kırk dakika sonra çıkıştasınız; kalabalık bir saatte bir saat.\n\nBu süre bizim sorunumuz, sizin değil. Uçuşu numarasından takip ettiğimiz için şoför sizden önce orada oluyor ve bekleme için ek ücret çıkmıyor. Bagajınız kaybolur da gecikirseniz de şoför bekler.\n\nBuluşma noktası geliş kapısı ve şoför isminizin yazılı olduğu tabelayla bekliyor. Bu yüzden internetiniz olmasa da birbirimizi bulmak sorun değil — telefon hattınız açılmamışsa ya da wifi'ye bağlanamamışsanız da karşılama yürüyor."
+        },
+        {
+          "heading": "Hangi havalimanı, hangi semt, ne kadar sürer",
+          "body": "İstanbul'da iki havalimanı var ve hangisine indiğiniz otelinize olan mesafeyi tamamen değiştiriyor.\n\nİstanbul Havalimanı (IST) şehrin kuzeybatısında. Taksim ve Şişli'ye yaklaşık 40 kilometre; trafiksiz 45 dakika, akşamüstü bir buçuk saat. Sultanahmet 45 kilometre ve benzer süre. Beşiktaş ve Ortaköy 42 kilometre.\n\nSabiha Gökçen (SAW) Anadolu yakasında, Pendik yakınlarında. Kadıköy ve Ataşehir gibi Anadolu yakası semtlerine yarım saatte varılıyor ve köprüye hiç girilmiyor. Ama oteliniz Sultanahmet, Taksim ya da Beşiktaş'taysa köprü geçmek gerekiyor ve süre bir buçuk-iki saate çıkabiliyor.\n\nDiğer şehirlerde: Antalya Havalimanı (AYT) şehrin doğusunda — Belek 30-45 dakika, Side yaklaşık bir saat, Kemer 50 dakika ile 1,5 saat, Alanya 1,5-2,5 saat. Bodrum–Milas (BJV) merkeze yaklaşık 36 kilometre ve 40 dakika. Trabzon Havalimanı (TZX) şehrin içinde, merkeze on beş dakika.\n\nRezervasyonda otelin tam adını aldığımız için tahmin değil gerçek süreyi söyleyebiliyoruz; aynı bölge adı içinde iki otel arasında yirmi dakika fark olabiliyor."
+        },
+        {
+          "heading": "Gece varışları ve sabah erken uçuşlar",
+          "body": "Körfez'den gelen uçuşların önemli bir bölümü gece yarısından sonra iniyor ve o saat toplu taşımanın en zayıf olduğu saat.\n\nGece varışında değişen bir şey yok: şoför yine geliş kapısında, yine isimli tabelayla. Saat farkı için ek ücret almıyoruz ve gece tarifesi diye bir kalemimiz yok.\n\nSabah erken uçuşlarda asıl mesele trafik değil, otelden çıkış saati. Uçuştan üç saat önce havalimanında olmak gerekiyorsa ve yol kırk beş dakikaysa, otelden çıkış saatini birlikte hesaplıyoruz. İstanbul'da sabah trafiği altı buçuktan sonra ağırlaşıyor; bir saat erken çıkmak çoğu zaman bir saat beklemekten iyi.\n\nUçuş numaranızı verdiğinizde dönüş transferini de aynı şekilde takip ediyoruz. Uçuş saati değişirse rezervasyonu yeni saate taşıyoruz, ek ücret çıkmıyor."
+        },
+        {
+          "heading": "Bagaj, çocuk koltuğu ve kalabalık aileler",
+          "body": "Mercedes Vito altı yolcu taşıyor ama koltuk ve bagajın aynı anda sığması ayrı bir hesap. Altı kişi oturduğunda arkada iki büyük valiz ile birkaç el bagajı kalıyor.\n\nAltı kişi ve altı büyük valizle geliyorsanız ikinci araç gerekiyor ve o da kendi filomuzdan çıkıyor. Bunu rezervasyon anında söylemek, havalimanında öğrenmekten iyi — bu yüzden kaç valiz olduğunu soruyoruz.\n\nÇocuk ve bebek koltuğu ek ücretsiz ama araçta hazır durmuyor; çocuğun yaşını rezervasyonda söylemeniz gerekiyor, o gün için takılıyor. Bebek arabası bagaja giriyor ve yer hesabında sayılıyor.\n\nTekerlekli sandalye ya da yürümekte zorlanan bir büyüğünüz varsa da yazın: karşılama noktasını ve aracın yanaşacağı yeri ona göre ayarlıyoruz."
+        }
+      ]
     },
     "tours": {
       "title": "Tur Hizmeti",
@@ -172,7 +190,25 @@
         }
       ],
       "metaDescription": "İstanbul, Bursa, Sapanca, Trabzon ve Bodrum'da özel turlar. Arapça rehber, gruba katılma yok, namaz ve yemek molaları programda, otelden alış.",
-      "metaTitle": "Özel Turlar — Arapça Rehber veya Şoför"
+      "metaTitle": "Özel Turlar — Arapça Rehber veya Şoför",
+      "sections": [
+        {
+          "heading": "Özel tur ile gruba katılmak arasındaki fark",
+          "body": "Türkiye'de günlük tur satan çoğu yer fiyatı gruba katarak düşürüyor: on beş-yirmi kişilik bir otobüs, sabit bir güzergâh ve herkesin uyması gereken bir saat. Ucuz olmasının sebebi bu.\n\nBizim turlarımızda araç yalnız size ait. Otelden alıyor, otele bırakıyoruz; yolda başka misafir binmiyor. Bunun karşılığı da açık: kişi başına bakınca özel tur daha pahalı, üç kişiden kalabalık ailelerde ise fark kapanıyor çünkü fiyat araç başına.\n\nPratikte değişen şey program esnekliği. Grup turunda bir durakta yirmi dakika verilir ve otobüs kalkar. Özel turda o durakta kırk dakika kalabilir, sıkıldıysanız on dakikada çıkabilirsiniz. Küçük çocukla ya da yaşlı bir yakınla gezerken bu fark tatilin kendisi oluyor.\n\nBaştan söyleyelim: en ucuzu arayan gezgin için doğru adres değiliz. Gruba katarak fiyat düşürmüyoruz ve bunu sonradan hayal kırıklığı yaşatmaktansa burada yazıyoruz."
+        },
+        {
+          "heading": "Günün temposu: namaz, yemek ve çocuklar",
+          "body": "Program Körfez'den gelen ailelerin günlük düzenine göre kuruluyor, bir otobüs tarifesine göre değil.\n\nKalkış saati sizin. Geç kahvaltı eden bir aile onda çıkabilir; erken çıkıp sıcaktan önce gezmek isteyen sekizde. Grup turunda böyle bir seçim yok.\n\nNamaz vakitlerinde mola veriliyor ve şoför en yakın camiyi biliyor. Öğle yemeği için durulacak yeri siz seçiyorsunuz; helal konusunda tereddüt varsa şoför soruyor, siz sormak zorunda kalmıyorsunuz.\n\nÇocuklu ailelerde günde iki ana durak kuralını uyguluyoruz. Üçüncü durak kâğıt üzerinde sığıyor ama çocuk yoruluyor ve akşam programı da bozuluyor. Gün ortasında otele dönüp iki saat dinlenmek isterseniz bu da mümkün — araç sizin, program da sizin.\n\nBebek arabası, tekerlekli sandalye ya da yürümekte zorlanan bir büyüğünüz varsa duraklar ona göre seçiliyor: tarihî yarımadanın arnavut kaldırımı ile sahil bandı aynı şey değil."
+        },
+        {
+          "heading": "Fiyata ne dahil, ne değil",
+          "body": "Tur fiyatı araç başına ve rezervasyonda kesinleşiyor; varışta değişmiyor.\n\nDahil olanlar: özel araç ve şoför, otelden alış ve bırakış, yakıt, otopark ve geçiş ücretleri, araçta su, ve şehir turlarında Arapça konuşan rehber.\n\nDahil olmayanlar: müze ve ören yeri giriş biletleri, öğle yemeği, tekne turu bileti ve bahşiş. Müze biletlerini fiyata katmıyoruz çünkü ücretler değişiyor ve herkes aynı müzeye girmiyor — kendi kararınız olsun istiyoruz.\n\nBahşiş zorunlu değil ve kimse istemez. Türkiye'de yaygın bir alışkanlık ama bir beklenti değil; memnun kaldıysanız verirsiniz.\n\nProgram içinde bir durak eklemek isterseniz şoför bunu çeviriyor; fark varsa o anda söylüyoruz, sonradan faturaya eklenmiyor."
+        },
+        {
+          "heading": "Rehber mi şoför mü, hangi turda",
+          "body": "Bu ayrımı açıkça yazıyoruz çünkü ikisi aynı şey değil ve karıştırılınca beklenti şaşıyor.\n\nŞehir turlarında Arapça konuşan bir rehber eşlik ediyor ve gezdiğiniz yerin tarihini anlatıyor. Türkiye'de müze ve ören yerlerinde anlatım yapmak belgeli turist rehberliği mesleğine ait; şoförün bunu yapması yasal değil.\n\nDoğa ve alışveriş ağırlıklı bazı güzergâhlarda ise yönlendirmeyi Arapça konuşan şoför üstleniyor. Sapanca'da göl kıyısında ya da Kapalıçarşı'da anlatılacak bir müze yok; orada işe yarayan şey yolu bilen ve dilinizi konuşan biri.\n\nHangi programda hangisinin olduğunu rezervasyondan önce açıkça söylüyoruz. Sormanız gerekmiyor, teklifin içinde yazıyor."
+        }
+      ]
     },
     "flightHotel": {
       "title": "Uçak Bileti ve Otel Rezervasyonu",
@@ -209,7 +245,25 @@
         }
       ],
       "metaDescription": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Semt semt otel önerisi, metroya yakınlık bilgisi ve rezervasyon öncesi net toplam fiyat.",
-      "metaTitle": "Uçak Bileti ve Otel Rezervasyonu"
+      "metaTitle": "Uçak Bileti ve Otel Rezervasyonu",
+      "sections": [
+        {
+          "heading": "Neden rezervasyonu bize yaptırasınız",
+          "body": "Oteli kendiniz de rezerve edebilirsiniz ve bunu açıkça söylüyoruz. Booking ya da otelin kendi sitesi üzerinden yapılan rezervasyon çoğu zaman sorunsuz yürüyor.\n\nBizden istemenizin tek makul sebebi şu: semti bilmek ve doğru soruları sormak. Otel ilanında yazmayan şeyleri biz soruyoruz — oda hangi katta, penceresi nereye bakıyor, banyoda şattaf var mı, aile odası gerçekten tek oda mı yoksa yan yana iki oda mı, ilave yatak ücretli mi.\n\nAnlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Bu yüzden sizi belirli bir otele yönlendirmek gibi bir çıkarımız yok; hangi otelin size uyduğunu söylerken kendi cebimize bakmıyoruz.\n\nOtelin cevabını olduğu gibi iletiyoruz. Otel emin değilse \"emin değil\" diyoruz; bizim tahminimizi otelin sözü gibi göstermiyoruz."
+        },
+        {
+          "heading": "Otel seçerken sorduğumuz sorular",
+          "body": "Bir otel önerisi vermeden önce size üç şey soruyoruz: kaç kişisiniz ve çocukların yaşı, hangi havalimanına ineceğiniz, ve gezmek mi dinlenmek mi istediğiniz. Bu üçü semti kendiliğinden belirliyor.\n\nSemt kararı otelden önce geliyor çünkü İstanbul'da yanlış semt günde bir buçuk saat yol demek. Beş günlük bir tatilde bu tam bir gün eder. Sultanahmet'te kalan misafir otelden çıkıp Ayasofya'ya yürüyor; Şişli'de kalan aynı şeyi görmek için her gün yola çıkıyor.\n\nSonra otelin adresini haritada doğruluyoruz. Türkiye'de otel adında semt adı kullanmak serbest: adında \"Taksim\" geçen bir otel meydana yirmi dakika yokuş yukarı olabiliyor. Yorumlarda en çok tekrar eden şikâyet bu.\n\nSon olarak son altı ayın yorumlarına bakıyoruz, yıldız sayısına değil. Yıldız tesisin özelliklerini ölçüyor — oda sayısı, asansör, havuz — hizmet kalitesini değil."
+        },
+        {
+          "heading": "Uçak bileti: neyi yapıyoruz, neyi yapmıyoruz",
+          "body": "Uçak biletini sizin adınıza alıyoruz ve bilet bilgilerini yazılı gönderiyoruz. İç hat bağlantılarında varış saatini transferle birlikte planlıyoruz — bilet ile karşılama ayrı ayrı ayarlandığında en sık çıkan sorun budur.\n\nDeğişiklik ve iptal koşulları havayolunun kendi kurallarına ve bilet sınıfına tabi; bizim koyduğumuz bir kural yok. Bazı biletler değiştirilebiliyor, bazıları hiç iade edilmiyor. Bileti almadan önce hangi sınıfta olduğunu ve şartlarını yazılı olarak söylüyoruz — sonradan öğrenilen bir şey olmasın.\n\nVize başvurusu yürütmüyoruz. Vize kuralları uyruğa göre değişiyor ve sık güncelleniyor; yanlış bilgi vermektense bu işi hiç yapmamayı tercih ediyoruz.\n\nBilet fiyatı programa dahil değil. Paket programlarımızda uçuş ayrı kalemdir ve isterseniz sizin adınıza alırız, istemezseniz kendiniz alırsınız — ikisi de olur."
+        },
+        {
+          "heading": "Ödeme ve teyit nasıl işliyor",
+          "body": "Rezervasyondan önce toplam tutarı yazılı olarak gönderiyoruz: otel adı, oda tipi, tarihler, kaç kişi, kahvaltı dahil mi. Bu satırlar sonradan çıkabilecek tartışmaların çoğunu baştan kapatıyor.\n\nRezervasyon sizin adınıza yapılıyor, bizim adımıza değil. Otele siz gidiyorsunuz ve resepsiyonda sizin isminiz görünüyor; aradaki bir aracıya bağlı kalmıyorsunuz.\n\nBir sorun çıkarsa yazışma elimizde: oda tipi, tarih ve teyit. Otelle konuşmayı biz yürütüyoruz, siz resepsiyonda tartışmak zorunda kalmıyorsunuz.\n\nİletişim WhatsApp üzerinden yürüyor ve her şey yazılı kalıyor. Telefonda sözlü verilen bir teyit, sonradan hatırlanmayan bir teyittir."
+        }
+      ]
     },
     "priceFrom": "'dan başlayan fiyatlarla"
   },

@@ -26,8 +26,15 @@ export function LanguageSwitcher() {
           type="button"
           onClick={() => router.replace({ pathname, params } as never, { locale: l })}
           aria-current={l === locale ? "true" : undefined}
-          /* px-2 en dar ekranlar için; 360 pikselden itibaren eski hali. */
-          className="rounded px-2 py-1 text-[12px] font-semibold transition-colors min-[360px]:px-2.5"
+          /*
+            px-2 en dar ekranlar için; 360 pikselden itibaren eski hali.
+            Yükseklik ayrı veriliyor: py-1 ile düğmeler 26 piksel kalıyordu
+            ve üçü yan yana durduğu için mobilde yanlış dokunma kolaydı.
+            WCAG 2.2 AA eşiğinin (24 piksel) üstündeydi, yani kusur değil —
+            ama menü düğmesi 40 piksel ve başlık çubuğu 76; yer vardı.
+            min-h ile 38'e çıkıyor, genişlik ve yazı boyutu değişmiyor.
+          */
+          className="inline-flex min-h-[38px] items-center justify-center rounded px-2 py-1 text-[12px] font-semibold transition-colors min-[360px]:px-2.5"
           style={
             l === locale
               ? { background: "var(--brand-gold)", color: "var(--brand-night)" }

@@ -50,12 +50,14 @@ export async function TourCompare() {
           <table className="w-full min-w-[720px] border-collapse">
             <thead>
               <tr style={{ background: "var(--brand-night)", color: "var(--brand-gold-label)" }}>
-                <th className={th}>{t("colTour")}</th>
-                <th className={th}>{t("colCity")}</th>
-                <th className={th}>{t("colDuration")}</th>
-                <th className={th}>{t("colPrice")}</th>
-                <th className={th}>{t("colHighlight")}</th>
-                <th className={th} />
+                <th scope="col" className={th}>{t("colTour")}</th>
+                <th scope="col" className={th}>{t("colCity")}</th>
+                <th scope="col" className={th}>{t("colDuration")}</th>
+                <th scope="col" className={th}>{t("colPrice")}</th>
+                <th scope="col" className={th}>{t("colHighlight")}</th>
+                <th scope="col" className={th}>
+                  <span className="sr-only">{tCommon("details")}</span>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -108,7 +110,7 @@ export async function TourCompare() {
           </table>
         </div>
 
-        <p className="mt-3 text-[12.5px] text-muted-foreground lg:hidden">{t("swipeHint")}</p>
+        <p className="mt-3 text-[12.5px] text-muted-foreground lg:hidden">{tCommon("swipeHint")}</p>
         <p className="measure mt-4 text-[13px] text-muted-foreground">{t("priceNote")}</p>
       </section>
 

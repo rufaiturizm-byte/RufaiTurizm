@@ -334,7 +334,8 @@
     "backToServices": "Tüm hizmetler",
     "backToTop": "Başa dön",
     "skipToContent": "İçeriğe atla",
-    "contents": "İçindekiler"
+    "contents": "İçindekiler",
+    "swipeHint": "Tabloyu yana kaydırarak tüm sütunları görebilirsiniz"
   },
   "servicesPage": {
     "title": "Hizmetlerimiz",
@@ -389,7 +390,6 @@
     "colHighlight": "Öne çıkan durak",
     "whatsIncludedTitle": "Fiyata dahil olan ve olmayanlar",
     "whatsIncludedSubtitle": "Rezervasyondan önce neyin dahil olduğunu bilmeniz için.",
-    "swipeHint": "Tabloyu yana kaydırarak tüm sütunları görebilirsiniz",
     "practicalTitle": "Bu turda pratik bilgiler",
     "seasonLabel": "En iyi mevsim",
     "paceLabel": "Tempo ve yürüyüş",
@@ -766,7 +766,8 @@
     "transfer": "Transfer",
     "cities": "Kapsam",
     "packages": "Paketler",
-    "reviews": "Yorumlar"
+    "reviews": "Yorumlar",
+    "destinations": "Şehirler"
   },
   "routes": {
     "title": "Hizmet verdiğimiz noktalar",
@@ -896,6 +897,16 @@
     "days": "gün",
     "hubEyebrow": "Bölge rehberi",
     "hubTitle": "{city} sayfasının tamamı",
-    "hubCta": "{city} rehberini aç"
+    "hubCta": "{city} rehberini aç",
+    "compareTitle": "Altı şehir yan yana",
+    "compareSubtitle": "Bu sayfadaki asıl soru genelde tek bir şehir değil, ikisi arasındaki seçim. Tablo o seçimi tek bakışta veriyor.",
+    "colCity": "Şehir",
+    "colReach": "Nasıl gidilir",
+    "colStay": "Önerilen süre",
+    "colSea": "Deniz",
+    "colMonths": "En iyi aylar",
+    "colSuits": "Kime uyar",
+    "combineTitle": "Kaç şehir birleştirilir",
+    "combineText": "İki hafta ve altındaki bir tatilde en fazla iki şehir işe yarıyor. Üçüncü şehir kâğıt üzerinde sığıyor ama pratikte iki gün daha yolda ve havalimanında geçiyor — bir saatlik iç hat uçuşu, otelden kapıya kadar beş-altı saat ediyor.\n\nEn çok tercih edilen düzen İstanbul'la başlayıp bir sahil şehrine geçmek: dört gün İstanbul, ardından Antalya ya da Bodrum. Bursa ve Sapanca ise ayrı şehir sayılmıyor — ikisi de İstanbul'dan günübirlik ve programa bir gün olarak giriyor.\n\nTrabzon farklı çalışıyor: gezilecek yerler şehir merkezinin dışında ve mesafeler uzun, o yüzden beş günün altında sıkışıyor ve başka bir şehirle aynı hafta içine kolay girmiyor."
   }
 }

@@ -50,6 +50,27 @@ export interface Destination {
   seo?: { title?: Partial<Text>; description?: Partial<Text> };
   /** Giriş paragrafı — sayfanın ilk cümleleri. */
   intro: Text;
+  /**
+   * Şehirler listesindeki karşılaştırma tablosunun satırı.
+   *
+   * `facts` her şehirde AYRI eksenler taşıyor (Antalya'da "sahil uzunluğu",
+   * Bursa'da "kar mevsimi") — o yüzden karşılaştırmaya elverişli değil.
+   * Ziyaretçinin bu sayfadaki asıl sorusu ise karşılaştırmalı: "Antalya mı
+   * Bodrum mu". Buradaki beş eksen altı şehirde de aynı ve kısa tutuluyor;
+   * hücre uzunsa tablo okunmuyor.
+   */
+  compare: {
+    /** Nasıl gidilir — uçuş ya da karayolu süresi. */
+    reach: Text;
+    /** Önerilen kalış. */
+    stay: Text;
+    /** Deniz durumu; yüzme vaadi vermeden. */
+    sea: Text;
+    /** En iyi aylar. */
+    months: Text;
+    /** Kime uyar. */
+    suits: Text;
+  };
   sections: DestinationSection[];
   facts: DestinationFact[];
   faq: DestinationFaq[];
@@ -114,6 +135,13 @@ export const destinations: Destination[] = [
       tr: "İstanbul'da tatilin nasıl geçeceğini belirleyen ilk karar hangi camiyi göreceğiniz değil, hangi semtte kalacağınız. Şehir iki kıtaya yayılmış, on beş milyon kişi yaşıyor ve trafiği aynı yolu günün saatine göre yirmi dakikada da bir buçuk saatte de aldırıyor. Sultanahmet'te kalan misafir sabah otelden çıkıp yürüyerek Ayasofya'ya gidiyor; Şişli'de kalan aynı yeri görmek için her gün yola çıkıyor. Bu sayfa o kararı ve arkasından gelen soruları — hangi havalimanı, kaç gün, ne zaman — tek yerde topluyor.",
       ar: "أول قرار يحدّد كيف ستمضي إجازتك في إسطنبول ليس أي مسجد ستزور، بل في أي حيّ ستقيم. المدينة ممتدة على قارتين، يسكنها خمسة عشر مليوناً، وزحامها يجعل الطريق نفسه يستغرق عشرين دقيقة أو ساعة ونصف بحسب ساعة اليوم. من يقيم في السلطان أحمد يخرج من فندقه صباحاً فيصل آيا صوفيا سيراً على الأقدام؛ ومن يقيم في شيشلي يبدأ كل يوم برحلة ليرى المكان نفسه. هذه الصفحة تجمع ذلك القرار وما يليه من أسئلة — أي مطار، وكم يوماً، ومتى — في مكان واحد.",
       en: "The first decision that shapes a holiday in Istanbul is not which mosque you will see but which district you sleep in. The city spreads over two continents, fifteen million people live in it, and the same drive takes twenty minutes or an hour and a half depending on the hour. A guest staying in Sultanahmet walks out of the hotel and reaches Hagia Sophia on foot; a guest in Şişli sets out every day to see the same thing. This page gathers that decision and the questions behind it — which airport, how many days, when to come — in one place.",
+    },
+    compare: {
+      reach: { tr: "Varış şehri — iki havalimanı", ar: "مدينة الوصول — مطاران", en: "The arrival city — two airports" },
+      stay: { tr: "En az üç tam gün", ar: "ثلاثة أيام كاملة على الأقل", en: "At least three full days" },
+      sea: { tr: "Boğaz ve Marmara; yüzme odaklı değil", ar: "البوسفور ومرمرة؛ ليست وجهة سباحة", en: "Bosphorus and Marmara; not for swimming" },
+      months: { tr: "Nisan–mayıs, eylül–ekim", ar: "أبريل–مايو، سبتمبر–أكتوبر", en: "April–May, September–October" },
+      suits: { tr: "İlk ziyaret, tarih, alışveriş", ar: "الزيارة الأولى والتاريخ والتسوّق", en: "A first visit, history, shopping" },
     },
     sections: [
       {
@@ -256,6 +284,13 @@ export const destinations: Destination[] = [
       tr: "Antalya haritada tek bir isim ama turistik bölgesi Kemer'den Alanya'ya iki yüz kilometre uzanıyor. \"Antalya'ya gidiyoruz\" cümlesi bu yüzden tek başına bir şey anlatmıyor: Kemer'de kalan misafirle Side'de kalan aynı tatili yaşamıyor, havalimanına mesafeleri arasında iki saat fark var ve denizleri bile farklı — batıda çakıl, doğuda kum. Bu sayfa o kararı vermenize yarıyor ve Antalya'da yaptığımız her şeyi tek yerde topluyor.",
       ar: "أنطاليا اسم واحد على الخريطة، لكن منطقتها السياحية تمتد مئتي كيلومتر من كمر إلى ألانيا. لذلك لا تقول جملة \"سنذهب إلى أنطاليا\" شيئاً بمفردها: فمن يقيم في كمر لا يعيش الإجازة نفسها التي يعيشها من يقيم في سيدي، والفارق بينهما ساعتان في المسافة إلى المطار، وحتى البحر مختلف — حصى في الغرب ورمل في الشرق. هذه الصفحة تساعدك على اتخاذ ذلك القرار، وتجمع في مكان واحد كل ما نقدّمه في أنطاليا.",
       en: "Antalya is one name on the map, but its holiday coast runs two hundred kilometres from Kemer to Alanya. That is why \"we're going to Antalya\" says nothing on its own: a guest staying in Kemer is not having the same holiday as one in Side, there is a two-hour difference in their distance from the airport, and even the sea differs — pebble in the west, sand in the east. This page helps you make that decision and gathers everything we do in Antalya in one place.",
+    },
+    compare: {
+      reach: { tr: "İstanbul'dan uçakla ~1 sa 10 dk", ar: "بالطائرة من إسطنبول نحو ساعة و10 دقائق", en: "About 1 hr 10 min by air from Istanbul" },
+      stay: { tr: "Beş–yedi gece", ar: "خمس إلى سبع ليالٍ", en: "Five to seven nights" },
+      sea: { tr: "Kum ve çakıl sahiller", ar: "شواطئ رملية وحصوية", en: "Sandy and pebble beaches" },
+      months: { tr: "Mayıs–haziran, eylül", ar: "مايو–يونيو، سبتمبر", en: "May–June, September" },
+      suits: { tr: "Sahil tatili, aileler, antik kentler", ar: "إجازة الشاطئ والعائلات والمدن الأثرية", en: "A beach holiday, families, ancient cities" },
     },
     sections: [
       {
@@ -412,6 +447,13 @@ export const destinations: Destination[] = [
       ar: "تبدو بودروم نقطة واحدة على الخريطة، لكنها في الحقيقة شبه جزيرة: من المركز إلى ياليكافاك خمسة وعشرون كيلومتراً، وبينهما خلجان لا يشبه أحدها الآخر. من يقيم في غومبت لا يعيش الإجازة نفسها التي يعيشها من يقيم في تركبوكو — ففي الأول ساحل نشط وشابّ، وفي الثاني مساءات صامتة. ولون البحر ورمله يتغيّران أيضاً بحسب الوجه الذي تقيم فيه من شبه الجزيرة. هذه الصفحة تعينك على ذلك القرار، وتجمع في مكان واحد كل ما نقدّمه في بودروم.",
       en: "Bodrum looks like a single dot on the map, but it is really a peninsula: twenty-five kilometres from the centre to Yalıkavak, with bays along the way that resemble one another not at all. A guest in Gümbet is not having the same holiday as one in Türkbükü — the shore is young and busy in one, the evenings silent in the other. Even the colour of the sea and the texture of the sand change with which face of the peninsula you are on. This page helps you make that choice and gathers everything we do in Bodrum in one place.",
     },
+    compare: {
+      reach: { tr: "İstanbul'dan uçakla ~1 saat", ar: "بالطائرة من إسطنبول نحو ساعة", en: "About an hour by air from Istanbul" },
+      stay: { tr: "Dört–beş gece", ar: "أربع إلى خمس ليالٍ", en: "Four to five nights" },
+      sea: { tr: "Çakıl koylar; çoğunlukla platformdan giriş", ar: "خلجان حصوية؛ النزول من منصّات غالباً", en: "Pebble bays; mostly entry from platforms" },
+      months: { tr: "Haziran, eylül", ar: "يونيو، سبتمبر", en: "June, September" },
+      suits: { tr: "Koylar, tekne gezisi, sakinlik", ar: "الخلجان وجولة القارب والهدوء", en: "Bays, a boat trip, quiet" },
+    },
     sections: [
       {
         heading: { tr: "Yarımadanın hangi tarafı", ar: "أي جهة من شبه الجزيرة", en: "Which side of the peninsula" },
@@ -546,6 +588,13 @@ export const destinations: Destination[] = [
       ar: "لا يشبه البحر الأسود بقيّة تركيا في شيء. ففي آب، بينما تبلغ أنطاليا أربعين درجة، تكون مرتفعات طرابزون صباحاً عند خمس عشرة درجة، ولا تستطيع الجلوس مساءً دون أن تلبس شيئاً فوقك. وهذا وحده سبب توجّه ضيوف الخليج إلى هنا صيفاً: الهرب من الحرّ. لكن للمنطقة وجهاً صعباً أيضاً — كل شيء بعيد عن الآخر والطريق طريق جبل. هذه الصفحة تكتب المسافات وموسم المرتفعات وعدد الأيام اللازم كما هي.",
       en: "The Black Sea coast resembles no other part of Türkiye. In August, while Antalya sits at forty degrees, a morning on the Trabzon highlands is fifteen and you cannot sit outside in the evening without a layer. That single fact is why Gulf guests turn this way in summer: to escape the heat. But the region has a hard side too — everything is far from everything else and the roads are mountain roads. This page sets out the distances, the highland season and how many days the trip really needs.",
     },
+    compare: {
+      reach: { tr: "İstanbul'dan uçakla ~1,5 saat", ar: "بالطائرة من إسطنبول نحو ساعة ونصف", en: "About 1.5 hours by air from Istanbul" },
+      stay: { tr: "Dört–beş gece", ar: "أربع إلى خمس ليالٍ", en: "Four to five nights" },
+      sea: { tr: "Karadeniz; yüzme odaklı değil", ar: "البحر الأسود؛ ليست وجهة سباحة", en: "The Black Sea; not for swimming" },
+      months: { tr: "Haziran sonu – eylül", ar: "أواخر يونيو – سبتمبر", en: "Late June – September" },
+      suits: { tr: "Yayla, yeşil, serin hava", ar: "الهضاب والخضرة والجوّ البارد", en: "Highlands, greenery, cool air" },
+    },
     sections: [
       {
         heading: { tr: "Sümela, Uzungöl ve arada kalan yol", ar: "سوميلا وأوزنجول والطريق بينهما", en: "Sümela, Uzungöl and the road between" },
@@ -667,6 +716,13 @@ export const destinations: Destination[] = [
       ar: "بورصة أقرب \"مدينة أخرى\" إلى إسطنبول: تذهب وتعود في اليوم نفسه، لكنك حين تذهب تصل إلى مكان لا يشبه إسطنبول في شيء. ولأنها أول عاصمة عثمانية فمركزها مليء بالمساجد والأضرحة والخانات؛ وخلفها يقف جبل أولوداغ، ويُصعد بالتلفريك في عشرين دقيقة إلى ما فوق الغابة. وفي الصيف، حين تكون إسطنبول خانقة، تقلّ الحرارة في القمة بثماني إلى عشر درجات، وفي الشتاء يكون المكان نفسه تحت الثلج. هذه الصفحة تشرح طريق الوصول والتلفريك وما إذا كان يوم واحد يكفي.",
       en: "Bursa is the nearest \"somewhere else\" to Istanbul: you go and come back the same day, yet you arrive somewhere that resembles Istanbul not at all. As the first Ottoman capital its centre is full of mosques, tombs and covered inns; behind it stands Uludağ, and a cable car lifts you above the forest in twenty minutes. In summer, when Istanbul is stifling, the summit is eight to ten degrees cooler; in winter the same place is under snow. This page explains how to get there, how the cable car works and whether one day is enough.",
     },
+    compare: {
+      reach: { tr: "İstanbul'dan feribotla ~2 saat", ar: "بالعبّارة من إسطنبول نحو ساعتين", en: "About two hours by ferry from Istanbul" },
+      stay: { tr: "Günübirlik ya da bir gece", ar: "رحلة يوم واحد أو مبيت ليلة", en: "A day trip or one night" },
+      sea: { tr: "Yok — dağ ve şehir", ar: "لا بحر — جبل ومدينة", en: "None — mountain and city" },
+      months: { tr: "Yıl boyu; kar için aralık–mart", ar: "طوال السنة؛ وللثلج ديسمبر–مارس", en: "Year-round; December–March for snow" },
+      suits: { tr: "Tarih, teleferik, kar", ar: "التاريخ والتلفريك والثلج", en: "History, the cable car, snow" },
+    },
     sections: [
       {
         heading: { tr: "İstanbul'dan Bursa'ya nasıl gidilir", ar: "كيف تصل من إسطنبول إلى بورصة", en: "Getting there from Istanbul" },
@@ -787,6 +843,13 @@ export const destinations: Destination[] = [
       tr: "Sapanca, İstanbul'dan çıkıp bir buçuk–iki saatte varılan bir göl kasabası; arkasında Maşukiye'nin ormanı ve dere üstü alabalık restoranları, yukarısında Kartepe var. Şehirden kaçmak isteyip uzun yola çıkmak istemeyen misafirin gittiği yer burası. Program yorucu değil: yürüyüş isteğe bağlı, gün göl kıyısında ve ormanda geçiyor, çocuklu ve yaşlı misafirler için sitedeki en rahat tur. Bu sayfa yolu, gölün etrafında ne olduğunu ve hangi mevsimin uygun olduğunu anlatıyor.",
       ar: "سبانجا بلدة على بحيرة يُوصل إليها من إسطنبول في ساعة ونصف إلى ساعتين؛ خلفها غابة ماشوكية ومطاعم سمك السلمون المرقّط فوق النهر، وفوقها كارتيبه. وهي وجهة من يريد الهرب من المدينة دون أن يقطع طريقاً طويلاً. والبرنامج غير متعب: المشي اختياري، ويمضي اليوم على ضفة البحيرة وفي الغابة، وهي أريح جولاتنا للأطفال وكبار السنّ. هذه الصفحة تشرح الطريق وما حول البحيرة وأي موسم يناسب.",
       en: "Sapanca is a lake town an hour and a half to two hours out of Istanbul; behind it lie the forest of Maşukiye and its riverside trout restaurants, and above that Kartepe. It is where guests go who want to leave the city without committing to a long drive. The programme is not tiring: walking is optional, the day passes by the lake and in the forest, and it is the easiest tour we run for children and older travellers. This page covers the drive, what is around the lake and which season suits.",
+    },
+    compare: {
+      reach: { tr: "İstanbul'dan karayoluyla 1,5–2 saat", ar: "برّاً من إسطنبول ساعة ونصف – ساعتان", en: "1.5–2 hours by road from Istanbul" },
+      stay: { tr: "Günübirlik ya da bir gece", ar: "رحلة يوم واحد أو مبيت ليلة", en: "A day trip or one night" },
+      sea: { tr: "Göl ve orman; deniz yok", ar: "بحيرة وغابة؛ لا بحر", en: "A lake and forest; no sea" },
+      months: { tr: "Nisan – ekim", ar: "أبريل – أكتوبر", en: "April – October" },
+      suits: { tr: "En sakin program, kısa kaçamak", ar: "أهدأ برنامج، وهروب قصير", en: "The calmest programme, a short break" },
     },
     sections: [
       {

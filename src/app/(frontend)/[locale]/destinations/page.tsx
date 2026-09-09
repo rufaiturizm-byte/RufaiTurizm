@@ -11,6 +11,7 @@ import { PromoBanner } from "@/components/site/promo-banner";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { RelatedLinks } from "@/components/site/related-links";
 import { CredentialsBand } from "@/components/site/credentials-band";
+import { DestinationCompare } from "@/components/site/destination-compare";
 import { destinations } from "@/data/destinations";
 import type { Locale } from "@/i18n/routing";
 
@@ -158,6 +159,8 @@ export default async function DestinationsPage({
           })}
         </div>
       </section>
+
+      <DestinationCompare locale={locale} />
 
       <ClosingCta locale={locale} />
       <RelatedLinks />

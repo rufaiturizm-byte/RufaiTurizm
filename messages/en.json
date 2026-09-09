@@ -334,7 +334,8 @@
     "backToServices": "All services",
     "backToTop": "Back to top",
     "skipToContent": "Skip to content",
-    "contents": "Contents"
+    "contents": "Contents",
+    "swipeHint": "Swipe the table sideways to see all columns"
   },
   "servicesPage": {
     "title": "Our Services",
@@ -389,7 +390,6 @@
     "colHighlight": "Highlight",
     "whatsIncludedTitle": "What the price includes and excludes",
     "whatsIncludedSubtitle": "So you know what is covered before you book.",
-    "swipeHint": "Swipe the table sideways to see all columns",
     "practicalTitle": "Practical notes for this tour",
     "seasonLabel": "Best season",
     "paceLabel": "Pace and walking",
@@ -766,7 +766,8 @@
     "transfer": "Transfer",
     "cities": "Coverage",
     "packages": "Packages",
-    "reviews": "Reviews"
+    "reviews": "Reviews",
+    "destinations": "Destinations"
   },
   "routes": {
     "title": "Where we operate",
@@ -896,6 +897,16 @@
     "days": "days",
     "hubEyebrow": "Area guide",
     "hubTitle": "Everything on {city}",
-    "hubCta": "Open the {city} guide"
+    "hubCta": "Open the {city} guide",
+    "compareTitle": "The six cities side by side",
+    "compareSubtitle": "The real question on this page is usually not one city but the choice between two. The table answers that at a glance.",
+    "colCity": "City",
+    "colReach": "Getting there",
+    "colStay": "Suggested stay",
+    "colSea": "Sea",
+    "colMonths": "Best months",
+    "colSuits": "Suits",
+    "combineTitle": "How many cities you can combine",
+    "combineText": "On a holiday of two weeks or less, at most two cities work. A third fits on paper but in practice costs two more days on the road and at the airport — a one-hour domestic flight takes five to six hours door to door.\n\nThe most popular shape is to start in Istanbul and move to a coastal city: four days in Istanbul, then Antalya or Bodrum. Bursa and Sapanca do not count as separate cities — both are day trips from Istanbul and enter the plan as a single day.\n\nTrabzon works differently: the places worth seeing lie outside the city centre and the distances are long, so it is cramped in under five days and does not fit easily into the same week as another city."
   }
 }

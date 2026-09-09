@@ -421,7 +421,21 @@
     "proof3Desc": "Belge numaramız 12539. Türkiye'de belgesiz seyahat acenteliği yasak; belge, Kültür ve Turizm Bakanlığı denetimi altında çalıştığımız anlamına gelir. Bize inanmanız gerekmiyor — kaydı TÜRSAB'ın resmî acenta arama sayfasından kendiniz görebilirsiniz.",
     "proof4Title": "Herkese uygun değiliz",
     "proof4Desc": "En ucuzu arayan bir gezgin için doğru adres değiliz: özel araç, şoför ve sabit fiyatla çalışıyoruz, gruba katarak fiyat düşürmüyoruz. Bunu baştan söylemek, sonradan hayal kırıklığı yaşatmaktan iyi.",
-    "verifyCta": "TÜRSAB kaydını görüntüle"
+    "verifyCta": "TÜRSAB kaydını görüntüle",
+    "wrongEyebrow": "Dürüst olan",
+    "wrongTitle": "Bir şey ters giderse ne oluyor",
+    "wrongSubtitle": "Her seyahatte bir şey planlandığı gibi gitmez. Asıl fark, o an ne olduğudur — bu yüzden burada yazıyoruz.",
+    "wrong1Title": "Uçağınız rötar yaptı ya da iptal oldu",
+    "wrong1Desc": "Uçuşu numarasından takip ediyoruz; şoför yeni saate göre geliyor ve bekleme için ek ücret çıkmıyor. Uçuş tamamen iptal olduysa bize yazmanız yeterli, transferi yeni tarihe göre yeniden kuruyoruz.",
+    "wrong2Title": "Araçta bir aksilik oldu",
+    "wrong2Desc": "Filo bizim; rezervasyonu alıp başka bir firmaya devretmiyoruz. Yerine gelen araç da aynı filodan çıkıyor, yani “diğer şirket birini göndersin” diye beklenen bir aşama yok. Tek numaradan yazıyorsunuz.",
+    "wrong3Title": "Otelde bir sorun çıktı",
+    "wrong3Desc": "Rezervasyonu sizin adınıza biz yaptıysak yazışma elimizde: oda tipi, tarih ve teyit. Otelle konuşmayı biz yürütüyoruz, siz resepsiyonda tartışmak zorunda kalmıyorsunuz.",
+    "wrong4Title": "Program ortasında biri hastalandı",
+    "wrong4Desc": "Turlarımız özel; bir gruba bağlı değilsiniz. Gün durdurulabilir, kısaltılabilir ya da ertesi güne kaydırılabilir — bunun için kimseyi beklemiyoruz. Otele erken dönmek de bir seçenek.",
+    "wrong5Title": "Bir şeyden memnun kalmadınız",
+    "wrong5Desc": "Seyahatin İÇİNDE söyleyin, sonra değil. Aynı gün söylenen şey düzeltilebiliyor; dönüşten sonra söylenen şey artık yalnız bir yorum oluyor. Şikâyet duymayı tercih ederiz.",
+    "wrongNote": "Para tarafı — iptal, iade ve değişiklik koşulları — rezervasyonda yazılı olarak konuşuluyor ve teklifle birlikte gönderiliyor. Buraya genel bir cümle yazmıyoruz çünkü hizmete ve tarihe göre değişiyor."
   },
   "contact": {
     "title": "İletişim",

@@ -421,7 +421,21 @@
     "proof3Desc": "Our licence number is 12539. Operating as a travel agency without a licence is prohibited in Türkiye, so the licence means we work under the supervision of the Ministry of Culture and Tourism. You do not have to take our word for it — you can see the record yourself on TÜRSAB's official agency search page.",
     "proof4Title": "We are not right for everyone",
     "proof4Desc": "If you are looking for the cheapest option, we are not the right address: we work with a private vehicle, a chauffeur and a fixed price, and we do not lower the price by folding you into a group. Saying so up front beats disappointing you later.",
-    "verifyCta": "View the TÜRSAB record"
+    "verifyCta": "View the TÜRSAB record",
+    "wrongEyebrow": "The honest part",
+    "wrongTitle": "What happens when something goes wrong",
+    "wrongSubtitle": "On every trip something does not go to plan. What matters is what happens then — so we write it down here.",
+    "wrong1Title": "Your flight is delayed or cancelled",
+    "wrong1Desc": "We track the flight by its number; the driver comes at the new time and waiting is not charged. If the flight is cancelled outright, just message us and we rebuild the transfer around the new date.",
+    "wrong2Title": "Something goes wrong with the vehicle",
+    "wrong2Desc": "The fleet is ours; we do not take a booking and hand it to another company. A replacement comes from the same fleet, so there is no waiting for “the other firm to send someone”. You write to one number.",
+    "wrong3Title": "A problem comes up at the hotel",
+    "wrong3Desc": "If we made the booking in your name, we hold the correspondence: room type, dates and confirmation. We deal with the hotel, so you are not left arguing at reception.",
+    "wrong4Title": "Someone falls ill mid-programme",
+    "wrong4Desc": "Our tours are private; you are not tied to a group. The day can be paused, shortened or moved to tomorrow — nobody is kept waiting for that. Going back to the hotel early is an option too.",
+    "wrong5Title": "You are unhappy with something",
+    "wrong5Desc": "Say it during the trip, not after. What is said the same day can be fixed; what is said after you fly home is only a review. We would rather hear the complaint.",
+    "wrongNote": "The money side — cancellation, refunds and changes — is agreed in writing at booking and sent with the quote. We do not put a blanket sentence here because it varies by service and by date."
   },
   "contact": {
     "title": "Contact",

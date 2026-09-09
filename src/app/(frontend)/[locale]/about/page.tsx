@@ -13,7 +13,17 @@ import { WhyUs } from "@/components/site/why-us";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { ClosingCta } from "@/components/site/transfer-sections";
-import { BadgeCheck, Building2, CarFront, Scale } from "lucide-react";
+import {
+  BadgeCheck,
+  Building2,
+  CarFront,
+  CloudRain,
+  HeartPulse,
+  Hotel,
+  MessageSquareWarning,
+  Scale,
+  Wrench,
+} from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export async function generateMetadata({
@@ -227,6 +237,53 @@ export default async function AboutPage({
             })}
           </div>
         </div>
+      </section>
+
+      {/*
+        Aksilik bölümü, kanıtların hemen ardında.
+        Sitede müşteri kaynaklı iptal koşulları vardı (tur için 24 saat,
+        uçak bileti için havayolu kuralları) ama "biz hata yaparsak ya da
+        hayat araya girerse ne oluyor" hiçbir yerde yazmıyordu. Güven
+        sayfasının en çok merak edilen ama en az yazılan kısmı bu.
+
+        Buradaki her madde sitenin BAŞKA bir yerde zaten verdiği sözden
+        çıkıyor — uçuş takibi, kendi filosu, otel rezervasyonunun bizim
+        adımıza yapılması, turların özel olması. Yeni bir taahhüt
+        eklenmedi. Para tarafı bilerek dışarıda: iade ve iptal koşulları
+        hizmete ve tarihe göre değişiyor, buraya genel bir cümle yazmak
+        tutulamayacak bir söz olurdu.
+      */}
+      <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
+        <SectionHeading
+          eyebrow={t("wrongEyebrow")}
+          title={t("wrongTitle")}
+          subtitle={t("wrongSubtitle")}
+          rule={false}
+        />
+
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { icon: CloudRain, n: 1 },
+            { icon: Wrench, n: 2 },
+            { icon: Hotel, n: 3 },
+            { icon: HeartPulse, n: 4 },
+            { icon: MessageSquareWarning, n: 5 },
+          ].map(({ icon: Icon, n }) => (
+            <article key={n} className="reveal-rise surface-card p-6">
+              <span className="icon-tile inline-flex size-11 items-center justify-center">
+                <Icon className="size-[18px]" aria-hidden="true" />
+              </span>
+              <h3 className="mt-4 text-[15.5px] font-bold leading-snug">{t(`wrong${n}Title`)}</h3>
+              <p className="mt-2.5 text-[13.5px] leading-[1.8] text-muted-foreground">
+                {t(`wrong${n}Desc`)}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        <p className="measure mt-6 text-[13.5px] leading-[1.8] text-muted-foreground">
+          {t("wrongNote")}
+        </p>
       </section>
 
       {/*

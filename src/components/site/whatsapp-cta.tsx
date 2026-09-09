@@ -6,26 +6,10 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { WhatsAppIcon } from "./icons";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-/**
- * WhatsApp bağlantısı üretir.
- *
- * Rakip analizinden çıkan taktik: mesajın içine hem hazır bir metin hem de
- * ziyaretçinin bulunduğu sayfanın adresi gömülür. Böylece müşteri tek dokunuşla
- * yazmaya başlar ve hangi tur/hizmet sayfasından geldiği baştan bellidir.
- */
-export function buildWhatsAppUrl({
-  number = siteConfig.whatsappNumber,
-  message,
-  pageUrl,
-}: {
-  number?: string;
-  message: string;
-  pageUrl?: string;
-}) {
-  const body = pageUrl ? `${message}\n${pageUrl}` : message;
-  return `https://wa.me/${number}?text=${encodeURIComponent(body)}`;
-}
+export { buildWhatsAppUrl };
+
 
 export function useWhatsAppUrl(subject?: string) {
   const t = useTranslations("cta");

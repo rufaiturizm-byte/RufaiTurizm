@@ -5,6 +5,7 @@ import { InstagramIcon, WhatsAppIcon } from "./icons";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
 import { siteConfig, hasRealPhone } from "@/config/site";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { tours } from "@/data/tours";
 import { services } from "@/data/services";
 
@@ -60,7 +61,12 @@ export async function Footer() {
       ? { href: siteConfig.social.instagram, icon: InstagramIcon, label: t("instagram") }
       : null,
     {
-      href: `https://wa.me/${siteConfig.whatsappNumber}`,
+      /* Sitedeki 3.924 WhatsApp bağlantısından tek ön metinsiz olan buydu
+         (sayfa başına bir tane, 73 sayfa): dokunan misafir boş bir sohbet
+         açıyordu ve karşı taraf hangi sayfadan geldiğini bilmiyordu.
+         Sayfa adresi eklenemiyor çünkü altbilgi sunucu bileşeni ve yolu
+         bilmiyor; selamlama iki nokta ile bitiyor, imleç oraya düşüyor. */
+      href: buildWhatsAppUrl({ message: tCta("whatsappMessage") }),
       icon: WhatsAppIcon,
       label: tCta("whatsapp"),
     },

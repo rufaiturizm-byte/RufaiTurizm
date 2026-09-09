@@ -2312,9 +2312,9 @@ export const guides: Guide[] = [
           en: "Day trips from Istanbul",
         },
         body: {
-          tr: "Sapanca yaklaşık 130 km, Yalova 130 km, Bursa 240 km, Şile ve Ağva 70–100 km uzaklıktadır. Bunların hepsi sabah çıkıp akşam dönülecek mesafededir. Bursa en uzunudur ve gün içinde iki-üç durak sığar; daha fazlasını sıkıştırmak günü yolda geçirmek olur.",
-          ar: "تبعد سبانجا نحو 130 كم، ويالوفا 130 كم، وبورصة 240 كم، وشيله وآغوا 70–100 كم. وكلها على مسافة تسمح بالخروج صباحاً والعودة مساءً. وبورصة أطولها، ويتّسع اليوم لمحطتين أو ثلاث؛ وحشر أكثر من ذلك يعني قضاء اليوم على الطريق.",
-          en: "Sapanca is about 130 km away, Yalova 130 km, Bursa 240 km, and Sile and Agva 70–100 km. All are close enough to leave in the morning and return in the evening. Bursa is the longest, and two or three stops fit into the day; squeezing in more means spending the day on the road.",
+          tr: "Sapanca yaklaşık 140 km, Yalova 130 km, Şile ve Ağva 70–100 km uzaklıktadır. Bursa'ya feribotla iki saat, Osmangazi Köprüsü üzerinden karayoluyla iki buçuk saat gidiliyor. Bunların hepsi sabah çıkıp akşam dönülecek mesafededir. Bursa en uzunudur ve gün içinde iki-üç durak sığar; daha fazlasını sıkıştırmak günü yolda geçirmek olur.",
+          ar: "تبعد سبانجا نحو 140 كم، ويالوفا 130 كم، وشيله وآغوا 70–100 كم. ويُوصل إلى بورصة بالعبّارة في ساعتين، وبرّاً عبر جسر عثمان غازي في ساعتين ونصف. وكلها على مسافة تسمح بالخروج صباحاً والعودة مساءً. وبورصة أطولها، ويتّسع اليوم لمحطتين أو ثلاث؛ وحشر أكثر من ذلك يعني قضاء اليوم على الطريق.",
+          en: "Sapanca is about 140 km away, Yalova 130 km, and Sile and Agva 70–100 km. Bursa is two hours by ferry, or two and a half by road over the Osmangazi Bridge. All are close enough to leave in the morning and return in the evening. Bursa is the longest, and two or three stops fit into the day; squeezing in more means spending the day on the road.",
         },
       },
       {
@@ -2324,9 +2324,9 @@ export const guides: Guide[] = [
           en: "Cities that need a flight",
         },
         body: {
-          tr: "Trabzon İstanbul'a yaklaşık 1.000 km, Bodrum 700 km, Antalya 700 km uzaklıktadır; karayoluyla gitmek bir günü tamamen alır. Bu şehirlere uçakla gidilir ve orada ayrıca araç gerekir, çünkü asıl gezilecek yerler şehir merkezlerinin dışındadır: Uzungöl, Sümela, Ayder ya da Ege koyları.",
-          ar: "تبعد طرابزون عن إسطنبول نحو 1000 كم، وبودروم 700 كم، وأنطاليا 700 كم؛ والذهاب برّاً يستهلك يوماً كاملاً. تُقصد هذه المدن جواً، وتحتاج فيها إلى سيارة أيضاً، لأن الأماكن الأساسية خارج مراكز المدن: أوزنجول وسوميلا وآيدر أو خلجان إيجة.",
-          en: "Trabzon is about 1,000 km from Istanbul, Bodrum 700 km and Antalya 700 km; driving takes a full day. These are reached by air, and you still need a vehicle there, because the places worth seeing lie outside the city centres: Uzungol, Sumela, Ayder or the Aegean bays.",
+          tr: "Trabzon İstanbul'a yaklaşık 1.000 km, Bodrum 800 km, Antalya 700 km uzaklıktadır; karayoluyla gitmek bir günü tamamen alır. Bu şehirlere uçakla gidilir ve orada ayrıca araç gerekir, çünkü asıl gezilecek yerler şehir merkezlerinin dışındadır: Uzungöl, Sümela, Ayder ya da Ege koyları.",
+          ar: "تبعد طرابزون عن إسطنبول نحو 1000 كم، وبودروم 800 كم، وأنطاليا 700 كم؛ والذهاب برّاً يستهلك يوماً كاملاً. تُقصد هذه المدن جواً، وتحتاج فيها إلى سيارة أيضاً، لأن الأماكن الأساسية خارج مراكز المدن: أوزنجول وسوميلا وآيدر أو خلجان إيجة.",
+          en: "Trabzon is about 1,000 km from Istanbul, Bodrum 800 km and Antalya 700 km; driving takes a full day. These are reached by air, and you still need a vehicle there, because the places worth seeing lie outside the city centres: Uzungol, Sumela, Ayder or the Aegean bays.",
         },
       },
       {

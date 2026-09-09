@@ -48,4 +48,5 @@ export const guidePublishedDates: Record<string, string> = {
   "turkiyede-para-kart-ve-odeme": "2026-09-09",
   "turkiyede-sim-kart-ve-internet": "2026-09-09",
   "turkiyede-tatil-butcesi-nasil-kurulur": "2026-09-09",
+  "istanbulda-gezilecek-yerler": "2026-09-10",
 };

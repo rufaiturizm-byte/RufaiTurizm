@@ -3622,6 +3622,219 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "istanbulda-gezilecek-yerler",
+    topic: "planning",
+    image: "/images/places/tarihi-yarimada.jpg",
+    title: {
+      tr: "İstanbul'da gezilecek yerler: hangisi, ne kadar sürer",
+      ar: "أفضل الأماكن السياحية في إسطنبول: ماذا تزور وكم يستغرق",
+      en: "Places to see in Istanbul: which ones, and how long they take",
+    },
+    excerpt: {
+      tr: "Ayasofya'dan Çamlıca'ya: her yer nerede, ne kadar sürüyor, hangisi ücretsiz.",
+      ar: "من آيا صوفيا إلى تشامليجا: أين يقع كل مكان، وكم يستغرق، وأيّها بلا رسوم.",
+      en: "From Hagia Sophia to Çamlıca: where each place is, how long it takes, which are free.",
+    },
+    facts: [
+      {
+        label: {
+          tr: "Tarihî yarımada",
+          ar: "شبه الجزيرة التاريخية",
+          en: "Historic peninsula",
+        },
+        value: {
+          tr: "Büyük duraklar 10 dk yürüme içinde",
+          ar: "المحطّات الكبرى على بُعد 10 دقائق سيراً",
+          en: "Main sights within a 10-minute walk",
+        },
+      },
+      {
+        label: {
+          tr: "Ücretsiz",
+          ar: "بلا رسوم",
+          en: "Free",
+        },
+        value: {
+          tr: "Camilerin tamamı",
+          ar: "جميع المساجد",
+          en: "Every mosque",
+        },
+      },
+      {
+        label: {
+          tr: "En sakin saat",
+          ar: "أهدأ وقت",
+          en: "Quietest hour",
+        },
+        value: {
+          tr: "Sabah dokuzdan önce",
+          ar: "قبل التاسعة صباحاً",
+          en: "Before nine in the morning",
+        },
+      },
+      {
+        label: {
+          tr: "Kapalıçarşı",
+          ar: "السوق المسقوف",
+          en: "Grand Bazaar",
+        },
+        value: {
+          tr: "Pazar günleri kapalı",
+          ar: "مغلق أيام الأحد",
+          en: "Closed on Sundays",
+        },
+      },
+    ],
+    seo: {
+      title: {
+        tr: "İstanbul'da Gezilecek Yerler: Süre ve Ücret",
+        ar: "أفضل الأماكن السياحية في إسطنبول وكم تستغرق",
+        en: "What to See in Istanbul and How Long It Takes",
+      },
+      description: {
+        tr: "Ayasofya, Sultanahmet, Topkapı, Yerebatan ve Kapalıçarşı on dakikalık yürüme mesafesinde. Bir güne kaç yer sığar, hangileri ücretsiz, en sakin saat hangisi.",
+        ar: "آيا صوفيا والسلطان أحمد وتوبكابي وصهريج البازيليك والسوق المسقوف على بُعد عشر دقائق سيراً. كم مكاناً يتّسع له اليوم، وأيّها بلا رسوم، وأهدأ ساعة للزيارة.",
+        en: "Hagia Sophia, the Blue Mosque, Topkapı, the Cistern and the Grand Bazaar are ten minutes apart on foot. How many fit in a day, which are free, the quietest hour.",
+      },
+    },
+    sections: [
+      {
+        heading: {
+          tr: "Tarihî yarımada: bir sabaha ne sığar",
+          ar: "شبه الجزيرة التاريخية: ماذا يتّسع له صباح واحد",
+          en: "The historic peninsula: what fits into one morning",
+        },
+        image: "/images/places/sultanahmet.jpg",
+        imageAlt: {
+          tr: "Sultanahmet Meydanı ve çevresindeki tarihî yapılar",
+          ar: "ميدان السلطان أحمد والمباني التاريخية المحيطة به",
+          en: "Sultanahmet Square and the historic buildings around it",
+        },
+        body: {
+          tr: "İstanbul'da en çok aranan yerlerin büyük kısmı tek bir meydanın çevresinde duruyor: Ayasofya, Sultanahmet Camii, Yerebatan Sarnıcı ve Topkapı Sarayı birbirine on dakikalık yürüme mesafesinde; Dikilitaş ve Alman Çeşmesi zaten aynı meydanın içinde. Bu yoğunluk şehrin başka hiçbir yerinde yok ve programın neden buradan başladığının tek sebebi bu.\n\nAyasofya bugün cami. Ziyaret düzeni son yıllarda birkaç kez değişti; şu anda yabancı ziyaretçiler üst galeriden ücretli bir girişle geziyor, namaz alanına giriş ise ayrı ve ücretsiz. Gitmeden önce güncel düzene bakmakta fayda var — burada bir rakam yazmıyoruz, çünkü bu bilgi sitedeki en çabuk eskiyen şey olurdu.\n\nSultanahmet Camii ücretsiz ve namaz vakitlerinde ziyarete kapanıyor; kapıda kısa bir bekleme normal. Yerebatan Sarnıcı biletli ve sırası en uzun olan yer; akşam saatleri gündüzden sakin. Topkapı Sarayı ise tek başına yarım gün — Harem ayrı biletle geziliyor ve atlandığında en çok pişmanlık yaratan bölüm orası.\n\nDördünü aynı güne koymak mümkün ama sıkışık olur. Rahat bir sabah şöyle kuruluyor: dokuzda meydanda olun, Ayasofya ile Sultanahmet'i arka arkaya görün, öğleye doğru Yerebatan'a inin. Topkapı'yı ertesi güne bırakmak, aynı günü ikiye bölmekten daha iyi sonuç veriyor.",
+          ar: "معظم أكثر الأماكن بحثاً في إسطنبول يقف حول ميدان واحد: آيا صوفيا وجامع السلطان أحمد وصهريج البازيليك وقصر توبكابي على بُعد عشر دقائق سيراً من بعضها، والمسلّة والسبيل الألماني داخل الميدان نفسه. هذه الكثافة غير موجودة في أيّ مكان آخر من المدينة، وهي السبب الوحيد لبدء البرنامج من هنا.\n\nآيا صوفيا اليوم مسجد. وقد تغيّر ترتيب الزيارة أكثر من مرّة في السنوات الأخيرة؛ حالياً يزورها الأجانب من الطابق العلوي بدخول برسوم، أمّا الدخول إلى مصلّى الصلاة فمنفصل وبلا رسوم. ومن المفيد التحقّق من الترتيب الحالي قبل الذهاب — ولا نكتب هنا رقماً، لأنّه سيكون أسرع معلومة في الموقع تقادُماً.\n\nجامع السلطان أحمد بلا رسوم ويُغلق أمام الزيارة في أوقات الصلاة؛ وانتظار قصير عند الباب أمر معتاد. وصهريج البازيليك برسوم وطابوره الأطول؛ وساعات المساء أهدأ من النهار. أمّا قصر توبكابي فهو نصف يوم بمفرده — والحرم بتذكرة منفصلة، وهو أكثر قسم يندم زائره على تخطّيه.\n\nوضع الأربعة في يوم واحد ممكن لكنّه مزدحم. الصباح المريح يُبنى هكذا: كونوا في الميدان عند التاسعة، وشاهدوا آيا صوفيا والسلطان أحمد تباعاً، ثم انزلوا إلى الصهريج قرب الظهر. وترك توبكابي لليوم التالي يعطي نتيجة أفضل من تقسيم اليوم نفسه إلى نصفين.",
+          en: "Most of Istanbul's most-searched places stand around a single square: Hagia Sophia, the Blue Mosque, the Basilica Cistern and Topkapı Palace are a ten-minute walk from one another, and the Obelisk and the German Fountain are inside the square itself. That density exists nowhere else in the city, and it is the only reason a programme starts here.\n\nHagia Sophia is a mosque today. The visiting arrangement has changed more than once in recent years; at present foreign visitors go through a ticketed entrance on the upper gallery, while entry to the prayer area is separate and free. It is worth checking the current arrangement before you go — we print no figure here, because it would be the fastest-ageing piece of information on the site.\n\nThe Blue Mosque is free and closes to visitors at prayer times; a short wait at the door is normal. The Basilica Cistern is ticketed and has the longest queue; evening hours are quieter than the day. Topkapı Palace is half a day on its own — the Harem needs a separate ticket, and it is the section people most regret skipping.\n\nPutting all four into one day is possible but tight. A comfortable morning is built like this: be at the square by nine, see Hagia Sophia and the Blue Mosque back to back, then go down into the Cistern towards noon. Leaving Topkapı for the next day works better than splitting the same day in two.",
+        },
+      },
+      {
+        heading: {
+          tr: "Camiler: hangisi ziyarete açık, ne zaman kapanıyor",
+          ar: "المساجد: أيّها مفتوح للزيارة ومتى يُغلق",
+          en: "The mosques: which are open to visitors, and when they close",
+        },
+        image: "/images/places/suleymaniye.jpg",
+        imageAlt: {
+          tr: "Süleymaniye Camii ve Haliç manzarası",
+          ar: "جامع السليمانية وإطلالة القرن الذهبي",
+          en: "Süleymaniye Mosque and the Golden Horn view",
+        },
+        body: {
+          tr: "İstanbul'da ziyaret edilen camilerin hepsi ücretsiz ve hepsi ibadete açık — yani ziyaret namaz vakitlerinin etrafında kuruluyor. Kapanış vakitten birkaç dakika önce başlıyor ve cemaat dağılana kadar sürüyor; öğle ile ikindi arası genellikle en rahat aralık.\n\nSüleymaniye Camii, Sultanahmet'in kalabalığından uzak durmak isteyen için en iyi seçim: avlusundan Haliç görünüyor ve aynı saatte oradakinin çok altında insan oluyor. Yeni Cami ise Mısır Çarşısı'nın hemen yanında, yani çarşıya giderken zaten yolunuzun üstünde.\n\nEyüp Sultan Camii şehrin en çok ziyaret edilen camilerinden biri ve çevresi bambaşka bir mahalle. Avludan çıkıp teleferikle Pierre Loti tepesine çıkmak yaygın bir program; teleferik biletli, cami değil.\n\nAsya yakasında Çamlıca Camii var: Türkiye'nin en büyük camisi ve tepeye kurulu olduğu için şehrin en geniş manzarası orada. Otoparkı geniş, yani araçla gidilen bir yer — toplu taşımayla ulaşmak zahmetli.\n\nGiyim kuralı basit: kadınlar için başörtüsü ve diz altı, erkekler için uzun pantolon. Camilerin girişinde ödünç örtü veriliyor, yanınızda getirmek zorunda değilsiniz.",
+          ar: "كل المساجد التي تُزار في إسطنبول بلا رسوم، وكلّها مفتوحة للصلاة — أي أنّ الزيارة تُبنى حول أوقات الصلاة. يبدأ الإغلاق قبل الوقت بدقائق ويستمرّ حتى ينصرف المصلّون؛ وما بين الظهر والعصر هو الفسحة الأريح عادة.\n\nجامع السليمانية هو الخيار الأفضل لمن يريد الابتعاد عن زحام السلطان أحمد: من فنائه يظهر القرن الذهبي، وفي الساعة نفسها يكون عدد الناس فيه أقلّ بكثير. أمّا الجامع الجديد فهو ملاصق للسوق المصري، أي أنّه على طريقكم أصلاً وأنتم ذاهبون إلى السوق.\n\nوجامع أيوب سلطان من أكثر مساجد المدينة زيارةً، وما حوله حيّ ذو طابع مختلف تماماً. والخروج من الفناء والصعود بالتلفريك إلى تلّة بيير لوتي برنامج شائع؛ التلفريك برسوم، والمسجد لا.\n\nوفي الجانب الآسيوي جامع تشامليجا: أكبر مساجد تركيا، وبحكم بنائه على تلّة فإنّ أوسع إطلالة على المدينة هناك. موقفه واسع، أي أنّه مكان يُقصد بالسيارة — والوصول إليه بالمواصلات العامة متعب.\n\nوقاعدة اللباس بسيطة: غطاء رأس وما دون الركبة للنساء، وبنطال طويل للرجال. وتُعار الأغطية عند مدخل المساجد، فلا حاجة إلى إحضارها معكم.",
+          en: "Every mosque visitors go to in Istanbul is free, and every one of them is in use for prayer — which means the visit is built around prayer times. Closing starts a few minutes before the hour and lasts until the congregation disperses; the stretch between the noon and afternoon prayers is usually the easiest.\n\nSüleymaniye Mosque is the best choice for anyone who wants to stay clear of the crowds at Sultanahmet: the Golden Horn is visible from its courtyard, and at the same hour it holds a fraction of the people. The New Mosque sits right beside the Spice Bazaar, so it is already on your way there.\n\nEyüp Sultan is among the most visited mosques in the city, and the neighbourhood around it has a completely different character. Walking out of the courtyard and taking the cable car up to the Pierre Loti hill is a common pairing; the cable car is ticketed, the mosque is not.\n\nOn the Asian side there is Çamlıca Mosque: the largest in Türkiye, and because it stands on a hill, the widest view over the city is there. Its car park is large, which tells you it is a place you drive to — reaching it by public transport is a chore.\n\nThe dress rule is simple: a headscarf and below the knee for women, long trousers for men. Coverings are lent at the mosque entrances; you do not have to bring your own.",
+        },
+      },
+      {
+        heading: {
+          tr: "Manzara: nereden bakılır, nerede sıra beklenir",
+          ar: "الإطلالة: من أين تُشاهد وأين تنتظر في الطابور",
+          en: "The view: where to look from, and where you queue",
+        },
+        image: "/images/places/galata-halic.jpg",
+        imageAlt: {
+          tr: "Galata ve Haliç'in üstünden İstanbul manzarası",
+          ar: "إطلالة إسطنبول من فوق غلطة والقرن الذهبي",
+          en: "Istanbul seen from above Galata and the Golden Horn",
+        },
+        body: {
+          tr: "Şehrin fotoğrafı iki şeyden çıkıyor: su ve tepe.\n\nGalata Kulesi en bilinen bakı noktası, ama aynı zamanda sıranın en uzun olduğu yer: kule dar ve içeri belirli sayıda kişi alınıyor. Manzara için sıraya girmek istemiyorsanız Süleymaniye avlusu, Pierre Loti tepesi ve Çamlıca aynı şehri başka açılardan, ücretsiz ya da çok daha kısa beklemeyle veriyor.\n\nBoğaz'ı kıyıdan görmek isteyen için Ortaköy–Bebek hattı yürünebilir bir güzergâh: Ortaköy Camii'nin arkasında köprü duruyor ve kıyı boyunca yürüyüş yarım saat sürüyor. Dolmabahçe Sarayı da bu hatta; biletli ve iç gezisi belirli bir düzenle yapılıyor.\n\nBoğaz'ı sudan görmek ayrı bir gün işi: hangi vapur, ne kadar sürer, hangi iskeleden — bunların hepsi Boğaz turu rehberinde yazılı. Rumeli Hisarı kıyıdan geçerken görülüyor ama içine girmek ayrı bir durak.\n\nKüçük bir not: manzara vaadiyle satılan restoranların çoğunda ödediğiniz şey yemek değil, pencere. Aynı manzara Süleymaniye avlusundan ücretsiz görünüyor.",
+          ar: "صورة المدينة تخرج من شيئين: الماء والتلّة.\n\nبرج غلطة أشهر نقطة إطلالة، وهو في الوقت نفسه صاحب أطول طابور: البرج ضيّق ويُسمح بعدد محدّد في الداخل. وإن لم تريدوا الوقوف في طابور من أجل الإطلالة، فإنّ فناء السليمانية وتلّة بيير لوتي وتشامليجا تعطي المدينة نفسها من زوايا أخرى، بلا رسوم أو بانتظار أقصر بكثير.\n\nولمن يريد رؤية البوسفور من الشاطئ، خطّ أورتاكوي – بيبك مسار يُمشى: الجسر يقف خلف جامع أورتاكوي، والمشي على الواجهة يستغرق نصف ساعة. وقصر دولمة بهجة على الخطّ نفسه؛ برسوم، وزيارته الداخلية تجري بترتيب محدّد.\n\nأمّا رؤية البوسفور من الماء فشأن يوم آخر: أيّ عبّارة، وكم تستغرق، ومن أيّ رصيف — كلّ ذلك مكتوب في دليل جولة البوسفور. وقلعة روملي حصار تُرى من الطريق الساحلي، لكنّ الدخول إليها محطّة مستقلّة.\n\nملاحظة صغيرة: في أكثر المطاعم التي تُباع بوعد الإطلالة، ما تدفعون ثمنه ليس الطعام بل النافذة. الإطلالة نفسها تظهر من فناء السليمانية بلا رسوم.",
+          en: "The picture of the city comes out of two things: water and a hill.\n\nThe Galata Tower is the best-known viewpoint and also the one with the longest queue: the tower is narrow and only a set number of people go up at a time. If you would rather not queue for a view, the Süleymaniye courtyard, the Pierre Loti hill and Çamlıca give you the same city from other angles, free or with a far shorter wait.\n\nFor seeing the Bosphorus from the shore, the Ortaköy–Bebek stretch is a walkable route: the bridge stands behind Ortaköy Mosque, and the waterfront walk takes about half an hour. Dolmabahçe Palace is on the same line; it is ticketed, and the interior visit runs to a set arrangement.\n\nSeeing the Bosphorus from the water is a separate day — which ferry, how long, from which pier — and all of that is in the Bosphorus tour guide. Rumeli Hisarı is visible from the shore road, but going inside is a stop of its own.\n\nOne small note: in most restaurants sold on the promise of a view, what you are paying for is the window, not the food. The same view is free from the Süleymaniye courtyard.",
+        },
+      },
+      {
+        heading: {
+          tr: "Çarşılar ve caddeler",
+          ar: "البازارات والشوارع",
+          en: "Bazaars and streets",
+        },
+        image: "/images/places/kapalicarsi.jpg",
+        imageAlt: {
+          tr: "Kapalıçarşı'nın kemerli sokakları",
+          ar: "أزقّة السوق المسقوف المقنطرة",
+          en: "The vaulted lanes of the Grand Bazaar",
+        },
+        body: {
+          tr: "Kapalıçarşı bir alışveriş yeri olduğu kadar gezilecek bir yer: on beşinci yüzyıldan kalma kapalı sokaklar ve altmışa yakın cadde. Pazar günleri kapalı, ve programını farkında olmadan pazara denk getiren çok oluyor. İçeride yön kaybetmek normal; çıkış kapılarının numaralı olduğunu bilmek işe yarıyor.\n\nMısır Çarşısı daha küçük ve daha hızlı geziliyor — baharat, lokum ve kuruyemiş ağırlıklı. Çarşının çevresindeki sokaklar aslında çarşının kendisinden daha ilginç: Tahtakale tarafında İstanbullunun alışveriş yaptığı esnaf sokakları var.\n\nİstiklal Caddesi tarihî yarımadada değil, Beyoğlu'nda. Taksim Meydanı'ndan başlayıp Tünel'e iniyor, ortasından nostaljik tramvay geçiyor ve baştan sona yürümek yarım saat sürüyor. Akşamları şehrin en kalabalık noktası burası.\n\nNe alınır, nereden alınır, pazarlık nasıl yapılır — bunlar alışveriş rehberinde ayrıntılı yazılı.",
+          ar: "السوق المسقوف مكان يُزار بقدر ما هو مكان للتسوّق: أزقّة مغطّاة من القرن الخامس عشر، وقرابة ستّين شارعاً. وهو مغلق أيام الأحد، وكثيرون يجعلون برنامجهم يصادف الأحد دون انتباه. وفقدان الاتجاه في الداخل أمر طبيعي؛ ومن المفيد أن تعرفوا أنّ أبواب الخروج مرقّمة.\n\nوالسوق المصري أصغر ويُزار أسرع — بهارات وراحة حلقوم ومكسّرات في الأغلب. والشوارع حول السوق أطرف في الحقيقة من السوق نفسه: في جهة تحتاكاله شوارع تجّار يتسوّق منها أهل إسطنبول.\n\nوشارع الاستقلال ليس في شبه الجزيرة التاريخية بل في بي أوغلو. يبدأ من ميدان تقسيم وينزل إلى تونيل، ويمرّ في وسطه الترام القديم، ومشيه من أوّله إلى آخره نصف ساعة. وهو أكثر نقاط المدينة ازدحاماً في المساء.\n\nماذا يُشترى، ومن أين، وكيف تجري المساومة — كلّ ذلك مفصّل في دليل التسوّق.",
+          en: "The Grand Bazaar is a place to visit as much as a place to shop: covered lanes from the fifteenth century and close to sixty streets. It is closed on Sundays, and plenty of people let their programme land on a Sunday without noticing. Losing your bearings inside is normal; knowing that the exit gates are numbered helps.\n\nThe Spice Bazaar is smaller and goes faster — mostly spices, Turkish delight and nuts. The streets around it are in truth more interesting than the bazaar itself: on the Tahtakale side there are trade streets where people from Istanbul do their own shopping.\n\nİstiklal Avenue is not on the historic peninsula but in Beyoğlu. It starts at Taksim Square and runs down to Tünel, the old tram passes along the middle of it, and walking it end to end takes half an hour. In the evening it is the most crowded point in the city.\n\nWhat to buy, where, and how bargaining works — that is set out in detail in the shopping guide.",
+        },
+      },
+      {
+        heading: {
+          tr: "Çocuklu ailelerin listesi ayrı",
+          ar: "قائمة العائلات ذات الأطفال مختلفة",
+          en: "Families with children need a different list",
+        },
+        body: {
+          tr: "Küçük çocukla gelen bir aile için tarihî yarımada zor bir gün: sıra, sıcak ve yürüyüş üst üste geliyor. Şehrin bu tarafa ayrı bir listesi var.\n\nMiniatürk Türkiye'nin yapılarının küçültülmüş maketlerini açık havada gösteriyor ve çocuk için yürünebilir bir ölçekte. Akvaryumlar ve büyük alışveriş merkezlerinin içindeki eğlence katları ise yağmurlu ya da çok sıcak bir gün için işe yarıyor.\n\nŞehir hattı vapuru çocukla en kolay geçen program: oturuluyor, hava alınıyor ve toplu taşıma tarifesinde. Emirgan ve Gülhane gibi büyük parklar da öyle — İstanbul'un merkezinde çim ve gölge bulmak sanıldığı kadar kolay değil, bu ikisi istisna.\n\nProgramın saat saat nasıl kurulacağı ve hangi aralıkların işe yaradığı çocuklu aileler rehberinde yazılı.",
+          ar: "بالنسبة إلى عائلة معها طفل صغير، شبه الجزيرة التاريخية يوم صعب: الطابور والحرّ والمشي تتراكم فوق بعضها. وللمدينة قائمة أخرى في هذه الجهة.\n\nمينياتورك يعرض مجسّمات مصغّرة لمباني تركيا في الهواء الطلق، وبمقياس يستطيع الطفل أن يمشيه. أمّا أحواض الأسماك وطوابق الترفيه داخل المولات الكبيرة فتنفع في يوم ماطر أو شديد الحرارة.\n\nوعبّارة الخطوط البلدية أسهل برنامج مع طفل: تجلسون، وتأخذون هواءً، وهي على تعرفة المواصلات العامة. وكذلك الحدائق الكبيرة مثل أميرغان وغولهانه — العثور على عشب وظلّ في وسط إسطنبول ليس بالسهولة المتصوَّرة، وهاتان استثناء.\n\nوكيف يُبنى البرنامج ساعةً بساعة وأيّ الفترات تنفع — ذلك مكتوب في دليل العائلات ذات الأطفال.",
+          en: "For a family with a small child, the historic peninsula is a hard day: queues, heat and walking pile on top of one another. The city has a different list on this side.\n\nMiniatürk shows scale models of Türkiye's buildings in the open air, at a size a child can walk. Aquariums and the entertainment floors inside the big shopping centres earn their place on a rainy or very hot day.\n\nThe municipal ferry is the easiest thing to do with a child: you sit, you get air, and it runs on the public transport fare. So do the big parks such as Emirgan and Gülhane — grass and shade in central Istanbul are not as easy to find as people assume, and those two are the exception.\n\nHow to build the day hour by hour and which stretches actually work is written up in the guide for families with children.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bir güne kaç yer sığar",
+          ar: "كم مكاناً يتّسع له يوم واحد",
+          en: "How many places fit into one day",
+        },
+        body: {
+          tr: "Listeler uzun olduğu için program da uzun kuruluyor; en sık yapılan hata bu. İstanbul'da bir güne rahatça sığan şey iki büyük durak ve bir semt yürüyüşü. Üç büyük durak sıkışık ama olur; dördü, gün yolda ve sırada geçtiği için genellikle olmuyor.\n\nSebep mesafe değil, geçiş süresi. Tarihî yarımadadan Beyoğlu'na ya da Asya yakasına geçmek haritada kısa görünüyor, akşam trafiğinde bir saati bulabiliyor. Aynı gün içinde yaka değiştirmek programın en pahalı kararı — parayla değil, saatle.\n\nİşe yarayan düzen, günü coğrafyaya göre bölmek: bir gün tarihî yarımada, bir gün Beyoğlu ve Boğaz hattı, bir gün Asya yakası ya da Adalar. Böyle bakıldığında üç tam gün şehrin ana hatlarını veriyor, beş gün rahat ettiriyor.\n\nSabah dokuzla on bir arası günün en değerli iki saati: aynı yerler öğleden sonra iki katı sürede geziliyor.",
+          ar: "القوائم طويلة، فيُبنى البرنامج طويلاً؛ وهذا أكثر خطأ يتكرّر. الذي يتّسع له اليوم في إسطنبول بارتياح هو محطّتان كبيرتان ومشي في حيّ واحد. ثلاث محطّات كبيرة ممكنة لكنّها مزدحمة؛ وأربع لا تنجح غالباً، لأنّ اليوم يمضي في الطريق وفي الطوابير.\n\nوالسبب ليس المسافة بل زمن الانتقال. الانتقال من شبه الجزيرة التاريخية إلى بي أوغلو أو إلى الجانب الآسيوي يبدو قصيراً على الخريطة، وقد يبلغ ساعة في زحام المساء. وتبديل الضفّة داخل اليوم الواحد أغلى قرار في البرنامج — لا بالمال بل بالساعات.\n\nوالترتيب الذي ينجح هو تقسيم الأيام جغرافياً: يوم لشبه الجزيرة التاريخية، ويوم لخطّ بي أوغلو والبوسفور، ويوم للجانب الآسيوي أو لجزر الأميرات. وبهذه النظرة تعطي ثلاثة أيام كاملة الخطوط العريضة للمدينة، وخمسة أيام تجعلها مريحة.\n\nوما بين التاسعة والحادية عشرة صباحاً هما أثمن ساعتين في اليوم: الأماكن نفسها تُزار بعد الظهر في ضعف الوقت.",
+          en: "Because the lists are long, the programme gets built long too; that is the most common mistake. What fits comfortably into a day in Istanbul is two major stops and a walk through one neighbourhood. Three major stops is tight but possible; four usually does not work, because the day goes into the road and the queues.\n\nThe reason is not distance but transfer time. Crossing from the historic peninsula to Beyoğlu or to the Asian side looks short on the map and can take an hour in evening traffic. Changing sides within a single day is the most expensive decision in a programme — not in money, in hours.\n\nThe arrangement that works is to split the days by geography: one day for the historic peninsula, one for the Beyoğlu–Bosphorus line, one for the Asian side or the Princes' Islands. Seen that way, three full days give you the outline of the city and five days make it comfortable.\n\nNine to eleven in the morning are the two most valuable hours of the day: the same places take twice as long to see in the afternoon.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "İstanbul'da kaç gün gerekir?",
+          ar: "كم يوماً تحتاج في إسطنبول؟",
+          en: "How many days do you need in Istanbul?",
+        },
+        answer: {
+          tr: "Ana hatlar için üç tam gün. Bu üç güne tarihî yarımada, Beyoğlu–Boğaz hattı ve bir günübirlik (Adalar ya da Asya yakası) sığıyor. Dört-beş gün aynı listeyi acele etmeden geziyor ve alışverişe de yer bırakıyor. İki gün de mümkün ama seçim yapmayı gerektiriyor: iki günde tarihî yarımada ile Boğaz'dan biri eksik kalıyor.",
+          ar: "ثلاثة أيام كاملة للخطوط العريضة. تتّسع هذه الأيام الثلاثة لشبه الجزيرة التاريخية، ولخطّ بي أوغلو والبوسفور، ولرحلة يوم واحد (جزر الأميرات أو الجانب الآسيوي). وأربعة أو خمسة أيام تغطّي القائمة نفسها بلا استعجال وتترك وقتاً للتسوّق. واليومان ممكنان أيضاً لكنّهما يفرضان اختياراً: في يومين يسقط أحد الاثنين، إمّا شبه الجزيرة التاريخية وإمّا البوسفور.",
+          en: "Three full days for the outline. Those three days cover the historic peninsula, the Beyoğlu–Bosphorus line and one day trip (the Princes' Islands or the Asian side). Four or five days cover the same list without hurrying and leave room for shopping. Two days are possible but force a choice: in two days either the historic peninsula or the Bosphorus gets dropped.",
+        },
+      },
+      {
+        question: {
+          tr: "Hangi yerler ücretsiz?",
+          ar: "أيّ الأماكن بلا رسوم دخول؟",
+          en: "Which places are free?",
+        },
+        answer: {
+          tr: "Camilerin tamamı ücretsiz: Sultanahmet, Süleymaniye, Yeni Cami, Eyüp Sultan, Çamlıca. Meydanlar, sahil yürüyüşleri, Kapalıçarşı ve Mısır Çarşısı'na girmek de ücretsiz. Biletli olanlar saraylar (Topkapı, Dolmabahçe), müzeler, Yerebatan Sarnıcı, Galata Kulesi ve teleferikler.",
+          ar: "جميع المساجد بلا رسوم: السلطان أحمد والسليمانية والجامع الجديد وأيوب سلطان وتشامليجا. والميادين والمشي على الواجهة البحرية ودخول السوق المسقوف والسوق المصري كلّها بلا رسوم أيضاً. أمّا ما يحتاج تذكرة فهو القصور (توبكابي ودولمة بهجة) والمتاحف وصهريج البازيليك وبرج غلطة والتلفريك.",
+          en: "Every mosque is free: the Blue Mosque, Süleymaniye, the New Mosque, Eyüp Sultan, Çamlıca. The squares, the waterfront walks, and entering the Grand Bazaar and the Spice Bazaar are free too. Ticketed: the palaces (Topkapı, Dolmabahçe), the museums, the Basilica Cistern, the Galata Tower and the cable cars.",
+        },
+      },
+      {
+        question: {
+          tr: "Ayasofya'ya girmek ücretli mi?",
+          ar: "هل دخول آيا صوفيا برسوم؟",
+          en: "Is there a charge to enter Hagia Sophia?",
+        },
+        answer: {
+          tr: "Ayasofya bugün cami. Namaz alanına giriş ücretsiz; yabancı ziyaretçiler için üst galeriden ücretli bir ziyaret düzeni var. Bu düzen son yıllarda birkaç kez değişti, o yüzden gitmeden önce güncel durumu kontrol etmek en doğrusu. Burada bir rakam yazmıyoruz: yazdığımız gün doğru olan sayı birkaç ay sonra yanlış oluyor.",
+          ar: "آيا صوفيا اليوم مسجد. الدخول إلى مصلّى الصلاة بلا رسوم؛ وللزوّار الأجانب ترتيب زيارة برسوم من الطابق العلوي. وقد تغيّر هذا الترتيب أكثر من مرّة في السنوات الأخيرة، فالأصحّ التحقّق من الوضع الحالي قبل الذهاب. ولا نكتب هنا رقماً: الرقم الصحيح يوم كتابته يصبح خاطئاً بعد أشهر.",
+          en: "Hagia Sophia is a mosque today. Entry to the prayer area is free; for foreign visitors there is a ticketed visit from the upper gallery. That arrangement has changed more than once in recent years, so the safest thing is to check the current situation before you go. We do not print a figure here: a number that is correct on the day we write it is wrong a few months later.",
+        },
+      },
+    ],
+  },
 ];
 
 /**

@@ -244,6 +244,7 @@ export const destinations: Destination[] = [
     tourSlug: "istanbul-turu",
     packageSlug: "istanbul-4-gun",
     guideSlugs: [
+      "istanbulda-gezilecek-yerler",
       "istanbulda-nerede-kalinir",
       "istanbul-havalimanindan-sehre-ulasim",
       "bogaz-turu-rehberi",

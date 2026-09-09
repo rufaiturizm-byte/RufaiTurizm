@@ -127,7 +127,7 @@ export const guides: Guide[] = [
     slug: "istanbul-havalimanindan-sehre-ulasim",
     topic: "arrival",
     image: "/images/places/havalimani.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "İstanbul Havalimanı'ndan şehre nasıl gidilir?",
       ar: "كيف تصل من مطار إسطنبول إلى المدينة؟",
@@ -227,6 +227,30 @@ export const guides: Guide[] = [
           tr: "Gecikme bu yolculuğun en sık yaşanan sorunudur ve önceden ayarlanan bir transferde çözümü basittir: uçuş numarası verildiğinde şoför iniş saatine göre gelir. Bagajınız gecikirse ya da pasaport kuyruğu uzarsa bekleme süresi için ek ücret çıkmaması, rezervasyondan önce netleştirmeniz gereken tek şeydir.",
           ar: "التأخير هو أكثر ما يحدث في هذه الرحلة، وحلّه بسيط عند حجز النقل مسبقاً: بإعطاء رقم الرحلة يأتي السائق حسب وقت الهبوط الفعلي. أما إذا تأخرت حقائبك أو طال طابور الجوازات، فالنقطة الوحيدة التي يجب توضيحها قبل الحجز هي ألّا تُحتسب رسوم إضافية على الانتظار.",
           en: "Delays are the most common problem on this leg, and with a pre-booked transfer the fix is simple: give your flight number and the driver arrives for the actual landing time. If your bags are slow or passport control is long, the one thing to confirm before booking is that waiting time carries no extra charge.",
+        },
+      },
+      {
+        heading: {
+          tr: "Terminalden çıkış: gerçekte kaç dakika",
+          ar: "الخروج من الصالة: كم دقيقة فعلاً",
+          en: "Getting out of the terminal: how many minutes really",
+        },
+        body: {
+          tr: "Uçak indikten sonra kapıdan çıkana kadar geçen süre çoğu planın dışında kalıyor. İstanbul Havalimanı çok büyük: uçaktan pasaport kontrolüne yürümek tek başına on-on beş dakika sürebiliyor.\n\nPasaport kontrolü yoğun saatlerde yirmi dakikayı buluyor, bagajın banda düşmesi on beş-yirmi dakika daha. Toplamda iniş saatinden yaklaşık kırk beş dakika sonra çıkışta oluyorsunuz; kalabalık bir saatte bir saati geçebiliyor.\n\nÇıkış kapıları birbirinden uzak ve hangi kapıdan çıkacağınız bagaj bandına göre değişiyor. Bu, şoförle buluşma noktasının önceden netleşmesi gereken tek havalimanı; \"çıkışta buluşuruz\" burada yetersiz bir tarif.\n\nBiz uçuşu numarasından takip ediyoruz, yani şoför sizin çıkacağınız kapıyı biliyor ve orada isimli tabelayla bekliyor. Rötar olursa bekleme için ek ücret çıkmıyor.\n\nBu süreleri bilmek özellikle aktarmalı uçuşlarda ve gece varışlarında işe yarıyor: otele varış saatini iniş saatiyle aynı sanmak, ilk günün planını bozan en yaygın hata.",
+          ar: "المدة بين هبوط الطائرة والخروج من الباب تغيب عن معظم الخطط. ومطار إسطنبول كبير جداً: فالمشي من الطائرة إلى ختم الجوازات وحده قد يستغرق عشر إلى خمس عشرة دقيقة.\n\nويبلغ ختم الجوازات عشرين دقيقة في ساعات الذروة، ونزول الحقائب على السير خمس عشرة إلى عشرين دقيقة أخرى. وفي المجموع تكون عند المخرج بعد نحو خمس وأربعين دقيقة من الهبوط؛ وقد تتجاوز الساعة في وقت مزدحم.\n\nوأبواب الخروج متباعدة، ويختلف بابك بحسب سير الحقائب. وهذا هو المطار الوحيد الذي يجب أن تتحدّد فيه نقطة اللقاء بالسائق مسبقاً؛ فعبارة \"نلتقي عند المخرج\" وصف غير كافٍ هنا.\n\nونحن نتابع الرحلة برقمها، أي أن السائق يعرف الباب الذي ستخرج منه وينتظر هناك بلافتة تحمل اسمك. وإن تأخرت الطائرة فلا رسوم على الانتظار.\n\nومعرفة هذه المدد تنفع خاصةً في الرحلات ذات التوقّف وفي الوصول ليلاً: فظنّ أن ساعة الوصول إلى الفندق هي ساعة الهبوط أشيع خطأ يُفسد خطة اليوم الأول.",
+          en: "The time between the plane landing and walking out of the door is missing from most plans. Istanbul Airport is very large: the walk from the aircraft to passport control alone can take ten to fifteen minutes.\n\nPassport control reaches twenty minutes at busy hours, and bags another fifteen to twenty on the belt. In total you are at the exit about forty-five minutes after landing; at a busy hour it can pass an hour.\n\nThe exits are far apart and which one you use depends on your baggage belt. This is the one airport where the meeting point with the driver must be settled in advance; \"we'll meet at the exit\" is not a sufficient description here.\n\nWe track the flight by its number, so the driver knows which door you will come out of and waits there with a name board. If the plane is late there is no waiting charge.\n\nKnowing these times helps especially on connecting flights and night arrivals: assuming the hotel arrival time equals the landing time is the commonest mistake that wrecks the first day's plan."
+        },
+      },
+      {
+        heading: {
+          tr: "Hangi semte ne kadar sürer",
+          ar: "كم تستغرق الطريق إلى كل حيّ",
+          en: "How long to each district",
+        },
+        body: {
+          tr: "İstanbul Havalimanı şehrin kuzeybatısında ve mesafe semte göre belirgin biçimde değişiyor.\n\nTaksim ve Şişli yaklaşık 40 kilometre; trafiksiz 45 dakika, akşamüstü bir buçuk saat. Sultanahmet 45 kilometre ve benzer süre, ama tarihi yarımadaya girişte dar sokaklar süreyi uzatabiliyor. Beşiktaş ve Ortaköy 42 kilometre.\n\nAnadolu yakası daha uzak: Kadıköy'e 55 kilometre ve köprü geçişiyle bir-iki saat arası. Anadolu yakasında kalacaksanız Sabiha Gökçen'e inmek bu yolu yarıya indiriyor.\n\nSüreyi belirleyen asıl şey mesafe değil saat. Sabah yedi-on ve akşam beş-sekiz arası şehre giriş en yoğun; aynı yol gece yarısı yarım saatte alınıyor.\n\nOtelin tam adresini rezervasyonda aldığımızda süreyi tahmin değil gerçek olarak söylüyoruz — aynı semt adı içinde bile oteller arasında yirmi dakika fark olabiliyor. \"Sultanahmet\" demek yetmiyor; sokak adı fark yaratıyor.",
+          ar: "يقع مطار إسطنبول شمال غرب المدينة، وتختلف المسافة بوضوح بحسب الحيّ.\n\nتقسيم وشيشلي على نحو أربعين كيلومتراً؛ خمس وأربعون دقيقة بلا زحام وساعة ونصف قبيل المساء. والسلطان أحمد على خمسة وأربعين كيلومتراً بمدة مشابهة، لكن الأزقّة الضيّقة عند دخول شبه الجزيرة التاريخية قد تطيل الوقت. وبشيكتاش وأورتاكوي على اثنين وأربعين كيلومتراً.\n\nوالجهة الآسيوية أبعد: كاديكوي على خمسة وخمسين كيلومتراً وبين ساعة وساعتين مع عبور الجسر. وإن كنت ستقيم في الجهة الآسيوية فالهبوط في صبيحة كوكتشن يختصر هذا الطريق إلى النصف.\n\nوالذي يحدّد المدة ليس المسافة بل الساعة. فالدخول إلى المدينة أشدّ ازدحاماً بين السابعة والعاشرة صباحاً وبين الخامسة والثامنة مساءً؛ ويُقطع الطريق نفسه في نصف ساعة منتصف الليل.\n\nوحين نأخذ عنوان الفندق الكامل عند الحجز نقول المدة حقيقةً لا تخميناً — فالفارق بين فندقين داخل الحيّ الواحد قد يبلغ عشرين دقيقة. ولا يكفي قول \"السلطان أحمد\"؛ فاسم الشارع يُحدث فرقاً.",
+          en: "Istanbul Airport sits in the north-west of the city, and the distance varies noticeably by district.\n\nTaksim and Şişli are about 40 km; forty-five minutes clear, an hour and a half in the late afternoon. Sultanahmet is 45 km and a similar time, though the narrow streets entering the historic peninsula can stretch it. Beşiktaş and Ortaköy are 42 km.\n\nThe Asian side is further: 55 km to Kadıköy and between one and two hours with the bridge crossing. If you are staying on the Asian side, landing at Sabiha Gökçen halves that drive.\n\nWhat sets the time is not the distance but the hour. Entry into the city is heaviest between seven and ten in the morning and five and eight in the evening; the same road takes half an hour at midnight.\n\nWith the exact hotel address at booking we give the time as fact rather than estimate — even within one district name two hotels can be twenty minutes apart. Saying \"Sultanahmet\" is not enough; the street name makes a difference."
         },
       },
     ],
@@ -991,7 +1015,7 @@ export const guides: Guide[] = [
     slug: "arapca-konusan-sofor-ve-rehber",
     topic: "practical",
     image: "/images/chauffeur.jpg",
-    minutes: 3,
+    minutes: 6,
     title: {
       tr: "Türkiye'de Arapça konuşan şoför ve rehber neden fark yaratır?",
       ar: "لماذا يُحدث السائق والمرشد الناطق بالعربية فرقاً في تركيا؟",
@@ -1087,13 +1111,37 @@ export const guides: Guide[] = [
           en: "Language also changes what goes into the programme. Stopping at mosques along the route at prayer times, pointing you to restaurants with halal options and flexing the plan around the children's pace are all far easier with a team that understands without being told.",
         },
       },
+      {
+        heading: {
+          tr: "Rehber belgesi ne demek, kim ne yapabilir",
+          ar: "ماذا تعني رخصة الإرشاد ومن يفعل ماذا",
+          en: "What a guiding licence means, and who may do what",
+        },
+        body: {
+          tr: "Türkiye'de turist rehberliği belgeye bağlı bir meslek. Müzelerde ve ören yerlerinde grup gezdirmek, tarihi anlatmak belgeli rehberin işi; belgesiz kişinin bu işi yapması yasal değil.\n\nŞoförlük ayrı bir iş. Şoför sizi otelden alır, güzergâhı bilir, park eder, bekler ve gün sonunda otele bırakır. Arapça konuşan bir şoför yolda sohbet eder, nereye gittiğinizi anlatır, restoran ve alışveriş konusunda fikir verir — ama müze içinde anlatım yapmaz.\n\nİkisinin karıştırılması misafirin en sık yaşadığı hayal kırıklığı: \"Arapça rehber\" diye ayarlanan hizmet aslında Arapça konuşan bir şoför çıkıyor ve müzede kimse anlatmıyor.\n\nBiz ikisini ayrı söylüyoruz. Şoförümüz Arapça konuşuyor ve bu her turda geçerli. Belgeli rehber isteyen misafire ayrıca ayarlıyoruz ve bunu program kurulurken netleştiriyoruz — sürpriz olmaması için.\n\nBirçok müzede sesli rehber cihazı da var ve Arapça seçeneği bulunuyor; belgeli rehber almak istemeyen ama anlatım isteyen misafir için pratik bir orta yol.",
+          ar: "الإرشاد السياحي في تركيا مهنة مرتبطة برخصة. فمرافقة المجموعات داخل المتاحف والمواقع الأثرية وشرح التاريخ عمل المرشد المرخّص؛ ولا يجوز قانوناً لغير المرخّص أن يقوم به.\n\nوالسياقة عمل آخر. فالسائق يأخذك من الفندق، ويعرف المسار، ويركن وينتظر، ويعيدك إلى الفندق في آخر اليوم. والسائق الذي يتحدث العربية يحادثك في الطريق ويخبرك إلى أين تذهبون ويعطيك رأياً في المطاعم والتسوّق — لكنه لا يشرح داخل المتحف.\n\nوالخلط بينهما أكثر ما يسبّب خيبة أمل للضيف: فالخدمة التي رُتّبت باسم \"مرشد عربي\" تتبيّن سائقاً يتحدث العربية، ولا يشرح أحد في المتحف.\n\nونحن نقول الأمرين منفصلين. سائقنا يتحدث العربية وهذا سارٍ في كل جولة. ومن يريد مرشداً مرخّصاً نرتّبه له إضافةً، ونوضّح ذلك عند وضع البرنامج — كي لا تكون مفاجأة.\n\nوفي كثير من المتاحف جهاز إرشاد صوتي وفيه خيار عربي؛ وهو حلّ وسط عملي لمن لا يريد مرشداً مرخّصاً لكنه يريد شرحاً.",
+          en: "Tourist guiding in Türkiye is a licensed profession. Taking groups through museums and archaeological sites and explaining the history is the licensed guide's work; it is not legal for an unlicensed person to do it.\n\nDriving is a separate job. The driver collects you from the hotel, knows the route, parks, waits and returns you at the end of the day. An Arabic-speaking driver talks with you on the road, tells you where you are going and offers opinions on restaurants and shopping — but does not give commentary inside a museum.\n\nConfusing the two is the disappointment guests meet most often: a service arranged as an \"Arabic guide\" turns out to be an Arabic-speaking driver, and nobody explains anything in the museum.\n\nWe state the two separately. Our driver speaks Arabic and that holds on every tour. For guests who want a licensed guide we arrange one in addition, and we make it clear when the programme is built — so there is no surprise.\n\nMany museums also have audio guides with an Arabic option; a practical middle way for guests who do not want a licensed guide but do want commentary."
+        },
+      },
+      {
+        heading: {
+          tr: "Dil neden ilk günden sonra da önemli",
+          ar: "لماذا تبقى اللغة مهمة بعد اليوم الأول",
+          en: "Why language still matters after the first day",
+        },
+        body: {
+          tr: "Karşılamada dilin işe yaradığı açık. Ama asıl fark seyahatin ortasında ortaya çıkıyor — plan değiştiğinde.\n\nYağmur başladığında, bir müze beklenmedik şekilde kapalı olduğunda, çocuk yorulduğunda ya da yemek yeri değiştirmek istediğinizde bunu anlatmanız gerekiyor. İşaretle anlatılabilecek şeyler sınırlı; \"beş dakika daha bekleyelim\" ile \"burayı iptal edip otele dönelim\" arasındaki fark kelime istiyor.\n\nAlışverişte de öyle. Pazarlık yapmak, bir ürünün ne olduğunu sormak, kargo ve iade koşullarını öğrenmek dil işi. Şoförün araya girmesi gerekmiyor ama gerektiğinde girebilmesi rahatlatıyor.\n\nBir de acil durum var: eczane, hastane, kaybolan pasaport. Bu durumların hiçbiri sık yaşanmıyor ama yaşandığında aracı olmayan misafir çok zorlanıyor.\n\nBizim tarafımızda rezervasyon da Arapça yürüyor: WhatsApp'tan yazışma, program taslağı, fiyat teyidi ve varış öncesi bilgilendirme — hepsi aynı dilde. Yolculuk başlamadan önce yanlış anlaşılan bir ayrıntı, yolculuk sırasında düzeltilmesi en zor şey.",
+          ar: "من الواضح أن اللغة تنفع عند الاستقبال. لكن الفرق الحقيقي يظهر في منتصف الرحلة — حين تتغيّر الخطة.\n\nفحين يبدأ المطر، أو يكون متحف مغلقاً على غير المتوقّع، أو يتعب الطفل، أو تريد تغيير مكان الطعام، عليك أن تشرح ذلك. وما يمكن إيصاله بالإشارة محدود؛ والفرق بين \"لننتظر خمس دقائق أخرى\" و\"لنلغِ هذا ونعد إلى الفندق\" يحتاج كلمات.\n\nوكذلك في التسوّق. فالمساومة، والسؤال عن ماهية منتج، ومعرفة شروط الشحن والإرجاع، كلها عمل لغوي. ولا يلزم أن يتدخّل السائق، لكن قدرته على التدخّل عند الحاجة تريح.\n\nوهناك أيضاً الحالات الطارئة: صيدلية، مستشفى، جواز سفر ضائع. ولا يحدث شيء من هذا كثيراً، لكن حين يحدث يشقّ الأمر كثيراً على من لا وسيط له.\n\nومن جهتنا يجري الحجز بالعربية أيضاً: المراسلة عبر واتساب، ومسودّة البرنامج، وتأكيد السعر، والإعلام قبل الوصول — كلها باللغة نفسها. فالتفصيل الذي يُساء فهمه قبل بدء الرحلة هو أصعب ما يُصحَّح أثناءها.",
+          en: "That language helps at the meeting point is obvious. But the real difference shows in the middle of a trip — when the plan changes.\n\nWhen it starts raining, when a museum is unexpectedly closed, when a child is tired, when you want to change where you eat, you have to explain it. What can be conveyed by gesture is limited; the difference between \"let's wait another five minutes\" and \"cancel this and take us back to the hotel\" needs words.\n\nShopping is the same. Haggling, asking what something is, learning the shipping and return terms — all language work. The driver does not need to step in, but being able to when needed is a relief.\n\nThen there are emergencies: a pharmacy, a hospital, a lost passport. None of these happen often, but when they do a guest without an intermediary struggles badly.\n\nOn our side the booking runs in Arabic too: the WhatsApp exchange, the draft programme, the price confirmation and the pre-arrival briefing — all in the same language. A detail misunderstood before the journey starts is the hardest thing to fix once it has."
+        },
+      },
     ],
   },
   {
     slug: "bursa-uludag-gunubirlik",
     topic: "daytrips",
     image: "/images/places/bursa-koy-sokak.jpg",
-    minutes: 4,
+    minutes: 6,
     title: {
       tr: "Bursa ve Uludağ: İstanbul'dan günübirlik rehber",
       ar: "بورصة وأولوداغ: دليل رحلة يوم واحد من إسطنبول",
@@ -1187,6 +1235,30 @@ export const guides: Guide[] = [
           tr: "Ulu Cami ve yanındaki Koza Han, Bursa'nın ipek ticareti geçmişini bir arada gösterir. Yeşil Türbe kısa bir sürüşle ulaşılabilir. Gün, UNESCO listesindeki Cumalıkızık köyünde kahvaltı ya da çay molasıyla kapanır; taş sokakları dar ve eğimlidir, rahat ayakkabı gerekir.",
           ar: "الجامع الكبير وخان الحرير المجاور له يظهران معاً ماضي بورصة في تجارة الحرير. والتربة الخضراء تُبلغ بقيادة قصيرة. ويُختتم اليوم باستراحة فطور أو شاي في قرية جوما لي كيزيك المدرجة في اليونسكو؛ وأزقتها الحجرية ضيقة ومائلة، فيلزم حذاء مريح.",
           en: "The Ulu Mosque and the adjoining Koza Han show Bursa's silk-trading past together. The Green Tomb is a short drive away. The day closes with breakfast or tea in Cumalikizik, a UNESCO-listed village; its stone lanes are narrow and sloping, so comfortable shoes matter.",
+        },
+      },
+      {
+        heading: {
+          tr: "Günü nasıl kurmalı: saat saat",
+          ar: "كيف تبني اليوم: ساعة بساعة",
+          en: "How to shape the day, hour by hour",
+        },
+        body: {
+          tr: "Günübirlik Bursa'nın tamamı yolun nasıl planlandığına bağlı. Sabah erken çıkmak şart: sekizde yola çıkan bir grup on buçukta Bursa'da oluyor, dokuz buçukta çıkan öğlene kalıyor ve gün yarıya iniyor.\n\nÖnerilen sıra şu: önce teleferik, çünkü sis ve rüzgâr genellikle öğleden sonra artıyor ve seferler o saatlerde daha çok durduruluyor. Zirvede bir-bir buçuk saat yeterli.\n\nİnişten sonra şehir merkezi: Ulu Cami, Yeşil Türbe ve Koza Han yürüme mesafesinde. Koza Han'ın avlusundaki çay bahçesi öğle molasının doğal yeri; İskender kebap da bu bölgede.\n\nGün Cumalıkızık'ta bitiyor. Köy merkeze on kilometre ve ikindi ışığı taş sokaklarda en güzel hâlinde. Kahvaltı sunan avlular öğleden sonra da açık oluyor.\n\nDönüş için feribot saatini önceden ayarlamak gerekiyor; son seferi kaçırmak karayoluyla iki buçuk saat demek. Bu yüzden gün planı feribot saatine göre kuruluyor, tersi değil.",
+          ar: "يوم بورصة الواحد يعتمد كلّه على كيفية تخطيط الطريق. والخروج باكراً ضروري: فمن ينطلق في الثامنة يكون في بورصة في العاشرة والنصف، ومن ينطلق في التاسعة والنصف يصل ظهراً فينكمش اليوم إلى نصفه.\n\nوالترتيب المقترح: التلفريك أولاً، لأن الضباب والريح يشتدّان بعد الظهر عادةً وتُوقَف الرحلات في تلك الساعات أكثر. وساعة إلى ساعة ونصف في القمة تكفي.\n\nوبعد النزول مركز المدينة: الجامع الكبير والضريح الأخضر وخان كوزا على مسافة مشي. ومقهى الشاي في فناء خان كوزا هو المكان الطبيعي لاستراحة الغداء؛ وكباب الإسكندر في هذه المنطقة أيضاً.\n\nوينتهي اليوم في جومالي كيزيك. والقرية على عشرة كيلومترات من المركز، وضوء العصر أجمل ما يكون على الأزقّة الحجرية. والأفنية التي تقدّم الفطور تبقى مفتوحة بعد الظهر أيضاً.\n\nويلزم ضبط موعد العبّارة للعودة مسبقاً؛ ففوات آخر رحلة يعني ساعتين ونصف برّاً. ولذلك يُبنى برنامج اليوم على موعد العبّارة لا العكس.",
+          en: "A day trip to Bursa depends entirely on how the travel is planned. Leaving early is essential: a group setting off at eight is in Bursa by half past ten; one leaving at half past nine arrives at midday and the day halves.\n\nThe suggested order: the cable car first, because mist and wind usually pick up in the afternoon and services are stopped more often then. An hour to an hour and a half at the top is enough.\n\nAfter coming down, the city centre: the Grand Mosque, the Green Tomb and Koza Han are within walking distance. The tea garden in Koza Han's courtyard is the natural place for a midday break; İskender kebab is in the same area.\n\nThe day ends at Cumalıkızık. The village is ten kilometres from the centre and the late-afternoon light is at its best on the stone lanes. The courtyards that serve breakfast stay open into the afternoon.\n\nThe return ferry time has to be fixed in advance; missing the last sailing means two and a half hours by road. So the day is built around the ferry time, not the other way round."
+        },
+      },
+      {
+        heading: {
+          tr: "Bir gece kalmak neyi değiştirir",
+          ar: "ماذا يغيّر المبيت ليلة",
+          en: "What staying a night changes",
+        },
+        body: {
+          tr: "Günübirlik Bursa ana başlıkları görmeye yetiyor ama günün iki buçuk saati yolda geçiyor ve tempo sıkışık. Bir gece kalmak bu tabloyu değiştiriyor.\n\nİkinci gün ortaya çıkan seçenekler: Uludağ'a teleferikle çıkıp yukarıda daha uzun kalmak, kaplıcalara gitmek (Çekirge bölgesi termal otelleriyle biliniyor), İznik'e geçmek ya da Cumalıkızık'ta kahvaltıyı acele etmeden yapmak.\n\nKüçük çocuklu ailelerde fark daha büyük: günübirlikte çocuk yolda yoruluyor ve ikinci yarıda program işlemiyor. Bir gecelik konaklama günü ikiye bölüyor ve iki gün de rahat geçiyor.\n\nBursa'da konaklama İstanbul'a göre belirgin biçimde uygun; termal otelleri de aynı bütçede daha iyi karşılık veriyor.\n\nAltı günlük İstanbul–Bursa programımız bu ikinci düzene göre kurulu: dört gün İstanbul, ardından Bursa'da bir gece. Günübirlik isteyen misafire de on saatlik tur veriyoruz — ikisi ayrı hizmet ve hangisinin size uyduğunu tarih ve kişi sayısına bakarak birlikte seçiyoruz.",
+          ar: "رحلة اليوم الواحد إلى بورصة تكفي لرؤية العناوين الرئيسية، لكن ساعتين ونصف من اليوم تمضي على الطريق والإيقاع ضيّق. والمبيت ليلة يغيّر هذه الصورة.\n\nوالخيارات التي تظهر في اليوم الثاني: الصعود بالتلفريك إلى أولوداغ والبقاء فوق مدة أطول، أو الذهاب إلى الحمّامات المعدنية (منطقة تشكيرغه معروفة بفنادقها الحرارية)، أو الانتقال إلى إزنيك، أو تناول الفطور في جومالي كيزيك دون استعجال.\n\nوالفرق أكبر عند العائلات ذات الأطفال الصغار: ففي رحلة اليوم الواحد يتعب الطفل على الطريق ولا يعمل البرنامج في نصفه الثاني. والمبيت ليلة يقسم اليوم إلى قسمين فيمرّ اليومان بأريحية.\n\nوالإقامة في بورصة أنسب بوضوح منها في إسطنبول؛ وفنادقها الحرارية تعطي مقابلاً أفضل بالميزانية نفسها.\n\nوبرنامجنا إسطنبول–بورصة من ستة أيام مبنيّ على هذا الترتيب الثاني: أربعة أيام في إسطنبول ثم ليلة في بورصة. ونقدّم لمن يريد رحلة يوم واحد جولةً من عشر ساعات — وهما خدمتان مختلفتان، ونختار معاً أيّهما يناسبك بالنظر إلى التاريخ وعدد الأشخاص.",
+          en: "A day trip to Bursa is enough for the headlines, but two and a half hours of the day go on the road and the pace is tight. Staying a night changes that picture.\n\nThe options that open up on a second day: taking the cable car up Uludağ and staying longer at the top, going to the thermal baths (the Çekirge district is known for its spa hotels), crossing to İznik, or having breakfast at Cumalıkızık without hurrying.\n\nThe difference is larger for families with small children: on a day trip the child tires on the road and the second half of the programme stops working. A night splits the day in two and both days pass comfortably.\n\nAccommodation in Bursa is noticeably kinder than in Istanbul, and its thermal hotels give better value at the same budget.\n\nOur six-day Istanbul–Bursa programme is built on that second pattern: four days in Istanbul, then a night in Bursa. For guests who want the day trip we run a ten-hour tour — they are two different services, and we choose together which suits you by looking at the dates and the number of people."
         },
       },
     ],

@@ -19,6 +19,7 @@ import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { RouteCoverage } from "@/components/site/route-coverage";
+import { ServiceSections } from "@/components/site/service-sections";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { FaqPreview } from "@/components/site/faq-preview";
 import { ClosingCta } from "@/components/site/transfer-sections";
@@ -377,6 +378,8 @@ export default async function TourDetailPage({
           </aside>
         </div>
       </section>
+
+      <ServiceSections serviceKey={tour.key} namespace="tours" />
 
       <RouteCoverage locale={locale} />
 

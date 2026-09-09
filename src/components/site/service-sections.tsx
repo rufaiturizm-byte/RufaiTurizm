@@ -20,8 +20,21 @@ import { headingId } from "@/lib/heading-id";
  */
 type Bolum = { heading: string; body: string };
 
-export async function ServiceSections({ serviceKey }: { serviceKey: string }) {
-  const t = await getTranslations("services");
+export async function ServiceSections({
+  serviceKey,
+  /*
+   * Hangi mesaj ad alanından okunacağı.
+   *
+   * Aynı düzen hem hizmet hem tur sayfalarında gerekiyordu: ikisinde de
+   * ziyaretçi tek bir soruya cevap arıyor ve ikisinde de sabit alanlar
+   * yetmiyordu. Ad alanını dışarıdan almak, bileşeni kopyalamaktan iyi.
+   */
+  namespace = "services",
+}: {
+  serviceKey: string;
+  namespace?: "services" | "tours";
+}) {
+  const t = await getTranslations(namespace);
   if (!t.has(`${serviceKey}.sections`)) return null;
 
   const bolumler = t.raw(`${serviceKey}.sections`) as Bolum[] | undefined;

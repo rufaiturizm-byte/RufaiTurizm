@@ -42,9 +42,23 @@ export async function generateMetadata({
   const from = route.from[lang] ?? route.from.tr;
   const to = route.to[lang] ?? route.to.tr;
 
+  /*
+   * Arapçada virgül "،" (U+060C), Latin "," değil.
+   *
+   * Bu satır mesafe ile süreyi ayırırken üç dilde de Latin virgülü
+   * basıyordu: Arapça arama sonucunda "نحو 50 كم, ساعة – ساعة ونصف"
+   * çıkıyordu. Yanlış virgül metnin içinde yabancı bir işaret gibi
+   * duruyor ve sağdan sola akışta gözü tam ters yöne çengelliyor.
+   *
+   * Küçük bir ayrıntı ama görüldüğü yer küçük değil: meta açıklaması
+   * arama sonucunda okunan iki satırdan biri ve bu şablon her güzergâh
+   * sayfasında çalışıyor.
+   */
+  const virgul = lang === "ar" ? "،" : ",";
+
   return {
     title: routeTitle(from, to, locale),
-    description: `${route.excerpt[lang] ?? route.excerpt.tr} ${route.distance[lang] ?? route.distance.tr}, ${route.duration[lang] ?? route.duration.tr}.`,
+    description: `${route.excerpt[lang] ?? route.excerpt.tr} ${route.distance[lang] ?? route.distance.tr}${virgul} ${route.duration[lang] ?? route.duration.tr}.`,
     openGraph: { images: [route.image] },
     alternates: alternatesFor({ pathname: "/transfer/[route]", params: { route: slug } }, locale),
   };

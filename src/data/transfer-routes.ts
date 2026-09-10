@@ -5,13 +5,19 @@
  * "İstanbul havalimanından Sultanahmet'e" diye arıyor. Transfer sayfası bu
  * aramaların hepsini tek başına karşılayamaz.
  *
- * NEDEN 43 DEĞİL 7: `routes.ts` içinde 43 semt var ve bunların hepsi için
- * şablondan sayfa üretmek teknik olarak kolay. Üretmedik — aralarındaki tek
- * fark semt adı olan 43 sayfa ince içeriktir (thin content) ve arama
- * motorunda faydadan çok zarar getirir. Buradaki yedi güzergâhın her biri
- * gerçekten farklı bir yolculuk: farklı mesafe, farklı köprü, farklı trafik
- * saati, varışta farklı semt. Anlatacak ayrı şeyi olmayan bir güzergâh
- * buraya girmiyor.
+ * NEDEN HEPSİ DEĞİL: `routes.ts` içinde 58 varış noktası var ve bunların
+ * hepsi için şablondan sayfa üretmek teknik olarak kolay. Üretmiyoruz —
+ * aralarındaki tek fark semt adı olan onlarca sayfa ince içeriktir (thin
+ * content) ve arama motorunda faydadan çok zarar getirir. Buradaki
+ * güzergâhların her biri gerçekten farklı bir yolculuk: farklı mesafe,
+ * farklı köprü, farklı trafik saati, varışta farklı semt. Anlatacak ayrı
+ * şeyi olmayan bir güzergâh buraya girmiyor.
+ *
+ * Eşik uygulandığı için ELENENLER de var. Ataşehir, Beyoğlu ve Şişli
+ * için sayfa açılmadı: üçü de zaten sayfası olan bir güzergâhla aynı
+ * bölge grubunda (Ataşehir–Kadıköy, Beyoğlu–Taksim, Şişli–Taksim) ve
+ * aralarındaki tek fark semt adı olurdu. Sayfa sayısını artırmak
+ * kolaydı; eşiği korumak asıl iş.
  *
  * Mesafe ve süreler YAKLAŞIK ve öyle yazılıyor: dakika taahhüdü vermek,
  * trafiğin belirlediği bir şeyi garanti etmek olur.
@@ -720,6 +726,317 @@ export const transferRoutes: TransferRoute[] = [
     ],
   },
   /*
+   * ─── Boğaz'ı geçen üç güzergâh ───────────────────────────────────
+   *
+   * Yukarıdaki yedi güzergâhın hepsi ya aynı yakada kalıyor ya da
+   * Avrupa yakası içinde. Oysa misafirlerin sorduğu sorulardan biri tam
+   * olarak KARŞI yakaya geçmek: Sabiha Gökçen'e inip tarihî yarımadada
+   * kalmak ya da İstanbul Havalimanı'na inip Kadıköy'de kalmak.
+   *
+   * Bu üçü dosyanın başındaki eşiği geçtikleri için burada: her birinde
+   * Boğaz geçişi var, yani süreyi belirleyen şey mesafe değil KÖPRÜ ve
+   * saat. Anlatacakları da bu. Ataşehir, Beyoğlu ve Şişli için sayfa
+   * AÇILMADI — onlar yukarıdaki güzergâhlarla aynı bölgede ve aralarındaki
+   * tek fark semt adı olurdu.
+   *
+   * Süreler hotels.ts'teki bölge kayıtlarından geliyor (aynı semtler için
+   * orada zaten doğrulanmış); mesafeler yaklaşık ve öyle yazılıyor.
+   */
+  {
+    slug: "sabiha-gokcen-sultanahmet-transfer",
+    airport: "SAW",
+    /* Kare Sultanahmet değil, Haliç'ten Süleymaniye ve Eminönü sırtı —
+       yani tarihî yarımada ama başka bir noktası. Alt metin onu söylüyor. */
+    image: "/images/places/suleymaniye.jpg",
+    imageAlt: {
+      tr: "Haliç'ten tarihî yarımada ve Süleymaniye Camii",
+      ar: "شبه الجزيرة التاريخية وجامع السليمانية من القرن الذهبي",
+      en: "The historic peninsula and the Suleymaniye Mosque from the Golden Horn",
+    },
+    from: { tr: "Sabiha Gökçen (SAW)", ar: "صبيحة كوكجن (SAW)", en: "Sabiha Gokcen (SAW)" },
+    to: { tr: "Sultanahmet", ar: "السلطان أحمد", en: "Sultanahmet" },
+    distance: { tr: "yaklaşık 50 km", ar: "نحو 50 كم", en: "about 50 km" },
+    duration: { tr: "1 – 1,5 saat", ar: "ساعة – ساعة ونصف", en: "1 – 1.5 hrs" },
+    excerpt: {
+      tr: "Anadolu yakasından tarihî yarımadaya: süreyi mesafe değil köprü belirliyor.",
+      ar: "من الجانب الآسيوي إلى شبه الجزيرة التاريخية: الجسر لا المسافة هو ما يحدّد المدة.",
+      en: "From the Asian side to the historic peninsula: the bridge, not the distance, sets the time.",
+    },
+    sections: [
+      {
+        heading: {
+          tr: "Köprü süreyi mesafeden çok belirliyor",
+          ar: "الجسر يحدّد المدة أكثر من المسافة",
+          en: "The bridge matters more than the distance",
+        },
+        body: {
+          tr: "Sabiha Gökçen Anadolu yakasında, Sultanahmet ise Avrupa yakasında; yani bu güzergâhta Boğaz geçişi zorunlu. Yaklaşık 50 kilometrelik yolun büyük bölümü otoyol olsa da süreyi belirleyen şey köprüye giriş saati. Aynı yakada kalan Kadıköy transferi 40 dakikada biterken bu güzergâh bir ile bir buçuk saat arasında değişiyor.",
+          ar: "مطار صبيحة كوكجن في الجانب الآسيوي والسلطان أحمد في الجانب الأوروبي؛ أي أن عبور البوسفور إلزامي في هذا المسار. ورغم أن معظم الطريق البالغ نحو 50 كيلومتراً أوتوستراد، فإن ما يحدّد المدة هو ساعة الدخول إلى الجسر. فبينما تنتهي رحلة كاديكوي التي تبقى في الجانب نفسه خلال 40 دقيقة، تتراوح هذه الرحلة بين ساعة وساعة ونصف.",
+          en: "Sabiha Gokcen is on the Asian side and Sultanahmet on the European one, so this route must cross the Bosphorus. Although most of the roughly 50 km is motorway, what sets the time is when you reach the bridge. The Kadikoy transfer, staying on the same side, ends in 40 minutes; this one runs between one and one and a half hours.",
+        },
+      },
+      {
+        heading: {
+          tr: "Sultanahmet'te araçtan inmek",
+          ar: "النزول من السيارة في السلطان أحمد",
+          en: "Getting out of the car in Sultanahmet",
+        },
+        body: {
+          tr: "Tarihî yarımadanın sokakları arnavut kaldırımı ve yokuşlu; bazıları tek yön, bazı oteller de araç giremeyen aralıklarda. Şoför otele en yakın noktaya kadar getiriyor ve bavulları oraya kadar taşıyor. Bavulla ve bebek arabasıyla gelen aileler için bu ayrıntı, otel seçilirken bilinmesi gereken bir şey.",
+          ar: "شوارع شبه الجزيرة التاريخية مرصوفة بالحجارة وذات منحدرات؛ بعضها باتجاه واحد، وبعض الفنادق في أزقّة لا تدخلها السيارات. يوصلك السائق إلى أقرب نقطة ممكنة من الفندق ويحمل الحقائب إلى هناك. وهذه تفصيلة ينبغي معرفتها عند اختيار الفندق للعائلات القادمة بحقائب أو بعربة أطفال.",
+          en: "The streets of the historic peninsula are cobbled and steep; some are one-way and some hotels sit in lanes cars cannot enter. The driver brings you to the closest reachable point and carries the bags from there. For families arriving with luggage or a stroller, this is worth knowing when choosing the hotel.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu bölgede kalacaksanız",
+          ar: "إذا كنت ستقيم في هذه المنطقة",
+          en: "If you are staying in this area",
+        },
+        body: {
+          tr: "Sultanahmet, T1 tramvay hattının üzerinde ve Eminönü vapur iskelesi yürüme mesafesinde; Taksim'e tramvay ve füniküler aktarmasıyla yaklaşık 25 dakika. Ayasofya, Sultanahmet Camii ve Topkapı yürüyerek gezilebiliyor. Akşam sekizden sonra sokaklar sakinleşiyor ve restoran seçeneği azalıyor — geç saatte hareketlilik arayan misafir için Taksim tarafı daha uygun.",
+          ar: "تقع السلطان أحمد على خط الترام T1 ومرفأ إمينونو على مسافة مشي؛ والوصول إلى تقسيم نحو 25 دقيقة بالترام ثم القطار المائل. ويمكن زيارة آيا صوفيا وجامع السلطان أحمد وتوب كابي سيراً على الأقدام. وبعد الثامنة مساءً تهدأ الشوارع وتقلّ خيارات المطاعم — ومن يبحث عن حركة في وقت متأخر فجهة تقسيم أنسب له.",
+          en: "Sultanahmet sits on the T1 tram line with the Eminonu ferry pier within walking distance; Taksim is about 25 minutes away by tram and funicular. Hagia Sophia, the Blue Mosque and Topkapi are all walkable. After eight in the evening the streets quieten and restaurant choice narrows — guests who want late-night life are better placed around Taksim.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Sabiha Gökçen'den Sultanahmet'e kaç km ve ne kadar sürer?",
+          ar: "كم تبعد السلطان أحمد عن مطار صبيحة كوكجن وكم تستغرق الرحلة؟",
+          en: "How far is Sultanahmet from Sabiha Gökçen and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 50 kilometre ve bir ile bir buçuk saat arası. Süre büyük ölçüde Boğaz köprüsüne giriş saatine bağlı; sabah ve akşam yoğun saatlerinde üst sınıra yaklaşıyor.",
+          ar: "نحو 50 كيلومتراً وما بين ساعة وساعة ونصف. وتعتمد المدة إلى حدّ كبير على ساعة الدخول إلى جسر البوسفور؛ وتقترب من الحدّ الأعلى في ذروتي الصباح والمساء.",
+          en: "About 50 km and between one and one and a half hours. The time depends largely on when you reach the Bosphorus bridge; at the morning and evening peaks it approaches the upper end.",
+        },
+      },
+      {
+        question: {
+          tr: "İstanbul Havalimanı'ndan gelmek daha mı kısa?",
+          ar: "هل القدوم من مطار إسطنبول أقصر؟",
+          en: "Is coming from Istanbul Airport shorter?",
+        },
+        answer: {
+          tr: "Genelde evet: İstanbul Havalimanı Sultanahmet ile aynı yakada olduğu için köprü geçişi yok ve süre yaklaşık 45–70 dakika. Ama bu, uçuşunuzu değiştirmeniz gerektiği anlamına gelmiyor — hangi havalimanına inerseniz inin karşılama aynı şekilde yapılıyor.",
+          ar: "غالباً نعم: فمطار إسطنبول في الجانب نفسه للسلطان أحمد، أي بلا عبور جسر، والمدة نحو 45–70 دقيقة. لكن هذا لا يعني أن عليك تغيير رحلتك — فالاستقبال يتم بالطريقة نفسها أياً كان المطار الذي تصل إليه.",
+          en: "Usually yes: Istanbul Airport is on the same side as Sultanahmet, so there is no bridge crossing and the run is about 45–70 minutes. That does not mean you should change your flight — the meet and greet works the same way whichever airport you land at.",
+        },
+      },
+      {
+        question: {
+          tr: "Araç otelin kapısına kadar girebiliyor mu?",
+          ar: "هل تصل السيارة حتى باب الفندق؟",
+          en: "Can the car reach the hotel door?",
+        },
+        answer: {
+          tr: "Çoğu otelde evet. Ancak tarihî yarımadada araç giremeyen dar aralıklar ve yaya bölgeleri var; oradaki otellerde şoför en yakın noktaya kadar getirip bavulları taşıyor. Otel adını rezervasyonda yazarsanız hangi durumda olduğunu önceden söyleyebiliyoruz.",
+          ar: "في معظم الفنادق نعم. لكن في شبه الجزيرة التاريخية أزقّة ضيّقة ومناطق مشاة لا تدخلها السيارات؛ وفي تلك الفنادق يوصلك السائق إلى أقرب نقطة ويحمل الحقائب. وإذا كتبت اسم الفندق عند الحجز نستطيع إخبارك مسبقاً بأي الحالتين ينطبق عليك.",
+          en: "At most hotels, yes. But the historic peninsula has narrow lanes and pedestrian zones cars cannot enter; at those hotels the driver stops at the nearest point and carries the bags. Tell us the hotel name at booking and we can say in advance which case applies.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "istanbul-havalimani-kadikoy-transfer",
+    airport: "IST",
+    /* Kare Kadıköy'ün kendisi değil: gün batımında vapur ve tarihî
+       yarımada silueti. Vapur bu güzergâhın hikâyesinin parçası —
+       karşı yakaya geçmenin öbür yolu o — ama kare Kadıköy diye
+       etiketlenemez. (kadikoy.jpg zaten SAW güzergâhında kullanılıyor.) */
+    image: "/images/places/bogaz-vapur.jpg",
+    imageAlt: {
+      tr: "Gün batımında Boğaz'da vapur, arkada tarihî yarımada silueti",
+      ar: "عبّارة في البوسفور عند الغروب، وخلفها ظلّ شبه الجزيرة التاريخية",
+      en: "A ferry on the Bosphorus at sunset, the historic peninsula behind",
+    },
+    from: { tr: "İstanbul Havalimanı (IST)", ar: "مطار إسطنبول (IST)", en: "Istanbul Airport (IST)" },
+    to: { tr: "Kadıköy", ar: "كاديكوي", en: "Kadikoy" },
+    distance: { tr: "yaklaşık 60 km", ar: "نحو 60 كم", en: "about 60 km" },
+    duration: { tr: "1 – 1,5 saat", ar: "ساعة – ساعة ونصف", en: "1 – 1.5 hrs" },
+    excerpt: {
+      tr: "Avrupa yakasındaki havalimanından Anadolu yakasına: sitedeki en uzun İstanbul içi transfer.",
+      ar: "من المطار في الجانب الأوروبي إلى الجانب الآسيوي: أطول نقل داخل إسطنبول في الموقع.",
+      en: "From the European-side airport to the Asian side: the longest inner-Istanbul transfer here.",
+    },
+    sections: [
+      {
+        heading: {
+          tr: "Şehri boydan boya geçen yol",
+          ar: "طريق يعبر المدينة من طرف إلى طرف",
+          en: "A road that crosses the city end to end",
+        },
+        body: {
+          tr: "İstanbul Havalimanı şehrin kuzeybatısında, Kadıköy ise Anadolu yakasında; arada hem şehir hem Boğaz var. Yaklaşık 60 kilometrelik bu yol sitedeki en uzun İstanbul içi güzergâh ve bir ile bir buçuk saat sürüyor. Sabiha Gökçen'e inen bir uçuş bulunabiliyorsa Kadıköy'e oradan gitmek yarı yarıya kısa — 35 kilometre ve köprüsüz.",
+          ar: "مطار إسطنبول في شمال غرب المدينة وكاديكوي في الجانب الآسيوي؛ وبينهما المدينة والبوسفور معاً. وهذا الطريق البالغ نحو 60 كيلومتراً هو أطول مسار داخل إسطنبول في الموقع ويستغرق بين ساعة وساعة ونصف. وإن توفّرت رحلة تهبط في صبيحة كوكجن فالوصول إلى كاديكوي من هناك أقصر بالنصف — 35 كيلومتراً وبلا جسر.",
+          en: "Istanbul Airport lies northwest of the city and Kadikoy on the Asian side, with both the city and the Bosphorus in between. At roughly 60 km this is the longest inner-Istanbul route here, taking one to one and a half hours. If a flight into Sabiha Gokcen is available, reaching Kadikoy from there is half the distance — 35 km and no bridge.",
+        },
+      },
+      {
+        heading: {
+          tr: "Kadıköy turistik değil, yerel bir semt",
+          ar: "كاديكوي حيّ محلي لا سياحي",
+          en: "Kadikoy is a local neighbourhood, not a tourist one",
+        },
+        body: {
+          tr: "Çarşısı, sahil yürüyüş hattı ve Moda'daki kafeleriyle Kadıköy, Anadolu yakasının merkezi. Sultanahmet ya da Taksim gibi turistik bir bölge değil; sessizlik ve gündelik hayat arayan misafir için avantaj, her gün tarihî yarımadaya gidecek olan için ise her gün Boğaz'ı geçmek demek.",
+          ar: "بسوقها وممشاها الساحلي ومقاهي مودا، كاديكوي هي مركز الجانب الآسيوي. وهي ليست منطقة سياحية كالسلطان أحمد أو تقسيم؛ ما يجعلها ميزة لمن يبحث عن الهدوء والحياة اليومية، أما من سيذهب يومياً إلى شبه الجزيرة التاريخية فيعني ذلك عبور البوسفور كل يوم.",
+          en: "With its market, seaside promenade and the cafés of Moda, Kadikoy is the heart of the Asian side. It is not a tourist district like Sultanahmet or Taksim; that is an advantage for guests who want quiet and everyday life, but for anyone heading to the historic peninsula daily it means crossing the Bosphorus every day.",
+        },
+      },
+      {
+        heading: {
+          tr: "Karşı yakaya geçmenin en keyifli yolu",
+          ar: "أمتع طريقة للعبور إلى الجانب الآخر",
+          en: "The most enjoyable way to cross",
+        },
+        body: {
+          tr: "Kadıköy'den Avrupa yakasına vapurla yaklaşık 20–25 dakika ve bu, Boğaz'ı görmenin en ucuz yolu. Marmaray ve M4 metro hattı da bölgeyi hem havalimanına hem karşı yakaya bağlıyor. Yani transferden sonra günlük ulaşım için araca ihtiyaç duymuyorsunuz.",
+          ar: "العبور من كاديكوي إلى الجانب الأوروبي بالعبّارة نحو 20–25 دقيقة، وهو أرخص طريقة لرؤية البوسفور. كما يربط خط مرمراي وخط المترو M4 المنطقة بالمطار وبالجانب الآخر معاً. أي أنك لن تحتاج سيارة للتنقّل اليومي بعد وصولك.",
+          en: "The ferry from Kadikoy to the European side takes about 20–25 minutes and is the cheapest way to see the Bosphorus. Marmaray and the M4 metro also connect the area to both the airport and the other side. So after the transfer you do not need a car for daily travel.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "İstanbul Havalimanı'ndan Kadıköy'e kaç km ve ne kadar sürer?",
+          ar: "كم تبعد كاديكوي عن مطار إسطنبول وكم تستغرق الرحلة؟",
+          en: "How far is Kadıköy from Istanbul Airport and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 60 kilometre ve bir ile bir buçuk saat arası. Yol hem şehri hem Boğaz'ı geçtiği için süre trafiğe ve köprüye giriş saatine göre değişiyor.",
+          ar: "نحو 60 كيلومتراً وما بين ساعة وساعة ونصف. ولأن الطريق يعبر المدينة والبوسفور معاً، تتغيّر المدة بحسب الزحام وساعة الدخول إلى الجسر.",
+          en: "About 60 km and between one and one and a half hours. Because the road crosses both the city and the Bosphorus, the time varies with traffic and when you reach the bridge.",
+        },
+      },
+      {
+        question: {
+          tr: "Kadıköy'de kalıp tarihî yerleri gezebilir miyim?",
+          ar: "هل يمكنني الإقامة في كاديكوي وزيارة الأماكن التاريخية؟",
+          en: "Can I stay in Kadıköy and still visit the historic sites?",
+        },
+        answer: {
+          tr: "Evet, ama her gün Boğaz'ı geçmeniz gerekir. Vapurla yaklaşık 20–25 dakika ve keyifli bir geçiş; yine de günlük programa gidiş-dönüş için pay eklemek gerekiyor. Tarihî yarımadaya her gün gidecekseniz Sultanahmet tarafında kalmak zaman kazandırır.",
+          ar: "نعم، لكن عليك عبور البوسفور يومياً. والعبّارة تستغرق نحو 20–25 دقيقة وهي رحلة ممتعة؛ ومع ذلك ينبغي إضافة هامش للذهاب والإياب إلى البرنامج اليومي. وإن كنت ستذهب يومياً إلى شبه الجزيرة التاريخية فالإقامة في جهة السلطان أحمد توفّر الوقت.",
+          en: "Yes, but you will cross the Bosphorus every day. The ferry takes about 20–25 minutes and is a pleasant trip; even so, add margin for the round trip to your daily plan. If you are going to the historic peninsula every day, staying on the Sultanahmet side saves time.",
+        },
+      },
+      {
+        question: {
+          tr: "Dönüş uçuşu için evden kaçta çıkmalıyım?",
+          ar: "متى ينبغي أن أنطلق من مكان الإقامة لرحلة العودة؟",
+          en: "When should I leave for my return flight?",
+        },
+        answer: {
+          tr: "Bu güzergâh dönüşte sabah trafiğine denk gelirse uzuyor. Uçuş saatinden geriye doğru hesaplarken yolun yanı sıra bagaj teslimi ve güvenlik kuyruğu için de pay bırakmak gerekir; kalkış saatini rezervasyonda birlikte belirliyoruz.",
+          ar: "يطول هذا المسار في العودة إن صادف زحام الصباح. وعند الحساب رجوعاً من موعد الإقلاع يجب ترك هامش للطريق ولتسليم الحقائب وطابور الأمن أيضاً؛ ونحدّد ساعة الانطلاق معك أثناء الحجز.",
+          en: "This route stretches on the way back if it meets morning traffic. Counting back from your departure time, leave margin for the road as well as bag drop and the security queue; we set the pickup time with you at booking.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "sabiha-gokcen-besiktas-ortakoy-transfer",
+    airport: "SAW",
+    /* Kare Beşiktaş ya da Ortaköy değil, Boğaz kıyısındaki yalılar —
+       bu güzergâhın varış hattı o kıyı. (hero-ortakoy.jpg IST
+       güzergâhında kullanılıyor, aynı kare iki sayfada olmasın.) */
+    image: "/images/places/bogaz-yali.jpg",
+    imageAlt: {
+      tr: "Boğaz kıyısında yalılar, denizden görünüm",
+      ar: "قصور خشبية على ضفة البوسفور، منظر من البحر",
+      en: "Waterfront mansions along the Bosphorus, seen from the water",
+    },
+    from: { tr: "Sabiha Gökçen (SAW)", ar: "صبيحة كوكجن (SAW)", en: "Sabiha Gokcen (SAW)" },
+    to: { tr: "Beşiktaş ve Ortaköy", ar: "بشكتاش وأورتاكوي", en: "Besiktas and Ortakoy" },
+    distance: { tr: "yaklaşık 45 km", ar: "نحو 45 كم", en: "about 45 km" },
+    duration: { tr: "45 dk – 1 saat 20 dk", ar: "45 دقيقة – ساعة و20 دقيقة", en: "45 min – 1 hr 20 min" },
+    excerpt: {
+      tr: "Köprüyü geçtikten sonra sahil yolu başlıyor; akşam saatleri süreyi belirliyor.",
+      ar: "بعد عبور الجسر يبدأ الطريق الساحلي؛ وساعات المساء هي ما يحدّد المدة.",
+      en: "After the bridge comes the coastal road; the evening hours decide the timing.",
+    },
+    sections: [
+      {
+        heading: {
+          tr: "Köprü ve ardından sahil yolu",
+          ar: "الجسر ثم الطريق الساحلي",
+          en: "The bridge, then the coastal road",
+        },
+        body: {
+          tr: "Sabiha Gökçen'den Boğaz'ı geçip Beşiktaş'a inen bu güzergâh yaklaşık 45 kilometre. Yolun iki ayrı karakteri var: köprüye kadar otoyol, sonrasında sahil yolu. Süre 45 dakika ile bir saat 20 dakika arasında değişiyor ve sapmanın büyük kısmı ikinci bölümden geliyor — sahil trafiği akşam saatlerinde ağırlaşıyor.",
+          ar: "هذا المسار الذي يعبر البوسفور من صبيحة كوكجن نزولاً إلى بشكتاش يبلغ نحو 45 كيلومتراً. وللطريق طابعان: أوتوستراد حتى الجسر، ثم طريق ساحلي بعده. وتتراوح المدة بين 45 دقيقة وساعة و20 دقيقة، ومعظم الفارق يأتي من القسم الثاني — إذ يثقل الزحام الساحلي في ساعات المساء.",
+          en: "Crossing the Bosphorus from Sabiha Gokcen down to Besiktas covers about 45 km. The road has two characters: motorway up to the bridge, then the coastal road. The run takes between 45 minutes and an hour and 20, and most of that variation comes from the second half — shore traffic thickens in the evening.",
+        },
+      },
+      {
+        heading: {
+          tr: "Sahilde araçtan inmek",
+          ar: "النزول من السيارة على الساحل",
+          en: "Getting out of the car on the shore",
+        },
+        body: {
+          tr: "Beşiktaş ve Ortaköy sahil boyunca uzanıyor ve metro doğrudan sahile inmiyor; bölgede günlük ulaşım için kısa bir araç ya da otobüs yolculuğu gerekiyor. Buna karşılık sahil boyunca vapur iskeleleri var — Beşiktaş'tan Üsküdar ve Kadıköy'e vapurla geçiliyor.",
+          ar: "تمتدّ بشكتاش وأورتاكوي على طول الساحل، والمترو لا ينزل إلى الساحل مباشرة؛ فالتنقّل اليومي في المنطقة يتطلّب رحلة قصيرة بالسيارة أو الحافلة. في المقابل هناك مرافئ عبّارات على طول الساحل — فمن بشكتاش يُعبر إلى أسكودار وكاديكوي بالعبّارة.",
+          en: "Besiktas and Ortakoy run along the shore, and the metro does not come down to the waterfront; getting around locally needs a short car or bus ride. In return there are ferry piers all along the coast — from Besiktas you can cross to Uskudar and Kadikoy by boat.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu bölgede kalacaksanız",
+          ar: "إذا كنت ستقيم في هذه المنطقة",
+          en: "If you are staying in this area",
+        },
+        body: {
+          tr: "Manzara, İstanbul'da otel fiyatını en çok değiştiren unsur ve manzaralı oda otelin her tarafında olmuyor — rezervasyonda ayrıca sorulması gereken bir şey. Bölge merkeze yakın ama tarihî noktalara yürüme mesafesinde değil; Sultanahmet'e her gidiş ayrı bir yolculuk demek.",
+          ar: "الإطلالة هي أكثر ما يغيّر سعر الفندق في إسطنبول، والغرفة ذات الإطلالة ليست في كل أنحاء الفندق — وهو أمر ينبغي سؤاله تحديداً عند الحجز. والمنطقة قريبة من المركز لكنها ليست على مسافة مشي من المعالم التاريخية؛ فكل ذهاب إلى السلطان أحمد رحلة قائمة بذاتها.",
+          en: "A view changes hotel prices in Istanbul more than anything else, and a view room is not available in every part of a hotel — ask for it specifically when booking. The area is close to the centre but not within walking distance of the historic sights; every trip to Sultanahmet is a journey of its own.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Sabiha Gökçen'den Beşiktaş'a kaç km ve ne kadar sürer?",
+          ar: "كم تبعد بشكتاش عن مطار صبيحة كوكجن وكم تستغرق الرحلة؟",
+          en: "How far is Beşiktaş from Sabiha Gökçen and how long does it take?",
+        },
+        answer: {
+          tr: "Yaklaşık 45 kilometre ve 45 dakika ile bir saat 20 dakika arası. Köprü geçişi ve ardından gelen sahil yolu süreyi belirliyor; akşam saatlerinde üst sınıra yaklaşıyor.",
+          ar: "نحو 45 كيلومتراً وما بين 45 دقيقة وساعة و20 دقيقة. ويحدّد المدةَ عبورُ الجسر ثم الطريق الساحلي بعده؛ وتقترب من الحدّ الأعلى في ساعات المساء.",
+          en: "About 45 km and between 45 minutes and an hour and 20. The bridge crossing and the coastal road that follows set the time; in the evening it approaches the upper end.",
+        },
+      },
+      {
+        question: {
+          tr: "Akşam saatinde inersem transfer ne kadar uzar?",
+          ar: "إذا وصلت مساءً كم تطول رحلة النقل؟",
+          en: "If I land in the evening, how much longer does it take?",
+        },
+        answer: {
+          tr: "Sahil yolu akşam saatlerinde ağırlaştığı için süre üst sınıra, yani bir saat 20 dakikaya yaklaşabiliyor. Şoför uçuşunuzu takip ediyor ve o saate göre yola çıkıyor; rötar olursa bekleme için ek ücret çıkmıyor.",
+          ar: "لأن الطريق الساحلي يثقل في ساعات المساء قد تقترب المدة من الحدّ الأعلى، أي ساعة و20 دقيقة. ويتابع السائق رحلتك وينطلق بحسب ذلك الموعد؛ وإن حدث تأخير فلا رسوم إضافية على الانتظار.",
+          en: "Because the coastal road slows in the evening, the run can approach the upper end of an hour and 20. The driver tracks your flight and sets out accordingly; if you are delayed there is no extra charge for waiting.",
+        },
+      },
+      {
+        question: {
+          tr: "Ortaköy ile Beşiktaş arasında fiyat farkı var mı?",
+          ar: "هل هناك فرق في السعر بين أورتاكوي وبشكتاش؟",
+          en: "Is there a price difference between Ortaköy and Beşiktaş?",
+        },
+        answer: {
+          tr: "İkisi de aynı sahil hattında ve aradaki mesafe birkaç kilometre olduğu için fiyat aynı kalıyor. Fiyat araç başına belirleniyor, kişi başına değil; kesin tutarı tarih ve kişi sayısıyla birlikte yazışırken söylüyoruz.",
+          ar: "كلتاهما على الخط الساحلي نفسه والمسافة بينهما بضعة كيلومترات، لذا يبقى السعر واحداً. ويُحدَّد السعر لكل سيارة لا لكل شخص؛ ونخبرك بالمبلغ النهائي أثناء المراسلة مع التاريخ وعدد الأشخاص.",
+          en: "Both sit on the same stretch of shore and are only a few kilometres apart, so the price is the same. Pricing is per vehicle, not per person; we give the exact figure over chat once we have your date and party size.",
+        },
+      },
+    ],
+  },
+  /*
    * ─── Antalya (AYT) ───────────────────────────────────────────────
    *
    * Antalya tek bir varış noktası değil: havalimanından batıya Kemer,
@@ -1369,9 +1686,9 @@ export function relatedRoutes(slug: string, count = 4) {
 /**
  * Güzergâhın hangi şehir merkezi sayfasına ait olduğu.
  *
- * Havalimanından türetiliyor, elle yazılmıyor: on dört güzergâhın her
- * birine ayrı bir alan eklemek aynı bilgiyi on dört kez tekrarlamak
- * olurdu ve yeni güzergâh eklerken unutulacak ilk şey o olurdu.
+ * Havalimanından türetiliyor, elle yazılmıyor: her güzergâha ayrı bir
+ * alan eklemek aynı bilgiyi güzergâh sayısı kadar tekrarlamak olurdu ve
+ * yeni güzergâh eklerken unutulacak ilk şey o olurdu.
  * İstanbul'un iki havalimanı da aynı sayfaya çıkıyor.
  */
 export function destinationForAirport(airport: TransferRoute["airport"]) {

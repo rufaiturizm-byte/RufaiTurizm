@@ -43,8 +43,14 @@ export async function ServiceSections({
 
   const tCommon = await getTranslations("common");
 
+  /*
+    Alt boşluk pb-4 (16 piksel) idi ve iki yerde yetmiyordu: bölüm bir
+    bandın son çocuğu olduğunda metin bandın alt kenarına yapışıyordu
+    (paket detayında ölçtüm: 15 piksel), bir sonraki bölüm geldiğinde de
+    aralarında 16 piksel kalıyordu. Sitenin standart bölüm alt boşluğu 80.
+  */
   return (
-    <div className="pb-4">
+    <div className="pb-20">
       {/*
         Bölüm dizini.
         Bu bölümler eklendiğinde hizmet sayfası 11 başlıktan 17'ye çıktı ve

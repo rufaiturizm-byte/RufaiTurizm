@@ -36,8 +36,14 @@ export function LongSections({
   const lang = locale as Locale;
   const metin = (t: Text) => t[lang] ?? t.tr;
 
+  /*
+    Alt boşluk pb-4 (16 piksel) idi ve iki yerde yetmiyordu: bölüm bir
+    bandın son çocuğu olduğunda metin bandın alt kenarına yapışıyordu
+    (paket detayında ölçtüm: 15 piksel), bir sonraki bölüm geldiğinde de
+    aralarında 16 piksel kalıyordu. Sitenin standart bölüm alt boşluğu 80.
+  */
   return (
-    <div className="pb-4">
+    <div className="pb-20">
       {/* Dizin yalnız ikiden fazla bölümde işe yarıyor; iki başlık için
           çip sırası kurmak sayfaya gürültüden başka bir şey katmıyor. */}
       {contentsLabel && sections.length > 2 ? (

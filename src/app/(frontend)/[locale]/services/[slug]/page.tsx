@@ -323,7 +323,7 @@ export default async function ServiceDetailPage({
 
       <ServiceSections serviceKey={service.key} />
 
-      <RouteCoverage locale={locale} />
+      <RouteCoverage locale={locale} variant="compact" />
       <ServiceFaq serviceKey={service.key} />
       <ClosingCta locale={locale} />
       <RelatedLinks exclude={["services"]} />

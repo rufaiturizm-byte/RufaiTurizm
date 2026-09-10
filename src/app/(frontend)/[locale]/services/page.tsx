@@ -9,7 +9,6 @@ import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
-import { ProcessSteps } from "@/components/site/process-steps";
 import { ServiceRows } from "@/components/site/service-rows";
 import { FleetUses } from "@/components/site/fleet-uses";
 import { RouteCoverage } from "@/components/site/route-coverage";
@@ -113,12 +112,11 @@ export default async function ServicesPage({
         <FleetUses />
       </div>
 
-      <RouteCoverage locale={locale} />
+      <RouteCoverage locale={locale} variant="compact" />
 
       <WhyUs />
 
       <div className="pt-24">
-        <ProcessSteps />
       </div>
 
       {/* Form en sonda: ziyaretçi neyi rezerve edeceğini bildikten sonra. */}

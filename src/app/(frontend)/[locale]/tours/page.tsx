@@ -3,19 +3,15 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema, ItemListSchema } from "@/components/site/json-ld";
-import { AssuranceBand } from "@/components/site/assurance-band";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { TourCompare } from "@/components/site/tour-compare";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { TrustBoxes } from "@/components/site/trust-stats";
-import { ProcessSteps } from "@/components/site/process-steps";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { PromoBanner } from "@/components/site/promo-banner";
 import { RelatedLinks } from "@/components/site/related-links";
-import { WhyUs } from "@/components/site/why-us";
-import { FaqPreview } from "@/components/site/faq-preview";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { PackagesSection } from "@/components/site/packages-section";
 import { tours } from "@/data/tours";
@@ -117,19 +113,12 @@ export default async function ToursPage({
 
       <PromoBanner placement="tours" locale={locale} />
 
-      <RouteCoverage locale={locale} />
+      <RouteCoverage locale={locale} variant="compact" />
 
       <PackagesSection locale={locale} />
 
-      <WhyUs />
-
       <div className="pt-24">
-        <ProcessSteps />
       </div>
-
-      <AssuranceBand />
-
-      <FaqPreview />
       <ClosingCta locale={locale} />
 
       <RelatedLinks exclude={["tours"]} />

@@ -328,7 +328,7 @@ export default async function ContactPage({
         className="pb-20"
       />
 
-      <RouteCoverage locale={locale} />
+      <RouteCoverage locale={locale} variant="compact" />
       <FaqPreview />
       <RelatedLinks exclude={["contact"]} />
       <CredentialsBand />

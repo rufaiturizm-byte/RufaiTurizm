@@ -10,9 +10,6 @@ import { ProseSection } from "@/components/site/prose-section";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
 import { TrustStats } from "@/components/site/trust-stats";
-import { WhyUs } from "@/components/site/why-us";
-import { ProcessSteps } from "@/components/site/process-steps";
-import { RouteCoverage } from "@/components/site/route-coverage";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import {
   BadgeCheck,
@@ -324,13 +321,9 @@ export default async function AboutPage({
         on dört sayfanın tamamı ClosingCta -> RelatedLinks ->
         CredentialsBand ile bitiyor; hakkımızda tek istisnaydı.
       */}
-      <WhyUs />
 
       <div className="pt-24">
-        <ProcessSteps />
       </div>
-
-      <RouteCoverage locale={locale} />
 
       <ClosingCta locale={locale} />
 

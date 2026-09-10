@@ -8,7 +8,6 @@ import { BreadcrumbSchema, ItemListSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TrustBoxes } from "@/components/site/trust-stats";
-import { RouteCoverage } from "@/components/site/route-coverage";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
@@ -189,8 +188,6 @@ export default async function GuidesPage({
         </div>
       </section>
       ))}
-
-      <RouteCoverage locale={locale} />
       <ClosingCta locale={locale} />
       <RelatedLinks exclude={["guides"]} />
       <CredentialsBand />

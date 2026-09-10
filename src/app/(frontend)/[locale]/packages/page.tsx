@@ -9,7 +9,6 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { ProseSection } from "@/components/site/prose-section";
 import { TrustBoxes } from "@/components/site/trust-stats";
-import { AssuranceBand } from "@/components/site/assurance-band";
 import { ClosingCta } from "@/components/site/transfer-sections";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { CredentialsBand } from "@/components/site/credentials-band";
@@ -191,7 +190,6 @@ export default async function PackagesPage({
 
       <GuideLink slug="turkiyede-tatil-butcesi-nasil-kurulur" locale={locale} />
       <ProcessSteps />
-      <AssuranceBand />
       <ClosingCta locale={locale} />
       <RelatedLinks exclude={["packages"]} />
       <CredentialsBand />

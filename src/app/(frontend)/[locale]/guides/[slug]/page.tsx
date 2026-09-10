@@ -14,7 +14,6 @@ import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TableOfContents } from "@/components/site/table-of-contents";
 import { headingId } from "@/lib/heading-id";
-import { RouteCoverage } from "@/components/site/route-coverage";
 import { CredentialsBand } from "@/components/site/credentials-band";
 import { RelatedLinks } from "@/components/site/related-links";
 import { CityHubLink } from "@/components/site/city-hub-link";
@@ -308,7 +307,6 @@ export default async function GuideDetailPage({
       </section>
 
       {cityHub ? <CityHubLink city={cityHub} locale={locale} /> : null}
-      <RouteCoverage locale={locale} />
       <RelatedLinks exclude={["guides"]} />
       <CredentialsBand />
     </main>

@@ -431,7 +431,7 @@ export default async function HotelsPage({
       </section>
 
       <GuideLink slug="otel-secerken-nelere-bakmali" locale={locale} />
-      <RouteCoverage locale={locale} />
+      <RouteCoverage locale={locale} variant="compact" />
       <ClosingCta locale={locale} />
       <RelatedLinks exclude={["hotels"]} />
       <CredentialsBand />

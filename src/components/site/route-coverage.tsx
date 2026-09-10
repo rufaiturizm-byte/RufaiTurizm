@@ -18,10 +18,85 @@ import type { Locale } from "@/i18n/routing";
  * Her çip WhatsApp'a gidiyor ve mesajın içine kendi adını yazıyor:
  * "Taksim" çipine dokunan kişi konuşmaya "Taksim" yazılı başlıyor.
  */
-export async function RouteCoverage({ locale }: { locale: string }) {
+export async function RouteCoverage({
+  locale,
+  variant = "full",
+}: {
+  locale: string;
+  /**
+   * `full`: fotoğraflı altı kart — "nerelere gidiyorsunuz" sorusunun
+   * gerçekten sorulduğu yer, yani transfer sayfaları.
+   *
+   * `compact`: aynı çipler tek bir şeritte, fotoğrafsız.
+   *
+   * Sebep ölçüldü: tam sürüm 1.642 piksel ve sekiz sayfada birebir aynı
+   * basılıyordu. Hakkımızda sayfasının %49'u, turlar sayfasının %39'u
+   * her sayfada tekrar eden bloklardan oluşuyordu ve en büyüğü buydu.
+   * Çipler iç bağlantı değil WhatsApp bağlantısı, yani kısaltmak arama
+   * motorundaki bağ yapısına dokunmuyor; yer adları da şeritte kalıyor.
+   */
+  variant?: "full" | "compact";
+}) {
   const t = await getTranslations("routes");
   const tCta = await getTranslations("cta");
   const lang = locale as Locale;
+
+  if (variant === "compact") {
+    return (
+      <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
+        <div className="surface-card overflow-hidden p-7 sm:p-9">
+          <div className="grid gap-7 lg:grid-cols-[minmax(0,0.44fr)_minmax(0,1fr)] lg:gap-12">
+            <div className="lg:border-e lg:pe-10" style={{ borderColor: "var(--hairline)" }}>
+              <p className="eyebrow-rule text-[11px] font-extrabold uppercase tracking-[0.16em] text-muted-foreground">
+                {t("eyebrow")}
+              </p>
+              <h2 className="mt-3 font-display text-[22px] font-semibold leading-snug sm:text-[26px]">
+                {t("title")}
+              </h2>
+              <p className="measure mt-3 text-[13.5px] leading-[1.75] text-muted-foreground">
+                {t("priceNote")}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              {routeGroups.map((group) => {
+                const title = group.title[lang] ?? group.title.tr;
+                return (
+                  <div key={group.key}>
+                    <p
+                      className="text-[10.5px] font-extrabold uppercase tracking-[0.14em]"
+                      style={{ color: "var(--brand-gold-deep)" }}
+                    >
+                      {title}
+                    </p>
+                    <ul className="mt-2 flex flex-wrap gap-1.5">
+                      {group.stops.map((stop) => {
+                        const name = stop[lang] ?? stop.tr;
+                        return (
+                          <li key={name}>
+                            <WhatsAppLink
+                              subject={`${title} — ${name}`}
+                              className="inline-flex items-center rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-colors hover:bg-secondary"
+                              style={{
+                                borderColor:
+                                  "color-mix(in oklab, var(--brand-night) 13%, transparent)",
+                              }}
+                            >
+                              {name}
+                            </WhatsAppLink>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">

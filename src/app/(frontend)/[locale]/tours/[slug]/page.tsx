@@ -383,7 +383,7 @@ export default async function TourDetailPage({
 
       <ServiceSections serviceKey={tour.key} namespace="tours" />
 
-      <RouteCoverage locale={locale} />
+      <RouteCoverage locale={locale} variant="compact" />
 
       <div className="pb-4">
         <ProcessSteps />

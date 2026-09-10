@@ -41,6 +41,8 @@ değişikliği gerekmez.
 | kapalicarsi.jpg | Kapalıçarşı, Kalpakçılar Caddesi (Fatih, İstanbul) | Linus Mimietz |
 | bodrum-koyu.jpg | Bodrum'da koy: demirli tekneler ve yamaçtaki beyaz evler | Metehan Karpuzoğlu |
 | yalikavak.jpg | Yalıkavak sahili, yukarıdan (drone) | Nihat Sinan Erul |
+| yerebatan.jpg | Yerebatan Sarnıcı: sütunlar, kemerler ve su yansıması | Raimond Klavins |
+| uskudar-sahil.jpg | Üsküdar sahili: Kız Kulesi, arkada köprü ve yamaçtaki mahalle | Nurullah ABALI |
 | galata-halic.jpg | Haliç'ten Galata Kulesi ve vapur, akşam ışığı | Imad Alassiry |
 | koza-han.jpg | Koza Han avlusundaki mescit ve çay bahçesi (Bursa) | Musa Ortaç |
 | uzungol-vadi.jpg | Uzungöl ve vadi, yukarıdan (Trabzon) | Turhan Can Kargin |
@@ -222,3 +224,34 @@ kapağı İstanbul 4 gün paketiyle (galata-halic.jpg), transfer sayfasında
 Telefon karesi SIM ve internet rehberi için konusuna birebir oturuyor:
 seyahatte telefonla fotoğraf çeken bir misafir. Çay karesi ise bütçe
 rehberinin anlattığı şeyin gündelik hali.
+
+## yerebatan.jpg eklendi (10 Eylül 2026)
+
+"İstanbul'da gezilecek yerler" rehberi yazıldığında kapağı
+tarihi-yarimada.jpg oldu — ama o kare zaten "üç gün programı"
+rehberinin kapağıydı ve iki kart rehber listesinde yan yana aynı
+fotoğrafı basıyordu. Klasörde boşta kare kalmamıştı: yirmi sekiz
+rehber, yirmi yedi ayrı kapak.
+
+Yeni kare Yerebatan Sarnıcı (Raimond Klavins, Unsplash, ücretsiz
+lisans; fotoğraf sayfasında konum "Basilica Cistern, Yerebatan
+Caddesi, Fatih/İstanbul" olarak yazılı). İki sebeple seçildi:
+rehberin kendi metninde geçen bir yer, ve listedeki tek iç mekân
+karesi — yirmi yedi silüet ve sahil fotoğrafının arasında kart
+gerçekten ayrışıyor. Dikey kadraj olan ikinci aday elendi; kartlar
+16/10 ve o karenin bütün etkisi dikey derinlikteydi.
+
+"Anadolu yakası" rehberi için de yeni kare gerekti (Nurullah ABALI,
+Unsplash, ücretsiz lisans; fotoğraf sayfasında konum "Uskudar /
+Istanbul"). İlk hali vapur-iskele.jpg idi ve o kare güzergâh
+gruplarından birinin fotoğrafı — o bölüm her rehber sayfasının altında
+durduğu için rehber kendi kapağını sayfanın altında ikinci kez
+basıyordu. İkinci deneme kizkulesi.jpg oldu, o da rehber listesinin
+kapak fotoğrafı çıktı. Yeni kare Üsküdar sahilini bütün olarak
+gösteriyor: Kız Kulesi, arkada köprü, yamaçtaki mahalle — rehberin
+konusu tam olarak bu.
+
+Aynı rehberde "camiler" bölümünün görseli de kaldırıldı: suleymaniye.jpg
+o sayfada üç kez basılıyordu (bölüm görseli, ilgili rehber kartı ve
+alttaki bağ kutusu). Bölüm görselleri zorunlu değil; sayfada üç görselli
+bölüm kaldı.

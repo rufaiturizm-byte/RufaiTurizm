@@ -259,7 +259,9 @@ export default async function TransferRoutePage({
                 <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                   <Image
                     src={item.image}
-                    alt={item.to[lang] ?? item.to.tr}
+                    /* Sayfanın kendi kapağı (yukarıda) imageAlt'ı zaten
+                       kullanıyordu; ilgili güzergâh kartları kullanmıyordu. */
+                    alt={item.imageAlt?.[lang] ?? item.imageAlt?.tr ?? item.to[lang] ?? item.to.tr}
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

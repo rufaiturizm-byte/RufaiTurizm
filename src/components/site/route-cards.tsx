@@ -63,7 +63,12 @@ export async function RouteCards({
               <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                 <Image
                   src={route.image}
-                  alt={route.to[lang] ?? route.to.tr}
+                  /* Alan varsa o kullanılır: kartın fotoğrafı her zaman varış
+                     noktasının kendisi değil (Taksim güzergâhında Boğaz
+                     köprüsü, Belek'te Kaleiçi limanı). Alt metnin varış adını
+                     tekrar etmesi hem yanlış oluyordu hem de ekran okuyucuya
+                     hemen altındaki başlığı ikinci kez okutuyordu. */
+                  alt={route.imageAlt?.[lang] ?? route.imageAlt?.tr ?? route.to[lang] ?? route.to.tr}
                   fill
                   sizes="(max-width: 640px) 100vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

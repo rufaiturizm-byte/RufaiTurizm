@@ -3625,7 +3625,7 @@ export const guides: Guide[] = [
   {
     slug: "istanbulda-gezilecek-yerler",
     topic: "planning",
-    image: "/images/places/tarihi-yarimada.jpg",
+    image: "/images/places/yerebatan.jpg",
     title: {
       tr: "İstanbul'da gezilecek yerler: hangisi, ne kadar sürer",
       ar: "أفضل الأماكن السياحية في إسطنبول: ماذا تزور وكم يستغرق",
@@ -3722,12 +3722,6 @@ export const guides: Guide[] = [
           tr: "Camiler: hangisi ziyarete açık, ne zaman kapanıyor",
           ar: "المساجد: أيّها مفتوح للزيارة ومتى يُغلق",
           en: "The mosques: which are open to visitors, and when they close",
-        },
-        image: "/images/places/suleymaniye.jpg",
-        imageAlt: {
-          tr: "Süleymaniye Camii ve Haliç manzarası",
-          ar: "جامع السليمانية وإطلالة القرن الذهبي",
-          en: "Süleymaniye Mosque and the Golden Horn view",
         },
         body: {
           tr: "İstanbul'da ziyaret edilen camilerin hepsi ücretsiz ve hepsi ibadete açık — yani ziyaret namaz vakitlerinin etrafında kuruluyor. Kapanış vakitten birkaç dakika önce başlıyor ve cemaat dağılana kadar sürüyor; öğle ile ikindi arası genellikle en rahat aralık.\n\nSüleymaniye Camii, Sultanahmet'in kalabalığından uzak durmak isteyen için en iyi seçim: avlusundan Haliç görünüyor ve aynı saatte oradakinin çok altında insan oluyor. Yeni Cami ise Mısır Çarşısı'nın hemen yanında, yani çarşıya giderken zaten yolunuzun üstünde.\n\nEyüp Sultan Camii şehrin en çok ziyaret edilen camilerinden biri ve çevresi bambaşka bir mahalle. Avludan çıkıp teleferikle Pierre Loti tepesine çıkmak yaygın bir program; teleferik biletli, cami değil.\n\nAsya yakasında Çamlıca Camii var: Türkiye'nin en büyük camisi ve tepeye kurulu olduğu için şehrin en geniş manzarası orada. Otoparkı geniş, yani araçla gidilen bir yer — toplu taşımayla ulaşmak zahmetli.\n\nGiyim kuralı basit: kadınlar için başörtüsü ve diz altı, erkekler için uzun pantolon. Camilerin girişinde ödünç örtü veriliyor, yanınızda getirmek zorunda değilsiniz.",
@@ -3838,7 +3832,7 @@ export const guides: Guide[] = [
   {
     slug: "istanbulda-anadolu-yakasi",
     topic: "daytrips",
-    image: "/images/places/vapur-iskele.jpg",
+    image: "/images/places/uskudar-sahil.jpg",
     title: {
       tr: "İstanbul'un Anadolu yakası: Üsküdar, Kadıköy, Moda",
       ar: "الجانب الآسيوي من إسطنبول: أوسكودار وكاديكوي ومودا",

@@ -254,7 +254,7 @@ export default async function GuideDetailPage({
       {/* Diğer rehberler */}
       <section
         className="border-t"
-        style={{ background: "var(--brand-cream)", borderColor: "var(--hairline)" }}
+        style={{ background: "var(--brand-sand)", borderColor: "var(--hairline)" }}
       >
         <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
           <h2 className="font-display text-[26px] font-semibold sm:text-[32px]">

@@ -40,7 +40,9 @@ export function Band({
           : "var(--hairline)",
       }}
     >
-      <div className="pt-20">{children}</div>
+      {/* Bölüm açılışı masaüstünde daha cömert: 80 piksel her yerde
+          aynıyken sayfa "eşit aralıklı modüller" gibi okunuyordu. */}
+      <div className="pt-20 sm:pt-28">{children}</div>
     </div>
   );
 }

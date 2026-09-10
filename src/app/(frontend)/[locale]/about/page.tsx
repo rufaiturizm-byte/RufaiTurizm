@@ -179,7 +179,7 @@ export default async function AboutPage({
       */}
       <section
         className="border-y"
-        style={{ background: "var(--brand-cream)", borderColor: "var(--hairline)" }}
+        style={{ background: "var(--brand-sand)", borderColor: "var(--hairline)" }}
       >
         <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
           <SectionHeading

@@ -53,15 +53,31 @@ export function PageHero({
         gizliyor. 0.0338, Google'ın "iyi" eşiğinin (0.1) üçte biri ve
         yalnız ilk ziyarette görünüyor.
       */}
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-20">
+      {/*
+        Dikey boşluk masaüstünde MOBİLDEN AZDI (py-24 / sm:py-20): kapak
+        1280 pikselde 295 piksel kalıyordu, yani ekranın üçte biri bile
+        değil. Büyük ekranda kapağın nefes alması gerekiyor, tersi değil.
+      */}
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         <Breadcrumbs items={crumbs} />
-        <h1 className="mt-3 font-display text-[34px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[46px]">
+        <h1 className="mt-3 font-display text-[34px] font-semibold leading-[1.1] tracking-[-0.018em] text-white sm:text-[48px]">
           {title}
         </h1>
         {subtitle ? (
           <p className="mt-4 max-w-xl text-[16px] leading-[1.8] text-white/78">{subtitle}</p>
         ) : null}
       </div>
+
+      {/* Kapağın alt sınırı: fotoğrafla sayfa zemini arasındaki kesik
+          çizgi yerine ince altın bir çizgi. Sayfa boyunca tekrar eden
+          altın vurgunun ilk göründüğü yer burası. */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-px"
+        style={{
+          background:
+            "linear-gradient(to right, transparent 0%, color-mix(in oklab, var(--brand-gold) 52%, transparent) 22%, color-mix(in oklab, var(--brand-gold) 52%, transparent) 78%, transparent 100%)",
+        }}
+      />
     </section>
   );
 }

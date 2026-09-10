@@ -355,7 +355,9 @@ export default async function TourDetailPage({
               </div>
             </dl>
 
-            <p className="mt-4 text-[12.5px] leading-[1.75] text-muted-foreground">
+            {/* lg altında yan sütun tam genişliğe çıkıyor; measure satırı
+                360 piksellik sütunun genişliğinde tutuyor. */}
+            <p className="measure mt-4 text-[12.5px] leading-[1.75] text-muted-foreground">
               {tPage("priceNote")}
             </p>
 

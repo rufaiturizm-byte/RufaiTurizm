@@ -229,7 +229,10 @@ export default async function PackageDetailPage({
             <div className="mt-2.5 text-[19px] font-bold leading-snug">
               {tCommon("priceOnRequest")}
             </div>
-            <p className="mt-3 text-[13.5px] leading-[1.8] text-muted-foreground">
+            {/* measure yalnız yığılmış halde iş görüyor: lg altında yan sütun
+                tam genişliğe çıkıyor ve 13,5 piksellik bu not 1000px ekranda
+                886 piksel oluyordu. lg'de sütun zaten 360. */}
+            <p className="measure mt-3 text-[13.5px] leading-[1.8] text-muted-foreground">
               {t("priceText")}
             </p>
 

@@ -279,7 +279,9 @@ export default async function ServiceDetailPage({
             ) : (
               <>
                 <div className="text-[20px] font-bold">{tCommon("priceOnRequest")}</div>
-                <div className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
+                {/* lg altında yan sütun tam genişliğe çıkıyor; measure satırı
+                    360 piksellik sütunun genişliğinde tutuyor. */}
+                <div className="measure mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
                   {tCommon("contactForPrice")}
                 </div>
               </>

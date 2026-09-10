@@ -185,9 +185,9 @@ export const banners: PromoBanner[] = [
       en: "You do not start over for the second city",
     },
     description: {
-      tr: "Şehirler arası geçiş, ikinci şehirdeki karşılama, uçak bileti ve otel — hepsi aynı yazışmada duruyor. Tek muhatap, aynı sabit fiyat mantığı; her şehir için ayrı firma aramak gerekmiyor.",
-      ar: "الانتقال بين المدينتين، والاستقبال في المدينة الثانية، وتذكرة الطيران، والفندق — كلّها تبقى في المحادثة نفسها. مخاطَب واحد ومنطق السعر الثابت نفسه؛ ولا حاجة إلى البحث عن شركة مستقلّة لكلّ مدينة.",
-      en: "The move between cities, the meeting in the second one, the flight ticket and the hotel all stay in the same conversation. One counterpart, the same fixed-price logic, and no separate company to find for each city.",
+      tr: "Şehirler arası geçiş, ikinci şehirdeki karşılama, uçak bileti ve otel — hepsi aynı yazışmada. Her şehir için ayrı firma aramak gerekmiyor.",
+      ar: "الانتقال بين المدينتين، والاستقبال في المدينة الثانية، وتذكرة الطيران، والفندق — كلّها في المحادثة نفسها. ولا حاجة إلى شركة مستقلّة لكلّ مدينة.",
+      en: "The move between cities, the meeting in the second one, the flight and the hotel — all in the same conversation. No separate company for each city.",
     },
     terms: {
       tr: "Altı bölgede aynı ekip: İstanbul, Antalya, Bodrum, Trabzon, Bursa, Sapanca",

@@ -147,18 +147,35 @@ export default async function GuidesPage({
               params: { slug: guide.slug },
             };
 
+            /*
+              Dar ekranda kart yan yana düzene geçiyor: görsel solda dar
+              bir şerit, metin sağda. Sebep ölçüldü — dikey kartta görsel
+              tek başına 218 piksel ve yirmi sekiz kart 11.452 piksel
+              tutuyordu, yani dizin sayfası mobilde 20 ekran. Yatay
+              düzende kart 409'dan ~170 piksele iniyor ve sayfa taranabilir
+              hale geliyor. 640 pikselden itibaren eski dikey kart geri
+              geliyor.
+            */
             return (
-              <article key={guide.slug} className="reveal-rise accent-card group flex flex-col overflow-hidden">
-                <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
+              <article
+                key={guide.slug}
+                className="reveal-rise accent-card group flex flex-row items-stretch overflow-hidden sm:flex-col"
+              >
+                <Link
+                  href={href}
+                  className="relative block w-[34%] shrink-0 self-stretch overflow-hidden sm:aspect-[16/10] sm:w-auto sm:self-auto"
+                >
                   <Image
                     src={guide.image}
                     alt={title}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 34vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                  {/* Okuma süresi rozeti dar görselde sığmıyor; yalnız
+                      dikey kartta gösteriliyor. */}
                   <span
-                    className="absolute bottom-3 start-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-[11.5px] font-semibold text-black"
+                    className="absolute bottom-3 start-3 hidden items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-[11.5px] font-semibold text-black sm:inline-flex"
                     style={{ boxShadow: "var(--shadow-e1)" }}
                   >
                     <Clock className="size-3" aria-hidden="true" />
@@ -166,7 +183,7 @@ export default async function GuidesPage({
                   </span>
                 </Link>
 
-                <div className="flex flex-1 flex-col p-5">
+                <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5">
                   {/* Konu başlığı h2 olduğu için kart başlıkları h3:
                       "Varış ve ulaşım" > "Havalimanından şehre" sıradüzeni. */}
                   <h3 className="font-display text-[18px] font-semibold leading-snug">
@@ -177,13 +194,15 @@ export default async function GuidesPage({
                       {title}
                     </Link>
                   </h3>
-                  <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
+                  <p className="mt-2 line-clamp-3 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground sm:mt-2.5 sm:line-clamp-none">
                     {guide.excerpt[lang] ?? guide.excerpt.tr}
                   </p>
 
+                  {/* Başlığın kendisi zaten bağ; dar kartta ikinci bir
+                      "oku" satırı yalnız yer kaplıyor. */}
                   <Link
                     href={href}
-                    className="mt-3 inline-flex py-1.5 items-center gap-2 text-[13.5px] font-bold"
+                    className="mt-3 hidden py-1.5 items-center gap-2 text-[13.5px] font-bold sm:inline-flex"
                     style={{ color: "var(--brand-gold-deep)" }}
                   >
                     {t("readCta")}

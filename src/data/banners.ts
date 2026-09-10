@@ -162,6 +162,44 @@ export const banners: PromoBanner[] = [
       en: "Priced per car, not per person",
     },
   },
+  {
+    /*
+      Şehirler sayfasının bandı. Yuva koddan açıktı ama kayıt yoktu,
+      yani sayfa bandı hiç basmıyordu.
+
+      Mesaj sayfanın kendi kararından çıkıyor: burada ziyaretçi şehir
+      seçiyor ve seçim çoğu zaman iki şehir oluyor. İkinci şehir için
+      ayrı firma aramanın gerekmediği sitede yazılı ama bu sayfada
+      görünmüyordu — şoförlü araç altı bölgede çalışıyor, uçak bileti
+      ve otel de aynı yazışmada. Fiyat, indirim ya da süre yok.
+
+      Görsel bilerek konmadı: sayfa zaten altı büyük fotoğraf kartından
+      kuruluyor, yedinci fotoğraf bandı bant olmaktan çıkarırdı.
+    */
+    id: "sehirler-iki-sehir",
+    placement: "destinations",
+    eyebrow: { tr: "İki şehirli program", ar: "برنامج بمدينتين", en: "A two-city trip" },
+    title: {
+      tr: "İkinci şehir için baştan başlamıyorsunuz",
+      ar: "لا تبدأون من الصفر من أجل المدينة الثانية",
+      en: "You do not start over for the second city",
+    },
+    description: {
+      tr: "Şehirler arası geçiş, ikinci şehirdeki karşılama, uçak bileti ve otel — hepsi aynı yazışmada duruyor. Tek muhatap, aynı sabit fiyat mantığı; her şehir için ayrı firma aramak gerekmiyor.",
+      ar: "الانتقال بين المدينتين، والاستقبال في المدينة الثانية، وتذكرة الطيران، والفندق — كلّها تبقى في المحادثة نفسها. مخاطَب واحد ومنطق السعر الثابت نفسه؛ ولا حاجة إلى البحث عن شركة مستقلّة لكلّ مدينة.",
+      en: "The move between cities, the meeting in the second one, the flight ticket and the hotel all stay in the same conversation. One counterpart, the same fixed-price logic, and no separate company to find for each city.",
+    },
+    terms: {
+      tr: "Altı bölgede aynı ekip: İstanbul, Antalya, Bodrum, Trabzon, Bursa, Sapanca",
+      ar: "الفريق نفسه في ستّ مناطق: إسطنبول وأنطاليا وبودروم وطرابزون وبورصة وسبانجا",
+      en: "The same team in six regions: Istanbul, Antalya, Bodrum, Trabzon, Bursa and Sapanca",
+    },
+    cta: {
+      tr: "İki şehri birlikte planlayalım",
+      ar: "لنخطّط للمدينتين معاً",
+      en: "Let us plan both cities",
+    },
+  },
 ];
 
 /** Bir yer için geçerli (süresi dolmamış) bantları verir. */

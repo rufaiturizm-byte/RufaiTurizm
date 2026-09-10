@@ -1038,3 +1038,47 @@ header :where(a, button):focus-visible {
 .section-band + .section-band {
   border-top-width: 0;
 }
+
+/*
+ * Kart rayı — yalnız en dar ekranda.
+ *
+ * Kart ızgaraları mobilde tek sütuna düşüyor ve ana sayfa 390 pikselde
+ * 31,6 ekran uzunluğuna çıkıyordu: altı paket kartı tek başına 3.618
+ * piksel. Teaser bölümlerinde (ana sayfa) bütün kartları alt alta
+ * göstermek gerekmiyor — yatay ray hem kısaltıyor hem "devamı var"
+ * duygusunu veriyor.
+ *
+ * LİSTE sayfalarında (paketler, turlar) KULLANILMIYOR: orada sayfanın
+ * işi bütün seçenekleri göstermek, gizlemek değil.
+ *
+ * Kartlar DOM'da duruyor, yalnız yatay kaydırılıyor — arama motoru
+ * tarafında hiçbir şey değişmiyor. 640 pikselden itibaren kural hiç
+ * uygulanmıyor ve ızgara geri geliyor.
+ */
+@media (max-width: 639px) {
+  .card-rail {
+    display: flex;
+    gap: 0.875rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    /*
+      Ray önce kenardan taşırılıyordu (negatif margin + padding). Arapçada
+      bozuldu: Chrome'un RTL kaydırma modeli yüzünden ray 20 piksel kaymış
+      başlıyor ve ilk kart ekranın sağ kenarına YAPIŞIYORDU — sayfa
+      kenar boşluğu kayboluyordu. Arapça ana dil olduğu için taşma
+      kaldırıldı; sonraki kartın kenardan görünmesi zaten yeterli işaret.
+    */
+    padding-bottom: 0.25rem;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+
+  .card-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-rail > * {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+}

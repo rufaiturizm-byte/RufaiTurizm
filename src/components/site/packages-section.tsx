@@ -56,7 +56,7 @@ export async function PackagesSection({ locale }: { locale: string }) {
         oturuyor ve kartlar da büyüyor.
       */}
       <div
-        className={`grid gap-5 sm:grid-cols-2 ${
+        className={`card-rail grid gap-5 sm:grid-cols-2 ${
           packages.length % 4 === 0 ? "lg:grid-cols-4" : "lg:grid-cols-3"
         }`}
       >

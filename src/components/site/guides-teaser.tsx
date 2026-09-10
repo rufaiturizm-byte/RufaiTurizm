@@ -51,7 +51,7 @@ export async function GuidesTeaser({ locale }: { locale: string }) {
         }
       />
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="card-rail grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {featured.map((guide) => {
           const title = guide.title[lang] ?? guide.title.tr;
           const href = {

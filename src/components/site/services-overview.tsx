@@ -68,7 +68,7 @@ export async function ServicesOverview() {
         }
       />
 
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="card-rail grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service) => {
           const name = t(`${service.key}.title`);
           const Icon = ICONS[service.icon];

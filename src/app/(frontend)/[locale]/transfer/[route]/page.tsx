@@ -6,6 +6,7 @@ import { ArrowRight, Clock, PlaneLanding, Route as RouteIcon } from "lucide-reac
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { Band } from "@/components/site/band";
 import { PageClosing } from "@/components/site/page-closing";
 import { ReadingProgress } from "@/components/site/scroll-helpers";
 import { BreadcrumbSchema, FaqSchema, TransferRouteSchema } from "@/components/site/json-ld";
@@ -298,8 +299,10 @@ export default async function TransferRoutePage({
         </div>
       </section>
 
-      <CityHubLink city={destinationForAirport(route.airport)} locale={locale} />
-      <RouteCoverage locale={locale} />
+      <Band>
+        <CityHubLink city={destinationForAirport(route.airport)} locale={locale} />
+        <RouteCoverage locale={locale} />
+      </Band>
       <FaqPreview />
       <PageClosing locale={locale} exclude={["transfer"]} />
     </main>

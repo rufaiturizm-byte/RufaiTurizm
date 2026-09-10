@@ -16,6 +16,7 @@ import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { Band } from "@/components/site/band";
 import { PageClosing } from "@/components/site/page-closing";
 import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
@@ -312,17 +313,24 @@ export default async function ServiceDetailPage({
         <>
           <VehicleList />
           <TransferTypes />
-          <TransferWhy />
-          <TransferSteps />
+          {/* "Neden" ve "üç adım" okunan bölümler; araç listesi ve hizmet
+              türleri gezilen bölümler. Bant ikisini ayırıyor. */}
+          <Band>
+            <TransferWhy />
+            <TransferSteps />
+          </Band>
         </>
       ) : (
-        <ProcessSteps />
+        <Band>
+          <ProcessSteps />
+        </Band>
       )}
 
-      <ServiceSections serviceKey={service.key} />
-
-      <RouteCoverage locale={locale} variant="compact" />
-      <ServiceFaq serviceKey={service.key} />
+      <Band>
+        <ServiceSections serviceKey={service.key} />
+        <RouteCoverage locale={locale} variant="compact" />
+        <ServiceFaq serviceKey={service.key} />
+      </Band>
       <PageClosing locale={locale} exclude={["services"]} />
     </main>
   );

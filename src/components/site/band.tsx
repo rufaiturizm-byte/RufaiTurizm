@@ -32,7 +32,7 @@ export function Band({
 
   return (
     <div
-      className={`border-y ${className}`}
+      className={`section-band border-y ${className}`}
       style={{
         background: gece ? "var(--brand-night)" : "var(--brand-sand)",
         borderColor: gece

@@ -137,12 +137,11 @@ export default async function TransferPage({
       */}
       <TransferTypes />
 
+      {/* Tek bant: iki ayrı bant yan yana gelince alt ve üst kenarlıklar
+          üst üste binip 2 piksellik bir çizgi bırakıyordu. */}
       <Band>
         <GuideLink slug="turkiyede-sim-kart-ve-internet" locale={locale} />
         <RouteCoverage locale={locale} />
-      </Band>
-
-      <Band>
         <TransferWhy />
         <TransferSteps />
       </Band>

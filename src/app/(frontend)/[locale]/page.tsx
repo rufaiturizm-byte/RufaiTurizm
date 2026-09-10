@@ -145,7 +145,7 @@ export default async function HomePage({
         <ServicesOverview />
 
         {/* Çok tercih edilen turlar — krem zemin, iki beyaz bölüm arasında ayrım */}
-        <section style={{ background: "var(--brand-sand)" }}>
+        <section className="section-band" style={{ background: "var(--brand-sand)" }}>
           <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
             <SectionHeading
               eyebrow={tEyebrow("tours")}

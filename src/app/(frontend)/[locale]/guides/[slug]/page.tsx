@@ -253,7 +253,7 @@ export default async function GuideDetailPage({
 
       {/* Diğer rehberler */}
       <section
-        className="border-t"
+        className="section-band border-t"
         style={{ background: "var(--brand-sand)", borderColor: "var(--hairline)" }}
       >
         <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">

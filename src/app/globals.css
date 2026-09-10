@@ -1026,3 +1026,15 @@ header :where(a, button):focus-visible {
 .measure-wide {
   max-width: 62ch;
 }
+
+/*
+ * Ardışık bantlar arasında tek çizgi.
+ *
+ * Bant alt ve üst kenarlıkla çiziliyor; iki bant yan yana geldiğinde
+ * (çoğunlukla bir okuma bandının hemen ardından gelen kapanış bandı)
+ * alttaki ve üstteki çizgi üst üste binip 2 piksellik bir şerit
+ * bırakıyordu. Denetimde on beş sayfada dokuz yerde çıktı.
+ */
+.section-band + .section-band {
+  border-top-width: 0;
+}

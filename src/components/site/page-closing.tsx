@@ -33,7 +33,7 @@ export async function PageClosing({
 }) {
   return (
     <div
-      className="border-t"
+      className="section-band border-t"
       style={{ background: "var(--brand-sand)", borderColor: "var(--hairline)" }}
     >
       <div className="pt-20">

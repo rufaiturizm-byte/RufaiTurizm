@@ -6,6 +6,7 @@ import { ArrowRight, CalendarDays, Check, Info, MapPin, Sparkles } from "lucide-
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { Band } from "@/components/site/band";
 import { PageClosing } from "@/components/site/page-closing";
 import { BreadcrumbSchema, FaqSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
@@ -254,11 +255,13 @@ export default async function PackageDetailPage({
         </div>
       </section>
 
-      <LongSections sections={item.sections} locale={locale} />
+      <Band>
+        <LongSections sections={item.sections} locale={locale} />
+      </Band>
 
       {/* Diğer paketler */}
       <section
-        className="border-t"
+        className="section-band border-t"
         style={{ background: "var(--brand-sand)", borderColor: "var(--hairline)" }}
       >
         <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">

@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { Band } from "@/components/site/band";
 import { PageClosing } from "@/components/site/page-closing";
 import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
@@ -379,9 +380,10 @@ export default async function TourDetailPage({
         </div>
       </section>
 
-      <ServiceSections serviceKey={tour.key} namespace="tours" />
-
-      <RouteCoverage locale={locale} variant="compact" />
+      <Band>
+        <ServiceSections serviceKey={tour.key} namespace="tours" />
+        <RouteCoverage locale={locale} variant="compact" />
+      </Band>
 
       <div className="pb-4">
         <ProcessSteps />

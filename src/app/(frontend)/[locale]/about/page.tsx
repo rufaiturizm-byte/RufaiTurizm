@@ -178,7 +178,7 @@ export default async function AboutPage({
         memnun ayrılmıyor.
       */}
       <section
-        className="border-y"
+        className="section-band border-y"
         style={{ background: "var(--brand-sand)", borderColor: "var(--hairline)" }}
       >
         <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">

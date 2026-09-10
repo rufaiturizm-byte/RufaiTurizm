@@ -6,6 +6,7 @@ import { ArrowRight, Clock, MapPin, Route as RouteIcon } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { PageHero } from "@/components/site/page-hero";
+import { Band } from "@/components/site/band";
 import { PageClosing } from "@/components/site/page-closing";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { BreadcrumbSchema, FaqSchema, TouristTripSchema } from "@/components/site/json-ld";
@@ -360,40 +361,43 @@ export default async function DestinationPage({
         ) : null}
       </section>
 
-      {/* Soru-cevap */}
-      <section className="mx-auto w-full max-w-7xl px-5 pt-14 pb-20 sm:px-8">
-        <FaqSchema items={faqItems} />
-        <h2 className="font-display text-[26px] font-semibold sm:text-[32px]">
-          {t("faqTitle", { city: name })}
-        </h2>
-        <div className="mt-8 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
-          <FaqAccordion items={faqItems} />
+      <Band>
+        {/* Soru-cevap */}
+        <section className="mx-auto w-full max-w-7xl px-5 pt-14 pb-20 sm:px-8">
+          <FaqSchema items={faqItems} />
+          <h2 className="font-display text-[26px] font-semibold sm:text-[32px]">
+            {t("faqTitle", { city: name })}
+          </h2>
+          <div className="mt-8 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
+            <FaqAccordion items={faqItems} />
 
-          <aside
-            className="p-7 lg:sticky lg:top-24"
-            style={{
-              background: "var(--surface)",
-              borderRadius: "var(--radius-card)",
-              boxShadow: "var(--shadow-panel-lift)",
-              border: "1px solid color-mix(in oklab, var(--brand-gold) 34%, transparent)",
-            }}
-          >
-            <h3 className="font-display text-[19px] font-semibold leading-snug">
-              {t("askTitle", { city: name })}
-            </h3>
-            <p className="mt-3 text-[13.5px] leading-[1.8] text-muted-foreground">
-              {t("askText")}
-            </p>
-            <WhatsAppLink
-              subject={name}
-              className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-3.5 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+            <aside
+              className="p-7 lg:sticky lg:top-24"
+              style={{
+                background: "var(--surface)",
+                borderRadius: "var(--radius-card)",
+                boxShadow: "var(--shadow-panel-lift)",
+                border: "1px solid color-mix(in oklab, var(--brand-gold) 34%, transparent)",
+              }}
             >
-              <WhatsAppIcon className="size-[18px]" />
-              {tCta("whatsapp")}
-            </WhatsAppLink>
-          </aside>
-        </div>
-      </section>
+              <h3 className="font-display text-[19px] font-semibold leading-snug">
+                {t("askTitle", { city: name })}
+              </h3>
+              <p className="mt-3 text-[13.5px] leading-[1.8] text-muted-foreground">
+                {t("askText")}
+              </p>
+              <WhatsAppLink
+                subject={name}
+                className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-3.5 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+              >
+                <WhatsAppIcon className="size-[18px]" />
+                {tCta("whatsapp")}
+              </WhatsAppLink>
+            </aside>
+          </div>
+        </section>
+      </Band>
+
       <PageClosing locale={locale} />
     </main>
   );

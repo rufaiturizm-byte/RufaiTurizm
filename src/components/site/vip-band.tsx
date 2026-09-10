@@ -59,7 +59,7 @@ export async function VipBand({ locale }: { locale: string }) {
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <WhatsAppLink
-                className="inline-flex items-center gap-2.5 rounded-[0.7rem] px-6 py-3.5 text-[14px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                className="inline-flex items-center gap-2.5 rounded-[0.625rem] px-6 py-3.5 text-[14px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{
                   background: "var(--brand-gold)",
                   color: "var(--brand-night)",
@@ -72,7 +72,7 @@ export async function VipBand({ locale }: { locale: string }) {
 
               <WhatsAppLink
                 subject={t("vipTitle")}
-                className="inline-flex items-center gap-2.5 rounded-[0.7rem] border px-6 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center gap-2.5 rounded-[0.625rem] border px-6 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-white/10"
                 style={{ borderColor: "color-mix(in oklab, white 32%, transparent)" }}
               >
                 {tCta("bookNow")}

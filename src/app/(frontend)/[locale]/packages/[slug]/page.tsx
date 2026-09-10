@@ -237,7 +237,7 @@ export default async function PackageDetailPage({
 
             <WhatsAppLink
               subject={name}
-              className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-4 text-[15px] font-bold"
+              className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.875rem] py-4 text-[15px] font-bold"
             >
               <WhatsAppIcon className="size-5" />
               {t("askPrice")}

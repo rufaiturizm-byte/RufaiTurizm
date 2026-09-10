@@ -74,7 +74,7 @@ export async function RouteCards({
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <span
-                  className="absolute start-3 top-3 rounded-[0.4rem] px-2.5 py-1 text-[11px] font-bold"
+                  className="absolute start-3 top-3 rounded-[0.375rem] px-2.5 py-1 text-[11px] font-bold"
                   style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
                 >
                   {route.airport}

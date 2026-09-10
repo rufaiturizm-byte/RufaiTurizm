@@ -144,7 +144,7 @@ export async function PackagesSection({ locale }: { locale: string }) {
 
                 <WhatsAppLink
                   subject={name}
-                  className="btn-wa mt-3.5 inline-flex items-center justify-center gap-2 rounded-md py-3 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
+                  className="btn-wa mt-3.5 inline-flex items-center justify-center gap-2 rounded-[0.375rem] py-3 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
                 >
                   <MessageCircle className="size-4" aria-hidden="true" />
                   {tCta("bookNow")}

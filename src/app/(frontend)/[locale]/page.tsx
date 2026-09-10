@@ -103,7 +103,7 @@ export default async function HomePage({
 
             <div className="mt-10 flex flex-wrap items-center gap-3.5">
               <WhatsAppLink
-                className="inline-flex items-center gap-3 rounded-[0.8rem] px-7 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                className="inline-flex items-center gap-3 rounded-[0.875rem] px-7 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{
                   background:
                     "linear-gradient(135deg, color-mix(in oklab, var(--brand-gold) 88%, white) 0%, var(--brand-gold) 55%, color-mix(in oklab, var(--brand-gold) 84%, var(--brand-gold-deep)) 100%)",
@@ -117,7 +117,7 @@ export default async function HomePage({
 
               <Link
                 href="/tours"
-                className="inline-flex items-center gap-2.5 rounded-[0.8rem] border px-7 py-4 text-[15px] font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
+                className="inline-flex items-center gap-2.5 rounded-[0.875rem] border px-7 py-4 text-[15px] font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
                 style={{ borderColor: "color-mix(in oklab, white 38%, transparent)" }}
               >
                 {tHome2("allToursCta")}

@@ -63,7 +63,7 @@ export function PhotoGallery({
 
             {i === 0 && badge ? (
               <span
-                className="absolute start-3 top-3 rounded-[0.4rem] px-2.5 py-1 text-[11.5px] font-bold"
+                className="absolute start-3 top-3 rounded-[0.375rem] px-2.5 py-1 text-[11.5px] font-bold"
                 style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
               >
                 {badge}

@@ -94,7 +94,7 @@ export function SectionAction({
 
   return (
     <span
-      className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.7rem] border px-5 py-3 text-[13.5px] font-semibold transition-colors"
+      className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.625rem] border px-5 py-3 text-[13.5px] font-semibold transition-colors"
       style={
         dark
           ? { borderColor: "color-mix(in oklab, white 22%, transparent)", color: "#fff" }

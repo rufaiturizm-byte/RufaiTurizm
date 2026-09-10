@@ -230,7 +230,7 @@ export default async function ServiceDetailPage({
               ).map(({ key, icon: Icon }, index) => (
                 <div key={key} className="accent-card p-5">
                   <span
-                    className={`inline-flex size-11 items-center justify-center rounded-[0.75rem] ${
+                    className={`inline-flex size-11 items-center justify-center rounded-[0.875rem] ${
                       index % 2 === 1 ? "tile-sky" : ""
                     }`}
                     style={
@@ -288,7 +288,7 @@ export default async function ServiceDetailPage({
 
             <WhatsAppLink
               subject={name}
-              className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+              className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.875rem] py-4 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             >
               <WhatsAppIcon className="size-5" />
               {tCta("bookNow")}
@@ -296,7 +296,7 @@ export default async function ServiceDetailPage({
 
             <Link
               href="/services"
-              className="mt-3 flex items-center justify-center gap-2 rounded-[0.8rem] border py-3 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
+              className="mt-3 flex items-center justify-center gap-2 rounded-[0.875rem] border py-3 text-[13.5px] font-semibold transition-colors hover:bg-secondary"
               style={{ borderColor: "color-mix(in oklab, var(--brand-night) 15%, transparent)" }}
             >
               {tCommon("backToServices")}

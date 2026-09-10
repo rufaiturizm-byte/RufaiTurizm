@@ -100,7 +100,7 @@ export async function TransferTypes() {
 
               <WhatsAppLink
                 subject={t(`type${n}Title`)}
-                className="btn-wa mt-4 inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-2.5 text-[12.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                className="btn-wa mt-4 inline-flex items-center justify-center gap-2 rounded-[0.625rem] py-2.5 text-[12.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <MessageCircle className="size-3.5" aria-hidden="true" />
                 {tCta("bookNow")}
@@ -216,7 +216,7 @@ export async function TransferWhy() {
         {reasons.map(({ n, icon: Icon }, index) => (
           <article key={n} className="reveal-rise accent-card p-6">
             <span
-              className={`inline-flex size-12 items-center justify-center rounded-[0.8rem] ${
+              className={`inline-flex size-12 items-center justify-center rounded-[0.875rem] ${
                 index % 2 === 1 ? "tile-sky" : ""
               }`}
               style={
@@ -378,7 +378,7 @@ export async function ClosingCta({ locale }: { locale?: string }) {
         <p className="relative z-20 max-w-lg text-[15px] leading-[1.8] text-white/75">{t("ctaText")}</p>
 
         <WhatsAppLink
-          className="relative z-20 mt-3 inline-flex items-center gap-3 rounded-[0.8rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+          className="relative z-20 mt-3 inline-flex items-center gap-3 rounded-[0.875rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           style={{
             background: "var(--brand-gold)",
             color: "var(--brand-night)",

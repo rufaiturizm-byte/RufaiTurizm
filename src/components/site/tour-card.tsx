@@ -38,7 +38,7 @@ export async function TourCard({ tour }: { tour: Tour }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <span
-          className="absolute start-3 top-3 rounded-[0.4rem] px-2.5 py-1 text-[11.5px] font-bold"
+          className="absolute start-3 top-3 rounded-[0.375rem] px-2.5 py-1 text-[11.5px] font-bold"
           style={{
             background: "var(--brand-gold)",
             color: "var(--brand-night)",
@@ -88,7 +88,7 @@ export async function TourCard({ tour }: { tour: Tour }) {
         <div className="mt-4 flex flex-col gap-2.5">
           <Link
             href={href}
-            className="inline-flex items-center justify-center gap-2 rounded-[0.6rem] border py-3 text-[13px] font-semibold transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center gap-2 rounded-[0.625rem] border py-3 text-[13px] font-semibold transition-colors hover:bg-secondary"
             style={{ borderColor: "color-mix(in oklab, var(--brand-night) 15%, transparent)" }}
           >
             {tCommon("details")}
@@ -96,7 +96,7 @@ export async function TourCard({ tour }: { tour: Tour }) {
           </Link>
           <WhatsAppLink
             subject={name}
-            className="btn-wa inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+            className="btn-wa inline-flex items-center justify-center gap-2 rounded-[0.625rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             {tCta("bookNow")}

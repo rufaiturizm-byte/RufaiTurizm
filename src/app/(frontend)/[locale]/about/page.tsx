@@ -209,7 +209,7 @@ export default async function AboutPage({
               return (
                 <div key={title} className="reveal-rise accent-card flex flex-col p-7">
                   <span
-                    className="inline-flex size-11 items-center justify-center rounded-[0.75rem]"
+                    className="inline-flex size-11 items-center justify-center rounded-[0.875rem]"
                     style={{
                       background: "color-mix(in oklab, var(--brand-gold) 20%, transparent)",
                       border: "1px solid color-mix(in oklab, var(--brand-gold) 42%, transparent)",

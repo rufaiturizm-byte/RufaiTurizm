@@ -185,7 +185,7 @@ export async function RouteCoverage({
       >
         <p className="measure text-[13.5px] leading-[1.7]">{t("priceNote")}</p>
         <WhatsAppLink
-          className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.7rem] px-5 py-3 text-[13.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+          className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.625rem] px-5 py-3 text-[13.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
         >
           {tCta("whatsapp")}

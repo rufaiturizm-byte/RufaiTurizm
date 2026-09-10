@@ -677,13 +677,30 @@ html {
     transform 320ms var(--ease-soft);
 }
 
-.accent-card::before {
+/*
+ * Altın şerit yalnız AÇILABİLİR kartlarda.
+ *
+ * Şerit her `.accent-card`'da vardı ve ölçtüm: vito-vip sayfasında yirmi
+ * dokuz kartın yirmi dokuzunda, iletişimde on sekizinde. Yirmi dokuz kez
+ * tekrarlanan bir imza imza olmaktan çıkıyor — sayfa "her kutuya aynı
+ * süsü koymuşlar" gibi okunuyor ve hiçbir kart öne çıkmıyor.
+ *
+ * Kural: şerit tıklanabilirliğin işareti. Tur, paket, rehber, otel,
+ * güzergâh kartları `<article>` olarak yazılıyor ve açılıyor — şerit
+ * onlarda. Bilgi kutuları, özellik listeleri, numaralı maddeler ve çipler
+ * `<div>`, `<li>` ya da `<a>` ve tıklanacak bir sayfaları yok — onlar
+ * aynı yüzeyi şeritsiz kullanıyor.
+ *
+ * Şerit de inceldi (3 -> 2 piksel, %34 -> %28): ayrıntı olarak duruyor,
+ * bant olarak değil.
+ */
+article.accent-card::before {
   content: "";
   position: absolute;
   inset-inline-start: 0;
   top: 0;
-  height: 3px;
-  width: 34%;
+  height: 2px;
+  width: 28%;
   background: linear-gradient(
     to right,
     var(--brand-gold) 0%,
@@ -695,7 +712,7 @@ html {
 /* Şerit `inset-inline-start` ile tutturulduğu için RTL'de sağ kenardan
    başlıyor, ama gradyan hâlâ soldan sağa akıyordu: altın uç tutturulduğu
    kenarda değil, karşı uçta kalıyordu. Yön de çevrilmeli. */
-[dir="rtl"] .accent-card::before {
+[dir="rtl"] article.accent-card::before {
   background: linear-gradient(
     to left,
     var(--brand-gold) 0%,
@@ -711,7 +728,7 @@ html {
     border-color: color-mix(in oklab, var(--brand-gold) 30%, var(--hairline));
     transform: translateY(-3px);
   }
-  .accent-card:hover::before {
+  article.accent-card:hover::before {
     width: 100%;
   }
 }

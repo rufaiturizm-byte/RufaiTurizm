@@ -169,7 +169,7 @@ export default async function ContactPage({
               </p>
 
               <WhatsAppLink
-                className="mt-7 inline-flex items-center gap-3 rounded-[0.8rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                className="mt-7 inline-flex items-center gap-3 rounded-[0.875rem] px-8 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{
                   background: "var(--brand-gold)",
                   color: "var(--brand-night)",
@@ -199,7 +199,7 @@ export default async function ContactPage({
               const body = (
                 <>
                   <span
-                    className={`inline-flex size-11 items-center justify-center rounded-[0.75rem] ${
+                    className={`inline-flex size-11 items-center justify-center rounded-[0.875rem] ${
                       index % 2 === 1 ? "tile-sky" : ""
                     }`}
                     style={

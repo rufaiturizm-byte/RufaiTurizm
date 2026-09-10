@@ -100,7 +100,7 @@ export function MobileActionBar() {
         rel="noopener noreferrer"
         data-analytics="whatsapp-mobile-bar"
         tabIndex={hidden ? -1 : undefined}
-        className="btn-wa flex w-full items-center justify-center gap-2.5 rounded-[0.8rem] py-3.5 text-[15px] font-bold text-white"
+        className="btn-wa flex w-full items-center justify-center gap-2.5 rounded-[0.875rem] py-3.5 text-[15px] font-bold text-white"
       >
         <WhatsAppIcon className="size-5" />
         {t("whatsapp")}

@@ -84,7 +84,7 @@ export async function Header() {
           <WhatsAppLink
             /* whitespace-nowrap şart: menüye "Paketler" eklenince düğme
                daralıp "احجز الآن" iki satıra bölünüyordu. */
-            className="hidden shrink-0 items-center gap-2.5 whitespace-nowrap rounded-[0.7rem] border px-5 py-2.5 text-[14px] font-semibold transition-colors hover:bg-[color:color-mix(in_oklab,var(--brand-gold)_12%,transparent)] sm:inline-flex"
+            className="hidden shrink-0 items-center gap-2.5 whitespace-nowrap rounded-[0.625rem] border px-5 py-2.5 text-[14px] font-semibold transition-colors hover:bg-[color:color-mix(in_oklab,var(--brand-gold)_12%,transparent)] sm:inline-flex"
             style={{
               borderColor: "color-mix(in oklab, var(--brand-gold) 62%, transparent)",
               color: "var(--brand-gold)",

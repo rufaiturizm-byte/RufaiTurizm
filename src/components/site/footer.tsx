@@ -214,7 +214,7 @@ export async function Footer() {
               href={siteConfig.tursabVerifyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit items-center gap-3 rounded-[0.6rem] bg-white px-3.5 py-2.5 transition-opacity hover:opacity-90"
+              className="inline-flex w-fit items-center gap-3 rounded-[0.625rem] bg-white px-3.5 py-2.5 transition-opacity hover:opacity-90"
             >
               <Image
                 src="/brand/tursab.png"

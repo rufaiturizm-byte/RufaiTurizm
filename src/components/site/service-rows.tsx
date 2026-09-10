@@ -57,7 +57,7 @@ export async function ServiceRows() {
                   className="object-cover"
                 />
                 <span
-                  className="absolute start-4 top-4 rounded-[0.4rem] px-3 py-1.5 text-[11.5px] font-bold"
+                  className="absolute start-4 top-4 rounded-[0.375rem] px-3 py-1.5 text-[11.5px] font-bold"
                   style={{
                     background: "var(--brand-gold)",
                     color: "var(--brand-night)",
@@ -111,7 +111,7 @@ export async function ServiceRows() {
 
                   <WhatsAppLink
                     subject={name}
-                    className="btn-wa inline-flex items-center gap-2.5 rounded-[0.7rem] px-6 py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                    className="btn-wa inline-flex items-center gap-2.5 rounded-[0.625rem] px-6 py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                   >
                     <WhatsAppIcon className="size-[18px]" />
                     {tCta("bookNow")}
@@ -119,7 +119,7 @@ export async function ServiceRows() {
 
                   <Link
                     href={href}
-                    className="inline-flex items-center gap-2 rounded-[0.7rem] border px-6 py-3.5 text-[14px] font-semibold transition-colors hover:bg-secondary"
+                    className="inline-flex items-center gap-2 rounded-[0.625rem] border px-6 py-3.5 text-[14px] font-semibold transition-colors hover:bg-secondary"
                     style={{
                       borderColor: "color-mix(in oklab, var(--brand-night) 15%, transparent)",
                     }}

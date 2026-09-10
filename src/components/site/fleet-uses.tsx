@@ -74,13 +74,13 @@ export async function FleetUses() {
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-center gap-3">
                 <span
-                  className="inline-flex size-11 shrink-0 items-center justify-center rounded-[0.8rem]"
+                  className="inline-flex size-11 shrink-0 items-center justify-center rounded-[0.875rem]"
                   style={{ background: "var(--brand-night)", color: "var(--brand-gold)" }}
                 >
                   <Icon className="size-[19px]" aria-hidden="true" />
                 </span>
                 <span
-                  className="inline-flex items-center rounded-[0.4rem] px-2.5 py-1 text-[11px] font-bold"
+                  className="inline-flex items-center rounded-[0.375rem] px-2.5 py-1 text-[11px] font-bold"
                   style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}
                 >
                   {t("vito.name")}
@@ -101,7 +101,7 @@ export async function FleetUses() {
 
               <WhatsAppLink
                 subject={title}
-                className="btn-wa mt-3.5 inline-flex items-center justify-center gap-2 rounded-[0.6rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                className="btn-wa mt-3.5 inline-flex items-center justify-center gap-2 rounded-[0.625rem] py-3 text-[13px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <WhatsAppIcon className="size-4" />
                 {tCta("bookNow")}

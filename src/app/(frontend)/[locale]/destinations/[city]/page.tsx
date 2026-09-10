@@ -388,7 +388,7 @@ export default async function DestinationPage({
               </p>
               <WhatsAppLink
                 subject={name}
-                className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.8rem] py-3.5 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                className="btn-wa mt-6 flex items-center justify-center gap-2.5 rounded-[0.875rem] py-3.5 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <WhatsAppIcon className="size-[18px]" />
                 {tCta("whatsapp")}

@@ -143,7 +143,7 @@ export async function PromoBanner({
                      başlıkta değil burada durmalı, yoksa başlık vaat
                      ettiğinden fazlasını söylüyormuş gibi okunuyor. */
                   <p
-                    className="mt-4 inline-block rounded-[0.6rem] px-3 py-2 text-[12.5px] font-semibold"
+                    className="mt-4 inline-block rounded-[0.625rem] px-3 py-2 text-[12.5px] font-semibold"
                     style={{
                       background: "color-mix(in oklab, white 8%, transparent)",
                       color: "rgb(255 255 255 / 0.82)",
@@ -156,7 +156,7 @@ export async function PromoBanner({
 
               <WhatsAppLink
                 subject={banner.title[lang] ?? banner.title.tr}
-                className="cta-gold inline-flex w-fit shrink-0 items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold"
+                className="cta-gold inline-flex w-fit shrink-0 items-center gap-2.5 rounded-[0.875rem] px-7 py-4 text-[14.5px] font-bold"
               >
                 <WhatsAppIcon className="size-[18px]" />
                 {banner.cta ? (banner.cta[lang] ?? banner.cta.tr) : t("whatsapp")}

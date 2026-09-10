@@ -390,7 +390,7 @@ export default async function HotelsPage({
               <div className="mx-auto w-full max-w-7xl px-5 pt-5 sm:px-8">
                 <WhatsAppLink
                   subject={name}
-                  className="btn-wa flex items-center justify-center gap-2.5 rounded-[0.7rem] py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                  className="btn-wa flex items-center justify-center gap-2.5 rounded-[0.625rem] py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
                   <WhatsAppIcon className="size-[18px]" />
                   {name} — {tCta("bookNow")}
@@ -416,7 +416,7 @@ export default async function HotelsPage({
 
           <WhatsAppLink
             subject={t("title")}
-            className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+            className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.875rem] px-7 py-4 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             style={{
               background: "var(--brand-gold)",
               color: "var(--brand-night)",

@@ -36,7 +36,7 @@ export async function CredentialsBand() {
         {/* Amblem kırmızı-gri: krem zeminde okunmuyor, o yüzden kendi
             altın çerçeveli beyaz kutusunda duruyor. */}
         <div
-          className="flex w-fit items-center justify-center rounded-[0.7rem] border-4 bg-white px-6 py-5"
+          className="flex w-fit items-center justify-center rounded-[0.625rem] border-4 bg-white px-6 py-5"
           style={{ borderColor: "color-mix(in oklab, var(--brand-gold) 62%, transparent)" }}
         >
           <Image

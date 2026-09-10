@@ -71,7 +71,7 @@ export default async function NotFound() {
           <div className="mt-9 flex flex-wrap items-center gap-3.5">
             <Link
               href="/"
-              className="inline-flex items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+              className="inline-flex items-center gap-2.5 rounded-[0.875rem] px-7 py-4 text-[14.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               style={{
                 background: "var(--brand-gold)",
                 color: "var(--brand-night)",
@@ -83,7 +83,7 @@ export default async function NotFound() {
             </Link>
 
             <WhatsAppLink
-              className="btn-wa inline-flex items-center gap-2.5 rounded-[0.8rem] px-7 py-4 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+              className="btn-wa inline-flex items-center gap-2.5 rounded-[0.875rem] px-7 py-4 text-[14.5px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             >
               <WhatsAppIcon className="size-[18px]" />
               {tCta("whatsapp")}

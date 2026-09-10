@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
 
   return (
     <div
-      className="flex items-center gap-0.5 rounded-md p-0.5"
+      className="flex items-center gap-0.5 rounded-[0.375rem] p-0.5"
       style={{ background: "var(--brand-night-2)" }}
       role="group"
       aria-label="Language"

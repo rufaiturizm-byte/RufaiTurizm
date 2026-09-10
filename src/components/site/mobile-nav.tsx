@@ -28,7 +28,7 @@ export function MobileNav({ items }: { items: Item[] }) {
          * menüye ulaşmanın tek yolu olan düğme, yanlış adla duyuruluyordu.
          */
         aria-label={tNav("menu")}
-        className="inline-flex size-10 items-center justify-center rounded-[0.7rem] border text-white xl:hidden"
+        className="inline-flex size-10 items-center justify-center rounded-[0.625rem] border text-white xl:hidden"
         style={{ borderColor: "color-mix(in oklab, white 18%, transparent)" }}
       >
         <Menu className="size-5" aria-hidden="true" />

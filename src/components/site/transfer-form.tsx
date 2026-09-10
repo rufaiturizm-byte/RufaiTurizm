@@ -37,7 +37,7 @@ type ReturnKind = "none" | "same" | "different";
  * (`text-base md:text-sm`); bu form onu kaçırmıştı.
  */
 const FIELD =
-  "w-full rounded-[0.7rem] border bg-background px-4 py-3.5 text-[16px] outline-none " +
+  "w-full rounded-[0.625rem] border bg-background px-4 py-3.5 text-[16px] outline-none " +
   "sm:text-[14.5px] placeholder:text-muted-foreground/65 transition-colors " +
   "focus:border-[color:var(--brand-gold-deep)]";
 
@@ -180,7 +180,7 @@ export function TransferForm() {
               <button
                 type="button"
                 onClick={() => setStop("")}
-                className="inline-flex shrink-0 items-center gap-2 rounded-[0.7rem] border px-4 text-[12.5px] font-semibold transition-colors hover:bg-secondary"
+                className="inline-flex shrink-0 items-center gap-2 rounded-[0.625rem] border px-4 text-[12.5px] font-semibold transition-colors hover:bg-secondary"
               >
                 <Plus className="size-3.5" aria-hidden="true" />
                 {t("addStop")}
@@ -269,7 +269,7 @@ export function TransferForm() {
           document.getElementById("tf-from")?.focus();
         }}
         data-analytics="whatsapp-transfer-form"
-        className="btn-wa mt-6 flex w-full items-center justify-center gap-3 rounded-[0.85rem] py-4.5 text-[16px] font-bold"
+        className="btn-wa mt-6 flex w-full items-center justify-center gap-3 rounded-[0.875rem] py-4.5 text-[16px] font-bold"
         style={{
           opacity: ready ? 1 : 0.55,
           cursor: ready ? "pointer" : "not-allowed",
@@ -296,7 +296,7 @@ export function TransferForm() {
               type="button"
               aria-pressed={active}
               onClick={() => setReturnKind(active ? "none" : kind)}
-              className="inline-flex items-center gap-2.5 rounded-[0.7rem] border px-4 py-3 text-[13.5px] font-medium transition-colors hover:bg-secondary"
+              className="inline-flex items-center gap-2.5 rounded-[0.625rem] border px-4 py-3 text-[13.5px] font-medium transition-colors hover:bg-secondary"
               style={active ? { borderColor: "var(--brand-gold-deep)" } : undefined}
             >
               <span
@@ -321,7 +321,7 @@ export function TransferForm() {
         })}
 
         <span
-          className="inline-flex items-center gap-2 rounded-[0.7rem] border px-4 py-3 text-[13.5px] font-bold"
+          className="inline-flex items-center gap-2 rounded-[0.625rem] border px-4 py-3 text-[13.5px] font-bold"
           style={{
             background: "color-mix(in oklab, var(--brand-gold) 18%, transparent)",
             borderColor: "color-mix(in oklab, var(--brand-gold) 48%, transparent)",

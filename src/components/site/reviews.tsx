@@ -42,7 +42,7 @@ export async function Reviews() {
 
         <div className="grid gap-5 lg:grid-cols-[300px_1fr]">
           <div
-            className="flex flex-col gap-4 rounded-xl p-6"
+            className="flex flex-col gap-4 rounded-[0.625rem] p-6"
             style={{ background: "var(--brand-night-2)" }}
           >
             <div>
@@ -65,9 +65,9 @@ export async function Reviews() {
                       <span className="text-white/75">{t(row.key)}</span>
                       <span className="font-bold text-white">{row.score.toFixed(1)}</span>
                     </div>
-                    <div className="h-1 rounded-sm bg-white/15">
+                    <div className="h-1 rounded-[0.375rem] bg-white/15">
                       <div
-                        className="h-full rounded-sm"
+                        className="h-full rounded-[0.375rem]"
                         style={{
                           width: `${(row.score / 5) * 100}%`,
                           background: "var(--brand-gold)",
@@ -84,7 +84,7 @@ export async function Reviews() {
                 href={siteConfig.googleReviewsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md border py-3 text-center text-[13px] font-bold text-white transition-colors hover:bg-white/5"
+                className="rounded-[0.375rem] border py-3 text-center text-[13px] font-bold text-white transition-colors hover:bg-white/5"
                 style={{ borderColor: "var(--brand-night-3)" }}
               >
                 {t("googleCta")}
@@ -96,7 +96,7 @@ export async function Reviews() {
             {reviews.map((review) => (
               <figure
                 key={`${review.name}-${review.date}`}
-                className="flex flex-col gap-2.5 rounded-xl bg-white p-5"
+                className="flex flex-col gap-2.5 rounded-[0.625rem] bg-white p-5"
               >
                 <figcaption>
                   <div className="text-[14px] font-bold">{review.name}</div>

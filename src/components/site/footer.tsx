@@ -76,8 +76,17 @@ export async function Footer() {
   return (
     <footer style={{ background: "var(--brand-night)" }} className="text-white/62">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.15fr]">
-          <div>
+        {/*
+          En dar ekranda dört blok alt alta ve aralarında 48 piksel boşluk
+          vardı: altbilgi 390 pikselde 1.876 piksel oluyordu, yani iki
+          ekrandan uzun. Kapanış bandından sonra bu kadar altbilgi
+          kaydırmak sayfayı bitmez gösteriyor.
+
+          Artık bağlantı sütunları en dar ekranda da iki sütun; marka
+          bloğu tam genişlikte kalıyor çünkü içinde logo ve paragraf var.
+        */}
+        <div className="grid grid-cols-2 gap-x-7 gap-y-10 sm:gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1.15fr]">
+          <div className="col-span-2 lg:col-span-1">
             <Logo sub="TURİZM" size={52} flourish />
             <p className="mt-6 max-w-[290px] text-[13.5px] leading-[1.85]">{t("about")}</p>
 

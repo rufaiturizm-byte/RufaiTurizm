@@ -3835,6 +3835,195 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "istanbulda-anadolu-yakasi",
+    topic: "daytrips",
+    image: "/images/places/vapur-iskele.jpg",
+    title: {
+      tr: "İstanbul'un Anadolu yakası: Üsküdar, Kadıköy, Moda",
+      ar: "الجانب الآسيوي من إسطنبول: أوسكودار وكاديكوي ومودا",
+      en: "Istanbul's Asian side: Üsküdar, Kadıköy and Moda",
+    },
+    excerpt: {
+      tr: "Vapurla yirmi dakika: sıra, bilet ve kapanış saati olmayan bir gün.",
+      ar: "عشرون دقيقة بالعبّارة: يوم بلا طوابير ولا تذاكر ولا ساعة إغلاق.",
+      en: "Twenty minutes by ferry: a day with no queues, no tickets and no closing time.",
+    },
+    facts: [
+      {
+        label: {
+          tr: "Geçiş",
+          ar: "العبور",
+          en: "Crossing",
+        },
+        value: {
+          tr: "Vapurla yaklaşık 20 dakika",
+          ar: "نحو 20 دقيقة بالعبّارة",
+          en: "About 20 minutes by ferry",
+        },
+      },
+      {
+        label: {
+          tr: "En hızlısı",
+          ar: "الأسرع",
+          en: "Fastest",
+        },
+        value: {
+          tr: "Marmaray — denizin altından",
+          ar: "مرمراي — من تحت البحر",
+          en: "Marmaray — under the sea",
+        },
+      },
+      {
+        label: {
+          tr: "Süre",
+          ar: "المدّة",
+          en: "Time needed",
+        },
+        value: {
+          tr: "Yarım gün Üsküdar, yarım gün Kadıköy",
+          ar: "نصف يوم لأوسكودار ونصف لكاديكوي",
+          en: "Half a day each for Üsküdar and Kadıköy",
+        },
+      },
+      {
+        label: {
+          tr: "Kime",
+          ar: "لمن",
+          en: "Best for",
+        },
+        value: {
+          tr: "İkinci geliş ve yavaş gün",
+          ar: "الزيارة الثانية واليوم البطيء",
+          en: "A return visit and a slow day",
+        },
+      },
+    ],
+    seo: {
+      title: {
+        tr: "Anadolu Yakası Gezi Rehberi: Üsküdar ve Kadıköy",
+        ar: "الجانب الآسيوي من إسطنبول: أوسكودار وكاديكوي",
+        en: "Istanbul's Asian Side: Üsküdar and Kadıköy",
+      },
+      description: {
+        tr: "Kadıköy'e vapur Eminönü, Karaköy, Beşiktaş ve Kabataş'tan kalkıyor; Marmaray denizin altından birkaç dakika. Üsküdar, Salacak, Moda ve Bağdat Caddesi bir güne nasıl sığar.",
+        ar: "عبّارات كاديكوي تنطلق من أمينونو وكاراكوي وبشيكتاش وقبة طاش، ومرمراي يعبر تحت البحر في دقائق. كيف يتّسع يوم واحد لأوسكودار وسالاجاك ومودا وشارع بغداد.",
+        en: "Ferries to Kadıköy leave from Eminönü, Karaköy, Beşiktaş and Kabataş; Marmaray crosses under the sea in minutes. How Üsküdar, Salacak, Moda and Bağdat Avenue fit into one day.",
+      },
+    },
+    sections: [
+      {
+        heading: {
+          tr: "Yakayı geçmek: vapur, Marmaray, araç",
+          ar: "عبور الضفّة: العبّارة ومرمراي والسيارة",
+          en: "Crossing to the other side: ferry, Marmaray, car",
+        },
+        body: {
+          tr: "Anadolu yakasına üç yoldan geçiliyor ve üçü aynı gün için aynı şey değil.\n\nVapur en iyisi, çünkü geçişin kendisi programın parçası. Kadıköy'e Eminönü, Karaköy, Beşiktaş ve Kabataş'tan; Üsküdar'a Eminönü, Beşiktaş ve Kabataş'tan kalkıyor. Yolculuk yirmi dakika civarında ve toplu taşıma tarifesinde — yani şehrin en ucuz boğaz manzarası bu. Güverteye çıkın; içeride oturmak aynı şey değil.\n\nMarmaray denizin altından geçen tren hattı: Sirkeci'den Üsküdar'a birkaç dakika sürüyor ve hava kötüyse ya da acele varsa en hızlısı. Manzara yok, çünkü tünelin içindesiniz.\n\nAraçla geçmek en yavaş seçenek ve gün ortasında bile köprüde beklemek olağan. Bir program Anadolu yakasında BAŞLAYIP orada bitiyorsa araç mantıklı; gidip gelmek için değil. Yaka değiştirmenin gerçek maliyeti kilometre değil, saat.\n\nPratik bir düzen şu: sabah vapurla geçin, günü karşıda geçirin, akşam yine vapurla dönün. Dönüş vapuru gün batımına denk gelirse şehrin en çok fotoğraflanan yirmi dakikası ayağınıza gelmiş oluyor.",
+          ar: "يُعبَر إلى الجانب الآسيوي بثلاث طرق، وليست الثلاث سواءً في اليوم الواحد.\n\nالعبّارة أفضلها، لأنّ العبور نفسه جزء من البرنامج. إلى كاديكوي تنطلق من أمينونو وكاراكوي وبشيكتاش وقبة طاش؛ وإلى أوسكودار من أمينونو وبشيكتاش وقبة طاش. والرحلة نحو عشرين دقيقة وعلى تعرفة المواصلات العامة — أي أنّها أرخص إطلالة على البوسفور في المدينة. اصعدوا إلى السطح؛ الجلوس في الداخل ليس الشيء نفسه.\n\nومرمراي خطّ قطار يمرّ تحت البحر: من سيركجي إلى أوسكودار بضع دقائق، وهو الأسرع إن كان الجوّ سيّئاً أو كان الوقت ضيّقاً. ولا إطلالة فيه، لأنّكم داخل النفق.\n\nوالعبور بالسيارة أبطأ الخيارات، والانتظار على الجسر معتاد حتى في وسط النهار. فإن كان البرنامج يبدأ في الجانب الآسيوي وينتهي فيه فالسيارة معقولة؛ أمّا للذهاب والإياب فلا. الكلفة الحقيقية لتبديل الضفّة ليست بالكيلومترات بل بالساعات.\n\nوالترتيب العملي هكذا: اعبروا صباحاً بالعبّارة، واقضوا اليوم في الجهة المقابلة، وعودوا مساءً بالعبّارة أيضاً. وإن صادفت عبّارة العودة غروب الشمس فقد جاءتكم أكثر عشرين دقيقة تُصوَّر في المدينة إلى أقدامكم.",
+          en: "There are three ways across to the Asian side, and for a single day they are not the same thing.\n\nThe ferry is the best of them, because the crossing itself is part of the day. Boats to Kadıköy leave from Eminönü, Karaköy, Beşiktaş and Kabataş; boats to Üsküdar from Eminönü, Beşiktaş and Kabataş. The trip is about twenty minutes and runs on the public transport fare — the cheapest Bosphorus view in the city. Go up on deck; sitting inside is not the same thing.\n\nMarmaray is the rail line that runs under the sea: Sirkeci to Üsküdar takes a few minutes, and it is the fastest option in bad weather or when you are pressed. There is no view, because you are inside the tunnel.\n\nDriving across is the slowest choice, and waiting on the bridge is normal even in the middle of the day. If a programme starts on the Asian side and ends there, a car makes sense; for going and coming back it does not. The real cost of changing sides is not in kilometres but in hours.\n\nA practical shape is this: cross by ferry in the morning, spend the day on the other side, come back by ferry in the evening. If the return boat lands on sunset, the twenty most photographed minutes in the city come to you.",
+        },
+      },
+      {
+        heading: {
+          tr: "Üsküdar: kıyı, camiler ve tepe",
+          ar: "أوسكودار: الشاطئ والمساجد والتلّة",
+          en: "Üsküdar: the shore, the mosques and the hill",
+        },
+        image: "/images/places/bogaz-yali.jpg",
+        imageAlt: {
+          tr: "Boğaz kıyısı, denizden görünüm",
+          ar: "ساحل البوسفور من جهة البحر",
+          en: "The Bosphorus shore seen from the water",
+        },
+        body: {
+          tr: "Üsküdar iskeleden çıkar çıkmaz başlıyor: meydanın kendisinde Mimar Sinan'ın iki eseri var — Mihrimah Sultan Camii iskelenin tam karşısında, Şemsi Paşa Camii ise deniz kıyısında, şehrin en küçük ölçekli camilerinden biri. İkisi de ücretsiz ve ikisi de birkaç dakika sürüyor.\n\nSahil boyunca güneye yürüyünce Salacak'a varılıyor. Kız Kulesi'nin karşıdan göründüğü yer burası ve akşamüstü güneş tarihî yarımadanın arkasına iniyor — şehrin en bilinen silueti tam olarak bu noktadan görünüyor. Kuleye kadar gitmek ayrı bir tekne ve ayrı bir bilet; kıyıdan bakmak ücretsiz.\n\nÜsküdar'ın arkasındaki tepede Çamlıca var: hem şehrin en geniş manzarası hem Türkiye'nin en büyük camisi orada. Otopark geniş, yani araçla gidilen bir yer; vapurla gelen biri için taksiyle on beş dakikalık bir ek.\n\nKıyı hattı kuzeye doğru da uzuyor. Beylerbeyi Sarayı köprünün hemen altında ve biletli; boğaz kıyısındaki sarayların Dolmabahçe'den daha sakin olanı.",
+          ar: "تبدأ أوسكودار من لحظة الخروج من الرصيف: في الميدان نفسه أثران لمعمار سنان — جامع مهرماه سلطان مقابل الرصيف تماماً، وجامع شمسي باشا على حافّة البحر، وهو من أصغر مساجد المدينة حجماً. وكلاهما بلا رسوم وكلاهما لا يستغرق أكثر من دقائق.\n\nوبالمشي جنوباً على الساحل تصلون إلى سالاجاك. هنا تظهر برج الفتاة من المقابل، وعند المساء تنزل الشمس خلف شبه الجزيرة التاريخية — أشهر صورة ظلّية للمدينة تُرى من هذه النقطة بالضبط. أمّا الذهاب إلى البرج نفسه فقارب منفصل وتذكرة منفصلة؛ والنظر إليه من الشاطئ بلا رسوم.\n\nوعلى التلّة خلف أوسكودار تقف تشامليجا: فيها أوسع إطلالة على المدينة وأكبر مساجد تركيا معاً. الموقف واسع، أي أنّه مكان يُقصد بالسيارة؛ ولمن جاء بالعبّارة فهو إضافة خمس عشرة دقيقة بسيارة أجرة.\n\nويمتدّ خطّ الساحل شمالاً أيضاً. قصر بيلربيي تحت الجسر مباشرةً وبرسوم؛ وهو أهدأ قصور البوسفور مقارنةً بدولمة بهجة.",
+          en: "Üsküdar starts the moment you step off the pier: two works by Mimar Sinan stand on the square itself — Mihrimah Sultan Mosque directly opposite the landing, and Şemsi Paşa Mosque right at the water's edge, one of the smallest in the city. Both are free and both take a few minutes.\n\nWalking south along the shore brings you to Salacak. This is where the Maiden's Tower is seen from across the water, and in the late afternoon the sun goes down behind the historic peninsula — the city's best-known silhouette is visible from exactly this spot. Going out to the tower itself is a separate boat and a separate ticket; looking at it from the shore is free.\n\nOn the hill behind Üsküdar stands Çamlıca: the widest view over the city and the largest mosque in Türkiye, in the same place. The car park is large, which tells you it is a place you drive to; from the ferry it is a fifteen-minute taxi ride on top.\n\nThe shore line runs north as well. Beylerbeyi Palace sits directly under the bridge and is ticketed — the quieter of the Bosphorus palaces compared with Dolmabahçe.",
+        },
+      },
+      {
+        heading: {
+          tr: "Kadıköy: çarşı, Bahariye ve Moda",
+          ar: "كاديكوي: السوق وبهارية ومودا",
+          en: "Kadıköy: the market, Bahariye and Moda",
+        },
+        image: "/images/places/kadikoy.jpg",
+        imageAlt: {
+          tr: "Kadıköy iskelesi ve sahil",
+          ar: "رصيف كاديكوي والواجهة البحرية",
+          en: "The Kadıköy pier and waterfront",
+        },
+        body: {
+          tr: "Kadıköy, İstanbul'un turist için değil kendisi için kurulmuş tarafı — ve tam olarak bu yüzden geziliyor.\n\nİskelenin arkasındaki çarşı yürüyerek on beş dakikada baştan sona geçiliyor: balık tezgâhları, peynirciler, kuruyemişçiler ve aralarında yüz yıllık dükkânlar. Kapalıçarşı'dan farkı, buradaki alışverişin gerçek olması — fiyat etiketleri turist için ayarlanmıyor çünkü müşterinin çoğu mahalleli.\n\nÇarşıdan Bahariye Caddesi'ne çıkılıyor: yaya caddesi, ortasından nostaljik tramvay geçiyor ve İstiklal'in üçte biri kadar kalabalık. Devamında Moda var — sakin sokaklar, deniz kenarında geniş bir çimenlik ve şehrin en rahat yürüyüş hattı.\n\nModa sahilinden Kalamış'a doğru yürümek yarım saat sürüyor ve yol boyunca hep deniz kalıyor. Çay bahçeleri bu hattın üstünde; oturup bir saat geçirmek programın en iyi kısmı olabilir.",
+          ar: "كاديكوي هي الجهة التي بُنيت لأهل إسطنبول لا للسائح — ولهذا السبب بالذات تُزار.\n\nالسوق خلف الرصيف يُقطع من أوّله إلى آخره في ربع ساعة سيراً: بسطات السمك، وبائعو الأجبان، والمكسّرات، وبينها دكاكين عمرها مئة عام. والفرق عن السوق المسقوف أنّ الشراء هنا حقيقي — فالأسعار ليست معدَّلة للسائح لأنّ أكثر الزبائن من أهل الحيّ.\n\nومن السوق تصعدون إلى شارع بهارية: شارع للمشاة يمرّ في وسطه الترام القديم، وزحامه ثلث زحام الاستقلال. وبعده مودا — شوارع هادئة، ومساحة خضراء واسعة على البحر، وأريح خطّ مشي في المدينة.\n\nوالمشي من واجهة مودا نحو كالاميش يستغرق نصف ساعة، والبحر معكم طوال الطريق. وحدائق الشاي على هذا الخطّ؛ والجلوس فيها ساعة قد يكون أفضل ما في البرنامج.",
+          en: "Kadıköy is the side of Istanbul that was built for itself rather than for visitors — and that is exactly why people go.\n\nThe market behind the pier can be walked end to end in fifteen minutes: fish stalls, cheesemongers, nut sellers, and among them shops a hundred years old. What separates it from the Grand Bazaar is that the shopping here is real — prices are not set for visitors, because most of the customers live in the neighbourhood.\n\nFrom the market you come up onto Bahariye Avenue: pedestrianised, with the old tram running along the middle of it, and about a third as crowded as İstiklal. Beyond that is Moda — quiet streets, a wide stretch of grass by the sea, and the easiest walking line in the city.\n\nWalking from the Moda shore towards Kalamış takes half an hour, and the sea stays with you the whole way. The tea gardens are along this stretch; sitting for an hour may be the best part of the day.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bağdat Caddesi: alışverişin sakin tarafı",
+          ar: "شارع بغداد: الوجه الهادئ للتسوّق",
+          en: "Bağdat Avenue: the calm side of shopping",
+        },
+        body: {
+          tr: "Bağdat Caddesi Kadıköy'ün güneyinden başlayıp Bostancı'ya kadar uzanan uzun bir cadde: yürüyerek baştan sona gidilmez, ama bir bölümünü yürümek İstiklal'e alışkın biri için şaşırtıcı olur — aynı markalar, üçte bir kalabalık, geniş kaldırım ve iki yanında ağaç.\n\nAlışveriş merkezi arayan için de Anadolu yakasında birkaç büyük merkez var; ne alınır ve nereden alınır konusu alışveriş rehberinde ayrıntılı.\n\nCaddenin sonu Bostancı ve Bostancı aynı zamanda bir vapur iskelesi: Adalar'a giden vapurların kalktığı iskelelerden biri burası. Yani Anadolu yakası günü, isterseniz ertesi gün Adalar'a dönüşen bir hattın başlangıcı oluyor.",
+          ar: "شارع بغداد شارع طويل يبدأ من جنوب كاديكوي ويمتدّ حتى بوستانجي: لا يُقطع كلّه سيراً، لكنّ المشي في جزء منه يفاجئ من اعتاد شارع الاستقلال — العلامات التجارية نفسها، وثلث الزحام، ورصيف واسع، وأشجار على الجانبين.\n\nولمن يبحث عن المولات فهناك عدّة مراكز كبيرة في الجانب الآسيوي؛ وأمّا ماذا يُشترى ومن أين ففي دليل التسوّق تفصيله.\n\nونهاية الشارع بوستانجي، وبوستانجي في الوقت نفسه رصيف عبّارات: منه تنطلق إحدى خطوط الجزر. أي أنّ يوم الجانب الآسيوي يصير، إن شئتم، بداية خطّ ينتهي في اليوم التالي عند جزر الأميرات.",
+          en: "Bağdat Avenue is a long street running from south of Kadıköy down to Bostancı: you would not walk all of it, but walking a stretch surprises anyone used to İstiklal — the same brands, a third of the crowd, a wide pavement and trees on both sides.\n\nFor anyone looking for malls there are several large ones on the Asian side; what to buy and where is set out in the shopping guide.\n\nThe avenue ends at Bostancı, and Bostancı is also a ferry pier: one of the landings that boats to the Princes' Islands leave from. So a day on the Asian side can be the start of a line that ends the following day on the islands.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu yaka kime uyar, kime uymaz",
+          ar: "لمن تناسب هذه الضفّة ولمن لا تناسب",
+          en: "Who this side suits, and who it does not",
+        },
+        body: {
+          tr: "Anadolu yakası ikinci kez gelen misafir için neredeyse her zaman doğru karar: tarihî yarımadayı görmüş biri artık liste kovalamıyor, şehri görmek istiyor ve şehir burada yaşıyor.\n\nYavaş bir gün isteyen için de uygun. Sıra yok, bilet yok, kapanış saati yok; program yürümek, oturmak ve bakmaktan ibaret. Küçük çocuklu ailelerde bu, tarihî yarımadadan çok daha kolay geçen bir gün oluyor.\n\nUymadığı yer de açık: burası müze günü değil. Ayasofya ölçeğinde bir yapı, Topkapı ölçeğinde bir saray yok. İlk kez gelen ve dört günü olan bir misafirin bu yakayı programa sokması, görmesi gereken şeylerden birini çıkarması anlamına gelir — o yüzden ilk gelişte genelde önerilmiyor.\n\nÖlçü olarak: yarım gün Üsküdar'a, yarım gün Kadıköy'e yetiyor. İkisini bir güne koymak rahat; üstüne Çamlıca'yı da eklemek gün'ü sıkıştırıyor ama olur.",
+          ar: "الجانب الآسيوي قرار صائب في الزيارة الثانية في أغلب الأحوال: من رأى شبه الجزيرة التاريخية لم يعد يطارد قائمة، بل يريد أن يرى المدينة — والمدينة تعيش هنا.\n\nويناسب أيضاً من يريد يوماً بطيئاً. لا طوابير، ولا تذاكر، ولا ساعة إغلاق؛ البرنامج مشي وجلوس ونظر. وللعائلات ذات الأطفال الصغار يمرّ هذا اليوم أسهل بكثير من يوم شبه الجزيرة التاريخية.\n\nوموضع عدم المناسبة واضح: هذه ليست جهة المتاحف. لا يوجد بناء بحجم آيا صوفيا ولا قصر بحجم توبكابي. ومن يزور للمرّة الأولى ولديه أربعة أيام، فإدخال هذه الضفّة في البرنامج يعني إخراج شيء لا بدّ من رؤيته — ولهذا لا يُنصح بها عادةً في الزيارة الأولى.\n\nوللقياس: نصف يوم يكفي أوسكودار، ونصف يوم يكفي كاديكوي. وجمعهما في يوم واحد مريح؛ وإضافة تشامليجا فوقهما تضغط اليوم لكنّها ممكنة.",
+          en: "For a returning visitor the Asian side is almost always the right call: someone who has seen the historic peninsula is no longer chasing a list — they want to see the city, and the city lives here.\n\nIt also suits anyone who wants a slow day. No queues, no tickets, no closing time; the programme is walking, sitting and looking. For families with small children this day passes far more easily than a day on the historic peninsula.\n\nWhere it does not fit is just as clear: this is not a museum day. There is no building on the scale of Hagia Sophia, no palace on the scale of Topkapı. For a first-time visitor with four days, putting this side into the programme means taking something essential out — which is why it is usually not recommended on a first trip.\n\nAs a measure: half a day covers Üsküdar and half a day covers Kadıköy. Putting the two into one day is comfortable; adding Çamlıca on top makes the day tight but workable.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Anadolu yakası bir günde gezilir mi?",
+          ar: "هل يُزار الجانب الآسيوي في يوم واحد؟",
+          en: "Can the Asian side be seen in one day?",
+        },
+        answer: {
+          tr: "Evet, ve zaten bir gün için tasarlanmış bir taraf. Yarım gün Üsküdar (iskele meydanı, Salacak sahili, isterseniz tepede Çamlıca), yarım gün Kadıköy (çarşı, Bahariye, Moda sahili) rahat bir gün ediyor. Sıraya girilecek bilet ve kapanış saati olmadığı için program da esnek: geç kalırsanız bir durak düşürmek yeter.",
+          ar: "نعم، وهي أصلاً جهة مصمَّمة ليوم واحد. نصف يوم لأوسكودار (ميدان الرصيف، وساحل سالاجاك، وتشامليجا على التلّة إن شئتم)، ونصف يوم لكاديكوي (السوق، وبهارية، وواجهة مودا) يصنعان يوماً مريحاً. ولأنّه لا توجد تذاكر تُنتظر في طابور ولا ساعة إغلاق، فالبرنامج مرن: إن تأخّرتم يكفي إسقاط محطّة واحدة.",
+          en: "Yes, and it is a side designed for a single day. Half a day for Üsküdar (the pier square, the Salacak shore, and Çamlıca on the hill if you want it) and half a day for Kadıköy (the market, Bahariye, the Moda shore) make a comfortable day. Since there are no tickets to queue for and no closing time, the plan is flexible: if you run late, dropping one stop is enough.",
+        },
+      },
+      {
+        question: {
+          tr: "Vapur mu, Marmaray mı?",
+          ar: "العبّارة أم مرمراي؟",
+          en: "Ferry or Marmaray?",
+        },
+        answer: {
+          tr: "Vaktiniz varsa vapur, yoksa Marmaray. İkisi de toplu taşıma tarifesinde ve ikisi de yirmi dakikanın altında; fark manzarada. Vapur geçişi programın en sevilen yirmi dakikası oluyor, Marmaray ise tünelin içinden geçtiği için hiçbir şey göstermiyor. Yağmurlu bir günde ya da akşam trafiğinde Marmaray daha akıllıca.",
+          ar: "إن كان لديكم وقت فالعبّارة، وإلّا فمرمراي. كلاهما على تعرفة المواصلات العامة وكلاهما دون عشرين دقيقة؛ والفرق في الإطلالة. عبور العبّارة يصير أحبّ عشرين دقيقة في البرنامج، أمّا مرمراي فلا يُري شيئاً لأنّه يمرّ داخل النفق. وفي يوم ماطر أو في زحام المساء يكون مرمراي أذكى.",
+          en: "If you have the time, the ferry; if not, Marmaray. Both run on the public transport fare and both take under twenty minutes; the difference is the view. The ferry crossing becomes the most-liked twenty minutes of the day, while Marmaray shows you nothing because it runs inside the tunnel. On a rainy day or in evening traffic, Marmaray is the smarter choice.",
+        },
+      },
+      {
+        question: {
+          tr: "Adalar mı, Anadolu yakası mı?",
+          ar: "جزر الأميرات أم الجانب الآسيوي؟",
+          en: "The Princes' Islands or the Asian side?",
+        },
+        answer: {
+          tr: "İkisi de günübirlik ama aynı günü vermiyorlar. Adalar bir kopuş: araba yok, vapur yolculuğu uzun ve gün adanın kendisinde geçiyor. Anadolu yakası ise hâlâ İstanbul — mahalle, çarşı, kalabalık ve yemek. Bir tek günübirliğiniz varsa ve şehirden uzaklaşmak istiyorsanız Adalar, şehri anlamak istiyorsanız Anadolu yakası. İkisi de programdaysa arka arkaya koymayın: benzer değiller ama ikisi de yürüme günü.",
+          ar: "كلاهما رحلة يوم واحد، لكنّهما لا يعطيان اليوم نفسه. الجزر انقطاع: لا سيارات، ورحلة العبّارة أطول، واليوم يمضي في الجزيرة نفسها. أمّا الجانب الآسيوي فما زال إسطنبول — حيّ وسوق وزحام وطعام. فإن كان لديكم يوم واحد فقط وأردتم الابتعاد عن المدينة فالجزر، وإن أردتم فهم المدينة فالجانب الآسيوي. وإن كان الاثنان في البرنامج فلا تضعوهما متتاليين: هما مختلفان، لكنّ كليهما يوم مشي.",
+          en: "Both are day trips, but they do not give you the same day. The islands are a break: no cars, a longer boat ride, and the day is spent on the island itself. The Asian side is still Istanbul — neighbourhoods, a market, crowds and food. If you have only one day trip and want to get away from the city, take the islands; if you want to understand the city, take the Asian side. If both are in the programme, do not put them back to back: they are not alike, but both are walking days.",
+        },
+      },
+    ],
+  },
 ];
 
 /**

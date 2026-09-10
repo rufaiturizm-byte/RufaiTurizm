@@ -691,9 +691,49 @@
     "prep6Desc": "Fazla bavul, bebek arabası, tekerlekli sandalye ya da yürümekte zorlanan bir büyüğünüz varsa. Bunlar araç ve program seçimini değiştiriyor.",
     "prepNote": "Hepsini bilmiyorsanız da yazın — elimizdekiyle başlar, eksikleri birlikte tamamlarız. Yanıtları Arapça, Türkçe ya da İngilizce veriyoruz.",
     "afterTitle": "Yazdıktan sonra ne oluyor",
-    "afterText": "Mesajınız elimize geçtiğinde ilk iş eksik bilgiyi tamamlamak: tarih, kişi sayısı, havalimanı ve otel. Bu dördü tamamsa doğrudan fiyata geçiyoruz; değilse önce onları soruyoruz — yukarıdaki altı satırın işi bir tur kısaltmasının sebebi bu.\n\nArdından yazılı bir teklif gidiyor: toplam tutar, neyin dahil olduğu, neyin olmadığı, çok günlü bir programsa gün gün taslak. Rakam sözlü kalmıyor, elinizde duruyor ve karşılaştırabiliyorsunuz.\n\nTeklifi onayladığınızda rezervasyon açılıyor ve teyit aynı yazışmada kalıyor: tarihler, araç, otel rezervasyonu varsa oda tipi. Fiyat bu noktadan sonra değişmiyor — sonradan otopark, köprü ya da bekleme adı altında bir kalem eklenmiyor.\n\nSeyahatten önce son bir mesaj geliyor: şoförün adı, plaka ve karşılama noktasının tam tarifi. Havalimanı karşılamasında uçuşunuzu numarasından takip ediyoruz, yani uçak geç inerse saat kendiliğinden kayıyor ve bekleme için ek ücret çıkmıyor.\n\nProgram başladıktan sonra da muhatabınız değişmiyor: bir şey ters giderse aynı numaraya yazıyorsunuz. Seyahatin içinde söylenen şey düzeltilebiliyor; dönüşten sonra söylenen şey artık yalnız kayda geçiyor.",
+    "afterText": "Mesajınız elimize geçtiğinde beş adım işliyor ve hepsi aynı yazışmanın içinde kalıyor.",
+    "afterItems": [
+      {
+        "title": "Eksik bilgiyi tamamlıyoruz",
+        "body": "Tarih, kişi sayısı, havalimanı ve otel. Bu dördü tamamsa doğrudan fiyata geçiyoruz; değilse önce onları soruyoruz — yukarıdaki altı satırın işi bir tur kısaltmasının sebebi bu."
+      },
+      {
+        "title": "Yazılı teklif gidiyor",
+        "body": "Toplam tutar, neyin dahil olduğu, neyin olmadığı, çok günlü bir programsa gün gün taslak. Rakam sözlü kalmıyor, elinizde duruyor ve karşılaştırabiliyorsunuz."
+      },
+      {
+        "title": "Onaylıyorsunuz, teyit aynı yerde kalıyor",
+        "body": "Rezervasyon açılıyor; tarihler, araç ve otel rezervasyonu varsa oda tipi aynı yazışmada duruyor. Fiyat bu noktadan sonra değişmiyor — sonradan otopark, köprü ya da bekleme adı altında bir kalem eklenmiyor."
+      },
+      {
+        "title": "Seyahatten önce son mesaj",
+        "body": "Şoförün adı, plaka ve karşılama noktasının tam tarifi. Havalimanı karşılamasında uçuşunuzu numarasından takip ediyoruz: uçak geç inerse saat kendiliğinden kayıyor ve bekleme için ek ücret çıkmıyor."
+      },
+      {
+        "title": "Program sırasında muhatabınız değişmiyor",
+        "body": "Bir şey ters giderse aynı numaraya yazıyorsunuz. Seyahatin içinde söylenen şey düzeltilebiliyor; dönüşten sonra söylenen şey artık yalnız kayda geçiyor."
+      }
+    ],
     "whyWaTitle": "Neden her şey WhatsApp'tan yürüyor",
-    "whyWaText": "Yazışmayı WhatsApp üzerinden yürütmemizin dört pratik sebebi var.\n\nBirincisi yazılı olması. Havalimanı adı, uçuş numarası, otel adresi ve fiyat — telefonda en kolay yanlış anlaşılan şeyler bunlar. Yazılı gittiğinde iki tarafta da aynı metin duruyor ve varışta «ben öyle dememiştim» diye başlayan konuşma olmuyor.\n\nİkincisi maliyet. Yurt dışından arama ücretli, WhatsApp değil. Türkiye'ye gelmeden haftalar önce başlayan bir yazışmanın size hiçbir şey tutmaması gerekir.\n\nÜçüncüsü dil. Arapça yazışmak Arapça konuşmaktan daha rahat: karşı taraf mesajı okuyup düşünerek cevap veriyor, isimler ve rakamlar doğru yazılıyor, gerekirse ekran görüntüsü, otel bağlantısı ya da bilet fotoğrafı doğrudan gidiyor.\n\nDördüncüsü kararın ailede verilmesi. Teklifi iletmek tek dokunuş: aynı rakamı ve aynı programı herkes olduğu gibi görüyor, kimse aradaki kişiden duyduğunu aktarmıyor.",
+    "whyWaText": "Yazışmayı WhatsApp üzerinden yürütmemizin dört pratik sebebi var.",
+    "whyWaItems": [
+      {
+        "title": "Yazılı kalıyor",
+        "body": "Havalimanı adı, uçuş numarası, otel adresi ve fiyat — telefonda en kolay yanlış anlaşılan şeyler bunlar. Yazılı gittiğinde iki tarafta da aynı metin duruyor ve varışta «ben öyle dememiştim» diye başlayan konuşma olmuyor."
+      },
+      {
+        "title": "Yurt dışından ücretsiz",
+        "body": "Yurt dışından arama ücretli, WhatsApp değil. Türkiye'ye gelmeden haftalar önce başlayan bir yazışmanın size hiçbir şey tutmaması gerekir."
+      },
+      {
+        "title": "Arapça yazışmak konuşmaktan rahat",
+        "body": "Karşı taraf mesajı okuyup düşünerek cevap veriyor, isimler ve rakamlar doğru yazılıyor, gerekirse ekran görüntüsü, otel bağlantısı ya da bilet fotoğrafı doğrudan gidiyor."
+      },
+      {
+        "title": "Karar ailede veriliyor",
+        "body": "Teklifi iletmek tek dokunuş: aynı rakamı ve aynı programı herkes olduğu gibi görüyor, kimse aradaki kişiden duyduğunu aktarmıyor."
+      }
+    ],
     "metaTitle": "İletişim — WhatsApp'tan Aynı Gün Dönüş"
   },
   "faq": {
@@ -1170,7 +1210,21 @@
     "firstTitle": "İlk geliş mi, ikinci geliş mi",
     "firstText": "İlk gelişte cevap neredeyse her zaman İstanbul'la başlıyor ve bu bir zevk meselesi değil: tarifeli uçuşların çoğu buraya iniyor, Türkiye denince akla gelen yerlerin hepsi — Ayasofya, Sultanahmet, Kapalıçarşı, Boğaz — tek şehirde ve büyük kısmı yürüme mesafesinde. Üç tam gün bunların çoğuna yetiyor, dört gün acele ettirmiyor.\n\nİlk gelişte ikinci bir şehir eklenecekse onu belirleyen şey açık: deniz istiyorsanız Antalya ya da Bodrum, serinlik ve yeşil istiyorsanız Trabzon. Deniz derdi olmayıp şehirden bir gün çıkmak isteyene ise ayrı bir şehir kararı gerekmiyor; Bursa da Sapanca da zaten günübirlik.\n\nİkinci gelişte soru değişiyor. Tarihî yarımadayı görmüş biri için İstanbul artık gezilecek yerler listesi değil; ilk gelişte sıra gelmeyen şeyler öne çıkıyor: Adalar, Anadolu yakası, semt semt alışveriş ve yemek. Çoğu misafir bu kez İstanbul'a iki gün ayırıp asıl zamanı tek bir sahil ya da yayla şehrinde geçiriyor.\n\nAçıkça söylemekte fayda var: Türkiye tek seferde bitirilecek bir liste değil. On günde her yeri görmeye çalışan program çoğunlukla altı şehirle değil, havalimanlarında geçmiş günler ve birbirine karışmış tek bir hatırayla bitiyor.",
     "rhythmTitle": "Sahil, yayla, şehir: gün nasıl geçiyor",
-    "rhythmText": "Altı şehir üç ayrı gün düzeni kuruyor; seçimi asıl belirleyen de bu.\n\nSahil şehirlerinde — Antalya ve Bodrum — gün otelde başlıyor ve çoğu zaman otelde bitiyor: sabah havuz ya da deniz, öğleden sonra sıcağın kırılmasını beklemek, akşam kısa bir çıkış. Gezilecek yer elbette var, Antalya çevresinde antik kentler, Bodrum çevresinde koylar, ama bunlar haftanın bir iki gününü alıyor, her gününü değil. Bu düzen küçük çocuklu ailelerde işe yarıyor; hareketli bir program bekleyen biri üçüncü günde sıkılabiliyor.\n\nŞehir programında — İstanbul ve Bursa — tam tersi geçerli: otel yalnızca uyunan yer. Gün sabah çıkıp akşam dönmekle geçiyor, büyük kısmı ayakta ve yürüyerek; program yorucu. Karşılığında her gün başka bir şey görülüyor.\n\nYayla ve göl tarafında — Trabzon ve Sapanca — günün önemli bir kısmı araçta geçiyor. Uzungöl'e, Ayder'e ya da Sapanca çevresindeki köylere gitmek başlı başına birkaç saat; karşılığında sıcaktan tamamen çıkmış oluyorsunuz. Uzun araç yolunu kaldıramayacak bir grupla bu tarafı seçmek, en çok pişman olunan karar.",
+    "rhythmText": "Altı şehir üç ayrı gün düzeni kuruyor; seçimi asıl belirleyen de bu.",
+    "rhythmItems": [
+      {
+        "title": "Sahil şehirleri — Antalya, Bodrum",
+        "body": "Gün otelde başlıyor ve çoğu zaman otelde bitiyor: sabah havuz ya da deniz, öğleden sonra sıcağın kırılmasını beklemek, akşam kısa bir çıkış. Gezilecek yer elbette var — Antalya çevresinde antik kentler, Bodrum çevresinde koylar — ama bunlar haftanın bir iki gününü alıyor, her gününü değil. Küçük çocuklu ailelerde işe yarıyor; hareketli bir program bekleyen biri üçüncü günde sıkılabiliyor."
+      },
+      {
+        "title": "Şehir programı — İstanbul, Bursa",
+        "body": "Tam tersi geçerli: otel yalnızca uyunan yer. Gün sabah çıkıp akşam dönmekle geçiyor, büyük kısmı ayakta ve yürüyerek; program yorucu. Karşılığında her gün başka bir şey görülüyor."
+      },
+      {
+        "title": "Yayla ve göl — Trabzon, Sapanca",
+        "body": "Günün önemli bir kısmı araçta geçiyor. Uzungöl'e, Ayder'e ya da Sapanca çevresindeki köylere gitmek başlı başına birkaç saat; karşılığında sıcaktan tamamen çıkmış oluyorsunuz. Uzun araç yolunu kaldıramayacak bir grupla bu tarafı seçmek, en çok pişman olunan karar."
+      }
+    ],
     "metaTitle": "Türkiye'de Nereye: İstanbul, Antalya, Bodrum"
   }
 }

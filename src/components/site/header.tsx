@@ -39,7 +39,18 @@ export async function Header() {
       className="sticky top-0 z-50 border-b backdrop-blur-md"
       style={{
         background: "color-mix(in oklab, var(--brand-night) 92%, transparent)",
-        borderColor: "color-mix(in oklab, white 8%, transparent)",
+        /*
+          Alt kenar %8 beyazdı ve lacivert bir bölüm başlığın altından
+          geçerken görünmüyordu: koyu bant koyu başlık çubuğuna giriyor,
+          arada sınır olmadığı için metin hiçbir şeye çarpmadan kesiliyor
+          gibi duruyordu (güven bandı ve kapanış bandı tam olarak o
+          renkte). %16'da çizgi lacivertin üstünde okunuyor; krem
+          zeminde ise zaten iki farklı renk çarpıştığı için fark
+          edilmiyor.
+        */
+        borderColor: "color-mix(in oklab, white 16%, transparent)",
+        /* Açık zeminde ayrımı çizgi değil gölge yapıyor. */
+        boxShadow: "0 12px 28px -20px color-mix(in oklab, var(--brand-night) 85%, transparent)",
       }}
     >
       {/*

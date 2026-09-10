@@ -307,7 +307,12 @@ export default async function ContactPage({
         şoför adı ve plakası, tek muhatap. Yeni bir taahhüt yok, dağınık
         duran sözler ilk mesajı atacak kişinin gördüğü sıraya konuldu.
       */}
-      <ProseSection title={t("afterTitle")} body={t("afterText")} className="pb-20" />
+      <ProseSection
+        title={t("afterTitle")}
+        body={t("afterText")}
+        items={t.raw("afterItems") as { title: string; body: string }[]}
+        className="pb-20"
+      />
 
       {/*
         Kanalın kendisi.
@@ -316,7 +321,12 @@ export default async function ContactPage({
         savunmuyor, kanalın neden yazılı yürüdüğünü söylüyor — dördü de
         misafirin lehine olan sebepler ve dördü de doğrulanabilir.
       */}
-      <ProseSection title={t("whyWaTitle")} body={t("whyWaText")} className="pb-20" />
+      <ProseSection
+        title={t("whyWaTitle")}
+        body={t("whyWaText")}
+        items={t.raw("whyWaItems") as { title: string; body: string }[]}
+        className="pb-20"
+      />
 
       <RouteCoverage locale={locale} />
       <FaqPreview />

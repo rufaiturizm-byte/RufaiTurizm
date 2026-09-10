@@ -58,6 +58,16 @@ export interface PackageDay {
 export interface PackageSection {
   heading: Text;
   body: Text;
+  /**
+   * Gövde aslında bir listeyse maddeler.
+   *
+   * "Fiyatı ne belirliyor" bölümü dört etkeni sayıyor ama dördü arka
+   * arkaya paragraf olarak yazılmıştı: okuyucu dördün dört olduğunu
+   * ancak baştan sona okuyunca anlıyordu. Maddeler numaralı kartlara
+   * dönüyor, `body` giriş cümlesi olarak kalıyor, `outro` da kapanış.
+   */
+  items?: { title: Text; body: Text }[];
+  outro?: Text;
 }
 
 export interface Package {
@@ -157,9 +167,64 @@ export const packages: Package[] = [
           en: "What sets the price",
         },
         body: {
-          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
-          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
-          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أنّ البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. أربعة أشياء تحدّد السعر.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.",
+        },
+        items: [
+          {
+            title: {
+              tr: "Kişi sayısı",
+              ar: "عدد الأشخاص",
+              en: "How many people",
+            },
+            body: {
+              tr: "Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.",
+              ar: "تكلفة السيارة والسائق للسيارة لا للشخص؛ فالجانب المتعلّق بالسيارة في برنامج لشخصين وبرنامج لستّة أشخاص متقارب جداً. ولهذا ينخفض نصيب الفرد انخفاضاً واضحاً في العائلات الكبيرة.",
+              en: "The cost of the vehicle and driver is per car, not per person; the vehicle side of a programme for two and one for six is almost the same. That is why the per-person figure drops noticeably for larger families.",
+            },
+          },
+          {
+            title: {
+              tr: "Tarih",
+              ar: "التاريخ",
+              en: "The date",
+            },
+            body: {
+              tr: "Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.",
+              ar: "أشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ونوفمبر – مارس هي الأنسب. والفارق بينهما أكبر في الفندق وأصغر في السيارة.",
+              en: "The summer months and the two Eid periods are the highest; November to March is the easiest. The gap is wider on the hotel side and narrower on the vehicle.",
+            },
+          },
+          {
+            title: {
+              tr: "Otel sınıfı ve semt",
+              ar: "فئة الفندق والحيّ",
+              en: "Hotel class and district",
+            },
+            body: {
+              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+            },
+          },
+          {
+            title: {
+              tr: "Uçuş dahil mi",
+              ar: "هل الطيران داخل البرنامج",
+              en: "Whether flights are included",
+            },
+            body: {
+              tr: "İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.",
+              ar: "تذاكر الرحلات الداخلية والدولية ليست داخلة في البرنامج؛ إن شئتم اشتريناها باسمكم، وإن لم تشاؤوا اشتريتموها بأنفسكم.",
+              en: "Domestic and international tickets are not part of the programme; if you want, we buy them in your name, and if not, you buy them yourself.",
+            },
+          },
+        ],
+        outro: {
+          tr: "Bu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "وحين تكتبون هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي والمسوّدة يوماً بيوم. والرقم المذكور لا يتغيّر بعدها.",
+          en: "Once you send us those four, we reply the same day with the total and a day-by-day draft. The figure we give does not change afterwards.",
         },
       },
       {
@@ -271,9 +336,64 @@ export const packages: Package[] = [
           en: "What sets the price",
         },
         body: {
-          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
-          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
-          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أنّ البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. أربعة أشياء تحدّد السعر.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.",
+        },
+        items: [
+          {
+            title: {
+              tr: "Kişi sayısı",
+              ar: "عدد الأشخاص",
+              en: "How many people",
+            },
+            body: {
+              tr: "Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.",
+              ar: "تكلفة السيارة والسائق للسيارة لا للشخص؛ فالجانب المتعلّق بالسيارة في برنامج لشخصين وبرنامج لستّة أشخاص متقارب جداً. ولهذا ينخفض نصيب الفرد انخفاضاً واضحاً في العائلات الكبيرة.",
+              en: "The cost of the vehicle and driver is per car, not per person; the vehicle side of a programme for two and one for six is almost the same. That is why the per-person figure drops noticeably for larger families.",
+            },
+          },
+          {
+            title: {
+              tr: "Tarih",
+              ar: "التاريخ",
+              en: "The date",
+            },
+            body: {
+              tr: "Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.",
+              ar: "أشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ونوفمبر – مارس هي الأنسب. والفارق بينهما أكبر في الفندق وأصغر في السيارة.",
+              en: "The summer months and the two Eid periods are the highest; November to March is the easiest. The gap is wider on the hotel side and narrower on the vehicle.",
+            },
+          },
+          {
+            title: {
+              tr: "Otel sınıfı ve semt",
+              ar: "فئة الفندق والحيّ",
+              en: "Hotel class and district",
+            },
+            body: {
+              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+            },
+          },
+          {
+            title: {
+              tr: "Uçuş dahil mi",
+              ar: "هل الطيران داخل البرنامج",
+              en: "Whether flights are included",
+            },
+            body: {
+              tr: "İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.",
+              ar: "تذاكر الرحلات الداخلية والدولية ليست داخلة في البرنامج؛ إن شئتم اشتريناها باسمكم، وإن لم تشاؤوا اشتريتموها بأنفسكم.",
+              en: "Domestic and international tickets are not part of the programme; if you want, we buy them in your name, and if not, you buy them yourself.",
+            },
+          },
+        ],
+        outro: {
+          tr: "Bu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "وحين تكتبون هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي والمسوّدة يوماً بيوم. والرقم المذكور لا يتغيّر بعدها.",
+          en: "Once you send us those four, we reply the same day with the total and a day-by-day draft. The figure we give does not change afterwards.",
         },
       },
       {
@@ -405,9 +525,64 @@ export const packages: Package[] = [
           en: "What sets the price",
         },
         body: {
-          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
-          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
-          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أنّ البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. أربعة أشياء تحدّد السعر.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.",
+        },
+        items: [
+          {
+            title: {
+              tr: "Kişi sayısı",
+              ar: "عدد الأشخاص",
+              en: "How many people",
+            },
+            body: {
+              tr: "Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.",
+              ar: "تكلفة السيارة والسائق للسيارة لا للشخص؛ فالجانب المتعلّق بالسيارة في برنامج لشخصين وبرنامج لستّة أشخاص متقارب جداً. ولهذا ينخفض نصيب الفرد انخفاضاً واضحاً في العائلات الكبيرة.",
+              en: "The cost of the vehicle and driver is per car, not per person; the vehicle side of a programme for two and one for six is almost the same. That is why the per-person figure drops noticeably for larger families.",
+            },
+          },
+          {
+            title: {
+              tr: "Tarih",
+              ar: "التاريخ",
+              en: "The date",
+            },
+            body: {
+              tr: "Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.",
+              ar: "أشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ونوفمبر – مارس هي الأنسب. والفارق بينهما أكبر في الفندق وأصغر في السيارة.",
+              en: "The summer months and the two Eid periods are the highest; November to March is the easiest. The gap is wider on the hotel side and narrower on the vehicle.",
+            },
+          },
+          {
+            title: {
+              tr: "Otel sınıfı ve semt",
+              ar: "فئة الفندق والحيّ",
+              en: "Hotel class and district",
+            },
+            body: {
+              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+            },
+          },
+          {
+            title: {
+              tr: "Uçuş dahil mi",
+              ar: "هل الطيران داخل البرنامج",
+              en: "Whether flights are included",
+            },
+            body: {
+              tr: "İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.",
+              ar: "تذاكر الرحلات الداخلية والدولية ليست داخلة في البرنامج؛ إن شئتم اشتريناها باسمكم، وإن لم تشاؤوا اشتريتموها بأنفسكم.",
+              en: "Domestic and international tickets are not part of the programme; if you want, we buy them in your name, and if not, you buy them yourself.",
+            },
+          },
+        ],
+        outro: {
+          tr: "Bu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "وحين تكتبون هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي والمسوّدة يوماً بيوم. والرقم المذكور لا يتغيّر بعدها.",
+          en: "Once you send us those four, we reply the same day with the total and a day-by-day draft. The figure we give does not change afterwards.",
         },
       },
       {
@@ -551,9 +726,64 @@ export const packages: Package[] = [
           en: "What sets the price",
         },
         body: {
-          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
-          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
-          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أنّ البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. أربعة أشياء تحدّد السعر.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.",
+        },
+        items: [
+          {
+            title: {
+              tr: "Kişi sayısı",
+              ar: "عدد الأشخاص",
+              en: "How many people",
+            },
+            body: {
+              tr: "Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.",
+              ar: "تكلفة السيارة والسائق للسيارة لا للشخص؛ فالجانب المتعلّق بالسيارة في برنامج لشخصين وبرنامج لستّة أشخاص متقارب جداً. ولهذا ينخفض نصيب الفرد انخفاضاً واضحاً في العائلات الكبيرة.",
+              en: "The cost of the vehicle and driver is per car, not per person; the vehicle side of a programme for two and one for six is almost the same. That is why the per-person figure drops noticeably for larger families.",
+            },
+          },
+          {
+            title: {
+              tr: "Tarih",
+              ar: "التاريخ",
+              en: "The date",
+            },
+            body: {
+              tr: "Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.",
+              ar: "أشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ونوفمبر – مارس هي الأنسب. والفارق بينهما أكبر في الفندق وأصغر في السيارة.",
+              en: "The summer months and the two Eid periods are the highest; November to March is the easiest. The gap is wider on the hotel side and narrower on the vehicle.",
+            },
+          },
+          {
+            title: {
+              tr: "Otel sınıfı ve semt",
+              ar: "فئة الفندق والحيّ",
+              en: "Hotel class and district",
+            },
+            body: {
+              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+            },
+          },
+          {
+            title: {
+              tr: "Uçuş dahil mi",
+              ar: "هل الطيران داخل البرنامج",
+              en: "Whether flights are included",
+            },
+            body: {
+              tr: "İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.",
+              ar: "تذاكر الرحلات الداخلية والدولية ليست داخلة في البرنامج؛ إن شئتم اشتريناها باسمكم، وإن لم تشاؤوا اشتريتموها بأنفسكم.",
+              en: "Domestic and international tickets are not part of the programme; if you want, we buy them in your name, and if not, you buy them yourself.",
+            },
+          },
+        ],
+        outro: {
+          tr: "Bu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "وحين تكتبون هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي والمسوّدة يوماً بيوم. والرقم المذكور لا يتغيّر بعدها.",
+          en: "Once you send us those four, we reply the same day with the total and a day-by-day draft. The figure we give does not change afterwards.",
         },
       },
       {
@@ -677,9 +907,64 @@ export const packages: Package[] = [
           en: "What sets the price",
         },
         body: {
-          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
-          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
-          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أنّ البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. أربعة أشياء تحدّد السعر.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.",
+        },
+        items: [
+          {
+            title: {
+              tr: "Kişi sayısı",
+              ar: "عدد الأشخاص",
+              en: "How many people",
+            },
+            body: {
+              tr: "Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.",
+              ar: "تكلفة السيارة والسائق للسيارة لا للشخص؛ فالجانب المتعلّق بالسيارة في برنامج لشخصين وبرنامج لستّة أشخاص متقارب جداً. ولهذا ينخفض نصيب الفرد انخفاضاً واضحاً في العائلات الكبيرة.",
+              en: "The cost of the vehicle and driver is per car, not per person; the vehicle side of a programme for two and one for six is almost the same. That is why the per-person figure drops noticeably for larger families.",
+            },
+          },
+          {
+            title: {
+              tr: "Tarih",
+              ar: "التاريخ",
+              en: "The date",
+            },
+            body: {
+              tr: "Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.",
+              ar: "أشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ونوفمبر – مارس هي الأنسب. والفارق بينهما أكبر في الفندق وأصغر في السيارة.",
+              en: "The summer months and the two Eid periods are the highest; November to March is the easiest. The gap is wider on the hotel side and narrower on the vehicle.",
+            },
+          },
+          {
+            title: {
+              tr: "Otel sınıfı ve semt",
+              ar: "فئة الفندق والحيّ",
+              en: "Hotel class and district",
+            },
+            body: {
+              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+            },
+          },
+          {
+            title: {
+              tr: "Uçuş dahil mi",
+              ar: "هل الطيران داخل البرنامج",
+              en: "Whether flights are included",
+            },
+            body: {
+              tr: "İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.",
+              ar: "تذاكر الرحلات الداخلية والدولية ليست داخلة في البرنامج؛ إن شئتم اشتريناها باسمكم، وإن لم تشاؤوا اشتريتموها بأنفسكم.",
+              en: "Domestic and international tickets are not part of the programme; if you want, we buy them in your name, and if not, you buy them yourself.",
+            },
+          },
+        ],
+        outro: {
+          tr: "Bu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "وحين تكتبون هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي والمسوّدة يوماً بيوم. والرقم المذكور لا يتغيّر بعدها.",
+          en: "Once you send us those four, we reply the same day with the total and a day-by-day draft. The figure we give does not change afterwards.",
         },
       },
       {
@@ -835,9 +1120,64 @@ export const packages: Package[] = [
           en: "What sets the price",
         },
         body: {
-          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.\n\nKişi sayısı. Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.\n\nTarih. Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.\n\nOtel sınıfı ve semt. Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.\n\nUçuş dahil mi. İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.\n\nBu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
-          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أن البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. والسعر تحدّده أربعة أمور.\n\nعدد الأشخاص. فكلفة السيارة والسائق للسيارة لا للفرد؛ وجانب السيارة في برنامج لشخصين يكاد يساوي جانبها في برنامج لستة. ولذلك ينخفض نصيب الفرد بوضوح عند العائلات الكبيرة.\n\nالتاريخ. فأشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ومن نوفمبر إلى مارس الأنسب. والفرق بينهما أكبر في الفندق وأصغر في السيارة.\n\nدرجة الفندق وحيّه. فأنت من يختار الجزء الفندقي من البرنامج — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن بناؤه بثلاث نجوم في السلطان أحمد أو بخمس على ساحل البوسفور.\n\nوهل الطيران مشمول. فتذاكر الرحلات الداخلية والدولية غير مشمولة في البرنامج؛ نشتريها باسمك إن أردت أو تشتريها بنفسك.\n\nوحين تكتب لنا هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي ومسوّدة يوماً بيوم. والرقم الذي يُقال لا يتغيّر بعد ذلك.",
-          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.\n\nHow many you are. The cost of the car and driver is per vehicle, not per person; the vehicle side of a programme for two is almost the same as for six. So the share per person drops noticeably for larger families.\n\nThe date. The summer months and the two Eid periods are the highest; November to March the kindest. The gap is wider on the hotel than on the vehicle.\n\nHotel class and district. You choose the hotel part of the programme — we have no list of partner hotels and add no commission to the price. The same programme can be built with three stars in Sultanahmet or five on the Bosphorus shore.\n\nWhether flights are included. Domestic and international tickets are not part of the programme; we buy them in your name if you want, or you buy them yourself.\n\nWhen you send us those four, we return the total and a day-by-day draft the same day. The figure we give does not change afterwards.",
+          tr: "Paket sayfalarında sabit bir rakam yazmıyoruz ve sebebi şu: aynı program iki aile için aynı tutmuyor. Fiyatı dört şey belirliyor.",
+          ar: "لا نكتب رقماً ثابتاً في صفحات البرامج، والسبب أنّ البرنامج الواحد لا يكلّف عائلتين المبلغ نفسه. أربعة أشياء تحدّد السعر.",
+          en: "We do not print a fixed figure on the programme pages, and the reason is that the same programme does not cost two families the same. Four things set the price.",
+        },
+        items: [
+          {
+            title: {
+              tr: "Kişi sayısı",
+              ar: "عدد الأشخاص",
+              en: "How many people",
+            },
+            body: {
+              tr: "Araç ve şoför maliyeti kişi başına değil araç başına; iki kişilik bir programla altı kişilik programın araç tarafı neredeyse aynı. Bu yüzden kalabalık ailelerde kişi başına düşen tutar belirgin biçimde iniyor.",
+              ar: "تكلفة السيارة والسائق للسيارة لا للشخص؛ فالجانب المتعلّق بالسيارة في برنامج لشخصين وبرنامج لستّة أشخاص متقارب جداً. ولهذا ينخفض نصيب الفرد انخفاضاً واضحاً في العائلات الكبيرة.",
+              en: "The cost of the vehicle and driver is per car, not per person; the vehicle side of a programme for two and one for six is almost the same. That is why the per-person figure drops noticeably for larger families.",
+            },
+          },
+          {
+            title: {
+              tr: "Tarih",
+              ar: "التاريخ",
+              en: "The date",
+            },
+            body: {
+              tr: "Yaz ayları, ramazan bayramı ve kurban bayramı dönemi en yüksek; kasım–mart en uygun. Aradaki fark otelde daha büyük, araçta daha küçük.",
+              ar: "أشهر الصيف وفترتا عيد الفطر وعيد الأضحى هي الأعلى؛ ونوفمبر – مارس هي الأنسب. والفارق بينهما أكبر في الفندق وأصغر في السيارة.",
+              en: "The summer months and the two Eid periods are the highest; November to March is the easiest. The gap is wider on the hotel side and narrower on the vehicle.",
+            },
+          },
+          {
+            title: {
+              tr: "Otel sınıfı ve semt",
+              ar: "فئة الفندق والحيّ",
+              en: "Hotel class and district",
+            },
+            body: {
+              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+            },
+          },
+          {
+            title: {
+              tr: "Uçuş dahil mi",
+              ar: "هل الطيران داخل البرنامج",
+              en: "Whether flights are included",
+            },
+            body: {
+              tr: "İç hat ve dış hat biletleri programa dahil değil; isterseniz sizin adınıza alıyoruz, istemezseniz kendiniz alırsınız.",
+              ar: "تذاكر الرحلات الداخلية والدولية ليست داخلة في البرنامج؛ إن شئتم اشتريناها باسمكم، وإن لم تشاؤوا اشتريتموها بأنفسكم.",
+              en: "Domestic and international tickets are not part of the programme; if you want, we buy them in your name, and if not, you buy them yourself.",
+            },
+          },
+        ],
+        outro: {
+          tr: "Bu dördünü yazdığınızda aynı gün toplam tutarı ve gün gün taslağı gönderiyoruz. Söylenen rakam sonradan değişmiyor.",
+          ar: "وحين تكتبون هذه الأربعة نرسل في اليوم نفسه المبلغ الإجمالي والمسوّدة يوماً بيوم. والرقم المذكور لا يتغيّر بعدها.",
+          en: "Once you send us those four, we reply the same day with the total and a day-by-day draft. The figure we give does not change afterwards.",
         },
       },
       {

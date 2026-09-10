@@ -1,4 +1,5 @@
 import { headingId } from "@/lib/heading-id";
+import { ProseSection } from "./prose-section";
 import type { Locale } from "@/i18n/routing";
 
 type Text = { tr: string; ar: string; en: string };
@@ -8,9 +9,11 @@ type Text = { tr: string; ar: string; en: string };
  *
  * ServiceSections aynı düzeni mesaj dosyalarından okuyor (hizmet ve tur
  * sayfaları metinlerini oradan alıyor). Paketler ise metinlerini kendi
- * veri dosyasında taşıyor, o yüzden ikinci bir giriş noktası gerekti;
- * çizim tarafı bilerek aynı: iki sütun, yapışkan başlık, `\n\n` ile
- * ayrılan paragraflar.
+ * veri dosyasında taşıyor, o yüzden ikinci bir giriş noktası gerekti.
+ *
+ * Çizim işi ProseSection'da: numaralı rozet, giriş paragrafı ve altın
+ * dikey çizgi orada tanımlı ve üç yerde de aynı görünüyor. Burada kalan
+ * tek şey dilden metni seçmek ve çip dizinini basmak.
  *
  * Bölüm yoksa hiç render edilmiyor.
  */
@@ -19,7 +22,12 @@ export function LongSections({
   locale,
   contentsLabel,
 }: {
-  sections?: { heading: Text; body: Text }[];
+  sections?: {
+    heading: Text;
+    body: Text;
+    items?: { title: Text; body: Text }[];
+    outro?: Text;
+  }[];
   locale: string;
   /** Bölüm dizini başlığı; verilmezse dizin çıkmaz. */
   contentsLabel?: string;
@@ -29,11 +37,14 @@ export function LongSections({
   const metin = (t: Text) => t[lang] ?? t.tr;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-4 sm:px-8">
+    <div className="pb-4">
       {/* Dizin yalnız ikiden fazla bölümde işe yarıyor; iki başlık için
           çip sırası kurmak sayfaya gürültüden başka bir şey katmıyor. */}
       {contentsLabel && sections.length > 2 ? (
-        <nav aria-label={contentsLabel} className="mb-12">
+        <nav
+          aria-label={contentsLabel}
+          className="mx-auto mb-12 w-full max-w-7xl px-5 sm:px-8"
+        >
           <p className="eyebrow-rule text-[11px] font-extrabold uppercase tracking-[0.16em] text-muted-foreground">
             {contentsLabel}
           </p>
@@ -54,26 +65,21 @@ export function LongSections({
 
       <div className="flex flex-col gap-14">
         {sections.map((bolum, index) => (
-          <article
+          <ProseSection
             key={metin(bolum.heading)}
-            className="reveal-rise grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14"
-          >
-            <h2
-              id={headingId(metin(bolum.heading), index)}
-              className="font-display text-[24px] font-semibold leading-snug scroll-mt-28 sm:text-[28px] lg:sticky lg:top-28 lg:self-start"
-            >
-              {metin(bolum.heading)}
-            </h2>
-            <div className="measure flex flex-col gap-4 text-[15.5px] leading-[1.95] text-foreground/85">
-              {metin(bolum.body)
-                .split("\n\n")
-                .map((paragraf, sira) => (
-                  <p key={sira}>{paragraf}</p>
-                ))}
-            </div>
-          </article>
+            title={metin(bolum.heading)}
+            body={metin(bolum.body)}
+            items={bolum.items?.map((madde) => ({
+              title: metin(madde.title),
+              body: metin(madde.body),
+            }))}
+            outro={bolum.outro ? metin(bolum.outro) : undefined}
+            index={index}
+            scale="run"
+            reveal
+          />
         ))}
       </div>
-    </section>
+    </div>
   );
 }

@@ -173,7 +173,12 @@ export default async function DestinationsPage({
         gün. Ziyaretçi hangi şehri seveceğini bundan anlıyor, "koylar,
         tekne, sakinlik" listesinden değil.
       */}
-      <ProseSection title={t("rhythmTitle")} body={t("rhythmText")} className="pb-20" />
+      <ProseSection
+        title={t("rhythmTitle")}
+        body={t("rhythmText")}
+        items={t.raw("rhythmItems") as { title: string; body: string }[]}
+        className="pb-20"
+      />
 
       {/*
         İlk geliş / ikinci geliş.

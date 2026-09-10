@@ -691,9 +691,49 @@
     "prep6Desc": "Extra suitcases, a pushchair, a wheelchair, or an older relative who finds walking difficult. These change the vehicle and the plan.",
     "prepNote": "If you do not know all of it, write anyway — we start with what you have and fill in the rest together. We reply in Arabic, Turkish or English.",
     "afterTitle": "What happens after you write",
-    "afterText": "When your message reaches us, the first job is filling in what is missing: dates, how many people, which airport, which hotel. If those four are there we go straight to a price; if not, we ask for them first — which is why the six lines above save a whole round trip.\n\nThen a written quote goes out: the total, what is included, what is not, and a day-by-day draft if the programme runs several days. The figure does not stay spoken; it sits in your hand and you can compare it.\n\nWhen you approve the quote the booking opens and the confirmation stays in the same conversation: dates, vehicle, and the room type if there is a hotel booking. The price does not change after that point — nothing is added later under the name of parking, bridge tolls or waiting.\n\nBefore the trip one last message arrives: the driver's name, the plate number and exactly where you will be met. For airport pickups we follow your flight by its number, so a late landing moves the time by itself and no waiting fee appears.\n\nOnce the programme starts, the person you deal with does not change either: if something goes wrong you write to the same number. What is said during the trip can be put right; what is said after you fly home only goes on the record.",
+    "afterText": "When your message reaches us, five steps follow, and all of them stay inside the same conversation.",
+    "afterItems": [
+      {
+        "title": "We fill in what is missing",
+        "body": "Dates, how many people, which airport, which hotel. If those four are there we go straight to a price; if not, we ask for them first — which is why the six lines above save a whole round trip."
+      },
+      {
+        "title": "A written quote goes out",
+        "body": "The total, what is included, what is not, and a day-by-day draft if the programme runs several days. The figure does not stay spoken; it sits in your hand and you can compare it."
+      },
+      {
+        "title": "You approve, and the confirmation stays put",
+        "body": "The booking opens; dates, vehicle and the room type if there is a hotel booking all stay in the same conversation. The price does not change after that point — nothing is added later under the name of parking, bridge tolls or waiting."
+      },
+      {
+        "title": "One last message before the trip",
+        "body": "The driver's name, the plate number and exactly where you will be met. For airport pickups we follow your flight by its number: a late landing moves the time by itself and no waiting fee appears."
+      },
+      {
+        "title": "Your counterpart does not change during the trip",
+        "body": "If something goes wrong you write to the same number. What is said during the trip can be put right; what is said after you fly home only goes on the record."
+      }
+    ],
     "whyWaTitle": "Why everything runs over WhatsApp",
-    "whyWaText": "There are four practical reasons we run the correspondence over WhatsApp.\n\nThe first is that it is written. Airport names, flight numbers, hotel addresses and prices are the easiest things to mishear on a call. In writing, both sides hold the same text, and no conversation on arrival begins with “that is not what I said”.\n\nThe second is cost. Calling from abroad is charged; WhatsApp is not. A correspondence that starts weeks before you fly to Türkiye should not cost you anything.\n\nThe third is language. Writing in Arabic is easier than speaking it: the other side reads the message and answers after thinking, names and numbers are written correctly, and a screenshot, a hotel link or a photo of a ticket can go straight across when needed.\n\nThe fourth is that the decision is made inside the family. Forwarding the quote is one tap: everyone sees the same figure and the same programme exactly as it is, with nobody relaying what they heard from someone in between.",
+    "whyWaText": "There are four practical reasons we run the correspondence over WhatsApp.",
+    "whyWaItems": [
+      {
+        "title": "It stays in writing",
+        "body": "Airport names, flight numbers, hotel addresses and prices are the easiest things to mishear on a call. In writing, both sides hold the same text, and no conversation on arrival begins with “that is not what I said”."
+      },
+      {
+        "title": "Free from abroad",
+        "body": "Calling from abroad is charged; WhatsApp is not. A correspondence that starts weeks before you fly to Türkiye should not cost you anything."
+      },
+      {
+        "title": "Writing Arabic is easier than speaking it",
+        "body": "The other side reads the message and answers after thinking, names and numbers are written correctly, and a screenshot, a hotel link or a photo of a ticket can go straight across when needed."
+      },
+      {
+        "title": "The decision is made inside the family",
+        "body": "Forwarding the quote is one tap: everyone sees the same figure and the same programme exactly as it is, with nobody relaying what they heard from someone in between."
+      }
+    ],
     "metaTitle": "Contact — Same-Day Reply on WhatsApp"
   },
   "faq": {
@@ -1170,7 +1210,21 @@
     "firstTitle": "First visit or a return visit",
     "firstText": "On a first visit the answer almost always starts with Istanbul, and that is not a matter of taste: most scheduled flights land here, and everything people picture when they think of Türkiye — Hagia Sophia, Sultanahmet, the Grand Bazaar, the Bosphorus — sits in one city, most of it within walking distance. Three full days cover most of it; four days keep the pace unhurried.\n\nIf a second city is added to a first trip, what decides it is clear: the sea means Antalya or Bodrum, cool air and greenery mean Trabzon. If the sea is not the point and you simply want a day out of the city, no separate city decision is needed — Bursa and Sapanca are both day trips already.\n\nOn a return visit the question changes. For someone who has seen the historic peninsula, Istanbul is no longer a list of sights; what comes forward is everything a first trip never reaches — the Princes' Islands, the Asian side, shopping and eating neighbourhood by neighbourhood. Most guests give Istanbul two days this time and spend the real time in a single coastal or highland city.\n\nOne thing is worth saying plainly: Türkiye is not a list to be finished in one trip. A programme that tries to see everything in ten days usually ends not with six cities but with days lost in airports and a single blurred memory.",
     "rhythmTitle": "Coast, highland, city: how the day passes",
-    "rhythmText": "The six cities produce three different shapes of day, and that is what really decides the choice.\n\nIn the coastal cities — Antalya and Bodrum — the day begins at the hotel and usually ends there: pool or sea in the morning, waiting out the afternoon heat, a short outing in the evening. There are things to see, of course, ancient cities around Antalya and coves around Bodrum, but they take a day or two of the week, not every day. This shape works for families with young children; someone expecting a busy programme can be bored by the third day.\n\nIn a city programme — Istanbul and Bursa — the opposite holds: the hotel is only where you sleep. The day is spent leaving in the morning and coming back at night, most of it on your feet, and it is tiring. In return, every day shows you something different.\n\nOn the highland and lake side — Trabzon and Sapanca — a large part of the day is spent in the car. Reaching Uzungöl, Ayder or the villages around Sapanca takes hours in itself; in return you leave the heat behind completely. Choosing this side with a group that cannot handle long drives is the decision people regret most.",
+    "rhythmText": "The six cities produce three different shapes of day, and that is what really decides the choice.",
+    "rhythmItems": [
+      {
+        "title": "Coastal cities — Antalya, Bodrum",
+        "body": "The day begins at the hotel and usually ends there: pool or sea in the morning, waiting out the afternoon heat, a short outing in the evening. There are things to see, of course — ancient cities around Antalya, coves around Bodrum — but they take a day or two of the week, not every day. It works for families with young children; someone expecting a busy programme can be bored by the third day."
+      },
+      {
+        "title": "A city programme — Istanbul, Bursa",
+        "body": "The opposite holds: the hotel is only where you sleep. The day is spent leaving in the morning and coming back at night, most of it on your feet, and it is tiring. In return, every day shows you something different."
+      },
+      {
+        "title": "Highland and lake — Trabzon, Sapanca",
+        "body": "A large part of the day is spent in the car. Reaching Uzungöl, Ayder or the villages around Sapanca takes hours in itself; in return you leave the heat behind completely. Choosing this side with a group that cannot handle long drives is the decision people regret most."
+      }
+    ],
     "metaTitle": "Where to Go in Türkiye: Istanbul, Antalya"
   }
 }

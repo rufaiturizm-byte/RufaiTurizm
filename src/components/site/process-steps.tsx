@@ -10,12 +10,10 @@ import { SectionHeading } from "./section-heading";
  */
 export async function ProcessSteps() {
   const t = await getTranslations("servicesPage");
-  const tEyebrow = await getTranslations("eyebrow");
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("process")}
         title={t("processTitle")}
         subtitle={t("processSubtitle")}
         rule={false}

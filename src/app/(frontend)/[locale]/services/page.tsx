@@ -65,7 +65,6 @@ export default async function ServicesPage({
 
   const t = await getTranslations("servicesPage");
   const tNav = await getTranslations("nav");
-  const tEyebrow = await getTranslations("eyebrow");
 
   return (
     <main id="main" className="flex flex-1 flex-col">
@@ -98,7 +97,6 @@ export default async function ServicesPage({
           etiketi ve başlığı var, altında dört hizmet sırayla geliyor. */}
       <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
         <SectionHeading
-          eyebrow={tEyebrow("services")}
           title={t("offerTitle")}
           subtitle={t("intro")}
           rule={false}

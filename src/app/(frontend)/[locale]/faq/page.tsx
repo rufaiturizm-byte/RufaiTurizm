@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Sparkle } from "lucide-react";
+
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { PageHero } from "@/components/site/page-hero";
@@ -83,7 +83,6 @@ export default async function FaqPage({
   const t = await getTranslations("faq");
   const tNav = await getTranslations("nav");
   const tCta = await getTranslations("cta");
-  const tEyebrow = await getTranslations("eyebrow");
 
   const items = QUESTIONS.map((number) => ({
     question: t(`q${number}`),
@@ -117,8 +116,6 @@ export default async function FaqPage({
 
       <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-24 sm:px-8">
         <SectionHeading
-          eyebrow={tEyebrow("faq")}
-          eyebrowIcon={<Sparkle className="size-4" aria-hidden="true" />}
           title={t("title")}
           subtitle={t("subtitle")}
         />

@@ -166,15 +166,16 @@ export async function TrustStats() {
               }`}
               style={{ borderColor: "var(--hairline)" }}
             >
+              {/* Daire kalktı: altın ikon, altının %14 tonunda zeminde,
+                  altının %55 tonunda kenarlıkla duruyordu — ikon kendi
+                  renginin soluk bir kopyasının içine oturtulmuştu.
+                  Rakamın yanındaki ikonun işi rakamı NİTELEMEK; bunun
+                  için kutuya değil, okunur bir simgeye ihtiyacı var. */}
               <span
-                className="mt-1 inline-flex size-12 shrink-0 items-center justify-center rounded-full border"
-                style={{
-                  borderColor: "color-mix(in oklab, var(--brand-gold) 55%, transparent)",
-                  background: "color-mix(in oklab, var(--brand-gold) 14%, transparent)",
-                  color: "var(--brand-gold-deep)",
-                }}
+                className="mt-1 inline-flex size-12 shrink-0 items-center justify-center"
+                style={{ color: "var(--brand-gold-deep)" }}
               >
-                <Icon className="size-5" aria-hidden="true" />
+                <Icon className="size-6" aria-hidden="true" />
               </span>
 
               <div className="min-w-0">
@@ -220,7 +221,11 @@ export async function TrustStats() {
                   )}
                 </div>
                 <div
-                  className="mt-2.5 text-[11.5px] font-extrabold uppercase tracking-[0.14em]"
+                  /* Büyük harf + 0.14em aralık kalktı. Bu satır rakamın NE
+                     olduğunu söylüyor — rakamı okuyup buraya bakan kişi
+                     için en hızlı okunması gereken yer. 11,5 pikselde
+                     büyük harf ve açılmış aralık tam tersini yapıyordu. */
+                  className="mt-2.5 text-[13px] font-bold"
                   style={{ color: "var(--brand-gold-deep)" }}
                 >
                   {stat.label}

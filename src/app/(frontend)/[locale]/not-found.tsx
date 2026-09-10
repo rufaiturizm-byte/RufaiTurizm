@@ -75,7 +75,7 @@ export default async function NotFound() {
               style={{
                 background: "var(--brand-gold)",
                 color: "var(--brand-night)",
-                boxShadow: "var(--shadow-gold)",
+                boxShadow: "var(--shadow-cta)",
               }}
             >
               {t("home")}

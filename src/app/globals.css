@@ -224,7 +224,24 @@
 
   --shadow-card: var(--shadow-e2);
   --shadow-card-hover: var(--shadow-e3);
-  --shadow-gold: 0 12px 32px color-mix(in oklab, var(--brand-gold) 42%, transparent);
+  /*
+   * Birincil düğmenin gölgesi.
+   *
+   * Eskiden `0 12px 32px` altın %42 idi: düğmenin ARDINDA duran, ondan
+   * taşan altın bir hale. Hale yükseklik anlatmaz — gerçek ışıkta gölge
+   * nesnenin rengini değil zeminin rengini alır ve boyu yüksekliği takip
+   * eder. Altın hale, sayfanın en çok tekrarlanan öğesine "premium"
+   * etiketi yapıştırma hareketiydi.
+   *
+   * Şimdi ölçekteki diğer gölgelerle aynı dili konuşuyor: yüzeye çakan
+   * temas çizgisi + kısa orta katman + dar ortam katmanı, hepsi
+   * brand-night'tan. Koyu bantlarda neredeyse görünmez olması doğru;
+   * orada düğmeyi zeminden ayıran şey zaten kenar ışığı.
+   */
+  --shadow-cta:
+    0 1px 1px color-mix(in oklab, var(--brand-night) 20%, transparent),
+    0 3px 6px color-mix(in oklab, var(--brand-night) 14%, transparent),
+    0 8px 16px color-mix(in oklab, var(--brand-night) 12%, transparent);
   --hairline: color-mix(in oklab, var(--brand-night) 7%, transparent);
   --sidebar: oklch(0.985 0.008 85);
   --sidebar-foreground: oklch(0.248 0.048 272);
@@ -413,23 +430,39 @@ html {
 }
 
 /*
- * WhatsApp yeşili düğmeler.
+ * BİRİNCİL EYLEM DÜĞMESİ.
  *
- * On yedi yerde `background: var(--brand-wa)` düz bir dikdörtgen olarak
- * duruyordu: altın düğmelerin hâlesi ve kenar ışığı varken yeşiller
- * boyanmış bloklar gibi kalıyor, kart ızgaralarında dört yeşil blok üst
- * üste gelince sayfa ağırlaşıyordu.
+ * Bu sınıf eskiden WhatsApp yeşiliydi ve adı da oradan geliyor. Ölçüldü:
+ * ana sayfadaki her düğme WhatsApp'a gidiyordu ama dört ayrı biçimde
+ * çizilmişti — 18 yeşil, 5 altın, 1 altın gradyan, 2 çerçeveli. Aynı
+ * "Hemen rezervasyon" etiketi üç farklı renkte görünüyordu.
  *
- * Renk DEĞİŞMEDİ — Körfez pazarında yeşil "bu WhatsApp'a gider" demek ve
- * o tanınırlık fiyata değmez. Değişen yalnız yüzey: kenar ışığı, markaya
- * çalan yumuşak hâle ve gerçek bir basma durumu.
+ * Yani renk hiçbir kural öğretmiyordu. Ziyaretçi yeşilin ne demek
+ * olduğunu öğrenemiyordu, çünkü bir anlamı yoktu; her düğme kendi
+ * yazıldığı gün nasıl göründüyse öyle kalmıştı.
+ *
+ * Yeni kural: RENK HİYERARŞİYİ ANLATIR, HEDEFİ DEĞİL.
+ *   altın dolgu  → o bölümün tek ana eylemi (bu sınıf)
+ *   çerçeve      → ikincil eylem
+ *   yeşil        → yalnız köşedeki yüzen WhatsApp balonu; orada yeşil
+ *                  artı logo zaten tanınan bir işaret ve düğme sayfanın
+ *                  akışının dışında durduğu için hiyerarşiye karışmıyor.
+ *                  (whatsapp-cta.tsx kendi satır içi zeminini veriyor,
+ *                  bu sınıfa bağlı değil.)
+ *
+ * Altın markanın kendi rengi — logodaki yıldızlardan. Sayfadaki tek
+ * vurgu o olunca vurgu yeniden vurgu oluyor.
+ *
+ * `color` burada gerekli: çağrı yerlerinin çoğunda `text-white` var ve
+ * altın zeminde beyaz yazı okunmaz. Tailwind yardımcıları `@layer
+ * utilities` içinde, bu kural katmansız — katmansız kural kazanır.
  */
 .btn-wa {
-  background: var(--brand-wa);
-  color: #fff;
+  background: var(--brand-gold);
+  color: var(--brand-night);
   box-shadow:
-    inset 0 1px 0 color-mix(in oklab, white 24%, transparent),
-    0 8px 22px color-mix(in oklab, var(--brand-wa) 34%, transparent);
+    inset 0 1px 0 color-mix(in oklab, white 45%, transparent),
+    var(--shadow-cta);
   transition:
     box-shadow 320ms var(--ease-soft),
     transform 160ms var(--ease-soft);
@@ -438,8 +471,10 @@ html {
 @media (hover: hover) {
   .btn-wa:hover {
     box-shadow:
-      inset 0 1px 0 color-mix(in oklab, white 32%, transparent),
-      0 12px 30px color-mix(in oklab, var(--brand-wa) 45%, transparent);
+      inset 0 1px 0 color-mix(in oklab, white 55%, transparent),
+      0 1px 1px color-mix(in oklab, var(--brand-night) 22%, transparent),
+      0 6px 12px color-mix(in oklab, var(--brand-night) 16%, transparent),
+      0 14px 28px color-mix(in oklab, var(--brand-night) 14%, transparent);
     transform: translateY(-2px);
   }
 }
@@ -447,8 +482,8 @@ html {
 .btn-wa:active {
   transform: translateY(0) scale(0.985);
   box-shadow:
-    inset 0 1px 3px color-mix(in oklab, black 26%, transparent),
-    0 3px 10px color-mix(in oklab, var(--brand-wa) 30%, transparent);
+    inset 0 1px 2px color-mix(in oklab, var(--brand-night) 22%, transparent),
+    0 1px 2px color-mix(in oklab, var(--brand-night) 18%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -478,7 +513,7 @@ html {
      yüzeyden çok boyanmış bir dikdörtgen gibi duruyordu. */
   box-shadow:
     inset 0 1px 0 color-mix(in oklab, white 45%, transparent),
-    var(--shadow-gold);
+    var(--shadow-cta);
   letter-spacing: 0.01em;
   transition:
     box-shadow 320ms var(--ease-soft),
@@ -490,7 +525,9 @@ html {
     transform: translateY(-2px);
     box-shadow:
       inset 0 1px 0 color-mix(in oklab, white 55%, transparent),
-      0 16px 40px color-mix(in oklab, var(--brand-gold) 55%, transparent);
+      0 1px 1px color-mix(in oklab, var(--brand-night) 22%, transparent),
+      0 6px 12px color-mix(in oklab, var(--brand-night) 16%, transparent),
+      0 14px 28px color-mix(in oklab, var(--brand-night) 14%, transparent);
   }
 }
 
@@ -501,7 +538,7 @@ html {
   transform: translateY(0) scale(0.985);
   box-shadow:
     inset 0 1px 2px color-mix(in oklab, var(--brand-night) 22%, transparent),
-    0 4px 12px color-mix(in oklab, var(--brand-gold) 38%, transparent);
+    0 1px 2px color-mix(in oklab, var(--brand-night) 18%, transparent);
 }
 
 /*
@@ -522,15 +559,27 @@ html {
 }
 
 /* Koyu zeminde altın ikonu taşıyan kare kutu. */
+/*
+ * İkon.
+ *
+ * Adı "tile" çünkü eskiden gerçekten bir kutuydu: altın ikon, altının
+ * %12 tonunda zemin, altının %26 tonunda kenarlık. Yani ikon KENDİ
+ * renginin soluk bir tonunun içine oturtulmuştu.
+ *
+ * Bu, bir arayüzü zahmetsizce "tasarlanmış" göstermenin hazır
+ * hareketidir — doldur, yuvarla, ikonun renginin %10'unu arkasına
+ * ser — ve dokuz yerde tekrarlanınca sayfa yumuşak renkli kareler
+ * ızgarasına dönüyordu. Kutu hiçbir şey söylemiyordu: ikonu
+ * gruplamıyor, ayırmıyor, sınıflandırmıyordu; yalnız oradaydı.
+ *
+ * Kutu gitti, ikon kaldı. `display`/`align` duruyor çünkü çağrı
+ * yerlerindeki `size-11` hizalama genişliğini veriyor — kaldırılırsa
+ * dokuz yerde satır hizası kayardı.
+ */
 .icon-tile {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.7rem;
-  background: color-mix(in oklab, var(--brand-gold) 12%, transparent);
-  border: 1px solid color-mix(in oklab, var(--brand-gold) 26%, transparent);
-  /* Koyu zeminde duruyor, o yüzden kenar ışığı beyazın azıyla. */
-  box-shadow: var(--edge-light-dark);
   color: var(--brand-gold);
 }
 
@@ -567,6 +616,35 @@ html {
     color-mix(in oklab, var(--brand-night) 46%, transparent) 68%,
     color-mix(in oklab, var(--brand-night) 24%, transparent) 100%
   );
+}
+/*
+ * Dar ekranda karartma YÖNÜ değişir.
+ *
+ * Yatay gradyan hero metni SOLDA durduğu için işe yarıyor: koyu taraf
+ * metnin altında, açık taraf fotoğrafın konusunda. Mobilde metin tam
+ * genişliğe yayılıyor, yani satırın sağ ucu gradyanın en açık yerine —
+ * Ortaköy Camii'nin aydınlık kubbesine — düşüyordu.
+ *
+ * 390 px genişlikte ölçüldü: alt metin (`text-white/80`) ekranın %95'ine
+ * kadar uzanıyor, orada karartma yalnız %27.7. En kötü durumda —
+ * fotoğrafın o pikseli saf beyazsa — kontrast 1.69:1 çıkıyordu; WCAG AA
+ * 4.5:1 istiyor. Aşağıdaki dikey gradyanla aynı ölçüm 4.76:1 veriyor.
+ * "En kötü durum" bilerek seçildi: fotoğraf değişirse hesap bozulmasın.
+ *
+ * Burada metin üstte olduğu için karartma da dikey: üst yarı kapalı,
+ * alt yarı fotoğrafı serbest bırakıyor. 1024 px sınırı, metin bloğunun
+ * (`max-w-3xl`) fotoğrafın sağ yarısını boşaltmaya başladığı yer.
+ */
+@media (max-width: 1023px) {
+  .scrim-x {
+    background: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--brand-night) 86%, transparent) 0%,
+      color-mix(in oklab, var(--brand-night) 76%, transparent) 45%,
+      color-mix(in oklab, var(--brand-night) 55%, transparent) 72%,
+      color-mix(in oklab, var(--brand-night) 34%, transparent) 100%
+    );
+  }
 }
 
 [dir="rtl"] .scrim-x {
@@ -747,9 +825,21 @@ article.accent-card::before {
     var(--brand-gold) 55%,
     color-mix(in oklab, var(--brand-gold) 78%, var(--brand-gold-deep)) 100%
   );
+  /*
+   * Hâle kaldırıldı.
+   *
+   * Burada `0 8px 20px` altın %45 vardı: rozetin ardından taşan altın
+   * bir ışık. Aynı desen birincil düğmelerde de duruyordu ve oradan
+   * kaldırıldı — gölge zeminin rengini alır, nesnenin değil; renkli
+   * bir parıltı derinlik değil atmosfer taklididir.
+   *
+   * Rozet sekiz yerde kullanılıyor, yani hâle sayfaların yarısında
+   * tekrar ediyordu. Şimdi ölçekteki diğer yüzeylerle aynı dili
+   * konuşuyor: temas çizgisi + dar bir ortam katmanı.
+   */
   box-shadow:
-    0 1px 1px color-mix(in oklab, var(--brand-night) 10%, transparent),
-    0 8px 20px color-mix(in oklab, var(--brand-gold) 45%, transparent);
+    0 1px 1px color-mix(in oklab, var(--brand-night) 12%, transparent),
+    0 2px 6px color-mix(in oklab, var(--brand-night) 12%, transparent);
 }
 
 /* Adımlar arasındaki kesik bağlantı çizgisi. */

@@ -25,7 +25,7 @@
       "cta": "WhatsApp'tan Hemen Yazın",
       "ctaSecondary": "Hizmetlerimizi İnceleyin",
       "titleLead": "Rufai Turizm ile",
-      "titleAccent": "Türkiye'yi Keşfedin"
+      "titleAccent": "Türkiye'yi keşfedin"
     },
     "stats": {
       "guests": "Mutlu Misafir",
@@ -38,7 +38,7 @@
     "title": "Hizmetlerimiz",
     "subtitle": "Konforlu bir Türkiye seyahati için ihtiyacınız olan her şey",
     "vitoVip": {
-      "title": "Vito VIP Araç Hizmeti",
+      "title": "Vito VIP araç hizmeti",
       "description": "Şoförlü, son model Mercedes Vito. Bagajınızla birlikte 6 kişiye kadar konforlu ulaşım.",
       "long": "Mercedes Vito, Ortadoğu'dan gelen misafirlerimizin en çok tercih ettiği araç. Bagajlarıyla birlikte altı kişiye kadar rahat eder; koltuk aralıkları geniş, camlar kararmış, klima arka bölmede ayrı çalışır. Şehir içi gezilerde, havalimanı karşılamalarında ve şehirlerarası yolculuklarda aynı araç ve aynı şoförle devam edersiniz.",
       "features": [
@@ -117,7 +117,7 @@
       ]
     },
     "transfer": {
-      "title": "Transfer ve Karşılama",
+      "title": "Transfer ve karşılama",
       "description": "Havalimanı karşılama ve otel transferi. Sabit fiyat, uçuş takibi ve bagaj yardımı dahil.",
       "long": "Havalimanı karşılamada uçuşunuzu takip ederiz: uçak rötar yaparsa şoför bekler, ek ücret çıkmaz. Şoförümüz geliş kapısında isminizin yazılı olduğu tabelayla karşılar, bagajlarınızı taşır ve doğrudan otelinize götürür. İstanbul (IST), Sabiha Gökçen (SAW), Antalya (AYT), Bodrum (BJV) ve Trabzon (TZX) havalimanları kapsam içindedir.",
       "features": [
@@ -188,7 +188,7 @@
       ]
     },
     "tours": {
-      "title": "Tur Hizmeti",
+      "title": "Tur hizmeti",
       "description": "Arapça rehber eşliğinde günlük turlar ve özel tur programları.",
       "long": "Turlarımız özel yapılır; yabancı bir gruba katılmazsınız. Program sizin uyku ve yemek düzeninize göre esner, namaz vakitlerinde mola verilir. Rehberimiz Arapça konuşur ve gezdiğiniz yerin tarihini kendi dilinizde anlatır. İstanbul, Bursa, Sapanca, Trabzon ve Bodrum için hazır programlarımız var; isterseniz kendi güzergâhınızı birlikte kurarız.",
       "features": [
@@ -259,7 +259,7 @@
       ]
     },
     "flightHotel": {
-      "title": "Uçak Bileti ve Otel Rezervasyonu",
+      "title": "Uçak bileti ve otel rezervasyonu",
       "description": "Uygun fiyatlı uçak bileti ve aileye uygun otel seçenekleriyle rezervasyon.",
       "long": "Uçak bileti ve otel rezervasyonunu sizin adınıza yaparız. Otel seçerken aileye uygunluk, merkeze ve metroya yakınlık, kahvaltının dahil olup olmadığı gibi ayrıntıları önceden söyleriz. Tek bir WhatsApp konuşmasında bilet, otel, transfer ve turu birlikte planlayabilirsiniz.",
       "features": [
@@ -332,7 +332,7 @@
     "priceFrom": "'dan başlayan fiyatlarla"
   },
   "tours": {
-    "title": "Tur Destinasyonlarımız",
+    "title": "Tur destinasyonlarımız",
     "subtitle": "Türkiye'nin en sevilen şehirlerinde rehberli turlar",
     "from": "Başlangıç fiyatı",
     "istanbul": {
@@ -513,19 +513,19 @@
   "whyUs": {
     "title": "Neden Rufai Turizm?",
     "arabicSupport": {
-      "title": "Arapça Konuşan Ekip",
+      "title": "Arapça konuşan ekip",
       "description": "Kendi dilinizde, her zaman ulaşılabilir."
     },
     "fixedPrice": {
-      "title": "Sabit ve Şeffaf Fiyat",
+      "title": "Sabit ve şeffaf fiyat",
       "description": "Gizli ücret yok, sürpriz yok."
     },
     "family": {
-      "title": "Aileye Uygun Programlar",
+      "title": "Aileye uygun programlar",
       "description": "Mahremiyet ve konfor önceliğimiz."
     },
     "support": {
-      "title": "7/24 Destek",
+      "title": "7/24 destek",
       "description": "Seyahat öncesi, sırası ve sonrasında yanınızdayız."
     },
     "subtitle": "Havalimanı transferleri, şehir içi ulaşım ve turlarınızda yolculuklarınızı daha konforlu ve güvenli hale getiriyoruz."
@@ -578,7 +578,7 @@
     "metaTitle": "Hizmetlerimiz: Transfer, Şoförlü Araç, Tur"
   },
   "toursPage": {
-    "title": "Tur Programlarımız",
+    "title": "Tur programlarımız",
     "subtitle": "Arapça rehber eşliğinde, Türkiye'nin en sevilen şehirlerinde günlük turlar.",
     "duration": "Süre",
     "hours": "saat",
@@ -623,9 +623,7 @@
     "valuesTitle": "Nasıl çalışırız",
     "howTitle": "Misafirlerimize sözümüz",
     "storyTitle": "Kimiz",
-    "storyEyebrow": "Hikâyemiz",
     "promiseTitle": "Misafirlerimize sözümüz",
-    "promiseEyebrow": "Söz",
     "proofEyebrow": "Somut olan",
     "proofTitle": "Neden bize güvenebilirsiniz",
     "proofSubtitle": "Söz vermek kolay. Aşağıdakiler kontrol edebileceğiniz şeyler.",
@@ -737,7 +735,7 @@
     "metaTitle": "İletişim — WhatsApp'tan Aynı Gün Dönüş"
   },
   "faq": {
-    "title": "Sıkça Sorulan Sorular",
+    "title": "Sıkça sorulan sorular",
     "subtitle": "Misafirlerimizin en çok merak ettikleri",
     "q1": "Fiyatlar sabit mi, değişiyor mu?",
     "a1": "İlan edilen fiyatlar sabittir ve rezervasyondan önce netleşir. Varışta ek ücret veya sürpriz çıkmaz.",
@@ -808,19 +806,19 @@
     "waIntro": "Merhaba Rufai Turizm, bilgi almak istiyorum:"
   },
   "stats": {
-    "guestsLabel": "Mutlu Misafir",
-    "ratingLabel": "Google Puanımız",
-    "sinceLabel": "Yıllık Deneyim",
-    "licenseLabel": "TÜRSAB Güvencesi",
+    "guestsLabel": "Mutlu misafir",
+    "ratingLabel": "Google puanımız",
+    "sinceLabel": "Yıllık deneyim",
+    "licenseLabel": "TÜRSAB güvencesi",
     "guestsDesc": "Bizi tercih eden misafirlerimiz",
     "ratingDesc": "Yüzlerce değerlendirme",
     "sinceDesc": "{year}'ten beri hizmetteyiz",
     "licenseDesc": "Yetkili acente — Belge No {no}"
   },
   "home2": {
-    "popularTours": "Çok Tercih Edilen Turlar",
-    "allToursCta": "Tüm Turlar",
-    "vipTitle": "Konforlu ve Güvenli VIP Transfer Hizmeti",
+    "popularTours": "Çok tercih edilen turlar",
+    "allToursCta": "Tüm turlar",
+    "vipTitle": "Konforlu ve güvenli VIP transfer hizmeti",
     "vipText": "Havalimanı transferleri, şehir içi ulaşım ve şehirlerarası yolculuklar; lüks araçlar ve profesyonel şoförlerle.",
     "vipCta": "VIP Transferi Keşfet",
     "ctaTitle": "Programınızı bugün planlayalım",
@@ -828,18 +826,17 @@
     "quoteTitle": "Size özel teklif mi istiyorsunuz?",
     "quoteText": "Ekibimiz sizin için en uygun ulaşım çözümünü sunsun.",
     "quoteCta": "Teklif Al",
-    "vipEyebrow": "Konforlu ve Güvenli",
-    "vipF1Title": "Lüks Araçlar",
+    "vipF1Title": "Lüks araçlar",
     "vipF1Desc": "Konforlu ve yeni model araçlar",
-    "vipF2Title": "Profesyonel Şoförler",
+    "vipF2Title": "Profesyonel şoförler",
     "vipF2Desc": "Deneyimli ve güler yüzlü ekip",
-    "vipF3Title": "Kapıdan Kapıya Hizmet",
+    "vipF3Title": "Kapıdan kapıya hizmet",
     "vipF3Desc": "Zamanında ve güvenli transfer",
     "scrollHint": "Aşağı kaydırın"
   },
   "transferForm": {
-    "tabTransfer": "HAVALİMANI ÖZEL TRANSFER",
-    "tabChauffeur": "ŞOFÖRLÜ ARAÇ KİRALAMA",
+    "tabTransfer": "Havalimanı özel transfer",
+    "tabChauffeur": "Şoförlü araç kiralama",
     "from": "Alış noktası",
     "to": "Varış noktası",
     "placeholder": "havalimanı, otel, bölge",
@@ -917,12 +914,11 @@
     "freeDay": "Program dışı serbest gün"
   },
   "packages": {
-    "title": "Paket Programlar",
+    "title": "Paket programlar",
     "subtitle": "Konaklamanızı, transferinizi ve turlarınızı tek programda birleştiriyoruz.",
     "days": "gün",
     "allPackages": "Tüm paketler",
     "discount": "indirim",
-    "eyebrow": "Paketler",
     "heroSubtitle": "Dört ilâ sekiz günlük hazır programlar. Hepsi özel araçla, Arapça rehber eşliğinde ve otelden alışla yürür.",
     "itineraryTitle": "Gün gün program",
     "dayLabel": "Gün",
@@ -967,16 +963,16 @@
     "useTitle": "Filomuz ve kullanım biçimleri",
     "useSubtitle": "Tek araç tipi, dört farklı yolculuk. Hepsi Mercedes Vito ile, şoförlü.",
     "sameVehicleNote": "Dördü de aynı araç tipiyle yapılır: Mercedes Vito. Farklı olan yolculuğun biçimi, aracın kendisi değil.",
-    "u1Title": "Havalimanı Transferi",
+    "u1Title": "Havalimanı transferi",
     "u1Desc": "Geliş kapısında karşılama, bagaj yardımı ve doğrudan otele transfer. Uçuşunuz takip edilir.",
     "u1Meta": "IST · SAW · sabit fiyat",
-    "u2Title": "Şehir İçi Tur",
+    "u2Title": "Şehir içi tur",
     "u2Desc": "Arapça konuşan rehber eşliğinde gün boyu şehir turu; program sizin temponuza göre.",
     "u2Meta": "Otelden alış · tam gün",
-    "u3Title": "Şehirlerarası Yolculuk",
+    "u3Title": "Şehirlerarası yolculuk",
     "u3Desc": "Bursa, Sapanca, Yalova ve ötesi. Aynı araç ve aynı şoför gün boyu sizinle kalır.",
     "u3Meta": "Aynı araç · aynı şoför",
-    "u4Title": "Emrinizde Araç",
+    "u4Title": "Emrinizde araç",
     "u4Desc": "Saatlik ya da tam gün. Araç ve şoför yalnızca size ayrılır, güzergâhı siz belirlersiniz.",
     "u4Meta": "Saatlik · tam gün",
     "listTitle": "Transferde kullandığımız araçlar",
@@ -1000,15 +996,15 @@
     "home": "Ana sayfaya dön"
   },
   "transferPage": {
-    "typesTitle": "Transfer Hizmetlerimiz",
+    "typesTitle": "Transfer hizmetlerimiz",
     "typesSubtitle": "Havalimanından otele, şehirden şehre — hepsi tek ekiple",
-    "type1Title": "Havalimanı Karşılama",
+    "type1Title": "Havalimanı karşılama",
     "type1Desc": "Geliş kapısında isimli tabelayla karşılama, bagaj yardımı ve doğrudan otele transfer.",
-    "type2Title": "Havalimanına Bırakış",
+    "type2Title": "Havalimanına bırakış",
     "type2Desc": "Dönüş uçuşunuza göre saat planlanır; otelinizden alıp terminale bırakırız.",
-    "type3Title": "Şehirlerarası Transfer",
+    "type3Title": "Şehirlerarası transfer",
     "type3Desc": "Bursa, Sapanca, Yalova ve diğer şehirlere aynı araç ve şoförle yolculuk.",
-    "type4Title": "Emrinizde Araç",
+    "type4Title": "Emrinizde araç",
     "type4Desc": "Saatlik veya tam gün: araç ve şoför gün boyu size ayrılır.",
     "fleetTitle": "Filomuz",
     "fleetSubtitle": "Tüm transfer ve turlarımız Mercedes Vito ile yapılır",
@@ -1049,34 +1045,21 @@
       "Trabzon",
       "Bodrum"
     ],
-    "title": "Havalimanı Transferi",
+    "title": "Havalimanı transferi",
     "subtitle": "İstanbul, Sabiha Gökçen, Antalya, Bodrum ve Trabzon havalimanlarından sabit fiyatlı özel transfer.",
     "intro": "Havalimanı transferi en çok tercih edilen hizmetimiz. Uçuşunuzu takip ediyor, geliş kapısında isminizin yazılı olduğu tabelayla karşılıyor ve bagajlarınızla birlikte doğrudan otelinize götürüyoruz. Fiyat rezervasyonda netleşir ve varışta değişmez.",
     "metaTitle": "İstanbul Havalimanı ve Sabiha Gökçen Transferi"
   },
-  "eyebrow": {
-    "services": "Hizmetler",
-    "tours": "Turlar",
-    "why": "Neden biz",
-    "faq": "Merak edilenler",
-    "fleet": "Araç",
-    "process": "Süreç",
-    "transfer": "Transfer",
-    "cities": "Kapsam",
-    "packages": "Paketler",
-    "reviews": "Yorumlar",
-    "destinations": "Şehirler"
-  },
   "routes": {
     "title": "Hizmet verdiğimiz noktalar",
     "subtitle": "Havalimanı transferlerinden Karadeniz yaylalarına; listede olmayan bir yer için yazmanız yeterli.",
-    "eyebrow": "Güzergâhlar",
-    "priceNote": "Fiyatlar araç başınadır, kişi başı değil. Kesin tutar tarihe ve kişi sayısına göre WhatsApp'tan netleşir."
+    "priceNote": "Fiyatlar araç başınadır, kişi başı değil. Kesin tutar tarihe ve kişi sayısına göre WhatsApp'tan netleşir.",
+    "stopAria": "{group} — {stop}: WhatsApp'tan fiyat sorun",
+    "stopsHint": "Gitmek istediğiniz yere dokunun, WhatsApp o yer yazılı açılsın."
   },
   "guidesPage": {
-    "title": "Seyahat Rehberleri",
+    "title": "Seyahat rehberleri",
     "subtitle": "Türkiye'ye gelmeden önce en çok sorulan soruların cevapları: ulaşım, semtler, mevsimler ve günübirlik rotalar.",
-    "eyebrow": "Rehberler",
     "readCta": "Rehberi oku",
     "minutes": "dk okuma",
     "allGuides": "Tüm rehberler",
@@ -1091,7 +1074,7 @@
     "metaTitle": "Türkiye Seyahat Rehberi: Havalimanı ve Otel"
   },
   "hotelsPage": {
-    "title": "İstanbul, Antalya ve Bodrum'da Oteller",
+    "title": "İstanbul, Antalya ve Bodrum'da oteller",
     "subtitle": "İstanbul'da misafirlerimizin en çok tercih ettiği oteller semt semt; Antalya ve Bodrum'da ise sahilde hangi bölgede kalınacağı. Rezervasyonu sizin adınıza biz yapıyoruz.",
     "eyebrow": "Konaklama",
     "disclaimer": "Bu liste anlaşmalı otellerimiz değil, misafirlerimizin en çok tercih ettiği oteller. Fiyat, müsaitlik ve oda tipi rezervasyon sırasında otelden teyit edilir; sitede fiyat yazmıyoruz çünkü tarih ve doluluk fiyatı değiştirir.",
@@ -1137,7 +1120,6 @@
     "packages": "Çok günlük paket programlar"
   },
   "routePage": {
-    "eyebrow": "Güzergâh",
     "title": "Popüler transfer güzergâhları",
     "subtitle": "En çok sorulan güzergâhlar: mesafe, süre ve varışta bilmeniz gerekenler.",
     "distance": "Mesafe",

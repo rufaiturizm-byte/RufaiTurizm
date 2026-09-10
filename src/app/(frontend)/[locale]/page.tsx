@@ -18,11 +18,8 @@ import { Reviews } from "@/components/site/reviews";
 import { ServicesOverview } from "@/components/site/services-overview";
 import { WhyUs } from "@/components/site/why-us";
 import { VipBand } from "@/components/site/vip-band";
-import { VehicleList } from "@/components/site/vehicle-list";
-import { RouteCards } from "@/components/site/route-cards";
-import { FaqPreview } from "@/components/site/faq-preview";
-import { GuidesTeaser } from "@/components/site/guides-teaser";
 import { DestinationsMarquee } from "@/components/site/destinations-marquee";
+import { FaqPreview } from "@/components/site/faq-preview";
 import { tours } from "@/data/tours";
 import { siteConfig } from "@/config/site";
 
@@ -39,7 +36,6 @@ export default async function HomePage({
   const tHome2 = await getTranslations("home2");
   const tCta = await getTranslations("cta");
   const tToursPage = await getTranslations("toursPage");
-  const tEyebrow = await getTranslations("eyebrow");
 
   const featured = tours.slice(0, 4);
 
@@ -108,7 +104,7 @@ export default async function HomePage({
                   background:
                     "linear-gradient(135deg, color-mix(in oklab, var(--brand-gold) 88%, white) 0%, var(--brand-gold) 55%, color-mix(in oklab, var(--brand-gold) 84%, var(--brand-gold-deep)) 100%)",
                   color: "var(--brand-night)",
-                  boxShadow: "var(--shadow-gold)",
+                  boxShadow: "var(--shadow-cta)",
                 }}
               >
                 <WhatsAppIcon className="size-[19px]" />
@@ -148,7 +144,6 @@ export default async function HomePage({
         <section className="section-band" style={{ background: "var(--brand-sand)" }}>
           <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
             <SectionHeading
-              eyebrow={tEyebrow("tours")}
               title={tHome2("popularTours")}
               subtitle={tToursPage("subtitle")}
               rule={false}
@@ -174,6 +169,9 @@ export default async function HomePage({
 
         <PromoBanner placement="home" locale={locale} />
 
+        {/* Şehir şeridi geri kondu: bölüm sayısını azaltırken çıkarılmıştı
+            ama "Neden biz"in hemen üstündeki bu bant sayfanın ritmini
+            kuruyor — iki koyu bandın arasına giren tek yatay hareket o. */}
         <DestinationsMarquee />
 
         <WhyUs />
@@ -182,16 +180,29 @@ export default async function HomePage({
           <VipBand locale={locale} />
         </div>
 
-        {/* Araç. VIP bandı aracı ÖVÜYOR ama göstermiyordu: ana sayfada
-            kapasite, bagaj ve donanım hiçbir yerde yazmıyor, ziyaretçi
-            "hangi araçla geleceksiniz" sorusunun cevabını almadan
-            rezervasyona gidiyordu. */}
-        {/* Ana sayfada sekiz kart; on üçünün tamamı transfer sayfasında. */}
-        <RouteCards locale={locale} limit={8} />
+        {/*
+          DÖRT BÖLÜM BURADAN KALDIRILDI.
 
-        <VehicleList />
+          Ana sayfa on üç bölümdü: masaüstünde 15, mobilde 23,6 ekran.
+          Bölüm yığmak sayfayı "dolu" değil KARARSIZ gösteriyor —
+          hangisinin önemli olduğuna karar verilmediği için hepsi
+          arka arkaya dizilmişti. Ziyaretçinin sonuna kadar indiği bir
+          sayfa değil bu; ilk üç ekranda karar verip WhatsApp'a geçtiği
+          bir sayfa. Geri kalanı yalnızca aradaki mesafeyi uzatıyordu.
 
-        <GuidesTeaser locale={locale} />
+          Çıkanların HEPSİNİN kendi sayfası var ve dördü de üst menüde:
+            DestinationsMarquee → Bölgeler
+            RouteCards          → Transfer (on üç güzergâhın tamamı orada)
+            VehicleList         → Transfer (filo bölümü)
+            GuidesTeaser        → Seyahat Rehberi
+
+          Yani içerik silinmedi, ait olduğu yere bırakıldı. Ana sayfada
+          kalanlar tek bir soruyu sırayla cevaplıyor: kimsiniz (güven),
+          ne yapıyorsunuz (hizmetler, turlar, paketler), fiyat nasıl
+          belirleniyor (bant), neden siz (neden biz, VIP), söz veriyor
+          musunuz (güvence), aklımdaki soru (SSS), başkaları ne demiş
+          (yorumlar).
+        */}
         <AssuranceBand />
 
         <FaqPreview />

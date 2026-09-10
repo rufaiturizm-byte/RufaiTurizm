@@ -24,7 +24,6 @@ export async function TourCompare() {
   const tCommon = await getTranslations("common");
   const tIncluded = await getTranslations("included");
   const tNotIncluded = await getTranslations("notIncluded");
-  const tEyebrow = await getTranslations("eyebrow");
 
   const includedKeys = ["guide", "pickup", "vehicle", "fixedPrice", "water", "parking"] as const;
   const notIncludedKeys = ["tickets", "lunch", "boat", "tips"] as const;
@@ -36,7 +35,6 @@ export async function TourCompare() {
     <>
       <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
         <SectionHeading
-          eyebrow={tEyebrow("tours")}
           title={t("compareTitle")}
           subtitle={t("compareSubtitle")}
           rule={false}
@@ -129,7 +127,6 @@ export async function TourCompare() {
                 <li key={key} className="flex items-start gap-3 text-[14px] leading-snug">
                   <Check
                     className="mt-0.5 size-4 shrink-0"
-                    style={{ color: "var(--brand-wa)" }}
                     aria-hidden="true"
                   />
                   {tIncluded(key)}

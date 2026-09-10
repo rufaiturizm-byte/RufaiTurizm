@@ -24,11 +24,23 @@ export function useWhatsAppUrl(subject?: string) {
 
 export function WhatsAppLink({
   subject,
+  ariaLabel,
   className,
   style,
   children,
 }: {
   subject?: string;
+  /**
+   * Bağlantının ekran okuyucuya söylenen adı — görünen yazı tek başına
+   * hangi bağlantı olduğunu anlatmıyorsa gerekli.
+   *
+   * "Hizmet verdiğimiz noktalar" bölümü bunu zorunlu kıldı: 59 çipin
+   * yedisi birebir aynı yazıyı taşıyor ("Taksim" hem İstanbul
+   * Havalimanı hem Sabiha Gökçen grubunda var). Bağlantı listesini
+   * gezen biri iki tane "Taksim" duyup hangisinin hangisi olduğunu
+   * ayırt edemiyordu; adresleri farklı olduğu hâlde adları aynıydı.
+   */
+  ariaLabel?: string;
   className?: string;
   style?: React.CSSProperties;
   children: React.ReactNode;
@@ -40,6 +52,7 @@ export function WhatsAppLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={ariaLabel}
       data-analytics="whatsapp-cta"
       /* Yüzen düğme bu işareti izliyor: ekranda görünür bir WhatsApp
          çağrısı varken köşedeki düğme çekiliyor. */

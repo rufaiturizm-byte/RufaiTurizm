@@ -89,7 +89,7 @@ export default async function GuidesPage({
         bağlantı — JavaScript gerektirmez, RTL'de de doğru çalışır.
       */}
       <section className="mx-auto w-full max-w-7xl px-5 pt-20 sm:px-8">
-        <SectionHeading eyebrow={t("eyebrow")} title={t("allGuides")} rule={false} />
+        <SectionHeading title={t("allGuides")} rule={false} />
 
         <nav aria-label={t("allGuides")} className="-mt-4 flex flex-wrap gap-2.5">
           {guideTopics.map((topic) => (

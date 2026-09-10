@@ -39,7 +39,31 @@ export interface HotelArea {
    * "tarihî yapı" gibi doğrulanabilir şeyler. Yıldız, hizmet kalitesi ya
    * da "en iyi" türü sıfatlar bilerek yok — onları doğrulayamayız.
    */
-  hotels?: { name: string; desc: Text; tags: string[] }[];
+  hotels?: {
+    name: string;
+    desc: Text;
+    tags: string[];
+    /*
+     * Otelin KENDİ fotoğrafı — yalnız kullanım hakkımız varsa.
+     *
+     * Bugün hiçbirinde yok ve alan bilerek isteğe bağlı: kart fotoğraflı
+     * da fotoğrafsız da düzgün duruyor, yani izin alındığı gün tasarımı
+     * yeniden kurmak gerekmiyor, dosya yolunu yazmak yetiyor.
+     *
+     * Doldurmanın üç meşru yolu var: otelin basın/medya kiti, otelden
+     * yazılı izin, ya da Google Places "Place Photos" (lisanslı ama
+     * atıf zorunlu, fotoğraf referansı önbelleğe alınamıyor ve her
+     * sayfa görüntülemesinde yeniden isteniyor — 33 otellik bir liste
+     * sayfasında ayda ~150 görüntülemeden sonra ücretli hale geliyor).
+     *
+     * Booking'den ya da otelin sitesinden indirilen fotoğraf bu üçünden
+     * biri DEĞİL. Başka bir karenin otelin fotoğrafı gibi konması da
+     * olmaz — dosyanın başındaki nota bak.
+     */
+    image?: string;
+    /** Fotoğrafın kaynağı/atfı. `image` varsa doldurulmalı. */
+    imageCredit?: string;
+  }[];
   /*
    * Sahil bölgelerinde otel yerine ALT BÖLGE listesi.
    *

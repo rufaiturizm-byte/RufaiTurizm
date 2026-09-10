@@ -13,6 +13,8 @@ import {
   useSpring,
 } from "motion/react"
 
+import { useLocale } from "next-intl"
+
 import { cn } from "@/lib/utils"
 
 interface NumberTickerProps extends ComponentPropsWithoutRef<"span"> {
@@ -56,8 +58,31 @@ export function NumberTicker({
   const isInView = useInView(ref, { once: true, margin: "0px" })
   const reduced = useReducedMotion()
 
+  /*
+   * Biçimlendirme SAYFANIN DİLİNDE.
+   *
+   * Burada `"en-US"` yazılıydı ve site üç dilli. Sonuç Türkçe sayfada
+   * "+12,000 Mutlu Misafir" ve "4.9 / 5" idi: Türkçede binlik ayracı
+   * NOKTA, ondalık ayracı VİRGÜLDÜR — yani ekranda yazan şey "12 virgül
+   * 000" ve "4 nokta 9" oluyordu. Puan için bu doğrudan yanlış bilgi:
+   * 4.9 Türkçe okuyan biri için bozuk bir sayı.
+   *
+   * Rakamlar sayfanın en güven verici öğesi olmaya çalışıyor; yanlış
+   * ayraçla yazılmış bir rakam tam tersini yapıyor.
+   *
+   * Arapça ölçüldü, çünkü `ar` yerel ayarının Hint-Arap rakamlarına
+   * (١٢٬٠٠٠) düşmesinden şüphelenilmişti: hem Node 22'nin tam ICU'su
+   * hem Chrome "12,000" ve "4.9" veriyor, yani `en` ile aynı. Sitenin
+   * geri kalanı (€60 gibi) zaten Batı rakamlarıyla yazılı, dolayısıyla
+   * Arapça sayfada da tutarlılık bozulmuyor.
+   *
+   * Sunucu ile tarayıcının aynı çıktıyı vermesi ayrıca hidrasyon
+   * uyuşmazlığı olmadığı anlamına geliyor — ilk değer sunucuda basılıyor.
+   */
+  const locale = useLocale()
+
   const format = (n: number) =>
-    Intl.NumberFormat("en-US", {
+    Intl.NumberFormat(locale, {
       minimumFractionDigits: decimalPlaces,
       maximumFractionDigits: decimalPlaces,
       useGrouping: grouping,

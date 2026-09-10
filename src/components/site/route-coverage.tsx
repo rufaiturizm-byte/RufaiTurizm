@@ -47,14 +47,31 @@ export async function RouteCoverage({
         <div className="surface-card overflow-hidden p-7 sm:p-9">
           <div className="grid gap-7 lg:grid-cols-[minmax(0,0.44fr)_minmax(0,1fr)] lg:gap-12">
             <div className="lg:border-e lg:pe-10" style={{ borderColor: "var(--hairline)" }}>
-              <p className="eyebrow-rule text-[11px] font-extrabold uppercase tracking-[0.16em] text-muted-foreground">
-                {t("eyebrow")}
-              </p>
-              <h2 className="mt-3 font-display text-[22px] font-semibold leading-snug sm:text-[26px]">
+              {/* "GÜZERGÂHLAR" etiketi kaldırıldı: başlık zaten
+                  "Hizmet verdiğimiz noktalar" — etiket aynı şeyi
+                  bir kez daha, büyük harfle söylüyordu. */}
+              <h2 className="font-display text-[22px] font-semibold leading-snug sm:text-[26px]">
                 {t("title")}
               </h2>
               <p className="measure mt-3 text-[13.5px] leading-[1.75] text-muted-foreground">
                 {t("priceNote")}
+              </p>
+              {/*
+                Çiplerin ne yaptığını söyleyen satır.
+
+                Yuvarlak, gruplanmış çipler web'de filtre ya da sayfa
+                bağlantısı demektir. Buradaki 59 çipin hepsi ise siteden
+                çıkıp WhatsApp açıyor ve görünüşte bunu söyleyen hiçbir
+                şey yoktu — dokunan kişi beklediğinden başka bir yere
+                düşüyordu.
+
+                Çipleri iç bağlantıya çevirmek seçenek değil: 58 yerin
+                yalnız 4'ünün kendi sayfası var (transfer-routes.ts),
+                kalan 54'ü 404 olurdu. O yüzden davranış aynı kaldı,
+                yalnız önceden haber veriliyor.
+              */}
+              <p className="measure mt-3 text-[13px] leading-[1.7] text-muted-foreground/85">
+                {t("stopsHint")}
               </p>
             </div>
 
@@ -76,6 +93,10 @@ export async function RouteCoverage({
                           <li key={name}>
                             <WhatsAppLink
                               subject={`${title} — ${name}`}
+                              /* Görünen yazı "Taksim"; ekran okuyucu ise
+                                 hangi havalimanından olduğunu da duyuyor.
+                                 Yedi yer adı iki grupta birden geçiyor. */
+                              ariaLabel={t("stopAria", { group: title, stop: name })}
                               className="inline-flex items-center rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-colors hover:bg-secondary"
                               style={{
                                 borderColor:
@@ -101,11 +122,15 @@ export async function RouteCoverage({
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
       <SectionHeading
-        eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
         rule={false}
       />
+
+      {/* Aynı uyarı tam sürümde de: çipler burada da WhatsApp açıyor. */}
+      <p className="measure -mt-5 mb-8 text-[13px] leading-[1.7] text-muted-foreground/85">
+        {t("stopsHint")}
+      </p>
 
       <div className="grid gap-5 lg:grid-cols-2">
         {routeGroups.map((group) => {
@@ -159,6 +184,7 @@ export async function RouteCoverage({
                       <li key={name}>
                         <WhatsAppLink
                           subject={`${title} — ${name}`}
+                          ariaLabel={t("stopAria", { group: title, stop: name })}
                           className="inline-flex items-center rounded-full border px-3.5 py-2 text-[13px] font-medium transition-colors hover:bg-secondary"
                           style={{
                             borderColor: "color-mix(in oklab, var(--brand-night) 13%, transparent)",

@@ -122,7 +122,7 @@ export default async function PackagesPage({
       </Band>
 
       <section className="mx-auto w-full max-w-7xl px-5 pt-16 pb-16 sm:px-8">
-        <SectionHeading eyebrow={t("eyebrow")} title={t("listTitle")} subtitle={t("subtitle")} />
+        <SectionHeading title={t("listTitle")} subtitle={t("subtitle")} />
 
         <div className="grid gap-6 lg:grid-cols-2">
           {packages.map((item) => {

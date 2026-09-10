@@ -23,12 +23,10 @@ export async function VehicleList() {
   const tPage = await getTranslations("transferPage");
   const tCta = await getTranslations("cta");
   const tTours = await getTranslations("tours");
-  const tEyebrow = await getTranslations("eyebrow");
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("fleet")}
         title={t("listTitle")}
         subtitle={t("listSubtitle")}
         rule={false}

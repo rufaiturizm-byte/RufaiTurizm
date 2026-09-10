@@ -7,7 +7,6 @@ import { Band } from "@/components/site/band";
 import { PageClosing } from "@/components/site/page-closing";
 import { AssuranceBand } from "@/components/site/assurance-band";
 import { PageHero } from "@/components/site/page-hero";
-import { SectionHeading } from "@/components/site/section-heading";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { VehicleList } from "@/components/site/vehicle-list";
@@ -71,7 +70,6 @@ export default async function TransferPage({
 
   const t = await getTranslations("transferPage");
   const tNav = await getTranslations("nav");
-  const tEyebrow = await getTranslations("eyebrow");
 
   return (
     <main id="main" className="flex flex-1 flex-col">
@@ -106,13 +104,42 @@ export default async function TransferPage({
         <TrustBoxes />
       </div>
 
-      <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-4 sm:px-8">
-        <SectionHeading
-          eyebrow={tEyebrow("transfer")}
-          title={t("title")}
-          subtitle={t("intro")}
-          rule={false}
-        />
+      {/*
+        GİRİŞ PARAGRAFI — başlığı bilerek yok.
+
+        Burada bir `SectionHeading` duruyordu ve başlığı `t("title")` idi:
+        yani sayfanın en üstündeki H1 ile BİREBİR aynı cümle, 300 piksel
+        aşağıda ikinci kez. Hemen altındaki güzergâh bölümünün de kendi
+        başlığı var ("Popüler transfer güzergâhları"), dolayısıyla art
+        arda üç başlık okunuyordu ve ortadaki hiçbir şeyi tanıtmıyordu.
+
+        Ortada asılı kalan, krem zeminde küçük gri bir paragraf ve
+        üstünde tekrar eden bir başlıktı — sayfanın tasarlanmamış
+        göründüğü yer tam olarak burasıydı.
+
+        Metin duruyor çünkü metin iyi: uçuş takibi, isimli tabela,
+        bagaj, sabit fiyat. Değişen onun NE OLDUĞU — bölüm başlığı değil,
+        sayfanın giriş cümlesi. Gazetedeki spot gibi: gövdeden büyük,
+        başlıktan küçük, dar ölçüde ve koyu. Boyut ve ölçü onu kendi
+        başına bir öğe yapıyor; süse ihtiyacı yok.
+      */}
+      {/*
+        Boşluk ÜSTTE az, ALTTA çok — bilerek.
+
+        İlk denemede tersiydi (pt-20 pb-4) ve paragraf, altındaki
+        "Popüler transfer güzergâhları" başlığına yapışıyordu: o başlığın
+        alt satırı gibi okunuyordu, oysa güzergâhlarla ilgisi yok.
+        Yakınlık neyin neye ait olduğunu söyler; yanlış tarafa yakın
+        duran bir paragraf yanlış şeyi anlatır.
+
+        Şimdi üstündeki güven şeridine yakın: o şerit dört sözü tek
+        satırda veriyor, bu paragraf aynı sözleri cümleye açıyor. İkisi
+        birlikte bir grup, güzergâhlar ayrı bir bölüm.
+      */}
+      <section className="mx-auto w-full max-w-7xl px-5 pt-12 pb-20 sm:px-8">
+        <p className="measure text-[19px] leading-[1.7] sm:text-[21px]">
+          {t("intro")}
+        </p>
       </section>
 
       <RouteCards locale={locale} />

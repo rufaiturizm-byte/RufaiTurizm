@@ -32,7 +32,6 @@ import { WhatsAppIcon } from "./icons";
 
 export async function TransferTypes() {
   const t = await getTranslations("transferPage");
-  const tEyebrow = await getTranslations("eyebrow");
   const tCta = await getTranslations("cta");
 
   /*
@@ -52,7 +51,6 @@ export async function TransferTypes() {
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("transfer")}
         title={t("typesTitle")}
         subtitle={t("typesSubtitle")}
         rule={false}
@@ -117,7 +115,6 @@ export async function FleetGrid() {
   const t = await getTranslations("fleet");
   const tPage = await getTranslations("transferPage");
   const tCta = await getTranslations("cta");
-  const tEyebrow = await getTranslations("eyebrow");
 
   const photos = [
     { src: "/images/fleet/vito-exterior.jpg", alt: t("exteriorAlt") },
@@ -128,7 +125,6 @@ export async function FleetGrid() {
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("fleet")}
         title={tPage("fleetTitle")}
         subtitle={tPage("fleetSubtitle")}
       />
@@ -194,7 +190,6 @@ export async function FleetGrid() {
 
 export async function TransferWhy() {
   const t = await getTranslations("transferPage");
-  const tEyebrow = await getTranslations("eyebrow");
 
   /* Altı gerekçe düz bir onay listesiydi; her birinin kendi simgesi ve
      kartı var artık. Simge kutuları altın ve gök mavisi arasında
@@ -210,7 +205,7 @@ export async function TransferWhy() {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
-      <SectionHeading eyebrow={tEyebrow("why")} title={t("whyTitle")} rule={false} />
+      <SectionHeading title={t("whyTitle")} rule={false} />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {reasons.map(({ n, icon: Icon }, index) => (
@@ -245,30 +240,59 @@ export async function TransferWhy() {
 
 export async function TransferSteps() {
   const t = await getTranslations("transferPage");
-  const tEyebrow = await getTranslations("eyebrow");
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("process")}
         title={t("stepsTitle")}
         subtitle={t("stepsSubtitle")}
         rule={false}
       />
 
-      {/* Rakamlar arasındaki kesik çizgi adımların SIRALI olduğunu söylüyor;
-          üç ayrı kutu olarak dizildiklerinde bu bilgi kayboluyordu. */}
-      <ol className="grid gap-y-10 sm:grid-cols-3 sm:gap-x-8">
+      {/*
+        Düzen yeniden kuruldu.
+
+        Eskisi şuydu: üç ortalanmış sütun, her birinin tepesinde altın
+        gradyanlı dolu bir daire ("01"), aralarında kesik altın çizgi,
+        altında ortalanmış küçük paragraf. Bu, internetteki her "3 adımda
+        şu" bölümünün varsayılan hâli — ve dairelerin altındaki altın
+        hâle sitenin geri kalanından çoktan kaldırılmıştı, yani burada
+        yalnız kalmıştı.
+
+        Yeni düzen aynı bilgiyi taşıyor ama süsle değil TİPOGRAFİYLE:
+        rakam artık bir rozetin içinde değil, sayfanın başlık serifiyle
+        yazılmış büyük bir sayı. Numaralandırma burada meşru — bunlar
+        gerçekten sıralı adımlar (önce yazarsın, sonra fiyatı onaylarsın,
+        sonra şoför gelir), "neden biz" bölümünden farkı bu.
+
+        Ortalama bırakıldı, sola yaslandı: ortalanmış kısa paragraflar
+        satır başlarını dağıtıyor ve göz her satırda yeni bir başlangıç
+        arıyor. Sola yaslı üç blok tek bir okuma hattı veriyor.
+
+        Kesik çizgi yerine üstte ince bir kural: adımın başladığı yeri
+        çizgi işaretliyor, aradaki bağ da soldan sağa okunan sıradan
+        zaten anlaşılıyor.
+      */}
+      <ol className="grid gap-y-10 sm:grid-cols-3 sm:gap-x-10">
         {(["1", "2", "3"] as const).map((step, index) => (
-          <li
-            key={step}
-            className={`relative text-center ${index < 2 ? "sm:step-link" : ""}`}
-          >
-            <span className="step-badge size-12 text-[18px] font-extrabold">
+          <li key={step} className="relative">
+            <div
+              className="h-px w-full"
+              style={{
+                background:
+                  index === 0
+                    ? "color-mix(in oklab, var(--brand-gold) 60%, transparent)"
+                    : "color-mix(in oklab, var(--brand-night) 12%, transparent)",
+              }}
+            />
+            <span
+              className="mt-5 block font-display text-[40px] leading-none font-semibold tabular-nums sm:text-[46px]"
+              style={{ color: "var(--brand-gold-deep)" }}
+            >
               {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-5 text-[16.5px] font-bold">{t(`s${step}Title`)}</h3>
-            <p className="mx-auto mt-2.5 max-w-[19rem] text-[14px] leading-[1.75] text-muted-foreground">
+            <h3 className="mt-4 text-[17px] font-bold">{t(`s${step}Title`)}</h3>
+            <p className="measure mt-2.5 text-[14px] leading-[1.75] text-muted-foreground">
               {t(`s${step}Desc`)}
             </p>
           </li>
@@ -280,13 +304,11 @@ export async function TransferSteps() {
 
 export async function ServiceCities() {
   const t = await getTranslations("transferPage");
-  const tEyebrow = await getTranslations("eyebrow");
   const cities = t.raw("cities") as string[];
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("cities")}
         title={t("citiesTitle")}
         subtitle={t("citiesSubtitle")}
       />
@@ -361,15 +383,14 @@ export async function ClosingCta({ locale }: { locale?: string }) {
         />
         <div className="pattern-constellation absolute inset-0 z-10 opacity-50" />
 
+        {/* Altın tonlu daire kalktı — ikon kendi renginin soluk bir
+            tonunun içindeydi. Uçak simgesi bölümü açıyor; bunu boyutuyla
+            yapması kutuyla yapmasından daha net. */}
         <span
-          className="relative z-20 inline-flex size-14 items-center justify-center rounded-full border"
-          style={{
-            borderColor: "color-mix(in oklab, var(--brand-gold) 55%, transparent)",
-            background: "color-mix(in oklab, var(--brand-gold) 14%, transparent)",
-            color: "var(--brand-gold)",
-          }}
+          className="relative z-20 inline-flex items-center justify-center"
+          style={{ color: "var(--brand-gold)" }}
         >
-          <Plane className="size-6 -rotate-45" aria-hidden="true" />
+          <Plane className="size-8 -rotate-45" aria-hidden="true" />
         </span>
 
         <h2 className="relative z-20 font-display text-[28px] font-semibold leading-[1.12] text-white sm:text-[38px]">
@@ -382,7 +403,7 @@ export async function ClosingCta({ locale }: { locale?: string }) {
           style={{
             background: "var(--brand-gold)",
             color: "var(--brand-night)",
-            boxShadow: "var(--shadow-gold)",
+            boxShadow: "var(--shadow-cta)",
           }}
         >
           <WhatsAppIcon className="size-5" />

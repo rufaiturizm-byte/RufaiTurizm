@@ -27,7 +27,6 @@ import { WhatsAppIcon } from "./icons";
 export async function FleetUses() {
   const t = await getTranslations("fleet");
   const tCta = await getTranslations("cta");
-  const tEyebrow = await getTranslations("eyebrow");
 
   const uses = [
     {
@@ -59,7 +58,6 @@ export async function FleetUses() {
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("fleet")}
         title={t("useTitle")}
         subtitle={t("useSubtitle")}
         rule={false}

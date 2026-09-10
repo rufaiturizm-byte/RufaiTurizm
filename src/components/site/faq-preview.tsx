@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { ArrowRight, MessageCircleQuestionMark, Sparkle } from "lucide-react";
+import { ArrowRight, MessageCircleQuestionMark } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading, SectionAction } from "./section-heading";
 import { FaqAccordion } from "./faq-accordion";
@@ -21,7 +21,6 @@ import { WhatsAppIcon } from "./icons";
  */
 export async function FaqPreview() {
   const t = await getTranslations("faq");
-  const tEyebrow = await getTranslations("eyebrow");
   const tCta = await getTranslations("cta");
 
   const items = (["1", "2", "3", "4", "5"] as const).map((n) => ({
@@ -32,8 +31,6 @@ export async function FaqPreview() {
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("faq")}
-        eyebrowIcon={<Sparkle className="size-4" aria-hidden="true" />}
         title={t("title")}
         subtitle={t("subtitle")}
         action={

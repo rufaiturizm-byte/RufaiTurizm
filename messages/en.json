@@ -623,9 +623,7 @@
     "valuesTitle": "How we work",
     "howTitle": "What we promise our guests",
     "storyTitle": "Who we are",
-    "storyEyebrow": "Our story",
     "promiseTitle": "Our promise to guests",
-    "promiseEyebrow": "Promise",
     "proofEyebrow": "What can be checked",
     "proofTitle": "Why you can trust us",
     "proofSubtitle": "Promises are easy. What follows are things you can verify yourself.",
@@ -828,7 +826,6 @@
     "quoteTitle": "Would you like a tailored quote?",
     "quoteText": "Let our team put together the transport plan that fits you best.",
     "quoteCta": "Get a Quote",
-    "vipEyebrow": "Comfortable and Secure",
     "vipF1Title": "Premium Vehicles",
     "vipF1Desc": "Comfortable, late-model cars",
     "vipF2Title": "Professional Chauffeurs",
@@ -838,8 +835,8 @@
     "scrollHint": "Scroll down"
   },
   "transferForm": {
-    "tabTransfer": "PRIVATE AIRPORT TRANSFER",
-    "tabChauffeur": "CAR WITH DRIVER",
+    "tabTransfer": "Private airport transfer",
+    "tabChauffeur": "Car with driver",
     "from": "Pick-up point",
     "to": "Destination",
     "placeholder": "airport, hotel, district",
@@ -922,7 +919,6 @@
     "days": "days",
     "allPackages": "All packages",
     "discount": "off",
-    "eyebrow": "Packages",
     "heroSubtitle": "Ready-made programmes of four to eight days. All run with a private vehicle, an Arabic-speaking guide and hotel pick-up.",
     "itineraryTitle": "Day by day",
     "dayLabel": "Day",
@@ -1054,29 +1050,16 @@
     "intro": "Airport transfer is our most requested service. We track your flight, meet you at arrivals with a name sign and take you and your luggage straight to your hotel. The price is set at booking and does not change on arrival.",
     "metaTitle": "Istanbul Airport and Sabiha Gökçen Transfers"
   },
-  "eyebrow": {
-    "services": "Services",
-    "tours": "Tours",
-    "why": "Why us",
-    "faq": "Questions",
-    "fleet": "Vehicle",
-    "process": "Process",
-    "transfer": "Transfer",
-    "cities": "Coverage",
-    "packages": "Packages",
-    "reviews": "Reviews",
-    "destinations": "Destinations"
-  },
   "routes": {
     "title": "Where we operate",
     "subtitle": "From airport transfers to the Black Sea plateaus; for anywhere not listed, just write to us.",
-    "eyebrow": "Routes",
-    "priceNote": "Prices are per vehicle, not per person. The final amount is confirmed on WhatsApp by date and party size."
+    "priceNote": "Prices are per vehicle, not per person. The final amount is confirmed on WhatsApp by date and party size.",
+    "stopAria": "{group} — {stop}: ask for a price on WhatsApp",
+    "stopsHint": "Tap where you are going and WhatsApp opens with that place written in."
   },
   "guidesPage": {
     "title": "Travel Guides",
     "subtitle": "Answers to what people ask most before coming to Türkiye: getting around, districts, seasons and day trips.",
-    "eyebrow": "Guides",
     "readCta": "Read the guide",
     "minutes": "min read",
     "allGuides": "All guides",
@@ -1137,7 +1120,6 @@
     "packages": "Multi-day tour packages"
   },
   "routePage": {
-    "eyebrow": "Route",
     "title": "Popular transfer routes",
     "subtitle": "The most-asked routes: distance, time and what to know on arrival.",
     "distance": "Distance",

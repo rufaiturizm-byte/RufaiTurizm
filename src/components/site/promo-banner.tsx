@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, Sparkle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { WhatsAppIcon } from "./icons";
@@ -119,15 +119,24 @@ export async function PromoBanner({
 
             <div className="flex flex-col gap-6 p-7 sm:p-9 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
               <div className="min-w-0">
+                {/*
+                  Etiketin üstünden dört süs kalktı: altın tonlu hap
+                  zemini, altın kenarlık, ✦ ve büyük harf + 0.18em
+                  harf aralığı. Dördü de aynı işi yapıyordu — hiçbirini.
+
+                  Etiketin kendisi duruyor çünkü BİLGİ veriyor: altındaki
+                  başlık "Fiyatı yazışırken söylüyoruz" ve bu etiket onun
+                  ne olduğunu söylüyor (bir kampanya değil, çalışma
+                  biçimi). Kaldırdığım otuz etiketten farkı bu.
+
+                  ✦ özellikle gitti: hiçbir şeyi göstermeyen, yalnız
+                  "burada özel bir şey var" demeye çalışan bir parıltı.
+                  Footer'daki yıldız kalıyor, o logodan geliyor.
+                */}
                 <span
-                  className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.18em]"
-                  style={{
-                    background: "color-mix(in oklab, var(--brand-gold) 18%, transparent)",
-                    border: "1px solid color-mix(in oklab, var(--brand-gold) 40%, transparent)",
-                    color: "var(--brand-gold-label)",
-                  }}
+                  className="text-[12.5px] font-bold"
+                  style={{ color: "var(--brand-gold-label)" }}
                 >
-                  <Sparkle className="size-3.5" aria-hidden="true" />
                   {banner.eyebrow[lang] ?? banner.eyebrow.tr}
                 </span>
 

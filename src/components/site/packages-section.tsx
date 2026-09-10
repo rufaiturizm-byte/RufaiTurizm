@@ -23,7 +23,6 @@ export async function PackagesSection({ locale }: { locale: string }) {
   const tCommon = await getTranslations("common");
   const tTours = await getTranslations("tours");
   const tCta = await getTranslations("cta");
-  const tEyebrow = await getTranslations("eyebrow");
 
   const lang = locale as Locale;
 
@@ -36,7 +35,6 @@ export async function PackagesSection({ locale }: { locale: string }) {
         program" bağlantısı eklendi.
       */}
       <SectionHeading
-        eyebrow={tEyebrow("packages")}
         title={t("title")}
         subtitle={t("subtitle")}
         action={

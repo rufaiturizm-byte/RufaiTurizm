@@ -173,7 +173,7 @@ export default async function ContactPage({
                 style={{
                   background: "var(--brand-gold)",
                   color: "var(--brand-night)",
-                  boxShadow: "var(--shadow-gold)",
+                  boxShadow: "var(--shadow-cta)",
                 }}
               >
                 <WhatsAppIcon className="size-5" />

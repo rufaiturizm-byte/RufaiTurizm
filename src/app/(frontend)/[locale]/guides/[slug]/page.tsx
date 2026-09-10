@@ -174,9 +174,37 @@ export default async function GuideDetailPage({
             >
               {section.heading[lang] ?? section.heading.tr}
             </h2>
-            <p className="measure mt-4 text-[16px] leading-[1.95] text-foreground/85">
-              {section.body[lang] ?? section.body.tr}
-            </p>
+            {/*
+              Satır uzunluğu ÖLÇÜLDÜ, `ch` sayısına güvenilmedi.
+
+              `measure` 52ch; buradan "52 karakter, dar" sonucu çıkarmak
+              yanlış olur. `ch` birimi "0" rakamının genişliğidir ve bu
+              yazı tipinde ortalama küçük harften belirgin dar. Tuvalde
+              gerçek glif genişliğiyle ölçünce 459 piksel ≈ 63 KARAKTER
+              çıkıyor — uzun metinde rahat aralık olan 60-75'in tam
+              ortası.
+
+              Bir ara `measure-wide` (62ch) denendi: 548 piksel, ≈75
+              karakter, yani aralığın üst sınırı. Sayfadaki boşluğu 88
+              piksel kapatıyordu ama okuma konforundan veriyordu; boşluk
+              için satır uzunluğundan ödün vermek yanlış takas.
+
+              Bu bölümlerin "duvar gibi" görünmesinin sebebi ölçü değil:
+              gövdeler `src/data/guides.ts` içinde TEK paragraf olarak
+              yazılı (dosyada hiç `\n\n` yok), o yüzden 125 kelime tek
+              blok halinde akıyor. Çözüm metni paragraflara ayırmak;
+              aşağıdaki `split` bunu hazır bekliyor.
+            */}
+            <div className="measure mt-4 flex flex-col gap-4">
+              {(section.body[lang] ?? section.body.tr)
+                .split("\n\n")
+                .filter(Boolean)
+                .map((paragraf, i) => (
+                  <p key={i} className="text-[16px] leading-[1.95] text-foreground/85">
+                    {paragraf}
+                  </p>
+                ))}
+            </div>
 
             {section.image ? (
               <figure className="mt-7">
@@ -239,7 +267,7 @@ export default async function GuideDetailPage({
             style={{
               background: "var(--brand-gold)",
               color: "var(--brand-night)",
-              boxShadow: "var(--shadow-gold)",
+              boxShadow: "var(--shadow-cta)",
             }}
           >
             <WhatsAppIcon className="size-[18px]" />

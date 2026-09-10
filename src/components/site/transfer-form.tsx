@@ -41,8 +41,25 @@ const FIELD =
   "sm:text-[14.5px] placeholder:text-muted-foreground/65 transition-colors " +
   "focus:border-[color:var(--brand-gold-deep)]";
 
+/*
+ * Form etiketi.
+ *
+ * Eskiden `text-[11px] font-bold uppercase tracking-[0.12em]` idi:
+ * 11 piksel, büyük harf ve açılmış harf aralığı bir arada. Bu üçü
+ * okumayı zorlaştıran üç şeyin aynı anda kullanılmış hâli — büyük harf
+ * kelimenin siluetini düzleştirir (okuyucu harfleri tek tek tarar),
+ * 11 piksel zaten sınırdadır, aralık da kelimeyi dağıtır.
+ *
+ * Üstelik bu ETİKET: ziyaretçinin "buraya ne yazacağım" sorusunu
+ * cevaplayan satır ve sayfanın en önemli öğesinin içinde. Dekoratif
+ * olmaya en az hakkı olan yer burası.
+ *
+ * Büyük harf, arayüzde bir şeyi "tasarlanmış" göstermenin hazır
+ * kostümüydü; yerine boyut ve renk farkı kondu. Etiket hâlâ sessiz —
+ * sadece artık okunuyor.
+ */
 const LABEL =
-  "mb-2.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-muted-foreground";
+  "mb-2.5 flex items-center gap-2 text-[12.5px] font-semibold text-muted-foreground";
 
 /**
  * Havalimanı transferi rezervasyon formu.
@@ -254,14 +271,37 @@ export function TransferForm() {
         </div>
       </div>
 
+      {/*
+        Form dolmadan `href` YOK — ve href'siz bir `<a>` klavyeyle
+        ODAKLANAMAZ. Ölçüldü: `.focus()` çağrısı bile tutmuyordu.
+
+        Sonuç, sayfanın en önemli düğmesinde sessiz bir çıkmazdı. Aşağıdaki
+        onClick eksik alanı bulup oraya götürüyor, yani "neden çalışmıyor"
+        sorusunun cevabı orada — ama fareyle gelen görüyordu, sekmeyle gelen
+        düğmeye hiç varamıyordu. Klavye kullanıcısı için düğme yok gibiydi.
+
+        `tabIndex={0}` sekme sırasına geri koyuyor, `role="button"` ekran
+        okuyucuya ne olduğunu söylüyor (href'i olmayan bir `a` link
+        sayılmaz), `aria-disabled` da neden şimdilik iş görmediğini.
+        Enter ve boşluk artık tıklamayla aynı yardımı veriyor.
+      */}
       <a
         href={ready ? href : undefined}
         target={ready ? "_blank" : undefined}
         rel="noopener noreferrer"
+        role={ready ? undefined : "button"}
+        tabIndex={ready ? undefined : 0}
         aria-disabled={!ready}
         /* Sayfanın en önemli eylemi: bu görünürken köşedeki yüzen
            WhatsApp düğmesi çekilsin, üstüne binmesin. */
         data-wa-inline=""
+        onKeyDown={(event) => {
+          if (ready) return;
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          setTouched(true);
+          document.getElementById("tf-from")?.focus();
+        }}
         onClick={(event) => {
           if (ready) return;
           event.preventDefault();

@@ -48,13 +48,11 @@ export async function ServicesOverview() {
   const tCta = await getTranslations("cta");
   const tCommon = await getTranslations("common");
   const tPage = await getTranslations("servicesPage");
-  const tEyebrow = await getTranslations("eyebrow");
   const tHome2 = await getTranslations("home2");
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pt-24 pb-16 sm:px-8">
       <SectionHeading
-        eyebrow={tEyebrow("services")}
         title={t("title")}
         subtitle={t("subtitle")}
         rule={false}
@@ -173,13 +171,24 @@ export async function ServicesOverview() {
           </div>
         </div>
 
+        {/*
+          İKİNCİL — bilerek çerçeveli, dolgulu değil.
+
+          Bu bant dört hizmet kartının ALTINDA duruyor ve kartların her
+          birinde zaten altın dolgu bir düğme var. Bu da dolgu olunca tek
+          ekranda beş altın düğme oluyordu; altın her yerde olunca vurgu
+          olmaktan çıkıyor ve göz nereye gideceğini bilemiyor.
+
+          Hiyerarşi aslında belli: kartlardaki düğmeler ana yol (aradığı
+          hizmeti bulan oradan gider), bu bant ise BULAMAYAN için bir
+          çıkış. İkincil bir yolu birincil gibi çizmek yanlış bilgi.
+        */}
         <WhatsAppLink
           subject={tHome2("quoteTitle")}
-          className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.625rem] px-6 py-3.5 text-[14px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+          className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.625rem] border px-6 py-3.5 text-[14px] font-bold transition-colors hover:bg-[color-mix(in_oklab,var(--brand-night)_5%,transparent)]"
           style={{
-            background: "var(--brand-gold)",
+            borderColor: "color-mix(in oklab, var(--brand-night) 22%, transparent)",
             color: "var(--brand-night)",
-            boxShadow: "var(--shadow-e1)",
           }}
         >
           {tHome2("quoteCta")}

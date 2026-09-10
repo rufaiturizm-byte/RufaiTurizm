@@ -50,7 +50,6 @@ export default async function ToursPage({
 
   const t = await getTranslations("toursPage");
   const tNav = await getTranslations("nav");
-  const tEyebrow = await getTranslations("eyebrow");
   const tTours = await getTranslations("tours");
 
   return (
@@ -96,7 +95,6 @@ export default async function ToursPage({
           başlıkla tekrarlanıyordu. */}
       <section className="mx-auto w-full max-w-7xl px-5 pt-20 pb-16 sm:px-8">
         <SectionHeading
-          eyebrow={tEyebrow("tours")}
           title={t("listTitle")}
           subtitle={t("intro")}
           rule={false}

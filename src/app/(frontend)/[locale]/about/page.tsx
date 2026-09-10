@@ -99,7 +99,6 @@ export default async function AboutPage({
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16">
           <div>
             <SectionHeading
-              eyebrow={t("storyEyebrow")}
               title={t("storyTitle")}
               rule={false}
             />
@@ -150,7 +149,6 @@ export default async function AboutPage({
 
           <div className="lg:order-2">
             <SectionHeading
-              eyebrow={t("promiseEyebrow")}
               title={t("promiseTitle")}
               rule={false}
             />

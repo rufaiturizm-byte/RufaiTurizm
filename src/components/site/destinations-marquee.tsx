@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { MapPinned } from "lucide-react";
 import { Marquee } from "@/components/ui/marquee";
 import { Link } from "@/i18n/navigation";
 import { tours } from "@/data/tours";
@@ -20,7 +19,6 @@ import { tours } from "@/data/tours";
 export async function DestinationsMarquee() {
   const t = await getTranslations("tours");
   const tPage = await getTranslations("transferPage");
-  const tEyebrow = await getTranslations("eyebrow");
 
   return (
     <section
@@ -30,17 +28,18 @@ export async function DestinationsMarquee() {
         borderColor: "color-mix(in oklab, white 8%, transparent)",
       }}
     >
-      <div className="mx-auto mb-8 flex max-w-7xl items-center gap-3 px-5 sm:px-8">
-        <span className="icon-tile size-10 shrink-0" aria-hidden="true">
-          <MapPinned className="size-[18px]" />
-        </span>
-        <div
-          className="eyebrow-rule flex items-center text-[11px] font-extrabold uppercase tracking-[0.22em]"
-          style={{ color: "var(--brand-gold-label)" }}
-        >
-          {tEyebrow("cities")}
-        </div>
-        <span className="ms-auto hidden text-[13.5px] text-white/55 sm:block">
+      {/*
+        Başlık üç parçadan bire indi.
+
+        Önce ikon karesi, sonra "KAPSAM" büyük harf etiketi, sonra çizgi,
+        en sağda da açıklama vardı: dört süs, tek bir bilgi için. Üstelik
+        "Kapsam" hemen altındaki şehir şeridinin ne olduğunu söylemiyordu.
+        Şimdi tek bir cümle var ve o cümle işi yapıyor — hangi şehirlere
+        gittiğimiz ve listede olmayan için ne yapılacağı.
+      */}
+      <div className="mx-auto mb-8 flex max-w-7xl items-baseline justify-between gap-4 px-5 sm:px-8">
+        <h2 className="text-[15px] font-bold text-white">{tPage("citiesTitle")}</h2>
+        <span className="hidden text-[13.5px] text-white/55 sm:block">
           {tPage("citiesSubtitle")}
         </span>
       </div>

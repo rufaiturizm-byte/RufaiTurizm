@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, MessageCircleQuestionMark, Sparkle } from "lucide-react";
+import { ArrowRight, MessageCircleQuestionMark } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading, SectionAction } from "./section-heading";
 import { FaqAccordion } from "./faq-accordion";
@@ -24,7 +24,6 @@ export async function ServiceFaq({ serviceKey }: { serviceKey: ServiceKey }) {
   const t = await getTranslations("services");
   const tPage = await getTranslations("servicesPage");
   const tFaq = await getTranslations("faq");
-  const tEyebrow = await getTranslations("eyebrow");
   const tCta = await getTranslations("cta");
 
   const items = t.raw(`${serviceKey}.faq`) as { question: string; answer: string }[];
@@ -34,8 +33,6 @@ export async function ServiceFaq({ serviceKey }: { serviceKey: ServiceKey }) {
       <FaqSchema items={items} />
 
       <SectionHeading
-        eyebrow={tEyebrow("faq")}
-        eyebrowIcon={<Sparkle className="size-4" aria-hidden="true" />}
         title={tPage("serviceFaqTitle")}
         subtitle={t(`${serviceKey}.title`)}
         action={

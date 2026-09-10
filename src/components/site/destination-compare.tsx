@@ -26,7 +26,6 @@ import type { Locale } from "@/i18n/routing";
 export async function DestinationCompare({ locale }: { locale: string }) {
   const t = await getTranslations("destinationsPage");
   const tCommon = await getTranslations("common");
-  const tEyebrow = await getTranslations("eyebrow");
   const lang = locale as Locale;
 
   const th = "px-4 py-3.5 text-start text-[11.5px] font-extrabold uppercase tracking-[0.12em]";
@@ -36,7 +35,6 @@ export async function DestinationCompare({ locale }: { locale: string }) {
     <>
       <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
         <SectionHeading
-          eyebrow={tEyebrow("destinations")}
           title={t("compareTitle")}
           subtitle={t("compareSubtitle")}
           rule={false}

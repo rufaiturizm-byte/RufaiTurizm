@@ -43,13 +43,14 @@ export async function VipBand({ locale }: { locale: string }) {
 
         <div className="px-7 py-12 sm:px-12 sm:py-14">
           <div className="max-w-xl">
-            <div
-              className="eyebrow-rule mb-4 flex items-center text-[11px] font-extrabold uppercase tracking-[0.22em]"
-              style={{ color: "var(--brand-gold)" }}
-            >
-              {t("vipEyebrow")}
-            </div>
-
+            {/*
+              Etiket kaldırıldı. "KONFORLU VE GÜVENLİ" yazıyordu, hemen
+              altındaki başlık ise "Konforlu ve Güvenli VIP Transfer
+              Hizmeti" — yani etiket başlığın ilk üç kelimesiydi. Aynı
+              cümleyi iki kez, ikincisini büyük harfe çevirip yazmak
+              bilgi eklemiyor; şablon ritmi taklit ediyor. Bölümü
+              tanıtan şey artık başlığın kendi ölçeği.
+            */}
             <h2 className="max-w-[19ch] font-display text-[30px] font-semibold leading-[1.1] tracking-[-0.015em] text-white sm:text-[38px]">
               {t("vipTitle")}
             </h2>

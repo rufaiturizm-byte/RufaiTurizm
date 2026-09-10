@@ -225,7 +225,7 @@ export default async function TransferRoutePage({
             style={{
               background: "var(--brand-gold)",
               color: "var(--brand-night)",
-              boxShadow: "var(--shadow-gold)",
+              boxShadow: "var(--shadow-cta)",
             }}
           >
             <WhatsAppIcon className="size-[18px]" />

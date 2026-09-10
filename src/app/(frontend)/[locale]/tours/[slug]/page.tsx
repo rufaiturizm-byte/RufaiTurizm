@@ -66,7 +66,6 @@ export default async function TourDetailPage({
   const t = await getTranslations("tours");
   const tPage = await getTranslations("toursPage");
   const tNav = await getTranslations("nav");
-  const tEyebrow = await getTranslations("eyebrow");
   const tCta = await getTranslations("cta");
   const tCommon = await getTranslations("common");
   const tIncluded = await getTranslations("included");
@@ -185,7 +184,6 @@ export default async function TourDetailPage({
                       <li key={key} className="flex items-start gap-3 text-[14px] leading-snug">
                         <Check
                           className="mt-0.5 size-4 shrink-0"
-                          style={{ color: "var(--brand-wa)" }}
                           aria-hidden="true"
                         />
                         {tIncluded(key)}
@@ -391,7 +389,6 @@ export default async function TourDetailPage({
 
       <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
         <SectionHeading
-          eyebrow={tEyebrow("tours")}
           title={tPage("listTitle")}
           rule={false}
         />

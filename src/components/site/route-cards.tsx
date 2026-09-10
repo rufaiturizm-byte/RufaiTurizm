@@ -38,7 +38,6 @@ export async function RouteCards({
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
       <SectionHeading
-        eyebrow={t("eyebrow")}
         title={t("title")}
         subtitle={t("subtitle")}
         rule={false}

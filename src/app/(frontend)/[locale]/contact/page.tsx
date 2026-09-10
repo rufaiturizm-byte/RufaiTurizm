@@ -18,6 +18,7 @@ import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
+import { ProseSection } from "@/components/site/prose-section";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
@@ -295,6 +296,27 @@ export default async function ContactPage({
           {t("prepNote")}
         </p>
       </section>
+
+      {/*
+        Yazdıktan sonrası.
+        Sayfa "bize nasıl ulaşırsınız" ve "mesajınızda ne olsun" diyordu;
+        mesajı yazmaktan çekinen kişinin sorusu ise başkaydı: yazarsam ne
+        oluyor, fiyatı ne zaman görüyorum, sonradan üstüne bir şey eklenir
+        mi. Buradaki beş adımın hepsi sitenin BAŞKA bir yerinde zaten
+        verdiği sözden çıkıyor — yazılı teklif, sabit fiyat, uçuş takibi,
+        şoför adı ve plakası, tek muhatap. Yeni bir taahhüt yok, dağınık
+        duran sözler ilk mesajı atacak kişinin gördüğü sıraya konuldu.
+      */}
+      <ProseSection title={t("afterTitle")} body={t("afterText")} className="pb-20" />
+
+      {/*
+        Kanalın kendisi.
+        Sitede aranabilir bir numara yok ve arama düğmesi hiç basılmıyor;
+        ziyaretçi bunu eksiklik olarak okuyabilir. Bölüm eksikliği
+        savunmuyor, kanalın neden yazılı yürüdüğünü söylüyor — dördü de
+        misafirin lehine olan sebepler ve dördü de doğrulanabilir.
+      */}
+      <ProseSection title={t("whyWaTitle")} body={t("whyWaText")} className="pb-20" />
 
       <RouteCoverage locale={locale} />
       <FaqPreview />

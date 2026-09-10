@@ -114,10 +114,37 @@ export async function Footer() {
             <h3 className={heading} style={{ color: "var(--brand-gold-label)" }}>
               {t("quickLinks")}
             </h3>
+            {/*
+              ALTBİLGİDE ÖN YÜKLEME KAPALI — küçük ama bedava bir kazanç.
+
+              Next.js `<Link>` görüş alanına giren her bağlantının hedefini
+              arka planda indiriyor. Altbilgideki 21 bağlantının HEPSİ
+              zaten üst menüde ya da sayfa gövdesinde geçen yollar; yani
+              altbilgi tek bir yeni hedef bile getirmiyor, aynı rotaları
+              ikinci kez istiyor.
+
+              ÖLÇÜLDÜ, tahmin değil: bu bayrak 21 isteği kaldırıyor ama
+              yalnız 31 KB kazandırıyor (%1). Sebebi, ikinci isteğin tam
+              sayfa değil küçük bir fark yükü indirmesi. Yani buradaki
+              asıl kazanç bant genişliği değil, 21 gereksiz HTTP isteğinin
+              ve bağlantı/CPU yükünün kalkması.
+
+              Gezinme hızından hiçbir şey gitmiyor: rotalar header ve
+              gövde sayesinde zaten önbellekte, altbilgiden tıklayınca da
+              anında açılıyorlar. (Bu Next sürümünde `prefetch={false}`
+              hover'da da kapatıyor — bkz. node_modules/next/dist/docs,
+              link.md — ama burada kapatacak bir şey kalmıyor.)
+
+              Sayfadaki asıl ön yükleme kütlesi burada DEĞİL: ana sayfayı
+              sonuna kadar kaydırınca 55 istek / 2.865 KB iniyor ve bunun
+              tamamına yakını üst menü ile gövdedeki kart bağlantılarından
+              geliyor. Onu küçültmenin doğru yolu Partial Prefetching
+              ama o `cacheComponents` istiyor — ayrı bir geçiş.
+            */}
             <ul className="space-y-3">
               {quickLinks.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className={link}>
+                  <Link href={item.href} className={link} prefetch={false}>
                     {item.label}
                   </Link>
                 </li>
@@ -146,6 +173,7 @@ export async function Footer() {
                   <Link
                     href={{ pathname: "/services/[slug]", params: { slug: service.slug } }}
                     className={link}
+                    prefetch={false}
                   >
                     {tServices(`${service.key}.title`)}
                   </Link>
@@ -162,6 +190,7 @@ export async function Footer() {
                   <Link
                     href={{ pathname: "/tours/[slug]", params: { slug: tour.slug } }}
                     className={link}
+                    prefetch={false}
                   >
                     {tTours(`${tour.key}.name`)}
                   </Link>

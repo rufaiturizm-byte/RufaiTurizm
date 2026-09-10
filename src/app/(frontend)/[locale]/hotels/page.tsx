@@ -121,11 +121,14 @@ export default async function HotelsPage({
         çağrısı her kartta değil, bölge başına bir tane: karar otel
         seçildikten sonra veriliyor.
 
-        Otel fotoğrafımız olmadığı için kartın görseli tipografi: adın ilk
-        harfi serif bir monogram olarak duruyor.
+        Otel fotoğrafımız olmadığı için kartta görsel yok ve sahte bir yer
+        tutucu da konmuyor. Kartın ilk okunan şeyi otelin ADI; hiyerarşiyi
+        boyut taşıyor. (Bir ara adın ilk harfi altın bir daire içinde
+        monogram olarak duruyordu — "F" harfi Four Seasons hakkında hiçbir
+        şey söylemiyordu ve kartın en değerli yerini kaplıyordu.)
       */}
       <div className="flex flex-col">
-        {hotelAreas.map((area, index) => {
+        {hotelAreas.map((area) => {
           const name = area.name[lang] ?? area.name.tr;
 
           return (
@@ -152,17 +155,26 @@ export default async function HotelsPage({
                   />
 
                   <div className="relative z-20 flex flex-col justify-end gap-3 px-7 pt-20 pb-8 sm:px-10 sm:pt-24">
+                    {/*
+                      Semt numarası ("01", "02"…) ve yanındaki ayraç
+                      kaldırıldı.
+
+                      Numaralandırmak bir SIRA iddiasıdır. Buradaki
+                      bölgeler — Sultanahmet, Taksim, Beşiktaş, Kadıköy,
+                      Antalya, Bodrum — sıralı değil; hiçbiri diğerinin
+                      öncesi ya da sonrası değil, hatta üçü İstanbul dışı.
+                      Rakam, editoryal tasarımdan ödünç alınmış bir
+                      kostümdü ve bandın en büyük altın öğesiydi: gözü
+                      semt adından önce anlamsız bir sayıya çekiyordu.
+
+                      Aynı gerekçeyle "Neden biz" bölümünden de
+                      kaldırılmıştı. Gerçekten sıralı olan yerlerde
+                      duruyor: transferin üç adımı, tur programlarının
+                      günleri.
+
+                      Otel sayısı rozeti KALIYOR — o bilgi taşıyor.
+                    */}
                     <div className="flex items-center gap-3">
-                      <span
-                        className="font-display text-[30px] font-semibold leading-none tabular-nums"
-                        style={{ color: "var(--brand-gold)" }}
-                      >
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span
-                        className="h-6 w-px"
-                        style={{ background: "color-mix(in oklab, white 28%, transparent)" }}
-                      />
                       {/*
                         Sayaç kendi zemininde duruyor, doğrudan fotoğrafın
                         üstünde değil. Bandın perdesi büyük metne göre

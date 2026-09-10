@@ -81,6 +81,16 @@ export interface Package {
    * yoktu. Verilmezse `name` kullanılır.
    */
   metaTitle?: Text;
+  /**
+   * Arama sonucu açıklaması.
+   *
+   * `excerpt` kartın altındaki tek satır ve orada doğru — kart dar,
+   * uzun cümle kartı bozar. Ama arama sonucunda 155 karaktere kadar yer
+   * var ve altı paketin açıklaması 71–100 karakterde kalıyordu, yani
+   * alanın yarısı boştu. Başlıkta yapılan ayrımın (bkz. `metaTitle`)
+   * açıklama tarafındaki karşılığı. Verilmezse `excerpt` kullanılır.
+   */
+  metaDescription?: Text;
   city: Text;
   days: number;
   /** Kartta ve listede görünen tek satırlık tanıtım. */
@@ -133,6 +143,11 @@ export const packages: Package[] = [
       tr: "Tarihî yarımada, Boğaz ve Beyoğlu; şehir dışına çıkmadan İstanbul'un ana hatları.",
       ar: "شبه الجزيرة التاريخية والبوسفور وبي أوغلو؛ الخطوط العريضة لإسطنبول دون الخروج من المدينة.",
       en: "The historic peninsula, the Bosphorus and Beyoğlu — Istanbul in outline, without leaving the city.",
+    },
+    metaDescription: {
+      tr: "Dört günde İstanbul: tarihî yarımada, Boğaz ve Beyoğlu, havalimanı karşılamasıyla birlikte. Özel araç ve Arapça konuşan şoför; fiyat araç başına, kişi başı değil.",
+      ar: "أربعة أيام في إسطنبول: شبه الجزيرة التاريخية والبوسفور وبي أوغلو، مع الاستقبال من المطار. سيارة خاصة وسائق ناطق بالعربية، والسعر للسيارة لا للشخص.",
+      en: "Four days in Istanbul: the historic peninsula, the Bosphorus and Beyoğlu, with the airport pickup included. Private vehicle, Arabic-speaking driver, priced per car.",
     },
     sections: [
       {
@@ -242,6 +257,11 @@ export const packages: Package[] = [
       tr: "Şehir programına Uludağ ve Cumalıkızık ekleniyor; kar mevsiminde en çok istenen rota.",
       ar: "يضاف إلى برنامج المدينة جبل أولوداغ وقرية جومالي كيزيك؛ وهو المسار الأكثر طلباً في موسم الثلج.",
       en: "Uludağ and Cumalıkızık are added to the city programme — the most requested route in the snow season.",
+    },
+    metaDescription: {
+      tr: "Altı gün: İstanbul programının tamamı, ardından Bursa, Uludağ ve Cumalıkızık köyü. Kar mevsiminde en çok istenen rota. Özel araç, sabit fiyat, gruba katılmadan.",
+      ar: "ستة أيام: برنامج إسطنبول كاملاً، ثم بورصة وأولوداغ وقرية جومالي كيزيك. الأكثر طلباً في موسم الثلج. سيارة خاصة وسعر ثابت، دون الانضمام إلى مجموعة.",
+      en: "Six days: the full Istanbul programme, then Bursa, Uludağ and the village of Cumalıkızık. The most requested route in the snow season. Private vehicle, fixed price.",
     },
     sections: [
       {
@@ -371,6 +391,11 @@ export const packages: Package[] = [
       tr: "Şehir, göl ve dağ bir arada; aileler için en dengeli süre ve iki günübirlik çıkış.",
       ar: "المدينة والبحيرة والجبل معاً؛ وهي المدة الأكثر توازناً للعائلات مع رحلتين خارج المدينة.",
       en: "City, lake and mountain together — the most balanced length for families, with two day trips.",
+    },
+    metaDescription: {
+      tr: "Sekiz gün: şehir, göl ve dağ bir arada — İstanbul, sonra Sapanca ve Maşukiye, sonra Bursa ve Uludağ, arada serbest gün. Aileler için en dengeli süre.",
+      ar: "ثمانية أيام تجمع المدينة والبحيرة والجبل: إسطنبول، ثم سبانجا ومعشوقية، ثم بورصة وأولوداغ، وبينها يوم حرّ. المدّة الأكثر توازناً للعائلات، بسيارة خاصة.",
+      en: "Eight days combining city, lake and mountain: Istanbul, then Sapanca and Maşukiye, then Bursa and Uludağ, with a free day in between. The most balanced length for families.",
     },
     sections: [
       {
@@ -513,6 +538,11 @@ export const packages: Package[] = [
       ar: "أوزنجول وسوميلا والمرتفعات؛ المسار الأخضر للعائلات الهاربة من حر الصيف.",
       en: "Uzungöl, Sümela and the highlands — the green route for families escaping the summer heat.",
     },
+    metaDescription: {
+      tr: "Beş gün Trabzon: Uzungöl, Sümela Manastırı ve Karadeniz yaylaları, bir gün Ayder ya da serbest. Yaz sıcağından kaçan aileler için yeşil rota, özel araçla.",
+      ar: "خمسة أيام في طرابزون: أوزنجول ودير سوميلا وهضاب البحر الأسود، مع يوم لآيدر أو يوم حرّ. المسار الأخضر للهاربين من حرّ الصيف، بسيارة خاصة وسائق.",
+      en: "Five days in Trabzon: Uzungöl, the Sumela Monastery and the Black Sea highlands, with a day for Ayder or a free day. The green route for families escaping summer heat.",
+    },
     sections: [
       {
         heading: {
@@ -633,6 +663,11 @@ export const packages: Package[] = [
       tr: "Kaleiçi, Side, Düden Şelalesi ve tekne turu; deniz ile tarihi aynı programda birleştiren Akdeniz rotası.",
       ar: "كاليتشي وسيدة وشلال دودان وجولة القارب؛ مسار المتوسط الذي يجمع البحر والتاريخ في برنامج واحد.",
       en: "Kaleiçi, Side, the Düden Waterfall and a boat trip — the Mediterranean route that joins sea and history in one programme.",
+    },
+    metaDescription: {
+      tr: "Beş gün Antalya: Kaleiçi ve şehir, Side ve antik sahil, Düden Şelalesi, bir serbest gün. Deniz ile tarihi aynı programda birleştiren Akdeniz rotası.",
+      ar: "خمسة أيام في أنطاليا: كاليتشي والمدينة، وسيدة والساحل الأثري، وشلال دودان، ويوم حرّ. مسار المتوسط الذي يجمع البحر والتاريخ، بسيارة خاصة وسائق.",
+      en: "Five days in Antalya: Kaleiçi and the city, Side and the ancient coast, the Düden waterfall, and a free day. The Mediterranean route that joins sea and history.",
     },
     sections: [
       {
@@ -786,6 +821,11 @@ export const packages: Package[] = [
       tr: "Kale, koylar, tekne turu ve Yalıkavak marinası; yarımadanın dört farklı yüzü beş güne yayılıyor.",
       ar: "القلعة والخلجان وجولة القارب ومارينا ياليكافاك؛ أربعة وجوه مختلفة لشبه الجزيرة موزّعة على خمسة أيام.",
       en: "The castle, the bays, a boat trip and Yalıkavak marina — the peninsula's four faces spread across five days.",
+    },
+    metaDescription: {
+      tr: "Beş gün Bodrum: kale ve şehir merkezi, koylar, Yalıkavak marinası ve kuzey koyları, bir serbest gün. Yarımadanın dört ayrı yüzü, özel araç ve sabit fiyatla.",
+      ar: "خمسة أيام في بودروم: القلعة ومركز المدينة، والخلجان، ومارينا ياليكافاك والخلجان الشمالية، ويوم حرّ. وجوه شبه الجزيرة الأربعة بسيارة خاصة وسعر ثابت.",
+      en: "Five days in Bodrum: the castle and town centre, the coves, Yalıkavak marina and the northern bays, and a free day. The peninsula's four faces, private and fixed price.",
     },
     sections: [
       {

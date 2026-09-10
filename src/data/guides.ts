@@ -2904,7 +2904,7 @@ export const guides: Guide[] = [
       },
       description: {
         tr: "Nakit mi kart mı, dövizi nerede bozdurmalı, bahşiş ne kadar, kart neden reddedilir. Körfez'den gelen misafir için pratik ödeme rehberi.",
-        ar: "نقداً أم بالبطاقة، وأين تصرف العملة، وكم البقشيش، ولماذا تُرفض البطاقة. دليل دفع عملي لضيوف الخليج.",
+        ar: "نقداً أم بالبطاقة، وأين تُصرف العملة وأين لا تُصرف، وكم البقشيش، ولماذا تُرفض البطاقة أحياناً. دليل دفع عملي لضيوف الخليج في تركيا.",
         en: "Cash or card, where to change money, how much to tip, why a card gets declined. A practical payment guide for Gulf visitors.",
       },
     },

@@ -36,7 +36,7 @@ export async function generateMetadata({
 
   return {
     title: item.metaTitle?.[lang] ?? item.name[lang] ?? item.name.tr,
-    description: item.excerpt[lang] ?? item.excerpt.tr,
+    description: item.metaDescription?.[lang] ?? item.excerpt[lang] ?? item.excerpt.tr,
     openGraph: { images: [item.image] },
     alternates: alternatesFor({ pathname: "/packages/[slug]", params: { slug } }, locale),
   };

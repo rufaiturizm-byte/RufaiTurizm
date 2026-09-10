@@ -5,15 +5,14 @@ import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema, ItemListSchema } from "@/components/site/json-ld";
+import { PageClosing } from "@/components/site/page-closing";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { ProseSection } from "@/components/site/prose-section";
+import { Band } from "@/components/site/band";
 import { TrustBoxes } from "@/components/site/trust-stats";
-import { ClosingCta } from "@/components/site/transfer-sections";
 import { ProcessSteps } from "@/components/site/process-steps";
-import { CredentialsBand } from "@/components/site/credentials-band";
 import { PromoBanner } from "@/components/site/promo-banner";
-import { RelatedLinks } from "@/components/site/related-links";
 import { GuideLink } from "@/components/site/guide-link";
 import { packages } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
@@ -104,21 +103,23 @@ export default async function PackagesPage({
         sayfası; başlık solda, metin sağda iki sütun hem hizayı tutuyor
         hem okuma genişliğini koruyor.
       */}
-      <ProseSection
-        title={t("introTitle")}
-        body={[t("intro1"), t("intro2"), t("intro3")]}
-        className="pt-20"
-      />
+      <Band>
+        <ProseSection
+          title={t("introTitle")}
+          body={[t("intro1"), t("intro2"), t("intro3")]}
+          className="pb-16"
+        />
 
-      {/*
-        Kaç gün seçmeli.
-        Sayfadaki asıl karar bu: ziyaretçi dört, beş, altı ve sekiz günlük
-        programlara bakıp birini seçiyor ama gün sayısının neye göre
-        değiştiğini söyleyen bir yer yoktu. Bölüm her uzunluğun hangi
-        soruya cevap olduğunu yazıyor — dördün tek şehir, altının ikinci
-        şehri eklediğiniz ilk uzunluk olması gibi.
-      */}
-      <ProseSection title={t("chooseTitle")} body={t("chooseText")} className="pt-16" />
+        {/*
+          Kaç gün seçmeli.
+          Sayfadaki asıl karar bu: ziyaretçi dört, beş, altı ve sekiz günlük
+          programlara bakıp birini seçiyor ama gün sayısının neye göre
+          değiştiğini söyleyen bir yer yoktu. Bölüm her uzunluğun hangi
+          soruya cevap olduğunu yazıyor — dördün tek şehir, altının ikinci
+          şehri eklediğiniz ilk uzunluk olması gibi.
+        */}
+        <ProseSection title={t("chooseTitle")} body={t("chooseText")} className="pb-20" />
+      </Band>
 
       <section className="mx-auto w-full max-w-7xl px-5 pt-16 pb-16 sm:px-8">
         <SectionHeading eyebrow={t("eyebrow")} title={t("listTitle")} subtitle={t("subtitle")} />
@@ -190,9 +191,7 @@ export default async function PackagesPage({
 
       <GuideLink slug="turkiyede-tatil-butcesi-nasil-kurulur" locale={locale} />
       <ProcessSteps />
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["packages"]} />
-      <CredentialsBand />
+      <PageClosing locale={locale} exclude={["packages"]} />
     </main>
   );
 }

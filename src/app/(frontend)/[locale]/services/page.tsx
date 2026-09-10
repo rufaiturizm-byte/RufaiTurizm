@@ -3,18 +3,17 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
+import { Band } from "@/components/site/band";
+import { PageClosing } from "@/components/site/page-closing";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { ServiceRows } from "@/components/site/service-rows";
 import { FleetUses } from "@/components/site/fleet-uses";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { WhyUs } from "@/components/site/why-us";
 import { FaqPreview } from "@/components/site/faq-preview";
-import { ClosingCta } from "@/components/site/transfer-sections";
 
 export async function generateMetadata({
   params,
@@ -108,16 +107,12 @@ export default async function ServicesPage({
 
       <ServiceRows />
 
-      <div className="pt-16">
+      <Band>
         <FleetUses />
-      </div>
-
-      <RouteCoverage locale={locale} variant="compact" />
+        <RouteCoverage locale={locale} variant="compact" />
+      </Band>
 
       <WhyUs />
-
-      <div className="pt-24">
-      </div>
 
       {/* Form en sonda: ziyaretçi neyi rezerve edeceğini bildikten sonra. */}
       <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
@@ -125,9 +120,7 @@ export default async function ServicesPage({
       </section>
 
       <FaqPreview />
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["services"]} />
-      <CredentialsBand />
+      <PageClosing locale={locale} exclude={["services"]} />
     </main>
   );
 }

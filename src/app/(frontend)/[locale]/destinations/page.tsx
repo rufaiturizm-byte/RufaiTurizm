@@ -5,14 +5,13 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { PageHero } from "@/components/site/page-hero";
+import { PageClosing } from "@/components/site/page-closing";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { BreadcrumbSchema, ItemListSchema } from "@/components/site/json-ld";
 import { PromoBanner } from "@/components/site/promo-banner";
-import { ClosingCta } from "@/components/site/transfer-sections";
-import { RelatedLinks } from "@/components/site/related-links";
-import { CredentialsBand } from "@/components/site/credentials-band";
 import { DestinationCompare } from "@/components/site/destination-compare";
 import { ProseSection } from "@/components/site/prose-section";
+import { Band } from "@/components/site/band";
 import { destinations } from "@/data/destinations";
 import type { Locale } from "@/i18n/routing";
 
@@ -163,35 +162,34 @@ export default async function DestinationsPage({
         </div>
       </section>
 
-      <DestinationCompare locale={locale} />
+      <Band>
+        <DestinationCompare locale={locale} />
 
-      {/*
-        Gün düzeni.
-        Tablodaki "kime uyar" hücresi üç kelime; asıl fark ise günün nasıl
-        geçtiğinde: sahilde otelde başlayıp otelde biten gün, İstanbul'da
-        sabah çıkıp akşam dönülen gün, Trabzon'da büyük kısmı araçta geçen
-        gün. Ziyaretçi hangi şehri seveceğini bundan anlıyor, "koylar,
-        tekne, sakinlik" listesinden değil.
-      */}
-      <ProseSection
-        title={t("rhythmTitle")}
-        body={t("rhythmText")}
-        items={t.raw("rhythmItems") as { title: string; body: string }[]}
-        className="pb-20"
-      />
+        {/*
+          Gün düzeni.
+          Tablodaki "kime uyar" hücresi üç kelime; asıl fark ise günün nasıl
+          geçtiğinde: sahilde otelde başlayıp otelde biten gün, İstanbul'da
+          sabah çıkıp akşam dönülen gün, Trabzon'da büyük kısmı araçta geçen
+          gün. Ziyaretçi hangi şehri seveceğini bundan anlıyor, "koylar,
+          tekne, sakinlik" listesinden değil.
+        */}
+        <ProseSection
+          title={t("rhythmTitle")}
+          body={t("rhythmText")}
+          items={t.raw("rhythmItems") as { title: string; body: string }[]}
+          className="pb-20"
+        />
 
-      {/*
-        İlk geliş / ikinci geliş.
-        Karşılaştırma tablosu şehirleri yan yana koyuyor ama tek bir soruyu
-        atlıyor: ilk kez gelen biriyle ikinci kez gelen birinin cevabı aynı
-        değil. Mevsim tarafı zaten "Türkiye'ye ne zaman gitmeli"
-        rehberinde; burada yalnız sıra kararı var.
-      */}
-      <ProseSection title={t("firstTitle")} body={t("firstText")} className="pb-20" />
-
-      <ClosingCta locale={locale} />
-      <RelatedLinks />
-      <CredentialsBand />
+        {/*
+          İlk geliş / ikinci geliş.
+          Karşılaştırma tablosu şehirleri yan yana koyuyor ama tek bir soruyu
+          atlıyor: ilk kez gelen biriyle ikinci kez gelen birinin cevabı aynı
+          değil. Mevsim tarafı zaten "Türkiye'ye ne zaman gitmeli"
+          rehberinde; burada yalnız sıra kararı var.
+        */}
+        <ProseSection title={t("firstTitle")} body={t("firstText")} className="pb-20" />
+      </Band>
+      <PageClosing locale={locale} />
     </main>
   );
 }

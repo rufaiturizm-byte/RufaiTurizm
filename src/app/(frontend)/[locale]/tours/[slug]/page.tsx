@@ -7,13 +7,12 @@ import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { PageClosing } from "@/components/site/page-closing";
 import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { packageBySlug } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { CityHubLink } from "@/components/site/city-hub-link";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
@@ -22,7 +21,6 @@ import { RouteCoverage } from "@/components/site/route-coverage";
 import { ServiceSections } from "@/components/site/service-sections";
 import { ProcessSteps } from "@/components/site/process-steps";
 import { FaqPreview } from "@/components/site/faq-preview";
-import { ClosingCta } from "@/components/site/transfer-sections";
 import { tours, tourBySlug } from "@/data/tours";
 
 export function generateStaticParams() {
@@ -404,9 +402,7 @@ export default async function TourDetailPage({
 
       <CityHubLink city={tour.key} locale={locale} />
       <FaqPreview />
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["tours"]} />
-      <CredentialsBand />
+      <PageClosing locale={locale} exclude={["tours"]} />
     </main>
   );
 }

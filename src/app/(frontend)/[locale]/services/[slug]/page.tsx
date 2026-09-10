@@ -16,14 +16,12 @@ import { Link } from "@/i18n/navigation";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { PageClosing } from "@/components/site/page-closing";
 import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { ProcessSteps } from "@/components/site/process-steps";
 import {
-  ClosingCta,
   TransferSteps,
   TransferTypes,
   TransferWhy,
@@ -325,9 +323,7 @@ export default async function ServiceDetailPage({
 
       <RouteCoverage locale={locale} variant="compact" />
       <ServiceFaq serviceKey={service.key} />
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["services"]} />
-      <CredentialsBand />
+      <PageClosing locale={locale} exclude={["services"]} />
     </main>
   );
 }

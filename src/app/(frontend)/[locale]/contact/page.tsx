@@ -16,16 +16,16 @@ import {
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
+import { PageClosing } from "@/components/site/page-closing";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { ProseSection } from "@/components/site/prose-section";
+import { Band } from "@/components/site/band";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { FaqPreview } from "@/components/site/faq-preview";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { siteConfig, hasRealPhone } from "@/config/site";
 
 export async function generateMetadata({
@@ -307,31 +307,32 @@ export default async function ContactPage({
         şoför adı ve plakası, tek muhatap. Yeni bir taahhüt yok, dağınık
         duran sözler ilk mesajı atacak kişinin gördüğü sıraya konuldu.
       */}
-      <ProseSection
-        title={t("afterTitle")}
-        body={t("afterText")}
-        items={t.raw("afterItems") as { title: string; body: string }[]}
-        className="pb-20"
-      />
+      <Band>
+        <ProseSection
+          title={t("afterTitle")}
+          body={t("afterText")}
+          items={t.raw("afterItems") as { title: string; body: string }[]}
+          className="pb-20"
+        />
 
-      {/*
-        Kanalın kendisi.
-        Sitede aranabilir bir numara yok ve arama düğmesi hiç basılmıyor;
-        ziyaretçi bunu eksiklik olarak okuyabilir. Bölüm eksikliği
-        savunmuyor, kanalın neden yazılı yürüdüğünü söylüyor — dördü de
-        misafirin lehine olan sebepler ve dördü de doğrulanabilir.
-      */}
-      <ProseSection
-        title={t("whyWaTitle")}
-        body={t("whyWaText")}
-        items={t.raw("whyWaItems") as { title: string; body: string }[]}
-        className="pb-20"
-      />
+        {/*
+          Kanalın kendisi.
+          Sitede aranabilir bir numara yok ve arama düğmesi hiç basılmıyor;
+          ziyaretçi bunu eksiklik olarak okuyabilir. Bölüm eksikliği
+          savunmuyor, kanalın neden yazılı yürüdüğünü söylüyor — dördü de
+          misafirin lehine olan sebepler ve dördü de doğrulanabilir.
+        */}
+        <ProseSection
+          title={t("whyWaTitle")}
+          body={t("whyWaText")}
+          items={t.raw("whyWaItems") as { title: string; body: string }[]}
+          className="pb-20"
+        />
+      </Band>
 
       <RouteCoverage locale={locale} variant="compact" />
       <FaqPreview />
-      <RelatedLinks exclude={["contact"]} />
-      <CredentialsBand />
+      <PageClosing exclude={["contact"]} />
     </main>
   );
 }

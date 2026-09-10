@@ -4,6 +4,7 @@ import { ArrowRight, ChevronDown, ShieldCheck } from "lucide-react";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
+import { PageClosing } from "@/components/site/page-closing";
 import { AssuranceBand } from "@/components/site/assurance-band";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TravelAgencySchema, WebSiteSchema } from "@/components/site/json-ld";
@@ -11,7 +12,6 @@ import { TransferForm } from "@/components/site/transfer-form";
 import { TrustStats } from "@/components/site/trust-stats";
 import { SectionHeading, SectionAction } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
-import { CredentialsBand } from "@/components/site/credentials-band";
 import { PromoBanner } from "@/components/site/promo-banner";
 import { PackagesSection } from "@/components/site/packages-section";
 import { Reviews } from "@/components/site/reviews";
@@ -22,7 +22,6 @@ import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCards } from "@/components/site/route-cards";
 import { FaqPreview } from "@/components/site/faq-preview";
 import { GuidesTeaser } from "@/components/site/guides-teaser";
-import { ClosingCta } from "@/components/site/transfer-sections";
 import { DestinationsMarquee } from "@/components/site/destinations-marquee";
 import { tours } from "@/data/tours";
 import { siteConfig } from "@/config/site";
@@ -196,9 +195,8 @@ export default async function HomePage({
         <AssuranceBand />
 
         <FaqPreview />
-        <ClosingCta locale={locale} />
-        <CredentialsBand />
         <Reviews />
+      <PageClosing locale={locale} />
       </main>
     </>
   );

@@ -6,15 +6,13 @@ import { ArrowRight, CalendarDays, Check, Info, MapPin, Sparkles } from "lucide-
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { PageClosing } from "@/components/site/page-closing";
 import { BreadcrumbSchema, FaqSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { LongSections } from "@/components/site/long-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { AssuranceBand } from "@/components/site/assurance-band";
-import { ClosingCta } from "@/components/site/transfer-sections";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { CityHubLink } from "@/components/site/city-hub-link";
 import { packages, packageBySlug, relatedPackages } from "@/data/packages";
 import type { Locale } from "@/i18n/routing";
@@ -315,9 +313,7 @@ export default async function PackageDetailPage({
 
       <CityHubLink city={item.destinationSlug} locale={locale} />
       <AssuranceBand />
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["packages"]} />
-      <CredentialsBand />
+      <PageClosing locale={locale} exclude={["packages"]} />
     </main>
   );
 }

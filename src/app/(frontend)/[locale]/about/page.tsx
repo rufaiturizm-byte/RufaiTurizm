@@ -4,13 +4,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
+import { Band } from "@/components/site/band";
+import { PageClosing } from "@/components/site/page-closing";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { ProseSection } from "@/components/site/prose-section";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { TrustStats } from "@/components/site/trust-stats";
-import { ClosingCta } from "@/components/site/transfer-sections";
 import {
   BadgeCheck,
   Building2,
@@ -264,71 +263,70 @@ export default async function AboutPage({
         maddesiyle aynı mantık — kanıtı olduğundan büyük göstermek,
         kanıtın kendisini de şüpheli yapıyor.
       */}
-      <ProseSection title={t("licenceTitle")} body={t("licenceText")} className="pt-20" />
+      <Band>
+        <ProseSection title={t("licenceTitle")} body={t("licenceText")} className="pt-20" />
 
-      {/*
-        Aksilik bölümü, kanıtların hemen ardında.
-        Sitede müşteri kaynaklı iptal koşulları vardı (tur için 24 saat,
-        uçak bileti için havayolu kuralları) ama "biz hata yaparsak ya da
-        hayat araya girerse ne oluyor" hiçbir yerde yazmıyordu. Güven
-        sayfasının en çok merak edilen ama en az yazılan kısmı bu.
+        {/*
+          Aksilik bölümü, kanıtların hemen ardında.
+          Sitede müşteri kaynaklı iptal koşulları vardı (tur için 24 saat,
+          uçak bileti için havayolu kuralları) ama "biz hata yaparsak ya da
+          hayat araya girerse ne oluyor" hiçbir yerde yazmıyordu. Güven
+          sayfasının en çok merak edilen ama en az yazılan kısmı bu.
 
-        Buradaki her madde sitenin BAŞKA bir yerde zaten verdiği sözden
-        çıkıyor — uçuş takibi, kendi filosu, otel rezervasyonunun bizim
-        adımıza yapılması, turların özel olması. Yeni bir taahhüt
-        eklenmedi. Para tarafı bilerek dışarıda: iade ve iptal koşulları
-        hizmete ve tarihe göre değişiyor, buraya genel bir cümle yazmak
-        tutulamayacak bir söz olurdu.
-      */}
-      <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
-        <SectionHeading
-          eyebrow={t("wrongEyebrow")}
-          title={t("wrongTitle")}
-          subtitle={t("wrongSubtitle")}
-          rule={false}
-        />
+          Buradaki her madde sitenin BAŞKA bir yerde zaten verdiği sözden
+          çıkıyor — uçuş takibi, kendi filosu, otel rezervasyonunun bizim
+          adımıza yapılması, turların özel olması. Yeni bir taahhüt
+          eklenmedi. Para tarafı bilerek dışarıda: iade ve iptal koşulları
+          hizmete ve tarihe göre değişiyor, buraya genel bir cümle yazmak
+          tutulamayacak bir söz olurdu.
+        */}
+        <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
+          <SectionHeading
+            eyebrow={t("wrongEyebrow")}
+            title={t("wrongTitle")}
+            subtitle={t("wrongSubtitle")}
+            rule={false}
+          />
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { icon: CloudRain, n: 1 },
-            { icon: Wrench, n: 2 },
-            { icon: Hotel, n: 3 },
-            { icon: HeartPulse, n: 4 },
-            { icon: MessageSquareWarning, n: 5 },
-          ].map(({ icon: Icon, n }) => (
-            <article key={n} className="reveal-rise surface-card p-6">
-              <span className="icon-tile inline-flex size-11 items-center justify-center">
-                <Icon className="size-[18px]" aria-hidden="true" />
-              </span>
-              <h3 className="mt-4 text-[15.5px] font-bold leading-snug">{t(`wrong${n}Title`)}</h3>
-              <p className="mt-2.5 text-[13.5px] leading-[1.8] text-muted-foreground">
-                {t(`wrong${n}Desc`)}
-              </p>
-            </article>
-          ))}
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { icon: CloudRain, n: 1 },
+              { icon: Wrench, n: 2 },
+              { icon: Hotel, n: 3 },
+              { icon: HeartPulse, n: 4 },
+              { icon: MessageSquareWarning, n: 5 },
+            ].map(({ icon: Icon, n }) => (
+              <article key={n} className="reveal-rise surface-card p-6">
+                <span className="icon-tile inline-flex size-11 items-center justify-center">
+                  <Icon className="size-[18px]" aria-hidden="true" />
+                </span>
+                <h3 className="mt-4 text-[15.5px] font-bold leading-snug">{t(`wrong${n}Title`)}</h3>
+                <p className="mt-2.5 text-[13.5px] leading-[1.8] text-muted-foreground">
+                  {t(`wrong${n}Desc`)}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <p className="measure mt-6 text-[13.5px] leading-[1.8] text-muted-foreground">
+            {t("wrongNote")}
+          </p>
+        </section>
+
+        {/*
+          Kapanış blokları en sonda.
+          Önceki sırada "Keşfetmeye devam edin" ve belge bandı sayfanın
+          ortasında çıkıyor, ardından dört bölüm daha geliyordu: ziyaretçi
+          sayfanın bittiğini sanıp okumayı bırakabiliyordu. Sitedeki
+          on dört sayfanın tamamı ClosingCta -> RelatedLinks ->
+          CredentialsBand ile bitiyor; hakkımızda tek istisnaydı.
+        */}
+
+        <div className="pt-24">
         </div>
+      </Band>
 
-        <p className="measure mt-6 text-[13.5px] leading-[1.8] text-muted-foreground">
-          {t("wrongNote")}
-        </p>
-      </section>
-
-      {/*
-        Kapanış blokları en sonda.
-        Önceki sırada "Keşfetmeye devam edin" ve belge bandı sayfanın
-        ortasında çıkıyor, ardından dört bölüm daha geliyordu: ziyaretçi
-        sayfanın bittiğini sanıp okumayı bırakabiliyordu. Sitedeki
-        on dört sayfanın tamamı ClosingCta -> RelatedLinks ->
-        CredentialsBand ile bitiyor; hakkımızda tek istisnaydı.
-      */}
-
-      <div className="pt-24">
-      </div>
-
-      <ClosingCta locale={locale} />
-
-      <RelatedLinks exclude={["about"]} />
-      <CredentialsBand />
+      <PageClosing locale={locale} exclude={["about"]} />
     </main>
   );
 }

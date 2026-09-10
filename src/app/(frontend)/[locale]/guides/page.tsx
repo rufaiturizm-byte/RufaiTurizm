@@ -5,12 +5,11 @@ import { ArrowRight, Clock } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema, ItemListSchema } from "@/components/site/json-ld";
+import { Band } from "@/components/site/band";
+import { PageClosing } from "@/components/site/page-closing";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TrustBoxes } from "@/components/site/trust-stats";
-import { ClosingCta } from "@/components/site/transfer-sections";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { guideMinutes, guides, guideTopics, guidesByTopic } from "@/data/guides";
 import type { Locale } from "@/i18n/routing";
 
@@ -109,12 +108,21 @@ export default async function GuidesPage({
         </nav>
       </section>
 
-      {guideTopics.map((topic, topicIndex) => (
+      {/*
+        Konu grupları dönüşümlü zeminde.
+        Dört grup arka arkaya aynı krem zeminde duruyordu ve dizin
+        sayfası tek bir uzun kart tarlası gibi okunuyordu — nerede
+        "varış" bitip "planlama" başladığı yalnız başlıktan anlaşılıyordu.
+        Bir atlayarak kum zemine alınınca dört grup dört bölüm oluyor.
+      */}
+      {guideTopics.map((topic, topicIndex) => {
+        const bant = topicIndex % 2 === 1;
+        const govde = (
       <section
         key={topic}
         id={topic}
         className={`mx-auto w-full max-w-7xl scroll-mt-24 px-5 sm:px-8 ${
-          topicIndex === guideTopics.length - 1 ? "pt-14 pb-20" : "pt-14"
+          topicIndex === guideTopics.length - 1 ? "pt-14 pb-20" : bant ? "pt-2 pb-20" : "pt-14"
         }`}
       >
         <h2 className="mb-7 font-display text-[26px] font-semibold leading-snug sm:text-[30px]">
@@ -187,10 +195,10 @@ export default async function GuidesPage({
           })}
         </div>
       </section>
-      ))}
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["guides"]} />
-      <CredentialsBand />
+        );
+        return bant ? <Band key={topic}>{govde}</Band> : govde;
+      })}
+      <PageClosing locale={locale} exclude={["guides"]} />
     </main>
   );
 }

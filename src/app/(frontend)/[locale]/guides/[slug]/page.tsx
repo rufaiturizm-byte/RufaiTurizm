@@ -6,6 +6,7 @@ import { ArrowRight, Clock } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { PageClosing } from "@/components/site/page-closing";
 import { ReadingProgress } from "@/components/site/scroll-helpers";
 import { ArticleSchema, BreadcrumbSchema, FaqSchema } from "@/components/site/json-ld";
 import { guidePublishedDates } from "@/data/guide-dates";
@@ -14,8 +15,6 @@ import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TableOfContents } from "@/components/site/table-of-contents";
 import { headingId } from "@/lib/heading-id";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { CityHubLink } from "@/components/site/city-hub-link";
 import { guideBySlug, guideMinutes, guides, relatedGuides } from "@/data/guides";
 import { destinationForGuide } from "@/data/destinations";
@@ -307,8 +306,7 @@ export default async function GuideDetailPage({
       </section>
 
       {cityHub ? <CityHubLink city={cityHub} locale={locale} /> : null}
-      <RelatedLinks exclude={["guides"]} />
-      <CredentialsBand />
+      <PageClosing exclude={["guides"]} />
     </main>
   );
 }

@@ -6,6 +6,7 @@ import { ArrowRight, Clock, PlaneLanding, Route as RouteIcon } from "lucide-reac
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
+import { PageClosing } from "@/components/site/page-closing";
 import { ReadingProgress } from "@/components/site/scroll-helpers";
 import { BreadcrumbSchema, FaqSchema, TransferRouteSchema } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
@@ -13,11 +14,8 @@ import { TransferForm } from "@/components/site/transfer-form";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCoverage } from "@/components/site/route-coverage";
-import { RelatedLinks } from "@/components/site/related-links";
 import { CityHubLink } from "@/components/site/city-hub-link";
-import { CredentialsBand } from "@/components/site/credentials-band";
 import { FaqPreview } from "@/components/site/faq-preview";
-import { ClosingCta } from "@/components/site/transfer-sections";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TableOfContents } from "@/components/site/table-of-contents";
@@ -303,9 +301,7 @@ export default async function TransferRoutePage({
       <CityHubLink city={destinationForAirport(route.airport)} locale={locale} />
       <RouteCoverage locale={locale} />
       <FaqPreview />
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["transfer"]} />
-      <CredentialsBand />
+      <PageClosing locale={locale} exclude={["transfer"]} />
     </main>
   );
 }

@@ -3,6 +3,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
+import { Band } from "@/components/site/band";
+import { PageClosing } from "@/components/site/page-closing";
 import { AssuranceBand } from "@/components/site/assurance-band";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
@@ -11,13 +13,10 @@ import { TrustBoxes } from "@/components/site/trust-stats";
 import { VehicleList } from "@/components/site/vehicle-list";
 import { RouteCards } from "@/components/site/route-cards";
 import { RouteCoverage } from "@/components/site/route-coverage";
-import { CredentialsBand } from "@/components/site/credentials-band";
 import { PromoBanner } from "@/components/site/promo-banner";
-import { RelatedLinks } from "@/components/site/related-links";
 import { GuideLink } from "@/components/site/guide-link";
 import { FaqPreview } from "@/components/site/faq-preview";
 import {
-  ClosingCta,
   TransferSteps,
   TransferTypes,
   TransferWhy,
@@ -138,19 +137,20 @@ export default async function TransferPage({
       */}
       <TransferTypes />
 
-      <GuideLink slug="turkiyede-sim-kart-ve-internet" locale={locale} />
-      <RouteCoverage locale={locale} />
+      <Band>
+        <GuideLink slug="turkiyede-sim-kart-ve-internet" locale={locale} />
+        <RouteCoverage locale={locale} />
+      </Band>
 
-      <TransferWhy />
-
-      <TransferSteps />
+      <Band>
+        <TransferWhy />
+        <TransferSteps />
+      </Band>
 
       <AssuranceBand />
 
       <FaqPreview />
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["transfer"]} />
-      <CredentialsBand />
+      <PageClosing locale={locale} exclude={["transfer"]} />
     </main>
   );
 }

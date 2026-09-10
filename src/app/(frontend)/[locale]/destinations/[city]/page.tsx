@@ -6,13 +6,11 @@ import { ArrowRight, Clock, MapPin, Route as RouteIcon } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { PageHero } from "@/components/site/page-hero";
+import { PageClosing } from "@/components/site/page-closing";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { BreadcrumbSchema, FaqSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { PromoBanner } from "@/components/site/promo-banner";
-import { ClosingCta } from "@/components/site/transfer-sections";
-import { RelatedLinks } from "@/components/site/related-links";
-import { CredentialsBand } from "@/components/site/credentials-band";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { headingId } from "@/lib/heading-id";
@@ -396,10 +394,7 @@ export default async function DestinationPage({
           </aside>
         </div>
       </section>
-
-      <ClosingCta locale={locale} />
-      <RelatedLinks />
-      <CredentialsBand />
+      <PageClosing locale={locale} />
     </main>
   );
 }

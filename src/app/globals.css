@@ -115,6 +115,16 @@
   --brand-gold-label: oklch(0.822 0.145 87);  /* koyu zeminde küçük etiketler */
   --brand-sky: oklch(0.775 0.105 245);        /* şeritlerin gök mavisi */
   --brand-cream: oklch(0.980 0.008 76);       /* sıcak kağıt beyazı */
+  /*
+    İkinci zemin tonu — bölüm bandı.
+    Sayfa zemini zaten krem (`--background: var(--brand-cream)`), yani
+    "krem bant" koymak sayfayla aynı rengi koymaktı: bölümler yalnız ince
+    bir çizgiyle ayrılıyordu ve pratikte hiç ayrılmıyordu. Ölçtüm: turlar
+    sayfasında arka arkaya on iki bölümün hiçbirinin zemini yoktu.
+    Bu ton kremden bir kademe koyu — fark edilecek kadar var, gürültü
+    yapmayacak kadar az.
+  */
+  --brand-sand: oklch(0.958 0.013 76);
   --brand-wa: oklch(0.52 0.132 152);          /* WhatsApp — AA kontrast geçer */
 
   --background: var(--brand-cream);
@@ -227,6 +237,7 @@
 }
 
 .dark {
+  --brand-sand: oklch(0.205 0 0);
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);

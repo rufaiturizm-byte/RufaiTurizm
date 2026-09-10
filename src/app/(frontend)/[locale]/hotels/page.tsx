@@ -12,15 +12,14 @@ import {
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
 import { BreadcrumbSchema } from "@/components/site/json-ld";
+import { Band } from "@/components/site/band";
+import { PageClosing } from "@/components/site/page-closing";
 import { PageHero } from "@/components/site/page-hero";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { RouteCoverage } from "@/components/site/route-coverage";
-import { CredentialsBand } from "@/components/site/credentials-band";
-import { RelatedLinks } from "@/components/site/related-links";
 import { GuideLink } from "@/components/site/guide-link";
-import { ClosingCta } from "@/components/site/transfer-sections";
 import { hotelAreas } from "@/data/hotels";
 import type { Locale } from "@/i18n/routing";
 
@@ -430,11 +429,11 @@ export default async function HotelsPage({
         </div>
       </section>
 
-      <GuideLink slug="otel-secerken-nelere-bakmali" locale={locale} />
-      <RouteCoverage locale={locale} variant="compact" />
-      <ClosingCta locale={locale} />
-      <RelatedLinks exclude={["hotels"]} />
-      <CredentialsBand />
+      <Band>
+        <GuideLink slug="otel-secerken-nelere-bakmali" locale={locale} />
+        <RouteCoverage locale={locale} variant="compact" />
+      </Band>
+      <PageClosing locale={locale} exclude={["hotels"]} />
     </main>
   );
 }

@@ -90,7 +90,7 @@ export function ProseSection({
       >
         <div className="lg:sticky lg:top-28 lg:self-start">
           {eyebrow ? (
-            <p className="eyebrow-rule mb-3 text-[11px] font-extrabold uppercase tracking-[0.16em] text-muted-foreground">
+            <p className="eyebrow-rule mb-3 text-[12.5px] font-bold text-muted-foreground">
               {eyebrow}
             </p>
           ) : null}

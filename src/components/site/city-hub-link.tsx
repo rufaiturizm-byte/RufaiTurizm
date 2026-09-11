@@ -40,7 +40,7 @@ export async function CityHubLink({ city, locale }: { city: string; locale: stri
       >
         <div className="flex flex-col justify-center p-7 sm:p-9">
           <span
-            className="text-[11px] font-extrabold uppercase tracking-[0.14em]"
+            className="text-[12.5px] font-bold"
             style={{ color: "var(--brand-gold-deep)" }}
           >
             {t("hubEyebrow")}

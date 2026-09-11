@@ -107,7 +107,26 @@ export default async function HotelsPage({
             style={{ color: "var(--brand-night)" }}
             aria-hidden="true"
           />
-          <p className="measure-wide text-[13.5px] leading-[1.8]">{t("disclaimer")}</p>
+          <div className="measure-wide">
+            <p className="text-[13.5px] leading-[1.8]">{t("disclaimer")}</p>
+            {/*
+              Bu cümle sözlükte YAZILIYDI ama hiçbir yerde basılmıyordu —
+              ölü çeviri anahtarlarını tararken çıktı.
+
+              Ölü kod değil, eksik açıklama: `hotels.ts` dosyasının başında
+              "o otellerin görsel kullanım hakkına sahip değiliz, başka bir
+              fotoğrafı otelin fotoğrafı gibi göstermek olmaz" yazıyor ve
+              sayfa gerçekten semt fotoğrafı kullanıyor. Ama bunu ziyaretçiye
+              söyleyen cümle ekrana hiç gelmiyordu; yani karar doğruydu,
+              beyanı eksikti.
+
+              Üstteki `disclaimer` fiyatı ve "anlaşmalı otel değil"i
+              anlatıyor, fotoğrafa değinmiyordu.
+            */}
+            <p className="mt-2 text-[12.5px] leading-[1.7] text-muted-foreground">
+              {t("photoNote")}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -188,7 +207,7 @@ export default async function HotelsPage({
                         eşleşmesi sitede zaten kullanılıyor (tablo başlığı).
                       */}
                       <span
-                        className="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.2em]"
+                        className="inline-flex items-center rounded-full px-2.5 py-1 text-[12.5px] font-bold"
                         style={{
                           background: "var(--brand-night)",
                           color: "var(--brand-gold-label)",
@@ -239,7 +258,7 @@ export default async function HotelsPage({
                     ] as const
                   ).map(({ icon: Icon, label, value }) => (
                     <div key={label} className="accent-card p-5">
-                      <dt className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                      <dt className="flex items-center gap-2 text-[12.5px] font-bold text-muted-foreground">
                         <Icon
                           className="size-3.5"
                           style={{ color: "var(--brand-gold-deep)" }}

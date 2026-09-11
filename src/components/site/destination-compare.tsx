@@ -28,7 +28,7 @@ export async function DestinationCompare({ locale }: { locale: string }) {
   const tCommon = await getTranslations("common");
   const lang = locale as Locale;
 
-  const th = "px-4 py-3.5 text-start text-[11.5px] font-extrabold uppercase tracking-[0.12em]";
+  const th = "px-4 py-3.5 text-start text-[12.5px] font-bold";
   const td = "px-4 py-4 text-[14px] align-middle";
 
   return (

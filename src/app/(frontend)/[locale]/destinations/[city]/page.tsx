@@ -134,7 +134,7 @@ export default async function DestinationPage({
           <dl className="grid gap-3 self-start sm:grid-cols-2">
             {item.facts.map((fact) => (
               <div key={fact.label.tr} className="accent-card p-5">
-                <dt className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                <dt className="text-[12.5px] font-bold text-muted-foreground">
                   {fact.label[lang] ?? fact.label.tr}
                 </dt>
                 <dd className="mt-2 text-[14.5px] font-bold leading-snug">
@@ -226,7 +226,7 @@ export default async function DestinationPage({
                 />
               </Link>
               <div className="flex flex-1 flex-col p-5">
-                <span className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                <span className="text-[12.5px] font-bold text-muted-foreground">
                   {tNav("tours")}
                 </span>
                 <h3 className="mt-2 font-display text-[18px] font-semibold leading-snug">
@@ -262,7 +262,7 @@ export default async function DestinationPage({
                 />
               </Link>
               <div className="flex flex-1 flex-col p-5">
-                <span className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                <span className="text-[12.5px] font-bold text-muted-foreground">
                   {tNav("packages")}
                 </span>
                 <h3 className="mt-2 font-display text-[18px] font-semibold leading-snug">
@@ -295,7 +295,7 @@ export default async function DestinationPage({
                 />
               </Link>
               <div className="flex flex-1 flex-col p-5">
-                <span className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                <span className="text-[12.5px] font-bold text-muted-foreground">
                   {tNav("guides")}
                 </span>
                 <h3 className="mt-2 font-display text-[18px] font-semibold leading-snug">

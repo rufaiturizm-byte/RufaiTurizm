@@ -122,7 +122,7 @@ export default async function HomePage({
             </div>
             {/* Kaydırma ipucu — formun üstüne binen kartın hemen üstünde */}
             <div
-              className="scroll-hint mt-14 hidden w-fit items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70 lg:flex"
+              className="scroll-hint mt-14 hidden w-fit items-center gap-2.5 text-[12.5px] font-semibold text-white/70 lg:flex"
               aria-hidden="true"
             >
               <ChevronDown className="size-4" />

@@ -81,7 +81,7 @@ export async function RouteCoverage({
                 return (
                   <div key={group.key}>
                     <p
-                      className="text-[10.5px] font-extrabold uppercase tracking-[0.14em]"
+                      className="text-[12px] font-bold"
                       style={{ color: "var(--brand-gold-deep)" }}
                     >
                       {title}

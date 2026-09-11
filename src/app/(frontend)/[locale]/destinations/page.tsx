@@ -130,7 +130,7 @@ export default async function DestinationsPage({
 
                 <div className="p-6">
                   <span
-                    className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-[0.16em]"
+                    className="inline-flex items-center gap-1.5 text-[12.5px] font-bold"
                     style={{ color: "var(--brand-gold-label)" }}
                   >
                     <MapPin className="size-3.5" aria-hidden="true" />

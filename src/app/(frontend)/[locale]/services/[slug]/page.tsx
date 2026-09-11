@@ -203,7 +203,7 @@ export default async function ServiceDetailPage({
                 ] as const
               ).map(({ icon: Icon, label, value }) => (
                 <div key={label} className="accent-card p-5">
-                  <dt className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                  <dt className="flex items-center gap-2 text-[12.5px] font-bold text-muted-foreground">
                     <Icon
                       className="size-3.5"
                       style={{ color: "var(--brand-gold-deep)" }}
@@ -265,7 +265,7 @@ export default async function ServiceDetailPage({
           >
             {service.priceFrom ? (
               <>
-                <div className="text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+                <div className="text-[13px] font-semibold text-muted-foreground">
                   {tTours("from")}
                 </div>
                 <div

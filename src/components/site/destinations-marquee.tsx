@@ -77,7 +77,7 @@ export async function DestinationsMarquee() {
                   {t(`${tour.key}.city`)}
                 </div>
                 <div
-                  className="mt-0.5 text-[11.5px] font-semibold uppercase tracking-[0.14em]"
+                  className="mt-0.5 text-[12.5px] font-semibold"
                   style={{ color: "var(--brand-gold-label)" }}
                 >
                   {t(`${tour.key}.name`)}

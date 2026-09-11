@@ -187,7 +187,7 @@ export default async function TransferRoutePage({
         <dl className="mb-14 grid gap-4 sm:grid-cols-3">
           {facts.map(({ icon: Icon, label, value }) => (
             <div key={label} className="accent-card p-5">
-              <dt className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+              <dt className="flex items-center gap-2 text-[12.5px] font-bold text-muted-foreground">
                 <Icon className="size-3.5" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
                 {label}
               </dt>

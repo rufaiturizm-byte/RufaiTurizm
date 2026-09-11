@@ -156,7 +156,7 @@ export default async function GuideDetailPage({
         <dl className="mb-14 grid gap-4 sm:grid-cols-3">
           {guide.facts.map((fact, index) => (
             <div key={index} className="reveal-rise accent-card p-5">
-              <dt className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+              <dt className="text-[12.5px] font-bold text-muted-foreground">
                 {fact.label[lang] ?? fact.label.tr}
               </dt>
               <dd className="mt-2 text-[14.5px] font-bold leading-snug">

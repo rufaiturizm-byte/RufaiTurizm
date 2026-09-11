@@ -48,7 +48,7 @@ export function TableOfContents({
        uzuyor ve 2000 piksel boyunda bir öğenin "yapışacak" yeri kalmıyor —
        sticky sessizce çalışmıyor gibi görünüyordu. */
     <nav aria-label={label} className="hidden self-start lg:sticky lg:top-28 lg:block">
-      <div className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-muted-foreground">
+      <div className="text-[12.5px] font-bold text-muted-foreground">
         {label}
       </div>
 

@@ -26,7 +26,7 @@ export async function Footer() {
   const tCredentials = await getTranslations("credentials");
   const tCta = await getTranslations("cta");
 
-  const heading = "mb-5 text-[12px] font-extrabold uppercase tracking-[0.18em]";
+  const heading = "mb-5 text-[13px] font-bold";
   /*
    * Dikey dolgu dokunma alanı için, süs değil.
    *

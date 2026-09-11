@@ -149,7 +149,7 @@ export default async function PackageDetailPage({
                     <span className="step-badge size-11 text-[14px] font-extrabold">
                       {index + 1}
                     </span>
-                    <span className="mt-2 text-[10px] font-extrabold uppercase tracking-[0.14em] text-muted-foreground">
+                    <span className="mt-2 text-[12px] font-bold text-muted-foreground">
                       {t("dayLabel")}
                     </span>
                   </div>
@@ -221,7 +221,7 @@ export default async function PackageDetailPage({
               boxShadow: "var(--shadow-panel-lift)",
             }}
           >
-            <div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+            <div className="flex items-center gap-2 text-[12.5px] font-bold text-muted-foreground">
               <Info className="size-3.5" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
               {t("priceTitle")}
             </div>
@@ -244,7 +244,7 @@ export default async function PackageDetailPage({
             </WhatsAppLink>
 
             <div className="mt-5 border-t pt-4" style={{ borderColor: "var(--hairline)" }}>
-              <div className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+              <div className="text-[12.5px] font-bold text-muted-foreground">
                 {t("cityLabel")}
               </div>
               <div className="mt-1.5 text-[14px] font-semibold">

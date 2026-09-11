@@ -51,7 +51,7 @@ export function LongSections({
           aria-label={contentsLabel}
           className="mx-auto mb-12 w-full max-w-7xl px-5 sm:px-8"
         >
-          <p className="eyebrow-rule text-[11px] font-extrabold uppercase tracking-[0.16em] text-muted-foreground">
+          <p className="eyebrow-rule text-[12.5px] font-bold text-muted-foreground">
             {contentsLabel}
           </p>
           <ul className="mt-4 flex flex-wrap gap-2.5">

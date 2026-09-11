@@ -73,7 +73,7 @@ export async function VehicleList() {
                   {t("vito.desc")}
                 </p>
 
-                <h4 className="mt-7 text-[13px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                <h4 className="mt-7 text-[13px] font-bold text-muted-foreground">
                   {t("specTitle")}
                 </h4>
                 <ul className="mt-3.5 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">

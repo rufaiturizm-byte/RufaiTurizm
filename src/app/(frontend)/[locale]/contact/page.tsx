@@ -215,7 +215,7 @@ export default async function ContactPage({
                   >
                     <Icon className="size-[18px]" aria-hidden="true" />
                   </span>
-                  <div className="mt-4 text-[11.5px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">
+                  <div className="mt-4 text-[12.5px] font-bold text-muted-foreground">
                     {title}
                   </div>
                   <div

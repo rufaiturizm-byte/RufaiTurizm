@@ -28,7 +28,7 @@ export async function TourCompare() {
   const includedKeys = ["guide", "pickup", "vehicle", "fixedPrice", "water", "parking"] as const;
   const notIncludedKeys = ["tickets", "lunch", "boat", "tips"] as const;
 
-  const th = "px-4 py-3.5 text-start text-[11.5px] font-extrabold uppercase tracking-[0.12em]";
+  const th = "px-4 py-3.5 text-start text-[12.5px] font-bold";
   const td = "px-4 py-4 text-[14px] align-middle";
 
   return (

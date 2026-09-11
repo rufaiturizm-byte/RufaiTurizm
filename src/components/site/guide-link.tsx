@@ -54,7 +54,7 @@ export async function GuideLink({
       >
         <div className="flex flex-col justify-center p-7 sm:p-9">
           <span
-            className="inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.14em]"
+            className="inline-flex items-center gap-2 text-[12.5px] font-bold"
             style={{ color: "var(--brand-gold-deep)" }}
           >
             <BookOpen className="size-3.5" aria-hidden="true" />

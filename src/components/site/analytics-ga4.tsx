@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import { siteConfig } from "@/config/site";
 
 declare global {
@@ -32,7 +32,38 @@ export function Ga4() {
   if (process.env.NODE_ENV !== "production") return null;
   return (
     <>
-      <GoogleAnalytics gaId={siteConfig.ga4Id} />
+      {/*
+        `@next/third-parties`'in GoogleAnalytics bileşeni KULLANILMIYOR.
+
+        O bileşen script'i `afterInteractive` ile yüklüyor, yani hidrasyon
+        sırasında. Google'ın kendi PageSpeed testi (mobil, kısıtlı bağlantı)
+        bunun bedelini gösterdi: gtag.js 173 KB ve sayfanın EN BÜYÜK
+        script'i — uygulamanın kendi en büyük parçası 72 KB. Toplam
+        aktarımın %15'i ve %40'ı hiç kullanılmıyor.
+
+        `lazyOnload` script'i `load` olayından sonraya alıyor: sayfa
+        kendi JS'iyle yarışmayı bitirdikten sonra iniyor.
+
+        TAKAS AÇIK OLSUN: ölçüm birkaç yüz milisaniye geç başlıyor. Sayfayı
+        açıp hemen kapatan çok hızlı bir ziyaretçi sayılmayabilir, yani
+        hemen çıkma oranı bir miktar eksik ölçülür. Buna karşılık bu sitede
+        asıl ölçülen şey WhatsApp tıklaması ve o zaten etkileşimden SONRA
+        oluyor — script o noktada çoktan yüklü.
+
+        İçerik, paketin ürettiğinin aynısı (kaynağı okundu): dataLayer
+        kurulumu + config, sonra gtag.js.
+      */}
+      <Script id="ga4-init" strategy="lazyOnload">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${siteConfig.ga4Id}');`}
+      </Script>
+      <Script
+        id="ga4-src"
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.ga4Id}`}
+      />
       <SayfaGoruntuleme />
     </>
   );

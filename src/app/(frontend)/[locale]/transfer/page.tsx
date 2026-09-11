@@ -142,7 +142,8 @@ export default async function TransferPage({
         </p>
       </section>
 
-      <RouteCards locale={locale} />
+      {/* Sekiz kart + kalanlar metin bağlantısı olarak; gerekçe route-cards.tsx içinde. */}
+      <RouteCards locale={locale} limit={8} />
 
       <PromoBanner placement="transfer" locale={locale} />
 

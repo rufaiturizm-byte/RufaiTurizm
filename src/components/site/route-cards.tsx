@@ -125,6 +125,45 @@ export async function RouteCards({
           );
         })}
       </div>
+
+      {/*
+        KARTA SIĞMAYANLAR METİN BAĞLANTISI OLARAK.
+
+        Transfer sayfasında on yedi güzergâhın hepsi kart olarak
+        basılıyordu ve ölçüldü: mobilde 5,8 ekran, yani sayfanın beşte
+        biri tek bir bölüm. Aynı sayfada 58 çipli "hizmet verdiğimiz
+        noktalar" bölümü de var; ikisi birlikte sayfanın %34'ü ve
+        ziyaretçi için ikisi de "nerelere gidiyorsunuz" demek.
+
+        Kartları kısaltmanın bariz yolu `limit` vermekti ama tek başına
+        yanlış olurdu: kalan güzergâh SAYFALARI iç bağlantısını
+        kaybederdi. Altbilgideki nota bakın — hizmet detay sayfaları tam
+        bu sebeple zayıf bağlanmıştı ve düzeltilmişti; aynı hatayı
+        güzergâhlarda tekrarlamanın anlamı yok.
+
+        Bu yüzden kalanlar siliniyor değil, UCUZLAŞIYOR: kart yerine tek
+        satırlık bağlantı. Kart ~340 piksel, bağlantı ~40. On yedi rota
+        da tıklanabilir kalıyor, arama motoru da hepsini görüyor.
+      */}
+      {limit && transferRoutes.length > limit ? (
+        <div className="mt-8">
+          <h3 className="text-[13px] font-bold text-muted-foreground">
+            {t("otherRoutes")}
+          </h3>
+          <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+            {transferRoutes.slice(limit).map((route) => (
+              <li key={route.slug}>
+                <Link
+                  href={{ pathname: "/transfer/[route]" as const, params: { route: route.slug } }}
+                  className="inline-block py-1.5 text-[13.5px] transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                >
+                  {routeTitle(route.from[lang] ?? route.from.tr, route.to[lang] ?? route.to.tr, locale)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </section>
   );
 }

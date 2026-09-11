@@ -95,7 +95,7 @@ export const siteConfig = {
    * `maps.app.goo.gl/...` biçimi daha kalıcıdır; eline geçince burayı
    * değiştirmek yeter, başka hiçbir yere dokunmak gerekmez.
    */
-  googleReviewsUrl: "https://share.google/EdbOymjePUlTZVxoS",
+  googleReviewsUrl: "https://maps.app.goo.gl/StUizJ2R2H4KrfPs6",
 } as const;
 
 /**

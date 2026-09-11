@@ -86,17 +86,26 @@ export async function TrustStats() {
     {
       icon: Star,
       prefix: "",
-      value: 4.9,
+      value: 4.6,
       decimals: 1,
       suffix: " / 5",
       label: tStats("ratingLabel"),
       desc: tStats("ratingDesc"),
       /*
-       * Puan Google profiline bağlanıyor. Doğrulanamayan bir 4,9 Körfez
-       * pazarında ters teper: müşteri kontrol eder, bulamazsa yalnız
+       * Puan Google profiline bağlanıyor. Doğrulanamayan bir puan Körfez
+       * pazarında ters teper: müşteri kontrol eder, tutmazsa yalnız
        * puana değil sayfadaki bütün rakamlara şüpheyle bakar. Tıklanabilir
-       * olduğu anda aynı rakam sayfanın en güçlü güven sinyaline dönüşür.
-       * Adres girilmemişse bağlantı hiç kurulmaz, kart düz kalır.
+       * ve DOĞRU olduğu anda aynı rakam sayfanın en güçlü güven sinyaline
+       * dönüşür. Adres girilmemişse bağlantı hiç kurulmaz, kart düz kalır.
+       *
+       * Burada 4,9 yazıyordu; profil 2026-09-11'de açılıp okundu ve
+       * gerçek puan 4,6 çıktı. Kart zaten profile bağlantı verdiği için
+       * bu, ziyaretçinin bir tıkla yakalayabileceği bir tutarsızlıktı —
+       * yukarıdaki yorumun uyardığı durumun ta kendisi.
+       *
+       * DİKKAT: bu sayı ELLE tutuluyor ve yeni yorum geldikçe kayar.
+       * Profil ara ara açılıp karşılaştırılmalı; kaydığında burası
+       * güncellenmezse aynı hata sessizce geri gelir.
        */
       href: siteConfig.googleReviewsUrl || undefined,
     },

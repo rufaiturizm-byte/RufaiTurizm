@@ -108,9 +108,24 @@ export function TravelAgencySchema({
       opens: "00:00",
       closes: "23:59",
     },
+    /*
+     * Tam adres.
+     *
+     * Buraya kadar yalnız şehir ve ülke vardı ("İstanbul, TR") — yani
+     * arama motoruna "İstanbul'dayız" demekten öteye gitmiyordu. Yerel
+     * aramada ve Google'ın işletme eşleştirmesinde ağırlığı olan alanlar
+     * sokak ve posta kodu; ikisi de artık `siteConfig`'te.
+     *
+     * `addressRegion` İstanbul çünkü şehir aynı zamanda il. `streetAddress`
+     * yalnız DOLUYSA basılıyor: boş bir alan göndermek, eksik bırakmaktan
+     * daha kötü — şema doğrulayıcıları onu hatalı kayıt sayıyor.
+     */
     address: {
       "@type": "PostalAddress",
-      addressLocality: siteConfig.address.city,
+      ...(siteConfig.address.street ? { streetAddress: siteConfig.address.street } : {}),
+      ...(siteConfig.address.postalCode ? { postalCode: siteConfig.address.postalCode } : {}),
+      ...(siteConfig.address.district ? { addressLocality: siteConfig.address.district } : {}),
+      addressRegion: siteConfig.address.city,
       addressCountry: siteConfig.address.country,
     },
     knowsLanguage: ["ar", "tr", "en"],

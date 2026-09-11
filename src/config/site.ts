@@ -11,8 +11,27 @@ export const siteConfig = {
 
   email: "info@rufaiturizm.com",
 
+  /*
+   * Adres — kullanıcı tarafından verildi, TÜRSAB kaydıyla uyumlu.
+   *
+   * `street` bir süre boştu, yani sitede sokak adresi hiç yazmıyordu ve
+   * şemadaki `PostalAddress` yalnız şehir + ülke taşıyordu. Yerel aramada
+   * ve Google'ın işletme eşleştirmesinde ağırlığı olan alan tam adres.
+   *
+   * T.C. kaydında ilçe "EYÜP" olarak geçiyor; burada EYÜPSULTAN yazıyor
+   * çünkü ilçenin güncel resmî adı o ve posta/harita sistemleri bu adı
+   * kullanıyor. Posta kodu da kayıtta yok, burada var.
+   *
+   * TELEFON bilerek yer tutucu: TÜRSAB kaydındaki +90 212 562 96 20
+   * numarasının hâlâ kullanımda olup olmadığı doğrulanmadı ve
+   * `hasRealPhone` false olduğu sürece arama düğmesi hiç basılmıyor.
+   * Ölü bir numara yayınlamak, olmayan bir belgeyi göstermekle aynı
+   * cinsten bir hata.
+   */
   address: {
-    street: "",
+    street: "Karadolap, Konfor Sk. No:1 D:7A",
+    postalCode: "34220",
+    district: "Eyüpsultan",
     city: "İstanbul",
     country: "TR",
   },
@@ -95,3 +114,28 @@ export const hasRealPhone = !siteConfig.phoneHref.startsWith("+90500000");
 export const hasGoogleProfileUrl = /(?:maps\.app\.goo\.gl|google\.[a-z.]+\/maps\/place)/.test(
   siteConfig.googleReviewsUrl,
 );
+
+/**
+ * Görüntülenecek tam adres, tek satır.
+ *
+ * Sitede adres iki yerde yazıyordu (iletişim kartı ve altbilgi) ve her
+ * ikisi de yalnız `address.city` basıyordu — yani ziyaretçi "İstanbul"
+ * görüyordu, adres değil. Bir seyahat acentesinde fiziksel adres, TÜRSAB
+ * belgesinden sonraki en somut güven işareti: doğrulanabilir bir yer.
+ *
+ * Tek yerden üretiliyor çünkü iki çağrı yerinde elle yazmak, ilk
+ * değişiklikte birinin unutulması demek — sitede bu hata daha önce
+ * başka alanlarda yaşandı.
+ *
+ * Alanlar boş olabilir (sokak ve posta kodu bir süre boştu), o yüzden
+ * boş parçalar eleniyor: ", , İstanbul" gibi bir çıktı olmasın.
+ */
+export const addressFull = [
+  siteConfig.address.street,
+  [siteConfig.address.postalCode, siteConfig.address.district]
+    .filter(Boolean)
+    .join(" "),
+  siteConfig.address.city,
+]
+  .filter(Boolean)
+  .join(", ");

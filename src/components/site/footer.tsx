@@ -4,7 +4,7 @@ import { Clock, Mail, MapPin, Phone, Sparkle } from "lucide-react";
 import { InstagramIcon, WhatsAppIcon } from "./icons";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
-import { siteConfig, hasRealPhone } from "@/config/site";
+import { siteConfig, hasRealPhone, addressFull } from "@/config/site";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { tours } from "@/data/tours";
 import { services } from "@/data/services";
@@ -218,7 +218,7 @@ export async function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="size-4 shrink-0" style={{ color: "var(--brand-gold)" }} aria-hidden="true" />
-                {siteConfig.address.city}
+                {addressFull}
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="size-4 shrink-0" style={{ color: "var(--brand-gold)" }} aria-hidden="true" />

@@ -26,7 +26,7 @@ import { WhatsAppIcon } from "@/components/site/icons";
 import { TrustBoxes } from "@/components/site/trust-stats";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { FaqPreview } from "@/components/site/faq-preview";
-import { siteConfig, hasRealPhone } from "@/config/site";
+import { siteConfig, hasRealPhone, addressFull } from "@/config/site";
 
 export async function generateMetadata({
   params,
@@ -100,7 +100,7 @@ export default async function ContactPage({
      * nav.contact orada "تواصل معنا" (bize ulaşın), yani kart
      * "Bize ulaşın: İstanbul" diyordu.
      */
-    { icon: MapPin, title: t("locationTitle"), value: siteConfig.address.city },
+    { icon: MapPin, title: t("locationTitle"), value: addressFull },
   ];
 
   const topics = [

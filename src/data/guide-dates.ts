@@ -50,4 +50,5 @@ export const guidePublishedDates: Record<string, string> = {
   "turkiyede-tatil-butcesi-nasil-kurulur": "2026-09-09",
   "istanbulda-gezilecek-yerler": "2026-09-10",
   "istanbulda-anadolu-yakasi": "2026-09-10",
+  "turkiye-vizesi-ve-giris-kosullari": "2026-09-12",
 };

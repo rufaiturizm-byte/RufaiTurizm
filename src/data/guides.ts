@@ -4018,6 +4018,231 @@ export const guides: Guide[] = [
       },
     ],
   },
+  /*
+   * TÜRKİYE VİZESİ — sitenin en büyük içerik boşluğuydu.
+   *
+   * Google Ads Keyword Planner verisi (Arapça; SA, IQ, KW, AE, QA, JO;
+   * Eylül 2025 – Ağustos 2026) vize kümesini ayda 1.260 arama ve %68 LOW
+   * rekabetle veri setindeki EN SAVUNMASIZ yer olarak gösterdi. Yirmi
+   * sekiz rehberin hiçbirinde "vize" kelimesi geçmiyordu:
+   *
+   *   فيزا تركيا للسعوديين             480/ay
+   *   هل تركيا تحتاج فيزا للسعوديين     390/ay
+   *   تأشيرة تركيا للسعوديين            390/ay
+   *
+   * Bu terimlerde bugün sıralanan siteler vize hizmeti SATAN aracılar ve
+   * doğru cevabı vermeleri işlerine gelmiyor — çünkü doğru cevap "vizeye
+   * ihtiyacınız yok". Dürüst bir sayfanın burada gerçek bir üstünlüğü var.
+   *
+   * BÜTÜN SAYILAR RESMÎ KAYNAKTAN: T.C. Dışişleri Bakanlığı'nın "Visa
+   * Information For Foreigners" sayfası, 12 Eylül 2026'da okundu. Metinde
+   * kaynak ve "yolculuktan önce doğrulayın" uyarısı açıkça duruyor, çünkü
+   * vize kuralları değişir ve yanlış bir vize bilgisi birinin uçağa
+   * alınmamasına yol açar. Burada tahmin yok; doğrulayamadığım tek konu
+   * (Körfez'de oturan ama vatandaş olmayanların durumu) soru-cevapta
+   * "vatandaşlığınıza bakılır" diye bırakıldı, uydurulmadı.
+   *
+   * Görsel `istanbul-gece.jpg`: sitede hiçbir yerde kullanılmıyordu.
+   * Havalimanı karesi konuya daha yakındı ama o zaten ulaşım rehberinde
+   * basılı; aynı kareyi iki rehbere koymak sitenin kendi kuralına aykırı.
+   */
+  {
+    slug: "turkiye-vizesi-ve-giris-kosullari",
+    topic: "planning",
+    image: "/images/places/istanbul-gece.jpg",
+    title: {
+      tr: "Türkiye vizesi: Körfez ülkeleri için giriş kuralları",
+      ar: "فيزا تركيا لدول الخليج: من يحتاجها ومن لا يحتاجها",
+      en: "Türkiye visa rules for Gulf travellers",
+    },
+    excerpt: {
+      tr: "Suudi Arabistan, BAE, Kuveyt, Katar, Ürdün, Umman ve Bahreyn için 90 gün vizesiz. Irak farklı — ve pasaport süresinin bir sayısı var.",
+      ar: "السعودية والإمارات والكويت وقطر والأردن وعُمان والبحرين: تسعون يوماً بلا فيزا. والعراق حالة مختلفة، ولصلاحية الجواز رقم يجب أن تعرفه.",
+      en: "Visa-free for 90 days from Saudi Arabia, the UAE, Kuwait, Qatar, Jordan, Oman and Bahrain. Iraq differs — and passport validity has a number.",
+    },
+    seo: {
+      title: {
+        tr: "Türkiye Vizesi: Körfez Ülkeleri İçin Giriş Kuralları",
+        ar: "فيزا تركيا للسعوديين ودول الخليج: هل تحتاجها فعلاً؟",
+        en: "Do Gulf Citizens Need a Visa for Türkiye?",
+      },
+      description: {
+        tr: "Suudi, Emirati, Kuveytli, Katarlı, Ürdünlü, Umanlı ve Bahreynli ziyaretçiler için 90 gün vizesiz giriş. Irak'ta yaş kuralı, pasaportta 150 gün şartı.",
+        ar: "هل تركيا تحتاج فيزا للسعوديين؟ لا — تسعون يوماً خلال كل مئة وثمانين. والإمارات والكويت وقطر والأردن وعُمان والبحرين كذلك. والعراق استثناء بحسب السنّ.",
+        en: "Saudi, Emirati, Kuwaiti, Qatari, Jordanian, Omani and Bahraini visitors enter visa-free for 90 days. Iraq has an age rule; passports need 150 days.",
+      },
+    },
+    facts: [
+      {
+        label: { tr: "Suudi Arabistan", ar: "السعودية", en: "Saudi Arabia" },
+        value: {
+          tr: "Vizesiz — her 180 günde 90 gün",
+          ar: "معفاة من الفيزا — تسعون يوماً خلال كل مئة وثمانين",
+          en: "Visa-free — 90 days in any 180",
+        },
+      },
+      {
+        label: {
+          tr: "BAE, Kuveyt, Umman, Bahreyn",
+          ar: "الإمارات والكويت وعُمان والبحرين",
+          en: "UAE, Kuwait, Oman, Bahrain",
+        },
+        value: {
+          tr: "Vizesiz — aynı 90 / 180 kuralı",
+          ar: "معفاة من الفيزا — القاعدة نفسها: تسعون خلال مئة وثمانين",
+          en: "Visa-free — the same 90 / 180 rule",
+        },
+      },
+      {
+        label: { tr: "Katar ve Ürdün", ar: "قطر والأردن", en: "Qatar and Jordan" },
+        value: {
+          tr: "90 gün — ilk girişten itibaren altı ay içinde",
+          ar: "تسعون يوماً خلال ستة أشهر تبدأ من أوّل دخول",
+          en: "90 days within six months, counted from first entry",
+        },
+      },
+      {
+        label: { tr: "Irak", ar: "العراق", en: "Iraq" },
+        value: {
+          tr: "15–50 yaş arası vize alır; bu yaşların dışı muaf",
+          ar: "من 15 إلى 50 سنة يحتاج فيزا؛ خارج هذا السنّ معفى",
+          en: "Ages 15–50 need a visa; outside that range exempt",
+        },
+      },
+      {
+        label: { tr: "Pasaport süresi", ar: "صلاحية الجواز", en: "Passport validity" },
+        value: {
+          tr: "En az 150 gün — 90 gün kalış + 60 gün",
+          ar: "مئة وخمسون يوماً على الأقلّ — تسعون للإقامة وستون فوقها",
+          en: "At least 150 days — 90 of stay plus 60",
+        },
+      },
+    ],
+    sections: [
+      {
+        heading: {
+          tr: "Kısa cevap: çoğunuz vize almıyorsunuz",
+          ar: "الجواب المختصر: أكثركم لا يحتاج فيزا",
+          en: "The short answer: most of you need no visa",
+        },
+        body: {
+          tr: "Suudi Arabistan, Birleşik Arap Emirlikleri, Kuveyt, Umman ve Bahreyn vatandaşları Türkiye'ye vizesiz giriyor ve her 180 günlük dönemde 90 güne kadar kalabiliyor. Katar ve Ürdün vatandaşları için süre yine 90 gün, ama sayma biçimi biraz farklı: ilk girişten başlayan altı aylık dönem içinde hesaplanıyor.\n\nBu, elektronik vize almanız gerekmediği anlamına geliyor. Havalimanında ödenecek bir ücret de yok. Pasaportunuzla geliyorsunuz.\n\nİnternette vize başvurusu vaat eden ve ücret isteyen çok sayıda site var. Bu ülkelerin vatandaşları için o başvurunun karşılığı yok — satılan şey, zaten sahip olduğunuz bir hak.",
+          ar: "مواطنو السعودية والإمارات والكويت وعُمان والبحرين يدخلون تركيا بلا فيزا، ويمكنهم البقاء حتى تسعين يوماً خلال كل فترة مئة وثمانين يوماً. وقطر والأردن المدّة نفسها تسعون يوماً، لكن طريقة الحساب تختلف قليلاً: تُحسب داخل ستة أشهر تبدأ من أوّل دخول.\n\nمعنى هذا أنّك لا تحتاج إلى تأشيرة إلكترونية، ولا توجد رسوم تُدفع في المطار. تأتي بجواز سفرك.\n\nعلى الإنترنت مواقع كثيرة تَعِد بتقديم طلب فيزا وتطلب رسوماً. لمواطني هذه الدول لا مقابل لذلك الطلب — ما يُباع لك حقّ تملكه أصلاً.",
+          en: "Citizens of Saudi Arabia, the United Arab Emirates, Kuwait, Oman and Bahrain enter Türkiye without a visa and may stay up to 90 days in any 180-day period. For Qatar and Jordan the length is the same 90 days, but the counting differs slightly: it runs inside a six-month window that starts at your first entry.\n\nThat means no e-Visa application and no fee at the airport. You arrive with your passport.\n\nPlenty of websites promise a visa application and ask for money. For citizens of these countries that application buys nothing — what is being sold is a right you already hold.",
+        },
+      },
+      {
+        heading: {
+          tr: "90 gün nasıl sayılır — asıl karıştıran yer",
+          ar: "كيف تُحسب التسعون يوماً — وهنا يقع اللبس",
+          en: "How the 90 days are counted — where people slip",
+        },
+        body: {
+          tr: "Kural \"her girişte 90 gün\" değil. Geriye dönük 180 günlük pencerede toplam 90 gün demek.\n\nÖrnek: Mart'ta 40 gün kaldınız, Mayıs'ta 30 gün daha kaldınız. Elinizde 20 gün kaldı — yeni bir 90 gün değil. Bu hak ancak ilk günler 180 günlük pencerenin dışına düştükçe geri geliyor.\n\nKatar ve Ürdün'de pencere kayan 180 gün değil, ilk girişten başlayan altı ay. Sonuç çoğu zaman benzer ama sayım noktası farklı.\n\nÜlkeden çıkıp aynı gün dönmek sayacı sıfırlamıyor. Türkiye'de aylarca kalmayı planlıyorsanız, bakmanız gereken şey vize değil oturma izni.",
+          ar: "القاعدة ليست \"تسعون يوماً في كلّ دخول\". بل مجموع تسعين يوماً داخل نافذة مئة وثمانين يوماً تُحسب رجوعاً إلى الوراء.\n\nمثال: أقمت أربعين يوماً في مارس، ثمّ ثلاثين يوماً في مايو. بقي لك عشرون يوماً — لا تسعون جديدة. ولا يعود الرصيد إلا كلّما خرجت الأيام الأولى من نافذة المئة والثمانين.\n\nوفي قطر والأردن النافذة ليست مئة وثمانين يوماً متحرّكة، بل ستة أشهر تبدأ من أوّل دخول. والنتيجة متقاربة غالباً، لكن نقطة الحساب مختلفة.\n\nالخروج من البلد والعودة في اليوم نفسه لا يُصفّر العدّاد. وإن كنت تنوي البقاء شهوراً في تركيا فما تبحث عنه ليس الفيزا بل تصريح الإقامة.",
+          en: "The rule is not \"90 days on each entry\". It is 90 days in total inside a 180-day window counted backwards.\n\nAn example: you stayed 40 days in March, then 30 more in May. You have 20 days left — not a fresh 90. The allowance only returns as those early days fall out of the 180-day window.\n\nFor Qatar and Jordan the window is not a rolling 180 days but six months starting at your first entry. The result is often similar, but the counting point differs.\n\nLeaving the country and returning the same day does not reset the counter. If you plan to stay for months, what you need is not a visa but a residence permit.",
+        },
+      },
+      {
+        heading: {
+          tr: "Irak vatandaşları: kural yaşa göre değişiyor",
+          ar: "المواطنون العراقيون: القاعدة تتغيّر بحسب السنّ",
+          en: "Iraqi citizens: the rule turns on age",
+        },
+        body: {
+          tr: "Irak, yukarıdaki listenin dışında ve ayrımı yaş belirliyor. Umuma mahsus pasaport taşıyan 15–50 yaş arası Irak vatandaşları vize alıyor. 15 yaşından küçükler ve 50 yaşından büyükler muaf.\n\nBu, aynı ailenin fertlerinin farklı işlem görmesi demek: dede ve torun muafken, aradaki nesil başvuruyor. Aile olarak geliyorsanız bunu yolculuktan haftalar önce planlayın — havalimanında çözülecek bir şey değil.\n\nResmî pasaport taşıyan Irak vatandaşları için durum farklı: onlar 90 / 180 kuralıyla muaf.",
+          ar: "العراق خارج القائمة أعلاه، والفارق يحدّده السنّ. حاملو الجواز العادي من العراقيين بين 15 و50 سنة يحتاجون فيزا. ومن هم دون الخامسة عشرة أو فوق الخمسين معفَون.\n\nومعنى ذلك أنّ أفراد الأسرة الواحدة قد يُعاملون معاملتين: الجدّ والحفيد معفيان، والجيل الذي بينهما يقدّم طلباً. فإن كنتم قادمين كعائلة فرتّبوا هذا قبل السفر بأسابيع — ليس أمراً يُحلّ في المطار.\n\nأمّا حاملو الجواز الرسمي من العراقيين فوضعهم مختلف: معفون وفق قاعدة التسعين والمئة والثمانين.",
+          en: "Iraq sits outside the list above, and age draws the line. Iraqi ordinary passport holders aged 15 to 50 need a visa. Those under 15 or over 50 are exempt.\n\nThat means one family can be treated two ways: grandfather and grandchild exempt, the generation between them applying. If you are travelling as a family, arrange this weeks ahead — it is not something the airport can fix.\n\nIraqi official passport holders are in a different position: they are exempt under the 90 / 180 rule.",
+        },
+      },
+      {
+        heading: {
+          tr: "Pasaportun 150 günü: uçağa alınmama sebebi",
+          ar: "مئة وخمسون يوماً في الجواز: سبب المنع من الصعود",
+          en: "The 150 days in your passport: why boarding is refused",
+        },
+        body: {
+          tr: "Vizeniz olmasa da pasaportunuzun bir şartı var ve en çok burada sorun çıkıyor. 2015'ten bu yana Türkiye, pasaportun kalış süresinin en az 60 gün ötesine kadar geçerli olmasını istiyor.\n\n90 günlük vize muafiyetiyle geliyorsanız hesap şu: 90 + 60 = 150 gün. Pasaportunuz geliş tarihinizden itibaren en az 150 gün geçerli olmalı.\n\nBu, insanların gözünden en çok kaçan kural. Pasaportu dört ay sonra bitecek biri kendini geçerli sanıyor — oysa 120 gün, 150'nin altında. Bu genellikle havalimanında, check-in sırasında anlaşılıyor ve o noktada yapılabilecek bir şey kalmıyor.\n\nBakanlık ayrıca daha rahat bir ölçü öneriyor: pasaportunuzun geliş tarihinden itibaren en az altı ay geçerli olması. Bilet almadan önce pasaportunuzun bitiş tarihine bakın.",
+          ar: "حتى وإن لم تحتج فيزا، فلجواز سفرك شرط، وهنا تقع أكثر المشكلات. منذ عام 2015 تشترط تركيا أن يبقى الجواز صالحاً ستّين يوماً على الأقلّ بعد انتهاء مدّة الإقامة.\n\nفإن كنت قادماً بإعفاء تسعين يوماً فالحساب: 90 + 60 = 150 يوماً. أي أنّ جوازك يجب أن يكون صالحاً مئة وخمسين يوماً على الأقلّ من تاريخ وصولك.\n\nهذه أكثر قاعدة تفوت الناس. من ينتهي جوازه بعد أربعة أشهر يظنّ نفسه بخير — ومئة وعشرون يوماً أقلّ من مئة وخمسين. ويُكتشف هذا عادةً في المطار عند تسجيل الوصول، وحينها لم يعد في اليد شيء.\n\nوتنصح الوزارة بقياس أوسع: أن يكون الجواز صالحاً ستّة أشهر على الأقلّ من تاريخ الوصول. انظر في تاريخ انتهاء جوازك قبل أن تشتري التذكرة.",
+          en: "Even with no visa, your passport carries a condition, and this is where most trouble starts. Since 2015 Türkiye has required a passport to stay valid for at least 60 days beyond the duration of stay.\n\nArriving on a 90-day exemption, the arithmetic is: 90 + 60 = 150 days. Your passport must be valid for at least 150 days from your arrival date.\n\nThis is the rule people miss most. Someone whose passport expires in four months assumes they are fine — but 120 days is under 150. It usually surfaces at the airport during check-in, and by then nothing can be done.\n\nThe ministry also advises a looser measure: keep the passport valid at least six months from arrival. Check your expiry date before you buy the ticket.",
+        },
+      },
+      {
+        heading: {
+          tr: "Bu sayfayı yolculuktan önce doğrulayın",
+          ar: "تحقّق من هذه الصفحة قبل السفر",
+          en: "Verify this page before you travel",
+        },
+        body: {
+          tr: "Buradaki bilgilerin tamamı T.C. Dışişleri Bakanlığı'nın yabancılar için vize sayfasından alındı ve 12 Eylül 2026'da okundu.\n\nVize kuralları devletler arası anlaşmalarla değişiyor ve bazen kısa sürede. Biletinizi almadan önce kendi ülkenizin satırını Bakanlık sayfasından bir kez daha kontrol etmenizi öneriyoruz — bu sayfa bir seyahat acentesinin okumasıdır, resmî belge değil.\n\nDurumunuz listeye tam oturmuyorsa (ikinci vatandaşlık, seyahat belgesi, mülteci pasaportu gibi) yazın; bildiğimizi söyler, bilmediğimizi söylemeyiz.",
+          ar: "كلّ ما في هذه الصفحة مأخوذ من صفحة التأشيرات للأجانب في وزارة الخارجية التركية، وقُرئت بتاريخ 12 سبتمبر 2026.\n\nقواعد التأشيرات تتغيّر باتفاقات بين الدول، وأحياناً في وقت قصير. ننصحك قبل شراء التذكرة بمراجعة سطر بلدك مرّة أخرى في صفحة الوزارة — فهذه الصفحة قراءة وكالة سفر، وليست وثيقة رسمية.\n\nوإن كانت حالتك لا تنطبق تماماً على ما سبق (جنسية ثانية، أو وثيقة سفر، أو جواز لاجئ) فاكتب لنا؛ نقول ما نعرفه، ولا نقول ما لا نعرفه.",
+          en: "Everything on this page comes from the Turkish Ministry of Foreign Affairs' visa page for foreigners, read on 12 September 2026.\n\nVisa rules change through agreements between states, sometimes quickly. Before buying your ticket, check your own country's line on the ministry's page once more — this page is a travel agency's reading, not an official document.\n\nIf your situation does not fit neatly (a second nationality, a travel document, a refugee passport), write to us; we will tell you what we know and say so when we do not know.",
+        },
+      },
+    ],
+    faq: [
+      {
+        question: {
+          tr: "Suudi vatandaşları Türkiye'ye vize almak zorunda mı?",
+          ar: "هل يحتاج السعوديون فيزا لدخول تركيا؟",
+          en: "Do Saudi citizens need a visa for Türkiye?",
+        },
+        answer: {
+          tr: "Hayır. Suudi Arabistan vatandaşları vizesiz giriyor ve her 180 günlük dönemde 90 güne kadar kalabiliyor. Elektronik vize başvurusu da havalimanında ödenecek bir ücret de yok.",
+          ar: "لا. مواطنو السعودية يدخلون بلا فيزا ويمكنهم البقاء حتى تسعين يوماً خلال كل مئة وثمانين يوماً. ولا طلب تأشيرة إلكترونية ولا رسوم في المطار.",
+          en: "No. Saudi citizens enter without a visa and may stay up to 90 days in any 180-day period. There is no e-Visa application and no fee at the airport.",
+        },
+      },
+      {
+        question: {
+          tr: "Körfez'de oturuyorum ama o ülkenin vatandaşı değilim. Ben de muaf mıyım?",
+          ar: "أنا مقيم في الخليج لكنّي لست من مواطنيه. هل أنا معفى أيضاً؟",
+          en: "I live in the Gulf but hold another nationality. Am I exempt too?",
+        },
+        answer: {
+          tr: "Muafiyet oturma iznine değil, pasaportunuzun vatandaşlığına bakıyor. Yani Riyad'da yaşıyor olmanız değil, hangi ülkenin pasaportunu taşıdığınız belirleyici. Kendi vatandaşlığınızın satırını Dışişleri Bakanlığı sayfasından kontrol edin; emin değilseniz bize yazın.",
+          ar: "الإعفاء يقوم على جنسية جوازك لا على إقامتك. أي أنّ المهمّ ليس أنّك تعيش في الرياض، بل أيّ جواز تحمل. راجع سطر جنسيتك في صفحة وزارة الخارجية، وإن لم تكن متأكّداً فاكتب لنا.",
+          en: "The exemption follows the nationality in your passport, not your residence permit. What matters is which passport you hold, not that you live in Riyadh. Check your own nationality's line on the ministry page; if you are unsure, write to us.",
+        },
+      },
+      {
+        question: {
+          tr: "90 günü doldurdum. Çıkıp hemen dönersem yeni 90 gün başlar mı?",
+          ar: "أكملت التسعين يوماً. لو خرجت وعدت فوراً، هل تبدأ تسعون جديدة؟",
+          en: "I used my 90 days. If I leave and come straight back, do 90 more start?",
+        },
+        answer: {
+          tr: "Hayır. Sayaç geriye dönük 180 günlük pencerede çalışıyor, girişle sıfırlanmıyor. Hakkınız ancak eski günler o pencerenin dışına düştükçe geri geliyor. Daha uzun kalmanız gerekiyorsa konu vize değil, oturma izni.",
+          ar: "لا. العدّاد يعمل داخل نافذة مئة وثمانين يوماً إلى الوراء، ولا يُصفَّر بالدخول. ولا يعود رصيدك إلا كلّما خرجت الأيام القديمة من تلك النافذة. وإن احتجت بقاءً أطول فالمسألة ليست فيزا بل تصريح إقامة.",
+          en: "No. The counter runs inside a backward-looking 180-day window and does not reset on entry. Your allowance only returns as older days drop out of that window. If you need to stay longer, the matter is a residence permit, not a visa.",
+        },
+      },
+      {
+        question: {
+          tr: "Pasaportumun bitmesine dört ay var. Yeterli mi?",
+          ar: "بقي على انتهاء جوازي أربعة أشهر. هل يكفي؟",
+          en: "My passport expires in four months. Is that enough?",
+        },
+        answer: {
+          tr: "Büyük ihtimalle hayır. 90 günlük muafiyetle gelen birinin pasaportu en az 150 gün geçerli olmalı; dört ay yaklaşık 120 gün, yani eksik. Bu genellikle check-in'de anlaşılıyor ve o noktada çözülemiyor. Bilet almadan önce pasaportu yenileyin.",
+          ar: "على الأرجح لا. من يدخل بإعفاء تسعين يوماً يجب أن يكون جوازه صالحاً مئة وخمسين يوماً على الأقلّ؛ وأربعة أشهر نحو مئة وعشرين يوماً، أي أقلّ من المطلوب. ويُكتشف هذا عادةً عند تسجيل الوصول ولا يُحلّ هناك. جدّد جوازك قبل شراء التذكرة.",
+          en: "Most likely not. Someone entering on a 90-day exemption needs a passport valid for at least 150 days; four months is about 120 days, which falls short. This usually surfaces at check-in and cannot be fixed there. Renew the passport before buying the ticket.",
+        },
+      },
+      {
+        question: {
+          tr: "Ailemizde bazıları Iraklı. Hepimiz aynı işlemi mi görürüz?",
+          ar: "بعض أفراد عائلتنا عراقيون. هل نُعامَل جميعاً بالمعاملة نفسها؟",
+          en: "Some of our family are Iraqi. Are we all treated the same?",
+        },
+        answer: {
+          tr: "Hayır. Umuma mahsus pasaport taşıyan 15–50 yaş arası Irak vatandaşları vize alıyor; 15 altı ve 50 üstü muaf. Yani aynı ailede bazıları başvurur, bazıları başvurmaz. Bunu yolculuktan haftalar önce planlayın.",
+          ar: "لا. حاملو الجواز العادي من العراقيين بين 15 و50 سنة يحتاجون فيزا؛ ومن دون الخامسة عشرة أو فوق الخمسين معفَون. أي أنّ بعض أفراد العائلة يقدّمون طلباً وبعضهم لا. رتّبوا هذا قبل السفر بأسابيع.",
+          en: "No. Iraqi ordinary passport holders aged 15 to 50 need a visa; those under 15 or over 50 are exempt. So within one family some apply and some do not. Arrange this weeks before you travel.",
+        },
+      },
+    ],
+  },
 ];
 
 /**

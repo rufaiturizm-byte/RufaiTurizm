@@ -37,7 +37,7 @@ export const siteConfig = {
   },
 
   social: {
-    instagram: "",
+    instagram: "https://www.instagram.com/rufaiistanbulturizm/",
     facebook: "",
     tiktok: "",
   },
@@ -133,6 +133,22 @@ export const hasRealPhone = !siteConfig.phoneHref.startsWith("+90500000");
 export const hasGoogleProfileUrl = /(?:maps\.app\.goo\.gl|google\.[a-z.]+\/maps\/place)/.test(
   siteConfig.googleReviewsUrl,
 );
+
+/**
+ * Yapısal veride `sameAs` olarak yayınlanacak kimlik adresleri.
+ *
+ * NEDEN ÖNEMLİ. `sameAs`, Google'a "bu site şu hesapların sahibiyle aynı
+ * varlıktır" der. Bu alan adının arama motorunda bir spam geçmişi var
+ * (eski hosting hacklenmişti) ve hâlâ alakasız bir terimle anılıyor;
+ * böyle bir durumda siteyi gerçek, doğrulanabilir bir işletmeye
+ * bağlamak en ucuz güven sinyali. Sıfır backlink'i olan bir sitede
+ * elimizdeki birkaç kimlik işaretinden biri.
+ *
+ * Boş alanlar eleniyor: var olmayan bir hesabı kimlik diye göstermek,
+ * bu dosyanın telefon ve Google profilinde uyguladığı kuralın aynısıyla
+ * çelişirdi — sahip olmadığımız hiçbir şeyi yayınlamıyoruz.
+ */
+export const socialProfiles = Object.values(siteConfig.social).filter(Boolean);
 
 /**
  * Görüntülenecek tam adres, tek satır.

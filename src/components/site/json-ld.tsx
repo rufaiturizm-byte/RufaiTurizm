@@ -6,7 +6,12 @@ import type {
   WebSite,
   WithContext,
 } from "schema-dts";
-import { siteConfig, hasRealPhone, hasGoogleProfileUrl } from "@/config/site";
+import {
+  siteConfig,
+  hasRealPhone,
+  hasGoogleProfileUrl,
+  socialProfiles,
+} from "@/config/site";
 
 /**
  * Yapısal veri. Rakip analizinden: en güçlü SEO'ya sahip rakip
@@ -28,6 +33,17 @@ export function TravelAgencySchema({
   name: string;
   description: string;
 }) {
+  /*
+   * Kimlik adresleri tek listede toplanıyor: doğrulanabilir sosyal
+   * hesaplar + (varsa) gerçek Google işletme profili. Boşsa alan hiç
+   * basılmıyor — boş bir `sameAs` dizisi Google'a hiçbir şey söylemez,
+   * yalnız gürültü ekler.
+   */
+  const sameAs = [
+    ...socialProfiles,
+    ...(hasGoogleProfileUrl ? [siteConfig.googleReviewsUrl] : []),
+  ];
+
   const data: WithContext<TravelAgency> = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
@@ -59,12 +75,18 @@ export function TravelAgencySchema({
      * ve yorumlar aramada bu siteyle birlikte anılır. Yerel aramadaki en
      * ucuz kazanç bu.
      *
-     * Ama yalnız GERÇEK profil adresiyle yayınlanıyor (bkz.
+     * Ama Google profili yalnız GERÇEK profil adresiyle yayınlanıyor (bkz.
      * `hasGoogleProfileUrl`): elimizdeki kısa bağlantı takip edildiğinde
      * profile değil bir arama sonucuna düşüyor ve arama sonucunu kimlik
      * diye işaretlemek yanlış bir iddia olur.
+     *
+     * Sosyal hesaplar da aynı listeye giriyor. Bu sitede bunun ağırlığı
+     * normalden fazla: ölçüldü, alan adının SIFIR backlink'i var ve
+     * arama motorunda eski bir spam çağrışımı taşıyor. Böyle bir durumda
+     * "bu site şu gerçek hesabın sahibiyle aynı varlıktır" demek,
+     * elimizdeki en ucuz doğrulanabilir güven sinyali.
      */
-    ...(hasGoogleProfileUrl ? { sameAs: [siteConfig.googleReviewsUrl] } : {}),
+    ...(sameAs.length ? { sameAs } : {}),
     /*
      * TÜRSAB belge numarası makine okunur biçimde.
      * Sayfada zaten yazılı ve doğrulama bağlantısı var; burada olması

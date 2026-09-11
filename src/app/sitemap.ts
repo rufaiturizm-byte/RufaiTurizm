@@ -4,6 +4,7 @@ import { locales, routing } from "@/i18n/routing";
 import { tours } from "@/data/tours";
 import { services } from "@/data/services";
 import { guides } from "@/data/guides";
+import { guidePublishedDates } from "@/data/guide-dates";
 import { transferRoutes } from "@/data/transfer-routes";
 import { packages } from "@/data/packages";
 import { destinations } from "@/data/destinations";
@@ -26,7 +27,7 @@ const base = siteConfig.url;
  * revizyonu) elle güncellenir. Tek bir sayfanın kendi tarihi varsa
  * aşağıdaki `updated` alanı bunu geçersiz kılar.
  */
-const CONTENT_REVISION = new Date("2026-09-08T00:00:00Z");
+const CONTENT_REVISION = new Date("2026-09-11T00:00:00Z");
 
 type Entry = {
   /** routing.ts'teki mantıksal yol; Arapça/Türkçe karşılıkları oradan çözülür. */
@@ -117,10 +118,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
       changeFrequency: "monthly" as const,
     })),
+    /*
+      Rehberler KENDİ tarihlerini taşıyor.
+
+      `updated` alanı baştan beri vardı ama hiçbir sayfa doldurmuyordu,
+      yani 78 adresin hepsi aynı `CONTENT_REVISION` tarihini paylaşıyordu
+      — tam da bu dosyanın yukarıdaki notunun uyardığı durum: "hepsi
+      aynıysa Google alanı tümden yok sayar".
+
+      Oysa gerçek tarihler elimizdeydi: `guide-dates.ts` her rehberin
+      yayın gününü git geçmişinden üretilmiş olarak tutuyor ve yirmi
+      sekiz rehber altı ayrı güne yayılıyor. Bunu bağlamak sitemap'e
+      uydurma değil, ÖLÇÜLMÜŞ bir çeşitlilik veriyor.
+
+      Slug eşleşmezse `updated` boş kalır ve CONTENT_REVISION devreye
+      girer — yanlış tarih basmaktansa ortak tarih iyidir.
+    */
     ...guides.map((guide) => ({
       href: { pathname: "/guides/[slug]" as const, params: { slug: guide.slug } },
       priority: 0.7,
       changeFrequency: "monthly" as const,
+      updated: guidePublishedDates[guide.slug]
+        ? new Date(guidePublishedDates[guide.slug])
+        : undefined,
     })),
     ...transferRoutes.map((route) => ({
       href: { pathname: "/transfer/[route]" as const, params: { route: route.slug } },

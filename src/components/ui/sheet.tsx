@@ -41,10 +41,23 @@ function SheetContent({
   children,
   side = "right",
   showCloseButton = true,
+  closeLabel = "Close",
   ...props
 }: SheetPrimitive.Popup.Props & {
   side?: "top" | "right" | "bottom" | "left"
   showCloseButton?: boolean
+  /**
+   * Kapat düğmesinin ekran okuyucuya söylenen adı.
+   *
+   * shadcn'den geldiği hâliyle burada sabit "Close" yazıyordu ve site üç
+   * dilli: Türkçe sayfada mobil menüyü açan biri kapat düğmesini
+   * İngilizce duyuyordu. Görünmeyen bir metin olduğu için gözle fark
+   * edilmiyor — yalnız ekran okuyucuda ortaya çıkıyor.
+   *
+   * Varsayılan İngilizce kalıyor ki bileşen kendi başına da çalışsın;
+   * çağrı yeri çeviriyi geçiyor (mobile-nav.tsx).
+   */
+  closeLabel?: string
 }) {
   return (
     <SheetPortal>
@@ -72,7 +85,7 @@ function SheetContent({
           >
             <XIcon
             />
-            <span className="sr-only">Close</span>
+            <span className="sr-only">{closeLabel}</span>
           </SheetPrimitive.Close>
         )}
       </SheetPrimitive.Popup>

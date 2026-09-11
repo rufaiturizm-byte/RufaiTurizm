@@ -213,7 +213,7 @@ export default async function PackageDetailPage({
             </div>
           </div>
 
-          <aside
+          <div
             className="h-fit rounded-[var(--radius-card)] border p-6 lg:sticky lg:top-24"
             style={{
               background: "var(--surface)",
@@ -251,7 +251,7 @@ export default async function PackageDetailPage({
                 {item.city[lang] ?? item.city.tr}
               </div>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 

@@ -371,7 +371,7 @@ export default async function DestinationPage({
           <div className="mt-8 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
             <FaqAccordion items={faqItems} />
 
-            <aside
+            <div
               className="p-7 lg:sticky lg:top-24"
               style={{
                 background: "var(--surface)",
@@ -393,7 +393,7 @@ export default async function DestinationPage({
                 <WhatsAppIcon className="size-[18px]" />
                 {tCta("whatsapp")}
               </WhatsAppLink>
-            </aside>
+            </div>
           </div>
         </section>
       </Band>

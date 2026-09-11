@@ -549,7 +549,8 @@
     "backToTop": "Başa dön",
     "skipToContent": "İçeriğe atla",
     "contents": "İçindekiler",
-    "swipeHint": "Tabloyu yana kaydırarak tüm sütunları görebilirsiniz"
+    "swipeHint": "Tabloyu yana kaydırarak tüm sütunları görebilirsiniz",
+    "close": "Kapat"
   },
   "servicesPage": {
     "title": "Hizmetlerimiz",

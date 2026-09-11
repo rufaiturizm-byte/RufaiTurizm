@@ -18,6 +18,7 @@ export function MobileNav({ items }: { items: Item[] }) {
   const [open, setOpen] = useState(false);
   const tCta = useTranslations("cta");
   const tNav = useTranslations("nav");
+  const tCommon = useTranslations("common");
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -36,6 +37,9 @@ export function MobileNav({ items }: { items: Item[] }) {
 
       <SheetContent
         side="right"
+        /* Kapat düğmesinin ekran okuyucu adı; shadcn'den sabit "Close"
+           geliyordu ve site üç dilli. */
+        closeLabel={tCommon("close")}
         className="border-0 overflow-y-auto p-0"
         style={{ background: "var(--brand-night)" }}
       >

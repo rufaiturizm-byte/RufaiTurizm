@@ -52,7 +52,25 @@ export async function FaqPreview() {
           hem de asıl işi yapıyor — listede olmayan soruyu soracak kişiyi
           listenin yanında yakalıyor.
         */}
-        <aside
+        {/*
+          `aside` DEĞİL, `div`.
+
+          Bu kart bir ara `<aside>` idi ve erişilebilirlik taramasında
+          çıktı: `aside` örtük olarak "complementary" landmark'ı demek ve
+          landmark'ların iç içe geçmemesi gerekiyor — bu kart `main`'in
+          içinde duruyor.
+
+          Kural teknik bir kılı kırk yarma değil. Ekran okuyucu kullanan
+          biri sayfada landmark listesiyle geziyor; o listenin işe
+          yaraması için kısa ve anlamlı olması gerekiyor. Sitede yedi
+          yerde aynı desen vardı (rezervasyon kutusu, tanıtım kartı) ve
+          yedisi de listeye "tamamlayıcı bölge" diye giriyordu. Oysa
+          bunlar sayfa düzeyinde bir bölge değil, bölüm içindeki kartlar.
+
+          Görsel olarak hiçbir şey değişmiyor; değişen yalnız örtük ARIA
+          rolü — yani kartın hak etmediği bir iddiadan vazgeçmesi.
+        */}
+        <div
           className="relative isolate overflow-hidden lg:sticky lg:top-24"
           style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
         >
@@ -100,7 +118,7 @@ export async function FaqPreview() {
               {tCta("whatsapp")}
             </WhatsAppLink>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
   );

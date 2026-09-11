@@ -255,7 +255,7 @@ export default async function ServiceDetailPage({
             </div>
           </div>
 
-          <aside
+          <div
             className="h-fit rounded-[var(--radius-card)] border p-6 lg:sticky lg:top-24"
             style={{
               background: "var(--surface)",
@@ -302,7 +302,7 @@ export default async function ServiceDetailPage({
               {tCommon("backToServices")}
               <ArrowLeft className="size-4 rtl:rotate-180" aria-hidden="true" />
             </Link>
-          </aside>
+          </div>
         </div>
       </section>
 

@@ -48,7 +48,7 @@ export async function ServiceFaq({ serviceKey }: { serviceKey: ServiceKey }) {
       <div className="grid gap-8 lg:grid-cols-[1.55fr_1fr] lg:items-start">
         <FaqAccordion items={items} />
 
-        <aside
+        <div
           className="lg:sticky lg:top-24"
           style={{
             background: "var(--surface)",
@@ -76,7 +76,7 @@ export async function ServiceFaq({ serviceKey }: { serviceKey: ServiceKey }) {
               {tCta("whatsapp")}
             </WhatsAppLink>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
   );

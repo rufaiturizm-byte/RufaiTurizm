@@ -143,7 +143,7 @@ export default async function FaqPage({
             ))}
           </div>
 
-          <aside
+          <div
             className="relative isolate overflow-hidden lg:sticky lg:top-24"
             style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
           >
@@ -180,7 +180,7 @@ export default async function FaqPage({
                 {tCta("whatsapp")}
               </WhatsAppLink>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
       <GuideLink slug="turkiyede-para-kart-ve-odeme" locale={locale} />

@@ -19,6 +19,7 @@ import { WhatsAppIcon } from "./icons";
  */
 export function MobileActionBar() {
   const t = useTranslations("cta");
+  const tCommon = useTranslations("common");
   const href = useWhatsAppUrl();
   const [hidden, setHidden] = useState(false);
 
@@ -81,7 +82,27 @@ export function MobileActionBar() {
   }, []);
 
   return (
+    /*
+      Adlandırılmış bir landmark — erişilebilirlik taramasında çıktı.
+
+      Bu çubuk `body`'nin doğrudan çocuğu ve hiçbir landmark'ın içinde
+      değildi; axe "sayfa içeriğinin bir kısmı landmark dışında" diyordu
+      (`region` kuralı). Masaüstü taramasında görünmüyordu çünkü çubuk
+      `lg:hidden` — yani hata yalnız mobilde vardı ve trafiğin çoğu orada.
+
+      Kural burada biçimsel değil: ekran okuyucu kullanan biri sayfada
+      landmark'lar arasında geziniyor ve landmark dışında kalan içerik o
+      gezinmede kayboluyor. Oysa bu çubuk sayfanın kalıcı ana eylemi.
+
+      `complementary` seçildi çünkü içerik gezinme (`nav`) değil, sayfaya
+      eşlik eden bir kısayol; ve burada gerçekten üst düzeyde duruyor,
+      yani landmark'ların iç içe geçmemesi kuralını da bozmuyor. Ad
+      verilmezse landmark listesinde "tamamlayıcı bölge" diye çıkar ve
+      hiçbir şey anlatmaz.
+    */
     <div
+      role="complementary"
+      aria-label={tCommon("quickContact")}
       aria-hidden={hidden}
       className={`fixed inset-x-0 bottom-0 z-50 border-t px-4 pt-3 transition-[transform,opacity] duration-300 lg:hidden ${
         hidden ? "pointer-events-none translate-y-full opacity-0" : ""

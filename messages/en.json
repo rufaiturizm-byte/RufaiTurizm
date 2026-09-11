@@ -550,7 +550,8 @@
     "skipToContent": "Skip to content",
     "contents": "Contents",
     "swipeHint": "Swipe the table sideways to see all columns",
-    "close": "Close"
+    "close": "Close",
+    "quickContact": "Quick contact"
   },
   "servicesPage": {
     "title": "Our Services",

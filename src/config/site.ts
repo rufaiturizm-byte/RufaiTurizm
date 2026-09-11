@@ -66,6 +66,16 @@ export const siteConfig = {
    */
   foundedYear: 2015,
 
+  /**
+   * GA4 ölçüm kimliği.
+   *
+   * Gizli bir değer DEĞİL: sayfanın kaynağında herkese görünür, o yüzden
+   * env değişkeni değil config'te duruyor. Gizlenmesi gereken şey GA'nın
+   * API anahtarları; bu ölçüm kimliği yalnız "veriyi hangi mülke yaz"
+   * diyor.
+   */
+  ga4Id: "G-RK910BGB0G",
+
   /** Ticaret unvanı — TÜRSAB kaydında göründüğü biçim. */
   legalName: "RUFAİ İSTANBUL TURİZM",
 

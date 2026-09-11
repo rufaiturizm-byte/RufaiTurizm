@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Tajawal, Playfair_Display, Amiri } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Ga4, WhatsAppEvents } from "@/components/site/analytics-ga4";
 import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
@@ -143,6 +144,15 @@ export default async function LocaleLayout({
         <Toaster />
         <Analytics />
         <SpeedInsights />
+        {/*
+          GA4 — Vercel Analytics'in YERİNE değil, YANINDA.
+          Vercel'inki çerezsiz ve hızlı bir genel görünüm veriyor; GA4
+          ise dönüşüm (WhatsApp tıklaması), kaynak kırılımı ve Search
+          Console eşleştirmesi için gerekli. İkisi farklı soruları
+          cevaplıyor, o yüzden ikisi de duruyor.
+        */}
+        <Ga4 />
+        <WhatsAppEvents />
       </body>
     </html>
   );

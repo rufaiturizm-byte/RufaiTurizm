@@ -791,15 +791,6 @@
     "allRights": "جميع الحقوق محفوظة",
     "instagram": "إنستغرام"
   },
-  "search": {
-    "tabTransfer": "نقل VIP",
-    "destination": "إلى أين تريد الذهاب؟",
-    "date": "اختر التاريخ",
-    "people": "عدد الأفراد",
-    "allTours": "كل الجولات",
-    "submit": "اعرض الجولات",
-    "waIntro": "مرحباً روفاي للسياحة، أستفسر عن:"
-  },
   "stats": {
     "guestsLabel": "ضيف سعيد",
     "ratingLabel": "تقييم Google",

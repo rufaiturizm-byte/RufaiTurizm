@@ -3250,7 +3250,7 @@ export const guides: Guide[] = [
     seo: {
       title: {
         tr: "Türkiye Tatil Bütçesi Nasıl Kurulur",
-        ar: "كيف تضع ميزانية إجازة في تركيا",
+        ar: "كم تكلفة السفر إلى تركيا؟ كيف تضع ميزانيتك",
         en: "How to Budget a Holiday in Türkiye",
       },
       description: {
@@ -4068,7 +4068,7 @@ export const guides: Guide[] = [
       },
       description: {
         tr: "Suudi, Emirati, Kuveytli, Katarlı, Ürdünlü, Umanlı ve Bahreynli ziyaretçiler için 90 gün vizesiz giriş. Irak'ta yaş kuralı, pasaportta 150 gün şartı.",
-        ar: "هل تركيا تحتاج فيزا للسعوديين؟ لا — تسعون يوماً خلال كل مئة وثمانين. والإمارات والكويت وقطر والأردن وعُمان والبحرين كذلك. والعراق استثناء بحسب السنّ.",
+        ar: "هل تركيا تحتاج فيزا للسعوديين؟ لا — تسعون يوماً خلال كل مئة وثمانين بلا تأشيرة. والإمارات والكويت وقطر والأردن وعُمان والبحرين كذلك. والعراق استثناء بحسب السنّ.",
         en: "Saudi, Emirati, Kuwaiti, Qatari, Jordanian, Omani and Bahraini visitors enter visa-free for 90 days. Iraq has an age rule; passports need 150 days.",
       },
     },

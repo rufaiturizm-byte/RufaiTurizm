@@ -89,38 +89,6 @@ export default async function PackagesPage({
         <TrustBoxes />
       </div>
 
-      {/*
-        Giriş. "Paket" kelimesi tek başına ne olduğunu anlatmıyor; asıl
-        satan şey günlerin BİRBİRİNE GÖRE sıralanmış olması. Buradaki üç
-        paragraf onu anlatıyor ve aynı zamanda sayfaya Arapça aramanın
-        karşılığı olan gövde metnini veriyor.
-
-        Düzen sayfanın geri kalanıyla aynı genişlikte (max-w-7xl).
-        Önceki hali max-w-3xl idi: her bölümü kenardan kenara uzanan bir
-        sayfanın ortasında dar, dayanaksız bir metin adası olarak
-        duruyordu. Sitede max-w-3xl yalnız rehber YAZILARINDA kullanılıyor
-        ve orada doğru — uzun metin için okuma genişliği. Burası liste
-        sayfası; başlık solda, metin sağda iki sütun hem hizayı tutuyor
-        hem okuma genişliğini koruyor.
-      */}
-      <Band>
-        <ProseSection
-          title={t("introTitle")}
-          body={[t("intro1"), t("intro2"), t("intro3")]}
-          className="pb-16"
-        />
-
-        {/*
-          Kaç gün seçmeli.
-          Sayfadaki asıl karar bu: ziyaretçi dört, beş, altı ve sekiz günlük
-          programlara bakıp birini seçiyor ama gün sayısının neye göre
-          değiştiğini söyleyen bir yer yoktu. Bölüm her uzunluğun hangi
-          soruya cevap olduğunu yazıyor — dördün tek şehir, altının ikinci
-          şehri eklediğiniz ilk uzunluk olması gibi.
-        */}
-        <ProseSection title={t("chooseTitle")} body={t("chooseText")} className="pb-20" />
-      </Band>
-
       <section className="mx-auto w-full max-w-7xl px-5 pt-16 pb-16 sm:px-8">
         <SectionHeading title={t("listTitle")} subtitle={t("subtitle")} />
 
@@ -186,6 +154,56 @@ export default async function PackagesPage({
           })}
         </div>
       </section>
+
+      {/*
+        BU BLOK PAKET LİSTESİNİN ALTINA ALINDI.
+
+        Önce listenin ÜSTÜNDEYDİ ve ölçüldü: iki uzun metin bölümü birlikte
+        1.576 piksel tutuyordu, yani "Paket programlar" sayfasına gelen kişi
+        tek bir paketi görmeden önce 1,75 ekran okumak zorundaydı.
+
+        Bu, sitenin kendi ilkesine aykırıydı — transfer sayfasında yazılı:
+        "transfer sayfasına gelen kişi zaten ne istediğini biliyor, önce
+        anlatıp sonra sormanın anlamı yok". Paketler sayfası için de aynı
+        şey geçerli; sayfayı zaten hero alt başlığı tanıtıyor.
+
+        Metin silinmedi çünkü metin iyi ve Arapça aramanın karşılığı olan
+        gövdeyi de o taşıyor. Yalnız yeri değişti: artık açıkladığı şeyin
+        ARDINDAN geliyor. "Kaç günlük program seçmeli" bölümü de burada
+        daha çok işe yarıyor — seçenekleri gördükten sonra okunan bir
+        karar desteği, görmeden önce okunan bir ön bilgiden iyi.
+      */}
+      {/*
+        Giriş. "Paket" kelimesi tek başına ne olduğunu anlatmıyor; asıl
+        satan şey günlerin BİRBİRİNE GÖRE sıralanmış olması. Buradaki üç
+        paragraf onu anlatıyor ve aynı zamanda sayfaya Arapça aramanın
+        karşılığı olan gövde metnini veriyor.
+
+        Düzen sayfanın geri kalanıyla aynı genişlikte (max-w-7xl).
+        Önceki hali max-w-3xl idi: her bölümü kenardan kenara uzanan bir
+        sayfanın ortasında dar, dayanaksız bir metin adası olarak
+        duruyordu. Sitede max-w-3xl yalnız rehber YAZILARINDA kullanılıyor
+        ve orada doğru — uzun metin için okuma genişliği. Burası liste
+        sayfası; başlık solda, metin sağda iki sütun hem hizayı tutuyor
+        hem okuma genişliğini koruyor.
+      */}
+      <Band>
+        <ProseSection
+          title={t("introTitle")}
+          body={[t("intro1"), t("intro2"), t("intro3")]}
+          className="pb-16"
+        />
+
+        {/*
+          Kaç gün seçmeli.
+          Sayfadaki asıl karar bu: ziyaretçi dört, beş, altı ve sekiz günlük
+          programlara bakıp birini seçiyor ama gün sayısının neye göre
+          değiştiğini söyleyen bir yer yoktu. Bölüm her uzunluğun hangi
+          soruya cevap olduğunu yazıyor — dördün tek şehir, altının ikinci
+          şehri eklediğiniz ilk uzunluk olması gibi.
+        */}
+        <ProseSection title={t("chooseTitle")} body={t("chooseText")} className="pb-20" />
+      </Band>
 
       <PromoBanner placement="packages" locale={locale} />
 

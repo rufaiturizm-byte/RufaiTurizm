@@ -1011,18 +1011,6 @@
     "s3Desc": "Şoförün adı ve plaka seyahatten önce elinize ulaşır.",
     "citiesTitle": "Hizmet verdiğimiz noktalar",
     "citiesSubtitle": "Listede olmayan bir yer için yazmanız yeterli",
-    "cities": [
-      "İstanbul",
-      "İstanbul Havalimanı (IST)",
-      "Sabiha Gökçen (SAW)",
-      "Bursa",
-      "Sapanca",
-      "Yalova",
-      "Bolu",
-      "Abant",
-      "Trabzon",
-      "Bodrum"
-    ],
     "title": "Havalimanı transferi",
     "subtitle": "İstanbul, Sabiha Gökçen, Antalya, Bodrum ve Trabzon havalimanlarından sabit fiyatlı özel transfer.",
     "intro": "Havalimanı transferi en çok tercih edilen hizmetimiz. Uçuşunuzu takip ediyor, geliş kapısında isminizin yazılı olduğu tabelayla karşılıyor ve bagajlarınızla birlikte doğrudan otelinize götürüyoruz. Fiyat rezervasyonda netleşir ve varışta değişmez.",

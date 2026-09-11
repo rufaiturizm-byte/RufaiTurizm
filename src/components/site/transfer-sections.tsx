@@ -6,7 +6,6 @@ import {
   CalendarClock,
   Languages,
   Luggage,
-  MapPin,
   MessageCircle,
   Plane,
   PlaneLanding,
@@ -302,35 +301,18 @@ export async function TransferSteps() {
   );
 }
 
-export async function ServiceCities() {
-  const t = await getTranslations("transferPage");
-  const cities = t.raw("cities") as string[];
-
-  return (
-    <section className="mx-auto w-full max-w-7xl px-5 pb-24 sm:px-8">
-      <SectionHeading
-        title={t("citiesTitle")}
-        subtitle={t("citiesSubtitle")}
-      />
-
-      <div className="flex flex-wrap gap-2.5">
-        {cities.map((city) => (
-          <span
-            key={city}
-            className="inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-[13.5px] font-medium"
-          >
-            <MapPin
-              className="size-3.5"
-              style={{ color: "var(--brand-gold-deep)" }}
-              aria-hidden="true"
-            />
-            {city}
-          </span>
-        ))}
-      </div>
-    </section>
-  );
-}
+/*
+ * `ServiceCities` BURADAN SİLİNDİ.
+ *
+ * Hizmet verdiğimiz şehirleri düz bir çip dizisi olarak basıyordu ve
+ * hiçbir sayfa onu çağırmıyordu — yerini `RouteCoverage` almış: aynı
+ * bilgiyi havalimanına göre gruplu, fotoğraflı ve 58 varış noktasıyla
+ * veriyor, üstelik her çip WhatsApp'ı kendi adıyla açıyor.
+ *
+ * Beslendiği `transferPage.cities` dizisi de üç sözlükten kaldırıldı.
+ * `citiesTitle` ve `citiesSubtitle` DURUYOR: onları şehir şeridi ve
+ * araç listesi kullanıyor.
+ */
 
 /**
  * Sayfa sonu kapanış şeridi — tek ve net bir çıkış.

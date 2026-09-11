@@ -1011,18 +1011,6 @@
     "s3Desc": "You get the driver's name and plate number before the trip.",
     "citiesTitle": "Where we operate",
     "citiesSubtitle": "If your destination is not listed, just message us",
-    "cities": [
-      "Istanbul",
-      "Istanbul Airport (IST)",
-      "Sabiha Gokcen (SAW)",
-      "Bursa",
-      "Sapanca",
-      "Yalova",
-      "Bolu",
-      "Abant",
-      "Trabzon",
-      "Bodrum"
-    ],
     "title": "Airport Transfer",
     "subtitle": "Fixed-price private transfers from Istanbul, Sabiha Gokcen, Antalya, Bodrum and Trabzon airports.",
     "intro": "Airport transfer is our most requested service. We track your flight, meet you at arrivals with a name sign and take you and your luggage straight to your hotel. The price is set at booking and does not change on arrival.",

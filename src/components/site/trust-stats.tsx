@@ -67,8 +67,8 @@ export async function TrustBoxes() {
   );
 }
 
-/** Şirketin kuruluş yılı. Deneyim süresi buradan hesaplanır. */
-const KURULUS_YILI = 2015;
+/** Şirketin kuruluş yılı — tek kaynak `siteConfig`. */
+const KURULUS_YILI = siteConfig.foundedYear;
 
 export async function TrustStats() {
   const tStats = await getTranslations("stats");

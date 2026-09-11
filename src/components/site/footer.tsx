@@ -237,7 +237,28 @@ export async function Footer() {
 
         {/* /45 iken kontrast 4,08:1 idi, WCAG AA 4,5 istiyor. */}
         <div className="mt-7 flex flex-col gap-4 text-[12.5px] text-white/56 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 {siteConfig.legalName} — {t("allRights")}</span>
+          {/*
+            Telif yılı SABİT yazılmıştı ("© 2026").
+
+            1 Ocak'ta sitenin her sayfasında birden yanlış olacak bir
+            sayıydı ve kimse fark etmeyecekti — telif satırına kimse
+            bakmaz, ta ki eski göründüğü gün hariç. Bakımsız bir site
+            izlenimi veren ayrıntılar tam olarak bunlar.
+
+            Kuruluştan bugüne aralık yazılıyor: tek yıl "bu site 2026'da
+            yapıldı" der, aralık ise "2015'ten beri çalışıyoruz" der —
+            bir seyahat acentesinde ikincisi bilgi taşıyor. Kuruluş yılı
+            deneyim rakamıyla aynı yerden gelsin diye tek sabit.
+
+            Sunucu bileşeni olduğu için yıl DERLEME anında hesaplanıyor;
+            her dağıtımda tazeleniyor. Yıl dönümünde sitenin yeniden
+            derlenmesi yeterli, kodda elle değişecek bir şey yok.
+          */}
+          <span>
+            © {siteConfig.foundedYear}
+            {new Date().getFullYear() > siteConfig.foundedYear ? `–${new Date().getFullYear()}` : ""}{" "}
+            {siteConfig.legalName} — {t("allRights")}
+          </span>
           {siteConfig.credentials.tursab ? (
             <a
               href={siteConfig.tursabVerifyUrl}

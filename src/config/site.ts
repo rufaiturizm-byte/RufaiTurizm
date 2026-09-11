@@ -57,6 +57,15 @@ export const siteConfig = {
     insurance: "",
   },
 
+  /**
+   * Şirketin kuruluş yılı.
+   *
+   * İki yerde kullanılıyor: ana sayfadaki "yıllık deneyim" rakamı ve
+   * altbilgideki telif aralığı. İkisinde ayrı sabit tutmak, ilk
+   * değişiklikte birinin unutulması demekti.
+   */
+  foundedYear: 2015,
+
   /** Ticaret unvanı — TÜRSAB kaydında göründüğü biçim. */
   legalName: "RUFAİ İSTANBUL TURİZM",
 

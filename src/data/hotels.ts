@@ -1,12 +1,20 @@
 /**
  * Otel rehberi — semt semt.
  *
- * ÖNEMLİ: Bunlar "anlaşmalı otellerimiz" DEĞİL. Elimizde otellerle
- * imzalanmış bir anlaşma yok ve olmayan bir ortaklığı ima etmek, sitenin
- * geri kalanında kurmaya çalıştığımız güveni ilk rezervasyonda bozar.
- * Bölüm bilerek "misafirlerimizin en çok tercih ettiği oteller" diye
- * konumlanıyor ve hizmet gerçek olanı söylüyor: rezervasyonu misafir
- * adına biz yapıyoruz (services.flightHotel).
+ * BÖLÜM "misafirlerimizin en çok tercih ettiği oteller" diye konumlanıyor
+ * ve hizmet gerçek olanı söylüyor: rezervasyonu misafir adına biz
+ * yapıyoruz (services.flightHotel).
+ *
+ * Bu dosya uzun süre "elimizde hiçbir otelle anlaşma yok, o yüzden
+ * anlaşmalı demiyoruz" diyordu. 2026-09-12'de işletme sahibi bir kısmıyla
+ * anlaşma olduğunu doğruladı AMA bunun müşteriye sunulmasını istemedi:
+ * "sadece bu otellerde kalabileceğini bilsin, yeterli."
+ *
+ * Karar bu yüzden şu: ortaklık İDDİASI hiçbir yerde yok — rozet de yok,
+ * ayrı başlık da. Buna karşılık sayfadaki "bu liste anlaşmalı
+ * otellerimiz değil" cümlesi de kaldırıldı, çünkü artık doğru değildi.
+ * İkisi birden: olmayan bir şeyi iddia etmiyoruz, olan bir şeyi de
+ * inkâr etmiyoruz. Sessiz kalmak ikisinden de dürüst.
  *
  * Bu yüzden burada FİYAT, YILDIZ ve MÜSAİTLİK yok — doğrulayamadığımız
  * üç bilgi. Oteller yalnız semt ve karakterle tarif ediliyor; bu hem

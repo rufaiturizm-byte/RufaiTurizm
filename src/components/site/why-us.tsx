@@ -40,12 +40,33 @@ export async function WhyUs() {
               className="relative aspect-[4/5] overflow-hidden"
               style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
             >
+              {/*
+                GERÇEK FİLO — burada stok fotoğraf vardı.
+
+                `chauffeur.jpg` bir stok kareydi: beyaz bir VW minibüs, çam
+                ormanı, yabancı bir şoför. Ne Vito ne İstanbul. Ana sayfanın
+                "konfor" iddiasını taşıyan görsel, başka bir firmanın aracını
+                gösteriyordu — sitenin telefonda, belgede ve Google puanında
+                tuttuğu "sahip olmadığımızı göstermeyiz" çizgisiyle çelişiyordu.
+
+                Kendi araçlarımızın fotoğrafı zaten elimizdeydi ve hemen
+                altındaki küçük karede kullanılıyordu; büyük kare stok kalmıştı.
+
+                `object-position` ortanın altına çekildi: kare 4:3 ve bu
+                çerçeve 4:5, yani yükseklik kırpılıyor — ortalanırsa gökyüzü
+                ve apartman cephesi kalıyor, araçlar aşağıda kesiliyor.
+
+                `vito-fleet` seçildi, `vito-exterior` DEĞİL: ikincisi ana
+                sayfada zaten iki ayrı yerde basılıyor ve üçüncü kez koymak
+                aynı kareyi sayfa boyunca tekrar etmek olurdu. Bu kare ayrıca
+                çapraz diziliyor, yani dikey çerçeveye daha iyi oturuyor.
+              */}
               <Image
-                src="/images/chauffeur.jpg"
-                alt={t("arabicSupport.title")}
+                src="/images/fleet/vito-fleet.jpg"
+                alt={tFleet("fleetAlt")}
                 fill
                 sizes="(max-width: 1024px) 100vw, 26vw"
-                className="object-cover object-[center_30%]"
+                className="object-cover object-[center_68%]"
               />
             </div>
 

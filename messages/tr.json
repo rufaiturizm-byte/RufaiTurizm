@@ -847,7 +847,14 @@
     "trust4": "7/24 destek",
     "peopleUnit": "Kişi",
     "required": "Alış ve varış noktasını yazın",
-    "fillHint": "Nereden nereye gideceğinizi yazın, gerisini WhatsApp'ta konuşalım."
+    "fillHint": "Nereden nereye gideceğinizi yazın, gerisini WhatsApp'ta konuşalım.",
+    "suggestionsLabel": "Yer önerileri",
+    "kind": {
+      "airport": "havalimanı",
+      "district": "bölge",
+      "hotel": "otel",
+      "mall": "AVM"
+    }
   },
   "trustBoxes": {
     "airports": "Havalimanı karşılaması",

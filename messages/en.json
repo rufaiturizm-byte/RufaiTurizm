@@ -847,7 +847,14 @@
     "trust4": "24/7 support",
     "peopleUnit": "passengers",
     "required": "Enter pick-up and destination",
-    "fillHint": "Tell us where from and where to; we will sort the rest on WhatsApp."
+    "fillHint": "Tell us where from and where to; we will sort the rest on WhatsApp.",
+    "suggestionsLabel": "Place suggestions",
+    "kind": {
+      "airport": "airport",
+      "district": "area",
+      "hotel": "hotel",
+      "mall": "mall"
+    }
   },
   "trustBoxes": {
     "airports": "Airport meet and greet",

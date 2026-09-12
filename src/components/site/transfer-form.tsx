@@ -19,6 +19,7 @@ import {
 import { BorderBeam } from "@/components/ui/border-beam";
 import { WhatsAppIcon } from "./icons";
 import { buildWhatsAppUrl } from "./whatsapp-cta";
+import { LocationInput } from "./location-input";
 import { siteConfig } from "@/config/site";
 
 type Tab = "transfer" | "chauffeur";
@@ -182,12 +183,12 @@ export function TransferForm() {
             {t("from")}
           </label>
           <div className="flex gap-2.5">
-            <input
+            <LocationInput
               id="tf-from"
               value={from}
-              onChange={(event) => setFrom(event.target.value)}
+              onChange={setFrom}
               placeholder={t("placeholder")}
-              aria-invalid={showError && !from.trim() ? true : undefined}
+              invalid={showError && !from.trim()}
               className={FIELD}
               style={
                 showError && !from.trim() ? { borderColor: "var(--destructive)" } : undefined
@@ -211,9 +212,10 @@ export function TransferForm() {
                 style={{ color: "var(--brand-gold-deep)" }}
                 aria-hidden="true"
               />
-              <input
+              <LocationInput
+                id="tf-stop"
                 value={stop}
-                onChange={(event) => setStop(event.target.value)}
+                onChange={setStop}
                 placeholder={t("stop")}
                 className={FIELD}
               />
@@ -226,12 +228,12 @@ export function TransferForm() {
             <MapPin className="size-3.5" style={{ color: "var(--brand-gold-deep)" }} aria-hidden="true" />
             {t("to")}
           </label>
-          <input
+          <LocationInput
             id="tf-to"
             value={to}
-            onChange={(event) => setTo(event.target.value)}
+            onChange={setTo}
             placeholder={t("placeholder")}
-            aria-invalid={showError && !to.trim() ? true : undefined}
+            invalid={showError && !to.trim()}
             className={FIELD}
             style={showError && !to.trim() ? { borderColor: "var(--destructive)" } : undefined}
           />

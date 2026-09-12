@@ -1063,7 +1063,8 @@
     "photoNote": "Görseller bölgeyi temsil eder, otelin kendisini değil.",
     "gettingAroundLabel": "Ulaşım",
     "watchOutLabel": "Göze alınacaklar",
-    "airportLabel": "Havalimanına mesafe"
+    "airportLabel": "Havalimanına mesafe",
+    "starsLabel": "{count} yıldızlı otel"
   },
   "meta": {
     "home": "Rufai Turizm: İstanbul havalimanı transferi, Arapça rehberli turlar, şoförlü Mercedes Vito, uçak bileti ve otel rezervasyonu. Sabit fiyat, 7/24 WhatsApp desteği.",

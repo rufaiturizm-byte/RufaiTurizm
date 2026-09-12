@@ -51,6 +51,19 @@ export interface HotelArea {
     name: string;
     desc: Text;
     tags: string[];
+    /**
+     * Otelin yıldız sınıfı.
+     *
+     * Dosyanın başındaki kural uzun süre "yıldız yazmayız" diyordu ve
+     * gerekçesi doğrulayamamaktı, yasak değil. İşletme 2026-09-12'de
+     * birlikte çalıştığı otelleri sınıflandırdı, yani şart karşılandı.
+     *
+     * ALAN İSTEĞE BAĞLI VE ÖYLE KALMALI. Yalnız işletmenin sınıfını
+     * bildirdiği oteller doldurulur; geri kalanı boş kalır ve kartta
+     * yıldız hiç basılmaz. "Herhalde beş yıldızdır" diye doldurmak,
+     * kuralın engellemek için var olduğu şeyin ta kendisi.
+     */
+    stars?: 4 | 5;
     /*
      * Otelin KENDİ fotoğrafı — yalnız kullanım hakkımız varsa.
      *
@@ -220,6 +233,7 @@ export const hotelAreas: HotelArea[] = [
       },
           {
         name: "CVK Park Bosphorus Hotel Istanbul",
+        stars: 5,
         desc: {
           tr: "Gümüşsuyu'nda, Taksim Meydanı'na yürüme mesafesinde; odaların bir bölümü Boğaz'a bakıyor.",
           ar: "في غوموشسويو، على مسافة مشي من ميدان تقسيم؛ وجزء من الغرف يطلّ على البوسفور.",
@@ -229,6 +243,7 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Sofitel Istanbul Taksim",
+        stars: 5,
         desc: {
           tr: "Taksim Meydanı'nın arkasında; metro ve İstiklal Caddesi yürüme mesafesinde.",
           ar: "خلف ميدان تقسيم؛ المترو وشارع الاستقلال على مسافة مشي.",
@@ -238,6 +253,7 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Arts Hotel Harbiye",
+        stars: 4,
         desc: {
           tr: "Harbiye'de, Nişantaşı'nın alışveriş caddelerine ve Osmanbey metrosuna yakın.",
           ar: "في حربية، قريب من شوارع التسوّق في نيشانتاشي ومترو عثمان بيه.",
@@ -247,6 +263,7 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Grand Aras Hotel",
+        stars: 4,
         desc: {
           tr: "Büyükdere Caddesi üzerinde, Şişli'de; Mecidiyeköy metrosuna ve Cevahir'e yakın.",
           ar: "على شارع بيوك دره في شيشلي؛ قريب من مترو مجيدية كوي ومركز جواهر.",
@@ -256,6 +273,7 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Arise Hotel Golden Horn",
+        stars: 4,
         desc: {
           tr: "Sütlüce'de, Haliç kıyısında; tarihî yarımadaya karşı kıyıdan bakıyor.",
           ar: "في سوتلوجه على ضفة القرن الذهبي؛ يطلّ على شبه الجزيرة التاريخية من الضفة المقابلة.",
@@ -312,6 +330,7 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Swissôtel The Bosphorus, Istanbul",
+        stars: 5,
         desc: {
           tr: "Maçka'da tepede; geniş bahçesi ve havuzuyla bilinir.",
           ar: "على تلة في ماتشكا؛ معروف بحديقته الواسعة ومسبحه.",
@@ -330,6 +349,7 @@ export const hotelAreas: HotelArea[] = [
       },
           {
         name: "Raffles Istanbul",
+        stars: 5,
         desc: {
           tr: "Zorlu Center içinde, Beşiktaş'ta; alışveriş merkezi ve metro aynı yapıda.",
           ar: "داخل مركز زورلو في بشكتاش؛ المركز التجاري والمترو في المبنى نفسه.",
@@ -385,6 +405,7 @@ export const hotelAreas: HotelArea[] = [
     hotels: [
       {
         name: "Radisson Residences Vadistanbul",
+        stars: 5,
         desc: {
           tr: "Ayazağa'da, mutfaklı daire tipi odalar; Vadistanbul alışveriş merkezi aynı vadide.",
           ar: "في أيازاغا، شقق بمطبخ بدل الغرف؛ ومركز وادي إسطنبول في الوادي نفسه.",
@@ -394,6 +415,7 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Marriott Executive Apartments Istanbul Invest Vadi",
+        stars: 5,
         desc: {
           tr: "Mutfaklı daire tipi konaklama; uzun kalışlar ve kalabalık aileler için kurulmuş.",
           ar: "إقامة على هيئة شقق بمطبخ؛ مصمّمة للإقامات الطويلة والعائلات الكبيرة.",
@@ -403,6 +425,7 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Mövenpick Living İstanbul Saklıvadi",
+        stars: 5,
         desc: {
           tr: "Saklıvadi'de, ana caddelerden geri çekilmiş; daire tipi odalar.",
           ar: "في ساكلي وادي، بعيداً عن الشوارع الرئيسية؛ غرف على هيئة شقق.",

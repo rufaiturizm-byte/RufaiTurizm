@@ -1063,7 +1063,8 @@
     "photoNote": "Photographs show the district, not the hotel itself.",
     "gettingAroundLabel": "Getting around",
     "watchOutLabel": "The trade-off",
-    "airportLabel": "Distance to the airport"
+    "airportLabel": "Distance to the airport",
+    "starsLabel": "{count}-star hotel"
   },
   "meta": {
     "home": "Rufai Tourism: Istanbul airport transfers, Arabic-guided tours, a chauffeured Mercedes Vito, flight tickets and hotel bookings. Fixed prices, 24/7 WhatsApp.",

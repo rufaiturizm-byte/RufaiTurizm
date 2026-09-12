@@ -6,6 +6,7 @@ import {
   Info,
   MapPin,
   PlaneLanding,
+  Star,
   TramFront,
   TriangleAlert,
 } from "lucide-react";
@@ -332,6 +333,37 @@ export default async function HotelsPage({
                           Şimdi kartın ilk okunan şeyi otelin ADI. Kart bir
                           oteli tanıtıyor; en büyük öğesi de o olmalı.
                         */}
+                        {/*
+                          Yıldız sınıfı — yalnız işletmenin bildirdiği
+                          otellerde basılıyor, `hotels.ts` içindeki `stars`
+                          alanı boşsa bu blok hiç çıkmıyor.
+
+                          Yıldızlar ADIN ÜSTÜNDE: kartın sırası "ne kadar
+                          büyük bir otel → hangi otel → nerede" diye
+                          okunuyor ve sınıf, adı okumadan önce verilen
+                          karar. Aşağı konsaydı etiketlerle karışırdı.
+
+                          Sayı ekran okuyucuya `sr-only` ile veriliyor —
+                          beş ayrı yıldız ikonu okunacak bir şey değil,
+                          o yüzden ikonlar `aria-hidden`.
+                        */}
+                        {hotel.stars ? (
+                          <p className="mb-2 flex items-center gap-0.5">
+                            <span className="sr-only">{t("starsLabel", { count: hotel.stars })}</span>
+                            {Array.from({ length: hotel.stars }, (_, i) => (
+                              <Star
+                                key={i}
+                                className="size-3.5"
+                                style={{
+                                  fill: "var(--brand-gold)",
+                                  color: "var(--brand-gold)",
+                                }}
+                                aria-hidden="true"
+                              />
+                            ))}
+                          </p>
+                        ) : null}
+
                         <h3 className="font-display text-[20px] font-semibold leading-snug">
                           {hotel.name}
                         </h3>

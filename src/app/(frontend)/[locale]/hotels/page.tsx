@@ -80,8 +80,12 @@ export default async function HotelsPage({
       />
 
       <PageHero
-        image="/images/hero-ortakoy.jpg"
-        imageAlt={locale === "ar" ? "مسجد أورتاكوي ومضيق البوسفور" : "Ortaköy Camii ve Boğaz"}
+        image="/images/hero-otel-bogaz.jpg"
+        imageAlt={
+          locale === "ar"
+            ? "شرفة غرفة فندقية تطلّ على البوسفور عند الفجر"
+            : "Boğaz'a bakan bir otel odası balkonu, sabah ışığı"
+        }
         crumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("hotels") },

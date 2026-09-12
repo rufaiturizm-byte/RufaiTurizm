@@ -78,8 +78,12 @@ export default async function DestinationsPage({
       />
 
       <PageHero
-        image="/images/hero-ortakoy.jpg"
-        imageAlt={t("title")}
+        image="/images/hero-koy-ege.jpg"
+        imageAlt={
+          locale === "ar"
+            ? "خليج على الساحل التركي بمياه فيروزية وقوارب راسية"
+            : "Türkiye kıyısında turkuaz bir koy ve demirlemiş tekneler"
+        }
         crumbs={[{ label: tNav("home"), href: "/" }, { label: t("title") }]}
         title={t("title")}
         subtitle={t("heroSubtitle")}

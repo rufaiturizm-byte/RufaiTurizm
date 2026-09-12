@@ -82,8 +82,12 @@ export default async function AboutPage({
       />
 
       <PageHero
-        image="/images/hero-ortakoy.jpg"
-        imageAlt={locale === "ar" ? "مسجد أورتاكوي ومضيق البوسفور" : "Ortaköy Camii ve Boğaz"}
+        image="/images/hero-tarihi-sokak.jpg"
+        imageAlt={
+          locale === "ar"
+            ? "شارع في إسطنبول القديمة عند الفجر، سكك الترام وقبّة مسجد في الخلفية"
+            : "Şafakta eski İstanbul sokağı, tramvay rayları ve arkada cami"
+        }
         crumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("about") },

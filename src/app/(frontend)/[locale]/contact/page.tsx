@@ -157,7 +157,7 @@ export default async function ContactPage({
             style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-e3)" }}
           >
             <Image
-              src="/images/hero-ortakoy.jpg"
+              src="/images/bogaz-aksam-dikey.jpg"
               alt={t("whatsappTitle")}
               fill
               sizes="(max-width: 1024px) 100vw, 560px"

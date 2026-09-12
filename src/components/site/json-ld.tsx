@@ -65,7 +65,17 @@ export function TravelAgencySchema({
     ...(hasRealPhone ? { telephone: siteConfig.phoneHref } : {}),
     email: siteConfig.email,
     priceRange: "€€",
-    image: `${siteConfig.url}/images/hero-ortakoy.jpg`,
+    /*
+     * Şemadaki görsel, Google'ın işletmeyi gösterirken kullanabileceği
+     * kare. Burada ana sayfanın giriş fotoğrafı duruyordu — önce Ortaköy
+     * manzarası, sonra yapay zekâ üretimi bir kare. İkisi de "bu işletme
+     * nedir" sorusunu cevaplamıyordu.
+     *
+     * Artık kendi filomuzun ofis önündeki gerçek fotoğrafı: arkada
+     * RUFAİ TURİZM tabelası okunuyor. Makineye verilen kimlik karesi,
+     * gerçekten bize ait bir kare olmalı.
+     */
+    image: `${siteConfig.url}/images/fleet/vito-exterior.jpg`,
     logo: `${siteConfig.url}/brand/logo.png`,
     /*
      * Google işletme profiline bağ.

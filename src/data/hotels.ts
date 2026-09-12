@@ -210,6 +210,51 @@ export const hotelAreas: HotelArea[] = [
         },
         tags: ["nearMalls", "nearMetro"],
       },
+          {
+        name: "CVK Park Bosphorus Hotel Istanbul",
+        desc: {
+          tr: "Gümüşsuyu'nda, Taksim Meydanı'na yürüme mesafesinde; odaların bir bölümü Boğaz'a bakıyor.",
+          ar: "في غوموشسويو، على مسافة مشي من ميدان تقسيم؛ وجزء من الغرف يطلّ على البوسفور.",
+          en: "In Gumussuyu, walking distance from Taksim Square; some rooms face the Bosphorus.",
+        },
+        tags: ["bosphorusView", "nearMetro"],
+      },
+      {
+        name: "Sofitel Istanbul Taksim",
+        desc: {
+          tr: "Taksim Meydanı'nın arkasında; metro ve İstiklal Caddesi yürüme mesafesinde.",
+          ar: "خلف ميدان تقسيم؛ المترو وشارع الاستقلال على مسافة مشي.",
+          en: "Behind Taksim Square; the metro and Istiklal Street are a short walk away.",
+        },
+        tags: ["nearMetro"],
+      },
+      {
+        name: "Arts Hotel Harbiye",
+        desc: {
+          tr: "Harbiye'de, Nişantaşı'nın alışveriş caddelerine ve Osmanbey metrosuna yakın.",
+          ar: "في حربية، قريب من شوارع التسوّق في نيشانتاشي ومترو عثمان بيه.",
+          en: "In Harbiye, close to the Nisantasi shopping streets and Osmanbey metro.",
+        },
+        tags: ["nearMetro", "nearMalls"],
+      },
+      {
+        name: "Grand Aras Hotel",
+        desc: {
+          tr: "Büyükdere Caddesi üzerinde, Şişli'de; Mecidiyeköy metrosuna ve Cevahir'e yakın.",
+          ar: "على شارع بيوك دره في شيشلي؛ قريب من مترو مجيدية كوي ومركز جواهر.",
+          en: "On Buyukdere Avenue in Sisli; near Mecidiyekoy metro and the Cevahir mall.",
+        },
+        tags: ["nearMetro", "nearMalls"],
+      },
+      {
+        name: "Arise Hotel Golden Horn",
+        desc: {
+          tr: "Sütlüce'de, Haliç kıyısında; tarihî yarımadaya karşı kıyıdan bakıyor.",
+          ar: "في سوتلوجه على ضفة القرن الذهبي؛ يطلّ على شبه الجزيرة التاريخية من الضفة المقابلة.",
+          en: "In Sutluce on the Golden Horn shore, looking across to the historic peninsula.",
+        },
+        tags: ["quiet"],
+      },
     ],
   },
   {
@@ -274,6 +319,88 @@ export const hotelAreas: HotelArea[] = [
           en: "On the Besiktas heights, with Bosphorus-view rooms.",
         },
         tags: ["bosphorusView", "nearMalls"],
+      },
+          {
+        name: "Raffles Istanbul",
+        desc: {
+          tr: "Zorlu Center içinde, Beşiktaş'ta; alışveriş merkezi ve metro aynı yapıda.",
+          ar: "داخل مركز زورلو في بشكتاش؛ المركز التجاري والمترو في المبنى نفسه.",
+          en: "Inside Zorlu Center in Besiktas; the mall and the metro are in the same complex.",
+        },
+        tags: ["nearMalls", "nearMetro"],
+      },
+    ],
+  },
+  /*
+   * VADİSTANBUL — sitenin altıncı İstanbul bölgesi, 2026-09'da eklendi.
+   *
+   * Sebebi somut: birlikte çalışılan otellerin üçü burada ve bu bölge
+   * sitede hiç yoktu. Daire tipi konaklama (mutfaklı, geniş) Körfez'den
+   * gelen kalabalık aileler için tek başına bir seçim sebebi ve
+   * diğer beş bölgenin hiçbiri onu karşılamıyordu.
+   *
+   * Fotoğraf Levent'in iş kuleleri: bölgenin kendisi değil ama aynı
+   * koridorun karakteri ve zaten bir kez kullanılıyor. Vadistanbul'un
+   * kendi karesi elimizde yok — uydurma bir görsel koymaktansa yakın ve
+   * doğru etiketli bir kare duruyor.
+   */
+  {
+    key: "vadistanbul",
+    image: "/images/places/levent.jpg",
+    name: {
+      tr: "Vadistanbul ve Ayazağa",
+      ar: "وادي إسطنبول وأيازاغا",
+      en: "Vadistanbul and Ayazaga",
+    },
+    note: {
+      tr: "Otel odası yerine mutfaklı, geniş daire arayan kalabalık aileler için. Alışveriş merkezi çoğu otelin kendi vadisinde.",
+      ar: "لمن يريد شقة واسعة بمطبخ بدل غرفة الفندق، وللعائلات الكبيرة. والمركز التجاري في الوادي نفسه.",
+      en: "For larger families who want a kitchen and space rather than a hotel room. The mall sits in the same valley.",
+    },
+    practical: {
+      gettingAround: {
+        tr: "Ulaşım büyük ölçüde araçla. Metro hattı (Seyrantepe ve Ayazağa) yakın ama otellerin çoğundan yürünmüyor; transferi biz düzenliyoruz.",
+        ar: "التنقّل هنا بالسيارة غالباً. خطّ المترو (سيرانتبه وأيازاغا) قريب لكن لا يُمشى إليه من معظم الفنادق؛ ونحن ننظّم النقل.",
+        en: "Getting around is mostly by car. The metro (Seyrantepe and Ayazaga) is near but not walkable from most of the hotels; we arrange the transfers.",
+      },
+      watchOut: {
+        tr: "Tarihî yarımada uzak: Sultanahmet'e araçla kırk dakikadan fazla. Buraya yürüyerek gezilecek bir yer beklentisiyle gelinmez.",
+        ar: "شبه الجزيرة التاريخية بعيدة: أكثر من أربعين دقيقة بالسيارة إلى السلطان أحمد. لا تأتِ إلى هنا توقّعاً لمعالم تُزار مشياً.",
+        en: "The historic peninsula is far: over forty minutes by car to Sultanahmet. Do not come here expecting sights within walking distance.",
+      },
+      airport: {
+        tr: "İstanbul Havalimanı'na yaklaşık 30 km, trafiğe göre 35–50 dakika.",
+        ar: "نحو 30 كم إلى مطار إسطنبول، و35–50 دقيقة بحسب الزحام.",
+        en: "About 30 km to Istanbul Airport, 35–50 minutes depending on traffic.",
+      },
+    },
+    hotels: [
+      {
+        name: "Radisson Residences Vadistanbul",
+        desc: {
+          tr: "Ayazağa'da, mutfaklı daire tipi odalar; Vadistanbul alışveriş merkezi aynı vadide.",
+          ar: "في أيازاغا، شقق بمطبخ بدل الغرف؛ ومركز وادي إسطنبول في الوادي نفسه.",
+          en: "In Ayazaga; apartment-style rooms with kitchens, and the Vadistanbul mall in the same valley.",
+        },
+        tags: ["nearMalls"],
+      },
+      {
+        name: "Marriott Executive Apartments Istanbul Invest Vadi",
+        desc: {
+          tr: "Mutfaklı daire tipi konaklama; uzun kalışlar ve kalabalık aileler için kurulmuş.",
+          ar: "إقامة على هيئة شقق بمطبخ؛ مصمّمة للإقامات الطويلة والعائلات الكبيرة.",
+          en: "Apartment-style stays with kitchens, built for longer visits and larger families.",
+        },
+        tags: ["nearMalls"],
+      },
+      {
+        name: "Mövenpick Living İstanbul Saklıvadi",
+        desc: {
+          tr: "Saklıvadi'de, ana caddelerden geri çekilmiş; daire tipi odalar.",
+          ar: "في ساكلي وادي، بعيداً عن الشوارع الرئيسية؛ غرف على هيئة شقق.",
+          en: "In Saklivadi, set back from the main roads; apartment-style rooms.",
+        },
+        tags: ["nearMalls", "quiet"],
       },
     ],
   },

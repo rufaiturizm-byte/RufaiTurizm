@@ -1120,7 +1120,16 @@ export const guides: Guide[] = [
   {
     slug: "arapca-konusan-sofor-ve-rehber",
     topic: "practical",
-    image: "/images/chauffeur.jpg",
+    /*
+      Konu ARAÇ değil İNSAN: dilin seyahat konforunu nasıl belirlediği.
+      Burada stok bir şoför fotoğrafı vardı — Batılı bir adam, beyaz bir
+      minibüs — yani "Arapça konuşan şoför" anlatan sayfa, tam tersini
+      gösteren bir kareyle resimlenmişti.
+
+      Yerine çay ve Ayasofya: misafirperverlik ve sohbet, rehberin
+      anlattığı şeyin kendisi. Sitede yalnız bir kez kullanılıyordu.
+    */
+    image: "/images/places/cay-ayasofya.jpg",
     title: {
       tr: "Türkiye'de Arapça konuşan şoför ve rehber neden fark yaratır?",
       ar: "لماذا يُحدث السائق والمرشد الناطق بالعربية فرقاً في تركيا؟",

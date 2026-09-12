@@ -41,7 +41,14 @@ export async function TransferTypes() {
    * bakışta anlaşılıyor.
    */
   const types = [
-    { n: "1", icon: PlaneLanding, image: "/images/chauffeur.jpg" },
+    /*
+      1. adım havalimanı KARŞILAMA: kare de havalimanını gösteriyor.
+      Burada `chauffeur.jpg` vardı — stok bir minibüs fotoğrafı, üstelik
+      işletmediğimiz bir araç sınıfı. Adımın kendisi araçla değil
+      karşılamayla ilgili; havalimanı karesi hem doğru hem de sonraki üç
+      adımdaki araç fotoğraflarıyla tekrar oluşturmuyor.
+    */
+    { n: "1", icon: PlaneLanding, image: "/images/places/havalimani.jpg" },
     { n: "2", icon: PlaneTakeoff, image: "/images/fleet/vito-exterior.jpg" },
     { n: "3", icon: Route, image: "/images/tours/sapanca.jpg" },
     { n: "4", icon: CalendarClock, image: "/images/fleet/vito-fleet.jpg" },

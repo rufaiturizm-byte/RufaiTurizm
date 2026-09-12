@@ -120,8 +120,23 @@ export default async function ContactPage({
       />
 
       <PageHero
-        image="/images/chauffeur.jpg"
-        imageAlt={locale === "ar" ? "سائق محترف" : "Profesyonel şoför"}
+        /*
+          Kare değişti: burada `chauffeur.jpg` vardı ve alt metni
+          "Profesyonel şoför" diyordu. Kare stoktu — beyaz bir VW minibüs,
+          çam ormanı, yabancı bir şoför. Yani İLETİŞİM sayfasında, yani
+          ziyaretçinin "bunlar kim" sorusunu sorduğu yerde, başka birinin
+          fotoğrafı "bizim şoförümüz" diye etiketlenmişti.
+
+          Yerine kendi filomuzun ofis önündeki karesi kondu: arkada
+          RUFAI TURİZM tabelası okunuyor. İletişim sayfasının işi tam da
+          bu — nerede olduğumuzu göstermek.
+        */
+        image="/images/fleet/vito-exterior.jpg"
+        imageAlt={
+          locale === "ar"
+            ? "سيارات فيتو التابعة لنا أمام مكتب روفاي للسياحة"
+            : "Rufai Turizm ofisinin önünde kendi Vito araçlarımız"
+        }
         crumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("contact") },

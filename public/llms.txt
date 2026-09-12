@@ -50,9 +50,10 @@ Günlük özel turlar. [Tüm turlar](https://rufaiturizm.com/tr/turlar)
 ## Araçlar
 Şoförlü Mercedes Vito. Filoda beş araç var ve hepsi aynı model/donanımdadır;
 başka araç sınıfı (sedan, midibüs, otobüs) yoktur ve listelenmez.
-Sitedeki filo ve ofis fotoğraflarının tamamı işletmenin kendi çekimidir,
-stok görsel değildir (künye: public/images/fleet/KUNYE.md). Tek istisna
-public/images/chauffeur.jpg dosyasıdır ve stok olduğu künyede belirtilmiştir.
+Sitedeki filo fotoğraflarının tamamı işletmenin kendi çekimidir, stok
+görsel değildir (künye: public/images/fleet/KUNYE.md). Ana sayfanın giriş
+görseli ise yapay zekâ üretimidir ve künyede öyle belirtilmiştir; belirli
+bir aracı değil, işletilen araç SINIFINI temsil eder.
 
 ## Verilmeyen hizmetler
 Aşağıdakiler bilerek sunulmaz; site bunları hiçbir yerde vaat etmez:

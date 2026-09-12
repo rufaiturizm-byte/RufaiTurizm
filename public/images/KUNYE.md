@@ -8,7 +8,6 @@ bize ait OLMADIĞI belli olsun.
 |---|---|---|
 | `hero-vito-bogaz.jpg` | Boğaz kıyısında gün batımında siyah VIP minibüs | **YAPAY ZEKÂ ÜRETİMİ** (ChatGPT, 12.09.2026) |
 | `hero-ortakoy.jpg` | Ortaköy Camii ve Boğaz — *artık kullanılmıyor* | Unsplash (stok) |
-| `chauffeur.jpg` | Beyaz minibüs ve şoför — **aracımız değil** | Unsplash (stok) |
 | `kizkulesi.jpg` | Kız Kulesi | Unsplash (stok) |
 | `office.jpg` | Ofis içi | Unsplash (stok) |
 | `fleet/vito-*.jpg` | **Kendi filomuz**, ofis önünde çekildi | Rufai Turizm |
@@ -20,9 +19,8 @@ Ana sayfanın giriş görseli. **Gerçek bir fotoğraf değil, yapay zekâ ile
 
 - Kare bir SINIF anlatıyor, belirli bir aracı değil. Rufai gerçekten siyah
   Mercedes Vito işletiyor (bkz. `fleet/`), yani görsel var olan bir hizmeti
-  temsil ediyor — olmayan bir şeyi değil. `chauffeur.jpg` tam tersiydi:
-  beyaz bir VW minibüs, yani işletilmeyen bir araç sınıfı. O yüzden ana
-  sayfadan kaldırıldı.
+  temsil ediyor — olmayan bir şeyi değil. Silinen `chauffeur.jpg` tam
+  tersiydi: beyaz bir VW minibüs, yani işletilmeyen bir araç sınıfı.
 - Üzerinde plaka, yazı ya da "bu bizim aracımız" iddiası yok.
 - Alt metni de iddia kurmuyor: "Boğaz kıyısında gün batımında siyah VIP
   Vito" diyor, "filomuzdan bir araç" demiyor.

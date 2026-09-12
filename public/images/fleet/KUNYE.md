@@ -27,9 +27,16 @@ Bu değişiklikle iki metin de artık DOĞRU:
 
 ## Kalan stok görseller (bu klasörün dışında)
 
-`public/images/chauffeur.jpg` hâlâ stok bir şoför fotoğrafı. Gerçek bir
-şoför/ekip fotoğrafı geldiğinde aynı dosya adıyla değiştirilebilir;
-kod değişikliği gerekmez. Yer fotoğrafları için `public/images/places/KUNYE.md`.
+`chauffeur.jpg` 2026-09-12'de SİLİNDİ. Beyaz bir VW minibüs, çam ormanı ve
+yabancı bir şoför gösteriyordu — işletilmeyen bir araç sınıfı. Beş yerde
+basılıyordu ve ikisinde doğrudan yanlış bir şey söylüyordu: iletişim
+sayfasında alt metni "Profesyonel şoför" idi, "Arapça konuşan şoför ve
+rehber" rehberinin kapağıydı. Hepsi gerçek filo ya da yer fotoğraflarıyla
+değiştirildi.
+
+Gerçek bir şoför/ekip fotoğrafı çekildiğinde bu klasöre konabilir.
+Yer fotoğrafları için `public/images/places/KUNYE.md`, ana sayfa girişi
+için `public/images/KUNYE.md`.
 
 ## Fotoğraflardaki ayrıntılar
 

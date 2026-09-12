@@ -57,15 +57,53 @@ export default async function HomePage({
           hem markayı ayırıyor.
         */}
         <section className="relative isolate">
-          <Image
-            src="/images/hero-ortakoy.jpg"
-            alt={locale === "ar" ? "مسجد أورتاكوي ومضيق البوسفور" : "Ortaköy Camii ve Boğaz"}
-            fill
-            priority
-            sizes="100vw"
-          quality={60}
-            className="ken-burns -z-10 object-cover object-center"
-          />
+          {/*
+            Görsel bir SARMALAYICI içinde, çünkü Arapça'da aynalanıyor.
+
+            Karartma katmanı (`scrim-x`) yönle birlikte dönüyor: soldan
+            sağa akan gradyanın koyu ucu LTR'de solda, RTL'de sağda —
+            yani metnin altında. Fotoğrafın konusu bu yüzden metnin KARŞI
+            tarafında durmalı. Bu karede araç sağda: Türkçe ve İngilizce'de
+            metin solda olduğu için doğru, ama Arapça'da metin sağa geçiyor
+            ve araç metnin altında kalıyordu.
+
+            Çözüm aynalamak. Aynalama GÖRSELDE değil sarmalayıcıda: `ken-burns`
+            zaten `transform` ile ölçekliyor ve ikisi aynı öğede olsaydı
+            animasyon aynalamayı ezerdi. Ayrıca `prefers-reduced-motion`
+            animasyonu kapatıyor — aynalama orada da ayakta kalsın diye
+            ayrı öğede duruyor.
+
+            Kare aynalanmaya uygun: kabinde direksiyon görünmüyor (yoksa
+            sağdan direksiyonlu bir araç çıkardı, Türkiye'de yanlış olurdu),
+            üzerinde yazı ya da asimetrik bir amblem yok.
+          */}
+          <div className="hero-mirror absolute inset-0 -z-10 overflow-hidden">
+            <Image
+              src="/images/hero-vito-bogaz.jpg"
+              alt={
+                locale === "ar"
+                  ? "سيارة فيتو سوداء على ضفة البوسفور عند الغروب"
+                  : "Boğaz kıyısında gün batımında siyah VIP Vito"
+              }
+              fill
+              priority
+              sizes="100vw"
+              quality={72}
+              /*
+                Dar ekranda kırpma noktası araca kaydırılıyor.
+
+                Kare 16:9, mobil çerçeve ise neredeyse 2:3 — `object-cover`
+                genişliğin yaklaşık üçte birini bırakıp gerisini kesiyor.
+                Ortalandığında elde kalan şey aracın yalnız ön köşesiydi.
+
+                Yüzde 68 kaynağın KENDİ koordinatında: aynalama sarmalayıcıda
+                olduğu için burası her dilde aynı yeri gösteriyor, Arapça'da
+                sola düşüyor. Camiyi feda ediyoruz — dar ekranda ikisi birden
+                sığmıyor ve sayfanın sattığı şey araç.
+              */
+              className="ken-burns object-cover object-[68%_center] sm:object-center"
+            />
+          </div>
           <div
             className="absolute inset-0 -z-10 scrim-x"
           />

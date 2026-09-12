@@ -711,6 +711,21 @@ html {
   will-change: transform;
 }
 
+/*
+ * Hero fotoğrafı Arapça'da aynalanır.
+ *
+ * `scrim-x` yönle dönüyor (bkz. yukarısı): koyu uç her zaman metnin
+ * altında. Fotoğrafın konusu bu yüzden metnin karşı tarafında olmalı.
+ * Karede araç sağda duruyor — LTR'de doğru, RTL'de metnin altına
+ * düşüyordu.
+ *
+ * Aynalama GÖRSELDE değil sarmalayıcıda: `ken-burns` de `transform`
+ * kullanıyor ve aynı öğede olsalardı animasyon aynalamayı ezerdi.
+ */
+[dir="rtl"] .hero-mirror {
+  transform: scaleX(-1);
+}
+
 /* Aşağı kaydırma ipucu — ilk ekranın altında, sayfanın devamı olduğunu söyler. */
 @keyframes scroll-hint {
   0%, 100% { transform: translateY(0); opacity: 0.55; }

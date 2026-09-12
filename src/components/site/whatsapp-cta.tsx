@@ -72,35 +72,66 @@ export function WhatsAppLink({
  * transfer formunun tam genişlikteki yeşil "teklif al" düğmesinin ÜZERİNE
  * biniyordu — sayfanın en önemli eylemini kendi kopyası kapatıyordu.
  *
- * Çözüm düğmeyi taşımak değil, gereksiz olduğu anda çekmek: ekranda zaten
- * görünür bir WhatsApp çağrısı varken köşedeki ikinci çağrı hem fazlalık
- * hem engel. Görünür çağrı kalmayınca geri geliyor.
+ * Çözüm düğmeyi taşımak değil, ÜSTÜNE BİNDİĞİ anda çekmek.
+ *
+ * İlk hali "ekranda herhangi bir WhatsApp çağrısı görünüyorsa gizlen"
+ * diyordu ve bu kural fazla genişti. Tarayıcıda ölçüldü: ana sayfada
+ * yirmi üç satır içi çağrı var ve 10.275 piksellik sayfada ölçülen on
+ * sekiz kaydırma noktasının HİÇBİRİNDE düğme görünmüyordu — yani düğme
+ * fiilen ölüydü. Kural her zaman doğru çıkıyordu.
+ *
+ * Artık yalnız ekranın ALT ŞERİDİ sayılıyor (`rootMargin` ile alt %25).
+ * Düğme zaten orada duruyor; asıl sorun olan "formun gönder düğmesinin
+ * üstüne binme" durumu tam olarak o şeritte oluşuyor. Sayfanın ortasındaki
+ * bir çağrı düğmeyi artık gizlemiyor, çünkü ona engel de olmuyor.
+ *
+ * GÖRÜNÜRLÜK ÖLÇÜMDEN SONRA. Düğme kapalı başlıyor ve gözlemci karar
+ * verince açılıyor. Önceki hali açık başlıyordu: sunucu HTML'i düğmeyi
+ * görünür basıyor, hemen ardından JS gizliyordu ve kullanıcı sayfayı her
+ * yenilediğinde düğmenin bir an belirip kaybolduğunu görüyordu.
  */
 export function WhatsAppFloatingButton({ subject }: { subject?: string }) {
   const t = useTranslations("cta");
   const href = useWhatsAppUrl(subject);
-  const [hidden, setHidden] = useState(false);
+  const [gorunur, setGorunur] = useState(false);
 
   useEffect(() => {
     const targets = document.querySelectorAll("[data-wa-inline]");
-    if (!targets.length) return;
+    /*
+      Sayfada hiç satır içi çağrı yoksa gizlenecek bir sebep de yok.
 
-    const visible = new Set<Element>();
+      Güncelleme bir kare sonraya alınıyor: efektin gövdesinde doğrudan
+      `setState` çağırmak zincirleme render tetikleyebiliyor. Gözlemcinin
+      geri çağrısı da zaten eşzamansız çalışıyor, yani iki yol da aynı
+      anda karar veriyor.
+    */
+    if (!targets.length) {
+      const kare = requestAnimationFrame(() => setGorunur(true));
+      return () => cancelAnimationFrame(kare);
+    }
+
+    const cakisan = new Set<Element>();
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) visible.add(entry.target);
-          else visible.delete(entry.target);
+          if (entry.isIntersecting) cakisan.add(entry.target);
+          else cakisan.delete(entry.target);
         }
-        setHidden(visible.size > 0);
+        setGorunur(cakisan.size === 0);
       },
-      /* Biraz erken çekilsin: düğme çağrının tam üstüne gelmeden önce. */
-      { rootMargin: "-40px 0px -40px 0px" },
+      /*
+        Kök, ekranın yalnız ALT %25'i. Üstteki eksi değer görüş alanının
+        üst dörtte üçünü kesiyor; alttaki 40 piksel de düğme çağrının tam
+        üstüne gelmeden biraz erken çekilsin diye.
+      */
+      { rootMargin: "-75% 0px -40px 0px" },
     );
 
     targets.forEach((target) => observer.observe(target));
     return () => observer.disconnect();
   }, []);
+
+  const hidden = !gorunur;
 
   return (
     <a

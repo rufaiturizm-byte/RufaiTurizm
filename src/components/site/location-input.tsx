@@ -36,6 +36,7 @@ const IKON: Record<LocationKind, typeof MapPin> = {
   district: MapPin,
   hotel: Building2,
   mall: ShoppingBag,
+  landmark: Landmark,
 };
 
 export function LocationInput({

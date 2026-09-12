@@ -853,7 +853,8 @@
       "airport": "airport",
       "district": "area",
       "hotel": "hotel",
-      "mall": "mall"
+      "mall": "mall",
+      "landmark": "landmark"
     }
   },
   "trustBoxes": {

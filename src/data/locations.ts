@@ -30,7 +30,7 @@ import { destinations } from "./destinations";
 
 type Text = { tr: string; ar: string; en: string };
 
-export type LocationKind = "airport" | "district" | "hotel" | "mall";
+export type LocationKind = "airport" | "district" | "hotel" | "mall" | "landmark";
 
 export interface LocationOption {
   id: string;
@@ -176,6 +176,114 @@ const oteller: LocationOption[] = hotelAreas.flatMap((area) =>
 );
 
 /*
+ * Ziyaret noktaları — transferin gerçekten gittiği yerler.
+ *
+ * NEDEN VAR. Transfer yalnız havalimanı–otel arası değil: misafir gün
+ * içinde Ayasofya'ya, Kapalıçarşı'ya, Çamlıca'ya gidiyor ve formu o yer
+ * adıyla dolduruyor. Liste bunları tanımazsa ziyaretçi ya serbest yazıyor
+ * (yazım tutmuyor) ya da vazgeçiyor.
+ *
+ * SEÇİM ARAMA VERİSİNE DAYANIYOR, hevese değil. Körfez pazarının Arapça
+ * arama verisinde İstanbul tek başına sayfa adaylarının %60'ını tutuyor ve
+ * gezi kümesindeki hacim bu noktalara dağılıyor. Listeye ayrıca sitenin
+ * KENDİ rehberlerinin anlattığı günübirlik noktalar alındı — Sapanca,
+ * Maşukiye, Uludağ, Abant, Şile, Ağva — çünkü o sayfalar zaten bu yerleri
+ * anlatıyor ve misafir oradan geliyor.
+ *
+ * Arapça karşılıklar yaygın okunuşlar; Latin adlar `aliases` içinde,
+ * çünkü telefon klavyesiyle yazan Latin harf kullanıyor.
+ *
+ * BURASI ELLE YAZILAN İKİNCİ VE SON YER (diğeri AVM'ler). Geri kalan her
+ * şey sitenin kendi verisinden türüyor.
+ */
+const yerler: LocationOption[] = [
+  {
+    id: "landmark-ayasofya",
+    kind: "landmark",
+    name: { tr: "Ayasofya", ar: "آيا صوفيا", en: "Hagia Sophia" },
+    aliases: ["ayasofya", "hagia sophia", "sultanahmet"],
+  },
+  {
+    id: "landmark-kapalicarsi",
+    kind: "landmark",
+    name: { tr: "Kapalıçarşı", ar: "السوق المسقوف", en: "Grand Bazaar" },
+    aliases: ["kapalicarsi", "grand bazaar", "carsi"],
+  },
+  {
+    id: "landmark-dolmabahce",
+    kind: "landmark",
+    name: { tr: "Dolmabahçe Sarayı", ar: "قصر دولما بهتشه", en: "Dolmabahce Palace" },
+    aliases: ["dolmabahce", "dolmabahce palace", "saray"],
+  },
+  {
+    id: "landmark-galata",
+    kind: "landmark",
+    name: { tr: "Galata Kulesi", ar: "برج غلطة", en: "Galata Tower" },
+    aliases: ["galata", "galata tower", "kule"],
+  },
+  {
+    id: "landmark-eminonu",
+    kind: "landmark",
+    name: { tr: "Eminönü", ar: "أمينونو", en: "Eminonu" },
+    aliases: ["eminonu", "misir carsisi", "spice bazaar"],
+  },
+  {
+    id: "landmark-uskudar",
+    kind: "landmark",
+    name: { tr: "Üsküdar", ar: "أسكودار", en: "Uskudar" },
+    aliases: ["uskudar"],
+  },
+  {
+    id: "landmark-camlica",
+    kind: "landmark",
+    name: { tr: "Çamlıca Tepesi", ar: "تلة تشامليجا", en: "Camlica Hill" },
+    aliases: ["camlica", "camlica hill", "tepe"],
+  },
+  {
+    id: "landmark-eyupsultan",
+    kind: "landmark",
+    name: { tr: "Eyüpsultan ve Pierre Loti", ar: "أيوب سلطان وبيير لوتي", en: "Eyupsultan and Pierre Loti" },
+    aliases: ["eyup", "eyupsultan", "pierre loti"],
+  },
+  {
+    id: "landmark-balat",
+    kind: "landmark",
+    name: { tr: "Balat", ar: "بالاط", en: "Balat" },
+    aliases: ["balat", "fener"],
+  },
+  {
+    id: "landmark-adalar",
+    kind: "landmark",
+    name: { tr: "Adalar", ar: "جزر الأمراء", en: "Princes' Islands" },
+    aliases: ["adalar", "buyukada", "princes islands"],
+  },
+  {
+    id: "landmark-masukiye",
+    kind: "landmark",
+    name: { tr: "Maşukiye", ar: "معشوقية", en: "Masukiye" },
+    aliases: ["masukiye", "sapanca"],
+  },
+  {
+    id: "landmark-uludag",
+    kind: "landmark",
+    name: { tr: "Uludağ", ar: "أولوداغ", en: "Uludag" },
+    aliases: ["uludag", "bursa"],
+  },
+  {
+    id: "landmark-abant",
+    kind: "landmark",
+    name: { tr: "Abant Gölü", ar: "بحيرة أبانت", en: "Lake Abant" },
+    aliases: ["abant", "bolu"],
+  },
+  {
+    id: "landmark-sile-agva",
+    kind: "landmark",
+    name: { tr: "Şile ve Ağva", ar: "شيلا وأغوا", en: "Sile and Agva" },
+    aliases: ["sile", "agva"],
+  },
+];
+
+/*
  * Alışveriş merkezleri — bu dosyadaki TEK elle yazılmış veri.
  *
  * Sitede hiçbir yerde kayıtlı değiller ama transferin gerçek bir kalkış
@@ -238,6 +346,7 @@ export const locationOptions: LocationOption[] = tekille([
   ...rotaSemtleri,
   ...otelBolgeleri,
   ...sehirler,
+  ...yerler,
   ...avmler,
   ...oteller,
 ]);

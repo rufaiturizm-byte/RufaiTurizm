@@ -853,7 +853,8 @@
       "airport": "مطار",
       "district": "منطقة",
       "hotel": "فندق",
-      "mall": "مركز تسوّق"
+      "mall": "مركز تسوّق",
+      "landmark": "معلم سياحي"
     }
   },
   "trustBoxes": {

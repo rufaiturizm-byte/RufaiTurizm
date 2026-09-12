@@ -853,7 +853,8 @@
       "airport": "havalimanı",
       "district": "bölge",
       "hotel": "otel",
-      "mall": "AVM"
+      "mall": "AVM",
+      "landmark": "gezi noktası"
     }
   },
   "trustBoxes": {

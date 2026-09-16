@@ -203,9 +203,9 @@ export const packages: Package[] = [
               en: "Hotel class and district",
             },
             body: {
-              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
-              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
-              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+              tr: "Programın otel kısmını siz seçiyorsunuz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
             },
           },
           {
@@ -372,9 +372,9 @@ export const packages: Package[] = [
               en: "Hotel class and district",
             },
             body: {
-              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
-              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
-              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+              tr: "Programın otel kısmını siz seçiyorsunuz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
             },
           },
           {
@@ -561,9 +561,9 @@ export const packages: Package[] = [
               en: "Hotel class and district",
             },
             body: {
-              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
-              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
-              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+              tr: "Programın otel kısmını siz seçiyorsunuz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
+              en: "You choose the hotel part of the programme. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
             },
           },
           {
@@ -762,9 +762,9 @@ export const packages: Package[] = [
               en: "Hotel class and district",
             },
             body: {
-              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
-              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
-              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+              tr: "Programın otel kısmını siz seçiyorsunuz. Günlük geziler şehir merkezinden çıktığı için otel merkezde kalıyor; aynı program orada üç yıldızla da beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم. ولأنّ الرحلات اليومية تنطلق من مركز المدينة يبقى الفندق في مركز طرابزون؛ والبرنامج نفسه يمكن أن يُبنى هناك بثلاث نجوم أو بخمس نجوم.",
+              en: "You choose the hotel part of the programme. The day trips leave from the city, so the hotel stays in central Trabzon; the same programme can be built there around three stars or five.",
             },
           },
           {
@@ -943,9 +943,9 @@ export const packages: Package[] = [
               en: "Hotel class and district",
             },
             body: {
-              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
-              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
-              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+              tr: "Programın otel kısmını siz seçiyorsunuz. Aynı program şehir merkezinde üç yıldızla da Belek'te beş yıldızla da kurulabiliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في مركز المدينة أو بخمس نجوم في بيليك.",
+              en: "You choose the hotel part of the programme. The same programme can be built around three stars in the city centre or five in Belek.",
             },
           },
           {
@@ -1156,9 +1156,9 @@ export const packages: Package[] = [
               en: "Hotel class and district",
             },
             body: {
-              tr: "Programın otel kısmını siz seçiyorsunuz — anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Aynı program Sultanahmet'te üç yıldızla da Boğaz kıyısında beş yıldızla da kurulabiliyor.",
-              ar: "الجزء الفندقي من البرنامج تختارونه أنتم — ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. والبرنامج نفسه يمكن أن يُبنى بثلاث نجوم في السلطان أحمد أو بخمس نجوم على ضفّة البوسفور.",
-              en: "You choose the hotel part of the programme — we have no list of partner hotels and we add no commission to the price. The same programme can be built around three stars in Sultanahmet or five on the Bosphorus shore.",
+              tr: "Programın otel kısmını siz seçiyorsunuz. Aynı program Bodrum merkezde de Yalıkavak'ta da kurulabiliyor; fiyatı koy ve otel sınıfı birlikte belirliyor.",
+              ar: "الجزء الفندقي من البرنامج تختارونه أنتم. والبرنامج نفسه يمكن أن يُبنى في مركز بودروم أو في ياليكافاك؛ والسعر يحدّده الخليج وفئة الفندق معاً.",
+              en: "You choose the hotel part of the programme. The same programme can be built in Bodrum town or in Yalıkavak; the bay and the hotel class set the price together.",
             },
           },
           {

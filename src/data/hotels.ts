@@ -500,8 +500,7 @@ export const hotelAreas: HotelArea[] = [
    * "misafirlerimizin en çok tercih ettiği oteller" diyor — bu, gerçek
    * rezervasyon geçmişine dayanan bir cümle. Antalya ve Bodrum'da
    * yeni çalışmaya başladık; aynı cümleyi oralar için kurmak yanlış
-   * olurdu ve sayfanın en başındaki "anlaşmalı otel listesi değildir"
-   * uyarısıyla da çelişirdi.
+   * olurdu.
    *
    * Onun yerine sahilde asıl sorulan şey cevaplanıyor. İstanbul'da
    * misafir önce semti seçip sonra otele bakıyor; Antalya'da ise karar

@@ -284,7 +284,7 @@
         },
         {
           "question": "Hangi otelleri öneriyorsunuz?",
-          "answer": "Sitemizdeki oteller sayfasında İstanbul'un dört ana bölgesinde öne çıkan otelleri semt semt listeledik. Bu bir anlaşmalı otel listesi değil, nerede kalacağınıza karar vermenize yardımcı olacak bir yol haritası. Seçtiğiniz oteli sizin adınıza rezerve edebiliriz."
+          "answer": "Sitemizdeki oteller sayfasında İstanbul'un dört ana bölgesinde öne çıkan otelleri semt semt listeledik. Liste, nerede kalacağınıza karar vermenize yardımcı olmak için hazırlandı. Seçtiğiniz oteli sizin adınıza rezerve edebiliriz."
         },
         {
           "question": "Uçak biletimi sonradan değiştirebilir miyim?",
@@ -300,7 +300,7 @@
         },
         {
           "question": "Apart otel ya da daire rezervasyonu yapıyor musunuz?",
-          "answer": "Hayır. Aparthotel ve günlük daire kiralama hizmeti vermiyoruz ve bu konuda aracılık da yapmıyoruz. Otel rezervasyonu yapıyoruz; oteli siz seçiyorsunuz, biz sizin adınıza rezerve ediyor ve fiyatın üstüne komisyon koymuyoruz. Yapmadığımız bir işi yapıyormuş gibi göstermemeyi tercih ediyoruz."
+          "answer": "Hayır. Aparthotel ve günlük daire kiralama hizmeti vermiyoruz ve bu konuda aracılık da yapmıyoruz. Otel rezervasyonu yapıyoruz; oteli siz seçiyorsunuz, biz fiyatı otelden alıp sizin adınıza rezerve ediyoruz. Yapmadığımız bir işi yapıyormuş gibi göstermemeyi tercih ediyoruz."
         },
         {
           "question": "Ödemeyi varışta yapabilir miyim?",
@@ -312,7 +312,7 @@
       "sections": [
         {
           "heading": "Neden rezervasyonu bize yaptırasınız",
-          "body": "Oteli kendiniz de rezerve edebilirsiniz ve bunu açıkça söylüyoruz. Booking ya da otelin kendi sitesi üzerinden yapılan rezervasyon çoğu zaman sorunsuz yürüyor.\n\nBizden istemenizin tek makul sebebi şu: semti bilmek ve doğru soruları sormak. Otel ilanında yazmayan şeyleri biz soruyoruz — oda hangi katta, penceresi nereye bakıyor, banyoda şattaf var mı, aile odası gerçekten tek oda mı yoksa yan yana iki oda mı, ilave yatak ücretli mi.\n\nAnlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Bu yüzden sizi belirli bir otele yönlendirmek gibi bir çıkarımız yok; hangi otelin size uyduğunu söylerken kendi cebimize bakmıyoruz.\n\nOtelin cevabını olduğu gibi iletiyoruz. Otel emin değilse \"emin değil\" diyoruz; bizim tahminimizi otelin sözü gibi göstermiyoruz."
+          "body": "Oteli kendiniz de rezerve edebilirsiniz ve bunu açıkça söylüyoruz. Booking ya da otelin kendi sitesi üzerinden yapılan rezervasyon çoğu zaman sorunsuz yürüyor.\n\nBizden istemenizin tek makul sebebi şu: semti bilmek ve doğru soruları sormak. Otel ilanında yazmayan şeyleri biz soruyoruz — oda hangi katta, penceresi nereye bakıyor, banyoda şattaf var mı, aile odası gerçekten tek oda mı yoksa yan yana iki oda mı, ilave yatak ücretli mi.\n\nOtelin cevabını olduğu gibi iletiyoruz. Otel emin değilse \"emin değil\" diyoruz; bizim tahminimizi otelin sözü gibi göstermiyoruz."
         },
         {
           "heading": "Otel seçerken sorduğumuz sorular",

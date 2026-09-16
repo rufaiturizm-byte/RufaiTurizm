@@ -105,9 +105,9 @@ export const banners: PromoBanner[] = [
       en: "You choose the hotel, we make the booking",
     },
     description: {
-      tr: "Anlaşmalı otel listemiz yok ve fiyatın üstüne komisyon koymuyoruz. Bölgeyi, bütçeyi ve kaç kişi olduğunuzu söyleyin; uygun seçenekleri çıkarıp adınıza rezerve edelim.",
-      ar: "ليست لدينا قائمة فنادق متعاقدة ولا نضيف عمولة على السعر. قل لنا المنطقة والميزانية وعدد الأشخاص؛ نستخرج الخيارات المناسبة ونحجز باسمك.",
-      en: "We have no list of partner hotels and we add no commission to the price. Tell us the area, the budget and how many you are; we will find the options and book in your name.",
+      tr: "Fiyatı otelden biz alıyoruz. Bölgeyi, bütçeyi ve kaç kişi olduğunuzu söyleyin; uygun seçenekleri çıkarıp adınıza rezerve edelim.",
+      ar: "نحن نأخذ السعر من الفندق. قل لنا المنطقة والميزانية وعدد الأشخاص؛ نستخرج الخيارات المناسبة ونحجز باسمك.",
+      en: "We get the price from the hotel. Tell us the area, the budget and how many you are; we will find the options and book in your name.",
     },
   },
   {

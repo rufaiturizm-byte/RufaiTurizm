@@ -47,10 +47,9 @@ export async function generateMetadata({
  * tek cümleyle geçiyordu; oysa Körfez'den gelen misafirin uçak biletinden
  * sonraki ilk sorusu "nerede kalayım". Sayfa o soruyu semt semt cevaplıyor.
  *
- * Liste bilerek "anlaşmalı otellerimiz" DEĞİL diye kuruldu ve bunu sayfada
- * açıkça yazıyor: olmayan bir ortaklığı ima etmek, sitenin geri kalanında
- * kurmaya çalıştığımız güveni ilk rezervasyonda bozar. Aynı sebeple fiyat,
- * yıldız ve müsaitlik yok — üçü de doğrulayamadığımız bilgiler.
+ * Liste ortaklık iddiası taşımıyor, inkâr da etmiyor — gerekçesi
+ * `src/data/hotels.ts` başında. Fiyat ve müsaitlik yok; yıldız yalnız
+ * işletmenin sınıfını bildirdiği otellerde var.
  *
  * Fotoğraflar SEMT fotoğrafı ve öyle etiketleniyor: o otellerin görsel
  * kullanım hakkına sahip değiliz, başka bir fotoğrafı otelin fotoğrafı
@@ -125,8 +124,8 @@ export default async function HotelsPage({
               söyleyen cümle ekrana hiç gelmiyordu; yani karar doğruydu,
               beyanı eksikti.
 
-              Üstteki `disclaimer` fiyatı ve "anlaşmalı otel değil"i
-              anlatıyor, fotoğrafa değinmiyordu.
+              Üstteki `disclaimer` fiyatı anlatıyor, fotoğrafa
+              değinmiyordu.
             */}
             <p className="mt-2 text-[12.5px] leading-[1.7] text-muted-foreground">
               {t("photoNote")}

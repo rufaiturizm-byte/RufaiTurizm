@@ -284,7 +284,7 @@
         },
         {
           "question": "Which hotels do you recommend?",
-          "answer": "The hotels page on our site lists notable hotels across four main districts of Istanbul, neighbourhood by neighbourhood. It is not a list of partner hotels — it is a map to help you decide where to stay. We can book the hotel you choose on your behalf."
+          "answer": "The hotels page on our site lists notable hotels across four main districts of Istanbul, neighbourhood by neighbourhood. It is there to help you decide where to stay. We can book the hotel you choose on your behalf."
         },
         {
           "question": "Can I change my flight ticket later?",
@@ -300,7 +300,7 @@
         },
         {
           "question": "Do you book serviced apartments or daily flats?",
-          "answer": "No. We do not offer serviced apartments or daily flat rentals, and we do not broker them either. We book hotels; you choose the hotel, we book it in your name and add no commission to the price. We would rather not present ourselves as doing work we do not do."
+          "answer": "No. We do not offer serviced apartments or daily flat rentals, and we do not broker them either. We book hotels; you choose the hotel, we get the price from the hotel and book it in your name. We would rather not present ourselves as doing work we do not do."
         },
         {
           "question": "Can I pay on arrival?",
@@ -312,7 +312,7 @@
       "sections": [
         {
           "heading": "Why let us handle the booking",
-          "body": "You can book the hotel yourself, and we say so plainly. A booking made through Booking.com or the hotel's own site usually goes through without trouble.\n\nThe one sensible reason to ask us is knowing the district and asking the right questions. We ask what the listing does not say — which floor the room is on, what the window faces, whether the bathroom has a bidet spray, whether a family room is genuinely one room or two adjoining, whether an extra bed is charged.\n\nWe have no list of partner hotels and we add no commission to the price. So we have no interest in steering you to a particular one; when we say which hotel suits you, we are not looking at our own pocket.\n\nWe pass on the hotel's answer as it is. If the hotel is unsure, we say \"unsure\"; we do not present our guess as the hotel's word."
+          "body": "You can book the hotel yourself, and we say so plainly. A booking made through Booking.com or the hotel's own site usually goes through without trouble.\n\nThe one sensible reason to ask us is knowing the district and asking the right questions. We ask what the listing does not say — which floor the room is on, what the window faces, whether the bathroom has a bidet spray, whether a family room is genuinely one room or two adjoining, whether an extra bed is charged.\n\nWe pass on the hotel's answer as it is. If the hotel is unsure, we say \"unsure\"; we do not present our guess as the hotel's word."
         },
         {
           "heading": "The questions we ask when choosing a hotel",

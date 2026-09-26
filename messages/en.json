@@ -1066,6 +1066,26 @@
     "airportLabel": "Distance to the airport",
     "starsLabel": "{count}-star hotel"
   },
+  "hotelPage": {
+    "eyebrow": "Hotel",
+    "factsTitle": "About the hotel",
+    "addressLabel": "Address",
+    "transitLabel": "Public transport",
+    "roomsLabel": "Rooms",
+    "openedLabel": "Opened",
+    "featuresLabel": "What the hotel has",
+    "officialLabel": "The hotel's own website",
+    "areaTitle": "What {area} is like",
+    "transferTitle": "From the airport to this hotel",
+    "transferText": "We meet you at the airport with a name board and take you straight to the hotel. The price is per car, not per person.",
+    "transferCta": "See the transfer service",
+    "nearbyTitle": "Other hotels in the same area",
+    "listCta": "Back to all hotels",
+    "askTitle": "Ask about this hotel",
+    "askText": "Tell us the dates, how many you are and the room type; we confirm availability and price with the hotel and send them to you. We book in your name.",
+    "sourceNote": "The details above come from the hotel's own website. Price, availability and room type are confirmed with the hotel at booking.",
+    "metaDescription": "{name}: staying in {district}. Location, transport and distance from the airport; we book in your name."
+  },
   "meta": {
     "home": "Rufai Tourism: Istanbul airport transfers, Arabic-guided tours, a chauffeured Mercedes Vito, flight tickets and hotel bookings. Fixed prices, 24/7 WhatsApp.",
     "transfer": "Airport transfers from Istanbul (IST), Sabiha Gokcen (SAW), Antalya, Bodrum and Trabzon: meet and greet with a name sign, flight tracking, fixed price.",

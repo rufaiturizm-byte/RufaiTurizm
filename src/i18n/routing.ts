@@ -128,6 +128,17 @@ export const pathnames = {
     tr: "/oteller",
     en: "/hotels",
   },
+  /*
+   * Otel sayfaları. Körfez misafiri oteli ADIYLA arıyor ("فندق سي في كي
+   * تقسيم إسطنبول") ve bu sorgularda rekabet düşük. Liste sayfasındaki tek
+   * satır bu aramayı karşılamıyor; birlikte çalışılan otellerin her birinin
+   * kendi sayfası var. Slug latin, diğer detay sayfalarıyla aynı düzen.
+   */
+  "/hotels/[slug]": {
+    ar: "/فنادق-إسطنبول/[slug]",
+    tr: "/oteller/[slug]",
+    en: "/hotels/[slug]",
+  },
 } as const;
 
 export const routing = defineRouting({

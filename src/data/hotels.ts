@@ -49,7 +49,42 @@ export interface HotelArea {
    */
   hotels?: {
     name: string;
+    /**
+     * Kendi sayfası olan oteller için URL parçası.
+     *
+     * İSTEĞE BAĞLI VE ÖYLE KALMALI: sayfa yalnız birlikte çalışılan,
+     * yani hakkında doğrulanmış bilgi verebildiğimiz otellerde açılıyor.
+     * Slug'ı olmayan otel listede bir satır olarak kalır ve sayfası
+     * üretilmez — otuz üç otelin hepsine bir sayfa açmak, çoğu hakkında
+     * iki cümleden fazlasını söyleyemeyeceğimiz için ince içerik olurdu.
+     */
+    slug?: string;
     desc: Text;
+    /*
+     * Otel sayfasında basılan DOĞRULANMIŞ olgular.
+     *
+     * Hepsi otelin kendi resmî sitesinden alınıyor ve alan alan isteğe
+     * bağlı: kaynakta yazmayan şey burada da boş kalır ve sayfada o satır
+     * hiç görünmez. Tahmin yazmak bu dosyanın tek kuralını bozar —
+     * doğrulayamadığımız hiçbir şeyi yazmıyoruz.
+     *
+     * Fiyat ve müsaitlik burada da YOK: ikisi de tarihe göre değişiyor ve
+     * sitede yazılı bir rakam ilk rezervasyonda yanlış çıkar.
+     */
+    facts?: {
+      /** Resmî sitedeki açık adres. */
+      address?: string;
+      /** En yakın metro/tramvay ve yürüme mesafesi. */
+      transit?: Text;
+      /** Oda ya da daire sayısı. */
+      rooms?: number;
+      /** Açılış yılı. */
+      opened?: number;
+      /** Doğrulanmış somut özellikler — havuz, spa, aile odası gibi. */
+      features?: Text[];
+      /** Otelin resmî sitesi; bilginin kaynağı. */
+      officialUrl?: string;
+    };
     tags: string[];
     /**
      * Otelin yıldız sınıfı.
@@ -233,6 +268,39 @@ export const hotelAreas: HotelArea[] = [
       },
           {
         name: "CVK Park Bosphorus Hotel Istanbul",
+        slug: "cvk-park-bosphorus",
+        facts: {
+          address: "Gümüşsuyu Mah. İnönü Cad. No:8, 34437 İstanbul",
+          opened: 2013,
+          features: [
+            {
+              tr: "Cam çatı altında kapalı havuz",
+              ar: "مسبح داخلي تحت سقف زجاجي",
+              en: "An indoor pool under a glass roof",
+            },
+            {
+              tr: "Türk hamamı, sauna ve fitness merkezi",
+              ar: "حمّام تركي وساونا ومركز لياقة",
+              en: "A Turkish hammam, sauna and fitness centre",
+            },
+            {
+              tr: "76 m², dört kişilik aile suiti",
+              ar: "جناح عائلي بمساحة 76 م² يتّسع لأربعة أشخاص",
+              en: "A 76 m² family suite for four",
+            },
+            {
+              tr: "Üç yeme-içme noktası: Izaka Terrace, Kumiko Sushi ve Hezarfen Lounge",
+              ar: "ثلاثة أماكن للطعام والشراب: إيزاكا تراس وكوميكو سوشي وهزارفن لاونج",
+              en: "Three places to eat and drink: Izaka Terrace, Kumiko Sushi and Hezarfen Lounge",
+            },
+            {
+              tr: "Tarihî Park Hotel binasının yerinde",
+              ar: "في موقع فندق بارك التاريخي",
+              en: "On the site of the historic Park Hotel",
+            },
+          ],
+          officialUrl: "https://www.cvkhotelsandresorts.com/park-bosphorus-hotel/",
+        },
         stars: 5,
         desc: {
           tr: "Gümüşsuyu'nda, Taksim Meydanı'na yürüme mesafesinde; odaların bir bölümü Boğaz'a bakıyor.",
@@ -243,6 +311,43 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Sofitel Istanbul Taksim",
+        slug: "sofitel-taksim",
+        facts: {
+          address: "Gümüşsuyu Mah. Sıraselviler Cad. No:13, Taksim, 34437 İstanbul",
+          transit: {
+            tr: "Taksim metro istasyonu 50 metre (iki dakika yürüme); nostaljik tramvay 100 metre.",
+            ar: "محطة مترو تقسيم على بعد 50 متراً (دقيقتان مشياً)؛ والترام النوستالجي على بعد 100 متر.",
+            en: "Taksim metro station is 50 m away, a two-minute walk; the nostalgic tram is 100 m.",
+          },
+          features: [
+            {
+              tr: "Kapalı havuz ve sezonluk çatı havuzu",
+              ar: "مسبح داخلي ومسبح موسمي على السطح",
+              en: "An indoor pool and a seasonal rooftop pool",
+            },
+            {
+              tr: "Spa ve fitness merkezi",
+              ar: "سبا ومركز لياقة",
+              en: "A spa and fitness centre",
+            },
+            {
+              tr: "İki yatak odalı aile dubleks suiti",
+              ar: "جناح عائلي دوبلكس بغرفتَي نوم",
+              en: "A two-bedroom family duplex suite",
+            },
+            {
+              tr: "Kapalı ve vale otopark (ücretli)",
+              ar: "موقف مغلق وخدمة صفّ السيارات (بمقابل)",
+              en: "Indoor and valet parking, both paid",
+            },
+            {
+              tr: "Altı toplantı salonu",
+              ar: "ست قاعات اجتماعات",
+              en: "Six meeting rooms",
+            },
+          ],
+          officialUrl: "https://sofitel.accor.com/en/hotels/B656.html",
+        },
         stars: 5,
         desc: {
           tr: "Taksim Meydanı'nın arkasında; metro ve İstiklal Caddesi yürüme mesafesinde.",
@@ -253,6 +358,38 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Arts Hotel Harbiye",
+        slug: "arts-hotel-harbiye",
+        facts: {
+          address: "Halaskargazi Cad. No:1, Harbiye, Şişli, 34367 İstanbul",
+          features: [
+            {
+              tr: "Kapalı havuz, Türk hamamı, sauna ve buhar odası",
+              ar: "مسبح داخلي وحمّام تركي وساونا وغرفة بخار",
+              en: "An indoor pool, Turkish hammam, sauna and steam room",
+            },
+            {
+              tr: "Fitness merkezi (09.00–22.00)",
+              ar: "مركز لياقة من التاسعة صباحاً حتى العاشرة مساءً",
+              en: "A fitness centre, open 09:00–22:00",
+            },
+            {
+              tr: "Çocuk havuzu",
+              ar: "مسبح للأطفال",
+              en: "A children's pool",
+            },
+            {
+              tr: "Restoran ve bar",
+              ar: "مطعم وبار",
+              en: "A restaurant and bar",
+            },
+            {
+              tr: "65 m² teraslı, Boğaz manzaralı aile odası: dört yetişkin ve bir çocuk",
+              ar: "غرفة عائلية بمساحة 65 م² بتراس وإطلالة على البوسفور: أربعة بالغين وطفل",
+              en: "A 65 m² family room with a terrace and Bosphorus view, for four adults and a child",
+            },
+          ],
+          officialUrl: "https://artshotel.com.tr/harbiye/",
+        },
         stars: 4,
         desc: {
           tr: "Harbiye'de, Nişantaşı'nın alışveriş caddelerine ve Osmanbey metrosuna yakın.",
@@ -263,6 +400,44 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Grand Aras Hotel",
+        slug: "grand-aras",
+        facts: {
+          address: "Merkez Mah. Büyükdere Cad. No:13, Şişli, 34384 İstanbul",
+          transit: {
+            tr: "Şişli metro istasyonu 350 metre.",
+            ar: "محطة مترو شيشلي على بعد 350 متراً.",
+            en: "Şişli metro station is 350 m away.",
+          },
+          rooms: 134,
+          features: [
+            {
+              tr: "Hamam, sauna, buhar odası ve masaj odası",
+              ar: "حمّام تركي وساونا وغرفة بخار وغرفة مساج",
+              en: "A hammam, sauna, steam room and massage room",
+            },
+            {
+              tr: "Fitness merkezi",
+              ar: "مركز لياقة",
+              en: "A fitness centre",
+            },
+            {
+              tr: "Restoran",
+              ar: "مطعم",
+              en: "A restaurant",
+            },
+            {
+              tr: "Mutfaklı 45 suit: 33 adet bir yatak odalı, 12 adet iki yatak odalı",
+              ar: "45 جناحاً بمطبخ: 33 بغرفة نوم واحدة و12 بغرفتَي نوم",
+              en: "45 suites with kitchens: 33 with one bedroom and 12 with two",
+            },
+            {
+              tr: "Yirmi dört saat görevli, kameralı kapalı otopark",
+              ar: "موقف مغلق بكاميرات وحراسة على مدار الساعة",
+              en: "A secured indoor car park, staffed around the clock",
+            },
+          ],
+          officialUrl: "https://www.grandaras.com/",
+        },
         stars: 4,
         desc: {
           tr: "Büyükdere Caddesi üzerinde, Şişli'de; Mecidiyeköy metrosuna ve Cevahir'e yakın.",
@@ -273,6 +448,44 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Arise Hotel Golden Horn",
+        slug: "arise-golden-horn",
+        facts: {
+          address: "İmrahor Cad. Sivaseli Sok. No:10-20, Sütlüce, Beyoğlu, İstanbul",
+          rooms: 185,
+          features: [
+            {
+              tr: "Haliç manzaralı restoran ve teras",
+              ar: "مطعم وتراس بإطلالة على القرن الذهبي",
+              en: "A restaurant and terrace overlooking the Golden Horn",
+            },
+            {
+              tr: "Lobi bar ve yirmi dört saat oda servisi",
+              ar: "بار في اللوبي وخدمة غرف على مدار الساعة",
+              en: "A lobby bar and 24-hour room service",
+            },
+            {
+              tr: "Fitness merkezi",
+              ar: "مركز لياقة",
+              en: "A fitness centre",
+            },
+            {
+              tr: "Ara kapılı aile odaları",
+              ar: "غرف عائلية بأبواب متّصلة",
+              en: "Family rooms with interconnecting doors",
+            },
+            {
+              tr: "40 m², Haliç manzaralı suitler",
+              ar: "أجنحة بمساحة 40 م² بإطلالة على القرن الذهبي",
+              en: "40 m² suites facing the Golden Horn",
+            },
+            {
+              tr: "LEED sertifikalı bina",
+              ar: "مبنى حاصل على شهادة LEED",
+              en: "A LEED-certified building",
+            },
+          ],
+          officialUrl: "https://www.arise.tr/",
+        },
         stars: 4,
         desc: {
           tr: "Sütlüce'de, Haliç kıyısında; tarihî yarımadaya karşı kıyıdan bakıyor.",
@@ -330,6 +543,44 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Swissôtel The Bosphorus, Istanbul",
+        slug: "swissotel-bosphorus",
+        facts: {
+          address: "Vişnezade Mah. Acısu Sok. No:19, Maçka, Beşiktaş, 34357 İstanbul",
+          rooms: 567,
+          features: [
+            {
+              tr: "Yıl boyu açık kapalı havuz, yazın açık havuz",
+              ar: "مسبح داخلي طوال السنة ومسبح خارجي في الصيف",
+              en: "An indoor pool year-round and an outdoor pool in summer",
+            },
+            {
+              tr: "4.000 m² spa: iki Türk hamamı, on dört terapi odası, sauna ve buhar odası",
+              ar: "سبا بمساحة 4000 م²: حمّامان تركيان وأربع عشرة غرفة علاج وساونا وغرفة بخار",
+              en: "A 4,000 m² spa with two Turkish hammams, fourteen treatment rooms, a sauna and a steam room",
+            },
+            {
+              tr: "Mutfaklı 63 daire: stüdyodan üç yatak odasına",
+              ar: "63 شقة بمطبخ: من استوديو إلى ثلاث غرف نوم",
+              en: "63 apartments with kitchens, from studios to three bedrooms",
+            },
+            {
+              tr: "Sekiz yeme-içme noktası",
+              ar: "ثمانية أماكن للطعام والشراب",
+              en: "Eight places to eat and drink",
+            },
+            {
+              tr: "60.000 m² tarihî bahçe içinde",
+              ar: "داخل حدائق تاريخية مساحتها 60 ألف م²",
+              en: "Set in 60,000 m² of historic gardens",
+            },
+            {
+              tr: "Otopark",
+              ar: "موقف سيارات",
+              en: "Parking",
+            },
+          ],
+          officialUrl: "https://www.swissotel.com/hotels/istanbul/",
+        },
         stars: 5,
         desc: {
           tr: "Maçka'da tepede; geniş bahçesi ve havuzuyla bilinir.",
@@ -349,6 +600,39 @@ export const hotelAreas: HotelArea[] = [
       },
           {
         name: "Raffles Istanbul",
+        slug: "raffles-istanbul",
+        facts: {
+          address: "Zorlu Center, Levazım Mah. Vadi Cad., 34340 İstanbul",
+          rooms: 185,
+          features: [
+            {
+              tr: "Kapalı havuz ve sezonluk teras havuzu",
+              ar: "مسبح داخلي ومسبح موسمي على التراس",
+              en: "An indoor pool and a seasonal terrace pool",
+            },
+            {
+              tr: "3.000 m² spa: üç hamam, yedi spa suiti ve sauna",
+              ar: "سبا بمساحة 3000 م²: ثلاثة حمّامات وسبعة أجنحة سبا وساونا",
+              en: "A 3,000 m² spa with three hammams, seven spa suites and a sauna",
+            },
+            {
+              tr: "Butler servisi",
+              ar: "خدمة البتلر الشخصية",
+              en: "Butler service",
+            },
+            {
+              tr: "Vale otopark",
+              ar: "خدمة صفّ السيارات",
+              en: "Valet parking",
+            },
+            {
+              tr: "Zorlu Center içinde",
+              ar: "داخل مجمّع زورلو سنتر",
+              en: "Inside the Zorlu Center complex",
+            },
+          ],
+          officialUrl: "https://www.raffles.com/istanbul/",
+        },
         stars: 5,
         desc: {
           tr: "Zorlu Center içinde, Beşiktaş'ta; alışveriş merkezi ve metro aynı yapıda.",
@@ -405,6 +689,43 @@ export const hotelAreas: HotelArea[] = [
     hotels: [
       {
         name: "Radisson Residences Vadistanbul",
+        slug: "radisson-vadistanbul",
+        facts: {
+          address: "Ayazağa Mah. Kemerburgaz Cad. 6A No:7V/101, Sarıyer, İstanbul",
+          features: [
+            {
+              tr: "1.000 m²'den büyük wellness merkezi: kapalı havuz, buhar odası ve sauna — konuklara ücretsiz",
+              ar: "مركز عافية تتجاوز مساحته 1000 م²: مسبح داخلي وغرفة بخار وساونا — مجاناً للنزلاء",
+              en: "A wellness centre of over 1,000 m² with an indoor pool, steam room and sauna, free for guests",
+            },
+            {
+              tr: "Kadın ve erkek için ayrı saunalar",
+              ar: "ساونا منفصلة للنساء وأخرى للرجال",
+              en: "Separate saunas for women and men",
+            },
+            {
+              tr: "Açık büfe kahvaltı veren restoran",
+              ar: "مطعم يقدّم بوفيه الإفطار",
+              en: "A restaurant serving buffet breakfast",
+            },
+            {
+              tr: "Çocuk oyun alanı",
+              ar: "منطقة لعب للأطفال",
+              en: "A children's play area",
+            },
+            {
+              tr: "55–169 m² arası daireler; aile daireleri 160–245 m²",
+              ar: "شقق بين 55 و169 م²؛ والشقق العائلية بين 160 و245 م²",
+              en: "Apartments from 55 to 169 m²; family apartments from 160 to 245 m²",
+            },
+            {
+              tr: "Otopark (210 cm yükseklik sınırı)",
+              ar: "موقف سيارات بحدّ ارتفاع 210 سم",
+              en: "A car park with a 210 cm height limit",
+            },
+          ],
+          officialUrl: "https://www.radissonhotels.com/en-us/hotels/radisson-istanbul-residence",
+        },
         stars: 5,
         desc: {
           tr: "Ayazağa'da, mutfaklı daire tipi odalar; Vadistanbul alışveriş merkezi aynı vadide.",
@@ -415,6 +736,15 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Marriott Executive Apartments Istanbul Invest Vadi",
+        /*
+         * SLUG YOK, yani sayfası da yok. marriott.com her istekte 403
+         * veriyor ve otel hakkında resmî kaynaktan doğrulanmış TEK bir
+         * bilgi elde edilemedi — adres, daire sayısı, hiçbiri. Diğer dokuz
+         * otelin sayfası doğrulanmış olgular üzerine kurulu; burada
+         * yazılacak şey üçüncü taraf sitelerden derlenmiş tahmin olurdu.
+         * Otelden ya da Marriott satış ekibinden yazılı bilgi gelirse
+         * slug ve facts eklenir, sayfa kendiliğinden üretilir.
+         */
         stars: 5,
         desc: {
           tr: "Mutfaklı daire tipi konaklama; uzun kalışlar ve kalabalık aileler için kurulmuş.",
@@ -425,6 +755,48 @@ export const hotelAreas: HotelArea[] = [
       },
       {
         name: "Mövenpick Living İstanbul Saklıvadi",
+        slug: "movenpick-living-saklivadi",
+        facts: {
+          address: "Ayazağa Mah. 215. Sok. No:10 B, Sarıyer, 34475 İstanbul",
+          transit: {
+            tr: "Bitişikteki Vadistanbul alışveriş merkezi üzerinden metroya dört dakika yürüme.",
+            ar: "المترو على بعد أربع دقائق مشياً عبر مول واديستانبول المجاور.",
+            en: "The metro is a four-minute walk through the adjoining Vadistanbul mall.",
+          },
+          features: [
+            {
+              tr: "Tüm dairelerde tam donanımlı mutfak",
+              ar: "مطبخ مجهّز بالكامل في كل الشقق",
+              en: "A fully equipped kitchen in every apartment",
+            },
+            {
+              tr: "Açık havuz",
+              ar: "مسبح خارجي",
+              en: "An outdoor pool",
+            },
+            {
+              tr: "Kahvaltı servisi veren restoran",
+              ar: "مطعم يقدّم الإفطار",
+              en: "A restaurant serving breakfast",
+            },
+            {
+              tr: "Bir ila dört yatak odalı daireler, bir ila dokuz kişi",
+              ar: "شقق من غرفة نوم واحدة إلى أربع، تتّسع من شخص إلى تسعة",
+              en: "Apartments with one to four bedrooms, for one to nine people",
+            },
+            {
+              tr: "Otopark ve engelli erişimi",
+              ar: "موقف سيارات وإمكانية وصول لذوي الاحتياجات",
+              en: "Parking and step-free access",
+            },
+            {
+              tr: "Tamamı sigarasız",
+              ar: "المبنى كلّه خالٍ من التدخين",
+              en: "Entirely non-smoking",
+            },
+          ],
+          officialUrl: "https://all.accor.com/hotel/C0C1/index.en.shtml",
+        },
         stars: 5,
         desc: {
           tr: "Saklıvadi'de, ana caddelerden geri çekilmiş; daire tipi odalar.",
@@ -668,3 +1040,17 @@ export const hotelAreas: HotelArea[] = [
     ],
   },
 ];
+
+/** Kendi sayfası olan oteller — slug'ı olanlar. */
+export function hotelsWithPages() {
+  return hotelAreas.flatMap((area) =>
+    (area.hotels ?? [])
+      .filter((hotel) => hotel.slug)
+      .map((hotel) => ({ hotel, area })),
+  );
+}
+
+/** Slug'dan otel ve bulunduğu semt. */
+export function hotelBySlug(slug: string) {
+  return hotelsWithPages().find((entry) => entry.hotel.slug === slug);
+}

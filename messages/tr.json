@@ -1066,6 +1066,26 @@
     "airportLabel": "Havalimanına mesafe",
     "starsLabel": "{count} yıldızlı otel"
   },
+  "hotelPage": {
+    "eyebrow": "Otel",
+    "factsTitle": "Otel hakkında",
+    "addressLabel": "Adres",
+    "transitLabel": "Toplu taşıma",
+    "roomsLabel": "Oda sayısı",
+    "openedLabel": "Açılış yılı",
+    "featuresLabel": "Otelde neler var",
+    "officialLabel": "Otelin resmî sitesi",
+    "areaTitle": "{area} nasıl bir yer",
+    "transferTitle": "Havalimanından bu otele",
+    "transferText": "Karşılamayı isimli tabelayla havalimanında yapıyor, sizi doğrudan otele getiriyoruz. Fiyat araç başınadır, kişi başına değil.",
+    "transferCta": "Transfer hizmetine bak",
+    "nearbyTitle": "Aynı bölgedeki diğer oteller",
+    "listCta": "Tüm otellere dön",
+    "askTitle": "Bu otel için fiyat sorun",
+    "askText": "Tarihleri, kaç kişi olduğunuzu ve oda tipini yazın; müsaitliği ve fiyatı otelden teyit edip size iletelim. Rezervasyonu sizin adınıza biz yapıyoruz.",
+    "sourceNote": "Yukarıdaki bilgiler otelin kendi resmî sitesinden alınmıştır. Fiyat, müsaitlik ve oda tipi rezervasyon sırasında otelden teyit edilir.",
+    "metaDescription": "{name}: {district} semtinde konaklama. Konum, ulaşım ve havalimanı mesafesi; rezervasyonu sizin adınıza yapıyoruz."
+  },
   "meta": {
     "home": "Rufai Turizm: İstanbul havalimanı transferi, Arapça rehberli turlar, şoförlü Mercedes Vito, uçak bileti ve otel rezervasyonu. Sabit fiyat, 7/24 WhatsApp desteği.",
     "transfer": "İstanbul (IST), Sabiha Gökçen (SAW), Antalya, Bodrum ve Trabzon havalimanı transferi: isimli tabelayla karşılama, uçuş takibi, sabit fiyat.",

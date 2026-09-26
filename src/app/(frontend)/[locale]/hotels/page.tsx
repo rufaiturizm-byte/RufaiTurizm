@@ -367,8 +367,24 @@ export default async function HotelsPage({
                           </p>
                         ) : null}
 
+                        {/*
+                          Sayfası olan otelin adı bağlantı, olmayanınki
+                          düz yazı. Birlikte çalışılan on otelin kendi
+                          sayfası var (`hotels.ts` içindeki `slug`);
+                          kalan yirmi üçü hakkında iki cümleden fazlasını
+                          söyleyemediğimiz için sayfaları da yok.
+                        */}
                         <h3 className="font-display text-[20px] font-semibold leading-snug">
-                          {hotel.name}
+                          {hotel.slug ? (
+                            <Link
+                              href={{ pathname: "/hotels/[slug]", params: { slug: hotel.slug } }}
+                              className="transition-colors hover:text-[color:var(--brand-gold-deep)]"
+                            >
+                              {hotel.name}
+                            </Link>
+                          ) : (
+                            hotel.name
+                          )}
                         </h3>
 
                         <p className="mt-2.5 flex items-start gap-2 text-[13.5px] leading-[1.7] text-muted-foreground">

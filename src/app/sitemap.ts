@@ -4,6 +4,7 @@ import { locales, routing } from "@/i18n/routing";
 import { tours } from "@/data/tours";
 import { services } from "@/data/services";
 import { guides } from "@/data/guides";
+import { hotelsWithPages } from "@/data/hotels";
 import { guidePublishedDates } from "@/data/guide-dates";
 import { transferRoutes } from "@/data/transfer-routes";
 import { packages } from "@/data/packages";
@@ -116,6 +117,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...destinations.map((item) => ({
       href: { pathname: "/destinations/[city]" as const, params: { city: item.slug } },
       priority: 0.9,
+      changeFrequency: "monthly" as const,
+    })),
+    /*
+      Otel sayfaları yalnız birlikte çalışılan oteller için var; liste
+      sayfasındaki diğer yirmi üç otelin sayfası yok ve sitemap de onları
+      uydurmuyor — kaynak `hotelsWithPages()`, yani slug'ı olanlar.
+    */
+    ...hotelsWithPages().map(({ hotel }) => ({
+      href: { pathname: "/hotels/[slug]" as const, params: { slug: hotel.slug! } },
+      priority: 0.7,
       changeFrequency: "monthly" as const,
     })),
     /*

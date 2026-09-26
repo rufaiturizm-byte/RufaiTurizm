@@ -58,7 +58,7 @@ export function Logo({
         width={size}
         height={size}
         /* Küçük ve her sayfada; üst çubukta geç yüklenmesi göze batıyor. */
-        priority
+        preload
         className="shrink-0"
         style={{ width: size, height: size }}
       />

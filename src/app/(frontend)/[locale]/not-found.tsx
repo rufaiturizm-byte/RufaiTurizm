@@ -45,7 +45,7 @@ export default async function NotFound() {
           src="/images/hero-ortakoy.jpg"
           alt=""
           fill
-          priority
+          preload
           sizes="100vw"
           className="-z-10 object-cover object-center"
         />

@@ -117,7 +117,8 @@ export default async function ServiceDetailPage({
           src={service.image}
           alt={name}
           fill
-          priority
+          preload
+          fetchPriority="high"
           sizes="100vw"
           quality={60}
           className="-z-10 object-cover object-center"

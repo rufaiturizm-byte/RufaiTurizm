@@ -18,7 +18,6 @@ import { MobileNav } from "./mobile-nav";
 export async function Header() {
   const t = await getTranslations("nav");
   const tCta = await getTranslations("cta");
-  const tBrand = await getTranslations("brand");
 
   const items = [
     { href: "/" as const, label: t("home") },
@@ -61,9 +60,22 @@ export async function Header() {
         360 piksel ve üstünde görünüm birebir aynı kalıyor.
       */}
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-2 px-5 sm:gap-6 sm:px-8">
-        {/* Erişilebilir ad dile göre: Arapça sayfada marka
-            "روفاي للسياحة" diye duyurulmalı, "Rufai Tourism" diye değil. */}
-        <Link href="/" aria-label={tBrand("name")}>
+        {/*
+          Bağlantının erişilebilir adı GÖRÜNEN yazının kendisi.
+
+          Burada `aria-label` marka adını basıyordu ve niyeti iyiydi:
+          Arapça sayfada marka "روفاي للسياحة" diye duyurulsun isteniyordu.
+          Ama amblemin yanında ekranda yazan şey "RUFAI TOURISM" ve
+          aria-label bunu EZİYOR. Lighthouse bunu hata olarak veriyor
+          (label-content-name-mismatch, WCAG 2.5.3): sesle kumanda eden
+          biri ekranda okuduğu adı söylüyor ("Rufai Tourism") ve hiçbir
+          şey olmuyor, çünkü bağlantının adı başka.
+
+          Çözüm etiketi kaldırmak: bağlantının adı artık amblemin
+          yanındaki gerçek yazı oluyor, yani ekranda görünenle
+          duyurulan aynı şey.
+        */}
+        <Link href="/">
           <Logo />
         </Link>
 

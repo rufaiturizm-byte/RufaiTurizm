@@ -150,7 +150,8 @@ export default async function TransferRoutePage({
           src={route.image}
           alt={route.imageAlt ? (route.imageAlt[lang] ?? route.imageAlt.tr) : to}
           fill
-          priority
+          preload
+          fetchPriority="high"
           sizes="100vw"
           quality={60}
           className="-z-10 object-cover object-center"

@@ -86,9 +86,10 @@ export default async function HomePage({
                   : "Boğaz kıyısında gün batımında siyah VIP Vito"
               }
               fill
-              priority
+              preload
+              fetchPriority="high"
               sizes="100vw"
-              quality={72}
+              quality={75}
               /*
                 Dar ekranda kırpma noktası araca kaydırılıyor.
 

@@ -20,6 +20,8 @@ export interface Vehicle {
   photos: { src: string; altKey: string }[];
   /** Transferde başlangıç fiyatı (EUR). */
   priceFrom?: number;
+  /** Aynı fiyatın TL karşılığı — yalnız Türkçe sayfada gösterilir. */
+  priceTryFrom?: number;
   /** Öne çıkan donanım — i18n anahtarları. */
   featureKeys: string[];
 }
@@ -30,6 +32,7 @@ export const vehicles: Vehicle[] = [
     seats: 6,
     luggage: 6,
     priceFrom: 35,
+    priceTryFrom: 1950,
     photos: [
       { src: "/images/fleet/vito-exterior.jpg", altKey: "exteriorAlt" },
       { src: "/images/fleet/vito-interior.jpg", altKey: "interiorAlt" },

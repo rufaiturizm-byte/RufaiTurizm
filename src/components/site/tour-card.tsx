@@ -3,14 +3,17 @@ import { getTranslations } from "next-intl/server";
 import { ArrowRight, Clock, MessageCircle } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "./whatsapp-cta";
+import { getPrice } from "@/lib/price";
 import type { Tour } from "@/data/tours";
 
 /**
  * Tur kartı.
  *
  * Fiyat bloğu referanstaki düzende: küçük "Başlangıç fiyatı" satırı, altında
- * altın renkli büyük rakam ve yanında ikincil rakam. İkincil rakam bizde
- * USD karşılığı — Körfez müşterisi dolarla düşünüyor (rakip analizi, madde 4).
+ * altın renkli büyük rakam ve yanında ikincil rakam. Para birimini dil
+ * belirliyor (`src/lib/price.ts`): Türkçede TL ve ikincil rakam yok,
+ * diğer dillerde euro ve yanında USD karşılığı — Körfez müşterisi dolarla
+ * düşünüyor (rakip analizi, madde 4).
  * Turun `priceListFrom` alanı doldurulursa aynı yerde üstü çizili liste
  * fiyatı görünür; boşken hiç basılmaz, çünkü sürekli duran sahte bir
  * "indirimden önceki fiyat" güveni kırar.
@@ -23,6 +26,14 @@ export async function TourCard({ tour }: { tour: Tour }) {
   const tPage = await getTranslations("toursPage");
   const tCommon = await getTranslations("common");
   const tCta = await getTranslations("cta");
+  const price = await getPrice({
+    eur: tour.priceFrom,
+    tryLira: tour.priceTryFrom,
+    usd: tour.priceUsdFrom,
+  });
+  const listPrice = tour.priceListFrom
+    ? await getPrice({ eur: tour.priceListFrom, tryLira: tour.priceListTryFrom ?? 0 })
+    : null;
 
   const name = t(`${tour.key}.name`);
   const href = { pathname: "/tours/[slug]" as const, params: { slug: tour.slug } };
@@ -73,15 +84,15 @@ export async function TourCard({ tour }: { tour: Tour }) {
               className="text-[24px] font-extrabold leading-none"
               style={{ color: "var(--brand-gold-deep)" }}
             >
-              €{tour.priceFrom}
+              {price.main}
             </span>
-            {tour.priceListFrom ? (
+            {listPrice ? (
               <span className="text-[14px] text-muted-foreground line-through">
-                €{tour.priceListFrom}
+                {listPrice.main}
               </span>
-            ) : (
-              <span className="text-[14px] text-muted-foreground">≈ ${tour.priceUsdFrom}</span>
-            )}
+            ) : price.secondary ? (
+              <span className="text-[14px] text-muted-foreground">{price.secondary}</span>
+            ) : null}
           </div>
         </div>
 

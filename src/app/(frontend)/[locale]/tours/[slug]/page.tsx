@@ -13,6 +13,7 @@ import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { packageBySlug } from "@/data/packages";
+import { formatPrice } from "@/lib/price";
 import type { Locale } from "@/i18n/routing";
 import { CityHubLink } from "@/components/site/city-hub-link";
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
@@ -77,6 +78,11 @@ export default async function TourDetailPage({
      yerine "Antalya" diyen bir Place daha okunabilir. */
   const city = t(`${tour.key}.city`);
   const lang = locale as Locale;
+  const price = formatPrice(locale, {
+    eur: tour.priceFrom,
+    tryLira: tour.priceTryFrom,
+    usd: tour.priceUsdFrom,
+  });
   const matchingPackage = tour.packageSlug ? packageBySlug(tour.packageSlug) : undefined;
   const others = tours.filter((item) => item.key !== tour.key).slice(0, 4);
   const highlights = t.raw(`${tour.key}.highlights`) as string[];
@@ -97,8 +103,8 @@ export default async function TourDetailPage({
         name={name}
         description={description}
         image={tour.image}
-        price={tour.priceFrom}
-        currency={tour.currency}
+        price={price.amount}
+        currency={price.currency}
         durationHours={tour.durationHours}
         geo={{ lat: tour.geo.lat, lng: tour.geo.lng, name: city }}
       />
@@ -325,9 +331,11 @@ export default async function TourDetailPage({
                 className="text-[38px] font-extrabold leading-none"
                 style={{ color: "var(--brand-gold-deep)" }}
               >
-                €{tour.priceFrom}
+                {price.main}
               </span>
-              <span className="text-[15px] text-muted-foreground">≈ ${tour.priceUsdFrom}</span>
+              {price.secondary ? (
+                <span className="text-[15px] text-muted-foreground">{price.secondary}</span>
+              ) : null}
             </div>
 
             <dl

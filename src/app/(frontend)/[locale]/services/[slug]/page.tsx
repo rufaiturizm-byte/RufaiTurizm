@@ -30,6 +30,7 @@ import {
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { VehicleList } from "@/components/site/vehicle-list";
+import { formatPrice } from "@/lib/price";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { ServiceFaq } from "@/components/site/service-faq";
 import { ServiceSections } from "@/components/site/service-sections";
@@ -85,6 +86,11 @@ export default async function ServiceDetailPage({
   const description = t(`${service.key}.description`);
   const features = t.raw(`${service.key}.features`) as string[];
   const isTransfer = TRANSFER_SLUGS.has(service.slug);
+  /* Fiyatı olmayan hizmet var (flightHotel): kart "fiyat talep üzerine" gösteriyor. */
+  const price =
+    service.priceFrom && service.priceTryFrom
+      ? formatPrice(locale, { eur: service.priceFrom, tryLira: service.priceTryFrom })
+      : null;
 
   return (
     <main id="main" className="flex flex-1 flex-col">
@@ -102,8 +108,8 @@ export default async function ServiceDetailPage({
         name={name}
         description={description}
         image={service.image}
-        price={service.priceFrom}
-        currency={service.currency}
+        price={price?.amount}
+        currency={price?.currency}
       />
 
       <section className="relative isolate">
@@ -272,7 +278,7 @@ export default async function ServiceDetailPage({
                   className="mt-1.5 text-[38px] font-extrabold leading-none"
                   style={{ color: "var(--brand-gold-deep)" }}
                 >
-                  €{service.priceFrom}
+                  {price?.main}
                 </div>
               </>
             ) : (

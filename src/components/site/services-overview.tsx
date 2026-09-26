@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import {
   ArrowRight,
   Car,
@@ -13,6 +13,7 @@ import { Link } from "@/i18n/navigation";
 import { SectionHeading, SectionAction } from "./section-heading";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { services } from "@/data/services";
+import { formatPrice } from "@/lib/price";
 
 /**
  * Ana sayfadaki hizmet özeti.
@@ -49,6 +50,7 @@ export async function ServicesOverview() {
   const tCommon = await getTranslations("common");
   const tPage = await getTranslations("servicesPage");
   const tHome2 = await getTranslations("home2");
+  const locale = await getLocale();
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pt-24 pb-16 sm:px-8">
@@ -121,7 +123,12 @@ export async function ServicesOverview() {
                       {service.priceFrom ? (
                         <>
                           <div className="text-[17px] font-extrabold leading-none">
-                            €{service.priceFrom}
+                            {
+                              formatPrice(locale, {
+                                eur: service.priceFrom,
+                                tryLira: service.priceTryFrom ?? 0,
+                              }).main
+                            }
                           </div>
                           <div className="mt-1.5 text-[10.5px] leading-tight text-muted-foreground">
                             {t("priceFrom")}

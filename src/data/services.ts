@@ -10,6 +10,8 @@ export interface Service {
   slug: string;
   icon: "car" | "plane-landing" | "map" | "ticket";
   priceFrom?: number;
+  /** TL fiyatı — yalnız Türkçe sayfada gösterilir (`src/lib/price.ts`). */
+  priceTryFrom?: number;
   currency?: "EUR" | "USD" | "TRY";
   image: string;
 }
@@ -20,9 +22,9 @@ export interface Service {
  * Galata Köprüsü karesini kullanıyor — içerikle de daha uyumlu.
  */
 export const services: Service[] = [
-  { key: "vitoVip", slug: "vito-vip", icon: "car", priceFrom: 60, currency: "EUR", image: "/images/fleet/vito-exterior.jpg" },
-  { key: "transfer", slug: "transfer", icon: "plane-landing", priceFrom: 35, currency: "EUR", image: "/images/fleet/vito-interior.jpg" },
-  { key: "tours", slug: "tours", icon: "map", priceFrom: 45, currency: "EUR", image: "/images/places/galata.jpg" },
+  { key: "vitoVip", slug: "vito-vip", icon: "car", priceFrom: 60, priceTryFrom: 3400, currency: "EUR", image: "/images/fleet/vito-exterior.jpg" },
+  { key: "transfer", slug: "transfer", icon: "plane-landing", priceFrom: 35, priceTryFrom: 1950, currency: "EUR", image: "/images/fleet/vito-interior.jpg" },
+  { key: "tours", slug: "tours", icon: "map", priceFrom: 45, priceTryFrom: 2500, currency: "EUR", image: "/images/places/galata.jpg" },
   { key: "flightHotel", slug: "flight-hotel", icon: "ticket", image: "/images/places/havalimani.jpg" },
 ];
 

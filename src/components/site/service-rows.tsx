@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { WhatsAppIcon } from "./icons";
 import { services } from "@/data/services";
+import { formatPrice } from "@/lib/price";
 
 /**
  * Hizmetler sayfasının gövdesi — dört büyük editoryal satır.
@@ -25,6 +26,7 @@ export async function ServiceRows() {
   const tCommon = await getTranslations("common");
   const tCta = await getTranslations("cta");
   const tTours = await getTranslations("tours");
+  const locale = await getLocale();
 
   return (
     <div className="flex flex-col">
@@ -101,7 +103,12 @@ export async function ServiceRows() {
                           className="text-[26px] font-extrabold leading-none"
                           style={{ color: "var(--brand-gold-deep)" }}
                         >
-                          €{service.priceFrom}
+                          {
+                            formatPrice(locale, {
+                              eur: service.priceFrom,
+                              tryLira: service.priceTryFrom ?? 0,
+                            }).main
+                          }
                         </div>
                       </>
                     ) : (

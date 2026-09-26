@@ -1,10 +1,11 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Check, Luggage, Users } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { PhotoGallery } from "./photo-gallery";
 import { WhatsAppLink } from "./whatsapp-cta";
 import { WhatsAppIcon } from "./icons";
 import { vehicles } from "@/data/vehicles";
+import { formatPrice } from "@/lib/price";
 
 /**
  * Transferde kullanılan araçların listesi.
@@ -23,6 +24,7 @@ export async function VehicleList() {
   const tPage = await getTranslations("transferPage");
   const tCta = await getTranslations("cta");
   const tTours = await getTranslations("tours");
+  const locale = await getLocale();
 
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
@@ -97,14 +99,19 @@ export async function VehicleList() {
                   borderColor: "color-mix(in oklab, var(--brand-gold) 38%, transparent)",
                 }}
               >
-                {vehicle.priceFrom ? (
+                {vehicle.priceFrom && vehicle.priceTryFrom ? (
                   <>
                     <div className="text-[12px] text-muted-foreground">{tTours("from")}</div>
                     <div
                       className="mt-1 text-[34px] font-extrabold leading-none"
                       style={{ color: "var(--brand-gold-deep)" }}
                     >
-                      €{vehicle.priceFrom}
+                      {
+                        formatPrice(locale, {
+                          eur: vehicle.priceFrom,
+                          tryLira: vehicle.priceTryFrom,
+                        }).main
+                      }
                     </div>
                   </>
                 ) : null}

@@ -1,8 +1,9 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowRight, Check, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "./section-heading";
 import { tours } from "@/data/tours";
+import { formatPrice } from "@/lib/price";
 
 /**
  * Tur karşılaştırma tablosu ve fiyata dahil olanlar.
@@ -23,6 +24,7 @@ export async function TourCompare() {
   const tTours = await getTranslations("tours");
   const tCommon = await getTranslations("common");
   const tIncluded = await getTranslations("included");
+  const locale = await getLocale();
   const tNotIncluded = await getTranslations("notIncluded");
 
   const includedKeys = ["guide", "pickup", "vehicle", "fixedPrice", "water", "parking"] as const;
@@ -88,7 +90,12 @@ export async function TourCompare() {
                       className={`${td} whitespace-nowrap font-extrabold`}
                       style={{ color: "var(--brand-gold-deep)" }}
                     >
-                      €{tour.priceFrom}
+                      {
+                        formatPrice(locale, {
+                          eur: tour.priceFrom,
+                          tryLira: tour.priceTryFrom,
+                        }).main
+                      }
                     </td>
                     <td className={`${td} text-muted-foreground`}>{highlights[0]}</td>
                     <td className={`${td} text-end`}>

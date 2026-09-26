@@ -9,7 +9,9 @@
 
 Ana pazar Körfez ülkeleridir ve varsayılan dil Arapçadır: kök adres (/)
 Arapça sürümü sunar, /tr Türkçe, /en İngilizce. Bölüm adresleri de dile
-göre değişir (/جولاتنا = /tr/turlar = /en/tours).
+göre değişir (/جولاتنا = /tr/turlar = /en/tours). Aşağıdaki bağlantılar
+ARAPÇA sürüme gider, çünkü kanonik adres o; Türkçe ve İngilizce karşılıkları
+her sayfanın hreflang etiketlerinde duruyor.
 
 Fiyatlar araç başınadır, kişi başı değildir. Turların "başlangıç" fiyatı
 yayınlanır; paket programların fiyatı yayınlanmaz, çünkü otel sınıfı, kişi
@@ -18,19 +20,19 @@ WhatsApp üzerinden netleşir. Güzergâh bazlı transfer fiyat listesi
 yayınlanmaz.
 
 ## Hizmetler
-- [Havalimanı transferi](https://rufaiturizm.com/tr/transfer): isimli tabelayla karşılama, uçuş takibi, sabit fiyat. Hizmet verilen havalimanları: İstanbul (IST), Sabiha Gökçen (SAW), Antalya (AYT), Bodrum–Milas (BJV), Trabzon (TZX).
+- [Havalimanı transferi](https://rufaiturizm.com/النقل-من-المطار): isimli tabelayla karşılama, uçuş takibi, sabit fiyat. Hizmet verilen havalimanları: İstanbul (IST), Sabiha Gökçen (SAW), Antalya (AYT), Bodrum–Milas (BJV), Trabzon (TZX).
 - Güzergâh sayfaları (14): İstanbul ve Sabiha Gökçen'den Taksim, Sultanahmet, Kadıköy, Şişli-Nişantaşı, Beşiktaş-Ortaköy ve Bursa; Antalya'dan Kemer, Belek, Side ve Alanya; Bodrum-Milas'tan Bodrum merkez, Yalıkavak ve Turgutreis. Her sayfa o yolculuğa özel yazılmıştır (mesafe, süre, varışta nelere dikkat edilmeli); şablondan üretilmiş güzergâh sayfası yoktur.
-- [Şoförlü Mercedes Vito](https://rufaiturizm.com/tr/hizmetler/vito-vip): bagajla birlikte 6 kişiye kadar.
-- [Tur hizmeti](https://rufaiturizm.com/tr/hizmetler/tours): özel tur, gruplarla birleştirme yok.
-- [Uçak bileti ve otel rezervasyonu](https://rufaiturizm.com/tr/hizmetler/flight-hotel): rezervasyon misafir adına yapılır.
+- [Şoförlü Mercedes Vito](https://rufaiturizm.com/خدماتنا/vito-vip): bagajla birlikte 6 kişiye kadar.
+- [Tur hizmeti](https://rufaiturizm.com/خدماتنا/tours): özel tur, gruplarla birleştirme yok.
+- [Uçak bileti ve otel rezervasyonu](https://rufaiturizm.com/خدماتنا/flight-hotel): rezervasyon misafir adına yapılır.
 
 ## Turlar
-Günlük özel turlar. [Tüm turlar](https://rufaiturizm.com/tr/turlar)
+Günlük özel turlar. [Tüm turlar](https://rufaiturizm.com/جولاتنا)
 - İstanbul (8 saat), Bursa (10 saat), Sapanca (9 saat), Trabzon (12 saat),
   Bodrum (10 saat), Antalya (10 saat).
 
 ## Paket programlar
-Çok günlü programlar. [Tüm paketler](https://rufaiturizm.com/tr/paketler)
+Çok günlü programlar. [Tüm paketler](https://rufaiturizm.com/برامج-سياحية)
 - İstanbul 4 gün; İstanbul + Bursa 6 gün; İstanbul + Sapanca + Bursa 8 gün;
   Trabzon ve Karadeniz 5 gün; Antalya ve Akdeniz 5 gün; Bodrum ve Ege 5 gün.
 - Her programda gün gün gezi planı, nelerin dahil olduğu ve programa özel
@@ -39,12 +41,12 @@ Günlük özel turlar. [Tüm turlar](https://rufaiturizm.com/tr/turlar)
   güne sığmayacağını yazar.
 
 ## Konaklama
-- [Otel rehberi](https://rufaiturizm.com/tr/oteller): İstanbul'da semt semt
+- [Otel rehberi](https://rufaiturizm.com/فنادق-إسطنبول): İstanbul'da semt semt
   nerede kalınır (Sultanahmet, Taksim, Boğaz, Anadolu yakası); Antalya ve
   Bodrum'da ise bölge bölge (Lara-Konyaaltı, Belek, Kemer, Side-Manavgat,
   Alanya / Bodrum merkez, Gümbet-Bitez, Yalıkavak, Turgutreis,
-  Torba-Türkbükü). Anlaşmalı otel listesi DEĞİLDİR ve sahil bölgelerinde
-  otel adı verilmez: oradaki asıl karar hangi bölgede kalınacağıdır,
+  Torba-Türkbükü). Sahil bölgelerinde otel adı verilmez: oradaki asıl
+  karar hangi bölgede kalınacağıdır,
   oteli misafir seçer, rezervasyonu onun adına biz yaparız.
 
 ## Araçlar
@@ -61,25 +63,27 @@ yat/tekne kiralama, aparthotel veya kiralık daire, düğün ve gelin arabası,
 şoförsüz araç kiralama, vize işlemleri.
 
 ## Seyahat rehberleri
-Yirmi rehber, dört başlık altında. [Tüm rehberler](https://rufaiturizm.com/tr/seyahat-rehberi)
+Yirmi dokuz rehber, dört başlık altında. [Tüm rehberler](https://rufaiturizm.com/أدلة-السفر)
 - Varış ve ulaşım: havalimanından şehre ulaşım (IST ve SAW), toplu taşıma,
   şehirler arası mesafeler.
 - Planlama: ne zaman gidilmeli, hava durumu ve giyim, üç günlük ve bir
   haftalık programlar.
 - Günübirlik ve bölgeler: Sapanca ve Maşukiye, Bursa ve Uludağ, Trabzon ve
-  Uzungöl, Boğaz turu, [Antalya bölge rehberi](https://rufaiturizm.com/tr/seyahat-rehberi/antalya-bolge-rehberi)
-  (Kemer'den Alanya'ya ilçe ilçe), [Bodrum ve Ege rehberi](https://rufaiturizm.com/tr/seyahat-rehberi/bodrum-ege-rehberi)
+  Uzungöl, Boğaz turu, [Antalya bölge rehberi](https://rufaiturizm.com/أدلة-السفر/antalya-bolge-rehberi)
+  (Kemer'den Alanya'ya ilçe ilçe), [Bodrum ve Ege rehberi](https://rufaiturizm.com/أدلة-السفر/bodrum-ege-rehberi)
   (yarımadadaki koylar ve tekne turları).
 - Pratik bilgiler: nerede kalınır, helal yemek, alışveriş, Arapça konuşan
   şoför ve rehber, çocuklu ailelerle İstanbul, balayı.
 
 ## Kurumsal
-- [Hakkımızda](https://rufaiturizm.com/tr/hakkimizda)
-- [Sıkça sorulan sorular](https://rufaiturizm.com/tr/sikca-sorulan-sorular)
-- [İletişim](https://rufaiturizm.com/tr/iletisim): WhatsApp, 7/24.
+- [Hakkımızda](https://rufaiturizm.com/من-نحن)
+- [Sıkça sorulan sorular](https://rufaiturizm.com/الاسئلة-الشائعة)
+- [İletişim](https://rufaiturizm.com/تواصل-معنا): WhatsApp, 7/24.
 
 ## Doğrulama
 TÜRSAB belge numarası 12539, tursab.org.tr/acenta-arama üzerinden
 doğrulanabilir. Sitede yayınlanan tek belge budur; sahip olunmayan belge
 veya sertifika gösterilmez. Müşteri yorumu bölümü, doğrulanabilir gerçek
 yorum girilene kadar bilerek boştur — uydurma yorum yayınlanmaz.
+
+Son güncelleme: 2026-09-26

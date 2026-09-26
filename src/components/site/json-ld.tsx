@@ -64,6 +64,14 @@ export function TravelAgencySchema({
      */
     ...(hasRealPhone ? { telephone: siteConfig.phoneHref } : {}),
     email: siteConfig.email,
+    /*
+     * Kuruluş yılı doğrulanabilir bir veri: TÜRSAB kaydı (belge 12539)
+     * 2015'i gösteriyor ve sitede "hakkımızda" da aynı yılı yazıyor.
+     * Makineye verilmesinin sebebi "ne zamandır faaliyettesiniz" sorusu:
+     * yapay zekâ arama motorları bir işletmeyi tarif ederken yaşını
+     * sayıyor ve bu bilgi yalnız düz metinde kalırsa okumayabiliyorlar.
+     */
+    foundingDate: String(siteConfig.foundedYear),
     priceRange: "€€",
     /*
      * Şemadaki görsel, Google'ın işletmeyi gösterirken kullanabileceği

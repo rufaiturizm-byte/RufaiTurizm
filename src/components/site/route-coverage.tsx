@@ -70,7 +70,7 @@ export async function RouteCoverage({
                 kalan 54'ü 404 olurdu. O yüzden davranış aynı kaldı,
                 yalnız önceden haber veriliyor.
               */}
-              <p className="measure mt-3 text-[13px] leading-[1.7] text-muted-foreground/85">
+              <p className="measure mt-3 text-[13px] leading-[1.7] text-muted-foreground">
                 {t("stopsHint")}
               </p>
             </div>
@@ -128,7 +128,7 @@ export async function RouteCoverage({
       />
 
       {/* Aynı uyarı tam sürümde de: çipler burada da WhatsApp açıyor. */}
-      <p className="measure -mt-5 mb-8 text-[13px] leading-[1.7] text-muted-foreground/85">
+      <p className="measure -mt-5 mb-8 text-[13px] leading-[1.7] text-muted-foreground">
         {t("stopsHint")}
       </p>
 

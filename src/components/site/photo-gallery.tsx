@@ -48,7 +48,19 @@ export function PhotoGallery({
             key={`${photo.src}-${i}`}
             type="button"
             onClick={() => setIndex(i)}
-            aria-label={photo.alt}
+            /*
+              Rozet varsa erişilebilir adın İÇİNDE olmalı.
+
+              Burada yalnız `photo.alt` yazıyordu; oysa ilk karenin
+              üstünde görünen bir rozet metni var ("VIP" gibi) ve düğmenin
+              adı onu taşımıyordu. Lighthouse bunu on bir sayfada hata
+              olarak verdi (label-content-name-mismatch, WCAG 2.5.3):
+              sesle kumanda eden biri ekranda okuduğu kelimeyi söylediğinde
+              düğme yanıt vermiyordu. Rozet öne alınıyor, çünkü görünen
+              metnin adın başında olması o kullanıcıya en doğrudan yolu
+              veriyor.
+            */
+            aria-label={i === 0 && badge ? `${badge} — ${photo.alt}` : photo.alt}
             className={`group relative aspect-[4/3] cursor-zoom-in overflow-hidden ${
               i > 1 ? "hidden sm:block" : ""
             }`}

@@ -83,6 +83,19 @@ export default async function ServiceDetailPage({
   const tWhy = await getTranslations("whyUs");
 
   const name = t(`${service.key}.title`);
+  /*
+   * Sayfanın H1'i kart adından AYRI olabiliyor.
+   *
+   * Kartlarda ve menüde hizmetin kısa adı duruyor ("خدمة سيارات فيتو VIP")
+   * ve orada doğru olan bu: liste içinde uzun bir cümle okunmaz. Ama sayfanın
+   * kendi başlığı aynı kısa ad olunca aranan ifadeyi hiç taşımıyordu —
+   * misafir "سيارة مع سائق في إسطنبول" diye arıyor.
+   *
+   * `h1` anahtarı İSTEĞE BAĞLI: yalnız Arapça dosyada dolu, çünkü Türkçe ve
+   * İngilizce başlıklar kendi dillerindeki arama ifadesini zaten taşıyor.
+   * Anahtar yoksa eskisi gibi kart adı basılıyor.
+   */
+  const heading = t.has(`${service.key}.h1`) ? t(`${service.key}.h1`) : name;
   const description = t(`${service.key}.description`);
   const features = t.raw(`${service.key}.features`) as string[];
   const isTransfer = TRANSFER_SLUGS.has(service.slug);
@@ -133,7 +146,7 @@ export default async function ServiceDetailPage({
             ]}
           />
           <h1 className="mt-3 max-w-2xl font-display text-[34px] font-semibold leading-[1.12] tracking-[-0.01em] text-white sm:text-[48px]">
-            {name}
+            {heading}
           </h1>
           <p className="mt-4 max-w-xl text-[16px] leading-[1.8] text-white/78">
             {description}

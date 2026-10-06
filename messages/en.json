@@ -17,6 +17,15 @@
     "hotels": "Hotels",
     "packages": "Packages"
   },
+  "footerNav": {
+    "transfer": "Istanbul airport transfer",
+    "tours": "Private tours in Türkiye",
+    "destinations": "Regions we cover",
+    "packages": "Multi-day tour packages",
+    "services": "Transfers, tours and booking",
+    "hotels": "Istanbul hotels",
+    "guides": "Türkiye travel guides"
+  },
   "home": {
     "hero": {
       "eyebrow": "Licensed travel agency",

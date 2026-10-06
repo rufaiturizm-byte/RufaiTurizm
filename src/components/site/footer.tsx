@@ -20,6 +20,7 @@ import { services } from "@/data/services";
 export async function Footer() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");
+  const tFooterNav = await getTranslations("footerNav");
   const tTours = await getTranslations("tours");
   const tServices = await getTranslations("services");
   const tContact = await getTranslations("contact");
@@ -40,15 +41,34 @@ export async function Footer() {
   const link =
     "inline-block py-1.5 text-[13.5px] transition-colors hover:text-white";
 
+  /*
+   * Altbilgi bağlantıları ÜST MENÜDEN DAHA UZUN yazılabiliyor.
+   *
+   * Ölçüldü (2026-10-06): Arapça sayfalardaki iç bağlantıların neredeyse
+   * tamamı menü etiketiydi — "خدمة النقل" 193, "الفنادق" 185, "البرامج" 176
+   * kez. Hiçbiri şehir adını ya da aranan ifadeyi taşımıyordu; oysa bir
+   * bağlantının metni, hedef sayfanın ne hakkında olduğunu söyleyen en
+   * güçlü iç sinyal.
+   *
+   * Üst menü kısa kalmak ZORUNDA: on bir başlık zaten 1280 pikselde
+   * sıkışıyor. Altbilgide ise satırlar alt alta ve yer var, yani uzun
+   * etiketin bedeli yok.
+   *
+   * `footerNav` isteğe bağlı ve yalnız Arapça dosyada dolu; Türkçe ile
+   * İngilizce altbilgi eskisi gibi menü etiketini basıyor.
+   */
+  const navLabel = (key: string) =>
+    tFooterNav.has(key) ? tFooterNav(key) : tNav(key);
+
   const quickLinks = [
     { href: "/" as const, label: tNav("home") },
-    { href: "/transfer" as const, label: tNav("transfer") },
-    { href: "/tours" as const, label: tNav("tours") },
-    { href: "/destinations" as const, label: tNav("destinations") },
-    { href: "/packages" as const, label: tNav("packages") },
-    { href: "/services" as const, label: tNav("services") },
-    { href: "/hotels" as const, label: tNav("hotels") },
-    { href: "/guides" as const, label: tNav("guides") },
+    { href: "/transfer" as const, label: navLabel("transfer") },
+    { href: "/tours" as const, label: navLabel("tours") },
+    { href: "/destinations" as const, label: navLabel("destinations") },
+    { href: "/packages" as const, label: navLabel("packages") },
+    { href: "/services" as const, label: navLabel("services") },
+    { href: "/hotels" as const, label: navLabel("hotels") },
+    { href: "/guides" as const, label: navLabel("guides") },
     { href: "/about" as const, label: tNav("about") },
     { href: "/faq" as const, label: tNav("faq") },
     { href: "/contact" as const, label: tNav("contact") },

@@ -17,6 +17,15 @@
     "hotels": "Oteller",
     "packages": "Paketler"
   },
+  "footerNav": {
+    "transfer": "İstanbul Havalimanı transferi",
+    "tours": "Türkiye'de özel turlar",
+    "destinations": "Gezilecek bölgeler",
+    "packages": "Çok günlü tur programları",
+    "services": "Transfer, tur ve rezervasyon",
+    "hotels": "İstanbul otelleri",
+    "guides": "Türkiye seyahat rehberleri"
+  },
   "home": {
     "hero": {
       "eyebrow": "Lisanslı seyahat acentesi",

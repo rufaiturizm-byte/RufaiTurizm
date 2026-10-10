@@ -95,6 +95,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { href: "/destinations", priority: 0.9, changeFrequency: "monthly" },
     { href: "/guides", priority: 0.8, changeFrequency: "monthly" },
     { href: "/hotels", priority: 0.8, changeFrequency: "monthly" },
+    /* Yasal sayfalar dizine girsin ama öncelik en altta: aranan sayfa
+       değiller, gerektiğinde bakılan sayfalar. */
+    { href: "/privacy", priority: 0.2, changeFrequency: "yearly" },
+    { href: "/terms", priority: 0.2, changeFrequency: "yearly" },
     { href: "/contact", priority: 0.7, changeFrequency: "yearly" },
     { href: "/about", priority: 0.6, changeFrequency: "yearly" },
     { href: "/faq", priority: 0.6, changeFrequency: "monthly" },

@@ -21,6 +21,7 @@ export async function Footer() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");
   const tFooterNav = await getTranslations("footerNav");
+  const tLegal = await getTranslations("legal");
   const tTours = await getTranslations("tours");
   const tServices = await getTranslations("services");
   const tContact = await getTranslations("contact");
@@ -274,10 +275,23 @@ export async function Footer() {
             her dağıtımda tazeleniyor. Yıl dönümünde sitenin yeniden
             derlenmesi yeterli, kodda elle değişecek bir şey yok.
           */}
-          <span>
-            © {siteConfig.foundedYear}
-            {new Date().getFullYear() > siteConfig.foundedYear ? `–${new Date().getFullYear()}` : ""}{" "}
-            {siteConfig.legalName} — {t("allRights")}
+          <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>
+              © {siteConfig.foundedYear}
+              {new Date().getFullYear() > siteConfig.foundedYear ? `–${new Date().getFullYear()}` : ""}{" "}
+              {siteConfig.legalName} — {t("allRights")}
+            </span>
+            {/*
+              Yasal sayfalar telif satırının yanında: aranan değil,
+              gerektiğinde bakılan sayfalar. Üstteki bağlantı listesine
+              konsaydı turların ve otellerin yanında yer kaplardı.
+            */}
+            <Link href="/privacy" className="underline-offset-4 transition-colors hover:text-white hover:underline">
+              {tLegal("privacy")}
+            </Link>
+            <Link href="/terms" className="underline-offset-4 transition-colors hover:text-white hover:underline">
+              {tLegal("terms")}
+            </Link>
           </span>
           {siteConfig.credentials.tursab ? (
             <a

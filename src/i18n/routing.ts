@@ -129,6 +129,21 @@ export const pathnames = {
     en: "/hotels",
   },
   /*
+   * Yasal sayfalar. Arama hacmi için değil, mevzuat ve güven için var:
+   * ziyaretçi "bu site kim, verime ne oluyor" sorusunun cevabını
+   * bulabilmeli. Yol adları her dilde o dilin kelimesiyle.
+   */
+  "/privacy": {
+    ar: "/سياسة-الخصوصية",
+    tr: "/gizlilik-politikasi",
+    en: "/privacy-policy",
+  },
+  "/terms": {
+    ar: "/شروط-الاستخدام",
+    tr: "/kullanim-sartlari",
+    en: "/terms-of-use",
+  },
+  /*
    * Otel sayfaları. Körfez misafiri oteli ADIYLA arıyor ("فندق سي في كي
    * تقسيم إسطنبول") ve bu sorgularda rekabet düşük. Liste sayfasındaki tek
    * satır bu aramayı karşılamıyor; birlikte çalışılan otellerin her birinin

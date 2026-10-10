@@ -26,6 +26,12 @@
     "hotels": "İstanbul otelleri",
     "guides": "Türkiye seyahat rehberleri"
   },
+  "legal": {
+    "updated": "Son güncelleme: {date}",
+    "draftNote": "Bu metin sitenin gerçekte ne yaptığına bakılarak yazıldı ve düzenli olarak güncelleniyor; hukuki denetimden geçmiş bir sözleşme metni değildir. Sorunuz varsa info@rufaiturizm.com adresine yazın.",
+    "privacy": "Gizlilik politikası",
+    "terms": "Kullanım şartları"
+  },
   "home": {
     "hero": {
       "eyebrow": "Lisanslı seyahat acentesi",

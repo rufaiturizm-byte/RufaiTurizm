@@ -26,6 +26,12 @@
     "hotels": "Istanbul hotels",
     "guides": "Türkiye travel guides"
   },
+  "legal": {
+    "updated": "Last updated: {date}",
+    "draftNote": "This text was written from what the site actually does and is kept up to date; it is not a legally reviewed contract. If you have a question, write to info@rufaiturizm.com.",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use"
+  },
   "home": {
     "hero": {
       "eyebrow": "Licensed travel agency",

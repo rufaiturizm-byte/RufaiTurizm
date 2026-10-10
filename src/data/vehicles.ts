@@ -31,8 +31,8 @@ export const vehicles: Vehicle[] = [
     key: "vito",
     seats: 6,
     luggage: 6,
-    priceFrom: 35,
-    priceTryFrom: 1950,
+    priceFrom: 60,
+    priceTryFrom: 3300,
     photos: [
       { src: "/images/fleet/vito-exterior.jpg", altKey: "exteriorAlt" },
       { src: "/images/fleet/vito-interior.jpg", altKey: "interiorAlt" },

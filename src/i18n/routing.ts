@@ -129,6 +129,16 @@ export const pathnames = {
     en: "/hotels",
   },
   /*
+   * Şehir şehir şoförlü araç. Körfez misafiri hizmeti şehriyle arıyor
+   * ("سيارة مع سائق في أنطاليا") ve rakiplerin dördünde de bu küme var.
+   * İstanbul burada YOK: `/خدماتنا/vito-vip` zaten o sayfa.
+   */
+  "/chauffeur/[city]": {
+    ar: "/سيارة-مع-سائق/[city]",
+    tr: "/soforlu-arac/[city]",
+    en: "/car-with-driver/[city]",
+  },
+  /*
    * Yasal sayfalar. Arama hacmi için değil, mevzuat ve güven için var:
    * ziyaretçi "bu site kim, verime ne oluyor" sorusunun cevabını
    * bulabilmeli. Yol adları her dilde o dilin kelimesiyle.

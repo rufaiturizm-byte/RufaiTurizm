@@ -32,6 +32,14 @@
     "privacy": "Gizlilik politikası",
     "terms": "Kullanım şartları"
   },
+  "chauffeur": {
+    "routesTitle": "Bu şehirdeki havalimanı güzergâhları",
+    "faqTitle": "Sık sorulanlar",
+    "askTitle": "Programınızı birlikte kuralım",
+    "askText": "Tarihleri, kaç kişi olduğunuzu ve nerede kaldığınızı yazın; aynı gün gün gün taslağı ve toplam tutarı gönderelim. Fiyat araç başınadır, kişi başına değil.",
+    "destinationLink": "{city} bölge rehberi",
+    "bandNote": "Araç ve şoför gün boyunca emrinizde; her durakta bekliyor ve program ortasında değişiklik yapılabiliyor."
+  },
   "home": {
     "hero": {
       "eyebrow": "Lisanslı seyahat acentesi",

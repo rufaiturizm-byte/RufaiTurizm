@@ -32,6 +32,14 @@
     "privacy": "Privacy policy",
     "terms": "Terms of use"
   },
+  "chauffeur": {
+    "routesTitle": "Airport routes in this city",
+    "faqTitle": "Frequently asked",
+    "askTitle": "Let us build your programme together",
+    "askText": "Tell us the dates, how many you are and where you are staying; we send a day-by-day outline and the total the same day. The price is per vehicle, not per person.",
+    "destinationLink": "{city} regional guide",
+    "bandNote": "The car and driver are at your disposal all day; they wait at every stop and the programme can change midway."
+  },
   "home": {
     "hero": {
       "eyebrow": "Licensed travel agency",

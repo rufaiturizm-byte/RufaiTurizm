@@ -6,7 +6,6 @@ import { Tajawal, Playfair_Display, Amiri } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Ga4, WhatsAppEvents } from "@/components/site/analytics-ga4";
-import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloatingButton } from "@/components/site/whatsapp-cta";
@@ -141,7 +140,18 @@ export default async function LocaleLayout({
           <MobileActionBar />
           <BackToTop />
         </NextIntlClientProvider>
-        <Toaster />
+        {/*
+          BİLDİRİM BİLEŞENİ KALDIRILDI.
+
+          `<Toaster />` her sayfada yükleniyordu ama kod tabanında tek bir
+          `toast()` çağrısı yok — yani hiç bildirim gösterilmiyor. Bedeli
+          boşuna ödenen istemci JS'i: sonner'ın bulunduğu parça 120 KB.
+
+          Geri gelmesi tek satır. Bir form ya da kopyalama düğmesi
+          eklendiğinde (ki "sizi arayalım" formu sırada) o zaman geri
+          konur; şimdi duran şey, hiç kullanılmayan bir kütüphanenin
+          her ziyaretçiye indirilmesi.
+        */}
         <Analytics />
         <SpeedInsights />
         {/*

@@ -277,7 +277,7 @@ export default async function PackageDetailPage({
                 params: { slug: other.slug },
               };
               return (
-                <article key={other.slug} className="accent-card group flex flex-col overflow-hidden">
+                <article key={other.slug} className="reveal-rise accent-card group flex flex-col overflow-hidden">
                   <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                     <Image
                       src={other.image}

@@ -292,7 +292,7 @@ export default async function HotelsPage({
                   }`}
                 >
                   {area.hotels.map((hotel) => (
-                    <article key={hotel.name} className="accent-card flex flex-col">
+                    <article key={hotel.name} className="reveal-rise accent-card flex flex-col">
                       {/*
                         Fotoğraf yuvası — bugün hiçbir otelde dolu değil.
 
@@ -506,14 +506,27 @@ export default async function HotelsPage({
               ) : null}
 
 
-              {/* Bölge başına tek çağrı — otel listesi olsun olmasın. */}
+              {/*
+                Bölge başına çağrı — AMA TAM GENİŞLİKTE YEŞİL DÜĞME DEĞİL.
+
+                Sayfada yedi bölge var ve bu blok her birinin sonunda
+                tekrarlıyordu: yedi kez geçen tam genişlik düğme, çağrı
+                olmaktan çıkıp bölüm ayracına dönüşüyor ve sayfanın en
+                gürültülü öğesi hâline geliyordu.
+
+                İşlev duruyor — o bölge için fiyat sormak hâlâ bir
+                dokunuş — ama ağırlığı kartlardaki "fiyat sor"
+                bağlantısıyla aynı seviyeye indi. Tam genişlikteki güçlü
+                çağrı sayfanın sonunda bir kez duruyor; orada anlamı var.
+              */}
               <div className="mx-auto w-full max-w-7xl px-5 pt-5 sm:px-8">
                 <WhatsAppLink
                   subject={name}
-                  className="btn-wa flex items-center justify-center gap-2.5 rounded-[0.625rem] py-3.5 text-[14px] font-bold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                  className="inline-flex items-center gap-2 border-t pt-4 text-[14px] font-bold"
+                  style={{ borderColor: "var(--hairline)", color: "var(--brand-gold-deep)" }}
                 >
-                  <WhatsAppIcon className="size-[18px]" />
-                  {name} — {tCta("bookNow")}
+                  <WhatsAppIcon className="size-[17px]" />
+                  {name} — {t("askAreaCta")}
                 </WhatsAppLink>
               </div>
             </section>

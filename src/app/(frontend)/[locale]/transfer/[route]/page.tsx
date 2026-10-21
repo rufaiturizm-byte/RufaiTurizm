@@ -269,7 +269,7 @@ export default async function TransferRoutePage({
             };
 
             return (
-              <article key={item.slug} className="accent-card group overflow-hidden">
+              <article key={item.slug} className="reveal-rise accent-card group overflow-hidden">
                 <Link href={href} className="relative block aspect-[16/10] overflow-hidden">
                   <Image
                     src={item.image}

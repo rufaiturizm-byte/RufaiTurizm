@@ -6,6 +6,7 @@ import { services } from "@/data/services";
 import { guides } from "@/data/guides";
 import { hotelsWithPages } from "@/data/hotels";
 import { chauffeurCities } from "@/data/chauffeur";
+import { origins } from "@/data/origins";
 import { guidePublishedDates } from "@/data/guide-dates";
 import { transferRoutes } from "@/data/transfer-routes";
 import { packages } from "@/data/packages";
@@ -129,6 +130,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sayfasındaki diğer yirmi üç otelin sayfası yok ve sitemap de onları
       uydurmuyor — kaynak `hotelsWithPages()`, yani slug'ı olanlar.
     */
+    /* Misafirin geldiği ülkeye göre sayfalar — Körfez hedefli. */
+    ...origins.map((origin) => ({
+      href: { pathname: "/from/[country]" as const, params: { country: origin.slug } },
+      priority: 0.9,
+      changeFrequency: "monthly" as const,
+    })),
     /* Şehir şehir şoförlü araç — ticari sayfalar, yüksek öncelik. */
     ...chauffeurCities.map((city) => ({
       href: { pathname: "/chauffeur/[city]" as const, params: { city: city.slug } },

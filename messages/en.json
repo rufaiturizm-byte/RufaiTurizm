@@ -40,6 +40,14 @@
     "destinationLink": "{city} regional guide",
     "bandNote": "The car and driver are at your disposal all day; they wait at every stop and the programme can change midway."
   },
+  "origin": {
+    "visaNote": "The visa details come from the list published by Türkiye's Ministry of Foreign Affairs and rules can change; confirm with the official source before you fly.",
+    "visaSource": "Ministry of Foreign Affairs visa page",
+    "faqTitle": "Frequently asked",
+    "askTitle": "Let us build your programme together",
+    "askText": "Tell us the dates, how many you are and how many nights; we send a day-by-day outline and the total the same day.",
+    "bandNote": "One team from the airport meet-and-greet to the hotel, and from the tour to your flight home."
+  },
   "home": {
     "hero": {
       "eyebrow": "Licensed travel agency",

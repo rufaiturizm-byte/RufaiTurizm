@@ -40,6 +40,14 @@
     "destinationLink": "{city} bölge rehberi",
     "bandNote": "Araç ve şoför gün boyunca emrinizde; her durakta bekliyor ve program ortasında değişiklik yapılabiliyor."
   },
+  "origin": {
+    "visaNote": "Vize bilgisi T.C. Dışişleri Bakanlığı'nın yayınladığı listeden alınmıştır ve kurallar değişebilir; uçuştan önce resmî kaynaktan teyit edin.",
+    "visaSource": "Dışişleri Bakanlığı vize sayfası",
+    "faqTitle": "Sık sorulanlar",
+    "askTitle": "Programınızı birlikte kuralım",
+    "askText": "Tarihleri, kaç kişi olduğunuzu ve kaç gece kalacağınızı yazın; aynı gün gün gün taslağı ve toplam tutarı gönderelim.",
+    "bandNote": "Havalimanı karşılamasından otele, turdan dönüş uçuşuna kadar tek ekip."
+  },
   "home": {
     "hero": {
       "eyebrow": "Lisanslı seyahat acentesi",

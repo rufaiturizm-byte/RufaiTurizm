@@ -139,6 +139,16 @@ export const pathnames = {
     en: "/car-with-driver/[city]",
   },
   /*
+   * Misafirin GELDİĞİ ülkeye göre sayfalar. Arapça yol adı aranan
+   * ifadenin kendisi: "السفر إلى تركيا من السعودية". Hedef pazar
+   * Arapça arıyor; Türkçe ve İngilizce sürümler sistemin gereği.
+   */
+  "/from/[country]": {
+    ar: "/السفر-إلى-تركيا/[country]",
+    tr: "/turkiyeye-seyahat/[country]",
+    en: "/travel-to-turkiye/[country]",
+  },
+  /*
    * Yasal sayfalar. Arama hacmi için değil, mevzuat ve güven için var:
    * ziyaretçi "bu site kim, verime ne oluyor" sorusunun cevabını
    * bulabilmeli. Yol adları her dilde o dilin kelimesiyle.

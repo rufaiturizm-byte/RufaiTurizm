@@ -112,7 +112,21 @@ export default async function HomePage({
               ve fotoğrafın parlak kısmı kartın gölgesini yutuyordu. */}
           <div className="scrim-bottom absolute inset-x-0 bottom-0 -z-10 h-48" />
 
-          <div className="mx-auto max-w-7xl px-5 pt-20 pb-32 sm:px-8 sm:pt-28 sm:pb-40">
+          {/*
+            MOBİLDE HERO KISALTILDI.
+
+            Ölçüldü (390×844): hero 674 piksel ve rezervasyon formu 655.
+            pikselde başlıyordu — yani ilk ekranda yalnız sekmeler
+            görünüyor, "nereden nereye" alanları ekranın altında kalıyordu.
+            Rakiplerde arama kutusu ilk ekranda elin altında duruyor ve
+            işletme de tam bunu istedi.
+
+            Dikey boşluklar yalnız MOBİLDE kısıldı (pt-20→pt-12,
+            pb-32→pb-24, başlık üstü mt-8→mt-6, paragraf mt-6→mt-4,
+            düğmeler mt-10→mt-7). Masaüstü ölçüsü aynı: orada hero zaten
+            ekranın tamamını doldurmuyor ve nefes alması gerekiyor.
+          */}
+          <div className="mx-auto max-w-7xl px-5 pt-10 pb-20 sm:px-8 sm:pt-28 sm:pb-40">
             <div
               className="inline-flex items-center gap-2.5 rounded-full border px-4 py-2 backdrop-blur-sm"
               style={{
@@ -126,17 +140,17 @@ export default async function HomePage({
               </AnimatedShinyText>
             </div>
 
-            <h1 className="mt-8 max-w-3xl font-display text-[42px] font-semibold leading-[1.08] tracking-[-0.015em] text-white sm:text-[68px]">
+            <h1 className="mt-6 max-w-3xl font-display text-[42px] font-semibold leading-[1.08] tracking-[-0.015em] text-white sm:text-[68px]">
               {t("hero.titleLead")}
               <br />
               <span style={{ color: "var(--brand-gold)" }}>{t("hero.titleAccent")}</span>
             </h1>
 
-            <p className="mt-6 max-w-lg text-[17px] leading-[1.8] text-white/80">
+            <p className="mt-4 max-w-lg text-[17px] leading-[1.8] text-white/80 sm:mt-6">
               {t("hero.subtitle")}
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-3.5">
+            <div className="mt-7 flex flex-wrap items-center gap-3.5 sm:mt-10">
               <WhatsAppLink
                 className="inline-flex items-center gap-3 rounded-[0.875rem] px-7 py-4 text-[15px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{

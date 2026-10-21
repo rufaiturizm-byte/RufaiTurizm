@@ -292,6 +292,23 @@ export async function Footer() {
             <Link href="/terms" className="underline-offset-4 transition-colors hover:text-white hover:underline">
               {tLegal("terms")}
             </Link>
+            {/*
+              Ajans künyesi — telif satırının yanında, altbilginin en alt
+              şeridinde. Bağlantı listesine konsaydı turların ve otellerin
+              arasında yer kaplardı; burası künye bilgisinin yeri.
+
+              `rel="noopener"` yeni sekme için zorunlu; `noreferrer` YOK,
+              çünkü ajansın kendi ölçümünde bu sitenin görünmesi işin
+              doğal parçası.
+            */}
+            <a
+              href="https://techdatareklam.com"
+              target="_blank"
+              rel="noopener"
+              className="underline-offset-4 transition-colors hover:text-white hover:underline"
+            >
+              {t("agency")}
+            </a>
           </span>
           {siteConfig.credentials.tursab ? (
             <a

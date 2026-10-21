@@ -59,7 +59,22 @@ export async function DestinationCompare({ locale }: { locale: string }) {
                 <th scope="col" className={th}>{t("colSea")}</th>
                 <th scope="col" className={th}>{t("colMonths")}</th>
                 <th scope="col" className={th}>{t("colSuits")}</th>
-                <th scope="col" className={th}>
+                {/*
+                  `relative` ŞART — süs değil.
+
+                  `sr-only` mutlak konumlu ve konumlanmış bir atası yoksa
+                  kendini SAYFAYA göre yerleştiriyor, yani tablonun yatay
+                  kaydırma kutusundan kaçıyor. Arapça sayfada tablo içeride
+                  sağa kaydığı için bu gizli metin x = -243 piksele düşüyor
+                  ve belgenin genişliğini 375'ten 618'e çıkarıyordu: telefonda
+                  turlar ve bölgeler sayfası yana kayık açılıyor, ekranın
+                  solu boş kalıyordu. Türkçe sayfada aynı metin pozitif
+                  tarafta kaldığı için sorun görünmüyordu.
+
+                  Hücreye `relative` verilince gizli metnin referansı hücre
+                  oluyor ve kaydırma kutusu onu kırpıyor.
+                */}
+                <th scope="col" className={`${th} relative`}>
                   <span className="sr-only">{tCommon("details")}</span>
                 </th>
               </tr>

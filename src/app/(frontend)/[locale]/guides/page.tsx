@@ -194,7 +194,7 @@ export default async function GuidesPage({
                       {title}
                     </Link>
                   </h3>
-                  <p className="mt-2 line-clamp-3 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground sm:mt-2.5 sm:line-clamp-none">
+                  <p className="mt-2 line-clamp-3 flex-1 text-[14.5px] leading-[1.7] text-muted-foreground sm:mt-2.5 sm:line-clamp-none">
                     {guide.excerpt[lang] ?? guide.excerpt.tr}
                   </p>
 

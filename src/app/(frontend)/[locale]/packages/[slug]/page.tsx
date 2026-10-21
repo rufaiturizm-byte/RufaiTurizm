@@ -206,7 +206,7 @@ export default async function PackageDetailPage({
                 aria-hidden="true"
               />
               <div>
-                <h3 className="text-[15px] font-bold">{t("flexTitle")}</h3>
+                <h3 className="text-[17px] font-bold">{t("flexTitle")}</h3>
                 <p className="measure-wide mt-2 text-[14px] leading-[1.8] text-foreground/80">
                   {t("flexText")}
                 </p>
@@ -232,7 +232,7 @@ export default async function PackageDetailPage({
             {/* measure yalnız yığılmış halde iş görüyor: lg altında yan sütun
                 tam genişliğe çıkıyor ve 13,5 piksellik bu not 1000px ekranda
                 886 piksel oluyordu. lg'de sütun zaten 360. */}
-            <p className="measure mt-3 text-[13.5px] leading-[1.8] text-muted-foreground">
+            <p className="measure mt-3 text-[14.5px] leading-[1.8] text-muted-foreground">
               {t("priceText")}
             </p>
 

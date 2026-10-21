@@ -218,7 +218,7 @@ export default async function HotelPage({
           </ul>
 
           {hotel.facts?.officialUrl ? (
-            <p className="mt-6 text-[13.5px]">
+            <p className="mt-6 text-[14.5px]">
               <a
                 href={hotel.facts.officialUrl}
                 rel="noopener nofollow"

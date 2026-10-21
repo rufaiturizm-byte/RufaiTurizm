@@ -98,7 +98,7 @@ export async function TransferTypes() {
               <h3 className="font-display text-[17.5px] font-semibold leading-snug">
                 {t(`type${n}Title`)}
               </h3>
-              <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
+              <p className="mt-2.5 flex-1 text-[14.5px] leading-[1.7] text-muted-foreground">
                 {t(`type${n}Desc`)}
               </p>
 
@@ -233,8 +233,8 @@ export async function TransferWhy() {
               <Icon className="size-5" aria-hidden="true" />
             </span>
 
-            <h3 className="mt-4 text-[16px] font-bold">{t(`why${n}Title`)}</h3>
-            <p className="mt-2 text-[13.5px] leading-[1.75] text-muted-foreground">
+            <h3 className="mt-4 text-[17px] font-bold">{t(`why${n}Title`)}</h3>
+            <p className="mt-2 text-[14.5px] leading-[1.75] text-muted-foreground">
               {t(`why${n}Desc`)}
             </p>
           </article>

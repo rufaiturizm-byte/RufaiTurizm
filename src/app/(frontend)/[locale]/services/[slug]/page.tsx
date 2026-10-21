@@ -231,7 +231,7 @@ export default async function ServiceDetailPage({
                     />
                     {label}
                   </dt>
-                  <dd className="mt-2.5 text-[13.5px] leading-[1.75]">{value}</dd>
+                  <dd className="mt-2.5 text-[14.5px] leading-[1.75]">{value}</dd>
                 </div>
               ))}
             </dl>
@@ -266,8 +266,8 @@ export default async function ServiceDetailPage({
                   >
                     <Icon className="size-[18px]" aria-hidden="true" />
                   </span>
-                  <h3 className="mt-4 text-[15.5px] font-bold">{tWhy(`${key}.title`)}</h3>
-                  <p className="mt-2 text-[13.5px] leading-[1.75] text-muted-foreground">
+                  <h3 className="mt-4 text-[17px] font-bold">{tWhy(`${key}.title`)}</h3>
+                  <p className="mt-2 text-[14.5px] leading-[1.75] text-muted-foreground">
                     {tWhy(`${key}.description`)}
                   </p>
                 </div>

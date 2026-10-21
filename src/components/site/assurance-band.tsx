@@ -103,8 +103,8 @@ export async function AssuranceBand() {
                   <Icon className="size-5" />
                 </span>
 
-                <h3 className="mt-5 text-[15.5px] font-bold leading-snug text-white">{title}</h3>
-                <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.8] text-white/62">{desc}</p>
+                <h3 className="mt-5 text-[17px] font-bold leading-snug text-white">{title}</h3>
+                <p className="mt-2.5 flex-1 text-[14.5px] leading-[1.8] text-white/62">{desc}</p>
 
                 {href && cta ? (
                   <a

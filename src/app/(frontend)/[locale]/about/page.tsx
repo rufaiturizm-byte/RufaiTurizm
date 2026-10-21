@@ -221,7 +221,7 @@ export default async function AboutPage({
                     <Icon className="size-[18px]" aria-hidden="true" />
                   </span>
 
-                  <h3 className="mt-5 text-[16px] font-bold leading-snug">{title}</h3>
+                  <h3 className="mt-5 text-[17px] font-bold leading-snug">{title}</h3>
                   <p className="mt-2.5 flex-1 text-[14px] leading-[1.85] text-foreground/80">
                     {desc}
                   </p>
@@ -302,15 +302,15 @@ export default async function AboutPage({
                 <span className="icon-tile inline-flex size-11 items-center justify-center">
                   <Icon className="size-[18px]" aria-hidden="true" />
                 </span>
-                <h3 className="mt-4 text-[15.5px] font-bold leading-snug">{t(`wrong${n}Title`)}</h3>
-                <p className="mt-2.5 text-[13.5px] leading-[1.8] text-muted-foreground">
+                <h3 className="mt-4 text-[17px] font-bold leading-snug">{t(`wrong${n}Title`)}</h3>
+                <p className="mt-2.5 text-[14.5px] leading-[1.8] text-muted-foreground">
                   {t(`wrong${n}Desc`)}
                 </p>
               </article>
             ))}
           </div>
 
-          <p className="measure mt-6 text-[13.5px] leading-[1.8] text-muted-foreground">
+          <p className="measure mt-6 text-[14.5px] leading-[1.8] text-muted-foreground">
             {t("wrongNote")}
           </p>
         </section>

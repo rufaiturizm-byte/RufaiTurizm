@@ -153,7 +153,7 @@ export default async function ChauffeurCityPage({
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-[13.5px]">
+            <p className="mt-6 text-[14.5px]">
               <Link
                 href="/transfer"
                 className="inline-flex items-center gap-2 font-semibold"

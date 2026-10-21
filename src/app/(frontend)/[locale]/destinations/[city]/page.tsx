@@ -383,7 +383,7 @@ export default async function DestinationPage({
               <h3 className="font-display text-[19px] font-semibold leading-snug">
                 {t("askTitle", { city: name })}
               </h3>
-              <p className="mt-3 text-[13.5px] leading-[1.8] text-muted-foreground">
+              <p className="mt-3 text-[14.5px] leading-[1.8] text-muted-foreground">
                 {t("askText")}
               </p>
               <WhatsAppLink

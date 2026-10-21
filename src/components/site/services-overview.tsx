@@ -111,7 +111,7 @@ export async function ServicesOverview() {
                       {name}
                     </Link>
                   </h3>
-                  <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
+                  <p className="mt-2.5 flex-1 text-[14.5px] leading-[1.7] text-muted-foreground">
                     {t(`${service.key}.description`)}
                   </p>
 
@@ -174,7 +174,7 @@ export async function ServicesOverview() {
           </span>
           <div>
             <div className="font-display text-[17px] font-semibold">{tHome2("quoteTitle")}</div>
-            <p className="mt-1 text-[13.5px] text-muted-foreground">{tHome2("quoteText")}</p>
+            <p className="mt-1 text-[14.5px] text-muted-foreground">{tHome2("quoteText")}</p>
           </div>
         </div>
 

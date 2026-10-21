@@ -112,7 +112,7 @@ export default async function HotelsPage({
             aria-hidden="true"
           />
           <div className="measure-wide">
-            <p className="text-[13.5px] leading-[1.8]">{t("disclaimer")}</p>
+            <p className="text-[14.5px] leading-[1.8]">{t("disclaimer")}</p>
             {/*
               Bu cümle sözlükte YAZILIYDI ama hiçbir yerde basılmıyordu —
               ölü çeviri anahtarlarını tararken çıktı.
@@ -270,7 +270,7 @@ export default async function HotelsPage({
                         />
                         {label}
                       </dt>
-                      <dd className="mt-2.5 text-[13.5px] leading-[1.75]">
+                      <dd className="mt-2.5 text-[14.5px] leading-[1.75]">
                         {value[lang] ?? value.tr}
                       </dd>
                     </div>
@@ -387,7 +387,7 @@ export default async function HotelsPage({
                           )}
                         </h3>
 
-                        <p className="mt-2.5 flex items-start gap-2 text-[13.5px] leading-[1.7] text-muted-foreground">
+                        <p className="mt-2.5 flex items-start gap-2 text-[14.5px] leading-[1.7] text-muted-foreground">
                           <MapPin
                             className="mt-0.5 size-3.5 shrink-0"
                             style={{ color: "var(--brand-gold-deep)" }}
@@ -466,7 +466,7 @@ export default async function HotelsPage({
                             {subName}
                           </h3>
 
-                          <p className="mt-3 flex-1 text-[13.5px] leading-[1.75] text-muted-foreground">
+                          <p className="mt-3 flex-1 text-[14.5px] leading-[1.75] text-muted-foreground">
                             {sub.desc[lang] ?? sub.desc.tr}
                           </p>
 

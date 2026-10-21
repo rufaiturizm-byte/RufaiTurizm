@@ -73,7 +73,7 @@ export async function TourCard({ tour }: { tour: Tour }) {
             {name}
           </Link>
         </h3>
-        <p className="mt-2 line-clamp-2 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
+        <p className="mt-2 line-clamp-2 flex-1 text-[14.5px] leading-[1.7] text-muted-foreground">
           {t(`${tour.key}.description`)}
         </p>
 

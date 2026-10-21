@@ -86,7 +86,7 @@ export async function GuidesTeaser({ locale }: { locale: string }) {
                     {title}
                   </Link>
                 </h3>
-                <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
+                <p className="mt-2.5 flex-1 text-[14.5px] leading-[1.7] text-muted-foreground">
                   {guide.excerpt[lang] ?? guide.excerpt.tr}
                 </p>
 

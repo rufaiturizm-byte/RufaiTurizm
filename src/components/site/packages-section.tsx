@@ -98,7 +98,7 @@ export async function PackagesSection({ locale }: { locale: string }) {
               </Link>
 
               <div className="flex flex-1 flex-col p-4">
-                <h3 className="text-[15.5px] font-bold">
+                <h3 className="text-[17px] font-bold">
                   <Link
                     href={href}
                     className="inline-block py-1 transition-colors hover:text-[color:var(--brand-gold-deep)]"

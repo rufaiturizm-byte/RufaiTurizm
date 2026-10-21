@@ -298,8 +298,8 @@ export default async function ContactPage({
             <li key={no} className="reveal-rise surface-card flex gap-4 p-6">
               <span className="step-badge size-9 shrink-0 text-[14px] font-extrabold">{no}</span>
               <div>
-                <h3 className="text-[15.5px] font-bold leading-snug">{t(`prep${no}Title`)}</h3>
-                <p className="mt-2 text-[13.5px] leading-[1.75] text-muted-foreground">
+                <h3 className="text-[17px] font-bold leading-snug">{t(`prep${no}Title`)}</h3>
+                <p className="mt-2 text-[14.5px] leading-[1.75] text-muted-foreground">
                   {t(`prep${no}Desc`)}
                 </p>
               </div>
@@ -307,7 +307,7 @@ export default async function ContactPage({
           ))}
         </ol>
 
-        <p className="measure mt-6 text-[13.5px] leading-[1.8] text-muted-foreground">
+        <p className="measure mt-6 text-[14.5px] leading-[1.8] text-muted-foreground">
           {t("prepNote")}
         </p>
       </section>

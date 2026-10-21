@@ -8,6 +8,17 @@ import type { ReactNode } from "react";
  * uçta ince çerçeveli eylem düğmesi. Etiketin yanındaki çizgi tek başına
  * sayfayı editoryal gösteren ayrıntı — sekiz bölümde de aynı hizada durur.
  */
+/*
+ * BÖLÜM BAŞLIĞI SAYFA BAŞLIĞINDAN KÜÇÜK OLMALI.
+ *
+ * Ölçüldü (21 Ekim): bu bileşen 46 piksel basıyordu, sayfa başlığı ise
+ * 48 — yani aralarında fark yoktu ve bir tur detayında dört ayrı h2
+ * boyutu yan yana geliyordu. Hiyerarşi okunmuyordu: göz hangisinin
+ * sayfanın adı, hangisinin bölüm adı olduğunu ayıramıyor.
+ *
+ * Yeni ölçek h1'in yaklaşık %70'i (34 / 48). Tipografide alışılmış
+ * oran bu ve bölüm başlığı hâlâ iri, yalnız sayfanın adıyla yarışmıyor.
+ */
 export function SectionHeading({
   eyebrow,
   eyebrowIcon,
@@ -44,7 +55,7 @@ export function SectionHeading({
           ) : null}
 
           <h2
-            className={`font-display text-[34px] font-semibold leading-[1.08] tracking-[-0.015em] sm:text-[46px] ${
+            className={`font-display text-[26px] font-semibold leading-[1.12] tracking-[-0.015em] sm:text-[34px] ${
               dark ? "text-white" : ""
             }`}
           >

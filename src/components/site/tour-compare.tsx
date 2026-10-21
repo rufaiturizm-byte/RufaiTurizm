@@ -143,7 +143,7 @@ export async function TourCompare() {
 
         <div className="grid gap-5 lg:grid-cols-2">
           <div className="p-7 surface-card">
-            <h3 className="text-[16px] font-bold">{t("includedTitle")}</h3>
+            <h3 className="text-[17px] font-bold">{t("includedTitle")}</h3>
             <ul className="mt-5 flex flex-col gap-3">
               {includedKeys.map((key) => (
                 <li key={key} className="flex items-start gap-3 text-[14px] leading-snug">
@@ -158,7 +158,7 @@ export async function TourCompare() {
           </div>
 
           <div className="p-7 surface-card">
-            <h3 className="text-[16px] font-bold">{t("notIncludedTitle")}</h3>
+            <h3 className="text-[17px] font-bold">{t("notIncludedTitle")}</h3>
             <ul className="mt-5 flex flex-col gap-3">
               {notIncludedKeys.map((key) => (
                 <li

@@ -31,7 +31,7 @@ export async function ProcessSteps() {
             <span className="step-badge size-12 text-[18px] font-extrabold">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-5 text-[16.5px] font-bold">{t(`step${step}Title`)}</h3>
+            <h3 className="mt-5 text-[17px] font-bold">{t(`step${step}Title`)}</h3>
             <p className="mx-auto mt-2.5 max-w-[17rem] text-[14px] leading-[1.75] text-muted-foreground">
               {t(`step${step}Desc`)}
             </p>

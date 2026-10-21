@@ -53,7 +53,7 @@ export async function RouteCoverage({
               <h2 className="font-display text-[22px] font-semibold leading-snug sm:text-[26px]">
                 {t("title")}
               </h2>
-              <p className="measure mt-3 text-[13.5px] leading-[1.75] text-muted-foreground">
+              <p className="measure mt-3 text-[14.5px] leading-[1.75] text-muted-foreground">
                 {t("priceNote")}
               </p>
               {/*
@@ -209,7 +209,7 @@ export async function RouteCoverage({
           borderColor: "color-mix(in oklab, var(--brand-gold) 40%, transparent)",
         }}
       >
-        <p className="measure text-[13.5px] leading-[1.7]">{t("priceNote")}</p>
+        <p className="measure text-[14.5px] leading-[1.7]">{t("priceNote")}</p>
         <WhatsAppLink
           className="inline-flex shrink-0 items-center gap-2.5 rounded-[0.625rem] px-5 py-3 text-[13.5px] font-bold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           style={{ background: "var(--brand-gold)", color: "var(--brand-night)" }}

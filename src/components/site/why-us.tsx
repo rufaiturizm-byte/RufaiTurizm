@@ -118,7 +118,7 @@ export async function WhyUs() {
                   <Icon className="size-[19px]" />
                 </span>
                 <div className="min-w-0">
-                  <h3 className="text-[15.5px] font-bold text-white">{t(`${key}.title`)}</h3>
+                  <h3 className="text-[17px] font-bold text-white">{t(`${key}.title`)}</h3>
                   <p className="mt-1.5 text-[13px] leading-[1.7] text-white/58">
                     {t(`${key}.description`)}
                   </p>

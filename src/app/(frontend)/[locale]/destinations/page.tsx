@@ -146,7 +146,7 @@ export default async function DestinationsPage({
                       {name}
                     </Link>
                   </h3>
-                  <p className="mt-2.5 text-[13.5px] leading-[1.7] text-white/78">
+                  <p className="mt-2.5 text-[14.5px] leading-[1.7] text-white/78">
                     {item.tagline[lang] ?? item.tagline.tr}
                   </p>
                   <span

@@ -86,7 +86,7 @@ export async function FleetUses() {
               </div>
 
               <h3 className="mt-4 font-display text-[17.5px] font-semibold leading-snug">{title}</h3>
-              <p className="mt-2.5 flex-1 text-[13.5px] leading-[1.7] text-muted-foreground">
+              <p className="mt-2.5 flex-1 text-[14.5px] leading-[1.7] text-muted-foreground">
                 {desc}
               </p>
 

@@ -142,7 +142,7 @@ export function ProseSection({
                     {sira + 1}
                   </span>
                   <div>
-                    <h3 className="text-[15.5px] font-bold leading-snug">{madde.title}</h3>
+                    <h3 className="text-[17px] font-bold leading-snug">{madde.title}</h3>
                     <p className="mt-2 text-[14.5px] leading-[1.9] text-foreground/80">
                       {madde.body}
                     </p>

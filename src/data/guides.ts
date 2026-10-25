@@ -1155,10 +1155,22 @@ export const guides: Guide[] = [
       },
     ],
     seo: {
-      title: { tr: "Arapça Konuşan Şoför ve Rehber", ar: "سائق ومرشد يتحدث العربية", en: "Arabic-Speaking Driver and Guide" },
+      /*
+        ARAPÇA BAŞLIK ARANAN İFADEYE ÇEKİLDİ (25 Ekim 2026).
+
+        Eski hâli "سائق ومرشد يتحدث العربية" idi: doğru ama arama
+        karşılığı yok — ne şehir adı taşıyordu ne de insanların yazdığı
+        kalıbı. Körfez misafiri "مرشد سياحي عربي في اسطنبول" diye arıyor.
+
+        Yazının içeriği zaten tam bu: rehber ile şoför farkı, rehber
+        belgesinin ne anlama geldiği, dilin nerede işe yaradığı. Yani
+        yeni sayfa açmak yerine var olanı hedeflemek doğru olan —
+        ikinci bir sayfa açsaydık kendi sayfamızla yarışırdı.
+      */
+      title: { tr: "Arapça Konuşan Rehber ve Şoför: Farkı Ne", ar: "مرشد سياحي عربي في إسطنبول: ما الفرق بينه وبين السائق", en: "Arabic-Speaking Guide in Istanbul: How It Differs From a Driver" },
       description: {
         tr: "Dil, fiyattan sonra seyahat konforunu en çok belirleyen şey. Karşılamada, alışverişte ve turda nerede işe yarar, rehber ile şoför arasındaki fark nedir.",
-        ar: "اللغة هي العامل الأهم بعد السعر في راحة الرحلة. أين تنفع عند الاستقبال والتسوق والجولة، وما الفرق بين المرشد والسائق.",
+        ar: "مرشد سياحي يتحدث العربية في إسطنبول وبقية المدن: ما الفرق بينه وبين السائق، وماذا تعني رخصة الإرشاد، وأين تنفع اللغة فعلاً — عند الاستقبال والتسوّق وفي الجولة.",
         en: "After price, language shapes the trip more than anything. Where it helps at arrivals, shopping and on tour, and how a guide differs from a driver.",
       },
     },

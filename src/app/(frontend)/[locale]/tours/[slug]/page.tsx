@@ -9,7 +9,7 @@ import { alternatesFor } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { Band } from "@/components/site/band";
 import { PageClosing } from "@/components/site/page-closing";
-import { BreadcrumbSchema, TouristTripSchema } from "@/components/site/json-ld";
+import { BreadcrumbSchema, FaqSchema, TouristTripSchema } from "@/components/site/json-ld";
 import { SectionHeading } from "@/components/site/section-heading";
 import { TourCard } from "@/components/site/tour-card";
 import { packageBySlug } from "@/data/packages";
@@ -66,6 +66,7 @@ export default async function TourDetailPage({
 
   const t = await getTranslations("tours");
   const tPage = await getTranslations("toursPage");
+  const tFaq = await getTranslations("faq");
   const tNav = await getTranslations("nav");
   const tCta = await getTranslations("cta");
   const tCommon = await getTranslations("common");
@@ -98,6 +99,12 @@ export default async function TourDetailPage({
             url: getPathname({ locale, href: { pathname: "/tours/[slug]", params: { slug } } }),
           },
         ]}
+      />
+      <FaqSchema
+        items={tour.faq.map((item) => ({
+          question: item.question[lang] ?? item.question.tr,
+          answer: item.answer[lang] ?? item.answer.tr,
+        }))}
       />
       <TouristTripSchema
         name={name}
@@ -405,6 +412,35 @@ export default async function TourDetailPage({
           {others.map((item) => (
             <TourCard key={item.key} tour={item} />
           ))}
+        </div>
+      </section>
+
+      {/*
+        TURA ÖZEL SORU-CEVAP.
+
+        Altındaki `FaqPreview` sitenin GENEL sorularını gösteriyor
+        (ödeme, iptal, dil). Burada ise bu turun kendi soruları var:
+        müze bileti dahil mi, Alanya aynı güne sığar mı, tekne turu
+        bizim mi. Şema da basılıyor — sitedeki diğer ticari sayfa
+        tiplerinin hepsinde vardı, tur sayfalarında eksikti.
+      */}
+      <section className="section-y">
+        <div className="mx-auto max-w-4xl px-5 sm:px-8">
+          <h2 className="font-display text-[26px] font-semibold sm:text-[34px]">
+            {tFaq("title")}
+          </h2>
+          <dl className="mt-6 flex flex-col divide-y" style={{ borderColor: "var(--hairline)" }}>
+            {tour.faq.map((item) => (
+              <div key={item.question.tr} className="py-5">
+                <dt className="text-[17px] font-semibold">
+                  {item.question[lang] ?? item.question.tr}
+                </dt>
+                <dd className="measure mt-2 text-[14.5px] leading-[1.8] text-muted-foreground">
+                  {item.answer[lang] ?? item.answer.tr}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

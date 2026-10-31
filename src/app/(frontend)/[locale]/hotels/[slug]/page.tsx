@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { Link, getPathname } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/metadata";
-import { BreadcrumbSchema } from "@/components/site/json-ld";
+import { BreadcrumbSchema, FaqSchema } from "@/components/site/json-ld";
 import { Band } from "@/components/site/band";
 import { PageClosing } from "@/components/site/page-closing";
 import { PageHero } from "@/components/site/page-hero";
@@ -100,6 +100,29 @@ export default async function HotelPage({
   const areaName = text(area.name);
   const nearby = (area.hotels ?? []).filter((item) => item.slug && item.slug !== hotel.slug);
 
+  /*
+    SORU-CEVAP VERİDEN TÜRETİLİYOR, YAZILMIYOR.
+
+    Ölçüldü (25 Ekim): Arapça sayfa tiplerinin hepsinde FAQPage şeması
+    vardı; tur ve otel sayfalarında yoktu. Turlarınki yazıldı, bu da
+    onun eşi.
+
+    Üç sorunun cevabı da sayfada ZATEN olan doğrulanmış veriden geliyor:
+    havalimanı mesafesi semtin pratik bilgisinden, metro cevabı otelin
+    kendi resmî sitesinden alınan `transit` alanından (yoksa semtin
+    ulaşım cümlesinden), rezervasyon cevabı ise sitenin her yerinde
+    yazan hizmet tarifinden. Yani otel başına elle yazılmış, bu yüzden
+    de doğrulanmamış bir metin YOK.
+  */
+  const faq = [
+    { question: t("q1"), answer: text(area.practical.airport) },
+    {
+      question: t("q2"),
+      answer: hotel.facts?.transit ? text(hotel.facts.transit) : text(area.practical.gettingAround),
+    },
+    { question: t("q3"), answer: t("a3") },
+  ];
+
   return (
     <main id="main" className="flex flex-1 flex-col">
       <BreadcrumbSchema
@@ -112,6 +135,8 @@ export default async function HotelPage({
           },
         ]}
       />
+
+      <FaqSchema items={faq} />
 
       <PageHero
         image={area.image}
@@ -283,6 +308,18 @@ export default async function HotelPage({
             {t("transferCta")}
             <ArrowRight className="size-4 rtl:rotate-180" aria-hidden="true" />
           </Link>
+
+          <h2 className="mt-12 font-display text-[26px] font-semibold">{t("faqTitle")}</h2>
+          <dl className="mt-5 flex flex-col divide-y" style={{ borderColor: "var(--hairline)" }}>
+            {faq.map((item) => (
+              <div key={item.question} className="py-5">
+                <dt className="text-[17px] font-semibold">{item.question}</dt>
+                <dd className="measure mt-2 text-[14.5px] leading-[1.8] text-muted-foreground">
+                  {item.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
 
           <div
             className="mt-10 border p-6 sm:p-8"

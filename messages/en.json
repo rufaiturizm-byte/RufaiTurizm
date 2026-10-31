@@ -1116,7 +1116,12 @@
     "askTitle": "Ask about this hotel",
     "askText": "Tell us the dates, how many you are and the room type; we confirm availability and price with the hotel and send them to you. We book in your name.",
     "sourceNote": "The details above come from the hotel's own website. Price, availability and room type are confirmed with the hotel at booking.",
-    "metaDescription": "{name}: staying in {district}. Location, transport and distance from the airport; we book in your name."
+    "metaDescription": "{name}: staying in {district}. Location, transport and distance from the airport; we book in your name.",
+    "faqTitle": "Frequently asked about this hotel",
+    "q1": "How do we get from the airport to the hotel?",
+    "q2": "Is the hotel close to the metro?",
+    "q3": "Do you make the booking?",
+    "a3": "Yes, in your name. Tell us the dates and how many you are; we confirm price and availability with the hotel and send them to you. We also ask in writing about details such as a family room, an extra bed and the bathroom."
   },
   "meta": {
     "home": "Rufai Tourism: Istanbul airport transfers, Arabic-guided tours, a chauffeured Mercedes Vito, flight tickets and hotel bookings. Fixed prices, 24/7 WhatsApp.",

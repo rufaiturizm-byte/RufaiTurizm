@@ -1116,7 +1116,12 @@
     "askTitle": "Bu otel için fiyat sorun",
     "askText": "Tarihleri, kaç kişi olduğunuzu ve oda tipini yazın; müsaitliği ve fiyatı otelden teyit edip size iletelim. Rezervasyonu sizin adınıza biz yapıyoruz.",
     "sourceNote": "Yukarıdaki bilgiler otelin kendi resmî sitesinden alınmıştır. Fiyat, müsaitlik ve oda tipi rezervasyon sırasında otelden teyit edilir.",
-    "metaDescription": "{name}: {district} semtinde konaklama. Konum, ulaşım ve havalimanı mesafesi; rezervasyonu sizin adınıza yapıyoruz."
+    "metaDescription": "{name}: {district} semtinde konaklama. Konum, ulaşım ve havalimanı mesafesi; rezervasyonu sizin adınıza yapıyoruz.",
+    "faqTitle": "Bu otel hakkında sık sorulanlar",
+    "q1": "Havalimanından otele nasıl gelinir?",
+    "q2": "Otel metroya yakın mı?",
+    "q3": "Rezervasyonu siz mi yapıyorsunuz?",
+    "a3": "Evet, sizin adınıza. Tarihleri ve kaç kişi olduğunuzu yazın; fiyatı ve müsaitliği otelden teyit edip iletelim. Aile odası, ilave yatak ve banyo gibi ayrıntıları da yazılı olarak soruyoruz."
   },
   "meta": {
     "home": "Rufai Turizm: İstanbul havalimanı transferi, Arapça rehberli turlar, şoförlü Mercedes Vito, uçak bileti ve otel rezervasyonu. Sabit fiyat, 7/24 WhatsApp desteği.",

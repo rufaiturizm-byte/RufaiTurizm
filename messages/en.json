@@ -24,7 +24,9 @@
     "packages": "Multi-day tour packages",
     "services": "Transfers, tours and booking",
     "hotels": "Istanbul hotels",
-    "guides": "Türkiye travel guides"
+    "guides": "Türkiye travel guides",
+    "fromSaudi": "To Türkiye from Saudi Arabia",
+    "fromUae": "To Türkiye from Dubai and the UAE"
   },
   "legal": {
     "updated": "Last updated: {date}",

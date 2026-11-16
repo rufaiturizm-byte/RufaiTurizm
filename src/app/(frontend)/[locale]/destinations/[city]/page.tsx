@@ -20,6 +20,7 @@ import { tourBySlug } from "@/data/tours";
 import { packageBySlug } from "@/data/packages";
 import { guideBySlug } from "@/data/guides";
 import { transferRouteBySlug } from "@/data/transfer-routes";
+import { chauffeurCityBySlug } from "@/data/chauffeur";
 import { routeTitle } from "@/lib/route-title";
 import type { Locale } from "@/i18n/routing";
 
@@ -84,6 +85,7 @@ export default async function DestinationPage({
   const pack = item.packageSlug ? packageBySlug(item.packageSlug) : undefined;
   const guides = item.guideSlugs.map(guideBySlug).filter((g) => g !== undefined);
   const routes = item.routeSlugs.map(transferRouteBySlug).filter((r) => r !== undefined);
+  const chauffeur = chauffeurCityBySlug(item.slug);
 
   return (
     <main id="main" className="flex flex-1 flex-col">
@@ -310,6 +312,29 @@ export default async function DestinationPage({
             </article>
           ))}
         </div>
+
+        {/*
+          Bu şehirde şoförlü araç sayfası varsa oraya bağlantı.
+
+          ÖLÇÜLDÜ (16 Kasım): şoförlü araç sayfaları ve ülke sayfaları
+          sitenin HİÇBİR YERİNDEN bağlantı almıyordu — yalnız site
+          haritasında vardılar. Google yetim sayfayı en sona bırakıyor;
+          nitekim ülke sayfaları on bir gün sonra hâlâ taranmamıştı.
+          Şehir sayfası bu bağlantının doğal yeri: ziyaretçi zaten
+          "orada nasıl gezerim" sorusunu soruyor.
+        */}
+        {chauffeur ? (
+          <p className="mt-10">
+            <Link
+              href={{ pathname: "/chauffeur/[city]", params: { city: chauffeur.slug } }}
+              className="inline-flex items-center gap-2 text-[15px] font-bold"
+              style={{ color: "var(--brand-gold-deep)" }}
+            >
+              {chauffeur.title[lang] ?? chauffeur.title.tr}
+              <ArrowRight className="size-4 rtl:rotate-180" aria-hidden="true" />
+            </Link>
+          </p>
+        ) : null}
 
         {/* Transfer güzergâhları — kart değil liste: bu sayfada dört tane
             daha kart göstermek bölümü kalabalıklaştırıyordu. */}

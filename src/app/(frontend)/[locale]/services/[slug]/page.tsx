@@ -30,6 +30,8 @@ import {
 import { WhatsAppLink } from "@/components/site/whatsapp-cta";
 import { WhatsAppIcon } from "@/components/site/icons";
 import { VehicleList } from "@/components/site/vehicle-list";
+import { chauffeurCities } from "@/data/chauffeur";
+import type { Locale } from "@/i18n/routing";
 import { formatPrice } from "@/lib/price";
 import { RouteCoverage } from "@/components/site/route-coverage";
 import { ServiceFaq } from "@/components/site/service-faq";
@@ -99,6 +101,12 @@ export default async function ServiceDetailPage({
   const description = t(`${service.key}.description`);
   const features = t.raw(`${service.key}.features`) as string[];
   const isTransfer = TRANSFER_SLUGS.has(service.slug);
+  /*
+    Vito sayfasından şehir şehir şoförlü araç sayfalarına bağlantı.
+    O sayfalar ölçümde YETİM çıktı (hiçbir yerden bağlantı almıyorlardı);
+    bu sayfa onların doğal üst sayfası — aynı hizmetin şehir kırılımı.
+  */
+  const chauffeurLinks = service.slug === "vito-vip" ? chauffeurCities : [];
   /* Fiyatı olmayan hizmet var (flightHotel): kart "fiyat talep üzerine" gösteriyor. */
   const price =
     service.priceFrom && service.priceTryFrom
@@ -160,7 +168,25 @@ export default async function ServiceDetailPage({
             <TransferForm />
           </section>
           <section className="mt-12">
-            <TrustBoxes />
+            {chauffeurLinks.length ? (
+        <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
+          <ul className="flex flex-wrap gap-x-7 gap-y-3 text-[14.5px] font-semibold">
+            {chauffeurLinks.map((city) => (
+              <li key={city.slug}>
+                <Link
+                  href={{ pathname: "/chauffeur/[city]", params: { city: city.slug } }}
+                  className="inline-flex items-center gap-2"
+                  style={{ color: "var(--brand-gold-deep)" }}
+                >
+                  {city.title[locale as Locale] ?? city.title.tr}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      <TrustBoxes />
           </section>
         </>
       ) : null}

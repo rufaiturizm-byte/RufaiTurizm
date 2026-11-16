@@ -70,6 +70,10 @@ export async function Footer() {
     { href: "/services" as const, label: navLabel("services") },
     { href: "/hotels" as const, label: navLabel("hotels") },
     { href: "/guides" as const, label: navLabel("guides") },
+    /* Ülke sayfaları da listede: ölçümde yetim çıktılar ve Google on bir
+       gün boyunca hiç taramadı. Altbilgi her sayfadan bağlantı verir. */
+    { href: { pathname: "/from/[country]" as const, params: { country: "saudi-arabia" } }, label: navLabel("fromSaudi") },
+    { href: { pathname: "/from/[country]" as const, params: { country: "uae" } }, label: navLabel("fromUae") },
     { href: "/about" as const, label: tNav("about") },
     { href: "/faq" as const, label: tNav("faq") },
     { href: "/contact" as const, label: tNav("contact") },
@@ -164,7 +168,9 @@ export async function Footer() {
             */}
             <ul className="space-y-3">
               {quickLinks.map((item) => (
-                <li key={item.href}>
+                /* `href` artık nesne de olabiliyor (ülke sayfaları), o yüzden
+                   anahtar etiketten alınıyor — etiketler zaten benzersiz. */
+                <li key={item.label}>
                   <Link href={item.href} className={link} prefetch={false}>
                     {item.label}
                   </Link>

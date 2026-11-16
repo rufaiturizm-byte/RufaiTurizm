@@ -24,7 +24,9 @@
     "packages": "Çok günlü tur programları",
     "services": "Transfer, tur ve rezervasyon",
     "hotels": "İstanbul otelleri",
-    "guides": "Türkiye seyahat rehberleri"
+    "guides": "Türkiye seyahat rehberleri",
+    "fromSaudi": "Suudi Arabistan'dan Türkiye'ye",
+    "fromUae": "Dubai ve BAE'den Türkiye'ye"
   },
   "legal": {
     "updated": "Son güncelleme: {date}",

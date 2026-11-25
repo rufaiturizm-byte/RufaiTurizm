@@ -44,9 +44,34 @@ export function formatPrice(locale: string, price: PriceInput): PriceDisplay {
     };
   }
 
+  /*
+   * ARAPÇA SAYFADA SUUDİ RİYALİ DE GÖSTERİLİYOR.
+   *
+   * Google'ın çok bölgeli site belgesi, bir sitenin hangi ülkeyi
+   * hedeflediğini anlamak için saydığı sinyaller arasında "yerel para
+   * birimi kullanımı"nı açıkça sayıyor. Site tarafındaki ülke
+   * sinyallerinden kullanmadığımız tek madde buydu: adres ve telefon
+   * Türkiye'de, ülke uzantılı alan adımız yok, sunucu konumu ise
+   * belgenin kendi ifadesiyle "kesin bir sinyal değil".
+   *
+   * RİYAL DOLARA SABİT: 1 USD = 3,75 SAR ve bu oran 1986'dan beri
+   * değişmedi. Yani çarpan kurla oynamıyor; TL'de olduğu gibi elle
+   * güncellenmesi gerekmiyor.
+   *
+   * ÜLKEYE GÖRE DEĞİŞMİYOR. Aynı belge "içeriği IP analizine göre
+   * uyarlamayın" diyor; Arapça sayfayı açan herkes aynı satırı görüyor,
+   * Riyad'dan da İstanbul'dan da.
+   */
+  const sar = price.usd ? Math.round(price.usd * 3.75) : null;
+
   return {
     main: `€${price.eur}`,
-    secondary: price.usd ? `≈ $${price.usd}` : null,
+    secondary:
+      price.usd && locale === "ar"
+        ? `≈ $${price.usd} · ${sar} ﷼`
+        : price.usd
+          ? `≈ $${price.usd}`
+          : null,
     amount: price.eur,
     currency: "EUR",
   };
